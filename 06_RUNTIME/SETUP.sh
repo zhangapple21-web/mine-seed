@@ -50,7 +50,7 @@ try:
     import json
     with open('03_DATA/CONSTRAINTS/routing_constraints.json') as f:
         c = json.load(f)
-        print(f'✅ 约束库: {len(c.get(\"constraints\", []))} 条')
+        print(f'✅ 约束库: {len(c.get(\"rules\", []))} 条')
 except Exception as e:
     print(f'⚠️ 约束验证: {e}')
 
