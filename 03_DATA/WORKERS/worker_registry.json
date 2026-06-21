@@ -1,0 +1,843 @@
+{
+  "version": "1.0",
+  "updated": "2026-06-17T21:38:43+08:00",
+  "workers": {
+    "glm_flash": {
+      "model": "glm-4-flash",
+      "corps": "GLM",
+      "channel_id": 2,
+      "status": "alive",
+      "rpm": 30,
+      "strengths": [
+        "classification",
+        "extraction",
+        "summarization",
+        "fast_response"
+      ],
+      "weaknesses": [
+        "deep_reasoning",
+        "long_context",
+        "coding"
+      ],
+      "avg_latency": 36.6,
+      "success_rate": 0.877,
+      "cost_score": 100,
+      "context_window": 128000,
+      "notes": "免费无限量，极速兜底"
+    },
+    "glm_air": {
+      "model": "glm-4-air",
+      "corps": "GLM",
+      "channel_id": 2,
+      "status": "alive",
+      "rpm": 30,
+      "strengths": [
+        "extraction",
+        "classification",
+        "fast_response",
+        "summarization",
+        "light_analysis"
+      ],
+      "weaknesses": [
+        "deep_reasoning",
+        "coding"
+      ],
+      "avg_latency": 19.6,
+      "success_rate": 0.99,
+      "cost_score": 100,
+      "context_window": 128000,
+      "notes": "免费无限量",
+      "proven_at": {
+        "slice_classification": {
+          "efficiency": 66.2,
+          "confidence": 0.35,
+          "samples": 7.0
+        }
+      }
+    },
+    "glm_airx": {
+      "model": "glm-4-airx",
+      "corps": "GLM",
+      "channel_id": 2,
+      "status": "alive",
+      "rpm": 30,
+      "strengths": [
+        "short_analysis",
+        "summarization"
+      ],
+      "weaknesses": [
+        "deep_reasoning",
+        "long_context"
+      ],
+      "avg_latency": 3.5,
+      "success_rate": 0.63,
+      "cost_score": 100,
+      "context_window": 128000,
+      "notes": "免费无限量"
+    },
+    "nim_ultra_550b": {
+      "model": "nvidia/nemotron-3-ultra-550b-a55b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "deep_reasoning",
+        "long_context",
+        "coding",
+        "synthesis"
+      ],
+      "weaknesses": [
+        "latency",
+        "latency"
+      ],
+      "avg_latency": 5.0,
+      "success_rate": 0.02,
+      "cost_score": 100,
+      "context_window": 1000000,
+      "notes": "NIM旗舰，1M上下文"
+    },
+    "nim_qwen_397b": {
+      "model": "qwen/qwen3.5-397b-a17b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "dead",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "synthesis",
+        "coding"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 64.9,
+      "success_rate": 0.922,
+      "cost_score": 100,
+      "context_window": 1000000,
+      "last_reason": "canonical_v2胜率29%过低",
+      "last_update": "2026-06-21T16:00:01.744692"
+    },
+    "nim_llama_70b": {
+      "model": "meta/llama-3.3-70b-instruct",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "analysis",
+        "extraction",
+        "coding",
+        "stability"
+      ],
+      "weaknesses": [
+        "ultra_reasoning"
+      ],
+      "avg_latency": 72.5,
+      "success_rate": 0.999,
+      "cost_score": 100,
+      "context_window": 128000,
+      "proven_at": {
+        "slice_mining": {
+          "efficiency": 55.0,
+          "confidence": 0.45,
+          "samples": 9.0
+        }
+      }
+    },
+    "nim_gpt_120b": {
+      "model": "openai/gpt-oss-120b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "coding",
+        "analysis"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 6.9,
+      "success_rate": 0.02,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_nemotron_120b": {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "analysis"
+      ],
+      "weaknesses": [
+        "stability"
+      ],
+      "avg_latency": 12.0,
+      "success_rate": 0.8,
+      "cost_score": 100,
+      "context_window": 4096
+    },
+    "nim_mistral_675b": {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "deep_reasoning",
+        "coding",
+        "analysis",
+        "reasoning",
+        "long_context",
+        "synthesis",
+        "structured_output"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 32.2,
+      "success_rate": 0.999,
+      "cost_score": 100,
+      "context_window": 128000,
+      "proven_at": {
+        "persona_deep": {
+          "efficiency": 55.0,
+          "confidence": 0.45,
+          "samples": 9.0
+        },
+        "canonical_v2": {
+          "efficiency": 55.0,
+          "confidence": 0.4,
+          "samples": 8.0
+        },
+        "shadow_analysis": {
+          "efficiency": 62.4,
+          "confidence": 0.5,
+          "samples": 10.0
+        }
+      },
+      "last_reason": "班次开始自动恢复",
+      "last_update": "2026-06-14T17:09:02.613233"
+    },
+    "nim_qwen_122b": {
+      "model": "qwen/qwen3.5-122b-a10b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "coding"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 1.3,
+      "success_rate": 0.07,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_kimi_k2": {
+      "model": "moonshotai/kimi-k2.6",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "long_context"
+      ],
+      "weaknesses": [],
+      "avg_latency": 1.2,
+      "success_rate": 0.097,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_nemo_49b": {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "structured_output"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 12.0,
+      "success_rate": 0.82,
+      "cost_score": 100,
+      "context_window": 4096
+    },
+    "nim_seed_36b": {
+      "model": "bytedance/seed-oss-36b-instruct",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "reasoning",
+        "coding"
+      ],
+      "weaknesses": [],
+      "avg_latency": 1.2,
+      "success_rate": 0.097,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_deepseek_flash": {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "dead",
+      "rpm": 320,
+      "strengths": [
+        "fast_response",
+        "coding"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 5.0,
+      "success_rate": 0.9,
+      "cost_score": 100,
+      "context_window": 128000,
+      "death_reason": "deepseek-v4-flash两个key都超时, NIM端可能未开放或负载过高"
+    },
+    "nim_gpt_20b": {
+      "model": "openai/gpt-oss-20b",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response",
+        "light_analysis"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 2.0,
+      "success_rate": 0.431,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_step_flash": {
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response"
+      ],
+      "weaknesses": [
+        "deep_reasoning",
+        "coding"
+      ],
+      "avg_latency": 2.0,
+      "success_rate": 0.426,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_gemma_31b": {
+      "model": "google/gemma-4-31b-it",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response",
+        "light_analysis"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 2.5,
+      "success_rate": 0.416,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_qwen_80b": {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response",
+        "analysis"
+      ],
+      "weaknesses": [],
+      "avg_latency": 0.5,
+      "success_rate": 0.071,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_minimax": {
+      "model": "minimaxai/minimax-m2.7",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 2.5,
+      "success_rate": 0.412,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_llama4_mav": {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response"
+      ],
+      "weaknesses": [
+        "deep_reasoning",
+        "accuracy"
+      ],
+      "avg_latency": 2.0,
+      "success_rate": 0.402,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_glm5": {
+      "model": "zai/glm-5.1",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "analysis",
+        "coding"
+      ],
+      "weaknesses": [],
+      "avg_latency": 0.5,
+      "success_rate": 0.049,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "nim_step_35": {
+      "model": "stepfun-ai/step-3.5-flash",
+      "corps": "NIM",
+      "channel_ids": [
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "status": "alive",
+      "rpm": 320,
+      "strengths": [
+        "fast_response"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 2.0,
+      "success_rate": 0.421,
+      "cost_score": 100,
+      "context_window": 128000
+    },
+    "gh_4o": {
+      "model": "gpt-4o",
+      "corps": "GitHub",
+      "channel_id": 57,
+      "status": "dead",
+      "rpm": 15,
+      "strengths": [
+        "analysis",
+        "deep_reasoning",
+        "synthesis",
+        "structured_output",
+        "long_context",
+        "quality",
+        "reasoning",
+        "coding"
+      ],
+      "weaknesses": [
+        "rate_limit"
+      ],
+      "avg_latency": 45.1,
+      "success_rate": 0.919,
+      "cost_score": 80,
+      "context_window": 128000,
+      "notes": "限速15RPM，质量高",
+      "proven_at": {
+        "shadow_analysis": {
+          "efficiency": 71.2,
+          "confidence": 0.45,
+          "samples": 9.0
+        },
+        "upgrade_analysis": {
+          "efficiency": 71.7,
+          "confidence": 0.45,
+          "samples": 9.0
+        },
+        "canonical_v2": {
+          "efficiency": 77.1,
+          "confidence": 0.3,
+          "samples": 6.0
+        }
+      },
+      "last_reason": "canonical_v2胜率20%过低",
+      "last_update": "2026-06-21T16:00:01.742595"
+    },
+    "gh_4omini": {
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "channel_id": 57,
+      "status": "alive",
+      "rpm": 15,
+      "strengths": [
+        "fast_response",
+        "classification",
+        "extraction"
+      ],
+      "weaknesses": [
+        "deep_reasoning"
+      ],
+      "avg_latency": 6.1,
+      "success_rate": 0.994,
+      "cost_score": 80,
+      "context_window": 128000,
+      "notes": "限速15RPM，快速备份"
+    },
+    "gh_llama": {
+      "model": "Llama-3.3-70B-Instruct",
+      "corps": "GitHub",
+      "channel_id": 57,
+      "status": "alive",
+      "rpm": 15,
+      "strengths": [
+        "coding",
+        "analysis",
+        "open_source"
+      ],
+      "weaknesses": [
+        "rate_limit"
+      ],
+      "avg_latency": 1.3,
+      "success_rate": 0.001,
+      "cost_score": 80,
+      "context_window": 128000
+    },
+    "gh_r1": {
+      "model": "DeepSeek-R1",
+      "corps": "GitHub",
+      "channel_id": 57,
+      "status": "alive",
+      "rpm": 15,
+      "strengths": [
+        "deep_reasoning",
+        "math",
+        "coding"
+      ],
+      "weaknesses": [
+        "latency",
+        "rate_limit"
+      ],
+      "avg_latency": 1.8,
+      "success_rate": 0.001,
+      "cost_score": 80,
+      "context_window": 64000,
+      "notes": "深度推理备份，慢但强"
+    },
+    "nim_m3": {
+      "worker_id": "nim_m3",
+      "model_id": "minimaxai/minimax-m3",
+      "source": "NIM",
+      "strengths": [
+        "multimodal",
+        "reasoning",
+        "synthesis",
+        "long_context"
+      ],
+      "weaknesses": [
+        "latency"
+      ],
+      "avg_latency": 202.5,
+      "success_rate": 0.82,
+      "total_calls": 0,
+      "last_used": null,
+      "notes": "MiniMax-M3多模态, NIM新key1号",
+      "model": "minimaxai/minimax-m3",
+      "corps": "NIM",
+      "channel_ids": [
+        67
+      ],
+      "status": "dead",
+      "rpm": 40,
+      "cost_score": 100,
+      "context_window": 1000000,
+      "last_reason": "canonical_v2胜率0%过低",
+      "last_update": "2026-06-21T16:00:01.743332"
+    },
+    "nim_step_37_flash": {
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "channel_ids": [
+        68
+      ],
+      "status": "dead",
+      "rpm": 40,
+      "strengths": [
+        "fast_response",
+        "reasoning",
+        "coding",
+        "extraction",
+        "classification"
+      ],
+      "weaknesses": [
+        "ultra_deep_reasoning"
+      ],
+      "avg_latency": 0.5,
+      "success_rate": 0.014,
+      "cost_score": 100,
+      "context_window": 128000,
+      "notes": "连续12次0%成功率，2026-06-15标记死亡"
+    },
+    "nim_mistral_35": {
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "status": "alive",
+      "rpm": 40,
+      "key_env": "NIM_KEY_15",
+      "strengths": [
+        "reasoning",
+        "coding",
+        "analysis"
+      ],
+      "weaknesses": [
+        "timeout_prone"
+      ],
+      "notes": "128B MoE, reasoning+coding强, 旧key可用新key超时, 需用旧key",
+      "avg_latency": 85.7,
+      "success_rate": 0.999
+    },
+    "nim_nemotron_omni": {
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "corps": "NIM",
+      "status": "dead",
+      "rpm": 40,
+      "key_env": "NIM_KEY_0",
+      "strengths": [
+        "multimodal",
+        "reasoning",
+        "image_understanding",
+        "video_understanding"
+      ],
+      "weaknesses": [
+        "small_model"
+      ],
+      "notes": "全模态推理(图/视频/语音/文本), 30B但质量不错",
+      "avg_latency": 1.2,
+      "success_rate": 0.106,
+      "dead_since": "2026-06-17",
+      "dead_reason": "confirmed_low_performance"
+    },
+    "nim_kimi_k26": {
+      "model": "moonshotai/kimi-k2.6",
+      "corps": "NIM",
+      "channel_id": 59,
+      "status": "alive",
+      "rpm": 40,
+      "strengths": [
+        "canonical_v2",
+        "persona_deep",
+        "upgrade_analysis",
+        "deep_reasoning",
+        "slice_classification"
+      ],
+      "weaknesses": [
+        "no_multimodal"
+      ],
+      "avg_latency_s": 7,
+      "success_rate": 0.49,
+      "tier": 1,
+      "note": "2026-06-15新增，推理强速度快，主力池",
+      "avg_latency": 4.9
+    }
+  }
+}

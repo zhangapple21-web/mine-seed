@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 运行数据
+*.pkl
+*.log
+*.jsonl
+mine_output/
+output/
+
+# 运行时缓存
+.coze/
+.cache/
+.config/
+.local/
+
+# 密钥与隐私
+SECRET.md
+*session*
+*.session
+token*
+Bot_Token*
+bot_token*
+
+# 系统缓存
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 环境变量（使用 .tpl 模板）
+miner_env.sh
+.env
+*.env.local
+
+# IDE
+.idea/
+.vscode/
