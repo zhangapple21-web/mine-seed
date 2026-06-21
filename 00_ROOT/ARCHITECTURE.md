@@ -44,3 +44,21 @@ lab_02（研究域）
 | Axiom_008 | 监控盲区不等于系统故障 |
 | Axiom_009 | 种子态 < 运行态 |
 | Axiom_010 | 未验证的恢复 = 未恢复 |
+
+---
+
+## 07_GUARDIAN — 守护层 (2026-06-21 新增)
+
+> Soul Guard 的四函数原语，从旧 R1 考古提取，适配 mine-seed 体系
+
+```
+07_GUARDIAN/
+├── gravity.md       → 每日：保持生态活跃
+├── conservation.md  → 每周：清理过期状态
+├── backtrack.md     → 每月：快照备份
+└── repair.md        → 按需：崩溃后确认还活着
+```
+
+**定位**：不是运行脚本，是原则层。定义"系统如何长期存在"，而非"系统如何运行"。  
+**与 06_RUNTIME 的关系**：RUNTIME 管"怎么跑"，GUARDIAN 管"怎么一直跑"。  
+**来源**：xiaoyao520921-ui/R1 Soul Guard (R1-ROOT-164) → 考古提取 → mine-seed 适配
