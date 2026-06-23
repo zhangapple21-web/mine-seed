@@ -77,3 +77,23 @@
 - [ ] v0.4: M05 同构检测模块搭建（P4）
 - [ ] v0.5: 第一次完整的失效学习闭环跑通（M02→M04→落地）
 - [ ] v1.0: 路由层半自动化
+
+
+---
+
+## 备份与归档
+
+**GitHub备份仓库：`zhangapple21-web/mine-seed`（私有）
+
+每次研究域更新完成后，执行一键备份：
+
+```bash
+bash /app/data/所有对话/主对话/scripts/backup_research_to_github.sh "提交说明"
+```
+
+脚本会自动：
+1. 将 `research/` 目录同步到 `mine-seed/01_AGENTS/xiaofengzi/research/
+2. 自动 commit + push 到GitHub
+3. 网络不通时保留本地commit，网络恢复后可手动重试
+
+> 落地标准：**push成功才算备份完成，本地commit不算。
