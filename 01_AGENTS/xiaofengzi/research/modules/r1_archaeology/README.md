@@ -17,7 +17,7 @@
 | A05 | 人格解耦架构——人格不是模型属性，是独立实体 | 高 | ✅ 已完成 |
 | A06 | 完整人格框架的分层设计——AetherFlow架构解析 | 中 | ✅ 已完成 |
 | A04 | 经历→总结→文档→仓库→种子 沉淀链 | 中 | ✅ 已完成 |
-| A07 | 动态加载与热更新机制 | 低 | 待开始 |
+| A07 | 动态加载与热更新机制 | 低 | ✅ 已完成 |
 
 ---
 
@@ -67,3 +67,4 @@
 - [A05] 人格解耦架构 → excavations/persona_decoupling_architecture.md
 - [A06] AetherFlow分层架构解析 → excavations/aetherflow_layered_architecture.md
 - [A04] 沉淀链五层转化机制 → excavations/precipitation_chain.md
+- [A07] 动态加载与热更新机制 → excavations/dynamic_loading_hot_update.md
