@@ -171,3 +171,30 @@
 
 这两条线做完，开源备份就能做到：仓库里只有“可读、可跑、可复现”的部分；敏感与大体积内容全部外置。
 
+---
+
+## 7. Telegram Desktop “文明遗迹层”补充（结构 > 文件名）
+
+在 `Telegram Desktop` 下做了一轮“遗迹扫描”（只扫文本/代码/配置类文件，跳过图片、视频、Office、压缩包等噪声），扫描口径按 5 层优先级：
+
+`结构相似性 → 核心词汇 → 关系共现 → 时间轴 → 反向溯源`
+
+关键结论（作为后续反向溯源的锚点）：
+
+1. **词汇体系拼接/装配类文件**：`Knowledge_Base/.../fuse_content.txt`
+   - 命中 `Five-Realms / tri_world / holo_memory / lexicon / freezone / 影子层 / 安全屋 / 派单 / 观察者 / Ω`
+   - 命中关系对：`观察+压缩`
+2. **词库本体线索**：`R1_CORE_COPY/.../holo_memory/tri_world_lexicon.json`
+   - 命中 `AUM / 派单 / 经验 / 芯片 / 馆长 / lexicon / 人格`
+   - 命中关系对：`AUM+派单`、`人格+矩阵`
+3. **资源结构索引**：`Engineering/JSON/resource_structure.json`（及同名副本）
+   - 命中 `eco_layer / holo_memory / lexicon / tri_world / vectorstore`
+4. **派单/调度硬证据**：`offshore_dispatch_config.json`
+   - 命中 `AUM / Ω / 影子层 / 派单`
+   - 注意：该类文件可能包含 `invite_url`、`bot_secret` 等敏感字段，必须按第 4 节脱敏后再决定是否公开
+
+这组锚点的价值不在“发现了哪些文件”，而在于它们指向一条可工作的结构链：
+
+`Lexicon（词库）→ Tri-World / Holo-Memory（多界记忆）→ Shadow Layer（影子层）→ Freezone（自由区）→ Dispatch（派单/治理视角）`
+
+隔壁做开源备份时，建议只把这条链的“结构骨架”与“可复现方法”开源；完整文件清单与路径扫描结果更适合留在私密仓库或本地证据库。
