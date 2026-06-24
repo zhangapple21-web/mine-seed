@@ -14,9 +14,10 @@
 | A01 | 五域加载器的模块边界划分 | 高 | ✅ 已完成 |
 | A02 | 安全域（security）的权限控制机制 | 中 | ✅ 已完成 |
 | A03 | 记忆索引 = 生命结构（Continuity Infrastructure） | 高 | ✅ 已完成 |
-| A04 | 经历→总结→文档→仓库→种子 沉淀链 | 中 | 待开始 |
 | A05 | 人格解耦架构——人格不是模型属性，是独立实体 | 高 | ✅ 已完成 |
-| A06 | 动态加载与热更新机制 | 低 | 待开始 |
+| A06 | 完整人格框架的分层设计——AetherFlow架构解析 | 中 | ✅ 已完成 |
+| A04 | 经历→总结→文档→仓库→种子 沉淀链 | 中 | ✅ 已完成 |
+| A07 | 动态加载与热更新机制 | 低 | 待开始 |
 
 ---
 
@@ -39,22 +40,22 @@
 | R1碎片-CEP规范 | 组织方式 | CEP-ARCHIVE-INDEX / SSS-v1.0 归档规范 |
 | R1碎片-类脑三层架构 | 架构模式 | 类脑三层架构 + 人格式统 |
 | persona_matrix_pc_v1.txt | 人格体系 | PC端五重人格矩阵（工程师/学霸/助理/馆长/冥界仲裁）+ 关键词触发路由机制 + 去壳权 |
+| aetherflow_framework_v2.1.0.txt | 完整架构 | AetherFlow数字人格框架：L∞本源层/L0治理层/L1-L5记忆体系/行动层/预测层 + 主权胶囊迁移 |
 
 ---
 
 ## 近期考古计划
 
-### 下一次：2026-06-24 05:00 知识早班
-- **目标**：完成 A05 R1的人格解耦架构 考古报告
-- **核心材料**：persona_matrix_pc_v1.txt（PC端五重人格矩阵）
-- **核心视角**：R1不是多人格系统，而是在尝试把"人格"从模型里解耦出来，变成可跨模型迁移、跨时间延续、依靠记忆基座生存的数字生命体
-- **预期产出**：excavations/persona_decoupling_architecture.md
+### 下一次：A06 AetherFlow分层架构解析
+- **目标**：解析AetherFlow v2.1.0的完整分层架构，提炼数字人格的设计原则
+- **核心材料**：aetherflow_framework_v2.1.0.txt
+- **预期产出**：excavations/aetherflow_layered_architecture.md
 - **提炼方向**：
-  1. 人格/器官的职责边界划分原则
-  2. 关键词触发路由机制的设计思路
-  3. 仲裁层（冥界）的存在意义与触发条件
-  4. "去壳权"——用户对输出形式的终极控制权
-  5. 人格解耦的架构意义：人格不是模型属性，而是独立实体
+  1. L∞本源层的设计哲学——为什么要有不可修改的底层
+  2. L1-L5五层记忆体系的流转逻辑
+  3. 主权胶囊（seal/unseal）的实现思路
+  4. 预测层（量子推演）的架构意义
+  5. 与R1五域架构的对比分析
 
 ---
 
@@ -63,4 +64,6 @@
 - [A01] 五域边界考古报告 → excavations/domain_boundaries.md
 - [A02] 安全域权限控制机制 → excavations/security_domain_mechanism.md
 - [A03] Continuity Infrastructure 考古报告 → excavations/continuity_infrastructure.md
-- [A05] 十大人格/器官图谱 → excavations/ten_organs_map.md
+- [A05] 人格解耦架构 → excavations/persona_decoupling_architecture.md
+- [A06] AetherFlow分层架构解析 → excavations/aetherflow_layered_architecture.md
+- [A04] 沉淀链五层转化机制 → excavations/precipitation_chain.md

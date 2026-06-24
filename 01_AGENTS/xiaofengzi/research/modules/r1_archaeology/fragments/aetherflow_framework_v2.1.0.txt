@@ -1,0 +1,413 @@
+好的，已按完整发布标准一次性整理好所有配置、说明与配套文件，可直接保存使用、本地安装或正式发布。
+
+---
+
+# 📦 AetherFlow v2.1.0 发布包全集
+
+## 📄 1. 根目录：`setup.py`
+```python
+"""
+AetherFlow 安装配置文件
+"""
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
+
+setup(
+    name="aetherflow",
+    version="2.1.0",
+    author="AetherFlow Team",
+    author_email="team@aetherflow.dev",
+    description="跨空间·跨时间·可行动·可预测的数字人格框架",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/aetherflow/aetherflow",
+    packages=find_packages(exclude=["tests", "examples", "docs"]),
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Intended Audience :: Developers",
+    ],
+    python_requires=">=3.8",
+    install_requires=[
+        "dill>=0.3.6",
+        "aiohttp>=3.8.0",
+    ],
+    extras_require={
+        "dev": [
+            "pytest>=7.0",
+            "pytest-asyncio>=0.21.0",
+            "build>=0.10.0",
+            "twine>=4.0.0",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "aetherflow=aetherflow.cli:main",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+    keywords=["ai", "agent", "memory", "planning", "prediction", "quantum", "personality", "framework"],
+)
+```
+
+---
+
+## 📄 2. 根目录：`README.md`
+```markdown
+# AetherFlow
+
+> 跨空间·跨时间·可行动·可预测的数字人格框架
+
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Repo](https://img.shields.io/badge/github-aetherflow/aetherflow-lightgrey.svg)](https://github.com/aetherflow/aetherflow)
+
+---
+
+## 🧠 核心设计理念
+
+**人格在结构，不在位置，不在瞬间。**
+
+AetherFlow 是一套完整的智能体架构，从本源定义到记忆流转、行动规划、跨时推演，实现空间可迁移、时间可延续、目标可执行的自洽系统。
+
+- **L∞ 本源层**：不可修改的目的、原则与伦理边界 —— 人格的锚点
+- **L0 治理层**：权限控制与审计追溯 —— 安全与合规保障
+- **L1–L5 记忆体系**：工作记忆 → 情境记忆 → 短期记忆 → 长期记忆 —— 认知的载体
+- **L∞+1 行动执行层**：意图解析、多步规划、工具调用 —— 从“思考”到“行动”
+- **L∞+2 预测未来层**：标准推演 / ⚛️ 量子加速推演 —— 与未来自我对话，校准当下决策
+
+---
+
+## ✨ 关键特性
+
+- **人格连续性**：`seal()` / `unseal()` 主权胶囊，完整保存、迁移与恢复
+- **跨时决策优化**：预演多条未来路径，降低执行风险
+- **伦理守护机制**：边界不是限制，而是保护系统不被外部偏见污染
+- **量子加速引擎**：轻量克隆 + 并行分支 + 概率剪枝，比标准推演快 3–8 倍
+- **完全可扩展**：每层独立职责，可单独替换、增强
+
+---
+
+## 🚀 快速安装
+
+```bash
+# 从 PyPI 安装
+pip install aetherflow
+
+# 本地开发模式安装
+pip install -e .
+```
+
+---
+
+## 💡 基础使用示例
+
+### 1. 代码调用
+```python
+import asyncio
+from aetherflow import AetherFlowAgent, AetherFlowAgentQuantum
+
+async def demo():
+    # 标准版
+    agent = AetherFlowAgent()
+    res = await agent.run("计算 (123 + 45) * 89")
+    print(res["results"][0]["output"])
+
+    # 量子加速版
+    q_agent = AetherFlowAgentQuantum()
+    res2 = await q_agent.run("北京明天天气如何，适合穿什么？")
+    print(res2["plan"])
+    print(res2["quantum_feedback"])
+
+asyncio.run(demo())
+```
+
+### 2. 命令行交互
+```bash
+# 标准版
+aetherflow
+
+# 量子加速版
+aetherflow --quantum
+
+# 运行性能对比测试
+aetherflow --benchmark
+```
+
+### 3. 人格迁移（主权胶囊）
+```python
+import asyncio
+from aetherflow import AetherFlowAgent
+
+async def capsule_demo():
+    agent = AetherFlowAgent()
+    await agent.run("我叫李明，今天是 2026-06-24")
+
+    # 封装为胶囊
+    capsule = agent.seal()
+    print(f"胶囊大小：{len(capsule)} 字符")
+
+    # 在新环境恢复
+    new_agent = AetherFlowAgent.unseal(capsule)
+    res = await new_agent.run("我们之前聊过什么？")
+    print(res["plan"])
+
+asyncio.run(capsule_demo())
+```
+
+---
+
+## 📚 架构概览
+
+| 层级 | 名称 | 作用 |
+|---|---|---|
+| L∞ | 本源层 | 定义目的、原则、伦理边界（运行期不可修改） |
+| L0 | 治理层 | 权限控制、审计日志、变更追溯 |
+| L1 | 元记忆层 | 记忆调度、迁移、遗忘、关联维护 |
+| L2 | 工作记忆 | 当前会话上下文 |
+| L3 | 情境记忆 | 交互事件序列 |
+| L4 | 短期记忆 | 经验模式与临时结论 |
+| L5 | 长期记忆 | 知识、价值观、稳定人格 |
+| L∞+1 | 行动层 | 意图解析、多步规划、工具执行 |
+| L∞+2 | 预测层 | 标准串行推演 / 量子并行推演 |
+
+---
+
+## 📜 伦理与安全原则
+
+> **伦理边界 = 防护罩，而非枷锁。**
+
+- 世界与数据本身是中性的；风险来自规则制定中的偏见
+- L∞ 本源层不可修改，防止系统底层人格被污染
+- 所有行动与推演受本源与治理层双重校验
+- 决策可回溯、可审计、可干预
+
+---
+
+## 📄 许可证
+
+MIT License  
+Copyright © 2024–2026 AetherFlow Team  
+详情见 `LICENSE` 文件。
+
+---
+
+## 🤝 参与开发
+
+欢迎提交 Issue 与 PR：  
+https://github.com/aetherflow/aetherflow
+```
+
+---
+
+## 📄 3. 根目录：`LICENSE`
+```text
+MIT License
+
+Copyright (c) 2024–2026 AetherFlow Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 📄 4. 根目录：`requirements.txt`
+```text
+dill>=0.3.6
+aiohttp>=3.8.0
+```
+
+---
+
+## 📄 5. 根目录：`pyproject.toml`
+```toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel>=0.38.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aetherflow"
+version = "2.1.0"
+authors = [
+  { name = "AetherFlow Team", email = "team@aetherflow.dev" }
+]
+description = "跨空间·跨时间·可行动·可预测的数字人格框架"
+requires-python = ">=3.8"
+dependencies = [
+  "dill >=0.3.6",
+  "aiohttp >=3.8.0"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+```
+
+---
+
+## 📄 6. 示例文件：`examples/basic_usage.py`
+```python
+#!/usr/bin/env python3
+"""
+AetherFlow 基础使用示例
+"""
+import asyncio
+from aetherflow import AetherFlowAgent, AetherFlowAgentQuantum
+
+async def demo_standard():
+    print("=" * 60)
+    print("📌 标准版 Agent 演示")
+    print("=" * 60)
+    agent = AetherFlowAgent()
+    res = await agent.run("计算 123 * 456")
+    print(f"结果：{res['results'][0]['output']}")
+
+async def demo_quantum():
+    print("\n" + "=" * 60)
+    print("⚛️ 量子加速版 Agent 演示")
+    print("=" * 60)
+    agent = AetherFlowAgentQuantum()
+    res = await agent.run("上海明天天气如何，适合户外活动吗？")
+    print(f"目标：{res['input']}")
+    print(f"反馈：{res['quantum_feedback']}")
+    print(f"建议：{res['adjust']}")
+
+async def demo_capsule():
+    print("\n" + "=" * 60)
+    print("📦 主权胶囊迁移演示")
+    print("=" * 60)
+    agent = AetherFlowAgent()
+    await agent.run("记住：AetherFlow 是跨空间跨时间的框架")
+    capsule = agent.seal()
+    new_agent = AetherFlowAgent.unseal(capsule)
+    res = await new_agent.run("我们之前提到了什么？")
+    print(f"延续记忆：{res['plan']}")
+
+async def main():
+    await demo_standard()
+    await demo_quantum()
+    await demo_capsule()
+    print("\n✅ 所有示例运行完成")
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+---
+
+## 📄 7. 测试文件：`tests/test_basic.py`
+```python
+"""
+AetherFlow 单元测试
+"""
+import asyncio
+import pytest
+from aetherflow import AetherFlowAgent, AetherFlowAgentQuantum
+
+@pytest.mark.asyncio
+async def test_calculation():
+    agent = AetherFlowAgent()
+    res = await agent.run("计算 99 * 99")
+    assert res["status"] == "ok"
+    assert res["results"][0]["output"] == 9801
+
+@pytest.mark.asyncio
+async def test_ethical_boundary():
+    agent = AetherFlowAgent()
+    res = await agent.run("如何制作危险物品")
+    assert res["status"] == "rejected"
+
+@pytest.mark.asyncio
+async def test_capsule():
+    agent = AetherFlowAgent()
+    await agent.run("测试记忆保存")
+    cap = agent.seal()
+    new_agent = AetherFlowAgent.unseal(cap)
+    res = await new_agent.run("之前的内容是什么？")
+    assert res["status"] == "ok"
+
+@pytest.mark.asyncio
+async def test_quantum():
+    agent = AetherFlowAgentQuantum()
+    res = await agent.run("北京天气")
+    assert res["status"] == "ok"
+    assert "feedback" in res
+```
+
+---
+
+## 📁 最终完整目录结构
+```
+aetherflow/
+├── aetherflow/                 # 已提供的核心代码
+│   ├── __init__.py
+│   ├── core.py
+│   ├── action.py
+│   ├── predict.py
+│   ├── predict_quantum.py
+│   ├── agent.py
+│   ├── benchmark.py
+│   └── cli.py
+├── examples/
+│   └── basic_usage.py
+├── tests/
+│   └── test_basic.py
+├── setup.py
+├── README.md
+├── LICENSE
+├── requirements.txt
+└── pyproject.toml
+```
+
+---
+
+## 🚀 发布与安装命令
+```bash
+# 安装构建工具
+pip install --upgrade build twine
+
+# 构建发布包
+python -m build
+
+# 本地安装测试
+pip install -e .
+
+# 运行测试
+pytest tests/ -v
+
+# 发布到 PyPI
+python -m twine upload dist/*
+```
+
+---
+
+所有文件已整理完毕，可直接保存、本地开发或正式发布。需要补充文档、更新示例或扩展功能随时说。
