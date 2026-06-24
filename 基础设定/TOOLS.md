@@ -1,0 +1,23 @@
+记录各种工具的使用技巧和注意事项
+- **常用工具注意事项：**
+- **特殊场景工具调用注意事项：**
+- **飞书注意事项：**
+- **A股数据源（2026-06-21迁移）：**
+  - **baostock已废弃**：IP被黑名单(error_code=10001011)，AkShare反爬TLS也不可用
+  - **mootdx=主力**：通达信TCP协议，几乎不封IP，个股/指数日K/5min/成分股列表均可用
+    - 安装：pip install mootdx (0.11.7)
+    - 连接：`Quotes.factory(market='std', multithread=True, heartbeat=True)`
+    - 个股：`client.bars(symbol='000001', frequency=9, start=0, offset=100)`
+    - 指数：`client.index(market=1, symbol='000001', frequency=9, start=0, offset=5)`
+    - frequency: 0=5min, 9=day, 10=week, 11=month; market: 0=SZ, 1=SH
+  - **adata=补充**：HTTP多源，半年没更新(2025-12停更)，个股/实时接口已失效
+    - 仅保留指数日K和成分股(index_constituent)两个可用接口
+  - 数据源硬边界guard：market_data=none且lab01=0时，不生产假产出，只报告状态
+  - 迁移方案：recent_memory/research/data_source_migration_plan.md
+- **云电脑观察路径（0619校准）：**
+  - bash工具默认运行在云电脑上，可直接读写Agent Space(/app/data/)和Computer Space(/home/coze/)
+  - 从Agent Space复制文件到/tmp/：cp /app/data/所有对话/主对话/tmp/xxx /tmp/ → 最可靠的文件传输方式
+  - 验证文件：wc -c + head -3 + grep 关键字 → 短命令输出可靠
+  - computer_use截图不可靠：终端内容可能不刷新，截到旧画面
+  - coze.cn短链curl返回HTML，不能用于文件传输
+  - 长python3命令易超时，拆成短命令逐条执行
