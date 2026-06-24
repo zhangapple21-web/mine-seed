@@ -25,6 +25,8 @@ SECRET.md
 token*
 Bot_Token*
 bot_token*
+.secrets/
+agentworld_*
 
 # 系统缓存
 .DS_Store
