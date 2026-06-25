@@ -43,3 +43,17 @@ python 05_TOOLS/simlab/simlab_runner.py
 考古不是复刻一个人，而是复刻“可继承的结构能力”。  
 SimLab 的存在，让我们可以把“结构链条”用可复现的方式跑一遍，并留下快照证据。
 
+## 每日自动运行
+
+TRAE 已配置一个“每天凌晨自动跑 SimLab”的定时任务（Singapore 时间）：
+
+```cron
+0 0 * * *
+```
+
+自动任务内容：
+
+1. `git pull` 更新 `mine-seed`
+2. 执行：`python 05_TOOLS/simlab/simlab_runner.py`
+3. 产出写入：`output/simlab/`（该目录不进入 Git）
+
