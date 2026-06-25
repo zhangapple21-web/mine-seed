@@ -18,6 +18,7 @@ from collections import defaultdict
 
 EXPERIENCE_FILE = "/home/coze/mine_output/experience.json"
 OBSERVATION_FILE = "/home/coze/mine_output/observation_log.json"
+FEEDBACK_FILE = "/home/coze/mine_output/user_feedback.jsonl"
 REGISTRY_FILE = "/home/coze/worker_registry.json"
 
 class ExperienceEngine:
@@ -32,10 +33,14 @@ class ExperienceEngine:
             except:
                 pass
         return {
-            "version": "1.0",
+            "version": "2.0",
             "patterns": {},       # 压缩后的经验模式
             "routing_rules": [],  # 生成的路由规则
-            "compression_log": [] # 压缩历史
+            "compression_log": [], # 压缩历史
+            "reasoning_chains": [],   # R1v2.0: 决策路径记录
+            "user_feedback": [],       # R1v2.0: 用户反馈/结果记录
+            "innovation_patterns": [], # R1v2.0: 不合现有分类的新模式
+            "self_improve_tips": []    # R1v2.0: 自我改进建议
         }
     
     def _save(self):
@@ -43,6 +48,7 @@ class ExperienceEngine:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
     
     def compress(self):
+        self._ensure_structure()
         """
         经验压缩：从原始Observation中提取可复用的模式
         
@@ -402,6 +408,435 @@ class ExperienceEngine:
             lines.append(f"\n🔄 最近压缩: {last['observations_processed']}条→{last['patterns_found']}模式→{last['rules_generated']}规则")
         
         return "\n".join(lines)
+
+
+
+    # === R1v2.0: 记录推理链 ===
+    def record_reasoning_chain(self, task, worker, chain_data):
+        """记录一次决策的完整推理路径"""
+        entry = {
+            "ts": datetime.now().isoformat(),
+            "task": task,
+            "worker": worker,
+            "input_snapshot": chain_data.get("input", ""),
+            "reasoning_steps": chain_data.get("steps", []),
+            "alternatives_considered": chain_data.get("alternatives", []),
+            "final_decision": chain_data.get("decision", ""),
+            "confidence": chain_data.get("confidence", 0.5)
+        }
+        self.data.setdefault("reasoning_chains", []).append(entry)
+        # 最多保留500条
+        if len(self.data["reasoning_chains"]) > 500:
+            self.data["reasoning_chains"] = self.data["reasoning_chains"][-500:]
+        self._save()
+        return entry["ts"]
+
+    # === R1v2.0: 记录用户反馈 ===
+    def record_feedback(self, source, content, reaction="unknown", quality=None):
+        """记录用户/系统对产出的反馈
+
+        Args:
+            source: 反馈来源 (user/system/auto)
+            content: 产出内容摘要或ID
+            reaction: 反馈 (positive/negative/neutral/unknown)
+            quality: 质量评分 1-10 (可选)
+        """
+        entry = {
+            "ts": datetime.now().isoformat(),
+            "source": source,
+            "content": content,
+            "reaction": reaction,
+            "quality": quality
+        }
+        self.data.setdefault("user_feedback", []).append(entry)
+        # 最多保留200条
+        if len(self.data["user_feedback"]) > 200:
+            self.data["user_feedback"] = self.data["user_feedback"][-200:]
+        self._save()
+        
+        # 同时写入独立文件供外部工具读取
+        try:
+            with open(FEEDBACK_FILE, "a") as f:
+                f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        except:
+            pass
+        return entry["ts"]
+
+    # === R1v2.0: 带权重衰减的压缩（近期观测权重更高）===
+    def _ensure_structure(self):
+        """确保数据结构含有所有必要字段"""
+        defaults = {
+            "version": "2.0",
+            "patterns": {},
+            "routing_rules": [],
+            "compression_log": [],
+            "failure_patterns": [],
+            "meanings": [],
+            "reasoning_chains": [],
+            "user_feedback": [],
+            "innovation_patterns": [],
+            "self_improve_tips": []
+        }
+        for key, default in defaults.items():
+            if key not in self.data:
+                self.data[key] = default
+
+    def compress_with_decay(self, decay_days=3):
+        """经验压缩 + 时间权重衰减
+
+        近期观测(decay_days内)权重大于历史观测，
+        使系统更快适应模型能力变化和数据源波动。
+        """
+        self._ensure_structure()
+        cutoff = (datetime.now() - timedelta(days=decay_days)).isoformat()
+        
+        if not os.path.exists(OBSERVATION_FILE):
+            return {"error": "No observation data yet"}
+        
+        with open(OBSERVATION_FILE) as f:
+            obs_data = json.load(f)
+        
+        observations = obs_data.get("observations", [])
+        if len(observations) < 10:
+            return {"error": f"Only {len(observations)} observations, need at least 10"}
+        
+        # 标记近期观测
+        recent_count = 0
+        for obs in observations:
+            obs_ts = obs.get("ts", "")
+            obs["_is_recent"] = obs_ts > cutoff
+            if obs["_is_recent"]:
+                recent_count += 1
+        
+        patterns = {}
+        task_worker = defaultdict(lambda: defaultdict(
+            lambda: {"total": 0, "success": 0, "total_time": 0, "total_tokens": 0, 
+                     "quality_scores": [], "recent_total": 0, "recent_success": 0}
+        ))
+        
+        for obs in observations:
+            task = obs.get("task", "unknown")
+            worker = obs.get("worker_id", "unknown")
+            bucket = task_worker[task][worker]
+            weight = 2.0 if obs.get("_is_recent") else 1.0  # 近期2x权重
+            bucket["total"] += weight
+            if obs.get("success"):
+                bucket["success"] += weight
+            bucket["total_time"] += obs.get("elapsed", 0)
+            bucket["total_tokens"] += obs.get("tokens_out", 0)
+            if obs.get("quality"):
+                bucket["quality_scores"].append(obs["quality"])
+            if obs.get("_is_recent"):
+                bucket["recent_total"] += 1
+                if obs.get("success"):
+                    bucket["recent_success"] += 1
+        
+        # 后续压缩逻辑复用现有compress()的相同代码模式
+        for task, workers in task_worker.items():
+            ranked = []
+            for wid, stats in workers.items():
+                if stats["total"] < 2:
+                    continue
+                sr = stats["success"] / stats["total"]
+                # 近期成功率单独计算（如果有近期数据）
+                recent_sr = stats["recent_success"] / stats["recent_total"] if stats["recent_total"] >= 2 else sr
+                avg_time = stats["total_time"] / stats["total"]
+                avg_quality = sum(stats["quality_scores"]) / len(stats["quality_scores"]) if stats["quality_scores"] else None
+                # 效率分：近期表现占60%权重
+                speed_score = max(0, 100 - avg_time * 2)
+                quality_score = (avg_quality or 5) * 10
+                efficiency = (sr * 0.4 + recent_sr * 0.6) * 40 + speed_score * 0.3 + quality_score * 0.3
+                ranked.append({
+                    "worker": wid,
+                    "efficiency": round(efficiency, 1),
+                    "success_rate": round(sr, 2),
+                    "recent_success_rate": round(recent_sr, 2),
+                    "avg_time": round(avg_time, 1),
+                    "avg_quality": round(avg_quality, 1) if avg_quality else None,
+                    "samples": int(stats["total"]),
+                    "recent_samples": int(stats["recent_total"])
+                })
+            
+            ranked.sort(key=lambda x: -x["efficiency"])
+            patterns[task] = {
+                "best_workers": ranked[:3],
+                "total_observations": int(sum(s["total"] for s in workers.values())),
+                "recent_observations": recent_count,
+                "decay_window_days": decay_days,
+                "last_updated": datetime.now().isoformat()
+            }
+        
+        # 复用旧的failure/meaning/rules提取逻辑（但用更新后的patterns）
+        # 保存patterns到self.data
+        self.data["patterns"] = patterns
+        self.data["compression_log"].append({
+            "ts": datetime.now().isoformat(),
+            "observations_processed": len(observations),
+            "patterns_found": len(patterns),
+            "recent_weighted": recent_count,
+            "decay_window_days": decay_days
+        })
+        if len(self.data["compression_log"]) > 50:
+            self.data["compression_log"] = self.data["compression_log"][-50:]
+        self._save()
+        
+        return {
+            "patterns": len(patterns),
+            "observations_used": len(observations),
+            "recent_weighted": recent_count
+        }
+    
+    # === R1v2.0: 创新模式检测 ===
+    def detect_innovation_patterns(self):
+        """
+        检测不合现有分类的新模式。
+        
+        当某个worker在某task上的表现出现非预期变化（
+        突然好转/突然恶化），但不匹配任何已知失败模式时，
+        标记为"待观察的创新模式"。
+        """
+        if not self.data.get("patterns"):
+            return []
+        
+        innovations = []
+        for task, task_data in self.data["patterns"].items():
+            workers = task_data.get("best_workers", [])
+            for w in workers:
+                # 发现：近期成功率 vs 历史成功率差异 > 30%
+                recent_sr = w.get("recent_success_rate", 0)
+                hist_sr = w.get("success_rate", 0)
+                if recent_sr > 0 and hist_sr > 0:
+                    delta = recent_sr - hist_sr
+                    if abs(delta) > 0.3:
+                        innovations.append({
+                            "type": "sr_shift" if delta > 0 else "sr_decline",
+                            "task": task,
+                            "worker": w["worker"],
+                            "delta": round(delta, 2),
+                            "recent_sr": recent_sr,
+                            "historical_sr": hist_sr,
+                            "recent_samples": w.get("recent_samples", 0),
+                            "ts": datetime.now().isoformat(),
+                            "note": f"({w["worker"]})在({task})上表现发生{'+' if delta > 0 else ''}{delta:.0%}变化，需要关注"
+                        })
+        
+        if innovations:
+            self.data["innovation_patterns"] = innovations
+            self._save()
+        
+        return innovations
+
+    # === R1v2.0: 生成自我改进建议 ===
+    def generate_improve_tips(self):
+        """根据经验数据生成可操作的改进建议"""
+        tips = []
+        
+        # 1. 检查是否有worker正在衰退
+        for pattern in self.data.get("patterns", {}).values():
+            for w in pattern.get("best_workers", []):
+                if w.get("recent_success_rate", 1) < w.get("success_rate", 1) * 0.7:
+                    tips.append({
+                        "type": "worker_decline",
+                        "target": w["worker"],
+                        "suggestion": f"{w['worker']}近期胜率({w.get('recent_success_rate',0):.0%})显著低于历史({w.get('success_rate',0):.0%})，建议review或降级",
+                        "priority": "P1",
+                        "ts": datetime.now().isoformat()
+                    })
+        
+        # 2. 检查ioU模式（持续改进中）
+        if self.data.get("innovation_patterns"):
+            tips.append({
+                "type": "innovation_observed",
+                "target": "multiple",
+                "suggestion": f"发现{len(self.data['innovation_patterns'])}个不合常规的模式变化，建议人工review",
+                "priority": "P2",
+                "ts": datetime.now().isoformat()
+            })
+        
+        # 3. 检查反馈趋势
+        feedback = self.data.get("user_feedback", [])
+        if feedback:
+            negative = [f for f in feedback if f.get("reaction") == "negative"]
+            if len(negative) >= 3:
+                tips.append({
+                    "type": "feedback_warning",
+                    "target": "system",
+                    "suggestion": f"近期收到{len(negative)}条负面反馈，建议检查产出质量",
+                    "priority": "P1",
+                    "ts": datetime.now().isoformat()
+                })
+        
+        if tips:
+            self.data["self_improve_tips"] = tips
+            self._save()
+        
+        return tips
+
+
+
+    # ============================================================
+    # 渐进式检索系统 — v1.0（吸收 claude-mem 三层渐进思路）
+    # 2026-06-24 新增
+    # ============================================================
+    
+    def retrieve_by_layer(self, layer=1, query=None, limit=10, 
+                          target_ts=None, target_task=None, target_worker=None):
+        """
+        渐进式三层检索：search_index → timeline → get_detail
+        
+        Layer 1 (search_index): 快速扫描observation_log，按条件过滤
+            返回精简索引摘要（~50-80 token/条）
+        Layer 2 (timeline): 围绕target_ts返回前后N条时间线上下文
+        Layer 3 (get_detail): 返回完整observation记录
+        
+        Args:
+            layer: 1=索引, 2=时间线, 3=详情
+            query: 关键词匹配（对task/worker/error做子串匹配）
+            limit: 每层返回条数上限
+            target_ts: 时间线锚点（Layer 2必填）
+            target_task: 按任务类型过滤
+            target_worker: 按工人ID过滤
+        """
+        if not os.path.exists(OBSERVATION_FILE):
+            return {"error": "No observation data yet", "layer": layer}
+        
+        with open(OBSERVATION_FILE) as f:
+            obs_data = json.load(f)
+        
+        observations = obs_data.get("observations", [])
+        if not observations:
+            return {"error": "Empty observation log", "layer": layer}
+        
+        # 通用过滤
+        filtered = observations
+        if query:
+            q = query.lower()
+            filtered = [o for o in filtered if 
+                       q in o.get("task", "").lower() or 
+                       q in o.get("worker_id", "").lower() or
+                       q in str(o.get("error", "")).lower()]
+        if target_task:
+            filtered = [o for o in filtered if o.get("task") == target_task]
+        if target_worker:
+            filtered = [o for o in filtered if o.get("worker_id") == target_worker]
+        
+        if layer == 1:
+            # Layer 1: 索引摘要 — 精简版
+            index = []
+            for o in filtered[-limit:]:
+                index.append({
+                    "ts": o.get("ts", ""),
+                    "task": o.get("task", "?"),
+                    "worker": o.get("worker_id", "?"),
+                    "model": o.get("model", "?"),
+                    "corps": o.get("corps", "?"),
+                    "ok": o.get("success", False),
+                    "elapsed": round(o.get("elapsed", 0), 1),
+                    "tokens": o.get("tokens_out", 0),
+                    "error": (o.get("error", "") or "")[:40] if not o.get("success") else ""
+                })
+            return {
+                "layer": 1,
+                "total_matched": len(filtered),
+                "returned": len(index),
+                "index": index,
+                "hint": "用 layer=2 + target_ts 查时间线，或用 layer=3 查完整记录"
+            }
+        
+        elif layer == 2:
+            if not target_ts:
+                target_ts = filtered[-1]["ts"] if filtered else ""
+            
+            anchor_idx = -1
+            for i, o in enumerate(filtered):
+                if o.get("ts", "") == target_ts:
+                    anchor_idx = i
+                    break
+            if anchor_idx == -1:
+                anchor_idx = len(filtered) - 1
+            
+            half = max(3, limit // 2)
+            start = max(0, anchor_idx - half)
+            end = min(len(filtered), anchor_idx + half + 1)
+            
+            timeline = []
+            for o in filtered[start:end]:
+                timeline.append({
+                    "ts": o.get("ts", ""),
+                    "task": o.get("task", "?"),
+                    "worker": o.get("worker_id", "?"),
+                    "ok": o.get("success", False),
+                    "elapsed": round(o.get("elapsed", 0), 1),
+                    "is_anchor": o.get("ts", "") == target_ts,
+                    "error_short": (o.get("error", "") or "")[:30] if not o.get("success") else ""
+                })
+            
+            return {
+                "layer": 2,
+                "anchor_ts": target_ts,
+                "timeline_range": f"#{start}~#{end-1}",
+                "timeline": timeline,
+                "hint": "用 layer=3 + target_ts 查完整记录"
+            }
+        
+        elif layer == 3:
+            if target_ts:
+                details = [o for o in filtered if o.get("ts") == target_ts]
+            else:
+                details = filtered[-limit:]
+            
+            return {
+                "layer": 3,
+                "returned": len(details),
+                "details": details,
+                "hint": "可用 query/target_task/target_worker 缩小范围"
+            }
+        
+        return {"error": f"Invalid layer: {layer}", "layer": layer}
+    
+    def quick_observe(self, task, worker_id, model, corps, success,
+                      elapsed=0, tokens_in=0, tokens_out=0, error="", quality=None):
+        """
+        轻量写入一条observation（独立于task_router的写入点）
+        
+        适用场景：
+        - 信号发现引擎在ACCEPT新因子时记录
+        - Dragon Leader在涨停分组后记录
+        - Stock Advisor在出建议后记录
+        - 任何不在矿场班次内的独立任务
+        """
+        obs = {
+            "ts": datetime.now().isoformat(),
+            "task": task,
+            "worker_id": worker_id,
+            "model": model,
+            "corps": corps,
+            "elapsed": round(elapsed, 2),
+            "success": success,
+            "tokens_in": tokens_in,
+            "tokens_out": tokens_out,
+            "error": str(error) if error else "",
+            "quality": quality
+        }
+        
+        if os.path.exists(OBSERVATION_FILE):
+            try:
+                with open(OBSERVATION_FILE) as f:
+                    data = json.load(f)
+            except:
+                data = {"observations": []}
+        else:
+            data = {"observations": []}
+        
+        data["observations"].append(obs)
+        
+        if len(data["observations"]) > 5000:
+            data["observations"] = data["observations"][-4000:]
+        
+        with open(OBSERVATION_FILE, "w") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        return obs
 
 
 if __name__ == "__main__":
