@@ -1,0 +1,27 @@
+{
+  "_note": "示例文件（不含真实密钥）。复制为 `mine-seed/.secrets/llm_providers.json` 后填写 api_key。",
+  "providers": [
+    {
+      "name": "apiyi",
+      "priority": 1,
+      "base_url": "https://api.apiyi.com",
+      "api_key": "PASTE_KEY_HERE",
+      "enabled": true
+    },
+    {
+      "name": "openrouter",
+      "priority": 2,
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key": "PASTE_KEY_HERE",
+      "enabled": true
+    },
+    {
+      "name": "gemini",
+      "priority": 3,
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent",
+      "api_key": "PASTE_KEY_HERE",
+      "enabled": true
+    }
+  ]
+}
+
