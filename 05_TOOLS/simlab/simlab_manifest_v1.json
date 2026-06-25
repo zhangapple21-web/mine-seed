@@ -1,0 +1,40 @@
+{
+  "version": "v1",
+  "name": "SimLab",
+  "description": "推演/回放/对照实验室（仅行为结构，不含身份）",
+  "purpose": "BEHAVIORAL_SIMULATION_ONLY",
+  "principles": [
+    "结构优先：结构 → 协议 → 记忆 → 路由 → 模型",
+    "模型只是临时住户",
+    "实验室隔离：只读输入，只写快照"
+  ],
+  "inputs": [
+    {
+      "source_id": "recent_daily_reports",
+      "path": "02_MEMORY/recent_memory/daily/",
+      "format": "markdown",
+      "read_only": true
+    }
+  ],
+  "outputs": [
+    {
+      "target_id": "simlab_snapshots",
+      "path": "output/simlab/",
+      "format": "json",
+      "write_only": true,
+      "git_tracked": false
+    }
+  ],
+  "limitations": [
+    "不复制任何真实身份信息（昵称/口头禅/个人记忆原文）",
+    "不读取或写入任何 token/api_key/secret/password/授权名单",
+    "不将推演结果冒充真实结论对外发布",
+    "不输出任何可能含 PII 的原始文本（仅结构化摘要与统计）"
+  ],
+  "safety_measures": {
+    "data_isolation": true,
+    "no_secrets": true,
+    "no_external_network_by_default": true
+  }
+}
+
