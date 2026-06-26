@@ -1,0 +1,35 @@
+{
+  "_note": "生态位词典（可演化）。用于把 git 变更路径与 daily 文字信号映射到候选生态位。不要把它当成职业列表，它只是观测用的分类器。",
+  "window_days_default": 30,
+  "min_occurrences_for_candidate": 5,
+  "known_streams": [
+    {
+      "slug": "simlab_experiment",
+      "name": "实验推演（SimLab）",
+      "signals": ["05_TOOLS/simlab", "simlab", "snapshot"],
+      "stable_input_hint": "daily + runtime data",
+      "stable_output_paths": ["output/simlab"],
+      "memory_deposit_paths": [],
+      "covered_by_existing_roles": ["实验AI", "实验官"]
+    },
+    {
+      "slug": "civilization_explorer",
+      "name": "外部文明熔炼（探索者）",
+      "signals": ["03_RESEARCH/civilization", "AUM-TASK-EXPLORER-001", "civilization_daily"],
+      "stable_input_hint": "GitHub/arXiv/社区",
+      "stable_output_paths": ["03_RESEARCH/civilization"],
+      "memory_deposit_paths": ["03_RESEARCH/civilization"],
+      "covered_by_existing_roles": ["探索者", "新知AI"]
+    },
+    {
+      "slug": "constraint_engineering",
+      "name": "约束工程",
+      "signals": ["03_DATA/CONSTRAINTS", "05_TOOLS/constraints", "constraint"],
+      "stable_input_hint": "constraint proposals + incidents",
+      "stable_output_paths": ["03_DATA/CONSTRAINTS"],
+      "memory_deposit_paths": ["03_DATA/research/constraint_proposal"],
+      "covered_by_existing_roles": ["档案官", "馆长", "守夜人"]
+    }
+  ]
+}
+
