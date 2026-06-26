@@ -1293,6 +1293,54 @@
       "first_seen": "2026-06-26T22:04:37.622985",
       "importance": 82
     },
+    "把情绪分类为": {
+      "name": "把情绪分类为",
+      "definition": "om › question情绪管理的意义是什么? - 知乎情绪不稳定的表现有哪些？为什么人们不喜欢别人激烈的表达想法1、把情绪分类为：原始情绪和次生情绪。 原始情绪是指：我们在受到外部刺激时，自然而然产生的情绪。例如走到高处， …zhihu.comht",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "推荐玩家"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.439728",
+      "importance": 82
+    },
+    "原始情绪是指": {
+      "name": "原始情绪是指",
+      "definition": "意义是什么? - 知乎情绪不稳定的表现有哪些？为什么人们不喜欢别人激烈的表达想法1、把情绪分类为：原始情绪和次生情绪。 原始情绪是指：我们在受到外部刺激时，自然而然产生的情绪。例如走到高处， …zhihu.comhttps://www.zhihu.co",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.446843",
+      "importance": 82
+    },
+    "原始情绪": {
+      "name": "原始情绪",
+      "definition": "estion情绪管理的意义是什么? - 知乎情绪不稳定的表现有哪些？为什么人们不喜欢别人激烈的表达想法1、把情绪分类为：原始情绪和次生情绪。 原始情绪是指：我们在受到外部刺激时，自然而然产生的情绪。例如走到高处， …zhihu.comhttps:/",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.453043",
+      "importance": 82
+    },
     "词库层": {
       "name": "词库层",
       "definition": "系统的语言结构层，原始词库、合并词库、去重引擎、映射索引。R1中是body死了但soul活下来的典型。",
@@ -1650,6 +1698,38 @@
       "first_seen": "2026-06-26T22:04:37.649736",
       "importance": 79
     },
+    "经验和见解": {
+      "name": "经验和见解",
+      "definition": "经验和见解是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "灵魂资产",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.460405",
+      "importance": 79
+    },
+    "为品牌使命": {
+      "name": "为品牌使命",
+      "definition": "为品牌使命是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "灵魂资产",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.466628",
+      "importance": 79
+    },
     "现实权重": {
       "name": "现实权重",
       "definition": "心核中的现实权重矩阵，用于衡量不同现实维度的权重，影响决策优先级。",
@@ -1758,6 +1838,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-26T22:04:37.669987",
+      "importance": 76
+    },
+    "搜狗微信搜索": {
+      "name": "搜狗微信搜索",
+      "definition": "搜狗微信搜索是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.473366",
       "importance": 76
     },
     "引擎层": {
@@ -1969,6 +2065,38 @@
       "first_seen": "2026-06-26T21:59:50.089477",
       "importance": 75
     },
+    "这款香水的香调最终定义为": {
+      "name": "这款香水的香调最终定义为",
+      "definition": "25年4月10日 · 1.香调 前调：公丁香 粉红胡椒 橙花 中调：板栗 愈创木 杜松 后调：香草 秘鲁香脂 开司米酮 这款香水的香调最终定义为：木质调。 注：开司米酮（人工合成香料，有麝香、 …zhihu.comhttps://www.zhihu.com › q",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.480954",
+      "importance": 75
+    },
+    "这款香水的香调最终": {
+      "name": "这款香水的香调最终",
+      "definition": "25年4月10日 · 1.香调 前调：公丁香 粉红胡椒 橙花 中调：板栗 愈创木 杜松 后调：香草 秘鲁香脂 开司米酮 这款香水的香调最终定义为：木质调。 注：开司米酮（人工合成香料，有麝香、 …zhihu.comhttps://www.zhihu.com",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.488129",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -1984,6 +2112,38 @@
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.096281",
       "importance": 74
+    },
+    "count": {
+      "name": "count",
+      "definition": "count是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.495483",
+      "importance": 73
+    },
+    "type": {
+      "name": "type",
+      "definition": "type是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "芯片",
+        "知乎故事",
+        "Emotional_Trigger_情感触发器",
+        "简单的将就是",
+        "把情绪分类为"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-26T22:06:35.502629",
+      "importance": 73
     },
     "量子引擎": {
       "name": "量子引擎",
@@ -2715,7 +2875,9 @@
       "是什么意思",
       "知乎",
       "汉字发音有阴阳",
-      "一声"
+      "一声",
+      "经验和见解",
+      "为品牌使命"
     ],
     "核心组件": [
       "Ω-Core",
@@ -2794,7 +2956,15 @@
       "推荐玩家",
       "特定称谓",
       "愿景描绘",
-      "阵营玩家"
+      "阵营玩家",
+      "把情绪分类为",
+      "原始情绪是指",
+      "原始情绪",
+      "搜狗微信搜索",
+      "这款香水的香调最终定义为",
+      "这款香水的香调最终",
+      "count",
+      "type"
     ],
     "核心概念": [
       "现居住",
@@ -2805,5 +2975,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-26T22:04:40.392710"
+  "exported_at": "2026-06-26T22:06:36.235649"
 }

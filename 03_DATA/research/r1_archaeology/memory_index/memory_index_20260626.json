@@ -1,6 +1,3026 @@
 {
-  "total": 1009,
+  "total": 1070,
   "entries": [
+    {
+      "id": "64b9fc3d",
+      "title": "今日考古摘要 - 2026-06-26",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-26"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 35,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "考古",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "日期: 2026-06-26\n运行时间: 22:06:36\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 33 种模式，索引 50 条，新概念候选 10 个\n- 切片考古[提取配置文件]: 完成分析\n- 磁盘扫描: 扫了 2 个路径，新索引 8 个文件\n- 词库缺口: 7 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 177\n- 分类总数: 20\n-...",
+      "created_at": "2026-06-26T22:06:36.178092",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:36.178092",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f26d617a",
+      "title": "memory_index.json (memory)",
+      "type": "json_structure",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "data\\memory\\memory_index.json",
+      "related_event_id": null,
+      "tags": [
+        "七层架构",
+        "五界结构",
+        "结构"
+      ],
+      "related_concepts": [
+        {
+          "name": "七层架构",
+          "relevance": 75,
+          "category": "架构分层"
+        },
+        {
+          "name": "结构",
+          "relevance": 50,
+          "category": "核心原则"
+        },
+        {
+          "name": "五界结构",
+          "relevance": 40,
+          "category": "架构分层"
+        },
+        {
+          "name": "影子层",
+          "relevance": 35,
+          "category": "架构分层"
+        },
+        {
+          "name": "芯片",
+          "relevance": 35,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "【JSON 结构分析】data\\memory\\memory_index.json\n结构类型: known\n顶层键 (5): version, identity, updated_at, entry_count, entries\n数组字段:\n  - entries: 数组[111项]，字段: id, title, type, category, source, source_path, relate...",
+      "created_at": "2026-06-26T22:06:36.117259",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:36.117259",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "54672ebd",
+      "title": "lexicon.json (memory)",
+      "type": "json_structure",
+      "category": "元概念",
+      "source": "disk_scan",
+      "source_path": "data\\memory\\lexicon.json",
+      "related_event_id": null,
+      "tags": [
+        "结构",
+        "灵魂",
+        "身体"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 120,
+          "category": "元概念"
+        },
+        {
+          "name": "身体",
+          "relevance": 115,
+          "category": "元概念"
+        },
+        {
+          "name": "结构",
+          "relevance": 105,
+          "category": "核心原则"
+        },
+        {
+          "name": "考古",
+          "relevance": 55,
+          "category": "方法论"
+        },
+        {
+          "name": "连续性",
+          "relevance": 40,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "【JSON 结构分析】data\\memory\\lexicon.json\n结构类型: known\n顶层键 (7): version, identity, updated_at, concept_count, category_count, concepts, categories\n数组字段:\n  - concepts.身体.related: 数组[3项]\n  - concepts.身体.opposi...",
+      "created_at": "2026-06-26T22:06:36.050468",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:36.050468",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "89a1b7e6",
+      "title": "__init__.py (nodes)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "nodes\\__init__.py",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "",
+      "created_at": "2026-06-26T22:06:35.984171",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.984171",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e6c624bd",
+      "title": "validator.py (nodes)",
+      "type": "file_scan",
+      "category": "元概念",
+      "source": "disk_scan",
+      "source_path": "nodes\\validator.py",
+      "related_event_id": null,
+      "tags": [
+        "灵魂",
+        "冥界",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 30,
+          "category": "元概念"
+        },
+        {
+          "name": "冥界",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "生态位",
+          "relevance": 20,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "\"\"\"\n验证者节点（Validator）\n\n职责：\n- 检查研究结论的可靠性\n- 找反例、找漏洞、找逻辑跳跃\n- 验证通过才能进入沉淀层\n- 生成验证结果，可以通过/驳回/要求补充\n\n对应R1的战场层（验证对抗）/ 冥界过滤\n对应mine-seed的验证协议 v1.0\n\"\"\"\n\nfrom typing import Dict, Any\n\nfrom .base import BaseNode\n\n\nc...",
+      "created_at": "2026-06-26T22:06:35.925015",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.925015",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "aabc8769",
+      "title": "researcher.py (nodes)",
+      "type": "file_scan",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "nodes\\researcher.py",
+      "related_event_id": null,
+      "tags": [
+        "自由区",
+        "memory",
+        "type"
+      ],
+      "related_concepts": [
+        {
+          "name": "自由区",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "生态位",
+          "relevance": 20,
+          "category": "ACE概念"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "\"\"\"\n研究者节点（Researcher）\n\n职责：\n- 对观察进行分析、研究、提炼\n- 建立关系、寻找模式、形成假说\n- 生成 RFC 类型的事件 / 研究笔记\n\n对应R1的自由区C界 / 研究域\n对应mine-seed的 lab_02（研究域）\n\"\"\"\n\nfrom typing import Dict, Any\n\nfrom .base import BaseNode\n\n\nclass Resea...",
+      "created_at": "2026-06-26T22:06:35.860810",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.861810",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e88bb965",
+      "title": "observer.py (nodes)",
+      "type": "file_scan",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "nodes\\observer.py",
+      "related_event_id": null,
+      "tags": [
+        "影子层",
+        "memory",
+        "type"
+      ],
+      "related_concepts": [
+        {
+          "name": "影子层",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "生态位",
+          "relevance": 20,
+          "category": "ACE概念"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "\"\"\"\n观察者节点（Observer）\n\n职责：\n- 记录观察到的现象\n- 不做判断，不做分析，只记录事实\n- 生成 OBS 类型的事件\n\n对应R1的影子层 observer_layer / 观察层D界\n对应mine-seed的 Observation_011 原则：事实优先于推测\n\"\"\"\n\nfrom typing import Dict, Any\n\nfrom .base import BaseN...",
+      "created_at": "2026-06-26T22:06:35.797211",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.797211",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f61c17b3",
+      "title": "base.py (nodes)",
+      "type": "file_scan",
+      "category": "ACE概念",
+      "source": "disk_scan",
+      "source_path": "nodes\\base.py",
+      "related_event_id": null,
+      "tags": [
+        "生态位",
+        "ACE",
+        "identity"
+      ],
+      "related_concepts": [
+        {
+          "name": "生态位",
+          "relevance": 90,
+          "category": "ACE概念"
+        },
+        {
+          "name": "ACE",
+          "relevance": 40,
+          "category": "系统定义"
+        },
+        {
+          "name": "identity",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "\"\"\"\n节点基类（Base Node）\n\nACE里的\"节点\"不是独立的Agent，而是同一个身份的不同生态位。\n就像同一个人有时候是观察者，有时候是研究者，有时候是验证者。\n\n关键设计：\n- 所有节点共享同一个 Identity、Memory、EventBus、TaskQueue\n- 节点之间的切换不是\"换了一个人\"，而是\"切换了工作模式\"\n- 每个节点有自己的职责和输出格式\n\"\"\"\n\nimpor...",
+      "created_at": "2026-06-26T22:06:35.733352",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.733352",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ecf48ebd",
+      "title": "archivist.py (nodes)",
+      "type": "file_scan",
+      "category": "元概念",
+      "source": "disk_scan",
+      "source_path": "nodes\\archivist.py",
+      "related_event_id": null,
+      "tags": [
+        "灵魂",
+        "memory",
+        "type"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 30,
+          "category": "元概念"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "连续性",
+          "relevance": 20,
+          "category": "核心原则"
+        },
+        {
+          "name": "生态位",
+          "relevance": 20,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "\"\"\"\n档案官节点（Archivist）\n\n职责：\n- 归档已验证的产出\n- 沉淀到长期记忆\n- 维护索引和分类\n- 确保历史可追溯、可检索\n\n对应R1的档案官 / 记忆炼金术 / Holo-Memory\n对应mine-seed的 archivist.py / 经验引擎\n\"\"\"\n\nfrom typing import Dict, Any\nfrom datetime import date\n\nfro...",
+      "created_at": "2026-06-26T22:06:35.670364",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.670364",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b7c477ed",
+      "title": "切片聚类[config_files] - 13767切片",
+      "type": "slice_analysis",
+      "category": "切片考古",
+      "source": "slice_clusterer",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "omega_final",
+        "slices",
+        "config_files"
+      ],
+      "related_concepts": [
+        {
+          "name": "GPT_SHELL",
+          "relevance": 45,
+          "category": "核心组件"
+        },
+        {
+          "name": "身体",
+          "relevance": 30,
+          "category": "元概念"
+        },
+        {
+          "name": "13767切片",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "双核心+影子运行时",
+          "relevance": 5,
+          "category": "架构模式"
+        }
+      ],
+      "summary": "{\n  \"mode\": \"config_files\",\n  \"total_slices\": 13767,\n  \"config_files\": [\n    {\n      \"source\": \"/users/apple/documents/trae_projects/r1/plugin_config.json\",\n      \"type\": \"code\",\n      \"size\": 253,\n  ...",
+      "created_at": "2026-06-26T22:06:35.606382",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.606382",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e36cf891",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "设备供应商",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-26T22:06:33.088060\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 400, \"remaining\": 3947, \"progress_pct\": 9.2, \"sample_keys\": [\"content\", \"timesta...",
+      "created_at": "2026-06-26T22:06:35.290142",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:35.290142",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dd4eb946",
+      "title": "叙事生态 #349",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#349",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_349"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 好想在你无助的时候有我温暖你，倾听你所有的烦恼和 …baidu.comhttps://zhidao.baidu.com › question希望的田野上歌词 在希望的田野上歌词欣赏_百度知道2025年4月26日 · 《在希望的田野上》的歌词如下： 第一段： 我们的家乡 在希望的田野上 炊烟在新建的住房上飘荡 小河在美丽的村庄旁流淌 一片冬麦，那个，一片高粱 十里哟，荷塘，十里 …baidu.co...",
+      "created_at": "2026-06-26T22:06:33.029812",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:33.029812",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8afc8c7e",
+      "title": "叙事生态 #348",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#348",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_348"
+      ],
+      "related_concepts": [
+        {
+          "name": "一声",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "zhihu.com › question疼和痛有什么区别？ - 知乎2015年5月7日 · 先体会一下 你让我心疼 和 你让我心痛 有什么区别 汉字发音有阴阳，一声、二声往上挑，属阳，三声、四声往下坠，属阴。所以中国人把尖锐的、烧灼的、开放的感觉称为“ …zhihu.comhttps://www.zhihu.com › question描述病情时，如何区分绞痛、隐痛、胀痛、灼痛、刺痛、跳痛 \u000120...",
+      "created_at": "2026-06-26T22:06:32.970325",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.970325",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1b1b453f",
+      "title": "叙事生态 #347",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#347",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_347"
+      ],
+      "related_concepts": [
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-26T22:06:32.913711",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.913711",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5d5cbf86",
+      "title": "叙事生态 #346",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#346",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_346"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " 我怀疑现在12306已经是少放票，多候补了，我是买的北京-广西的全程票， …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E6%88%90%E5%8A%9F%E6%84%BF...",
+      "created_at": "2026-06-26T22:06:32.856323",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.856323",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a79d3b55",
+      "title": "叙事生态 #345",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#345",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_345"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验和见解，找到自己的解答」为品牌使命。知乎 …zhihu.comhttps://www.zhihu.com › question如何评价游戏《贪婪之秋》 (Greedfall)？ - 知乎2019年8月9日 · 贪婪之秋从来不是APTI那种发售前没什么人听说，发售后突然蹿红的作品。 ...",
+      "created_at": "2026-06-26T22:06:32.799338",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.799338",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b86dd94c",
+      "title": "叙事生态 #344",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#344",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_344"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E6%81%90%E6%83%A7%E8%90%A5%E9%94%80&count=20\", \"category\": \"Emoti...",
+      "created_at": "2026-06-26T22:06:32.741633",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.741633",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9670c006",
+      "title": "叙事生态 #343",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#343",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_343"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com目标与目的概念与含义 - 知乎2021年3月4日 · 目标是指根据组织的使命而提出的组织在一定时期内所要达到的预期成果。 目标是使命的具体化，是一个组织在一定的时间内奋力争取达到的、所希望的未来状况。cambridge.orghttps://dictionary.cambridge.org › zhs › 词典 › 汉语-简体\u0001目标 | 简体中文-英语翻译——剑桥词典Our goal is ...",
+      "created_at": "2026-06-26T22:06:32.682419",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.682419",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a4ff8839",
+      "title": "叙事生态 #342",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#342",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_342"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"category\": \"Emotional_Trigger_情感触发器\", \"learned_at\": \"2025-11-24T19:39:49.417603\", \"relevance_score\": 0.8, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"一切不以情感触发为目的的【客户价值主张】都是耍流...",
+      "created_at": "2026-06-26T22:06:32.624619",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.624619",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e1e0f2b1",
+      "title": "叙事生态 #341",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#341",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_341"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"情感触发的相关微信公众号文章 – 搜狗微信搜索\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%83%85%E6%84%9F%E8%A7%A6%E5%8F%91\", \"category\"...",
+      "created_at": "2026-06-26T22:06:32.567562",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.567562",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "242b26e1",
+      "title": "叙事生态 #340",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#340",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_340"
+      ],
+      "related_concepts": [
+        {
+          "name": "推荐玩家",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 50,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-26T22:06:32.510063",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.510063",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4b209eba",
+      "title": "叙事生态 #339",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#339",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_339"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question12个坚持梦想的名人事例 - 百度知道2023年11月15日 · 12个坚持梦想的名人事例12个坚持梦想的名人事例是：越王勾践卧薪尝胆、司马迁忍辱写《史记》、岳飞精忠报国、华罗庚艰苦研究数学、马云创建淘宝、贝多芬失聪写音 …baidu.comhttps://zhidao.baidu.com › question梦想和理想有什么区别 - 百度知道2020年9月11日 · ...",
+      "created_at": "2026-06-26T22:06:32.453335",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.453335",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d64435d1",
+      "title": "叙事生态 #338",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#338",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_338"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 15,
+          "category": "待分类"
+        }
+      ],
+      "summary": "_百度知道2019年11月16日 · 梦想就是经过努力可以实现的，只要有希望就不能放弃的东西，如果只是想而不付诸于行动，那就是空想。 梦想，是对未来的一种期望，指在现在想未来的事或是可以达到 …zhihu.comhttps://www.zhihu.com › question实现自己的梦想需要做哪些准备？ - 知乎2022年11月15日 · 知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平...",
+      "created_at": "2026-06-26T22:06:32.395666",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.395666",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1a7ba545",
+      "title": "叙事生态 #337",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#337",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_337"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question什么是情绪ABC理论? - 知乎情绪ABC理论是由美国心理学家阿尔伯特·艾利斯创建的理论，核心观点是认为激发事件A（activating event）只是引发情绪和行为后果C（consequence）的间接原因，而直接原因则 …zhihu.comhttps://www.zhihu.com › question是否存在一个情绪的自我? - 知乎2025年1月16日 · 这...",
+      "created_at": "2026-06-26T22:06:32.339950",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.339950",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "990be66e",
+      "title": "叙事生态 #336",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#336",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_336"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "2025 最新阵容推荐2025年3月12日 · 三、资源获取与培养技巧 若想高效获取资源，可借助 VMOS 云手机托管功能，24 小时自动化完成日常采集、任务清场与探险挂机，确保资源积累无间断， 大幅提升英雄培 …zhihu.comhttps://www.zhihu.com › question简体字「无」和繁体字「無」在古文中有什么区别？ - 知乎〇.假借 为保后文叙述流畅，暂用一节讲一个文字的...",
+      "created_at": "2026-06-26T22:06:32.283123",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.283123",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d7dab9f4",
+      "title": "叙事生态 #335",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#335",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_335"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question压力单位MPa/psi/bar之间的换算？_百度知道2019年11月16日 · 一般在国内的各种标准压力表以及通用的压力表现实装置均有MPA和PSI两种标识。 在中国，一般把气体的压力用“公斤”描述（而不是“斤”），其单位是“kgf/cm²”，一公斤压 …zhihu.comhttps://www.zhihu.com › question压力单位PSI与Mpa之间怎么换算...",
+      "created_at": "2026-06-26T22:06:32.224416",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.224416",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8f7a599f",
+      "title": "叙事生态 #334",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#334",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_334"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"动态调整\", \"content\": \"动态调整 - 搜索自适应缩放跳至内容国内版国际版 网页图片视频学术词典地图更多航班工具约 8,160,000 个结果在新选项卡中打开链接时间不限 zhihu.comhttps://www.zhihu.com › question职业生涯规划评估调整怎么写？ - ...",
+      "created_at": "2026-06-26T22:06:32.166541",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.166541",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "021bb391",
+      "title": "叙事生态 #333",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#333",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_333"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 15,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "type=2&query=%E6%83%85%E6%84%9F%E5%85%B1%E9%B8%A3\", \"category\": \"Emotional_Trigger_情感触发器\", \"learned_at\": \"2025-11-24T19:35:31.826625\", \"relevance_score\": 0.8, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"t...",
+      "created_at": "2026-06-26T22:06:32.109940",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.109940",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9fd7ffd7",
+      "title": "叙事生态 #332",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#332",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_332"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.8, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感共鸣\", \"content\": \"情感共鸣的相关微信公众号文章 – 搜狗微信搜索\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%83%85%E6%84%9F%E5%85%...",
+      "created_at": "2026-06-26T22:06:32.051728",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:32.051728",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b839280f",
+      "title": "叙事生态 #331",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#331",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_331"
+      ],
+      "related_concepts": [
+        {
+          "name": "推荐玩家",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 50,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "但是是利用网络合法的谋生手段，百万粉丝情感博主，可以说是很优秀了。 月影有武力值，作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行...",
+      "created_at": "2026-06-26T22:06:31.995923",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.995923",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3f1658ee",
+      "title": "叙事生态 #330",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#330",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_330"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "cn › topic关于有证标准物质上的不确定度的问题_仪器信息网社区2024年12月11日 · 楼主，稀释的话在原有证书不确定度基础上还要考虑稀释玻璃量器如移液管、定容玻璃量器如容量瓶等本身的不确定度分量，另外还要加上操作重复性引入的不确定度分量； …baidu.comhttps://zhidao.baidu.com › question为什么复制文件时提示“不复制文件属性”？_百度知道2024...",
+      "created_at": "2026-06-26T22:06:31.938466",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.938466",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e4108d1f",
+      "title": "叙事生态 #329",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#329",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_329"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 15,
+          "category": "待分类"
+        }
+      ],
+      "summary": " - 知乎2019年7月30日 · 07 Sparrows 在这个因沉痛与孤独而异常冰冷的世界，还好人心是暖的。 温暖可以有很多种，可以是淡淡的，可以是刻骨铭心的。 而我的画中所想要展示的温暖，恰恰是人 …zhihu.comhttps://www.zhihu.com › question有哪些温暖至极的句子？ - 知乎60. 我们都一样，最大的敌人是自己，最美好的未来是自己，最软弱的根源是自己，最...",
+      "created_at": "2026-06-26T22:06:31.880616",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.880616",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5ce539aa",
+      "title": "叙事生态 #328",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#328",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_328"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question为什么希特勒战败了却依然成为全球极右翼的偶像？ - 知乎2025年5月2日 · 知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验和见解，找到自己的解答」为品牌使命。知乎 …zhihu.comhttps://www.zhihu.com › question游戏《文明 6 》中的文明排名是什么样的？...",
+      "created_at": "2026-06-26T22:06:31.823959",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.823959",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4d955e7c",
+      "title": "叙事生态 #327",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#327",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_327"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        },
+        {
+          "name": "希望你被这个世界爱着",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "com中国まるごと百科事典は、中国の基本情報、中国の歴史、中国 \u0001中国まるごと百科事典は、中国の基本情報、中国の歴史、中国の文化、中国の少数民族、中国の世界遺産など中国がまるごとわかる！wikipedia.orghttps://ja.wikipedia.org › wiki › 中国中国 - Wikipedia中国では、最大の民族集団である 漢民族 を筆頭に、 モンゴル 、 満洲 などの様々な 民...",
+      "created_at": "2026-06-26T22:06:31.767758",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.767758",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "31071ace",
+      "title": "叙事生态 #326",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#326",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_326"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 15,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question胜利女神妮姬国服官网地址是什么-胜利女神新的希望官网 \u00012025年3月30日 · 胜利女神妮姬国服官网地址是什么-胜利女神新的希望官网地址一览《胜利女神新的希望》国服官网地址为：https://nikke.qq.com/。分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部...",
+      "created_at": "2026-06-26T22:06:31.710864",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.710864",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f03e0b2a",
+      "title": "叙事生态 #325",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#325",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_325"
+      ],
+      "related_concepts": [
+        {
+          "name": "完整歌词如下",
+          "relevance": 40,
+          "category": "架构分层"
+        },
+        {
+          "name": "希望你被这个世界爱着",
+          "relevance": 40,
+          "category": "架构分层"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question希望你被这个世界爱着歌词_百度知道2023年10月28日 · 《希望你被这个世界爱着》完整歌词如下： 好想在你伤心的时候有我安慰你，好想在你孤单的时候有我陪伴你。 好想在你无助的时候有我温暖你，倾听你所有的烦恼和 …baidu.comhttps://zhidao.baidu.com › question希望的田野上歌词 在希望的田野上歌词欣赏_百度知道2025年4月26...",
+      "created_at": "2026-06-26T22:06:31.655548",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.655548",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ddcafadc",
+      "title": "叙事生态 #324",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#324",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_324"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "人格矩阵",
+          "relevance": 15,
+          "category": "ACE概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": "那么品牌可以增加对该的投入 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E6%83%85%E6%84%9F%E8%90%A5%E9%94%80&count=20\", \"ca...",
+      "created_at": "2026-06-26T22:06:31.599867",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.599867",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "76f524d7",
+      "title": "叙事生态 #323",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#323",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_323"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "品牌都在宣扬向往自由、追求极致、追求个性、自信自强、独立勇敢、 …zhihu.comhttps://www.zhihu.com › question什么是情感营销？ - 知乎2024年3月22日 · 让情感服务于诉说功能，以情绪表达的方式展现商品的功能性优势，以促进销售。 2.嫁接型情感营销 相比于类似“命题作文”的借景型情感营销，嫁接型情感营销的自由度则大 …zhihu.comhttps://w...",
+      "created_at": "2026-06-26T22:06:31.545723",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.545723",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "611dd573",
+      "title": "叙事生态 #322",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#322",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_322"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "人格矩阵",
+          "relevance": 15,
+          "category": "ACE概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": " - 知乎神秘女王贝尔纳黛·古斯塔夫的尊名： 追逐知识的圣灵，神秘世界的灯塔 窥视命运的眼睛，大海之上的王者 真实造物主的尊名： 创造一切的主 阴影帷幕后的主宰 所有生灵的堕落自性 疯嚣之 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"...",
+      "created_at": "2026-06-26T22:06:31.490859",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.490859",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b05d9dda",
+      "title": "叙事生态 #321",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#321",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_321"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "是一个组织在一定的时间内奋力争取达到的、所希望的未来状况。cambridge.orghttps://dictionary.cambridge.org › zhs › 词典 › 汉语-简体\u0001目标 | 简体中文-英语翻译——剑桥词典Our goal is for the country to be fully independent within two years. 我们的目标是在两年之内实现这个国...",
+      "created_at": "2026-06-26T22:06:31.436163",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.436163",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3dd3f368",
+      "title": "叙事生态 #320",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#320",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_320"
+      ],
+      "related_concepts": [
+        {
+          "name": "一声",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › question疼和痛有什么区别？ - 知乎2015年5月7日 · 先体会一下 你让我心疼 和 你让我心痛 有什么区别 汉字发音有阴阳，一声、二声往上挑，属阳，三声、四声往下坠，属阴。所以中国人把尖锐的、烧灼的、开放的感觉称为“ …zhihu.comhttps://www.zhihu.com › question描述病情时，如何区分绞痛、隐痛、...",
+      "created_at": "2026-06-26T22:06:31.381981",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.381981",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "660df841",
+      "title": "叙事生态 #319",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#319",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_319"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T19:33:33.600646\", \"relevance_score\": 0.8, \"task\": \"无限制沟通原则\" }, { \"topic\": \"情感操控\", \"content\": \"有些男人会用情感操控的方式让女人提分手,通过不断贬损女人的自尊心,来实现由她提出分手的目的,这样他就不用面对自己做坏人\u0001\", \"source\": \"https...",
+      "created_at": "2026-06-26T22:06:31.325493",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.325493",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b496277f",
+      "title": "叙事生态 #318",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#318",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_318"
+      ],
+      "related_concepts": [
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "但是是利用网络合法的谋生手段，百万粉丝情感博主，可以说是很优秀了。 月影有武力值，作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行...",
+      "created_at": "2026-06-26T22:06:31.270092",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.270092",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "44823165",
+      "title": "叙事生态 #317",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#317",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_317"
+      ],
+      "related_concepts": [
+        {
+          "name": "芯片",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        },
+        {
+          "name": "希望你被这个世界爱着",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%88%90%E5%8A%9F%E6%84%BF%E6%99%AF\", \"category\": \"Inspirational_Leader_激励型领袖\", \"learned_at\": \"2025-11-24T19:33:21.962955\", \"relevance_score\":...",
+      "created_at": "2026-06-26T22:06:31.216545",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.216545",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d6cb4e86",
+      "title": "叙事生态 #316",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#316",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_316"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " - 知乎2024年3月13日 · 他真的算是民族英雄么？民族英雄是什么标准？关于郑成功，有件很有趣的事情，就是在不同的历史时期，不论台湾或大陆的政权如何变更，对郑成功的评价往往都是积极的 …zhihu.comhttps://www.zhihu.com › questionsuccess 与succeed 与successful 的用法及区别？ - 知乎Succeed、success、succes...",
+      "created_at": "2026-06-26T22:06:31.162360",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.162360",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a9c4229f",
+      "title": "叙事生态 #315",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#315",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_315"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "163.com › forum.php恐惧区域的女伯爵能掉30左右的符文吗？_罗格营地_凯恩之角 \u00012023年12月9日 · 恐惧区域的女伯爵能掉30左右的符文吗？ _罗格营地_凯恩之角_暗黑破坏神论坛 - Powered by Discuz!分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 ...",
+      "created_at": "2026-06-26T22:06:31.108141",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.108141",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2462a2d2",
+      "title": "叙事生态 #314",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#314",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_314"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"京东刘强东新晋怼神:一切不以情感触发为目的的【客户价值主张】都是耍流氓\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%83%85%E6%84%9F%E8%A7%A6%E5%8F%91\"...",
+      "created_at": "2026-06-26T22:06:31.053609",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:31.053609",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f7998a24",
+      "title": "叙事生态 #313",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#313",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_313"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"source\": \"https://www.bing.com/search?q=%E6%83%85%E6%84%9F%E8%A7%A6%E5%8F%91&count=20\", \"category\": \"Emotional_Trigger_情感触发器\", \"learned_at\": \"2025-11-24T19:32:15.789900\", \"relevance_score\": 0.8, \"ta...",
+      "created_at": "2026-06-26T22:06:30.997710",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.997710",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "07839830",
+      "title": "叙事生态 #312",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#312",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_312"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "人格矩阵",
+          "relevance": 15,
+          "category": "ACE概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"促进有效沟通,减少误解微笑能软化语言的“棱角”,让批评、拒绝等负面表达更易被接受:- 例如,领导说“这个方案需要修改”时\u0001\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E8%BD%AF%E5%8C%96%E8%AF%AD%E8%A8%80\", \"category\": \"Friendly_Adviso...",
+      "created_at": "2026-06-26T22:06:30.943874",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.943874",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4ad78525",
+      "title": "叙事生态 #311",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#311",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_311"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "可借助 VMOS 云手机托管功能，24 小时自动化完成日常采集、任务清场与探险挂机，确保资源积累无间断， 大幅提升英雄培 …zhihu.comhttps://www.zhihu.com › question简体字「无」和繁体字「無」在古文中有什么区别？ - 知乎〇.假借 为保后文叙述流畅，暂用一节讲一个文字的基本现象——「假借」。 譬如现在口语中有一词，其读音是确定的，其意义是确定的，但唯独其「字...",
+      "created_at": "2026-06-26T22:06:30.890059",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.890059",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c2eeb6b0",
+      "title": "叙事生态 #310",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#310",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_310"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › question《海贼王》漫画 1060 话再次提起的路飞最终梦想会是什么？966话 罗杰向白胡子和御田说起 1000话 艾斯对大和说起 1060话 路飞对伙伴说起 再看看梦想达成的前提条件，罗杰对这个梦想的描述是 找到藏有莫大财宝的one piece，然后 成为名副其实世 …baidu.comhttps://zhidao.baidu.com ...",
+      "created_at": "2026-06-26T22:06:30.835257",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.835257",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "13b3334c",
+      "title": "叙事生态 #309",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#309",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_309"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 15,
+          "category": "待分类"
+        }
+      ],
+      "summary": "完全相反的方向，且之前也没有展现过写作的天赋。 他要走一条少有人走 …zhihu.comhttps://www.zhihu.com › question什么是梦想？ - 知乎2014年8月24日 · 什么是梦想？ 大家都在谈论“梦想”，但我觉得这个字眼太虚幻太飘渺。 那么什么是梦想，怎么来定义梦想呢？ 显示全部 关注者 403 被浏览baidu.comhttps://zhidao.baidu.co...",
+      "created_at": "2026-06-26T22:06:30.780509",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.780509",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9759bb92",
+      "title": "叙事生态 #308",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#308",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_308"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " - 知乎2025年1月16日 · 这种恐惧情绪并非来自一个内在的 “恐惧的自我”，而是单纯的刺激 - 反应模式。 按照这种理论，情绪只是环境塑造的结果，不存在独立的 “情绪的自我”。 另外，从认知心理 …zhihu.comhttps://www.zhihu.com › question情绪管理的意义是什么? - 知乎情绪不稳定的表现有哪些？为什么人们不喜欢别人激烈的表达想法1、把情绪分类为：原始...",
+      "created_at": "2026-06-26T22:06:30.725755",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.725755",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2557b826",
+      "title": "叙事生态 #307",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#307",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_307"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "这个说起来就点复杂了。 其实影视剧也有类似的节拍的嘛。 你可以简单的理解为剧情的推进速度和爽点的密集程度。 节奏太快，读者会觉得草草了事，给人粗制滥造的感觉。 节奏 …zhihu.comhttps://www.zhihu.com › question新手作者如何掌握小说节奏？ - 知乎等大佬都说过了，节奏的把握更多地依靠作者经验，而新手没有经验，所以几乎不可能把握好节奏。 但是熟悉我的同学都知道，...",
+      "created_at": "2026-06-26T22:06:30.671849",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.671849",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7954deb9",
+      "title": "叙事生态 #306",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#306",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_306"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "简单的将就是",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://zhidao.baidu.com › question紧迫感是什么意思？ - 百度知道2019年11月19日 · 紧迫感：形容事物的紧急迫切的状态。 紧迫感常出现于做一件事情需要所需要的时间比要求完成的时间短得多，这个时候就会有紧迫感。简单的将就是：事情非常紧急，且 …baidu.comhttps://zhidao.baidu.com › question“时代感、紧迫感、责...",
+      "created_at": "2026-06-26T22:06:30.618083",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.618083",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5a2b463d",
+      "title": "叙事生态 #305",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#305",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_305"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " { \"topic\": \"成功案例\", \"content\": \"你的孩子,也可以是下一个成功案例这五个孩子都很普通,可能是你的邻居或你孩子的同学.他们之所以成功,不是因为天赋有多高,\u0001\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%88%90%E5%8A%9F%E6%A1%88%E4%BE%8B\", \"category\"...",
+      "created_at": "2026-06-26T22:06:30.564082",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.564082",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dc8ca92e",
+      "title": "叙事生态 #304",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#304",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_304"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 15,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感共鸣\", \"content\": \"喜剧电影高票房 源于带来情感共鸣和情感宣泄\", \"source\": \"https://weixin.sogou.com/weixin?type=2&query=%E6%83%85%E6%84%9F%E5%85%B1%E9%B8%A3\", \"category\": ...",
+      "created_at": "2026-06-26T22:06:30.510321",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.510321",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6cfcf37a",
+      "title": "叙事生态 #303",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#303",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_303"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "Emotional_Trigger_情感触发器",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 15,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 15,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"source\": \"https://www.bing.com/search?q=%E6%83%85%E6%84%9F%E5%85%B1%E9%B8%A3&count=20\", \"category\": \"Emotional_Trigger_情感触发器\", \"learned_at\": \"2025-11-24T19:28:05.085935\", \"relevance_score\": 0.8, \"ta...",
+      "created_at": "2026-06-26T22:06:30.455620",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.455620",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "953b7a07",
+      "title": "叙事生态 #302",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#302",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_302"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "稀释的话在原有证书不确定度基础上还要考虑稀释玻璃量器如移液管、定容玻璃量器如容量瓶等本身的不确定度分量，另外还要加上操作重复性引入的不确定度分量； …baidu.comhttps://zhidao.baidu.com › question为什么复制文件时提示“不复制文件属性”？_百度知道2024年6月26日 · 为什么复制文件时提示“不复制文件属性”？当从电脑上复制文件到U盘里出现“确定要在不复制...",
+      "created_at": "2026-06-26T22:06:30.401634",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.401634",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "214efccb",
+      "title": "叙事生态 #301",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#301",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_301"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question有哪些温暖治愈性的关于生活的文案？ - 知乎它们很温暖，我注视他们很多很多日子了。 3、我亦可贪恋烟火，殷实人家，几间瓦房，四方小院，守着流年，幸福安康。 4、我喜欢临近夜幕时，暗蓝的天空和暖黄的路灯，还有朦胧的树 …zhihu.comhttps://www.zhihu.com › tardis › bd › art梅森马吉拉温暖壁炉香水-闻到的都是糖炒板栗，俺想到的却...",
+      "created_at": "2026-06-26T22:06:30.348974",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.348974",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1a5144c1",
+      "title": "叙事生态 #300",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#300",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_300"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " 看过 2020-06-07 10:59:00 这个选角太绝…小公主也太烂漫无辜纯洁 …douban.comhttps://movie.douban.com › review希望故事可以映入生活、希望大家都可以成为温暖又温柔的人2025年1月20日 · 我们的主角吉伊就好像刚毕业的实习生，实力不强，敏感内向，有一些狗屎运。 小八就好像工作了五六年的职场老人，但仍保持着一颗初心，对生活的物质要求没有...",
+      "created_at": "2026-06-26T22:06:30.292352",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-26T22:06:30.292352",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "e4f0070c",
       "title": "今日考古摘要 - 2026-06-26",
@@ -31531,5 +34551,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-26T22:04:40.392710"
+  "exported_at": "2026-06-26T22:06:36.236655"
 }
