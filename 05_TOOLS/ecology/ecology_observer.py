@@ -77,7 +77,7 @@ def _list_daily_files(days: int) -> List[str]:
     files = [os.path.join(DAILY_DIR, f) for f in os.listdir(DAILY_DIR) if f.endswith(".md")]
     files.sort(reverse=True)
     # 粗略：只取最近 N 个文件（文件命名不完全统一，但足够用于观测）
-    return files[: max(3, days)]
+    return files[: max(0, days)]
 
 
 def _git_changed_paths_since(days: int) -> List[str]:
@@ -175,9 +175,12 @@ def _evaluate_candidate(
     replaceable = bool(covered_by_existing_roles)
 
     # 状态：仅当“生态必要性”且“不可被现有角色覆盖”时，才进入 ELIGIBLE
-    # 这里我们保守：若已标注被覆盖，则 NOT_YET（鼓励先扩展现有角色）
+    # 若已被现有角色覆盖 => REJECTED（已有覆盖，无需新增居民）
+    # 其他情况暂标记 NOT_YET（持续观察，等待证据累积）
     if ecological_need and not replaceable:
         status = "ELIGIBLE"
+    elif replaceable:
+        status = "REJECTED"
     else:
         status = "NOT_YET"
 
@@ -338,16 +341,25 @@ def write_outputs(cands: List[Candidate], days: int) -> None:
     with open(rn_path, "w", encoding="utf-8") as f:
         f.write(render_resident_nominations(cands, days))
 
-    # ecology_observer_daily.md (append)
+    # ecology_observer_daily.md (append, 确保换行分隔)
     daily_path = os.path.join(ECO_DIR, "ecology_observer_daily.md")
     with open(daily_path, "a", encoding="utf-8") as f:
-        f.write(render_daily_log(cands, days))
+        # 前置 \n 保证即使文件末尾无换行也能正确分隔
+        f.write("\n" + render_daily_log(cands, days))
 
     # per-candidate nomination stub (ensure exists)
     for c in cands:
-        stub_path = os.path.join(NOM_DIR, f"{c.slug}.md")
+        stub_path = os.path.join(NOM_DIR, f"AUM-RESIDENT-{c.slug}.md")
         if os.path.exists(stub_path):
             continue
+        eco_json = json.dumps(
+            {
+                "ecological_need": c.ecological_need,
+                "replaceable_by_existing_roles": c.replaceable_by_existing_roles,
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
         with open(stub_path, "w", encoding="utf-8") as f:
             f.write(
                 "\n".join(
@@ -366,10 +378,7 @@ def write_outputs(cands: List[Candidate], days: int) -> None:
                         "### 生态必要性审查",
                         "",
                         "```json",
-                        "{",
-                        '  "ecological_need": true,',
-                        '  "replaceable_by_existing_roles": false',
-                        "}",
+                        eco_json,
                         "```",
                         "",
                         "### 证据",
