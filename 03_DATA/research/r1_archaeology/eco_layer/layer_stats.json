@@ -1,0 +1,32 @@
+{
+  "narrative_ecology": {
+    "name": "叙事生态",
+    "count": 4347,
+    "total_chars": 1819105,
+    "avg_chars": 418.5
+  },
+  "behavioral_ecology": {
+    "name": "行为生态",
+    "count": 21037,
+    "total_chars": 9742261,
+    "avg_chars": 463.1
+  },
+  "structural_ecology": {
+    "name": "结构生态",
+    "count": 22017,
+    "total_chars": 9569107,
+    "avg_chars": 434.6
+  },
+  "transactional_ecology": {
+    "name": "交易生态",
+    "count": 39384,
+    "total_chars": 18026062,
+    "avg_chars": 457.7
+  },
+  "free_zone": {
+    "name": "自由区",
+    "count": 2772180,
+    "total_chars": 851053451,
+    "avg_chars": 307.0
+  }
+}
