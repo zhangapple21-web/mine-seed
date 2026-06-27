@@ -61,6 +61,22 @@
       "first_seen": "2026-06-27T14:14:28.735409",
       "importance": 100
     },
+    "en": {
+      "name": "en",
+      "definition": "en是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.061389",
+      "importance": 100
+    },
     "老张-V∞Ω元协议": {
       "name": "老张-V∞Ω元协议",
       "definition": "伪算法内核的核心元协议。核心逻辑：只保留那个，在真实世界里，愿意为代价负责的判断。",
@@ -2352,6 +2368,22 @@
       "first_seen": "2026-06-27T14:33:49.529069",
       "importance": 78
     },
+    "score": {
+      "name": "score",
+      "definition": "score是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.070926",
+      "importance": 78
+    },
     "mode_info": {
       "name": "mode_info",
       "definition": "mode_info是从eco:narrative_ecology材料中自动提取的概念",
@@ -3809,6 +3841,22 @@
       "first_seen": "2026-06-27T15:17:09.383272",
       "importance": 69
     },
+    "keywords": {
+      "name": "keywords",
+      "definition": "keywords是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.079510",
+      "importance": 69
+    },
     "top_rule": {
       "name": "top_rule",
       "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
@@ -3824,6 +3872,118 @@
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:17:09.392905",
       "importance": 68
+    },
+    "classification_system": {
+      "name": "classification_system",
+      "definition": "classification_system是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.089251",
+      "importance": 68
+    },
+    "marketing_system": {
+      "name": "marketing_system",
+      "definition": "marketing_system是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.098274",
+      "importance": 68
+    },
+    "enhance_marketing_system": {
+      "name": "enhance_marketing_system",
+      "definition": "enhance_marketing_system是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.107299",
+      "importance": 68
+    },
+    "sentence_structure": {
+      "name": "sentence_structure",
+      "definition": "sentence_structure是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.116305",
+      "importance": 67
+    },
+    "narrative_creator": {
+      "name": "narrative_creator",
+      "definition": "narrative_creator是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.125404",
+      "importance": 67
+    },
+    "mentor_elite": {
+      "name": "mentor_elite",
+      "definition": "mentor_elite是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.135401",
+      "importance": 67
+    },
+    "account_opening": {
+      "name": "account_opening",
+      "definition": "account_opening是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:47:02.144031",
+      "importance": 67
     },
     "SubscribeAndInstall": {
       "name": "SubscribeAndInstall",
@@ -3922,6 +4082,16 @@
       "examples": [],
       "source": "guardian:RQ-20260627-004",
       "first_seen": "2026-06-27T15:27:48.202998",
+      "importance": 65
+    },
+    "提升为公理候选__笨者生存验证": {
+      "name": "提升为公理候选__笨者生存验证",
+      "definition": "[Guardian-constraint] 该命题可以作为系统公理",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-003",
+      "first_seen": "2026-06-27T15:47:10.047331",
       "importance": 65
     },
     "persuasive_salesperson": {
@@ -5250,7 +5420,8 @@
       "integration_rules",
       "top_rule",
       "词库缺口补全_6个薄弱分类",
-      "Audit_log测试任务"
+      "Audit_log测试任务",
+      "提升为公理候选__笨者生存验证"
     ],
     "方法论": [
       "考古",
@@ -5567,7 +5738,17 @@
       "合并现有词库",
       "文本去重",
       "语义去重",
-      "过短补全"
+      "过短补全",
+      "en",
+      "score",
+      "keywords",
+      "classification_system",
+      "marketing_system",
+      "enhance_marketing_system",
+      "sentence_structure",
+      "narrative_creator",
+      "mentor_elite",
+      "account_opening"
     ],
     "核心概念": [
       "现居住",
@@ -5585,5 +5766,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:43:52.178296"
+  "exported_at": "2026-06-27T15:47:49.214271"
 }
