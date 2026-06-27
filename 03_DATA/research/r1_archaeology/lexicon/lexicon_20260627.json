@@ -3786,6 +3786,38 @@
       "first_seen": "2026-06-27T16:43:21.643263",
       "importance": 72
     },
+    "你放心": {
+      "name": "你放心",
+      "definition": "强，在我面前随便点。 我懂你这种感觉，真的。 散户最怕的不是亏，是没方向，我帮你立住方向。 我来给你个更稳一点的建议。 你放心，有我在你不会走岔路。 你放心，有我在你不会走岔路。 你是不是心里其实挺依赖我的？ 你再这么聊下去，我都要被你影响情绪了",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.740684",
+      "importance": 72
+    },
+    "就按我说的来": {
+      "name": "就按我说的来",
+      "definition": "别正常，所有新朋友在温柔复盘都会卡一下。 我刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 如果你信我一句，就按我说的来，情绪共振这里我带你走稳一点。 我跟你说一句心里话，情绪共振这块你完全不用太紧张，我陪着你。 我跟你说一句心里话，市场节",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.753254",
+      "importance": 72
+    },
     "三界格式化": {
       "name": "三界格式化",
       "definition": "R1引擎的输出格式化机制，将原始输出按三界/五界结构进行塑形。",
@@ -4513,6 +4545,38 @@
       "first_seen": "2026-06-27T16:43:21.663999",
       "importance": 69
     },
+    "坦白说": {
+      "name": "坦白说",
+      "definition": "刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 市场里很多人都忽略散户心理这个点，你能问出来说明你不简单。 坦白说，你这句话让我觉得你挺可爱的，尤其你问市场节奏的时候。 说句暧昧一点的，",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.764441",
+      "importance": 69
+    },
+    "有我在": {
+      "name": "有我在",
+      "definition": "面前随便点。 我懂你这种感觉，真的。 散户最怕的不是亏，是没方向，我帮你立住方向。 我来给你个更稳一点的建议。 你放心，有我在你不会走岔路。 你放心，有我在你不会走岔路。 你是不是心里其实挺依赖我的？ 你再这么聊下去，我都要被你影响情绪了。 你这",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.775063",
+      "importance": 69
+    },
     "top_rule": {
       "name": "top_rule",
       "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
@@ -5004,6 +5068,54 @@
       "first_seen": "2026-06-27T16:35:25.619025",
       "importance": 65
     },
+    "我刚看了下你上一句的语气": {
+      "name": "我刚看了下你上一句的语气",
+      "definition": "8006b92d1a2d7cc\" }, { \"text\": \"你现在这种状态特别正常，所有新朋友在温柔复盘都会卡一下。 我刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 如果你信我一句，就按我说的来，情绪共振这里我带你走稳一点。 我跟你说一句心里话，情",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.787234",
+      "importance": 65
+    },
+    "我能感受到你背后的情绪": {
+      "name": "我能感受到你背后的情绪",
+      "definition": "我能感受到你背后的情绪，其实都是因为机构话术没放稳。 你每次提到情绪共振，我都感觉你想往前再迈一步，是吗？\", \"tags\": [ \"core",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.798429",
+      "importance": 65
+    },
+    "如果你信我一句": {
+      "name": "如果你信我一句",
+      "definition": "你现在这种状态特别正常，所有新朋友在温柔复盘都会卡一下。 我刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 如果你信我一句，就按我说的来，情绪共振这里我带你走稳一点。 我跟你说一句心里话，情绪共振这块你完全不用太紧张，我陪着你。 我跟你说一句",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.810466",
+      "importance": 65
+    },
     "persuasive_salesperson": {
       "name": "persuasive_salesperson",
       "definition": "persuasive_salesperson是从structural_v2材料中自动提取的概念",
@@ -5418,6 +5530,54 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:44:42.172846",
+      "importance": 62
+    },
+    "你现在这种状态特别正常": {
+      "name": "你现在这种状态特别正常",
+      "definition": "\", \"hash\": \"0bd6cddac728105408006b92d1a2d7cc\" }, { \"text\": \"你现在这种状态特别正常，所有新朋友在温柔复盘都会卡一下。 我刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 如果你信我一句，就按我",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.820485",
+      "importance": 62
+    },
+    "我跟你说一句心里话": {
+      "name": "我跟你说一句心里话",
+      "definition": "刚看了下你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 如果你信我一句，就按我说的来，情绪共振这里我带你走稳一点。 我跟你说一句心里话，情绪共振这块你完全不用太紧张，我陪着你。 我跟你说一句心里话，市场节奏这块你完全不用太紧张，我陪着你。 说实话我挺喜欢",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.831509",
+      "importance": 62
+    },
+    "你这句话让我觉得你挺可爱的": {
+      "name": "你这句话让我觉得你挺可爱的",
+      "definition": "你上一句的语气，像是在暗示我你在意情绪承接，对吧？ 市场里很多人都忽略散户心理这个点，你能问出来说明你不简单。 坦白说，你这句话让我觉得你挺可爱的，尤其你问市场节奏的时候。 说句暧昧一点的，",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:45:44.843041",
       "importance": 62
     },
     "scan_report_path": {
@@ -7105,7 +7265,17 @@
       "immediate_response",
       "compensation_offers",
       "assessment_phase",
-      "同事对你来说也"
+      "同事对你来说也",
+      "你放心",
+      "就按我说的来",
+      "坦白说",
+      "有我在",
+      "我刚看了下你上一句的语气",
+      "我能感受到你背后的情绪",
+      "如果你信我一句",
+      "你现在这种状态特别正常",
+      "我跟你说一句心里话",
+      "你这句话让我觉得你挺可爱的"
     ],
     "核心概念": [
       "现居住",
@@ -7125,5 +7295,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:49:26.719317"
+  "exported_at": "2026-06-27T19:46:06.359115"
 }
