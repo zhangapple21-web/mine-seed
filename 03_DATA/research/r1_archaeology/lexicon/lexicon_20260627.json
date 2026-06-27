@@ -79,6 +79,22 @@
       "first_seen": "2026-06-26T20:46:48.319789",
       "importance": 97
     },
+    "or": {
+      "name": "or",
+      "definition": "+\\\\\\\\/server.js\\\": {\\r\\n \\\"onAutoForward\\\": \\\"openPreview\\\"\\r\\n}\\r\\n```\", \"必须是一个端口号、端口号范围或正则表达式。",
+      "category": "待分类",
+      "related": [
+        "Ω-Core",
+        "L∞-Core",
+        "R1_ENGINE",
+        "12人格矩阵",
+        "现居住"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.929699",
+      "importance": 96
+    },
     "结构": {
       "name": "结构",
       "definition": "系统的组织方式。结构 > 内容 > 实现。结构资产优先级最高。",
@@ -1458,6 +1474,22 @@
       "first_seen": "2026-06-26T20:46:48.375169",
       "importance": 80
     },
+    "模式匹配的": {
+      "name": "模式匹配的",
+      "definition": "\"错误: 字符串 {0} 不是有效的正则表达式。\\r\\n\", \"用于在输出中查找错误、警告或信息的正则表达式。\", \"模式匹配的是一个位置 (文件、一行) 还是仅为一个文件。\", \"文件名的匹配组索引。如果省略，则使用 1。\", \"问题位置的匹配组",
+      "category": "核心机制",
+      "related": [
+        "or",
+        "type",
+        "解释",
+        "entries",
+        "meta"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.941972",
+      "importance": 80
+    },
     "提现分为两种": {
       "name": "提现分为两种",
       "definition": "----------------------------------------------------------- 提现分为两种： 第一种：国元速通APP用户自助提现到绑定银行卡，跟普通证券交易账户一样，点击资金转出即可到达个人绑定银行卡中 第二种",
@@ -1936,6 +1968,22 @@
       "first_seen": "2026-06-26T22:04:37.662386",
       "importance": 78
     },
+    "in": {
+      "name": "in",
+      "definition": "in是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "eco_layer",
+        "12人格矩阵",
+        "人格协调中心",
+        "模式匹配的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.950235",
+      "importance": 78
+    },
     "阵营玩家": {
       "name": "阵营玩家",
       "definition": "- 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许",
@@ -2305,6 +2353,22 @@
       "first_seen": "2026-06-27T14:04:38.004928",
       "importance": 75
     },
+    "to": {
+      "name": "to",
+      "definition": "+\\\\\\\\/server.js\\\": {\\r\\n \\\"onAutoForward\\\": \\\"openPreview\\\"\\r\\n}\\r\\n```\", \"必须是一个端口号、端口号范围或正则表",
+      "category": "待分类",
+      "related": [
+        "or",
+        "ACE",
+        "R1_ENGINE",
+        "模式匹配的",
+        "in"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.960303",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -2552,6 +2616,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:06:39.586994",
+      "importance": 72
+    },
+    "转换为": {
+      "name": "转换为",
+      "definition": "\"无效问题模式。此模式将被忽略。\", \"错误: 说明无法转换为问题匹配器:\\r\\n{0}\\r\\n\", \"错误: 说明未定义有效的问题模式:\\r\\n{0}\\r\\n\", \"错误: 说明未",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.970104",
       "importance": 72
     },
     "三界格式化": {
@@ -2847,6 +2927,86 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:06:39.649491",
+      "importance": 69
+    },
+    "ID": {
+      "name": "ID",
+      "definition": "ID是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.979747",
+      "importance": 69
+    },
+    "AutoForward": {
+      "name": "AutoForward",
+      "definition": "+\\\\\\\\/server.js\\\": {\\r\\n \\\"onAutoForward\\\": \\\"openPreview\\\"\\r\\n}\\r\\n```\", \"必须是一个端口号、端口号范围或正则表达式。\", \"",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:05.990910",
+      "importance": 69
+    },
+    "无效问题": {
+      "name": "无效问题",
+      "definition": "无效问题是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:06.001431",
+      "importance": 69
+    },
+    "下启动": {
+      "name": "下启动",
+      "definition": "下启动是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:06.011137",
+      "importance": 69
+    },
+    "将被忽略": {
+      "name": "将被忽略",
+      "definition": "将被忽略是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "模式匹配的",
+        "in",
+        "to",
+        "type"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:09:06.021809",
       "importance": 69
     },
     "黑白猫渗透逻辑": {
@@ -3660,7 +3820,8 @@
       "壳核流动",
       "影子双向映射",
       "机制玩家",
-      "情绪管理"
+      "情绪管理",
+      "模式匹配的"
     ],
     "架构模式": [
       "洋葱架构",
@@ -3819,7 +3980,16 @@
       "你怎么想的",
       "我实话说",
       "老实讲",
-      "别笑我啊"
+      "别笑我啊",
+      "or",
+      "in",
+      "to",
+      "转换为",
+      "ID",
+      "AutoForward",
+      "无效问题",
+      "下启动",
+      "将被忽略"
     ],
     "核心概念": [
       "现居住",
@@ -3831,5 +4001,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:06:43.568964"
+  "exported_at": "2026-06-27T14:09:06.932707"
 }
