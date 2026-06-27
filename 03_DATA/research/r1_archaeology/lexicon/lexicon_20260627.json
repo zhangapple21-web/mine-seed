@@ -1159,6 +1159,22 @@
       "first_seen": "2026-06-27T14:33:49.521031",
       "importance": 84
     },
+    "core": {
+      "name": "core",
+      "definition": "core是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.878036",
+      "importance": 84
+    },
     "Emotional_Trigger_情感触发器": {
       "name": "Emotional_Trigger_情感触发器",
       "definition": "Emotional_Trigger_情感触发器是从eco:narrative_ecology材料中自动提取的概念",
@@ -1659,6 +1675,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:19:52.888085",
+      "importance": 81
+    },
+    "word": {
+      "name": "word",
+      "definition": "word是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.887226",
       "importance": 81
     },
     "词库层": {
@@ -2242,6 +2274,38 @@
       "first_seen": "2026-06-27T15:14:48.175422",
       "importance": 79
     },
+    "response_length": {
+      "name": "response_length",
+      "definition": "response_length是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.895817",
+      "importance": 79
+    },
+    "response_tone": {
+      "name": "response_tone",
+      "definition": "response_tone是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.905034",
+      "importance": 79
+    },
     "现实权重": {
       "name": "现实权重",
       "definition": "心核中的现实权重矩阵，用于衡量不同现实维度的权重，影响决策优先级。",
@@ -2432,6 +2496,22 @@
       "first_seen": "2026-06-27T14:14:28.794604",
       "importance": 77
     },
+    "generate_business_report": {
+      "name": "generate_business_report",
+      "definition": "generate_business_report是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.914232",
+      "importance": 77
+    },
     "阵营玩家": {
       "name": "阵营玩家",
       "definition": "- 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许",
@@ -2510,6 +2590,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:17:09.307949",
+      "importance": 76
+    },
+    "context_score": {
+      "name": "context_score",
+      "definition": "context_score是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.922875",
       "importance": 76
     },
     "引擎层": {
@@ -2913,6 +3009,22 @@
       "first_seen": "2026-06-27T14:14:28.800849",
       "importance": 74
     },
+    "personality_config": {
+      "name": "personality_config",
+      "definition": "personality_config是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.931993",
+      "importance": 74
+    },
     "count": {
       "name": "count",
       "definition": "count是从eco:narrative_ecology材料中自动提取的概念",
@@ -3023,6 +3135,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:17:09.335616",
+      "importance": 73
+    },
+    "urgency_phrases": {
+      "name": "urgency_phrases",
+      "definition": "urgency_phrases是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.941195",
+      "importance": 73
+    },
+    "greeting_style": {
+      "name": "greeting_style",
+      "definition": "greeting_style是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.949390",
       "importance": 73
     },
     "量子引擎": {
@@ -3240,6 +3384,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:17:09.345783",
+      "importance": 72
+    },
+    "使用频率": {
+      "name": "使用频率",
+      "definition": "\"tags\": { \"功能标签\": [], \"优先级标签\": [], \"时效标签\": [], \"质量标签\": [], \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"适度\", \"source\": \"per",
+      "category": "ACE概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:56:00.959292",
       "importance": 72
     },
     "三界格式化": {
@@ -4092,6 +4252,16 @@
       "examples": [],
       "source": "guardian:RQ-20260627-003",
       "first_seen": "2026-06-27T15:47:10.047331",
+      "importance": 65
+    },
+    "经验验证__薄弱分类的概念积累不足_影响系统理解能力": {
+      "name": "经验验证__薄弱分类的概念积累不足_影响系统理解能力",
+      "definition": "[Guardian-constraint] 该经验模式（constraint）可以推广到更广泛的场景",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-007",
+      "first_seen": "2026-06-27T15:56:08.996143",
       "importance": 65
     },
     "persuasive_salesperson": {
@@ -5421,7 +5591,8 @@
       "top_rule",
       "词库缺口补全_6个薄弱分类",
       "Audit_log测试任务",
-      "提升为公理候选__笨者生存验证"
+      "提升为公理候选__笨者生存验证",
+      "经验验证__薄弱分类的概念积累不足_影响系统理解能力"
     ],
     "方法论": [
       "考古",
@@ -5466,7 +5637,15 @@
       "personality_engine",
       "mode_info",
       "master_controller",
-      "promotion_elements"
+      "promotion_elements",
+      "response_length",
+      "response_tone",
+      "generate_business_report",
+      "context_score",
+      "personality_config",
+      "urgency_phrases",
+      "greeting_style",
+      "使用频率"
     ],
     "恢复机制": [
       "种子",
@@ -5762,9 +5941,11 @@
       "system_state",
       "SystemMode",
       "context_info",
-      "telegram_bridge"
+      "telegram_bridge",
+      "core",
+      "word"
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:47:49.214271"
+  "exported_at": "2026-06-27T15:57:06.626903"
 }

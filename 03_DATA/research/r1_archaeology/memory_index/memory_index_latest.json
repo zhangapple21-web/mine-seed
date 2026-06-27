@@ -1,6 +1,2659 @@
 {
-  "total": 2197,
+  "total": 2250,
   "entries": [
+    {
+      "id": "f1ffa6b6",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 15:57:06\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 31 种模式，索引 50 条，新概念候选 10 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 365\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 2249\n- 类型分布: {\"fil...",
+      "created_at": "2026-06-27T15:57:06.367085",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:57:06.367085",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "790d3782",
+      "title": "[任务归档] 经验验证: 薄弱分类的概念积累不足，影响系统理解能力",
+      "type": "task_archive",
+      "category": "任务归档",
+      "source": "archivist",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "experience",
+        "constraint",
+        "RQ-20260627-001",
+        "experience_pattern",
+        "archived",
+        "RQ-20260627-007"
+      ],
+      "related_concepts": [
+        {
+          "name": "task",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "## 任务ID: RQ-20260627-007\n**标题**: 经验验证: 薄弱分类的概念积累不足，影响系统理解能力\n**创建者**: task_creator\n**优先级**: high\n**假设**: 该经验模式（constraint）可以推广到更广泛的场景\n\n**证据数**: 6\n**反例数**: 8\n\n### 核心证据\n1. [archivist] \n2. [archivist] \n3....",
+      "created_at": "2026-06-27T15:56:09.017768",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:56:09.017768",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "09f2a02c",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T15:55:58.461218\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 2100, \"remaining\": 2247, \"progress_pct\": 48.3, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T15:56:00.654403",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:56:00.654403",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "acff49e2",
+      "title": "叙事生态 #2049",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2049",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2049"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"标的：和胜股份 状态=减仓\" ] for command in test_commands: result = parse_business_command(command) print(f\"\\n📝 命令: {command}\") print(f\"🎯 类型: {result['command_type']}\") print(f\"📋 描述: {result['description']}\") #...",
+      "created_at": "2026-06-27T15:55:58.330650",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:58.330650",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6ee32504",
+      "title": "叙事生态 #2048",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2048",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2048"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"开心果\"] } # 人格定义 self.personas = { \"PROFESSIONAL_MENTOR\": { \"name\": \"专业导师\", \"style\": \"专业、严谨、有耐心\", \"characteristics\": [\"逻辑清晰\", \"条理分明\", \"循循善诱\", \"专业术语\"], \"reply_patterns\": [ \"从专业角度来说，{topic}的核心在于{key_poi...",
+      "created_at": "2026-06-27T15:55:58.195762",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:58.195762",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6acf0624",
+      "title": "叙事生态 #2047",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2047",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2047"
+      ],
+      "related_concepts": [
+        {
+          "name": "score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "now() - first_time).total_seconds() logger.debug(f\"💬 添加消息: {user_id} 意图: {message_data['intent']} 情感: {message_data['emotion']}\") return { 'session_id': context.session_id, 'intent': message_data['int...",
+      "created_at": "2026-06-27T15:55:58.063304",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:58.063304",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "729f718a",
+      "title": "叙事生态 #2046",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2046",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2046"
+      ],
+      "related_concepts": [
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "or",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "**特点**： - 🐧 **macOS/Linux**: 自动使用Gunicorn (4个工作进程) - 🪟 **Windows**: 自动使用Waitress (4个线程) - ⚙️ 生产级配置优化 - 📊 性能监控和日志 ## 🌐 服务端点 启动后可访问以下端点： | 端点 | 描述 | 示例 | |------|------|------| | `/` | 服务根目录 | http://lo",
+      "created_at": "2026-06-27T15:55:57.923474",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.923474",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "de430507",
+      "title": "叙事生态 #2045",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2045",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2045"
+      ],
+      "related_concepts": [
+        {
+          "name": "score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "2 elif expected_style == 'professional' and '专业' in response: quality_score += 0.2 # 检查回复长度适配性 if len(response) > 10 and len(response) < 500: quality_score += 0.3 # 检查情感一致性 positive_words = ['好', '棒',...",
+      "created_at": "2026-06-27T15:55:57.792134",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.792134",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "398ebaee",
+      "title": "叙事生态 #2044",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2044",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2044"
+      ],
+      "related_concepts": [
+        {
+          "name": "score",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 'humor_level': 0.7, 'energy_level': 0.9 } } if emotion in emotion_configs: service.update_personality_profile(user_id, emotion_configs[emotion]) # 使用示例 adjust_personality_by_emotion(\"user123\", \"happy...",
+      "created_at": "2026-06-27T15:55:57.657714",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.657714",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3800bc7f",
+      "title": "叙事生态 #2043",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2043",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2043"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " config) # 使用示例 adjust_personality_by_time(\"user123\", service) ``` ### 情感状态适配 ```python def adjust_personality_by_emotion(user_id, emotion, service): emotion_configs = { 'happy': { 'emotional_tone': '...",
+      "created_at": "2026-06-27T15:55:57.519719",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.519719",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f3003b62",
+      "title": "叙事生态 #2042",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2042",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2042"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 'encouragement_level': 0.6 } ``` ### 5. 温柔体贴型 (gentle_caring) - **特点**: 温和、关怀、细致 - **适用场景**: 情感支持、生活建议 - **配置参数**: ```python { 'communication_style': 'friendly', 'emotional_tone': 'calm', 'empathy_le...",
+      "created_at": "2026-06-27T15:55:57.384954",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.384954",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "df4163ab",
+      "title": "叙事生态 #2041",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2041",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2041"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "get('style_name')}\") ``` ## 🎯 预设风格详解 ### 1. 正式保守型 (formal_conservative) - **特点**: 专业、严谨、稳重 - **适用场景**: 商务咨询、正式讨论 - **配置参数**: ```python { 'communication_style': 'formal', 'formality_level': 0.9, 'humor...",
+      "created_at": "2026-06-27T15:55:57.252231",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.252231",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "80f74425",
+      "title": "叙事生态 #2040",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2040",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2040"
+      ],
+      "related_concepts": [
+        {
+          "name": "keywords",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "value}\") print(f\"置信度: {result.confidence:.2f}\") print(f\"实体: {result.entities}\") print(f\"关键词: {result.keywords}\") print(f\"情感: {result.sentiment}\") print(f\"紧急程度: {result.urgency}\") print(f\"解释: {intent_m...",
+      "created_at": "2026-06-27T15:55:57.119158",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:57.119158",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "76d6fa64",
+      "title": "叙事生态 #2039",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2039",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2039"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "EMOTIONAL ) ``` ## 🎨 文本风格选择 - **PROFESSIONAL**: 专业风格 - **EMOTIONAL**: 情感化风格 - **HUMOROUS**: 幽默风格 - **MARKETING**: 营销风格 ## 📋 完整模式列表 ### 基础模式 (1-24) 1. REFINEMENT - 词语精炼 2. EXPANSION - 扩写内容 3. DIVERSIFI...",
+      "created_at": "2026-06-27T15:55:56.984769",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.984769",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "55f13b95",
+      "title": "叙事生态 #2038",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2038",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2038"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"热情专业\", \"专业且平易近人\" ], \"使用频率:中频\": [ \"2025-11-16T16:30:00Z\" ], \"功能标签:专业功能\": [ \"量化景助手\" ], \"质量标签:优质\": [ \"专业、友好、耐心\" ] }, \"快速检索\": { \"未分类\": { \"count\": 11, \"sample\": [ { \"text\": \"1.0\", \"source\": \"unified_lexi...",
+      "created_at": "2026-06-27T15:55:56.849803",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.849803",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c5b7ae61",
+      "title": "叙事生态 #2037",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2037",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2037"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": " \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"专业且平易近人\", \"source\": \"personality_config.json\", \"metadata\": { \"key\": \"response_tone\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [ ...",
+      "created_at": "2026-06-27T15:55:56.718194",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.718194",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "34939fd3",
+      "title": "叙事生态 #2036",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2036",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2036"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"人格风格\": [], \"转化目标\": [], \"关键词\": [ \"感谢\", \"互动\", \"问候\", \"关怀\" ], \"置信度\": {} }, \"tags\": { \"功能标签\": [], \"优先级标签\": [], \"时效标签\": [], \"质量标签\": [], \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"热情专业\", \"source\": \"pers...",
+      "created_at": "2026-06-27T15:55:56.586116",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.586116",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "07061837",
+      "title": "叙事生态 #2035",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2035",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2035"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"中等\", \"source\": \"personality_config.json\", \"metadata\": { \"key\": \"response_length\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [], \"...",
+      "created_at": "2026-06-27T15:55:56.452296",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.452296",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6c127dde",
+      "title": "叙事生态 #2034",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2034",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2034"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "43999999999999995 } }, \"tags\": { \"功能标签\": [], \"优先级标签\": [], \"时效标签\": [], \"质量标签\": [], \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"专业、友好、耐心\", \"source\": \"personality_config.json\", \"metadata\": { \"key\": \"co...",
+      "created_at": "2026-06-27T15:55:56.316791",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.316791",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "712be9ad",
+      "title": "叙事生态 #2033",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2033",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2033"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": " \"情感分类\": [], \"专业程度\": [ \"专业术语\" ], \"人格风格\": [], \"转化目标\": [], \"关键词\": [ \"感谢\", \"互动\", \"问候\", \"量化\", \"关怀\" ], \"置信度\": { \"专业程度\": 0.41666666666666663 } }, \"tags\": { \"功能标签\": [ \"专业功能\" ], \"优先级标签\": [], \"时效标签\": [], \"质量标签...",
+      "created_at": "2026-06-27T15:55:56.183345",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.183345",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f788b30f",
+      "title": "叙事生态 #2032",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2032",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2032"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"质量标签\": [], \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"2025-11-17\", \"source\": \"unified_marketing_expression_v3.json\", \"metadata\": { \"key\": \"created_at\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [...",
+      "created_at": "2026-06-27T15:55:56.048927",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:56.048927",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4b8275e4",
+      "title": "叙事生态 #2031",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2031",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2031"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [], \"转化目标\": [], \"关键词\": [ \"感谢\", \"互动\", \"问候\", \"关怀\" ], \"置信度\": {} }, \"tags\": { \"功能标签\": [], \"优先级标签\": [], \"时效标签\": [], \"质量标签\": [], \"使用频率\": [ \"中...",
+      "created_at": "2026-06-27T15:55:55.916234",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.916234",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "45d8616f",
+      "title": "叙事生态 #2030",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2030",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2030"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "{ \"优化时间\": \"2025-11-16T18:04:49.069239\", \"优化版本\": \"3.0.0\", \"分类词库\": { \"未分类\": [ { \"text\": \"1.0\", \"source\": \"unified_lexicon.json\", \"metadata\": { \"key\": \"version\" }, \"classification\": { \"场景分类\": [], \"情感分类\":...",
+      "created_at": "2026-06-27T15:55:55.776801",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.776801",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "69868610",
+      "title": "叙事生态 #2029",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2029",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2029"
+      ],
+      "related_concepts": [
+        {
+          "name": "integration_rules",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"共赢理念\": \"带领用户一起成功\" } }, \"response_patterns\": { \"开场模式\": [ \"快速建立情感连接\", \"体现专业权威\", \"营造交流氛围\" ], \"分析模式\": [ \"数据驱动的专业分析\", \"系统化的逻辑思维\", \"通俗易懂的表达方式\" ], \"解决方案模式\": [ \"提供具体的量化景方案\", \"强调系统优势和执行方法\", \"给出明确的行动指引\" ], \"收...",
+      "created_at": "2026-06-27T15:55:55.636844",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.636844",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "354d09a6",
+      "title": "叙事生态 #2028",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2028",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2028"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "find_best_reply(text) if reply: print(f\"🤖 智能回复: {reply}\") print(f\"📊 回复元信息: {meta}\") if not is_teacher and random.random() > 0.7: topic = meta.get('topic') if topic: self.observer.lexicon_manager.recor...",
+      "created_at": "2026-06-27T15:55:55.503822",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.503822",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "621fcf8c",
+      "title": "叙事生态 #2027",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2027",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2027"
+      ],
+      "related_concepts": [
+        {
+          "name": "for",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " CURRENT_PHASE def print_header(title): print(f\"\\n{'='*60}\") print(f\"🎭 {title}\") print(f\"{'='*60}\") def print_persona_info(persona_id): persona = TIEBA_PERSONAS[persona_id] print(f\"👤 人设: {persona['nam...",
+      "created_at": "2026-06-27T15:55:55.369192",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.369192",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "db0cebfb",
+      "title": "叙事生态 #2026",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2026",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2026"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "偏差监听",
+          "relevance": 5,
+          "category": "治理原则"
+        },
+        {
+          "name": "时代感",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 5,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " **激发行动** → 人格A推动决策转化 ### 关键转化话术 - **紧迫感营造**: \"名额有限\"、\"限时优惠\"、\"错过等半年\" - **社会认同**: \"大部分学员都选择了\"、\"团队都在用\" - **权威背书**: \"3年实战验证\"、\"机构级策略\" - **风险逆转**: \"不满意全额退款\"、\"先体验后付费\" ## 禁忌与限制 ### 绝对禁止 - 不得承诺保证收益 - 不得使用夸大宣传 ...",
+      "created_at": "2026-06-27T15:55:55.235419",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.235419",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c67b5d52",
+      "title": "叙事生态 #2025",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2025",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2025"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "append(clean_match) return scripts def extract_tieba_personas(self, data: Dict) -> Dict[str, List[str]]: personas = { \"老哥风格\": [], \"网络用语\": [], \"回复模板\": [] } if isinstance(data, dict): for key, value in ...",
+      "created_at": "2026-06-27T15:55:55.103696",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:55.103696",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "176abd3a",
+      "title": "叙事生态 #2024",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2024",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2024"
+      ],
+      "related_concepts": [
+        {
+          "name": "for",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        }
+      ],
+      "summary": " 0) if change_pct > 3: trend = \"上升\" signal = \"发出买入信号\" formation = \"呈现看涨形态\" elif change_pct < -3: trend = \"下降\" signal = \"发出卖出信号\" formation = \"呈现看跌形态\" else: trend = \"震荡\" signal = \"处于观望状态\" formation = \"呈...",
+      "created_at": "2026-06-27T15:55:54.970257",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.970257",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dd94ef5d",
+      "title": "叙事生态 #2023",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2023",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2023"
+      ],
+      "related_concepts": [
+        {
+          "name": "ID",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "analyze_user_message(message, f\"user_{i}\") print(f\" 🔍 检测主题: {context.detected_topic or '未识别'}\") print(f\" 📊 置信度: {context.confidence:.2f}\") print(f\" 😊 情感: {context.sentiment}\") print(f\" 👤 人设: {context....",
+      "created_at": "2026-06-27T15:55:54.837537",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.837537",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "45c6fe6d",
+      "title": "叙事生态 #2022",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2022",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2022"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "categories",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " { \"text\": \"贴吧老哥风格人设、网络用语、回复模板\", \"hash\": \"9e89475f2ce155c5307cff0eaef9831d\", \"source\": \"backups/2025-11-16/unified_language_system_v3.json\", \"path\": \"categories.personality_responses[124]\" }, { \"text\"...",
+      "created_at": "2026-06-27T15:55:54.698411",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.698411",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "35c04701",
+      "title": "叙事生态 #2021",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2021",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2021"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "categories",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        }
+      ],
+      "summary": " \"path\": \"categories.personality_responses[30]\" }, { \"text\": \"长短句结合，有停顿有强调\", \"hash\": \"dab70878174a93cfdb507fc67172fcb9\", \"source\": \"backups/2025-11-16/unified_language_system_v3.json\", \"path\": \"catego...",
+      "created_at": "2026-06-27T15:55:54.547242",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.547242",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "beaee801",
+      "title": "叙事生态 #2020",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2020",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2020"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "categories",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " { \"text\": \"用通俗语言解释复杂概念\", \"hash\": \"c5634bda4ef2a166b32bf36c6768e120\", \"source\": \"backups/2025-11-16/unified_language_system_v3.json\", \"path\": \"categories.personality_responses[20]\" }, { \"text\": \"理解用户困...",
+      "created_at": "2026-06-27T15:55:54.371456",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.371456",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "485a023f",
+      "title": "叙事生态 #2019",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2019",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2019"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "meta",
+          "relevance": 40,
+          "category": "考古发现"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"category\": \"日常交流\", \"section\": \"\", \"length\": 19, \"created_at\": \"2025-11-16T19:09:43.213801\", \"keywords\": [ \"专业\" ], \"metadata\": {} }, { \"text\": \"自然、接地气、轻松、懂散户心理、亲和力强\", \"hash\": \"52009743e5d029471260ad0...",
+      "created_at": "2026-06-27T15:55:54.232968",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.232968",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5dc33851",
+      "title": "叙事生态 #2018",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2018",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2018"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "meta",
+          "relevance": 40,
+          "category": "考古发现"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "personality_responses[123]\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 18, \"created_at\": \"2025-11-16T19:09:43.211739\", \"keywords\": [], \"metadata\": {} }, { \"text\": \"贴吧老哥风格人设、网络用...",
+      "created_at": "2026-06-27T15:55:54.099840",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:54.099840",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "31655eaa",
+      "title": "叙事生态 #2017",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2017",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2017"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-16T19:09:43.211595\", \"keywords\": [ \"专业\" ], \"metadata\": {} }, { \"text\": \"不得过度使用贴吧老哥的粗俗表达\", \"hash\": \"75aca43a6a06cd0edebd1d65d10cd515\", \"source\": \"unified_language_system_v3.json...",
+      "created_at": "2026-06-27T15:55:53.951457",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.951457",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6b9698af",
+      "title": "叙事生态 #2016",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2016",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2016"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-16T19:09:43.211571\", \"keywords\": [ \"专业\" ], \"metadata\": {} }, { \"text\": \"长短句结合，有停顿有强调\", \"hash\": \"dab70878174a93cfdb507fc67172fcb9\", \"source\": \"unified_language_system_v3.json\", ...",
+      "created_at": "2026-06-27T15:55:53.821651",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.821651",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c63c61fd",
+      "title": "叙事生态 #2015",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2015",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2015"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"unified_language_system_v3.json\", \"path\": \"categories.personality_responses[21]\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 11, \"created_at\": \"2025-11-16T19:09:43.2...",
+      "created_at": "2026-06-27T15:55:53.691865",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.691865",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dc77e765",
+      "title": "叙事生态 #2014",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2014",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2014"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"metadata\": {} }, { \"text\": \"现在行情正好，再等下去黄花菜都凉了。听哥的，赶紧的。\", \"hash\": \"e22d7be2163583a0b2585edc962e7e05\", \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.urgency_phrases.贴吧老哥风格[2]\", \"...",
+      "created_at": "2026-06-27T15:55:53.553315",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.553315",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "48fdbdbe",
+      "title": "叙事生态 #2013",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2013",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2013"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "account_opening",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 33, \"created_at\": \"2025-11-16T19:09:43.209041\", \"keywords\": [], \"metadata\": {} }, { \"text\": \"别担心资金安全，都是大券商，跑不了的。哥带这么多人，没一个出问题的。\", \"ha...",
+      "created_at": "2026-06-27T15:55:53.423401",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.423401",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5c02565a",
+      "title": "叙事生态 #2012",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2012",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2012"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"hash\": \"e35f9a85c9f1cb24a1b7c1b41c292b38\", \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.upgrade_scripts.老陈专业风格[2]\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"le...",
+      "created_at": "2026-06-27T15:55:53.292410",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.292410",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ba1a63a0",
+      "title": "叙事生态 #2011",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2011",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2011"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.objection_handling.效果异议.贴吧老哥风格[1]\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 41, \"created_at\": \"2025-11-16...",
+      "created_at": "2026-06-27T15:55:53.161326",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.161326",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dd360771",
+      "title": "叙事生态 #2010",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2010",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2010"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "想的话这点投资算个屁。\", \"hash\": \"00ac420054947148daf70f94977a4277\", \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.objection_handling.价格异议.贴吧老哥风格[2]\", \"file_type\": \"json\", \"category\": \"日常交流...",
+      "created_at": "2026-06-27T15:55:53.027288",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:53.027288",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2aa66a34",
+      "title": "叙事生态 #2009",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2009",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2009"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"path\": \"fusion_strategies.风格融合\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 16, \"created_at\": \"2025-11-16T19:09:43.207820\", \"keywords\": [], \"metadata\": {} }, { \"text\": \"根据具体场景...",
+      "created_at": "2026-06-27T15:55:52.895149",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.895149",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "18843883",
+      "title": "叙事生态 #2008",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2008",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2008"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.urgency_phrases.老陈专业风格[1]\", \"file_type\": \"json\", \"category\": \"营销话术\", \"section\": \"\", \"length\": 26, \"created_at\": \"2025-11-16T19:09:4...",
+      "created_at": "2026-06-27T15:55:52.765692",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.765692",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "28c0a7ae",
+      "title": "叙事生态 #2007",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2007",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2007"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "account_opening",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"metadata\": {} }, { \"text\": \"兄弟，开户这事简单得很，哥手把手教你，保证10分钟搞定。\", \"hash\": \"5c76d1b79be7be533d59ab0268cf3120\", \"source\": \"editable_marketing_prompts_v3.json\", \"path\": \"categories.account_opening.贴吧老哥风格[0]\",...",
+      "created_at": "2026-06-27T15:55:52.636220",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.636220",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5263ccae",
+      "title": "叙事生态 #2006",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2006",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2006"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "json\": 0, \"总计\": 11 }, \"分类统计\": { \"关键词:感谢\": 11, \"关键词:互动\": 11, \"关键词:问候\": 11, \"关键词:关怀\": 11, \"专业程度:专业术语\": 1, \"关键词:量化\": 1, \"人格风格:老陈体系\": 4, \"关键词:专业\": 4, \"情感分类:积极正面\": 1, \"关键词:好\": 1 }, \"标签统计\": { \"使用频率:高频\": 10,...",
+      "created_at": "2026-06-27T15:55:52.499925",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.499925",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "26ae84c0",
+      "title": "叙事生态 #2005",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2005",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2005"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "keywords",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"fusion_personality_config_v3.json\", \"path\": \"personalities.贴吧老哥.风格特征\", \"file_type\": \"json\", \"category\": \"日常交流\", \"section\": \"\", \"length\": 20, \"created_at\": \"2025-11-16T19:09:43.213808\", \"ke...",
+      "created_at": "2026-06-27T15:55:52.368376",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.368376",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7172f8e0",
+      "title": "叙事生态 #2004",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2004",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2004"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"source\": \"unified_lexicon.json\", \"metadata\": { \"key\": \"created_at\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [], \"转化目标\": [], \"关键词\": [ \"感谢\", \"互动\", \"问候\", \"关怀\" ], \"置信度\": {} }, ...",
+      "created_at": "2026-06-27T15:55:52.236550",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.236550",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "033acad3",
+      "title": "叙事生态 #2003",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2003",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2003"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"使用频率:中频\": [ \"2025-11-16T16:30:00Z\" ], \"功能标签:专业功能\": [ \"量化景助手\" ], \"质量标签:优质\": [ \"专业、友好、耐心\" ] }, \"快速检索\": { \"未分类\": { \"count\": 11, \"sample\": [ { \"text\": \"1.0\", \"source\": \"unified_lexicon.json\", \"metadata\"...",
+      "created_at": "2026-06-27T15:55:52.106389",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:52.106389",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c321c424",
+      "title": "叙事生态 #2002",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2002",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2002"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": " \"自定义标签\": [] } }, { \"text\": \"专业且平易近人\", \"source\": \"personality_config.json\", \"metadata\": { \"key\": \"response_tone\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [ \"老陈体系\" ], \"转化目标\": ...",
+      "created_at": "2026-06-27T15:55:51.973400",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:51.973400",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "61c3039e",
+      "title": "叙事生态 #2001",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2001",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2001"
+      ],
+      "related_concepts": [
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " \"关键词\": [ \"感谢\", \"互动\", \"问候\", \"关怀\" ], \"置信度\": {} }, \"tags\": { \"功能标签\": [], \"优先级标签\": [], \"时效标签\": [], \"质量标签\": [], \"使用频率\": [ \"高频\" ], \"自定义标签\": [] } }, { \"text\": \"热情专业\", \"source\": \"personality_config.json\", \"m...",
+      "created_at": "2026-06-27T15:55:51.842922",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:51.842922",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "64a420c3",
+      "title": "叙事生态 #2000",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2000",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2000"
+      ],
+      "related_concepts": [
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": " { \"text\": \"中等\", \"source\": \"personality_config.json\", \"metadata\": { \"key\": \"response_length\" }, \"classification\": { \"场景分类\": [], \"情感分类\": [], \"专业程度\": [], \"人格风格\": [], \"转化目标\": [], \"关键词\": [ \"感谢\", \"互动\", \"问候...",
+      "created_at": "2026-06-27T15:55:51.708148",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:55:51.708148",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "43853d42",
       "title": "今日考古摘要 - 2026-06-27",
@@ -80142,5 +82795,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T15:47:49.215271"
+  "exported_at": "2026-06-27T15:57:06.628965"
 }
