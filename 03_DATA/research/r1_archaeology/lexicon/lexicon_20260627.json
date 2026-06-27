@@ -1175,6 +1175,22 @@
       "first_seen": "2026-06-27T15:56:00.878036",
       "importance": 84
     },
+    "text": {
+      "name": "text",
+      "definition": "7b75f874d68ec780\" }, \"d59f0e936ad20747580a2acbf99e1f9d\": { \"text\": \"今天下午减持活动几折，要是科大讯飞要套空市值，捡着赚钱啊 大狗, [2023/9/26 13:13] 机构每次的",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.182398",
+      "importance": 84
+    },
     "Emotional_Trigger_情感触发器": {
       "name": "Emotional_Trigger_情感触发器",
       "definition": "Emotional_Trigger_情感触发器是从eco:narrative_ecology材料中自动提取的概念",
@@ -2512,6 +2528,22 @@
       "first_seen": "2026-06-27T15:56:00.914232",
       "importance": 77
     },
+    "a_layer": {
+      "name": "a_layer",
+      "definition": "a_layer是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "eco_layer",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.191621",
+      "importance": 77
+    },
     "阵营玩家": {
       "name": "阵营玩家",
       "definition": "- 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许",
@@ -3023,6 +3055,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:56:00.931993",
+      "importance": 74
+    },
+    "b_layer": {
+      "name": "b_layer",
+      "definition": "b_layer是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "eco_layer",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.200873",
       "importance": 74
     },
     "count": {
@@ -3633,6 +3681,22 @@
       "first_seen": "2026-06-27T15:17:09.354876",
       "importance": 70
     },
+    "slice_index": {
+      "name": "slice_index",
+      "definition": "slice_index是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.211003",
+      "importance": 70
+    },
     "偷偷跟你说": {
       "name": "偷偷跟你说",
       "definition": "觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这态度让我有点招架不住，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，",
@@ -4017,6 +4081,22 @@
       "first_seen": "2026-06-27T15:47:02.079510",
       "importance": 69
     },
+    "Documents": {
+      "name": "Documents",
+      "definition": "Documents是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.219440",
+      "importance": 69
+    },
     "top_rule": {
       "name": "top_rule",
       "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
@@ -4145,6 +4225,54 @@
       "first_seen": "2026-06-27T15:47:02.144031",
       "importance": 67
     },
+    "created_at": {
+      "name": "created_at",
+      "definition": "created_at是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.230169",
+      "importance": 67
+    },
+    "knowledge_base": {
+      "name": "knowledge_base",
+      "definition": "knowledge_base是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.239120",
+      "importance": 67
+    },
+    "file_type": {
+      "name": "file_type",
+      "definition": "file_type是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.248416",
+      "importance": 67
+    },
     "SubscribeAndInstall": {
       "name": "SubscribeAndInstall",
       "definition": "SubscribeAndInstall是从eco:narrative_ecology材料中自动提取的概念",
@@ -4175,6 +4303,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:14:48.201674",
+      "importance": 66
+    },
+    "expansions": {
+      "name": "expansions",
+      "definition": "有华泰联合做背书肯定是双赢，三赢。背靠大树好乘凉 柠檬, [2023/9/24 16:10]\", \"tags\": [ \"expansions\", \"炒大群话术.txt\", \"file_type:txt\", \"b_layer\" ], \"source\": \"/Us",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.258115",
+      "importance": 66
+    },
+    "炒大群话术": {
+      "name": "炒大群话术",
+      "definition": "炒大群话术是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:14:24.268267",
       "importance": 66
     },
     "黑白猫渗透逻辑": {
@@ -5564,7 +5724,9 @@
       "六界运行层",
       "persuasive_salesperson",
       "完整歌词如下",
-      "希望你被这个世界爱着"
+      "希望你被这个世界爱着",
+      "a_layer",
+      "b_layer"
     ],
     "生存定律": [
       "笨者生存"
@@ -5927,7 +6089,15 @@
       "sentence_structure",
       "narrative_creator",
       "mentor_elite",
-      "account_opening"
+      "account_opening",
+      "text",
+      "slice_index",
+      "Documents",
+      "created_at",
+      "knowledge_base",
+      "file_type",
+      "expansions",
+      "炒大群话术"
     ],
     "核心概念": [
       "现居住",
@@ -5947,5 +6117,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:57:06.626903"
+  "exported_at": "2026-06-27T16:15:33.615052"
 }
