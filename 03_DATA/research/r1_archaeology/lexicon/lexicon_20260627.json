@@ -1031,6 +1031,22 @@
       "first_seen": "2026-06-27T14:14:28.750295",
       "importance": 84
     },
+    "StorekitExternalLink": {
+      "name": "StorekitExternalLink",
+      "definition": "StorekitExternalLink是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.521031",
+      "importance": 84
+    },
     "Emotional_Trigger_情感触发器": {
       "name": "Emotional_Trigger_情感触发器",
       "definition": "Emotional_Trigger_情感触发器是从eco:narrative_ecology材料中自动提取的概念",
@@ -2094,6 +2110,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:09:05.950235",
+      "importance": 78
+    },
+    "StoreKit": {
+      "name": "StoreKit",
+      "definition": "StoreKit是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.529069",
       "importance": 78
     },
     "mode_info": {
@@ -3345,6 +3377,54 @@
       "first_seen": "2026-06-27T14:13:23.761181",
       "importance": 69
     },
+    "ExternalPurchaseLink": {
+      "name": "ExternalPurchaseLink",
+      "definition": "ExternalPurchaseLink是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.536653",
+      "importance": 69
+    },
+    "LearnMore": {
+      "name": "LearnMore",
+      "definition": "LearnMore是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.544189",
+      "importance": 69
+    },
+    "AccountIneligibleNo": {
+      "name": "AccountIneligibleNo",
+      "definition": "AccountIneligibleNo是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.552307",
+      "importance": 69
+    },
     "黑白猫渗透逻辑": {
       "name": "黑白猫渗透逻辑",
       "definition": "Firefox离岸外层中的渗透逻辑模块，不管黑猫白猫能抓住老鼠就是好猫。",
@@ -3374,6 +3454,22 @@
       "examples": [],
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.105568",
+      "importance": 65
+    },
+    "ChatGPT": {
+      "name": "ChatGPT",
+      "definition": "ChatGPT是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.560380",
       "importance": 65
     },
     "persuasive_salesperson": {
@@ -3423,6 +3519,102 @@
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.120798",
       "importance": 64
+    },
+    "LockupRating": {
+      "name": "LockupRating",
+      "definition": "LockupRating是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.568942",
+      "importance": 63
+    },
+    "HardwareOffers": {
+      "name": "HardwareOffers",
+      "definition": "HardwareOffers是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.576506",
+      "importance": 63
+    },
+    "ViewButtonTitle": {
+      "name": "ViewButtonTitle",
+      "definition": "ViewButtonTitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.584044",
+      "importance": 63
+    },
+    "DeferredTitle": {
+      "name": "DeferredTitle",
+      "definition": "DeferredTitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:33:49.592579",
+      "importance": 63
+    },
+    "OpenButtonTitle": {
+      "name": "OpenButtonTitle",
+      "definition": "OpenButtonTitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.346347",
+      "importance": 63
+    },
+    "PricePerFrequency": {
+      "name": "PricePerFrequency",
+      "definition": "PricePerFrequency是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.355659",
+      "importance": 63
     },
     "需要卸载手机管家类型软件的": {
       "name": "需要卸载手机管家类型软件的",
@@ -4000,6 +4192,230 @@
       "first_seen": "2026-06-27T14:22:22.017340",
       "importance": 57
     },
+    "ShelfPage": {
+      "name": "ShelfPage",
+      "definition": "ShelfPage是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.362756",
+      "importance": 57
+    },
+    "SubscriptionName": {
+      "name": "SubscriptionName",
+      "definition": "SubscriptionName是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.371816",
+      "importance": 57
+    },
+    "RedeemOffer": {
+      "name": "RedeemOffer",
+      "definition": "RedeemOffer是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.379928",
+      "importance": 57
+    },
+    "DetailedPlatter": {
+      "name": "DetailedPlatter",
+      "definition": "DetailedPlatter是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.386975",
+      "importance": 57
+    },
+    "ValProp": {
+      "name": "ValProp",
+      "definition": "ValProp是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.396037",
+      "importance": 57
+    },
+    "ServiceProduct": {
+      "name": "ServiceProduct",
+      "definition": "ServiceProduct是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.404590",
+      "importance": 57
+    },
+    "BundlesSectionSubtitle": {
+      "name": "BundlesSectionSubtitle",
+      "definition": "BundlesSectionSubtitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.411764",
+      "importance": 57
+    },
+    "SubscriptionPeriod": {
+      "name": "SubscriptionPeriod",
+      "definition": "SubscriptionPeriod是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:40:00.420776",
+      "importance": 57
+    },
+    "ServiceSubtitle": {
+      "name": "ServiceSubtitle",
+      "definition": "ServiceSubtitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.822037",
+      "importance": 57
+    },
+    "LockupSubtitle": {
+      "name": "LockupSubtitle",
+      "definition": "LockupSubtitle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.830862",
+      "importance": 57
+    },
+    "SubscriptionBundle": {
+      "name": "SubscriptionBundle",
+      "definition": "SubscriptionBundle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.841393",
+      "importance": 57
+    },
+    "Contingent": {
+      "name": "Contingent",
+      "definition": "Contingent是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.852417",
+      "importance": 57
+    },
+    "iCloud": {
+      "name": "iCloud",
+      "definition": "iCloud是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.860945",
+      "importance": 57
+    },
+    "ExternalGateway": {
+      "name": "ExternalGateway",
+      "definition": "ExternalGateway是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:56:16.871014",
+      "importance": 57
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -4424,7 +4840,33 @@
       "nz",
       "vn",
       "zg",
-      "nrt"
+      "nrt",
+      "StorekitExternalLink",
+      "StoreKit",
+      "ExternalPurchaseLink",
+      "LearnMore",
+      "AccountIneligibleNo",
+      "ChatGPT",
+      "LockupRating",
+      "HardwareOffers",
+      "ViewButtonTitle",
+      "DeferredTitle",
+      "OpenButtonTitle",
+      "PricePerFrequency",
+      "ShelfPage",
+      "SubscriptionName",
+      "RedeemOffer",
+      "DetailedPlatter",
+      "ValProp",
+      "ServiceProduct",
+      "BundlesSectionSubtitle",
+      "SubscriptionPeriod",
+      "ServiceSubtitle",
+      "LockupSubtitle",
+      "SubscriptionBundle",
+      "Contingent",
+      "iCloud",
+      "ExternalGateway"
     ],
     "核心概念": [
       "现居住",
@@ -4441,5 +4883,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:25:36.856820"
+  "exported_at": "2026-06-27T15:03:19.941495"
 }
