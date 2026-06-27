@@ -1,6 +1,1666 @@
 {
-  "total": 2092,
+  "total": 2144,
   "entries": [
+    {
+      "id": "ebc80674",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 15:43:52\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 31 种模式，索引 50 条，新概念候选 3 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 343\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 2143\n- 类型分布: {\"file...",
+      "created_at": "2026-06-27T15:43:52.054637",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:43:52.054637",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0f7ac6f4",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T15:42:35.947746\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 1900, \"remaining\": 2447, \"progress_pct\": 43.7, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T15:42:38.119759",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:38.119759",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ed7741c9",
+      "title": "叙事生态 #1849",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1849",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1849"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"中西文化\": \"咨询\", \"遗簪绝缨\": \"咨询\", \"塔尔斯基\": \"咨询\", \"回叫\": \"咨询\", \"单比例\": \"咨询\", \"军费\": \"咨询\", \"孤身\": \"咨询\", \"翼根\": \"咨询\", \"引渡回国\": \"咨询\", \"并纱机\": \"咨询\", \"武剧\": \"咨询\", \"再认广度\": \"咨询\", \"热诚感人\": \"咨询\", \"疾书\": \"咨询\", \"郭礼华\": \"咨询\", \"绸纹纸...",
+      "created_at": "2026-06-27T15:42:35.822935",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.822935",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5036a89b",
+      "title": "叙事生态 #1848",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1848",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1848"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"过量\": \"咨询\", \"十炮\": \"咨询\", \"沸腾\": \"咨询\", \"吸上去\": \"咨询\", \"战皆墨\": \"咨询\", \"痲痹不了\": \"咨询\", \"顾问会发课程通知的\": \"咨询\", \"泰国铢\": \"咨询\", \"出将入相\": \"咨询\", \"钻具\": \"咨询\", \"烤花瓶\": \"咨询\", \"这个色泽就看的出来\": \"咨询\", \"头铁吗\": \"咨询\", \"张五弟\": \"咨询\", \"洲际飞弹\":...",
+      "created_at": "2026-06-27T15:42:35.693345",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.693345",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "157ed1b3",
+      "title": "叙事生态 #1847",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1847",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1847"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"边寨\": \"咨询\", \"出新招\": \"咨询\", \"师叔周\": \"咨询\", \"鉴照\": \"咨询\", \"这种概率是非常大的\": \"确认\", \"自贡人\": \"咨询\", \"电脑操作\": \"咨询\", \"视如敝徙\": \"咨询\", \"松嘴\": \"咨询\", \"汪克尔\": \"咨询\", \"软木质\": \"咨询\", \"我想课程收费吗\": \"咨询\", \"沽清\": \"咨询\", \"地位\": \"咨询\", \"黄蚁\": \"咨询\"...",
+      "created_at": "2026-06-27T15:42:35.561893",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.561893",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6b92acee",
+      "title": "叙事生态 #1846",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1846",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1846"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"维尼亚\": \"咨询\", \"我的顾问什么都帮我争取\": \"请求\", \"不值一顾\": \"咨询\", \"大家好准备听课了\": \"确认\", \"鬼来电\": \"咨询\", \"显官\": \"咨询\", \"远未\": \"咨询\", \"国际博览\": \"咨询\", \"梧桐树\": \"咨询\", \"集邮\": \"咨询\", \"体无完皮\": \"咨询\", \"达丽亚\": \"咨询\", \"这个你要问你自己的顾问才行\": \"咨询\", \"微笑起来\":...",
+      "created_at": "2026-06-27T15:42:35.434068",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.434068",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cb646266",
+      "title": "叙事生态 #1845",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1845",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1845"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"今天加仓的太多了\": \"咨询\", \"戒勉\": \"咨询\", \"家庄\": \"咨询\", \"无限公司\": \"咨询\", \"茶卤\": \"咨询\", \"带回家\": \"咨询\", \"崔平浩\": \"咨询\", \"这段时间在国庆前抓住机会多赚一笔钱\": \"咨询\", \"红变紫\": \"咨询\", \"折损\": \"咨询\", \"连发\": \"咨询\", \"情感铺垫\": \"咨询\", \"穷寇莫追\": \"咨询\", \"盘门\": \"咨询\", \"...",
+      "created_at": "2026-06-27T15:42:35.304381",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.304381",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "adc7d68e",
+      "title": "叙事生态 #1844",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1844",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1844"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"审断\": \"咨询\", \"检正\": \"咨询\", \"浅部微\": \"咨询\", \"王十朋\": \"咨询\", \"城南庄\": \"咨询\", \"一百八十七\": \"咨询\", \"熔炼炉\": \"咨询\", \"田自然\": \"咨询\", \"除尽\": \"咨询\", \"文化汇合\": \"咨询\", \"两块钱\": \"咨询\", \"倾肠倒肚\": \"咨询\", \"海盗\": \"咨询\", \"免疫检测\": \"咨询\", \"艳事\": \"咨询\", \"凸出蛋...",
+      "created_at": "2026-06-27T15:42:35.178979",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.178979",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2f61f16b",
+      "title": "叙事生态 #1843",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1843",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1843"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"防保\": \"咨询\", \"巨奸\": \"咨询\", \"居奇牟利\": \"咨询\", \"潜进去\": \"咨询\", \"石滚子\": \"咨询\", \"一百三十\": \"咨询\", \"拴锁\": \"咨询\", \"浪漫爱情\": \"咨询\", \"驱逐令\": \"咨询\", \"瓜达尔卡纳尔\": \"咨询\", \"农科大\": \"咨询\", \"雨僽风僝\": \"咨询\", \"宿营\": \"咨询\", \"无言对泣\": \"确认\", \"高门\": \"咨询\", \"...",
+      "created_at": "2026-06-27T15:42:35.051039",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:35.051039",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e693c865",
+      "title": "叙事生态 #1842",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1842",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1842"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"小说书\": \"咨询\", \"计学\": \"咨询\", \"半成品\": \"咨询\", \"文不尽意\": \"咨询\", \"国泰航空公司\": \"咨询\", \"保准\": \"咨询\", \"平湖\": \"咨询\", \"据点\": \"咨询\", \"下颌部\": \"咨询\", \"黄金价格\": \"咨询\", \"介素\": \"咨询\", \"汝宁沙\": \"咨询\", \"治多县\": \"咨询\", \"抄袭旧作\": \"咨询\", \"渐少\": \"咨询\", \"怎么样...",
+      "created_at": "2026-06-27T15:42:34.924417",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.924417",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dce6a3a2",
+      "title": "叙事生态 #1841",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1841",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1841"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "风险内化",
+          "relevance": 5,
+          "category": "治理原则"
+        },
+        {
+          "name": "影子层",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "心核",
+          "relevance": 5,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"滚滚\": \"咨询\", \"心苦\": \"咨询\", \"东亚人\": \"咨询\", \"不胜唏嘘\": \"咨询\", \"变形虫\": \"咨询\", \"于建隆\": \"咨询\", \"龙菲尔\": \"咨询\", \"镍氢电池\": \"咨询\", \"个工作日\": \"咨询\", \"民间故事\": \"咨询\", \"猖獗\": \"咨询\", \"处决\": \"咨询\", \"趁心如意\": \"咨询\", \"阳石隘\": \"咨询\", \"土地类型\": \"咨询\", \"加...",
+      "created_at": "2026-06-27T15:42:34.800733",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.800733",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "81e4e65f",
+      "title": "叙事生态 #1840",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1840",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1840"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"景阳\": \"咨询\", \"判决额\": \"咨询\", \"珍藏本\": \"咨询\", \"音乐风格\": \"咨询\", \"褎然举首\": \"咨询\", \"苯教\": \"咨询\", \"鲮鲤\": \"咨询\", \"月池\": \"咨询\", \"矿床\": \"咨询\", \"上午就开始排队\": \"咨询\", \"而论\": \"咨询\", \"锡安\": \"咨询\", \"沙米隐\": \"咨询\", \"本吉本\": \"咨询\", \"明贾政\": \"咨询\", \"均等分裂...",
+      "created_at": "2026-06-27T15:42:34.671096",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.671096",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4792d1f7",
+      "title": "叙事生态 #1839",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1839",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1839"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"放小\": \"咨询\", \"烟海\": \"咨询\", \"勋绩\": \"咨询\", \"霍都空\": \"咨询\", \"权倾天下\": \"咨询\", \"舒莲记\": \"咨询\", \"寒冬\": \"咨询\", \"天天都有老师讲课吗\": \"咨询\", \"光线方向\": \"咨询\", \"象限\": \"咨询\", \"而不是让有钱的越来越有钱\": \"确认\", \"贵贱无常\": \"咨询\", \"陵川\": \"咨询\", \"陈海宁\": \"咨询\", \"真武观\"...",
+      "created_at": "2026-06-27T15:42:34.546240",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.546240",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "27a71fdd",
+      "title": "叙事生态 #1838",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1838",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1838"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"文化站\": \"咨询\", \"半粒\": \"咨询\", \"串联探针\": \"咨询\", \"文稿纸\": \"咨询\", \"新文化运\": \"咨询\", \"依托机构通道与风控体系\": \"咨询\", \"贾奇抢\": \"咨询\", \"病怏怏\": \"咨询\", \"满门\": \"咨询\", \"震慄\": \"咨询\", \"自费旅行\": \"咨询\", \"利国\": \"咨询\", \"殉难者\": \"咨询\", \"踏上来\": \"咨询\", \"苦僧\": \"咨询\"...",
+      "created_at": "2026-06-27T15:42:34.421036",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.421036",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ded1ca8a",
+      "title": "叙事生态 #1837",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1837",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1837"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"心悸\": \"咨询\", \"明天又要到周末了\": \"咨询\", \"巴新\": \"咨询\", \"横翻\": \"咨询\", \"抚琴\": \"咨询\", \"斯威士\": \"咨询\", \"任课\": \"咨询\", \"不怕被割\": \"咨询\", \"战友野心够大的啊\": \"咨询\", \"唐小西\": \"咨询\", \"平武县\": \"咨询\", \"好期待下午什么好票\": \"咨询\", \"启发法\": \"咨询\", \"挤垮\": \"咨询\", \"风籍\": ...",
+      "created_at": "2026-06-27T15:42:34.295871",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.295871",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a5210467",
+      "title": "叙事生态 #1836",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1836",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1836"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "模式匹配的",
+          "relevance": 5,
+          "category": "核心机制"
+        }
+      ],
+      "summary": " \"归终\": \"咨询\", \"面目一新\": \"咨询\", \"徐泽商\": \"咨询\", \"先进青年\": \"咨询\", \"侧向\": \"咨询\", \"克卢日\": \"咨询\", \"子幽王\": \"咨询\", \"插队\": \"咨询\", \"硬抢\": \"咨询\", \"发现异常\": \"咨询\", \"九洲四海\": \"咨询\", \"辈行\": \"咨询\", \"望眼欲穿\": \"咨询\", \"练练看\": \"咨询\", \"名目\": \"咨询\", \"六陆\":...",
+      "created_at": "2026-06-27T15:42:34.167450",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.167450",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b22c1214",
+      "title": "叙事生态 #1835",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1835",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1835"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"梅花诗\": \"咨询\", \"科技报\": \"咨询\", \"获利\": \"咨询\", \"监市履狶\": \"咨询\", \"二十六位\": \"咨询\", \"天军\": \"咨询\", \"唱赞歌\": \"咨询\", \"日斑\": \"咨询\", \"死而无怨\": \"咨询\", \"上门来\": \"咨询\", \"维拉第\": \"咨询\", \"据介绍\": \"咨询\", \"错误观念\": \"投诉\", \"唐初名\": \"咨询\", \"各奏\": \"咨询\", \"手段\"...",
+      "created_at": "2026-06-27T15:42:34.037280",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:34.037280",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "67a7ff1c",
+      "title": "叙事生态 #1834",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1834",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1834"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"永远不要把自己想象的太聪明\": \"咨询\", \"良才\": \"咨询\", \"念作\": \"咨询\", \"中子源\": \"咨询\", \"十二队\": \"咨询\", \"唐高齐\": \"咨询\", \"土槿皮\": \"咨询\", \"生死观\": \"咨询\", \"根本无法\": \"咨询\", \"下午我也申购新股了\": \"咨询\", \"总教官\": \"咨询\", \"心律失常\": \"咨询\", \"旋风\": \"咨询\", \"翰海\": \"咨询\", \"艰难...",
+      "created_at": "2026-06-27T15:42:33.910236",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.910236",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "49a2787d",
+      "title": "叙事生态 #1833",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1833",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1833"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"死亡\": \"咨询\", \"喷下来\": \"咨询\", \"准点\": \"咨询\", \"发胀感\": \"咨询\", \"打鸣\": \"咨询\", \"顾惜\": \"咨询\", \"昌平县\": \"咨询\", \"沿崖\": \"咨询\", \"煤炉子\": \"咨询\", \"在哪玩呢\": \"咨询\", \"哈米提\": \"咨询\", \"也不需要你看盘\": \"拒绝\", \"荆湖占\": \"咨询\", \"处断\": \"咨询\", \"钜学鸿生\": \"咨询\", \"许可权...",
+      "created_at": "2026-06-27T15:42:33.779606",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.779606",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7935aa77",
+      "title": "叙事生态 #1832",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1832",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1832"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"朋友这厨艺看起来不错\": \"咨询\", \"东北财经\": \"咨询\", \"能给我看看吗\": \"咨询\", \"银硃\": \"咨询\", \"旁岔儿\": \"咨询\", \"继电保护\": \"咨询\", \"玻璃珠\": \"咨询\", \"利定昌\": \"咨询\", \"智略\": \"咨询\", \"酒翁\": \"咨询\", \"一刀两断\": \"咨询\", \"拉维河\": \"咨询\", \"撑得住\": \"咨询\", \"笑口\": \"咨询\", \"甘棠之爱\": ...",
+      "created_at": "2026-06-27T15:42:33.654706",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.654706",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c526ed41",
+      "title": "叙事生态 #1831",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1831",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1831"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"追风摄景\": \"咨询\", \"词穷\": \"咨询\", \"西周时代\": \"咨询\", \"珲春市\": \"咨询\", \"厅堂\": \"咨询\", \"宿迁\": \"咨询\", \"外经\": \"咨询\", \"道高益安\": \"咨询\", \"粤江三角\": \"咨询\", \"仰慕\": \"咨询\", \"查觉到\": \"咨询\", \"彭志海\": \"咨询\", \"实验学校\": \"咨询\", \"刚够\": \"咨询\", \"超群出众\": \"咨询\", \"娈生儿...",
+      "created_at": "2026-06-27T15:42:33.529422",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.529422",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cbe262ce",
+      "title": "叙事生态 #1830",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1830",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1830"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"而且还不一定呢能拿捏住买卖点\": \"咨询\", \"非公经济\": \"咨询\", \"也是为人生画上完美的句号了\": \"确认\", \"五六分钟\": \"咨询\", \"倍谢\": \"咨询\", \"第一间\": \"咨询\", \"时凸显\": \"咨询\", \"痞块\": \"咨询\", \"跗骨\": \"咨询\", \"微电子学\": \"咨询\", \"左右两半\": \"咨询\", \"南马德\": \"咨询\", \"嘉南药专\": \"咨询\", \"向风清\": ...",
+      "created_at": "2026-06-27T15:42:33.406155",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.406155",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d39837e2",
+      "title": "叙事生态 #1829",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1829",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1829"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"真金不怕火炼\": \"咨询\", \"十五六门\": \"咨询\", \"反顾\": \"咨询\", \"烽火\": \"咨询\", \"手写笔\": \"咨询\", \"四排\": \"咨询\", \"差值帧\": \"咨询\", \"椭球\": \"咨询\", \"零十四天\": \"咨询\", \"晕机\": \"咨询\", \"李元儒\": \"咨询\", \"兵在其颈\": \"咨询\", \"德美特\": \"咨询\", \"深有体会\": \"咨询\", \"边际效应\": \"咨询\", \"...",
+      "created_at": "2026-06-27T15:42:33.281592",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.281592",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5d7635d8",
+      "title": "叙事生态 #1828",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1828",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1828"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"他们还老是割我们的肉\": \"确认\", \"使命\": \"咨询\", \"石相击\": \"咨询\", \"知小谋大\": \"咨询\", \"杨惟中\": \"咨询\", \"偷嘴\": \"咨询\", \"按照我们之前的日子\": \"咨询\", \"丁汝昌\": \"咨询\", \"护堤\": \"咨询\", \"贾鸿源\": \"咨询\", \"阿尔穆尼亚\": \"咨询\", \"湖南路\": \"咨询\", \"湖南省委宣传部\": \"咨询\", \"言简意赅\": \"咨询\",...",
+      "created_at": "2026-06-27T15:42:33.153748",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.153748",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c46f6a0c",
+      "title": "叙事生态 #1827",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1827",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1827"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "五界自治",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "六界运行层",
+          "relevance": 5,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"暴脾气\": \"咨询\", \"充分肯定\": \"咨询\", \"砥砺廉隅\": \"咨询\", \"西指\": \"咨询\", \"喇叭\": \"咨询\", \"差不远\": \"咨询\", \"经济过剩\": \"咨询\", \"肯干\": \"咨询\", \"研定\": \"咨询\", \"解毒机\": \"咨询\", \"小铁铲\": \"咨询\", \"投法\": \"咨询\", \"伊尔格斯\": \"咨询\", \"楚雄彝族自治州\": \"咨询\", \"这周大宗收益必须拿下\": ...",
+      "created_at": "2026-06-27T15:42:33.029377",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:33.029377",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c9cf51cc",
+      "title": "叙事生态 #1826",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1826",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1826"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"李沟村\": \"咨询\", \"发生学\": \"咨询\", \"强而有力\": \"咨询\", \"角质化\": \"咨询\", \"言祥瑞\": \"咨询\", \"电子对抗\": \"确认\", \"寡基因\": \"咨询\", \"上周末下雨都没能去\": \"咨询\", \"左右摇摆\": \"咨询\", \"我的钱已经准备好了不知道明天什么时候能排上队给缴纳了\": \"咨询\", \"双泾村\": \"咨询\", \"拜仁慕尼黑队\": \"咨询\", \"文化用品\": ...",
+      "created_at": "2026-06-27T15:42:32.906005",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.906005",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "42e5645a",
+      "title": "叙事生态 #1825",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1825",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1825"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"松果体素\": \"咨询\", \"贵点\": \"咨询\", \"姬晓峰\": \"咨询\", \"展台\": \"咨询\", \"七五期间\": \"咨询\", \"不齐\": \"咨询\", \"得道多助\": \"咨询\", \"食橱\": \"咨询\", \"八面光\": \"咨询\", \"鬼使神差\": \"咨询\", \"罗森布\": \"咨询\", \"垒石\": \"咨询\", \"王如松\": \"咨询\", \"重油\": \"咨询\", \"酒龄\": \"咨询\", \"把握不住的什...",
+      "created_at": "2026-06-27T15:42:32.779052",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.779052",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2b2b8e95",
+      "title": "叙事生态 #1824",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1824",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1824"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"现在是学习赚钱两个概念了\": \"确认\", \"闹中取静\": \"咨询\", \"农科教\": \"咨询\", \"食物店\": \"咨询\", \"避害\": \"咨询\", \"拉纳达\": \"咨询\", \"我想我刚看了下你上一句的语气\": \"咨询\", \"老虎币\": \"咨询\", \"楚怀王\": \"咨询\", \"心律不整\": \"咨询\", \"曹文化\": \"咨询\", \"林德伯格\": \"咨询\", \"术业\": \"咨询\", \"遗作\": \"咨询...",
+      "created_at": "2026-06-27T15:42:32.646029",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.646029",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a01ee339",
+      "title": "叙事生态 #1823",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1823",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1823"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"凡百一新\": \"咨询\", \"克尔三\": \"咨询\", \"武状元\": \"咨询\", \"巴布亚新几内亚独立国\": \"咨询\", \"雨覆云翻\": \"咨询\", \"西京\": \"咨询\", \"跟着机构做拉升\": \"咨询\", \"荷兰豆\": \"咨询\", \"唤名\": \"咨询\", \"传播媒介\": \"咨询\", \"或者在银行审查\": \"咨询\", \"马莫杜\": \"咨询\", \"须尽欢\": \"咨询\", \"妙语惊人\": \"咨询\", ...",
+      "created_at": "2026-06-27T15:42:32.521101",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.521101",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "18f1de3b",
+      "title": "叙事生态 #1822",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1822",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1822"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"水土不服\": \"咨询\", \"瓦盆\": \"咨询\", \"一个三天\": \"咨询\", \"金睛兽\": \"咨询\", \"教育大业\": \"咨询\", \"没演\": \"咨询\", \"下走\": \"咨询\", \"华亭鹤\": \"咨询\", \"醉舞\": \"咨询\", \"金秀来\": \"咨询\", \"切割片\": \"咨询\", \"变粗\": \"咨询\", \"讨好卖乖\": \"确认\", \"你是朋友介绍进来的还是怎么进群的呢\": \"确认\", \"花弄影...",
+      "created_at": "2026-06-27T15:42:32.397098",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.397098",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "55385346",
+      "title": "叙事生态 #1821",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1821",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1821"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"三十步\": \"咨询\", \"赵钊怡\": \"咨询\", \"摘花\": \"咨询\", \"争宠\": \"咨询\", \"行规\": \"咨询\", \"填空补缺\": \"咨询\", \"马里政府\": \"咨询\", \"初小文化\": \"咨询\", \"小友\": \"咨询\", \"弹丸之地\": \"咨询\", \"结语\": \"咨询\", \"那识君\": \"咨询\", \"挂花\": \"咨询\", \"无锡人\": \"咨询\", \"同悲\": \"咨询\", \"病理性\": ...",
+      "created_at": "2026-06-27T15:42:32.271395",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.271395",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "24ba28cc",
+      "title": "叙事生态 #1820",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1820",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1820"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"服毒自杀\": \"咨询\", \"广东省高级人民法院\": \"咨询\", \"美术室\": \"咨询\", \"螳臂当车\": \"咨询\", \"可贵性\": \"咨询\", \"俾路支省\": \"咨询\", \"地狱之火\": \"咨询\", \"伸出头\": \"咨询\", \"遗恨千古\": \"咨询\", \"马钰之\": \"咨询\", \"此项\": \"咨询\", \"马望北\": \"咨询\", \"异人馆\": \"咨询\", \"关宁军\": \"咨询\", \"扎龙\": \"...",
+      "created_at": "2026-06-27T15:42:32.148334",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.148334",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "80624202",
+      "title": "叙事生态 #1819",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1819",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1819"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"等梯队有名额了我就要进梯队\": \"咨询\", \"素还真\": \"咨询\", \"牛宰马\": \"咨询\", \"乌吉亚\": \"咨询\", \"吐吐气\": \"咨询\", \"调剂\": \"咨询\", \"风格化\": \"咨询\", \"你们都吃了吗\": \"咨询\", \"吴哥通\": \"咨询\", \"先我着鞭\": \"咨询\", \"魏国皮\": \"咨询\", \"袭故蹈常\": \"咨询\", \"廉正\": \"咨询\", \"今日是周五\": \"确认\", \"横...",
+      "created_at": "2026-06-27T15:42:32.021974",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:32.021974",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "432330df",
+      "title": "叙事生态 #1818",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1818",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1818"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"翻唱\": \"咨询\", \"一百七十四\": \"咨询\", \"沾沾自喜\": \"咨询\", \"酒是必需品\": \"确认\", \"有史以来\": \"咨询\", \"伏侍姐姐\": \"咨询\", \"科尔库\": \"咨询\", \"输出阻抗\": \"咨询\", \"情感游戏\": \"咨询\", \"班大太监\": \"咨询\", \"净月潭\": \"咨询\", \"封入\": \"咨询\", \"不要等着都放假的时候回堵车堵废啊\": \"咨询\", \"驻伊美军\": \"...",
+      "created_at": "2026-06-27T15:42:31.899421",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.899421",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b9ba7a47",
+      "title": "叙事生态 #1817",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1817",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1817"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"瘦肉粥\": \"咨询\", \"造端\": \"咨询\", \"椴属\": \"咨询\", \"斯托\": \"咨询\", \"交换电流\": \"咨询\", \"罗长奇\": \"咨询\", \"后代子孙\": \"咨询\", \"曹美成\": \"咨询\", \"路富德\": \"咨询\", \"平林诸\": \"咨询\", \"乌程\": \"咨询\", \"交际费\": \"咨询\", \"宗设格\": \"咨询\", \"定情之物\": \"咨询\", \"宿于家\": \"咨询\", \"不前不后...",
+      "created_at": "2026-06-27T15:42:31.774339",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.774339",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1bbd3fdb",
+      "title": "叙事生态 #1816",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1816",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1816"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"绑扎\": \"咨询\", \"伪政权\": \"咨询\", \"巨祸\": \"咨询\", \"竹席\": \"咨询\", \"茶泡饭\": \"咨询\", \"轩昂自若\": \"咨询\", \"三卷\": \"咨询\", \"残次林\": \"咨询\", \"福晋格\": \"咨询\", \"繁华世界\": \"咨询\", \"真凶\": \"咨询\", \"莽莽撞撞\": \"咨询\", \"国史馆\": \"咨询\", \"故事片儿\": \"咨询\", \"野性难驯\": \"咨询\", \"百分之...",
+      "created_at": "2026-06-27T15:42:31.637677",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.637677",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f9c0f63f",
+      "title": "叙事生态 #1815",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1815",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1815"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"羟磷灰石\": \"咨询\", \"奥萨哥\": \"咨询\", \"孙和平\": \"咨询\", \"甲组\": \"咨询\", \"终夕\": \"咨询\", \"善思\": \"咨询\", \"职守\": \"咨询\", \"川学海\": \"咨询\", \"非洲开发银行\": \"咨询\", \"多糖类\": \"咨询\", \"车中跃\": \"咨询\", \"马格里布\": \"咨询\", \"绿丹兰\": \"咨询\", \"四氧化二氮\": \"咨询\", \"神魂不定\": \"咨询\", ...",
+      "created_at": "2026-06-27T15:42:31.511780",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.511780",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1843b676",
+      "title": "叙事生态 #1814",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1814",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1814"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"克鲁瓦\": \"咨询\", \"你现在都什么身段了\": \"咨询\", \"伯克郡\": \"咨询\", \"随传随到\": \"咨询\", \"竹箫\": \"咨询\", \"小睡\": \"咨询\", \"努力创造\": \"咨询\", \"刘志明\": \"咨询\", \"麈尾之诲\": \"咨询\", \"颖花\": \"咨询\", \"斗霜傲雪\": \"咨询\", \"真不容易啊等了几天了终于下来了\": \"咨询\", \"奸党\": \"咨询\", \"砖壁\": \"咨询\", ...",
+      "created_at": "2026-06-27T15:42:31.386938",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.386938",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "025afbb2",
+      "title": "叙事生态 #1813",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1813",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1813"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"你还没煮好\": \"确认\", \"汉末魏\": \"咨询\", \"敦聘\": \"咨询\", \"冻啤酒\": \"咨询\", \"必经之路\": \"咨询\", \"酷弊了\": \"咨询\", \"均匀度\": \"咨询\", \"无善德\": \"咨询\", \"资质聪颖\": \"咨询\", \"凌杂米盐\": \"咨询\", \"天津碱厂\": \"咨询\", \"德楞\": \"咨询\", \"力量对比\": \"确认\", \"生产定额\": \"咨询\", \"蓄荒\": \"咨询\",...",
+      "created_at": "2026-06-27T15:42:31.265190",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.265190",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "befc0ae0",
+      "title": "叙事生态 #1812",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1812",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1812"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"收纳\": \"咨询\", \"洞察力\": \"咨询\", \"风驰电逝\": \"咨询\", \"红楼\": \"咨询\", \"陶瓷娃娃\": \"咨询\", \"直线运动\": \"咨询\", \"篓子\": \"咨询\", \"百分之七八十\": \"咨询\", \"大凤鸟\": \"咨询\", \"工商企业界\": \"咨询\", \"这谁看了不眼红啊\": \"咨询\", \"吉他手\": \"咨询\", \"哈尔滨\": \"咨询\", \"王开明\": \"咨询\", \"团体照\": ...",
+      "created_at": "2026-06-27T15:42:31.138969",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.138969",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "df052aef",
+      "title": "叙事生态 #1811",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1811",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1811"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"毒魔\": \"咨询\", \"特征选择\": \"咨询\", \"租赁费\": \"咨询\", \"扣除额\": \"咨询\", \"潜台词是把他当家人\": \"确认\", \"管姊弟\": \"咨询\", \"英派斯\": \"咨询\", \"疏阔\": \"咨询\", \"上课\": \"咨询\", \"创造\": \"咨询\", \"马皮\": \"咨询\", \"总额\": \"咨询\", \"五辆车\": \"咨询\", \"领风骚\": \"咨询\", \"张灵甫\": \"咨询\", \"富蕴...",
+      "created_at": "2026-06-27T15:42:31.011606",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:31.011606",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "69b3a65f",
+      "title": "叙事生态 #1810",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1810",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1810"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"文化部\": \"咨询\", \"罚下场\": \"咨询\", \"五大洲\": \"咨询\", \"友好邻邦\": \"确认\", \"中国日报\": \"咨询\", \"全球中文\": \"咨询\", \"陈锦华\": \"咨询\", \"瓦西镇\": \"咨询\", \"爱国东路\": \"咨询\", \"节录\": \"咨询\", \"飘荡\": \"咨询\", \"星孔明\": \"咨询\", \"草料\": \"咨询\", \"礼仪之邦\": \"咨询\", \"隋代杨\": \"咨询\", \"未...",
+      "created_at": "2026-06-27T15:42:30.886062",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.886062",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "571e3674",
+      "title": "叙事生态 #1809",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1809",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1809"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"几日\": \"咨询\", \"露背\": \"咨询\", \"三排\": \"咨询\", \"祖军\": \"咨询\", \"乏力\": \"咨询\", \"孙桓引\": \"咨询\", \"欣龙控股\": \"咨询\", \"文化名城\": \"咨询\", \"识别率\": \"咨询\", \"好激动啊不知道新股能中多少了\": \"咨询\", \"明铁盖\": \"咨询\", \"购物广场\": \"咨询\", \"剩下的钱我想去看下房\": \"咨询\", \"环保部门\": \"咨询\", ...",
+      "created_at": "2026-06-27T15:42:30.763202",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.763202",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2dc4ef4c",
+      "title": "叙事生态 #1808",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1808",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1808"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"不辱使命\": \"咨询\", \"角色散\": \"咨询\", \"喂饭\": \"咨询\", \"拧紧\": \"咨询\", \"桃来李答\": \"咨询\", \"收之桑榆\": \"咨询\", \"应卯\": \"咨询\", \"退到\": \"咨询\", \"牵引床\": \"咨询\", \"矢石不二\": \"咨询\", \"招议\": \"咨询\", \"大盘每周就拉一个大阳\": \"咨询\", \"乱扯\": \"咨询\", \"功过相抵\": \"咨询\", \"加升\": \"咨询\",...",
+      "created_at": "2026-06-27T15:42:30.640766",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.640766",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9e50681a",
+      "title": "叙事生态 #1807",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1807",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1807"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"旋律优美\": \"咨询\", \"签得\": \"咨询\", \"而且下午又能打板了\": \"咨询\", \"魏博遂\": \"咨询\", \"浅希近求\": \"咨询\", \"旨在\": \"咨询\", \"共鸣点\": \"咨询\", \"肿物\": \"咨询\", \"高效廉洁\": \"咨询\", \"汪金福\": \"咨询\", \"武侯区\": \"咨询\", \"因材施教\": \"咨询\", \"法医鉴定\": \"咨询\", \"颖慧绝伦\": \"咨询\", \"为啥我的礼品是...",
+      "created_at": "2026-06-27T15:42:30.517616",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.517616",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4ef6a1fb",
+      "title": "叙事生态 #1806",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1806",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1806"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"或于\": \"咨询\", \"低声波\": \"咨询\", \"逛回去\": \"咨询\", \"口乾\": \"咨询\", \"这么好的机会要把握住\": \"确认\", \"民忠\": \"咨询\", \"组织后卫\": \"咨询\", \"锯蛋白\": \"咨询\", \"潜移暗化\": \"咨询\", \"赚多赚少暂且不谈\": \"咨询\", \"新兴路\": \"咨询\", \"新用\": \"咨询\", \"冯秀乾\": \"咨询\", \"幽游白书\": \"咨询\", \"不要把所有...",
+      "created_at": "2026-06-27T15:42:30.393266",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.393266",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "214df76a",
+      "title": "叙事生态 #1805",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1805",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1805"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"想象力\": \"咨询\", \"告贷\": \"咨询\", \"梁羽生\": \"咨询\", \"接待客人\": \"咨询\", \"七星街\": \"咨询\", \"神农本草经\": \"咨询\", \"现在的小年轻事业压力大\": \"咨询\", \"养呢\": \"咨询\", \"时事新闻\": \"咨询\", \"梁折柱\": \"咨询\", \"拊背扼吭\": \"咨询\", \"烧录卡\": \"咨询\", \"井栏圈\": \"咨询\", \"打击面\": \"咨询\", \"历史长河\"...",
+      "created_at": "2026-06-27T15:42:30.269303",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.269303",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "67b77c43",
+      "title": "叙事生态 #1804",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1804",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1804"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"要旨\": \"咨询\", \"郑联军\": \"咨询\", \"绕射求和\": \"咨询\", \"生于忧患\": \"咨询\", \"股分\": \"咨询\", \"白登云\": \"咨询\", \"白白错过了\": \"咨询\", \"渡赤水\": \"咨询\", \"千余公里\": \"咨询\", \"余则\": \"咨询\", \"清过来\": \"咨询\", \"鹤归华表\": \"咨询\", \"云树遥隔\": \"咨询\", \"训语\": \"咨询\", \"小贴士\": \"咨询\", \"...",
+      "created_at": "2026-06-27T15:42:30.142869",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.142869",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1cc9a6b9",
+      "title": "叙事生态 #1803",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1803",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1803"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"灭火剂\": \"咨询\", \"急救法\": \"咨询\", \"史考特\": \"咨询\", \"决策树\": \"咨询\", \"受灾县\": \"咨询\", \"智真长老\": \"咨询\", \"我真的不想错过\": \"咨询\", \"托波尔\": \"咨询\", \"维州\": \"咨询\", \"冈崎\": \"咨询\", \"哈利波\": \"咨询\", \"杯赛\": \"咨询\", \"萃取\": \"咨询\", \"戏日\": \"咨询\", \"开发板\": \"咨询\", \"归城邦...",
+      "created_at": "2026-06-27T15:42:30.018123",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:30.018123",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e8f50e65",
+      "title": "叙事生态 #1802",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1802",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1802"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"切线\": \"咨询\", \"二十出\": \"咨询\", \"就这都等了\": \"咨询\", \"轧空头\": \"咨询\", \"鲤跃龙门\": \"咨询\", \"专宠\": \"咨询\", \"节民\": \"咨询\", \"读书节\": \"咨询\", \"大洼\": \"咨询\", \"挡土墙\": \"咨询\", \"用人不疑\": \"咨询\", \"眼冒金星\": \"咨询\", \"预紧\": \"咨询\", \"潘顺玉\": \"咨询\", \"游丝飞絮\": \"咨询\", \"卡姆...",
+      "created_at": "2026-06-27T15:42:29.892626",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:29.892626",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "73fc3f2e",
+      "title": "叙事生态 #1801",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1801",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1801"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"二九\": \"咨询\", \"冤有头债\": \"咨询\", \"不露形色\": \"咨询\", \"拆卸\": \"咨询\", \"苍翠\": \"咨询\", \"被褥\": \"咨询\", \"双击鼠标\": \"咨询\", \"主流产品\": \"咨询\", \"武之望\": \"咨询\", \"往返机票\": \"咨询\", \"林子娟\": \"咨询\", \"我想请问您今天有时间吗\": \"请求\", \"离魂倩女\": \"咨询\", \"破罐子破摔\": \"咨询\", \"录入员\"...",
+      "created_at": "2026-06-27T15:42:29.768374",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:29.768374",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "86d29bbc",
+      "title": "叙事生态 #1800",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1800",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1800"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "五界自治",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "六界运行层",
+          "relevance": 5,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"假人假义\": \"咨询\", \"头破血流\": \"咨询\", \"邓小玲\": \"咨询\", \"北屯牧\": \"咨询\", \"夹生\": \"咨询\", \"较紧\": \"咨询\", \"热泪潸潸\": \"咨询\", \"新章\": \"咨询\", \"苏峻起\": \"咨询\", \"本来想给儿子买辆好点的车\": \"确认\", \"花宝鉴\": \"咨询\", \"清河镇\": \"咨询\", \"一票人马\": \"咨询\", \"佣兵团\": \"咨询\", \"人际排斥\":...",
+      "created_at": "2026-06-27T15:42:29.641290",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:42:29.641290",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "2c7eea36",
       "title": "今日考古摘要 - 2026-06-27",
@@ -75951,5 +77611,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T15:28:46.096430"
+  "exported_at": "2026-06-27T15:43:52.178296"
 }

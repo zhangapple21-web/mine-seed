@@ -4148,6 +4148,22 @@
       "first_seen": "2026-06-26T21:59:50.130851",
       "importance": 62
     },
+    "scan_report_path": {
+      "name": "scan_report_path",
+      "definition": "f.write(\"10. 合并现有词库：将新提取的词条与现有词库合并\\n\") print(f\"生成报告: {self.scan_report_path}\") def create_zip_package(self): print(\"创建ZIP打包文件\u0001\") zip_fi",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.388334",
+      "importance": 61
+    },
     "XXX": {
       "name": "XXX",
       "definition": "到 2–3 只更有把握的票上把资金留在更有价值的个股，这样节奏才好带利润才堆得起来。 我看了下你现在的持仓，票有点偏多了XXX有点XXX哪都沾一点，你这样做只会哪都赚不到。这种状态是散户最常见的涨的那几只因为仓位轻，赚不到什么钱，跌的那几只是重仓",
@@ -4916,6 +4932,150 @@
       "first_seen": "2026-06-27T14:56:16.871014",
       "importance": 57
     },
+    "等价问法": {
+      "name": "等价问法",
+      "definition": "对分配意图和标签\\n\") f.write(\"8. 上下文增强：为每个词条添加上下文信息\\n\") f.write(\"9. 等价问法生成：为每个主问句生成多种表达方式\\n\") f.write(\"10. 合并现有词库：将新提取的词条与现有词库合并\\n\")",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.400027",
+      "importance": 57
+    },
+    "上下文增强": {
+      "name": "上下文增强",
+      "definition": "意图分类：自动为问答对分配意图和标签\\n\") f.write(\"8. 上下文增强：为每个词条添加上下文信息\\n\") f.write(\"9. 等价问法生成：为每个主问句生成多种表达方式\\n\") f.wr",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.412066",
+      "importance": 57
+    },
+    "主问句": {
+      "name": "主问句",
+      "definition": "\") f.write(\"8. 上下文增强：为每个词条添加上下文信息\\n\") f.write(\"9. 等价问法生成：为每个主问句生成多种表达方式\\n\") f.write(\"10. 合并现有词库：将新提取的词条与现有词库合并\\n\") print(f\"",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.423094",
+      "importance": 57
+    },
+    "意图分类": {
+      "name": "意图分类",
+      "definition": "意图分类：自动为问答对分配意图和标签\\n\") f.write(\"8. 上下文增强：为每个词条添加上下文信息\\n\") f.writ",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.434340",
+      "importance": 57
+    },
+    "等价问法生成": {
+      "name": "等价问法生成",
+      "definition": "对分配意图和标签\\n\") f.write(\"8. 上下文增强：为每个词条添加上下文信息\\n\") f.write(\"9. 等价问法生成：为每个主问句生成多种表达方式\\n\") f.write(\"10. 合并现有词库：将新提取的词条与现有词库合并\\n\") p",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.445649",
+      "importance": 57
+    },
+    "合并现有词库": {
+      "name": "合并现有词库",
+      "definition": "下文信息\\n\") f.write(\"9. 等价问法生成：为每个主问句生成多种表达方式\\n\") f.write(\"10. 合并现有词库：将新提取的词条与现有词库合并\\n\") print(f\"生成报告: {self.scan_report_path}\")",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.457641",
+      "importance": 57
+    },
+    "文本去重": {
+      "name": "文本去重",
+      "definition": "\\n\") f.write(\"处理说明\\n\") f.write(\"-\" * 30 + \"\\n\") f.write(\"1. 文本去重：移除完全相同的词条\\n\") f.write(\"2. 语义去重：合并语义相似的词条\\n\") f.write(\"3. 过短",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.469319",
+      "importance": 57
+    },
+    "语义去重": {
+      "name": "语义去重",
+      "definition": "\"-\" * 30 + \"\\n\") f.write(\"1. 文本去重：移除完全相同的词条\\n\") f.write(\"2. 语义去重：合并语义相似的词条\\n\") f.write(\"3. 过短补全：为过短的问题添加前缀或后缀\\n\") f.write(\"4",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.480477",
+      "importance": 57
+    },
+    "过短补全": {
+      "name": "过短补全",
+      "definition": "去重：移除完全相同的词条\\n\") f.write(\"2. 语义去重：合并语义相似的词条\\n\") f.write(\"3. 过短补全：为过短的问题添加前缀或后缀\\n\") f.write(\"4. 等价问法：为每个主问句生成多种表达方式\\n\") f.wri",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "客户问"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:42:38.491645",
+      "importance": 57
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -5397,7 +5557,17 @@
       "handle_task_command",
       "task_text",
       "tone_score",
-      "current_phrases"
+      "current_phrases",
+      "scan_report_path",
+      "等价问法",
+      "上下文增强",
+      "主问句",
+      "意图分类",
+      "等价问法生成",
+      "合并现有词库",
+      "文本去重",
+      "语义去重",
+      "过短补全"
     ],
     "核心概念": [
       "现居住",
@@ -5415,5 +5585,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:28:46.096430"
+  "exported_at": "2026-06-27T15:43:52.178296"
 }
