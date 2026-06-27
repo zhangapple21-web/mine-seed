@@ -2496,6 +2496,64 @@
       "first_seen": "2026-06-27T14:03:13.210802",
       "importance": 72
     },
+    "你听我一句": {
+      "name": "你听我一句",
+      "definition": "里话，你这态度让我有点招架不住，我现在就想继续跟你聊下去。 别笑我啊，你这样说让我有点上心了，那你说说看，你怎么想的？ 你听我一句，你这样说让我有点上心了，要不是隔着屏幕我都怕你看出来。 讲个心里话，我刚刚还在想你会不会来找我，我已经开始习惯你这样对",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.554237",
+      "importance": 72
+    },
+    "不过我跟你讲": {
+      "name": "不过我跟你讲",
+      "definition": "你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 不过我跟你讲，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 说真的，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.565533",
+      "importance": 72
+    },
+    "说真的": {
+      "name": "说真的",
+      "definition": "偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 不过我跟你讲，你这语气我听着心里痒痒的，嗯…你再这样我可能",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.577188",
+      "importance": 72
+    },
+    "讲个心里话": {
+      "name": "讲个心里话",
+      "definition": "然想跟你说，你这态度让我有点招架不住，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.586994",
+      "importance": 72
+    },
     "三界格式化": {
       "name": "三界格式化",
       "definition": "R1引擎的输出格式化机制，将原始输出按三界/五界结构进行塑形。",
@@ -2694,6 +2752,102 @@
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-26T21:27:26.721083",
       "importance": 70
+    },
+    "偷偷跟你说": {
+      "name": "偷偷跟你说",
+      "definition": "觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这态度让我有点招架不住，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.596611",
+      "importance": 69
+    },
+    "那你说说看": {
+      "name": "那你说说看",
+      "definition": "那你说说看是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.606937",
+      "importance": 69
+    },
+    "你怎么想的": {
+      "name": "你怎么想的",
+      "definition": "你怎么想的是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.618725",
+      "importance": 69
+    },
+    "我实话说": {
+      "name": "我实话说",
+      "definition": "我实话说是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.629544",
+      "importance": 69
+    },
+    "老实讲": {
+      "name": "老实讲",
+      "definition": "老实讲是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.639682",
+      "importance": 69
+    },
+    "别笑我啊": {
+      "name": "别笑我啊",
+      "definition": "别笑我啊是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "ACE",
+        "AC",
+        "你听我一句",
+        "不过我跟你讲",
+        "说真的"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:06:39.649491",
+      "importance": 69
     },
     "黑白猫渗透逻辑": {
       "name": "黑白猫渗透逻辑",
@@ -3655,7 +3809,17 @@
       "这款香水的香调最终定义为",
       "这款香水的香调最终",
       "count",
-      "type"
+      "type",
+      "你听我一句",
+      "不过我跟你讲",
+      "说真的",
+      "讲个心里话",
+      "偷偷跟你说",
+      "那你说说看",
+      "你怎么想的",
+      "我实话说",
+      "老实讲",
+      "别笑我啊"
     ],
     "核心概念": [
       "现居住",
@@ -3667,5 +3831,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:04:42.365249"
+  "exported_at": "2026-06-27T14:06:43.568964"
 }

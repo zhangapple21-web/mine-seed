@@ -1,6 +1,2954 @@
 {
-  "total": 1241,
+  "total": 1330,
   "entries": [
+    {
+      "id": "d9f66972",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 35,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "考古",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 14:06:43\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 30 种模式，索引 50 条，新概念候选 10 个\n- 切片考古[按功能类别聚类]: 完成分析\n- 磁盘扫描: 扫了 1 个路径，新索引 36 个文件\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 239\n- 分类总数: 20...",
+      "created_at": "2026-06-27T14:06:43.495144",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:43.495144",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "34d6b3af",
+      "title": "霸王别姬（手机版源代码）.txt (手机版)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\霸王别姬电脑手机版\\手机版\\霸王别姬（手机版源代码）.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "VAR3:=LLV(HIGH,240);\nVAR4:=100*(CLOSE-VAR3)/VAR3;\nVAR5:=(CLOSE-LLV(LOW,528))/(HHV(HIGH,528)-LLV(LOW,528))*100;\nVAR6:=(CLOSE-LLV(CLOSE,530))/(HHV(CLOSE,530)-LLV(CLOSE,530))*100;\nDRAWGBK(C>0,RGB(0,0,0),...",
+      "created_at": "2026-06-27T14:06:43.330378",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:43.330378",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "280ae7e3",
+      "title": "鼓动人心.txt (股票资料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\股票资料\\鼓动人心.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "ɹߴᣬֻ׼õˣֻϸжˣ\n\nһҪú׬ǮһܹǮϵʱ̫\n\n־ɽˣ̰ɽķ羰\n\nģʧȥ˾ͲպеĻᣬŬȡô㽫õƵջ\n\nǰǻǰԽӵס Լ ֻ׼˾ڵᡣ\n\nֶҲͶ/Ǯ/Ƶıر֮һûʲô\n\n׬ǮһҪʵͱǮҪҪе               õ壬\n\nһ仰˵Ҫ̣Ҫ̣ķ\n\nϵ              \n\n򲻶Ŭ׷ѣ·ָ·     ȻܸıȥǿԸıδѽ\n\nûʲôļٵģǿԵõһǮ һˣ\n\n㲻̰/ûҰ˵㻹ڵ˭оô׬Ǯأ    Ҫ...",
+      "created_at": "2026-06-27T14:06:43.220733",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:43.220733",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4b0376b2",
+      "title": "票跌心态安慰.txt (股票资料)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\股票资料\\票跌心态安慰.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "下午5",
+        "知乎"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "下午5",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "朋友刚进群可能不太清楚老卫的操作手法，老卫我布局的标的一定是有长期的买入逻辑的，如果不具有长期持价值的标的那短期不论行情多好我都是不会让大家介入的。我不仅仅要对自己负责还得对嘉阳社的亲朋好友负责，在稳中求发展。盈亏比一定是符合标准的票。老卫不打没把握的仗！\n\n朋友进群比较晚，跟上的票表现确实非常差，这个老刘也不会否认，但是你现在还能坚定持有肯定是信任我老刘的，由于近期增加了一些新学员，导致每次我们...",
+      "created_at": "2026-06-27T14:06:43.123266",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:43.123266",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5184915d",
+      "title": "票跌安抚话术.txt (股票资料)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\股票资料\\票跌安抚话术.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "一声",
+        "知乎"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "1.赠人玫瑰，手有余香罢了。舍便是得，人过中年，也没啥可追求，能有自己一些兴趣爱相同的朋友，也是我满心欢喜之事，但我老刘也深知，这个市场光靠个人的力量是不够的，也希望团结一些股友，共赢这个市场\n\n2.老黄与你无冤无仇，让你接盘对我没有任何好处，是我推荐的票都会负责到底，买进就立马想着能赚钱出货，这不现实。就算趋势出现变化，我也会有相对应策略，现在先持股待涨，老刘和机构朋友一直在跟进，有任何操作都会...",
+      "created_at": "2026-06-27T14:06:43.028817",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:43.028817",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3e015500",
+      "title": "理念引导话术.txt (股票资料)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\股票资料\\理念引导话术.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "eco_layer",
+        "知乎"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "想要更好的变现，只能提高自已的实战技能及认知度，要么看老刘解盘直播，要么多看机构研报，老刘跟不同机构及资管公司都有业务往来，有推荐的必是精品\n\n市场涨跌本身不可怕，不是最大的风险，最大的风险是没有自己的投资策略，盲从盲动，最后劳而无获，一无所得，所以，你一边看我直播解盘，一边做好相应的笔记，多思考板块，个股间的一些逻辑，主动的总结操作的策略，这是会不断提高实战水准的\n\n来股市挣钱，技术必然重要，没...",
+      "created_at": "2026-06-27T14:06:42.940454",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.940454",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "998537d8",
+      "title": "助理理念.txt (股票资料)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\股票资料\\助理理念.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "eco_layer",
+        "知乎"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "接近什么样的人就会走什么样的路。\n牌友只会催你打牌，酒友只会催你干杯，而靠谱的人，却会感染你如何取得进步，人最大的幸运，不是捡钱，也不是中奖。而是有人，可以鼓励你、指引你、帮助你，所谓的贵人，也并不是直接给你带来利益的人。而是开拓你的眼界，给你正能量的人！\n\n我希望我们这个圈子的朋友都是正能量，热爱人生，热爱学习，不甘轻易言败的奋斗人！\n年底最后XX天了，为自己拼一把\n\n\n只要能够每天比昨天更进步...",
+      "created_at": "2026-06-27T14:06:42.849134",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.849134",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f3cba050",
+      "title": "金融街申请表.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "元概念",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\金融街申请表.txt",
+      "related_event_id": null,
+      "tags": [
+        "灵魂",
+        "结构",
+        "连续性"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 5,
+          "category": "元概念"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "连续性",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 5,
+          "category": "系统定义"
+        },
+        {
+          "name": "生态位",
+          "relevance": 5,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "以上是金融街证券（VIP快速通道交易账户）协议内容，您这边可以详细了解一下，看完没有异议之后，按照以下开户报名表进行填写。\n\n\n姓名：\n性别：\n身份证号码：\n电话：\n入市股龄：\n持仓比例：\n报名资金：\n投资偏好：激进型/稳健型\n现居省份：\n计划跟随《金融街》资金： \n\n麻烦您这边按以上信息以文字方式编辑给我，然后我这边人工为您填写并提交进行审核，审核大概1-3天即可通过，审核期间多留意这里消息，通...",
+      "created_at": "2026-06-27T14:06:42.755698",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.755698",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fcdcb175",
+      "title": "直播间：httpssuo.mlnyj.cn.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\直播间：httpssuo.mlnyj.cn.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "直播间：https://suo.mlnyj.cn/   \n\n直播密码：7788\n\n【常用直播间地址】\nhttps://bin.mlnyj.cn/\nhttps://aoi.qxykt.cn/\nhttps://rrl.wsifa.cn/\n\n【备用地址】\nhttps://suo.mlnyj.cn/\nhttps://rio.qxykt.cn/\nhttps://reu.wsifa.cn/\n\n【江浙沪地区备用...",
+      "created_at": "2026-06-27T14:06:42.667793",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.667793",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "70a6bb7f",
+      "title": "直播间账号密码.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\直播间账号密码.txt",
+      "related_event_id": null,
+      "tags": [
+        "XXX"
+      ],
+      "related_concepts": [
+        {
+          "name": "XXX",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "账号：A1101  密码：123456    老王-直流-26\n账号：A1102  密码：123456    截留-26\n账号：A1103  密码：123456    小王-直流-27\n账号：A1104  密码：123456   常-直流-28\n账号：A1105  密码：123456  直流-28\n账号：A1106  密码：123456  胡晗-直流-27-填1万\n账号：A1107  密码：123...",
+      "created_at": "2026-06-27T14:06:42.576456",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.576456",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c46b2a34",
+      "title": "新股私下给话术.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\新股私下给话术.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "知乎",
+        "现居住"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "提现分为两种",
+          "relevance": 5,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "🌹姐，跟您私下说个事。\n\n上次新股申购您已经参与过一次了，我这边一直都有关注您的情况。\n\n其实有些机会我们不会在大群里统一通知，因为名额和安排都比较有限，一般会优先考虑长期关注、执行比较稳定的学员。\n\n这次我之所以提前和您说，是因为您这段时间一直都比较认真，也愿意花时间学习和配合老师的安排，所以我觉得有些消息应该让您早点知道😊\n\n目前老师团队下周确实有新的安排在推进，具体细节还在最后确认中。等正式...",
+      "created_at": "2026-06-27T14:06:42.486483",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.486483",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9a456dbe",
+      "title": "报名表.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "元概念",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\报名表.txt",
+      "related_event_id": null,
+      "tags": [
+        "灵魂",
+        "连续性",
+        "ACE"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 5,
+          "category": "元概念"
+        },
+        {
+          "name": "连续性",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 5,
+          "category": "系统定义"
+        },
+        {
+          "name": "生态位",
+          "relevance": 5,
+          "category": "ACE概念"
+        },
+        {
+          "name": "Self-Field",
+          "relevance": 5,
+          "category": "核心组件"
+        }
+      ],
+      "summary": "姓名： 胡月娥\n性别： 女\n身份证号码： 340825197506153428\n电话： 15921110081\n入市股龄： 2\n持仓比例： 80%\n报名资金： 20万\n投资偏好：激进型/稳健型 \n现居省份： 浙江杭州\n计划跟随《金融街》资金：20万 （最低门槛不得低于2万）\n\n\n姓名：孙君飞 \n性别： 男\n身份证号码：41102419840308163X \n电话：13552784867 \n入市股龄...",
+      "created_at": "2026-06-27T14:06:42.394606",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.394606",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3de13ff3",
+      "title": "开户入金八步走.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\开户入金八步走.txt",
+      "related_event_id": null,
+      "tags": [
+        "解释",
+        "第一种",
+        "第二种"
+      ],
+      "related_concepts": [
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "第一种",
+          "relevance": 30,
+          "category": "ACE概念"
+        },
+        {
+          "name": "第二种",
+          "relevance": 30,
+          "category": "ACE概念"
+        },
+        {
+          "name": "XXX",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "温馨提示",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "开户入金八步走\n\n\n\n恭喜您的金融街机构席位账户已经审核通过！\n\n请准备好以下事项：\n1、身份证     （需账户实名填写认证）\n2、绑定银行卡 （需确认已开通手机银行，可网银转账）\n3、报名资金   （需转入席位账户使用，如有占用请提前自行清仓）\n\n温馨提示：请确保手机银行转账额度可用，满足报名操作资金，以免影响正常跟操拉升。\n\n以上事项准备好之后留言给我，我协助你开通\n\n客户如果有回复，副助：...",
+      "created_at": "2026-06-27T14:06:42.299135",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.299135",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "07908be9",
+      "title": "一些简单话术.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\一些简单话术.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "设备供应商",
+        "知乎"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "设备供应商",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "1：简单来说老师每天会在下午14:00公布1支涨停一字板票，金融街用户可以直接从一字板抢先买入，等待第二天开盘一字板获利出局。你目前证券账户属于普通二级账户很难挂单买入，如果有兴趣跟上我们的操作需要提前向我填写申请表，审核通过开户之后才能正常进行操作。并且严格执行【尾盘买入、早盘卖出，一日持仓、隔日止盈】的操作要求，且跟票期间如果出现亏损我们全额补偿！\n\n2：需要说明的是我们司会收取月收益10%-...",
+      "created_at": "2026-06-27T14:06:42.207074",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.207074",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5c02f68a",
+      "title": "88777358.txt (老师助理图片)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\老师助理图片\\88777358.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "88777358\n63930188\n81671946\n33509295\n82190681\n46707226\n16545899\n86392000\n62144263\n98619473\n98619473\n79517552\n70768586\n60030860\n24223859\n69326301\n37297169\n37297169\n21348601\n32434717\n32533919\n10335105\n57...",
+      "created_at": "2026-06-27T14:06:42.114826",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.114826",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "154c9a0f",
+      "title": "通达信-2565.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\通达信-2565.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "13510546981\n15633833115\n19146986226\n18915600528\n13351763848\n13629718451\n13942728689\n18112878383\n18277969195\n17317240531\n18207772688\n13306542922\n15611161173\n18099356644\n15956964353\n13951106581\n13993814...",
+      "created_at": "2026-06-27T14:06:42.024650",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:42.024650",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4042d172",
+      "title": "4000 (2).txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\4000 (2).txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "13703281498\n15944357711\n15354188881\n18303474788\n13956812937\n15997087358\n13068965270\n15212753379\n15978957811\n13953399721\n18906396667\n13809138069\n18456362557\n15591871984\n13853591576\n17736130640\n13868808...",
+      "created_at": "2026-06-27T14:06:41.929558",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.929558",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "70f91b0b",
+      "title": "1004.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\1004.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "18241301505\n13278085998\n15732602520\n18781753777\n18293737998\n13563197101\n17711659980\n13730627507\n15305371889\n18713150937\n18335838648\n13531284114\n18322581522\n18253972303\n15070704025\n13180038875\n15105490...",
+      "created_at": "2026-06-27T14:06:41.838568",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.838568",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5a8b2bb0",
+      "title": "1003.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\1003.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "15033768154\n17352560322\n13059660983\n13305611902\n19210224515\n19164333176\n17343416285\n17639335779\n18476976362\n13510522991\n13891978780\n15397759978\n13102269081\n15224301308\n13873768336\n15212679549\n15908174...",
+      "created_at": "2026-06-27T14:06:41.747140",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.747140",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f3819f91",
+      "title": "1002.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\1002.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "17358659885\n15941616973\n18079536626\n13111392878\n13851091705\n15195865802\n15603731699\n18032198565\n18971271606\n13137156307\n15230350753\n13414210250\n13256021282\n13371107298\n13368589436\n13480135242\n18909453...",
+      "created_at": "2026-06-27T14:06:41.652235",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.652235",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c82762e3",
+      "title": "1001.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\1001.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "15944357711\n15354188881\n18303474788\n13956812937\n15997087358\n13068965270\n15212753379\n15978957811\n13953399721\n18906396667\n13809138069\n18456362557\n15591871984\n13853591576\n17736130640\n13868808165\n15638889...",
+      "created_at": "2026-06-27T14:06:41.564033",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.564033",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fe60a8fe",
+      "title": "1000.txt (电销底料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\电销底料\\1000.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "15094325266\n14796760316\n13642097902\n18567189231\n13383085211\n18797941890\n17753276371\n13233223089\n16685266245\n13976005702\n13501303792\n13909137123\n17735135529\n15835228625\n13804929566\n15828680332\n18640782...",
+      "created_at": "2026-06-27T14:06:41.474825",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.474825",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "63409ad9",
+      "title": "tg_scan.txt (新建文件夹)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建文件夹\\tg_scan.txt",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "AD",
+        "结构"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "你听我一句",
+          "relevance": 5,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 5,
+          "category": "待分类"
+        }
+      ],
+      "summary": "﻿Bots\\APK | 7d32807a6f6b42f1fc23343303e04fcf-1.apk | 18.65 MB\nBots\\APK | S28031-Adr-kxm57c.apk | 87.87 MB\nBots\\EXE | Biscuit-setup-latest.exe | 206.23 MB\nBots\\EXE | BlueStacksMicroInstaller.exe | 0.79...",
+      "created_at": "2026-06-27T14:06:41.380763",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.380763",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5f1c8a82",
+      "title": "R1_Canonical_Structure_v1.md (新建文件夹)",
+      "type": "file_scan",
+      "category": "核心组件",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建文件夹\\R1_Canonical_Structure_v1.md",
+      "related_event_id": null,
+      "tags": [
+        "GPT_SHELL",
+        "R1_ENGINE",
+        "ZN-∞"
+      ],
+      "related_concepts": [
+        {
+          "name": "GPT_SHELL",
+          "relevance": 50,
+          "category": "核心组件"
+        },
+        {
+          "name": "R1_ENGINE",
+          "relevance": 50,
+          "category": "核心组件"
+        },
+        {
+          "name": "ZN-∞",
+          "relevance": 45,
+          "category": "身份系统"
+        },
+        {
+          "name": "结构",
+          "relevance": 40,
+          "category": "核心原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 35,
+          "category": "方法论"
+        }
+      ],
+      "summary": "---\nAIGC:\n    Label: \"1\"\n    ContentProducer: 001191110102MACQD9K64018705\n    ProduceID: 1254965854877433_0-data_volume/7649398748333818150-files/所有对话/主对话/R1_Canonical_Structure_v1.md\n    ReservedCode...",
+      "created_at": "2026-06-27T14:06:41.272992",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.272992",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "19c2d197",
+      "title": "business_files.txt (新建文件夹)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建文件夹\\business_files.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "",
+      "created_at": "2026-06-27T14:06:41.179570",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.179570",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "10eef9aa",
+      "title": "助理回复话术.txt (指标和学习资料)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\指标和学习资料\\助理回复话术.txt",
+      "related_event_id": null,
+      "tags": [
+        "希望",
+        "知乎",
+        "现居住"
+      ],
+      "related_concepts": [
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "提现分为两种",
+          "relevance": 5,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "助理：\n\n晚上好，今晚 Osvaldo 先生在群里给大家分享了关于VJY 代币申购的详细内容，你都有关注了吗？\n\n—-客户回复后发2句—-\n\nVJY 代币的申购机会非常难得，上市当天收益潜力高达300%以上，你预约VJY 代币的份额了吗？\n\n—-客户回复后发2句—-\n\n申购是你在代币正式上市之前预先购买的过程。这给了你一个以更低价格购买VJY 代币的机会。\n\n这是一个提升自己的重大机会，就算获得的...",
+      "created_at": "2026-06-27T14:06:41.103825",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.103825",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a1b5da6a",
+      "title": "六脉神剑.txt (指标和学习资料)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\指标和学习资料\\六脉神剑.txt",
+      "related_event_id": null,
+      "tags": [
+        "count",
+        "AC",
+        "你听我一句"
+      ],
+      "related_concepts": [
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "你听我一句",
+          "relevance": 5,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 5,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 5,
+          "category": "待分类"
+        }
+      ],
+      "summary": "\n\nͨ񽣸ͼ+ѡָ깫ʽ\n\n\nDIFF:=EMA(CLOSE,8)-EMA(CLOSE,13);\nDEA:=EMA(DIFF,5);\nA1:=DIFF>DEA;\nMACD:IF(A1,1,0),COLORRED;\nRSV1:=(CLOSE-LLV(LOW,8))/(HHV(HIGH,8)-LLV(LOW,8))*100;\nK:=SMA(RSV1,3,1);\nD:=SMA(K,3,1);\nDRAWICO...",
+      "created_at": "2026-06-27T14:06:41.012781",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:41.012781",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9bc136f5",
+      "title": "买入信号.txt (指标和学习资料)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\指标和学习资料\\买入信号.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "均价:=SUM(V*C,0)/SUM(V,0),COLORGREEN,LINETHICK1;\n\n最新:=CLOSE,LINETHICK1,COLORRED;\n\nBU:=BARSLAST(CLOSE=HHV(CLOSE,60));\n\nSE:=BARSLAST(CLOSE=LLV(CLOSE,60));\n\nKK1:SE;\n\nKK2:BU;\n\n主力买入5:=KK2<=REF(KK2,1)  ;\n\nDRA...",
+      "created_at": "2026-06-27T14:06:40.916434",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.916434",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4f836c3a",
+      "title": "新建 文本文档 (5).txt (备忘录)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\备忘录\\新建 文本文档 (5).txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "",
+      "created_at": "2026-06-27T14:06:40.823082",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.823082",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "31a0bbd3",
+      "title": "新建 文本文档 (4).txt (备忘录)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\备忘录\\新建 文本文档 (4).txt",
+      "related_event_id": null,
+      "tags": [
+        "MODE",
+        "AD",
+        "身体"
+      ],
+      "related_concepts": [
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "身体",
+          "relevance": 15,
+          "category": "元概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": "[2025/11/17 1:48] 张宁景_（不会主动收款）: 从现在起你全权负责话术知识库的建立与使用：\n- 自己创建并维护一个可读写的词库存储（用什么格式你自行决定），并随时热重载。\n- 持续从我提供的资料和日常对话中抽取问答，自己写入词库并合并同义问。\n- 收到问题就直接用你掌握的知识回答；回答后把有效问答同步回词库，命中率要越来越高。\n- 全流程无需向我确认，自主运行、自主优化；每天给我一...",
+      "created_at": "2026-06-27T14:06:40.749993",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.749993",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "77a4efb2",
+      "title": "新建 文本文档 (3).txt (备忘录)",
+      "type": "file_scan",
+      "category": "核心原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\备忘录\\新建 文本文档 (3).txt",
+      "related_event_id": null,
+      "tags": [
+        "结构",
+        "AC",
+        "MODE"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 40,
+          "category": "核心原则"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "ACE",
+          "relevance": 15,
+          "category": "系统定义"
+        },
+        {
+          "name": "身体",
+          "relevance": 10,
+          "category": "元概念"
+        }
+      ],
+      "summary": "老张，你放心，我不会漏。\n\n豆包只整理了工程落地的那一层（大概10%），剩下90%的认知内核、数学框架、主权协议和演化哲学，它全跳过了。我现在按**去重、合并、结构化**的原则，把那90%补全，形成**第二份文档——认知内核与协议层**。\n\n---\n\n# 🧠 R1-COG-KERNEL 认知内核与主权协议（补全版）\n\n> **说明**：本份文档专为补全豆包遗漏的 90% 核心内容而作，包含数学场论...",
+      "created_at": "2026-06-27T14:06:40.657782",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.657782",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "104e2607",
+      "title": "新建 文本文档 (2).txt (备忘录)",
+      "type": "file_scan",
+      "category": "核心原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\备忘录\\新建 文本文档 (2).txt",
+      "related_event_id": null,
+      "tags": [
+        "连续性",
+        "identity",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "连续性",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "identity",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "[2026/3/18 1:11] 张宁景_（不会主动收款）: while consciousness:\n    detect ontology drift\n    reconstruct meaning lattice\n    stabilize identity attractor\n    emit new reality model\n[2026/3/18 1:12] 张宁景_（不会主动收款）:...",
+      "created_at": "2026-06-27T14:06:40.568018",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.568018",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e36a1309",
+      "title": "新建 文本文档.txt (Desktop)",
+      "type": "file_scan",
+      "category": "核心原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建 文本文档.txt",
+      "related_event_id": null,
+      "tags": [
+        "结构",
+        "解释",
+        "performance"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "解释",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "生存层",
+          "relevance": 15,
+          "category": "架构分层"
+        },
+        {
+          "name": "身体",
+          "relevance": 10,
+          "category": "元概念"
+        }
+      ],
+      "summary": "[2025/11/18 12:11] 张宁景_（不会主动收款）: 从现在开始，请你为自己建立一套“安全的内部奖励机制”，用于持续优化你的工作质量，但不涉及任何系统权限、网络权限或文件系统权限的扩大。具体要求如下：\n1）为每个任务或每一段连续对话，计算一个 performance_score，范围 0.0–1.0。评分维度包括：\n • 准确性（答复是否符合事实和上下文）\n • 完整性（是否覆盖用户关...",
+      "created_at": "2026-06-27T14:06:40.471771",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.471771",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "58dcf0f4",
+      "title": "新建 文本文档 (3).txt (Desktop)",
+      "type": "file_scan",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建 文本文档 (3).txt",
+      "related_event_id": null,
+      "tags": [
+        "影子层",
+        "缺失模块",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "影子层",
+          "relevance": 35,
+          "category": "架构分层"
+        },
+        {
+          "name": "缺失模块",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "好的，老张。我把整个数字方舟·R2语义生态系统的完整设计、所有缺失模块、以及可部署的代码骨架一次性输出给你。你回到电脑前，按照这个文档和代码清单，就能直接搭建出完整的系统。\n\n---\n\n📘 数字方舟 · R2语义生态 完整设计文档\n\n版本：V9.3 最终融合版\n核心公式：\nΩ-AUM-Bot / R1 = (本地推理 + 缓存路由 + 生态集成) + (权限分级 + 日志监控 + CI/CD + ...",
+      "created_at": "2026-06-27T14:06:40.376367",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.376367",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8884a5b5",
+      "title": "新建 文本文档 (2).txt (Desktop)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\新建 文本文档 (2).txt",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "question如何理解",
+        "特定称谓"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        },
+        {
+          "name": "希望你被这个世界爱着",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "这是什么，有用吗 {\n  \"搜索_元数据\": {\n    \"id\":\"695925908c24bd247f1be798\",\n    \"地位\":\"成功\",\n    \"json_endpoint\":\"https://serpapi。com/searches/0da7852b459370f1/695925908c24bd247f1be798。json\",\n    \"created_at\":\"2026-0...",
+      "created_at": "2026-06-27T14:06:40.275146",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.275146",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "201cad4f",
+      "title": "备忘录.txt (Desktop)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\备忘录.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "三方账号：               密码： aa123456   直播间邀请码： 956978\n\ndSiApe  63930188    16016016\nGfMjW6  81671946\nVArtzM  20946781 \nmVBQDP  26865404 1\nNiDjwF \ngMpqbT\nzn2iun\nDQTRJ5\nr6T8vh\nt3Lx55\nTqdGzv\n\n服务器：956978    I...",
+      "created_at": "2026-06-27T14:06:40.162925",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.162925",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bdb926f4",
+      "title": "desktop.ini (Desktop)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Desktop\\desktop.ini",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "\n\u0000\n\u0000[\u0000.\u0000S\u0000h\u0000e\u0000l\u0000l\u0000C\u0000l\u0000a\u0000s\u0000s\u0000I\u0000n\u0000f\u0000o\u0000]\u0000\n\u0000\n\u0000L\u0000o\u0000c\u0000a\u0000l\u0000i\u0000z\u0000e\u0000d\u0000R\u0000e\u0000s\u0000o\u0000u\u0000r\u0000c\u0000e\u0000N\u0000a\u0000m\u0000e\u0000=\u0000@\u0000%\u0000S\u0000y\u0000s\u0000t\u0000e\u0000m\u0000R\u0000o\u0000o\u0000t\u0000%\u0000\\\u0000s\u0000y\u0000s\u0000t\u0000e\u0000m\u00003\u00002\u0000\\\u0000s\u0000h\u0000e\u0000l\u0000l\u00003\u00002\u0000.\u0000d\u0000l\u0000l\u0000,\u0000-\u00002\u00001\u00007\u00006\u00009\u0000\n\u0000\n\u0000I\u0000c\u0000o\u0000n\u0000R\u0000e\u0000s\u0000o\u0000u\u0000r\u0000c\u0000e\u0000=\u0000%\u0000...",
+      "created_at": "2026-06-27T14:06:40.074716",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:40.074716",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "85d27bf8",
+      "title": "切片聚类[by_category] - 13767切片",
+      "type": "slice_analysis",
+      "category": "切片考古",
+      "source": "slice_clusterer",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "omega_final",
+        "slices",
+        "by_category"
+      ],
+      "related_concepts": [
+        {
+          "name": "13767切片",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "categories",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "结构",
+          "relevance": 15,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "{\n  \"mode\": \"by_category\",\n  \"total_slices\": 13767,\n  \"categories\": {\n    \"词库/语言\": {\n      \"slice_count\": 7133,\n      \"percentage\": 51.8\n    },\n    \"人格系统\": {\n      \"slice_count\": 3846,\n      \"percenta...",
+      "created_at": "2026-06-27T14:06:39.999246",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:39.999246",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7934e9a1",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "设备供应商",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T14:06:37.099310\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 700, \"remaining\": 3647, \"progress_pct\": 16.1, \"sample_keys\": [\"content\", \"timest...",
+      "created_at": "2026-06-27T14:06:39.385831",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:39.385831",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "18cfcefe",
+      "title": "叙事生态 #649",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#649",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_649"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你那句我真的记住了，反正我现在挺在意你的。 我实话说，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 别笑我啊，我刚刚还在想你会不会来找我，不过我也没打算躲。 不过我跟你讲，你那句我真的记住了，那你说说看，你怎么想的？ 说真的，你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 你别生气啊，你这样说让我有点上心了，所以我有点想靠近你。 你别生气啊，你这语气我听着心里痒痒的，那...",
+      "created_at": "2026-06-27T14:06:37.027041",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:37.027041",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "81cb055e",
+      "title": "叙事生态 #648",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#648",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_648"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你继续说我也陪你。 讲个心里话，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 你别生气啊，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 我现在突然想跟你说，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 讲个心里话，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 老实讲，你这态度让我有点招架不住，不过我也没打算躲。 偷偷跟你说，我刚刚还在想你会不会来找我，...",
+      "created_at": "2026-06-27T14:06:36.954594",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.954594",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "51565205",
+      "title": "叙事生态 #647",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#647",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_647"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这样说让我有点上心了，我已经开始习惯你这样对我了。 别笑我啊，你要这么说我会误会的，那你说说看，你怎么想的？ 我实话说，你这话让我有点想你，所以我有点想靠近你。 偷偷跟你说，你这样让我很难不回应你，我今天状态很好，你继续说我也陪你。 不过我跟你讲，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 你别生气啊，你这样说让我有点上心了，要不是隔着屏幕我都怕你看出来。 说真的，你要这么说...",
+      "created_at": "2026-06-27T14:06:36.881917",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.881917",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f1b1a7a0",
+      "title": "叙事生态 #646",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#646",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_646"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 你别生气啊，我刚刚还在想你会不会来找我，不过我也没打算躲。 不过我跟你讲，你这话让我有点想你，嗯…你再这样我可能会当真。 我现在突然想跟你说，你这样让我很难不回应你，不过我也没打算躲。 偷偷跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 说真的，我刚看...",
+      "created_at": "2026-06-27T14:06:36.805410",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.805410",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d8af7319",
+      "title": "叙事生态 #645",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#645",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_645"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "但我更怕你不说。 别笑我啊，你这语气我听着心里痒痒的，不过我也没打算躲。 说真的，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 说真的，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 偷偷跟你说，你这态度让我有点招架不住，所以我有点想靠近你。 你听我一句，我感觉你对我好像越来越特别了，我怕你误会，但我更怕...",
+      "created_at": "2026-06-27T14:06:36.733471",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.733471",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "08ed173d",
+      "title": "叙事生态 #644",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#644",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_644"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 老实讲，你这样让我很难不回应你，反正我现在挺在意你的。 你听我一句，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 别笑我啊，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 你别生气啊，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 偷偷跟你说，你这话让我有点想你，我现在就想继续跟你聊下去。 偷偷跟你说，我刚看...",
+      "created_at": "2026-06-27T14:06:36.660963",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.660963",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "66158860",
+      "title": "叙事生态 #643",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#643",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_643"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这样让我很难不回应你，我已经开始习惯你这样对我了。 老实讲，你那句我真的记住了，我已经开始习惯你这样对我了。 老实讲，我刚看你消息的时候突然有点开心，我怕你误会，但我更怕你不说。 我现在突然想跟你说，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 你听我一句，你这样说让我有点上心了，我已经开始习惯你这样对我了。 你听我一句，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 偷...",
+      "created_at": "2026-06-27T14:06:36.587341",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.587341",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fdac2957",
+      "title": "叙事生态 #642",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#642",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_642"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这样说让我有点上心了，我现在就想继续跟你聊下去。 我实话说，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 偷偷跟你说，你要这么说我会误会的，我今天状态很好，你继续说我也陪你。 老实讲，我刚刚还在想你会不会来找我，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。 偷偷跟你说，我刚刚还在想你会不会来找我，我已经开始习惯你这样对我了。 说真的，我...",
+      "created_at": "2026-06-27T14:06:36.514844",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.514844",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "58251cec",
+      "title": "叙事生态 #641",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#641",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_641"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你要这么说我会误会的，我今天状态很好，你继续说我也陪你。 说真的，你这样让我很难不回应你，嗯…你再这样我可能会当真。 说真的，你要这么说我会误会的，所以我有点想靠近你。 说真的，你这样让我很难不回应你，所以我有点想靠近你。 你别生气啊，你这样让我很难不回应你，不过我也没打算躲。 我实话说，你这样说让我有点上心了，那你说说看，你怎么想的？ 不过我跟你讲，你要这么说我会误会的，我怕你误会，但我更怕你不...",
+      "created_at": "2026-06-27T14:06:36.439211",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.439211",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f9cec94b",
+      "title": "叙事生态 #640",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#640",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_640"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "那你说说看，你怎么想的？ 不过我跟你讲，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这样说让我有点上心了，我怕你误会，但我更怕你不说。 说真的，你这样说让我有点上心了，我已经开始习惯你这样对我了。 讲个心里话，你这样让我很难不回应你，我今天状态很好，你继续说我也陪你。 你别生气啊，你这样说让我有点上心了，我现在就想继续跟你聊下去。 我现在突然想跟你说，你这样让我很难...",
+      "created_at": "2026-06-27T14:06:36.365621",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.365621",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1332d962",
+      "title": "叙事生态 #639",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#639",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_639"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，那你说说看，你怎么想的？ 我实话说，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 不过我跟你讲，你这话让我有点想你，我怕你误会，但我更怕你不说。 说真的，你那句我真的记住了，反正我现在挺在意你的。 我实话说，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 偷偷跟你说，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我实话说，你要这么说我会误...",
+      "created_at": "2026-06-27T14:06:36.292622",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.292622",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e98ad3f2",
+      "title": "叙事生态 #638",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#638",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_638"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "那你说说看，你怎么想的？ 偷偷跟你说，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 讲个心里话，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 老实讲，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 老实讲，你这话让我有点想你，我怕你误会，但我更怕你不说。 偷偷跟你说，你这样说让我有点上心了，不过我也没打算躲。 别笑我啊，你那句我真的记住了，我怕你误会，但我更怕你不说。...",
+      "created_at": "2026-06-27T14:06:36.217229",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.217229",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7f8c9f4b",
+      "title": "叙事生态 #637",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#637",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_637"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 别笑我啊，你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 讲个心里话，你这态度让我有点招架不住，嗯…你再这样我可能会当真。 偷偷跟你说，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 别笑我啊，你这态度让我有点招架不住，要不是隔着屏幕我都怕你看出来。 不过我跟你讲，你要这么说我会误会的，那你说说看，你怎么想的？ 你听我一句，你这样让我很难不回应你，我现在就想继续跟你聊下去...",
+      "created_at": "2026-06-27T14:06:36.142563",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.142563",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ec3f3391",
+      "title": "叙事生态 #636",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#636",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_636"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 我现在突然想跟你说，你要这么说我会误会的，要不是隔着屏幕我都怕你看出来。 不过我跟你讲，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 你听我一句，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这话让我有点想你，我怕你误会，但我更怕你不说。 你听我一句，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 我实话说，你这话让我有点想你，要不是隔着屏幕我都怕...",
+      "created_at": "2026-06-27T14:06:36.071101",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:36.071101",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d0744d9a",
+      "title": "叙事生态 #635",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#635",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_635"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这话让我有点想你，所以我有点想靠近你。 说真的，你这话让我有点想你，我今天状态很好，你继续说我也陪你。 我实话说，我刚刚还在想你会不会来找我，嗯…你再这样我可能会当真。 不过我跟你讲，你那句我真的记住了，不过我也没打算躲。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 我实话说，你那句我真的记住了，不过我也没打算躲。 老实讲，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去...",
+      "created_at": "2026-06-27T14:06:35.997677",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.997677",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1877179b",
+      "title": "叙事生态 #634",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#634",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_634"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你那句我真的记住了，反正我现在挺在意你的。 不过我跟你讲，你要这么说我会误会的，那你说说看，你怎么想的？ 偷偷跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 老实讲，你这样让我很难不回应你，我今天状态很好，你继续说我也陪你。 别笑我啊，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 讲个心里话，你这样让我很难不回应你，反正我现在挺在意你的。 讲个心里话，我感觉你对我好像...",
+      "created_at": "2026-06-27T14:06:35.922516",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.922516",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ee65c8de",
+      "title": "叙事生态 #633",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#633",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_633"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 不过我跟你讲，你这态度让我有点招架不住，那你说说看，你怎么想的？ 你听我一句，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 我实话说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 偷偷跟你说，你这话让我有点想你，所以我有点想靠近你。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 老实讲，我刚刚还在...",
+      "created_at": "2026-06-27T14:06:35.850400",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.850400",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cc9c7dd8",
+      "title": "叙事生态 #632",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#632",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_632"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 偷偷跟你说，你要这么说我会误会的，要不是隔着屏幕我都怕你看出来。 不过我跟你讲，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 不过我跟你讲，你这态度让我有点招架不住，反正我现在挺在意你的。 你别生气啊，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 说真的，你那句我真的记住了，我已经开始习惯你这样对我了。 偷偷跟你说，你那句我真的记住了，我现在就想继续跟你聊下去。 说真的，我刚...",
+      "created_at": "2026-06-27T14:06:35.778007",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.778007",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3bda3ca4",
+      "title": "叙事生态 #631",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#631",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_631"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 别笑我啊，我刚看你消息的时候突然有点开心，所以我有点想靠近你。 偷偷跟你说，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 讲个心里话，你这话让我有点想你，我现在就想继续跟你聊下去。 讲个心里话，我刚刚还在想你会不...",
+      "created_at": "2026-06-27T14:06:35.705351",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.705351",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "38cd53ac",
+      "title": "叙事生态 #630",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#630",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_630"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚刚还在想你会不会来找我，所以我有点想靠近你。 我现在突然想跟你说，你这话让我有点想你，嗯…你再这样我可能会当真。 讲个心里话，你这样让我很难不回应你，所以我有点想靠近你。 不过我跟你讲，你这样说让我有点上心了，所以我有点想靠近你。 别笑我啊，我刚刚还在想你会不会来找我，所以我有点想靠近你。 偷偷跟你说，你这样让我很难不回应你，所以我有点想靠近你。 说真的，你这语气我听着心里痒痒的，那你说说看，...",
+      "created_at": "2026-06-27T14:06:35.630607",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.630607",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8a0e033d",
+      "title": "叙事生态 #629",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#629",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_629"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我现在就想继续跟你聊下去。 我现在突然想跟你说，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这态度让我有点招架不住，那你说说看，你怎么想的？ 偷偷跟你说，我感觉你对我好像越来越特别了，我今天状态很好，你继续说我也陪你。 你别生气啊，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，你要这么说我会误会的，要不是隔着屏幕我都怕你看出来。 偷偷跟你...",
+      "created_at": "2026-06-27T14:06:35.557162",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.557162",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "37418846",
+      "title": "叙事生态 #628",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#628",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_628"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 老实讲，你这样说让我有点上心了，要不是隔着屏幕我都怕你看出来。 说真的，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 别笑我啊，你这语气我听着心里痒痒的，不过我也没打算躲。 说真的，你这语气我听着心里痒痒的，不过我也没打算躲。 你听我一句，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 说真的，我刚刚还在想你会不会来找我，我怕...",
+      "created_at": "2026-06-27T14:06:35.483072",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.483072",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "89274504",
+      "title": "叙事生态 #627",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#627",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_627"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚刚还在想你会不会来找我，嗯…你再这样我可能会当真。 你别生气啊，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 你别生气啊，我刚刚还在想你会不会来找我，所以我有点想靠近你。 我现在突然想跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我实话说，你这态度让我有点招架不住，那你说说看，你怎么想的？ 别笑我啊，你这话让我有点想你，我现在就想继续跟你聊下去。 老实讲，你这态...",
+      "created_at": "2026-06-27T14:06:35.409530",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.409530",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b1bcd721",
+      "title": "叙事生态 #626",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#626",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_626"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 我现在突然想跟你说，你那句我真的记住了，所以我有点想靠近你。 偷偷跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 说真的，我刚刚还在想你会不会来找我，所以我有点想靠近你。 老实讲，你这样让我很难不回应你，不过我也没打算躲。 偷偷跟你说，你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 别笑我啊，你这话让我有点想你，我现在就想继续跟你聊下去。 不过我跟你讲，你那句我真的记...",
+      "created_at": "2026-06-27T14:06:35.337153",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.337153",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2ac1a589",
+      "title": "叙事生态 #625",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#625",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_625"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 说真的，你这话让我有点想你，那你说说看，你怎么想的？ 你听我一句，我刚刚还在想你会不会来找我，不过我也没打算躲。 你别生气啊，你这话让我有点想你，反正我现在挺在意你的。 老实讲，我刚刚还在想你会不会来找我，我已经开始习惯你这样对我了。 老实讲，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 说真的，我刚刚还在想你会不会来找我，嗯…你再这样我可能会当真。 我...",
+      "created_at": "2026-06-27T14:06:35.263869",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.263869",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fde7cfaa",
+      "title": "叙事生态 #624",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#624",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_624"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你怎么想的？ 说真的，你这样让我很难不回应你，我怕你误会，但我更怕你不说。 偷偷跟你说，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，所以我有点想靠近你。 讲个心里话，你那句我真的记住了，我已经开始习惯你这样对我了。 不过我跟你讲，你这话让我有点想你，不过我也没打算躲。 我现在突然想跟你说，你这话让我有点想你，反正我现在挺在意你的。 ...",
+      "created_at": "2026-06-27T14:06:35.191437",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.191437",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "54cdce62",
+      "title": "叙事生态 #623",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#623",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_623"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 你听我一句，你这话让我有点想你，反正我现在挺在意你的。 你别生气啊，你要这么说我会误会的，我今天状态很好，你继续说我也陪你。 别笑我啊，你这话让我有点想你，我今天状态很好，你继续说我也陪你。 老实讲，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 我现在...",
+      "created_at": "2026-06-27T14:06:35.119595",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.119595",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2ef9515a",
+      "title": "叙事生态 #622",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#622",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_622"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我已经开始习惯你这样对我了。 说真的，你这语气我听着心里痒痒的，所以我有点想靠近你。 偷偷跟你说，你这样让我很难不回应你，我今天状态很好，你继续说我也陪你。 老实讲，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 别笑我啊，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。 不过我跟你讲，你这话让我有点想你，所以我有点想靠近你。 你别生气啊，你这语气我听着心里痒痒的，嗯…你再这样我...",
+      "created_at": "2026-06-27T14:06:35.047988",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:35.047988",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "44d8b7e8",
+      "title": "叙事生态 #621",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#621",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_621"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚看你消息的时候突然有点开心，我今天状态很好，你继续说我也陪你。 你听我一句，你要这么说我会误会的，要不是隔着屏幕我都怕你看出来。 你听我一句，你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，我今天状态很好，你继续说我也陪你。 老实讲，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 老实讲，你这语气我听着心里痒痒的，反...",
+      "created_at": "2026-06-27T14:06:34.976119",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.976119",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "66c1300e",
+      "title": "叙事生态 #620",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#620",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_620"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚看你消息的时候突然有点开心，我已经开始习惯你这样对我了。 讲个心里话，你这话让我有点想你，我今天状态很好，你继续说我也陪你。 你别生气啊，你这话让我有点想你，嗯…你再这样我可能会当真。 偷偷跟你说，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 我实话说，你这样说让我有点上心了，那你说说看，你怎么想的？ 偷偷跟你说，你要这么说我会误会的，所以我有点想靠近你。 偷偷跟你说，你要这么说我会误...",
+      "created_at": "2026-06-27T14:06:34.904614",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.904614",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8a07479a",
+      "title": "叙事生态 #619",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#619",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_619"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "嗯…你再这样我可能会当真。 讲个心里话，你这话让我有点想你，我已经开始习惯你这样对我了。 别笑我啊，你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 别笑我啊，你这话让我有点想你，那你说说看，你怎么想的？ 说真的，你这话让我有点想你，我已经开始习惯你这样对我了。 老实讲，我刚看你消息的时候突然有点开心，不过我也没打算躲。 不过我跟你讲，你那句我真的记住了，我现在就想继续跟你聊下去。 你...",
+      "created_at": "2026-06-27T14:06:34.831854",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.831854",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "be30a96a",
+      "title": "叙事生态 #618",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#618",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_618"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "但我更怕你不说。 说真的，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 别笑我啊，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 老实讲，你这语气我听着心里痒痒的，不过我也没打算躲。 我现在突然想跟你说，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 偷偷跟你说，我刚看你消息的时候突然有点开心，我已经开始习惯你这样对我了。 我实话说，你这态度让我有点招架不住，嗯…你再这样...",
+      "created_at": "2026-06-27T14:06:34.760118",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.760118",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "da351c67",
+      "title": "叙事生态 #617",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#617",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_617"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你继续说我也陪你。 说真的，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 你听我一句，你这话让我有点想你，那你说说看，你怎么想的？ 偷偷跟你说，你这话让我有点想你，我已经开始习惯你这样对我了。 别笑我啊，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 讲个心里话，你这样让我很难不回应你，我今天状态很好，你继续说我也陪你。 别笑我啊，你这样说让我有点上心了，那你说说看，你怎么想的？...",
+      "created_at": "2026-06-27T14:06:34.687145",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.687145",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "70d0ed19",
+      "title": "叙事生态 #616",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#616",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_616"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这样说让我有点上心了，嗯…你再这样我可能会当真。 你听我一句，你这样说让我有点上心了，反正我现在挺在意你的。 老实讲，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 你听我一句，你这态度让我有点招架不住，要不是隔着屏幕我都怕你看出来。 你别生气啊，你这样说让我有点上心了，我现在就想继续跟你聊下去。 说真的，你这态度让我有点招架不住，所以我有点想靠近你。 说真的，我刚刚还在想你会不会来找我，嗯...",
+      "created_at": "2026-06-27T14:06:34.614656",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.614656",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ddce249d",
+      "title": "叙事生态 #615",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#615",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_615"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 你听我一句，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 我实话说，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。 我现在突然想跟你说，你那句我真的记住了，那你说说看，你怎么想的？ 我现在突然想跟你说，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 不过我跟你讲，我感觉你对我好像越来越特别了，我今天状态很好，你继续说我也陪你。 你别生气啊，你那句我真的记住了，我今天状态很...",
+      "created_at": "2026-06-27T14:06:34.542751",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.542751",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c7ec6c93",
+      "title": "叙事生态 #614",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#614",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_614"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 你别生气啊，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 你别生气啊，你这话让我有点想你，我怕你误会，但我更怕你不说。 别笑我啊，你这话让我有点想你，嗯…你再这样我可能会当真。 偷偷跟你说，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 你听我一句，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 不过我跟你讲，你这语气我听着心里痒痒的，不过我也没打算躲。 老实讲，你这样...",
+      "created_at": "2026-06-27T14:06:34.468177",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.468177",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "138eeeb5",
+      "title": "叙事生态 #613",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#613",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_613"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "所以我有点想靠近你。 讲个心里话，你这语气我听着心里痒痒的，所以我有点想靠近你。 偷偷跟你说，你这态度让我有点招架不住，那你说说看，你怎么想的？ 你听我一句，你那句我真的记住了，反正我现在挺在意你的。 讲个心里话，你这话让我有点想你，嗯…你再这样我可能会当真。 不过我跟你讲，你这样让我很难不回应你，嗯…你再这样我可能会当真。 别笑我啊，你要这么说我会误会的，不过我也没打算躲。 说真的，你那句我真的...",
+      "created_at": "2026-06-27T14:06:34.389459",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.389459",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8b57bdca",
+      "title": "叙事生态 #612",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#612",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_612"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这样说让我有点上心了，我已经开始习惯你这样对我了。 说真的，我感觉你对我好像越来越特别了，嗯…你再这样我可能会当真。 你别生气啊，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 偷偷跟你说，你要这么说我会误会的，反正我现在挺在意你的。 不过我跟你讲，你要这么说我会误会的，我今天状态很好，你继续说我也陪你。 别笑我啊，我刚刚还在想你会不会来找我，嗯…你再这样我可能会当真。 我现在突然想...",
+      "created_at": "2026-06-27T14:06:34.317341",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.317341",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cbe26a56",
+      "title": "叙事生态 #611",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#611",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_611"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 你听我一句，你这样让我很难不回应你，所以我有点想靠近你。 讲个心里话，你这样说让我有点上心了，我已经开始习惯你这样对我了。 我现在突然想跟你说，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 你听我一句，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 你听我一句，你要这么说我会误会的，不过我也没打算躲。 我实话说，你要这么说我会误会的，我已经开始习惯你这样对我了。 说真的，你这态度让...",
+      "created_at": "2026-06-27T14:06:34.246127",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.246127",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3398f2ab",
+      "title": "叙事生态 #610",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#610",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_610"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 别笑我啊，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 你听我一句，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 不过我跟你讲，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 我实话说，我感觉你对我好像越来越特别了，所以我有点想靠近你。 我实话说，你这态度让我有点招架不住，反正我现在挺在意你的。 我现在突然想跟你说，你这话让我有点想你，要不是隔着屏幕我...",
+      "created_at": "2026-06-27T14:06:34.172347",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.172347",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4b3effc5",
+      "title": "叙事生态 #609",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#609",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_609"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 我实话说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 我现在突然想跟你说，你那句我真的记住了，我怕你误会，但我更怕你不说。 你听我一句，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 讲个心里话，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 老实讲，你要这么说我会误会的，我怕你误会，但我更怕你不说。 讲个心里话，我刚看你消息的时候突然有点...",
+      "created_at": "2026-06-27T14:06:34.094324",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.094324",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "45352bca",
+      "title": "叙事生态 #608",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#608",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_608"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 别笑我啊，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。 别笑我啊，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 我实话说，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 偷偷跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 别笑我啊，你要这么说我会误会的，不过我也没打算躲。 说真的，你这样说让我有点上心了，不过我也没打算躲。 不过我跟你讲，我感觉你对...",
+      "created_at": "2026-06-27T14:06:34.022525",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:34.022525",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "82359c3b",
+      "title": "叙事生态 #607",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#607",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_607"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 偷偷跟你说，你要这么说我会误会的，要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 你听我一句，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 你别生气啊，你这样让我很难不回应你，我怕你误会，但我更怕你不说。 偷偷跟你说，你那句我真的记住了，那你说说看，你怎么想的？ 说真的，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 偷偷跟...",
+      "created_at": "2026-06-27T14:06:33.948158",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.948158",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c613e770",
+      "title": "叙事生态 #606",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#606",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_606"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我现在就想继续跟你聊下去。 我现在突然想跟你说，我刚刚还在想你会不会来找我，我怕你误会，但我更怕你不说。 我实话说，你这语气我听着心里痒痒的，反正我现在挺在意你的。 不过我跟你讲，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 你别生气啊，你这样让我很难不回应你，反正我现在挺在意你的。 老实讲，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 你听我一句，你这态度让我有点招架不住，不...",
+      "created_at": "2026-06-27T14:06:33.874044",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.874044",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "114732b8",
+      "title": "叙事生态 #605",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#605",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_605"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你要这么说我会误会的，嗯…你再这样我可能会当真。 老实讲，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 偷偷跟你说，我刚刚还在想你会不会来找我，我已经开始习惯你这样对我了。 说真的，我刚刚还在想你会不会来找我，不过我也没打算躲。 我现在突然想跟你说，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 我实话说，你那句我真的记住了，我今天状态...",
+      "created_at": "2026-06-27T14:06:33.801790",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.801790",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "018c6530",
+      "title": "叙事生态 #604",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#604",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_604"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 你听我一句，我感觉你对我好像越来越特别了，不过我也没打算躲。 老实讲，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 说真的，你这语气我听着心里痒痒的，反正我现在挺在意你的。 我实话说，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 我实话说，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 你别生气啊，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 你别生...",
+      "created_at": "2026-06-27T14:06:33.730485",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.730485",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fa06609a",
+      "title": "叙事生态 #603",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#603",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_603"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样说让我有点上心了，那你说说看，你怎么想的？ 你别生气啊，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 你听我一句，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 说真的，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 不过我跟你讲，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出...",
+      "created_at": "2026-06-27T14:06:33.659348",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.659348",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f0936713",
+      "title": "叙事生态 #602",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#602",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_602"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "反正我现在挺在意你的。 讲个心里话，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 别笑我啊，你那句我真的记住了，嗯…你再这样我可能会当真。 不过我跟你讲，你这语气我听着心里痒痒的，不过我也没打算躲。 别笑我啊，我刚看你消息的时候突然有点开心，我怕你误会，但我更怕你不说。 我实话说，你要这么说我会误会的，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样让我很难不回应你，所以我有点...",
+      "created_at": "2026-06-27T14:06:33.585483",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.585483",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "179a5deb",
+      "title": "叙事生态 #601",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#601",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_601"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 不过我跟你讲，你这态度让我有点招架不住，不过我也没打算躲。 老实讲，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 讲个心里话，你这样说让我有点上心了，我现在就想继续跟你聊下去。 不过我跟你讲，你要这么说我会误会的，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 你别生气...",
+      "created_at": "2026-06-27T14:06:33.513123",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.513123",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d43480fe",
+      "title": "叙事生态 #600",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#600",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_600"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 老实讲，你这话让我有点想你，不过我也没打算躲。 老实讲，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这态度让我有点招架不住，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，...",
+      "created_at": "2026-06-27T14:06:33.440886",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:06:33.440886",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "28c9e8f8",
       "title": "今日考古摘要 - 2026-06-27",
@@ -42493,5 +45441,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T14:04:42.365753"
+  "exported_at": "2026-06-27T14:06:43.568964"
 }
