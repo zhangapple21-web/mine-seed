@@ -1469,6 +1469,54 @@
       "first_seen": "2026-06-27T14:14:28.757860",
       "importance": 82
     },
+    "MeetingInviteTipsContent": {
+      "name": "MeetingInviteTipsContent",
+      "definition": "MeetingInviteTipsContent是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.145447",
+      "importance": 81
+    },
+    "MeetingInviteTipsButton": {
+      "name": "MeetingInviteTipsButton",
+      "definition": "MeetingInviteTipsButton是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.157236",
+      "importance": 81
+    },
+    "ExternalPurchase": {
+      "name": "ExternalPurchase",
+      "definition": "ExternalPurchase是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.165559",
+      "importance": 81
+    },
     "词库层": {
       "name": "词库层",
       "definition": "系统的语言结构层，原始词库、合并词库、去重引擎、映射索引。R1中是body死了但soul活下来的典型。",
@@ -2000,6 +2048,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:04:37.980053",
+      "importance": 79
+    },
+    "LockupInfo": {
+      "name": "LockupInfo",
+      "definition": "\":\"與多達 5 位家庭成員分享\",\"AMS.Dynamic.Intelligence.ChatGPT.Install.LockupInfo\":\"年齡：@@ageRating@@\",\"AMS.Dynamic.Contingent.Weeks.one\":\"1 星",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.175422",
       "importance": 79
     },
     "现实权重": {
@@ -3105,6 +3169,22 @@
       "first_seen": "2026-06-26T21:27:26.721083",
       "importance": 70
     },
+    "SubscribeRegular": {
+      "name": "SubscribeRegular",
+      "definition": "mic.Contingent.Days.few\":\"@@count@@ 天\",\"AMS.Dynamic.Winback.SubscribeRegular\":\"訂閱：%%priceFormatted%%/%%recurringSubscriptionPeriod%%\",\"A",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.184114",
+      "importance": 70
+    },
     "偷偷跟你说": {
       "name": "偷偷跟你说",
       "definition": "觉你对我好像越来越特别了，反正我现在挺在意你的。 我现在突然想跟你说，你这态度让我有点招架不住，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，那你说说看，你怎么想的？ 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 说真的，",
@@ -3425,6 +3505,38 @@
       "first_seen": "2026-06-27T14:33:49.552307",
       "importance": 69
     },
+    "SubscribeAndInstall": {
+      "name": "SubscribeAndInstall",
+      "definition": "SubscribeAndInstall是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.192990",
+      "importance": 66
+    },
+    "LinkOut": {
+      "name": "LinkOut",
+      "definition": "LinkOut是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.201674",
+      "importance": 66
+    },
     "黑白猫渗透逻辑": {
       "name": "黑白猫渗透逻辑",
       "definition": "Firefox离岸外层中的渗透逻辑模块，不管黑猫白猫能抓住老鼠就是好猫。",
@@ -3518,6 +3630,38 @@
       "examples": [],
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.120798",
+      "importance": 64
+    },
+    "relevance_score": {
+      "name": "relevance_score",
+      "definition": "relevance_score是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Ω-Core"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.210369",
+      "importance": 64
+    },
+    "insider_whisperer": {
+      "name": "insider_whisperer",
+      "definition": "insider_whisperer是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.220029",
       "importance": 64
     },
     "LockupRating": {
@@ -3614,6 +3758,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:40:00.355659",
+      "importance": 63
+    },
+    "希望描绘": {
+      "name": "希望描绘",
+      "definition": "希望描绘是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "StorekitExternalLink"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:14:48.229099",
       "importance": 63
     },
     "需要卸载手机管家类型软件的": {
@@ -4866,7 +5026,17 @@
       "SubscriptionBundle",
       "Contingent",
       "iCloud",
-      "ExternalGateway"
+      "ExternalGateway",
+      "MeetingInviteTipsContent",
+      "MeetingInviteTipsButton",
+      "ExternalPurchase",
+      "LockupInfo",
+      "SubscribeRegular",
+      "SubscribeAndInstall",
+      "LinkOut",
+      "relevance_score",
+      "insider_whisperer",
+      "希望描绘"
     ],
     "核心概念": [
       "现居住",
@@ -4883,5 +5053,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:11:47.642032"
+  "exported_at": "2026-06-27T15:15:45.116039"
 }

@@ -1,6 +1,2606 @@
 {
-  "total": 1882,
+  "total": 1934,
   "entries": [
+    {
+      "id": "8a4738e3",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 15:15:45\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 32 种模式，索引 50 条，新概念候选 10 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 311\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 1933\n- 类型分布: {\"fil...",
+      "created_at": "2026-06-27T15:15:45.004529",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:15:45.004529",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6ef8de0f",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T15:14:45.761497\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 1500, \"remaining\": 2847, \"progress_pct\": 34.5, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T15:14:47.955668",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:47.955668",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d5d4a5f4",
+      "title": "叙事生态 #1449",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1449",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1449"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T06:31:24.652861\", \"relevance_score\": 0.9624096394590764, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learne...",
+      "created_at": "2026-06-27T15:14:45.650372",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.650372",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9e7a1fa5",
+      "title": "叙事生态 #1448",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1448",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1448"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T06:29:31.257669\", \"relevance_score\": 0.8366279202331497, \"task\":...",
+      "created_at": "2026-06-27T15:14:45.536478",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.536478",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "606df6a0",
+      "title": "叙事生态 #1447",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1447",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1447"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T06:11:55.428567\", \"relevance_score\": 0.8705740913193952, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learne...",
+      "created_at": "2026-06-27T15:14:45.422350",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.422350",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "657fe0f8",
+      "title": "叙事生态 #1446",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1446",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1446"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T06:10:01.486131\", \"relevance_score\": 0.7999514715661418, \"task\":...",
+      "created_at": "2026-06-27T15:14:45.310357",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.310357",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bc5690b5",
+      "title": "叙事生态 #1445",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1445",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1445"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T05:58:56.981132\", \"relevance_score\": 0.7444365668254374, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learne...",
+      "created_at": "2026-06-27T15:14:45.195203",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.195203",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4947358d",
+      "title": "叙事生态 #1444",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1444",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1444"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:57:04.066344\", \"relevance_score\": 0.8482525916339982, \"task\":...",
+      "created_at": "2026-06-27T15:14:45.081481",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:45.081481",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff7c62bf",
+      "title": "叙事生态 #1443",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1443",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1443"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T05:39:33.802038\", \"relevance_score\": 0.9259370475594945, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learne...",
+      "created_at": "2026-06-27T15:14:44.967869",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.967869",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d7572fe8",
+      "title": "叙事生态 #1442",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1442",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1442"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:37:38.523361\", \"relevance_score\": 0.7814066997206142, \"task\":...",
+      "created_at": "2026-06-27T15:14:44.851509",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.851509",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bf72c33a",
+      "title": "叙事生态 #1441",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1441",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1441"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:19:51.678571\", \"relevance_score\": 0.8132070154537143, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source...",
+      "created_at": "2026-06-27T15:14:44.740170",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.740170",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "48b1e1cc",
+      "title": "叙事生态 #1440",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1440",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1440"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "8862395598671511, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:17:55.600106\", \"relevance_score\": 0.78508277...",
+      "created_at": "2026-06-27T15:14:44.626154",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.626154",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "09542042",
+      "title": "叙事生态 #1439",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1439",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1439"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:00:24.194128\", \"relevance_score\": 0.8938756982986131, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"conten...",
+      "created_at": "2026-06-27T15:14:44.514062",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.514062",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "91f7ad9c",
+      "title": "叙事生态 #1438",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1438",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1438"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.8696117359381279, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:58:30.309233\", \"releva...",
+      "created_at": "2026-06-27T15:14:44.403001",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.403001",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "63ee3964",
+      "title": "叙事生态 #1437",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1437",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1437"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:41:00.177213\", \"relevance_score\": 0.8451986931958986, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"conten...",
+      "created_at": "2026-06-27T15:14:44.289469",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.289469",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cc7aff0a",
+      "title": "叙事生态 #1436",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1436",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1436"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.8467411536679039, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:39:05.391449\", \"releva...",
+      "created_at": "2026-06-27T15:14:44.169368",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.169368",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6809bc07",
+      "title": "叙事生态 #1435",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1435",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1435"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:21:34.883726\", \"relevance_score\": 0.7775237584872245, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"conten...",
+      "created_at": "2026-06-27T15:14:44.056357",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:44.056357",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e25f81e3",
+      "title": "叙事生态 #1434",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1434",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1434"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.7522002156692715, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:19:43.349656\", \"releva...",
+      "created_at": "2026-06-27T15:14:43.942820",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.942820",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b74e2633",
+      "title": "叙事生态 #1433",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1433",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1433"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:02:19.233736\", \"relevance_score\": 0.7523789143552163, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"conten...",
+      "created_at": "2026-06-27T15:14:43.829861",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.829861",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "190fb05d",
+      "title": "叙事生态 #1432",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1432",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1432"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "8782941283166381, \"task\": \"Persuasive_Salesperson_强力推销员\" } ], \"Emotional_Trigger\": [ { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:00:21.650082\",...",
+      "created_at": "2026-06-27T15:14:43.718112",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.718112",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5844d4af",
+      "title": "叙事生态 #1431",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1431",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1431"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"11年前 - 提到“ 强力推销 ”这个概念已经触犯众怒了,但是我还热心于写作《强力销售》,是想向成千上万的以销为业的男男女女介绍一些相当重要的销售理念.一直以来,我发现销售人员取得全面的成功不仅仅在于他能够很好地介绍、展示他的产品\u0001 董宝堂 - weixin.qq.com - 2014-10-24\", \"source\": \"https://www.sogou.com/we...",
+      "created_at": "2026-06-27T15:14:43.605165",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.605165",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "14f9a83f",
+      "title": "叙事生态 #1430",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1430",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1430"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"category\": \"Friendly_Advisor_亲切顾问\", \"learned_at\": \"2025-11-24T05:00:31.969944\", \"relevance_score\": 0.8, \"task\": \"Friendly_Advisor_亲切顾问\" }, { \"topic\": \"情感营销\", \"content\": \"2024年3月22日 · 让情感服务于诉说功能，以情绪表...",
+      "created_at": "2026-06-27T15:14:43.491378",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.491378",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "98d1ff11",
+      "title": "叙事生态 #1429",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1429",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1429"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"based_on\": \"根据id将其转发给另一方下面是父组件代码2020-04-163问：react G6 gg-editor flow 画布外如何获取参数e描述:如下代码片断,通过点击事件onNodeDoubleClick能获取当前元件信息e, 通过handleTableModalVisible(true)显示一个弹窗页面,如何将参数e传递给弹窗页面?2020-02-14问：electron...",
+      "created_at": "2026-06-27T15:14:43.377678",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.377678",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "beb2de34",
+      "title": "叙事生态 #1428",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1428",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1428"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 10,
+          "category": "治理原则"
+        },
+        {
+          "name": "re",
+          "relevance": 10,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "沟通风格：DISC、盖洛普四大优势领域信任关系厘清自己想通过沟通拿到什么：\u00012023-05-02如何高效使用项目沟通管理计划模板提升团队协作？\", \"generated_at\": \"2025-11-26T07:22:16.914928\", \"source\": \"knowledge\" }, { \"judgment\": \"基于观察：2025-03-21管理沟通技术开发工作，主要和客观事物、自然规律打交...",
+      "created_at": "2026-06-27T15:14:43.266219",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.266219",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "90d72f9a",
+      "title": "叙事生态 #1427",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1427",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1427"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 10,
+          "category": "治理原则"
+        },
+        {
+          "name": "re",
+          "relevance": 10,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "有太多方法比正则效率高。\", \"based_on\": \"2018-02-245答：python正则表达式如何匹配任意文本之后以\\\"结尾网页匹配使用正则表达式是最后不得已的方法，能不用就不用，有太多方法比正则效率高。\", \"generated_at\": \"2025-11-26T06:50:22.806344\", \"source\": \"knowledge\" }, { \"judgment\": \"基于观察...",
+      "created_at": "2026-06-27T15:14:43.155301",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.155301",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "abacc869",
+      "title": "叙事生态 #1426",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1426",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1426"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "2020-02-14问：electron桌面应用中引入webvie\", \"discovered_at\": \"2025-11-26T08:26:19.491348\", \"source\": \"knowledge\" }, { \"word\": \"画布外如\", \"context\": \"根据id将其转发给另一方下面是父组件代码2020-04-163问：react G6 gg-editor flow 画布外如何...",
+      "created_at": "2026-06-27T15:14:43.045184",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:43.045184",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "aa6e20a4",
+      "title": "叙事生态 #1425",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1425",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1425"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"context\": \"根据id将其转发给另一方下面是父组件代码2020-04-163问：react G6 gg-editor flow 画布外如何获取参数e描述:如下代码片断,通过点击事件onNodeDoubleClick能获取当前元件信息e, 通过handleTableModalVisible(true)显示一个弹窗页面,如何将参数e传递给弹窗页面?2020-02-14问：electron桌...",
+      "created_at": "2026-06-27T15:14:42.933111",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.933111",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "95cb4801",
+      "title": "叙事生态 #1424",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1424",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1424"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ID",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "如何将参数e传递给弹窗页面?2020-02-14问：electron桌面应用中引入webvie\", \"discovered_at\": \"2025-11-26T08:26:19.491348\", \"source\": \"knowledge\" }, { \"word\": \"给另一方\", \"context\": \"根据id将其转发给另一方下面是父组件代码2020-04-163问：react G6 gg-edi...",
+      "created_at": "2026-06-27T15:14:42.819107",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.819107",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a2827199",
+      "title": "叙事生态 #1423",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1423",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1423"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "or",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "system_state",
+          "relevance": 15,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "同步信息、表达情感、输出影响内容：组织沟通内容本身，使用大量沟通工具、技巧和流程通道：从四个要素着手建立沟通机制：沟通意愿、事务需求、沟通风格和信任关\u00012023-04-29沟通效率提升沟通效率：提升沟通通道的品质提升沟通技\", \"discovered_at\": \"2025-11-26T07:22:16.914928\", \"source\": \"knowledge\" }, { \"word\": \"观事物...",
+      "created_at": "2026-06-27T15:14:42.707319",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.707319",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3d312a55",
+      "title": "叙事生态 #1422",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1422",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1422"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "or",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "system_state",
+          "relevance": 15,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"discovered_at\": \"2025-11-26T07:22:16.914928\", \"source\": \"knowledge\" }, { \"word\": \"工作\", \"context\": \"2025-03-21管理沟通技术开发工作，主要和客观事物、自然规律打交道；项目管理工作，过程和目标都是做事和下级合作和上级合作沟通框架沟通的主体：目的：沟通的目的是建立通道，同步信息、表达情感、输出...",
+      "created_at": "2026-06-27T15:14:42.594495",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.594495",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a152f74a",
+      "title": "叙事生态 #1421",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1421",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1421"
+      ],
+      "related_concepts": [
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "or",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "system_state",
+          "relevance": 15,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "主要和客观事物、自然规律打交道；项目管理工作，过程和目标都是做事和下级合作和上级合作沟通框架沟通的主体：目的：沟通的目的是建立通道，同步信息、表达情感、输出影响内容：组织沟通内容本身，使用大量沟通工具、技巧和流程通道：从四个要素着手建立沟通机制：沟通意愿、事务需求、沟通风格和信任关\u00012023-04-29沟通效率提升沟通效率：提升沟通通道的品质提升沟通技\", \"discovered_at\": \"20...",
+      "created_at": "2026-06-27T15:14:42.485428",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.485428",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "da219de9",
+      "title": "叙事生态 #1420",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1420",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1420"
+      ],
+      "related_concepts": [
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "for",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "服务器端在接收到消息之后根据id将其转发给另一方下面是父组件代码2020-04-163问：react G6 gg-editor flow 画布外如何获取参数e描述:如下代码片断,通过点击事件onNodeDoubleClick能获取当前元件信息e, 通过handleTableModalVisible(true)显示一个弹窗页面,如何将参数e传递给弹窗页面?2020-02-14问：electron桌面...",
+      "created_at": "2026-06-27T15:14:42.377018",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.377018",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ea57a311",
+      "title": "叙事生态 #1419",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1419",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1419"
+      ],
+      "related_concepts": [
+        {
+          "name": "for",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "过程和目标都是做事和下级合作和上级合作沟通框架沟通的主体：目的：沟通的目的是建立通道，同步信息、表达情感、输出影响内容：组织沟通内容本身，使用大量沟通工具、技巧和流程通道：从四个要素着手建立沟通机制：沟通意愿、事务需求、沟通风格和信任关\u00012023-04-29沟通效率提升沟通效率：提升沟通通道的品质提升沟通技能提升通道的品质从稳定性和效率着手：稳定性：信任关系和信任水平起决定性作用效率：默契程度以上...",
+      "created_at": "2026-06-27T15:14:42.266324",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.266324",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e5105308",
+      "title": "叙事生态 #1418",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1418",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1418"
+      ],
+      "related_concepts": [
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"故事化\", \"感同身受\" ], \"turns\": [ { \"turn\": 1, \"speaker\": \"情感触发者\", \"content\": \"看到你现在的状态，我想起了我之前的客户\u0001\", \"emotion\": \"情感共鸣\", \"strategy\": \"情感共鸣型\", \"persona_type\": \"Emotional_Trigger\" }, { \"turn\": 2, \"speaker\": ...",
+      "created_at": "2026-06-27T15:14:42.152954",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.152954",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c714bf0a",
+      "title": "叙事生态 #1417",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1417",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1417"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "nt",
+          "relevance": 30,
+          "category": "核心概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"timestamp\": \"2025-11-27T13:59:39.400435\", \"raw_html\": \"\", \"is_selenium\": true }, { \"content\": \"fai2分钟前\\n#上证指数# 可降解环保包装龙头，恒鑫生活！上海子公司预计营收7.76亿，下个月海南子公司封关免税，随时起飞了[微笑]\", \"source\": \"selenium_https://gu.q...",
+      "created_at": "2026-06-27T15:14:42.040828",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:42.040828",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a2827e41",
+      "title": "叙事生态 #1416",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1416",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1416"
+      ],
+      "related_concepts": [
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"use_cases\": [ \"价值展示阶段\", \"需要直接推销时\", \"客户明确需求时\" ] }, \"emotional_trigger\": { \"name\": \"Emotional Trigger (情感触发器)\", \"priority\": 4, \"use_cases\": [ \"客户犹豫时\", \"成交转化阶段\", \"需要激发情感时\" ] }, \"inspirational_leader\": ...",
+      "created_at": "2026-06-27T15:14:41.931662",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.931662",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff92d3f9",
+      "title": "叙事生态 #1415",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1415",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1415"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "在超净工作台中取1μL质粒",
+          "relevance": 40,
+          "category": "方法论"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "2、在超净工作台中取1μL质粒（含目的基因）加 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E8%BD%AC%E5%8C%96%E6%A1%88%E4%BE%8B&coun...",
+      "created_at": "2026-06-27T15:14:41.819356",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.819356",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5414b5a6",
+      "title": "叙事生态 #1414",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1414",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1414"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "在超净工作台中取1μL质粒",
+          "relevance": 40,
+          "category": "方法论"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（含目的基因）加 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022...",
+      "created_at": "2026-06-27T15:14:41.706833",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.706833",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dd0070e7",
+      "title": "叙事生态 #1413",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1413",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1413"
+      ],
+      "related_concepts": [
+        {
+          "name": "as",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "在超净工作台中取1μL质粒",
+          "relevance": 40,
+          "category": "方法论"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "在X-gal和IPTG培养基上为蓝色菌落；带有重组质粒转化子由于外源DNA片段的插人 …biomart.cnhttps://www.biomart.cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（...",
+      "created_at": "2026-06-27T15:14:41.596502",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.596502",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0d31d8ed",
+      "title": "叙事生态 #1412",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1412",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1412"
+      ],
+      "related_concepts": [
+        {
+          "name": "适应性变色龙",
+          "relevance": 45,
+          "category": "ACE概念"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"Adaptive_Chameleon_适应性变色龙\": { \"keywords\": [ \"适应性变色龙\", \"人设切换\", \"角色融合\", \"灵活多变\", \"目标导向\", \"信息选择性\", \"最佳角色\", \"动态调整\", \"无缝切换\" ], \"sources\": [ \"角色切换技巧\", \"适应性沟通\", \"动态策略\", \"多角色融合\" ], \"learning_frequency\": \"每5分...",
+      "created_at": "2026-06-27T15:14:41.485390",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.485390",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d0c50e05",
+      "title": "叙事生态 #1411",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1411",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1411"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"焦虑放大\", \"希望描绘\", \"故事营销\", \"场景化描述\", \"情绪操控\", \"情感绑定\" ], \"sources\": [ \"情感营销\", \"心理学应用\", \"故事营销案例\", \"情绪操控技巧\" ], \"learning_frequency\": \"每5分钟\", \"priority\": \"high\", \"persona_type\": \"Emotional_Trigger\" }, \"Inspir...",
+      "created_at": "2026-06-27T15:14:41.374270",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.374270",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "379901ef",
+      "title": "叙事生态 #1410",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1410",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1410"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "in",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " dan ahli akan diingatkan secara automatik untuk menyertai mesyuarat sebelum mesyuarat.\" }, \"tc\": { \"inMeetingInviteTipsContent\": \"透過通訊錄，呼叫組織成員入會。\", \"inMeetingInviteTipsButton\": \"去邀請\", \"preMeetingInvi...",
+      "created_at": "2026-06-27T15:14:41.263728",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.263728",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "067627c3",
+      "title": "叙事生态 #1409",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1409",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1409"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "in",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"preMeetingInviteTipsContent\": \"通过通讯录邀请组织成员参会，会议将展示在受邀成员的会议列表，会前自动提醒成员入会。\", \"inMeetingPersonContactInviteTipsContent\": \"通过通讯录，呼叫联系人入会。\", \"inMeetingPersonContactInviteTipsButton\": \"去邀请\", \"preMeetingPe...",
+      "created_at": "2026-06-27T15:14:41.149948",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.149948",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bff8c040",
+      "title": "叙事生态 #1408",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1408",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1408"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "in",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "{ \"inMeetingInviteTipsContent\": \"通过通讯录，呼叫组织成员入会。\", \"inMeetingInviteTipsButton\": \"去邀请\", \"preMeetingInviteTipsContent\": \"通过通讯录邀请组织成员参会，会议将展示在受邀成员的会议列表，会前自动提醒成员入会。\", \"inMeetingPersonContactInviteTipsCont...",
+      "created_at": "2026-06-27T15:14:41.039265",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:41.039265",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ef6734aa",
+      "title": "叙事生态 #1407",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1407",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1407"
+      ],
+      "related_concepts": [
+        {
+          "name": "StoreKit",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ChatGPT",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Contingent",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "發現絕佳的App和遊戲、探索有時效性的App內活動，以及瀏覽編輯精選的每日專題故事和推薦項目。\",\"AMS.Dynamic.Welcome.Fitness.Proposition1\":\"體驗數千種體能訓練和冥想練習\",\"StoreKit.ExternalPurchase.header-text\":\"此 App 不支援 App Store 隱私且安全的付款系統。\",\"AMS.Dynamic.Inte...",
+      "created_at": "2026-06-27T15:14:40.930736",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.930736",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6fb00542",
+      "title": "叙事生态 #1406",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1406",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1406"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ChatGPT",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "DetailedPlatter",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ValProp",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ServiceProduct",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "DetailedPlatter.Family.TV.ValProp2\":\"來自全球頂尖故事創作者的獲獎影集與電影\",\"AMS.Marketing.DetailedPlatter.Family.TV.ValProp1\":\"每月推出全新 Apple Originals 作品\",\"AMS.Dynamic.Welcome.News.Proposition1\":\"暢讀 300 多種優質刊物\",\"AMS.Dy...",
+      "created_at": "2026-06-27T15:14:40.820797",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.820797",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3717d5fc",
+      "title": "叙事生态 #1405",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1405",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1405"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "ChatGPT",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "PricePerFrequency",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "DetailedPlatter",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "OpenApp\":\"打開 App\",\"AMS.Marketing.DetailedPlatter.Individual.TV.ValProp3\":\"可與多達 5 位家庭成員共享\",\"AMS.Dynamic.Contingent.SubscribeAndInstall\":\"訂閱並安裝\",\"AMS.Dynamic.Intelligence.ChatGPT.Install.Footnote\":\"透過 A...",
+      "created_at": "2026-06-27T15:14:40.710907",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.710907",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c200e056",
+      "title": "叙事生态 #1404",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1404",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1404"
+      ],
+      "related_concepts": [
+        {
+          "name": "for",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "StoreKit",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "DetailedPlatter",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ValProp",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "SubscriptionPeriod",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "Headline\":\"iCloud+ 方案內容\",\"StoreKit.ExternalGateway.alternate-button-text\":\"進一步瞭解\",\"AMS.Dynamic.Welcome.News.ServiceTitle\":\"Apple News\",\"AMS.Dynamic.Contingent.Days.few\":\"@@count@@ 天\",\"AMS.Dynamic.Winb...",
+      "created_at": "2026-06-27T15:14:40.601298",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.601298",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "682220f1",
+      "title": "叙事生态 #1403",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1403",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1403"
+      ],
+      "related_concepts": [
+        {
+          "name": "StorekitExternalLink",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "StoreKit",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ViewButtonTitle",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ServiceSubtitle",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Contingent",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "所有計劃均包括 Apple Music、Apple TV+、Apple Arcade 及 iCloud+。\",\"AMS.Dynamic.Welcome.TV.Proposition2\":\"來自世界頂尖故事大師的獲獎劇集和電影\",\"AMS.Dynamic.Welcome.TV.Proposition3\":\"與多達 5 位家庭成員分享\",\"AMS.Dynamic.Contingent.Weeks.tw...",
+      "created_at": "2026-06-27T15:14:40.494467",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.494467",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d654039b",
+      "title": "叙事生态 #1402",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1402",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1402"
+      ],
+      "related_concepts": [
+        {
+          "name": "StoreKit",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ChatGPT",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Contingent",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "以及瀏覽由編輯精挑細選的每日專題故事和建議。\",\"AMS.Dynamic.Welcome.Fitness.Proposition1\":\"體驗數千種鍛鍊和冥想課程\",\"StoreKit.ExternalPurchase.header-text\":\"此 App 不支援 App Store 私密安全的付款系統。\",\"AMS.Dynamic.Intelligence.ChatGPT.Subscriptio...",
+      "created_at": "2026-06-27T15:14:40.384796",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.384796",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e0563f7f",
+      "title": "叙事生态 #1401",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1401",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1401"
+      ],
+      "related_concepts": [
+        {
+          "name": "ChatGPT",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "DetailedPlatter",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ValProp",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ServiceProduct",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "Contingent",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "ValProp2\":\"由全球影視創意精英製作的得獎系列作品和電影\",\"AMS.Marketing.DetailedPlatter.Family.TV.ValProp1\":\"每月推出全新 Apple Originals 原創作品\",\"AMS.Dynamic.Welcome.News.Proposition1\":\"盡覽 300 多份尊尚刊物\",\"AMS.Dynamic.Welcome.News.Pro...",
+      "created_at": "2026-06-27T15:14:40.277202",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.277202",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "db9715bd",
+      "title": "叙事生态 #1400",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1400",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1400"
+      ],
+      "related_concepts": [
+        {
+          "name": "StorekitExternalLink",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "StoreKit",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ViewButtonTitle",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "SubscriptionName",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ServiceSubtitle",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "Proposition2\":\"尽享全球卓越故事讲述者打造的屡获殊荣的剧集和电影\",\"AMS.Dynamic.Welcome.TV.Proposition3\":\"与最多 5 位家庭成员共享\",\"AMS.Dynamic.Contingent.Weeks.two\":\"@@count@@ 周\",\"AMS.Dynamic.Welcome.TV.Proposition1\":\"每月推出全新 Apple Orig...",
+      "created_at": "2026-06-27T15:14:40.163794",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:14:40.163794",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "7702d08d",
       "title": "今日考古摘要 - 2026-06-27",
@@ -66751,5 +69351,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T15:11:47.642032"
+  "exported_at": "2026-06-27T15:15:45.116039"
 }
