@@ -1709,6 +1709,22 @@
       "first_seen": "2026-06-27T14:14:28.757860",
       "importance": 82
     },
+    "我无法想象你": {
+      "name": "我无法想象你",
+      "definition": "\"4ca067bbc0a869acb69d88bf34b80cfb\": { \"text\": \"10:45:31] 海伦：我无法想象你是一个如此可爱的人。",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.121631",
+      "importance": 82
+    },
     "MeetingInviteTipsContent": {
       "name": "MeetingInviteTipsContent",
       "definition": "MeetingInviteTipsContent是从eco:narrative_ecology材料中自动提取的概念",
@@ -3089,6 +3105,22 @@
       "first_seen": "2026-06-27T14:22:21.612285",
       "importance": 75
     },
+    "gina": {
+      "name": "gina",
+      "definition": "gina是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.131410",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -3311,6 +3343,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:56:00.949390",
+      "importance": 73
+    },
+    "Helen": {
+      "name": "Helen",
+      "definition": "[2021/7/23 09:46:36] Helen: 我不习惯这么早睡觉🤣 [2021/7/23 09:46:52] Helen：当然，如果你没有时间，我们明天再谈。 [",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.141618",
       "importance": 73
     },
     "量子引擎": {
@@ -3823,6 +3871,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:14:24.211003",
+      "importance": 70
+    },
+    "Maria": {
+      "name": "Maria",
+      "definition": "eb6ec3b4\" }, \"80b72d055932e4676e70d7389f416394\": { \"text\": \"Maria：这个项目的名字是Defi流动性挖矿，",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.151773",
       "importance": 70
     },
     "偷偷跟你说": {
@@ -4988,6 +5052,22 @@
       "first_seen": "2026-06-27T16:35:17.360987",
       "importance": 63
     },
+    "Desktop": {
+      "name": "Desktop",
+      "definition": "Desktop是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.163184",
+      "importance": 63
+    },
     "需要卸载手机管家类型软件的": {
       "name": "需要卸载手机管家类型软件的",
       "definition": "即刻为你申请补助，为了以后稳定长期的合作请理解配合。 客户买完新手机可以引导其在新手机上下载机构交易软件并注册了 需要卸载手机管家类型软件的 你手机中的xxx这款软件，会有读取到我司机构交易账户数据风险和你使用账户时的数据记录风险，麻烦你将其卸载后再次截图给",
@@ -5162,6 +5242,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:35:17.449730",
+      "importance": 62
+    },
+    "教你如何拿下百万方案": {
+      "name": "教你如何拿下百万方案",
+      "definition": "60人：什么酱？什么水果？ [2021/7/23 11:41:48]\", \"tags\": [ \"未命名文件夹_6\", \"教你如何拿下百万方案-_(2).docx\", \"file_type:docx\", \"a_layer\" ], \"source\": \"/User",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.172846",
       "importance": 62
     },
     "scan_report_path": {
@@ -5661,6 +5757,54 @@
       "source": "disk_scanner:json",
       "first_seen": "2026-06-27T14:04:42.077003",
       "importance": 60
+    },
+    "pdf": {
+      "name": "pdf",
+      "definition": "的初衷是 什么，未来的愿景是什么，这些信息都要详细写\", \"tags\": [ \"未命名文件夹_6\", \"三方定位导图-.pdf\", \"file_type:pdf\", \"a_layer\" ], \"source\": \"/Users/apple/Des",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.184040",
+      "importance": 60
+    },
+    "KoreaSoci": {
+      "name": "KoreaSoci",
+      "definition": "KoreaSoci是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.194691",
+      "importance": 60
+    },
+    "照片已忽忽": {
+      "name": "照片已忽忽",
+      "definition": "55:55] Maria：现在有58万？ [9/6/21 下午10:56:23] 2.8.9 H 奥斯丁尼克 402: 照片已忽忽 [9/6/21 下午10:57:44] Maria：因为官方客服说可以持续到11月1日。 [9/6/21 下午10:5",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.204906",
+      "importance": 58
     },
     "nr": {
       "name": "nr",
@@ -6202,6 +6346,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:39:04.390732",
+      "importance": 57
+    },
+    "瓜达拉哈拉": {
+      "name": "瓜达拉哈拉",
+      "definition": "3bd5\" }, \"490728c4c7f2b9fb6050fa5a7c99d827\": { \"text\": \"阿图罗·瓜达拉哈拉：哦，亲爱的，当然\u0001我想让你知道我对你的爱会在长途旅行中幸存下来\u0001 [2021 年 8 月 22 日上午 10:20]",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:44:42.214714",
       "importance": 57
     },
     "小雪": {
@@ -6765,7 +6925,17 @@
       "未命名文件夹",
       "are",
       "EuropeanandAmericanstyle",
-      "an"
+      "an",
+      "我无法想象你",
+      "gina",
+      "Helen",
+      "Maria",
+      "Desktop",
+      "教你如何拿下百万方案",
+      "pdf",
+      "KoreaSoci",
+      "照片已忽忽",
+      "瓜达拉哈拉"
     ],
     "核心概念": [
       "现居住",
@@ -6785,5 +6955,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:43:33.158115"
+  "exported_at": "2026-06-27T16:44:55.890140"
 }
