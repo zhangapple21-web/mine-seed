@@ -2,7 +2,7 @@
 
 这不是文件清单，而是把文件证据折叠为结构节点后的文明图谱初版。文件只是化石，结构才是生物。
 
-- 生成时间：`2026-06-26T10:49:37`
+- 生成时间：`2026-06-27T09:00:02`
 - 结构节点：`12`
 - 结构关系：`10`
 
@@ -10,9 +10,9 @@
 
 | 节点 | 类别 | 状态 | 重要度 | 证据数 | 首次/最近 |
 | --- | --- | --- | ---: | ---: | --- |
-| Experience Compression Layer | memory | alive | 5 | 5 | 2025-12-04T11:05:46 / 2026-06-25T10:31:16 |
-| Lexicon System | structure | alive | 5 | 25 | 2025-12-04T11:05:45 / 2026-06-25T10:31:16 |
-| Memory System | memory | alive | 5 | 21 | 2025-12-04T11:05:45 / 2026-06-25T10:31:16 |
+| Experience Compression Layer | memory | alive | 5 | 6 | 2025-12-04T11:05:46 / 2026-06-26T20:44:52 |
+| Lexicon System | structure | alive | 5 | 28 | 2025-12-04T11:05:45 / 2026-06-26T22:06:35 |
+| Memory System | memory | alive | 5 | 31 | 2025-12-04T11:05:45 / 2026-06-26T22:06:36 |
 | Permission Protocol | protocol | alive | 5 | 1 | 2025-12-04T11:05:45 / 2025-12-04T11:05:45 |
 | Runtime Core | runtime | alive | 5 | 7 | 2025-12-04T11:05:49 / 2026-06-25T10:31:16 |
 | Central Nervous System | ancestor-hypothesis | fossil | 4 | 86 | 2026-06-25T10:31:16 / 2026-06-25T10:31:16 |
@@ -38,6 +38,7 @@
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\eco_layer.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\Engineering\JSON\eco_layer.json` | 2026-06-01T15:35:40 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\eco_layer.json` | 2026-06-11T19:34:58 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\analyze_eco_layer.py` | 2026-06-26T20:44:52 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\Engineering\JSON\eco_layer.zip` | 2026-06-11T13:56:04 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/ABC_┤╩┐Γ_macOS/┤╩┐Γ/expanded_knowledge.json` | 2026-06-25T10:31:16 | zip_entry
 
@@ -55,12 +56,12 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764608809.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-26T22:06:35 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\data\memory\lexicon.json` | 2026-06-26T20:27:57 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\core\lexicon.py` | 2026-06-26T20:11:43 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764495281.json` | 2025-12-04T11:05:47 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\Engineering\JSON\lexicon_snapshot_v3.json` | 2026-05-25T21:34:24 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\Engineering\JSON\lexicon_snapshot_v2.json` | 2026-05-25T21:33:43 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\lexicon_snapshot_v3.json` | 2026-06-25T10:29:12 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\lexicon_routing_config.json` | 2025-12-04T11:05:48 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\lexicon_paths.json` | 2025-12-04T11:05:48 | scan_item
 
 ### Memory System
 
@@ -75,11 +76,11 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\system_state.json` | 2025-12-04T11:05:45 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-26T22:06:35 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\data\memory\lexicon.json` | 2026-06-26T20:27:57 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\memory_index.json` | 2026-06-26T22:06:36 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\eco_layer.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764495281.json` | 2025-12-04T11:05:47 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\entries_map.json` | 2025-12-04T11:05:47 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\tags_index.json` | 2025-12-04T11:05:47 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\holo_memory_config.json` | 2025-12-04T11:05:47 | scan_item
 
 ### Permission Protocol
 
