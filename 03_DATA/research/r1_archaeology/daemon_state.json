@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-27T14:09:06.931662",
+  "last_run": "2026-06-27T14:13:25.545554",
   "last_scan_paths": {
     "c:\\Users\\USER\\Downloads\\Telegram Desktop\\Knowledge_Base\\AI对话": {
       "last_scanned_at": "2026-06-26T20:57:50.148653",
@@ -100,11 +100,34 @@
       "last_scanned_at": "2026-06-27T14:09:06.788619",
       "files": 7,
       "interesting": 5
+    },
+    "C:\\Users\\USER\\Desktop\\老师助理图片": {
+      "last_scanned_at": "2026-06-27T14:13:24.670677",
+      "files": 38,
+      "interesting": 8
+    },
+    "C:\\Users\\USER\\Desktop\\电销底料": {
+      "last_scanned_at": "2026-06-27T14:13:25.309349",
+      "files": 9,
+      "interesting": 7
     }
   },
-  "last_lexicon_count": 249,
-  "last_memory_count": 1388,
+  "last_lexicon_count": 259,
+  "last_memory_count": 1456,
   "daily_summaries": [
+    {
+      "date": "2026-06-27",
+      "summary_id": "ec6ae48d",
+      "actions": [
+        "eco_mining",
+        "slice_mining",
+        "disk_scan",
+        "lexicon_gap"
+      ],
+      "concepts_added": 10,
+      "files_indexed": 65,
+      "ran_at": "2026-06-27T14:13:25.545554"
+    },
     {
       "date": "2026-06-27",
       "summary_id": "b8b49e2a",
@@ -269,15 +292,15 @@
       "core_modules_last_date": "2026-06-27",
       "core_modules_done_today": 1,
       "core_modules_total_done": 2,
-      "config_files_last_date": "2026-06-26",
+      "config_files_last_date": "2026-06-27",
       "config_files_done_today": 1,
-      "config_files_total_done": 1
+      "config_files_total_done": 2
     },
     "eco_layer": {
       "narrative_ecology": {
-        "offset": 800,
-        "last_mined": "2026-06-27T14:09:03.417139",
-        "total_mined": 800
+        "offset": 900,
+        "last_mined": "2026-06-27T14:13:21.323683",
+        "total_mined": 900
       }
     }
   }

@@ -295,6 +295,22 @@
       "first_seen": "2026-06-26T20:46:48.328088",
       "importance": 92
     },
+    "as": {
+      "name": "as",
+      "definition": "as是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "12人格矩阵",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.673567",
+      "importance": 91
+    },
     "生存层": {
       "name": "生存层",
       "definition": "系统必须存在的基础设施，不依赖任何'聪明'，只依赖'存在'。",
@@ -2369,6 +2385,22 @@
       "first_seen": "2026-06-27T14:09:05.960303",
       "importance": 75
     },
+    "id": {
+      "name": "id",
+      "definition": "ption_0_5072\": \"未知的生成选项 \\\"{0}\\\"。\", \"Unknown_build_option_0_Did_you_mean_1_5077\": \"未知的生成选项 \\\"{0}\\\"。你是想使用 \\\"{1}\\\" 吗?\",",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "影子双向映射",
+        "in"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.683651",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -2383,6 +2415,22 @@
       "examples": [],
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.096281",
+      "importance": 74
+    },
+    "performance_config": {
+      "name": "performance_config",
+      "definition": "performance_config是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.693714",
       "importance": 74
     },
     "count": {
@@ -2632,6 +2680,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:09:05.970104",
+      "importance": 72
+    },
+    "你是不": {
+      "name": "你是不",
+      "definition": "own_keyword_or_identifier_Did_you_mean_0_1435\": \"未知的关键字或标识符。你是不是指“{0}”?\", \"Unknown_option_excludes_Did_you_mean_exclude_611",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.704510",
       "importance": 72
     },
     "三界格式化": {
@@ -3007,6 +3071,102 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:09:06.021809",
+      "importance": 69
+    },
+    "str": {
+      "name": "str",
+      "definition": "str是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.714090",
+      "importance": 69
+    },
+    "for": {
+      "name": "for",
+      "definition": "for是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.724282",
+      "importance": 69
+    },
+    "EmotionVector": {
+      "name": "EmotionVector",
+      "definition": "EmotionVector是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "Emotional_Trigger_情感触发器",
+        "in"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.733370",
+      "importance": 69
+    },
+    "PersonalityConfigurator": {
+      "name": "PersonalityConfigurator",
+      "definition": "PersonalityConfigurator是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.743025",
+      "importance": 69
+    },
+    "JavaScript": {
+      "name": "JavaScript",
+      "definition": "器对象。如可能首选使用“{0}”。\", \"_0_is_a_type_and_cannot_be_imported_in_JavaScript_files_Use_1_in_a_JSDoc_type_annotation_18042\": \"“{0}”是一种类型，",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.752109",
+      "importance": 69
+    },
+    "key": {
+      "name": "key",
+      "definition": "mean_1_5025\": \"未知的编译器选项 \\\"{0}\\\"。你是想使用 \\\"{1}\\\" 吗?\", \"Unknown_keyword_or_identifier_Did_you_mean_0_1435\": \"未知的关键字或标识符。你是不是指“{",
+      "category": "待分类",
+      "related": [
+        "or",
+        "结构",
+        "as",
+        "in",
+        "AC"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:13:23.761181",
       "importance": 69
     },
     "黑白猫渗透逻辑": {
@@ -3796,7 +3956,8 @@
       "酒城波尔多有句名言",
       "主要可以从这几个方面运用",
       "主要分这样几种情况",
-      "主要有三种类型"
+      "主要有三种类型",
+      "PersonalityConfigurator"
     ],
     "恢复机制": [
       "种子",
@@ -3989,7 +4150,16 @@
       "AutoForward",
       "无效问题",
       "下启动",
-      "将被忽略"
+      "将被忽略",
+      "as",
+      "id",
+      "performance_config",
+      "你是不",
+      "str",
+      "for",
+      "EmotionVector",
+      "JavaScript",
+      "key"
     ],
     "核心概念": [
       "现居住",
@@ -4001,5 +4171,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:09:06.932707"
+  "exported_at": "2026-06-27T14:13:25.546106"
 }
