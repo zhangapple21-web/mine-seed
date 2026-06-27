@@ -2545,6 +2545,22 @@
       "first_seen": "2026-06-27T14:13:23.683651",
       "importance": 75
     },
+    "ns": {
+      "name": "ns",
+      "definition": "ns是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "希望",
+        "restrictions",
+        "removed_restrictions",
+        "tokens"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:21.612285",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -3906,6 +3922,84 @@
       "first_seen": "2026-06-27T14:04:42.077003",
       "importance": 60
     },
+    "nr": {
+      "name": "nr",
+      "definition": "nr是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "ns",
+        "希望"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:21.627762",
+      "importance": 57
+    },
+    "nz": {
+      "name": "nz",
+      "definition": "nz是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "天之前",
+        "ns",
+        "希望",
+        "nr"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:21.646500",
+      "importance": 57
+    },
+    "vn": {
+      "name": "vn",
+      "definition": "vn是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "ns",
+        "希望",
+        "nr",
+        "nz"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:21.657067",
+      "importance": 57
+    },
+    "zg": {
+      "name": "zg",
+      "definition": "zg是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "ns",
+        "希望",
+        "nr",
+        "nz"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:21.996924",
+      "importance": 57
+    },
+    "nrt": {
+      "name": "nrt",
+      "definition": "nrt是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "ns",
+        "希望",
+        "nr",
+        "nz"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:22:22.017340",
+      "importance": 57
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -4324,7 +4418,13 @@
       "for",
       "EmotionVector",
       "JavaScript",
-      "key"
+      "key",
+      "ns",
+      "nr",
+      "nz",
+      "vn",
+      "zg",
+      "nrt"
     ],
     "核心概念": [
       "现居住",
@@ -4341,5 +4441,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:14:29.697132"
+  "exported_at": "2026-06-27T14:22:23.052696"
 }
