@@ -5148,6 +5148,26 @@
       "first_seen": "2026-06-27T19:50:31.194314",
       "importance": 65
     },
+    "本地考古吸收__2026_06_27_mine_seed_c": {
+      "name": "本地考古吸收__2026_06_27_mine_seed_c",
+      "definition": "[Guardian-constraint] 该文件（考古报告）吸收率仅 5%，有 57 个结构未被词库/记忆吸收：DAG, USER, 三条子公理, 下一步最重要的架构, 不做什么, 不照搬, 不重复, 五条生存定律。需要深入考古和吸收。",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-011",
+      "first_seen": "2026-06-27T21:37:51.765824",
+      "importance": 65
+    },
+    "本地考古吸收__2026_06_27_r1_dag_real": {
+      "name": "本地考古吸收__2026_06_27_r1_dag_real",
+      "definition": "[Guardian-constraint] 该文件（考古报告）吸收率仅 4%，有 70 个结构未被词库/记忆吸收：ABC, ABC 大脑结构（代码碎片）, A层（Analysis）, B层（Brainstorming）, C层（Command）, DAG, DAG 绑定标记, FIVE。需要深入考古和吸收。",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-012",
+      "first_seen": "2026-06-27T21:37:51.777491",
+      "importance": 65
+    },
     "persuasive_salesperson": {
       "name": "persuasive_salesperson",
       "definition": "persuasive_salesperson是从structural_v2材料中自动提取的概念",
@@ -5370,6 +5390,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:44:42.163184",
+      "importance": 63
+    },
+    "and": {
+      "name": "and",
+      "definition": "and是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.905838",
       "importance": 63
     },
     "需要卸载手机管家类型软件的": {
@@ -6780,6 +6816,214 @@
       "first_seen": "2026-06-27T16:44:42.214714",
       "importance": 57
     },
+    "海外人设包装": {
+      "name": "海外人设包装",
+      "definition": "海外人设包装是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.919222",
+      "importance": 57
+    },
+    "短話長說": {
+      "name": "短話長說",
+      "definition": "，切勿奪命連環問，引起反感； 提問不要開放式，一定要選擇式，才能掌握主場，牽著客戶鼻子走； 常用語換著說，學會長話短說，短話長說 長話短說：流水，無意義，無下文鋪墊，無問題延伸一律精簡或不說； 短話長說：早安晚安午安，安到吐血，吃飯了嗎？（你要請人",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.930258",
+      "importance": 57
+    },
+    "哪些有名牛散": {
+      "name": "哪些有名牛散",
+      "definition": "托挂单，来恐吓散户达到护盘、拉升、洗盘的目的。正所谓挂而不卖，买而不挂，这就是外围股市操控 9： 不只机构主力收割散户，哪些有名牛散：葛卫东、徐开东、夏重阳、陈发树、章盟主、等人，都是把手伸向散户的，最著名的就是徐翔了，他们赚散户的养家糊口的钱！ 10",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.942021",
+      "importance": 57
+    },
+    "睡前说": {
+      "name": "睡前说",
+      "definition": "\", \"hash\": \"cb26b6c08984a63832a105ba2465defb\" }, { \"text\": \"睡前说：明天是我公司三周年纪念日，这是一个有意义的日子，我要早点休息，明天我们会组织员工一起去希望小学献爱心，为这个社会留下一",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.952298",
+      "importance": 57
+    },
+    "長話短說": {
+      "name": "長話短說",
+      "definition": "，問答不急，切勿奪命連環問，引起反感； 提問不要開放式，一定要選擇式，才能掌握主場，牽著客戶鼻子走； 常用語換著說，學會長話短說，短話長說 長話短說：流水，無意義，無下文鋪墊，無問題延伸一律精簡或不說； 短話長說：早安晚安午安，安到吐血，吃飯了嗎？",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.963904",
+      "importance": 57
+    },
+    "定位包装": {
+      "name": "定位包装",
+      "definition": "情感中以三方为中心处于主导地位（高阶情感）! 定位包装： 1.三方的素材（照片 小视频 四季 居家 办公 聚会\u0001）素材一定清晰无水印 2.三方的人物故事（可以参考文档里的一份",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.975436",
+      "importance": 57
+    },
+    "她会好奇": {
+      "name": "她会好奇",
+      "definition": "。我个人过去有戴过一个左耳环，女生似乎都还蛮喜欢的，这些饰物除了可以增加你的整体 感之外，往往也会激起女人对你的想象力，她会好奇：“为什么他手上戴了这个戒指？背后的故事又 是什么？难道是因为他还念念不忘之前的某个女人？” 不过话说回来，男人的装扮必",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.985984",
+      "importance": 57
+    },
+    "就好比我问你": {
+      "name": "就好比我问你",
+      "definition": "能这样问。毕竟男女能不能够在一起、多快可以在一起， 这些问题本身并没有什么实质意义，最终仍取决于每个个案中的相关变数。 就好比我问你：“什么时候可以钓到鱼？”答案必须视其它变数而定，比方说当时你在哪里钓鱼、 天气是否适合钓鱼、要钓大鱼还是小鱼、有没有其",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:45.999601",
+      "importance": 57
+    },
+    "通过物品铺垫": {
+      "name": "通过物品铺垫",
+      "definition": "者明天去新加坡见我姐，我姐要我去那边聊个事情，我自己也不是很懂，因为他之前拉我去搞过两次，没必要主动去告诉你去干嘛 2.通过物品铺垫：我最近看上什么车，可能最近我会赚到这辆车开始铺垫通过延伸铺垫自己的主题 3.通过故事情节去铺垫：例：塑造叔叔形象~明天",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:36:46.010159",
+      "importance": 57
+    },
+    "恭喜群内成员": {
+      "name": "恭喜群内成员",
+      "definition": "=====2-3分钟后==========+ 啊 豪, [2025/5/19 18:48] 助理 今日幸运截屏活动结束，恭喜群内成员： xxx获得现金奖励50 xxx获得现金奖励50\", \"tags\": [ \"未命名文件夹_6\", \"剧本(1)_副本.",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:37:43.395408",
+      "importance": 57
+    },
+    "而这座教堂也": {
+      "name": "而这座教堂也",
+      "definition": "一个很大的红色风车，看起来很漂亮，很有文艺范，走在圣心大教堂映入眼前的是代表着圣洁不可侵犯，也是寓意这世间最美好的事情，而这座教堂也被称为世界上最美的白色教堂，在巴黎遇见最不愉快的一件事情就是在巴黎的地铁口遇到了一名小偷我们刚出地铁我的包包就被抢走了，",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:37:43.406840",
+      "importance": 57
+    },
+    "今天又": {
+      "name": "今天又",
+      "definition": "今天又是指数不跌跌个股 啊 豪, [2025/5/28 9:56] 12 看看人家老美，涨就是实实在在的涨 啊 豪, [202",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:37:43.418561",
+      "importance": 57
+    },
+    "大A一直都": {
+      "name": "大A一直都",
+      "definition": "025/5/28 9:56] 12 看看人家老美，涨就是实实在在的涨 啊 豪, [2025/5/28 9:58] 20 大A一直都是指数稳如老狗，至于个股的的涨跌，谁会去顾忌小散的死活呢？ 啊 豪, [2025/5/28 10:01] 助理@全体 方",
+      "category": "架构分层",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "me",
+        "it"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T21:37:43.429761",
+      "importance": 57
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -6930,7 +7174,21 @@
       "完整歌词如下",
       "希望你被这个世界爱着",
       "a_layer",
-      "b_layer"
+      "b_layer",
+      "and",
+      "海外人设包装",
+      "短話長說",
+      "哪些有名牛散",
+      "睡前说",
+      "長話短說",
+      "定位包装",
+      "她会好奇",
+      "就好比我问你",
+      "通过物品铺垫",
+      "恭喜群内成员",
+      "而这座教堂也",
+      "今天又",
+      "大A一直都"
     ],
     "生存定律": [
       "笨者生存"
@@ -6960,7 +7218,9 @@
       "提升为公理候选__笨者生存验证",
       "经验验证__薄弱分类的概念积累不足_影响系统理解能力",
       "经验验证__该命题可以作为系统公理",
-      "经验验证__该经验模式_constraint_可以推广到更广"
+      "经验验证__该经验模式_constraint_可以推广到更广",
+      "本地考古吸收__2026_06_27_mine_seed_c",
+      "本地考古吸收__2026_06_27_r1_dag_real"
     ],
     "方法论": [
       "考古",
@@ -7397,5 +7657,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T21:24:15.411591"
+  "exported_at": "2026-06-27T21:38:07.909216"
 }
