@@ -4753,6 +4753,22 @@
       "first_seen": "2026-06-27T16:14:24.248416",
       "importance": 67
     },
+    "txt__": {
+      "name": "txt__",
+      "definition": "txt__是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.181198",
+      "importance": 67
+    },
     "SubscribeAndInstall": {
       "name": "SubscribeAndInstall",
       "definition": "SubscribeAndInstall是从eco:narrative_ecology材料中自动提取的概念",
@@ -5114,6 +5130,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T19:45:44.810466",
+      "importance": 65
+    },
+    "要不是隔着屏幕我都怕你看出来": {
+      "name": "要不是隔着屏幕我都怕你看出来",
+      "definition": "正我现在挺在意你的。 你听我一句，你那句我真的记住了，我现在就想继续跟你聊下去。 你听我一句，你这语气我听着心里痒痒的，要不是隔着屏幕我都怕你看出来。 别笑我啊，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 说真的，你这样让我很难不回应你，要不是隔着屏幕",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.194314",
       "importance": 65
     },
     "persuasive_salesperson": {
@@ -5578,6 +5610,70 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T19:45:44.843041",
+      "importance": 62
+    },
+    "你这话让我有点想你": {
+      "name": "你这话让我有点想你",
+      "definition": "你这话让我有点想你是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.205126",
+      "importance": 62
+    },
+    "所以我有点想靠近你": {
+      "name": "所以我有点想靠近你",
+      "definition": "所以我有点想靠近你是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.215310",
+      "importance": 62
+    },
+    "不过我也没打算躲": {
+      "name": "不过我也没打算躲",
+      "definition": "不过我也没打算躲是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.226141",
+      "importance": 62
+    },
+    "你这样说让我有点上心了": {
+      "name": "你这样说让我有点上心了",
+      "definition": "你这样说让我有点上心了是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "me",
+        "on",
+        "at"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T19:50:31.237174",
       "importance": 62
     },
     "scan_report_path": {
@@ -7275,7 +7371,13 @@
       "如果你信我一句",
       "你现在这种状态特别正常",
       "我跟你说一句心里话",
-      "你这句话让我觉得你挺可爱的"
+      "你这句话让我觉得你挺可爱的",
+      "txt__",
+      "要不是隔着屏幕我都怕你看出来",
+      "你这话让我有点想你",
+      "所以我有点想靠近你",
+      "不过我也没打算躲",
+      "你这样说让我有点上心了"
     ],
     "核心概念": [
       "现居住",
@@ -7295,5 +7397,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T19:46:06.359115"
+  "exported_at": "2026-06-27T19:50:45.420806"
 }
