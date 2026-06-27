@@ -45,6 +45,22 @@
       "first_seen": "2026-06-26T20:26:02.975416",
       "importance": 100
     },
+    "nt": {
+      "name": "nt",
+      "definition": "rength\", 0) > 0.7 and random.random() < 0.3: promotion_elements = [ \" 现在正是最佳时机！\", \" 不要错过这次机会！\", \" 限时优惠，机不可失！\" ] final_repl",
+      "category": "核心概念",
+      "related": [
+        "灵魂",
+        "or",
+        "as",
+        "12人格矩阵",
+        "生态位"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.735409",
+      "importance": 100
+    },
     "老张-V∞Ω元协议": {
       "name": "老张-V∞Ω元协议",
       "definition": "伪算法内核的核心元协议。核心逻辑：只保留那个，在真实世界里，愿意为代价负责的判断。",
@@ -183,6 +199,22 @@
       "source": "R1_Ω_FINAL.json V∞_BLUEPRINT_V2",
       "first_seen": "2026-06-26T20:46:48.322426",
       "importance": 95
+    },
+    "re": {
+      "name": "re",
+      "definition": "re是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "as",
+        "Ω-Core"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.743232",
+      "importance": 94
     },
     "种子层": {
       "name": "种子层",
@@ -983,6 +1015,22 @@
       "first_seen": "2026-06-26T22:04:37.607329",
       "importance": 85
     },
+    "system_state": {
+      "name": "system_state",
+      "definition": "system_state是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.750295",
+      "importance": 84
+    },
     "Emotional_Trigger_情感触发器": {
       "name": "Emotional_Trigger_情感触发器",
       "definition": "Emotional_Trigger_情感触发器是从eco:narrative_ecology材料中自动提取的概念",
@@ -1389,6 +1437,22 @@
       "first_seen": "2026-06-27T14:04:37.947782",
       "importance": 82
     },
+    "SystemMode": {
+      "name": "SystemMode",
+      "definition": "SystemMode是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.757860",
+      "importance": 82
+    },
     "词库层": {
       "name": "词库层",
       "definition": "系统的语言结构层，原始词库、合并词库、去重引擎、映射索引。R1中是body死了但soul活下来的典型。",
@@ -1504,6 +1568,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:09:05.941972",
+      "importance": 80
+    },
+    "context_info": {
+      "name": "context_info",
+      "definition": "context_info是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.764815",
+      "importance": 80
+    },
+    "personality_engine": {
+      "name": "personality_engine",
+      "definition": "personality_engine是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.772383",
       "importance": 80
     },
     "提现分为两种": {
@@ -2000,6 +2096,54 @@
       "first_seen": "2026-06-27T14:09:05.950235",
       "importance": 78
     },
+    "mode_info": {
+      "name": "mode_info",
+      "definition": "mode_info是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.779184",
+      "importance": 77
+    },
+    "master_controller": {
+      "name": "master_controller",
+      "definition": "master_controller是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "ACE概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.786368",
+      "importance": 77
+    },
+    "integration_rules": {
+      "name": "integration_rules",
+      "definition": "integration_rules是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "治理原则",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.794604",
+      "importance": 77
+    },
     "阵营玩家": {
       "name": "阵营玩家",
       "definition": "- 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许",
@@ -2431,6 +2575,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:13:23.693714",
+      "importance": 74
+    },
+    "promotion_elements": {
+      "name": "promotion_elements",
+      "definition": "t(\"promotion_strength\", 0) > 0.7 and random.random() < 0.3: promotion_elements = [ \" 现在正是最佳时机！\", \" 不要错过这次机会！\", \" 限时优惠，机不可失！\" ] final_reply",
+      "category": "ACE概念",
+      "related": [
+        "灵魂",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:14:28.800849",
       "importance": 74
     },
     "count": {
@@ -3916,7 +4076,8 @@
       "认真与知友们切磋一下",
       "小时内一周内一个月内去年",
       "古斯塔夫的尊名",
-      "真实造物主的尊名"
+      "真实造物主的尊名",
+      "integration_rules"
     ],
     "方法论": [
       "考古",
@@ -3957,7 +4118,11 @@
       "主要可以从这几个方面运用",
       "主要分这样几种情况",
       "主要有三种类型",
-      "PersonalityConfigurator"
+      "PersonalityConfigurator",
+      "personality_engine",
+      "mode_info",
+      "master_controller",
+      "promotion_elements"
     ],
     "恢复机制": [
       "种子",
@@ -4167,9 +4332,14 @@
       "申请额度",
       "申请周期",
       "客服回复",
-      "中说道"
+      "中说道",
+      "nt",
+      "re",
+      "system_state",
+      "SystemMode",
+      "context_info"
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:13:25.546106"
+  "exported_at": "2026-06-27T14:14:29.697132"
 }
