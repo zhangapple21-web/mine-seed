@@ -93,6 +93,70 @@
       "first_seen": "2026-06-27T16:39:04.318729",
       "importance": 100
     },
+    "me": {
+      "name": "me",
+      "definition": "me是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "or"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.592333",
+      "importance": 100
+    },
+    "it": {
+      "name": "it",
+      "definition": "ousomething? 🤣 这是否提醒你什么？ 🤣 [晚上9:24,2022年10月14日]Fay:ItlooksabitliketheMarinaBaySandsHotel 它看起来有点像滨海湾金沙酒店 [晚上9:25,",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.602966",
+      "importance": 100
+    },
+    "on": {
+      "name": "on",
+      "definition": "on是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.613494",
+      "importance": 100
+    },
+    "at": {
+      "name": "at",
+      "definition": "at是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.623590",
+      "importance": 100
+    },
     "老张-V∞Ω元协议": {
       "name": "老张-V∞Ω元协议",
       "definition": "伪算法内核的核心元协议。核心逻辑：只保留那个，在真实世界里，愿意为代价负责的判断。",
@@ -2480,6 +2544,22 @@
       "first_seen": "2026-06-27T15:47:02.070926",
       "importance": 78
     },
+    "is": {
+      "name": "is",
+      "definition": "14847118fd5fd8ff895\": { \"text\": \"号码10.14法国人在迪拜生活12年医生:Doesthisremind yousomething? 🤣 这是否提醒你什么？ 🤣 [晚上9:24,2022年10月14日]Fay:I",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.633209",
+      "importance": 78
+    },
     "mode_info": {
       "name": "mode_info",
       "definition": "mode_info是从eco:narrative_ecology材料中自动提取的概念",
@@ -3482,6 +3562,22 @@
       "first_seen": "2026-06-27T16:34:02.031473",
       "importance": 72
     },
+    "ThereareChinesestyle": {
+      "name": "ThereareChinesestyle",
+      "definition": "ThereareChinesestyle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.643263",
+      "importance": 72
+    },
     "三界格式化": {
       "name": "三界格式化",
       "definition": "R1引擎的输出格式化机制，将原始输出按三界/五界结构进行塑形。",
@@ -4161,6 +4257,38 @@
       "first_seen": "2026-06-27T16:34:02.052152",
       "importance": 69
     },
+    "未命名文件夹": {
+      "name": "未命名文件夹",
+      "definition": "未命名文件夹是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.653902",
+      "importance": 69
+    },
+    "are": {
+      "name": "are",
+      "definition": "are是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.663999",
+      "importance": 69
+    },
     "top_rule": {
       "name": "top_rule",
       "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
@@ -4399,6 +4527,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:14:24.268267",
+      "importance": 66
+    },
+    "EuropeanandAmericanstyle": {
+      "name": "EuropeanandAmericanstyle",
+      "definition": "EuropeanandAmericanstyle是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.673561",
+      "importance": 66
+    },
+    "an": {
+      "name": "an",
+      "definition": "an是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:43:21.686103",
       "importance": 66
     },
     "黑白猫渗透逻辑": {
@@ -6595,7 +6755,17 @@
       "tags",
       "source",
       "Users",
-      "apple"
+      "apple",
+      "me",
+      "it",
+      "on",
+      "at",
+      "is",
+      "ThereareChinesestyle",
+      "未命名文件夹",
+      "are",
+      "EuropeanandAmericanstyle",
+      "an"
     ],
     "核心概念": [
       "现居住",
@@ -6615,5 +6785,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:39:14.544407"
+  "exported_at": "2026-06-27T16:43:33.158115"
 }

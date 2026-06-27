@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-27T16:39:14.132514",
+  "last_run": "2026-06-27T16:43:31.357620",
   "last_scan_paths": {
     "c:\\Users\\USER\\Downloads\\Telegram Desktop\\Knowledge_Base\\AI对话": {
       "last_scanned_at": "2026-06-26T20:57:50.148653",
@@ -127,9 +127,20 @@
       "interesting": 5
     }
   },
-  "last_lexicon_count": 405,
-  "last_memory_count": 2458,
+  "last_lexicon_count": 415,
+  "last_memory_count": 2510,
   "daily_summaries": [
+    {
+      "date": "2026-06-27",
+      "summary_id": "794e254a",
+      "actions": [
+        "eco_mining",
+        "lexicon_gap"
+      ],
+      "concepts_added": 10,
+      "files_indexed": 50,
+      "ran_at": "2026-06-27T16:43:31.357620"
+    },
     {
       "date": "2026-06-27",
       "summary_id": "aaa252b0",
@@ -490,13 +501,19 @@
     },
     "eco_layer": {
       "narrative_ecology": {
-        "offset": 2400,
-        "last_mined": "2026-06-27T16:39:01.866122",
-        "total_mined": 2400
+        "offset": 2500,
+        "last_mined": "2026-06-27T16:43:19.128254",
+        "total_mined": 2500
       }
     }
   },
   "recursion_depths": [
+    {
+      "date": "2026-06-27",
+      "depth": 2,
+      "tasks_executed": 1,
+      "stop_reason": "no_more_pending_tasks"
+    },
     {
       "date": "2026-06-27",
       "depth": 10,
