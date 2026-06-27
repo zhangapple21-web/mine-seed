@@ -1,6 +1,3020 @@
 {
-  "total": 2720,
+  "total": 2780,
   "entries": [
+    {
+      "id": "afb85c13",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 21:24:13\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 0 种模式，索引 50 条，新概念候选 0 个\n- 磁盘扫描: 扫了 2 个路径，新索引 0 个文件\n- 词库缺口: 6 个分类待补充，本轮新增 0 个概念\n\n【词库状态】\n- 概念总数: 451\n- 分类总数: 20\n- 本轮新增概念: 0\n\n【记忆索引状态】\n- 总...",
+      "created_at": "2026-06-27T21:24:13.092230",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:24:13.092230",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "717f6c71",
+      "title": "[任务归档] 碎片考古: r1_structure_lexicon.json",
+      "type": "task_archive",
+      "category": "任务归档",
+      "source": "archivist",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "fragment_archaeology",
+        "ext:json",
+        "archived",
+        "RQ-20260627-009"
+      ],
+      "related_concepts": [
+        {
+          "name": "考古",
+          "relevance": 50,
+          "category": "方法论"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "on",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "## 任务ID: RQ-20260627-009\n**标题**: 碎片考古: r1_structure_lexicon.json\n**创建者**: file_scanner\n**优先级**: medium\n**假设**: 该文件（r1_structure_lexicon.json, 9KB）可能包含有价值的R1结构或认知架构碎片，需要考古分析。\n\n**证据数**: 5\n**反例数**: 7\n\n##...",
+      "created_at": "2026-06-27T21:23:53.384629",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:53.384629",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "817c85fc",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T21:23:39.709187\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 3000, \"remaining\": 1347, \"progress_pct\": 69.0, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T21:23:41.937180",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:41.937180",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d876b6b5",
+      "title": "叙事生态 #2949",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2949",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2949"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "3 i 情意深重 3 i 情意相投 3 i 情意笃深 3 n 情意绵绵 25 l 情意重 3 n 情感 1612 n 情感世界 3 n 情感冲动 3 n 情感化 3 n 情感天地 3 n 情感小说 3 l 情感性 11 n 情感故事 3 i 情感日记 3 n 情感淡漠 3 n 情感游戏 3 n 情感生活 3 n 情感论坛 3 n 情感话题 3 n 情感高涨 3 l 情愫 53 n 情愿 488 n...",
+      "created_at": "2026-06-27T21:23:39.531545",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:39.531545",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff06d426",
+      "title": "叙事生态 #2948",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2948",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2948"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.522000\", \"hash\": \"593ab699d5d1bbff30983e0bf18a948d\" }, { \"text\": \"性教育片 3 n 性文化节 3 n 性文学 3 n 性文物 3 n 性无能 3 n 性早熟 3 l 性智 4 n 性暴力 3 n 性本善 3 n 性本能 3 n 性格 2521 n 性格不合 3 ",
+      "created_at": "2026-06-27T21:23:39.353052",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:39.353052",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "136739b1",
+      "title": "叙事生态 #2947",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2947",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2947"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 心小志大 3 nr 心尖 23 n 心巧嘴乖 3 n 心平气和 86 i 心平气定 3 i 心广体胖 3 i 心底 804 s 心开目明 3 i 心弛神往 3 v 心弦 59 n 心形 30 n 心形线 3 s 心往神驰 3 i 心律 174 n 心律不整 3 l 心律不齐 3 i 心律失常 3 i 心得 234 v 心得体会 3 l 心得安 7 i 心心 3 n 心心念念 7 n 心心相印 5...",
+      "created_at": "2026-06-27T21:23:39.173721",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:39.173721",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ae6d494d",
+      "title": "叙事生态 #2946",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2946",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2946"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.521783\", \"hash\": \"c0e898a712ee2f5293b23cd38a807f38\" }, { \"text\": \"14 n 影视城 16 n 影视天堂 3 n 影视娱乐 3 n 影视帝国 3 n 影视 3 n 影视文化 3 n 影视明星 3 n 影视歌星 3 n 影视歌曲 3 n 影视点播 3 n 影视片 1",
+      "created_at": "2026-06-27T21:23:38.995366",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.995366",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bc4b293b",
+      "title": "叙事生态 #2945",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2945",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2945"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "vn",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "zg",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 3 n 彩钢瓦 3 nz 彩钱 3 n 彩铃网 3 n 彩门 12 n 彩陶 622 n 彩陶文化 6 nz 彩霞 78 n 彩霞满天 3 nz 彩霸王 3 nz 彩饰 9 n 彩饰版 3 n 彪 437 zg 彪升 3 v 彪壮 3 a 彪形 2 b 彪形大汉 20 i 彪悍 35 a 彪炳 15 v 彪炳千古 3 i 彪炳千秋 3 i 彪炳史册 6 i 彪炳春秋 3 i 彪马 3 v 彫 1...",
+      "created_at": "2026-06-27T21:23:38.818322",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.818322",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "073db176",
+      "title": "叙事生态 #2944",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2944",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2944"
+      ],
+      "related_concepts": [
+        {
+          "name": "vn",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "zg",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": ", { \"text\": \"zg 彦士 3 nrfg 彦涵 13 nrfg 彧 403 zg 彧中 3 vn 彨 165 zg 彩 2318 n 彩云 205 n 彩云易散 3 n 彩云追月 3 l 彩云飞 4 nz 彩京 3 nz 彩信 33 nz 彩信网 3 nz 彩儿 3 n 彩光 10 n 彩光板 3 n 彩凤随鸦 3 n 彩券 3 n 彩印 272 n 彩印包装 3 n 彩印厂 4 n 彩",
+      "created_at": "2026-06-27T21:23:38.635847",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.635847",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "005a1f4e",
+      "title": "叙事生态 #2943",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2943",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2943"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "nz",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "is",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"引证 75 v 引证者 3 n 引诗为证 3 i 引语 8 v 引诱 275 v 引诱剂 4 nz 引资 17 v 引起 12074 v 引起争议 3 l 引起偏见 3 i 引起共鸣 3 i 引起反响 3 l 引起反对 3 l 引起反感 3 l 引起惊慌 3 n 引起瘟疫 3 n 引起矛盾 3 l 引起纠纷 3 z 引起轰动 3 i 引足救经 3 i 引路 207 v 引",
+      "created_at": "2026-06-27T21:23:38.457780",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.457780",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e6c40c53",
+      "title": "叙事生态 #2942",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2942",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2942"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "vn",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "n 建筑缺陷 3 n 建筑网 3 n 建筑署 2 n 建筑群 1756 n 建筑者 20 n 建筑节能 3 n 建筑行业 3 n 建筑装修 3 n 建筑设备 3 n 建筑设施 3 n 建筑设计 15 n 建筑评价 3 n 建筑诊断 3 n 建筑造型 3 n 建筑间距 3 n 建筑队 21 n 建筑防火 3 n 建筑隐喻 3 n 建筑隔热 3 n 建筑面积 88 n 建筑风格 3 n 建管 5 vn...",
+      "created_at": "2026-06-27T21:23:38.277207",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.277207",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "52786dac",
+      "title": "叙事生态 #2941",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2941",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2941"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "nr 廉三世 8 nr 廉为荣 3 nr 廉义自立 2 nr 廉二世 29 nr 廉亲王 2 nr 廉价 443 n 廉价住所 3 n 廉价出售 3 l 廉价品 3 l 廉价地 3 l 廉价版 3 l 廉价部 3 n 廉剖 3 v 廉可寄财 3 nr 廉售 3 v 廉售价 3 n 廉售品 3 n 廉四世 8 nr 廉大怒 4 nr 廉姆斯 2 nr 廉宜 3 a 廉川堡 8 nr 廉希宪 5 nr...",
+      "created_at": "2026-06-27T21:23:38.096912",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:38.096912",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4cc2c83a",
+      "title": "叙事生态 #2940",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2940",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2940"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "nr 左树声 6 nr 左校 4 n 左梦庚 45 nr 左梦梅 17 nr 左步青 15 nr 左武卫 7 nr 左氏传 3 nr 左氏春秋 3 nr 左洛复 3 nr 左派 425 m 左派份子 3 n 左渐晓 3 nr 左满舵 6 nr 左理想 3 n 左监军 2 nr 左盘右 2 nr 左眼 158 m 左祖右 130 nr 左移 17 nr 左程右准 3 n 左章 3 m 左端 8 m ...",
+      "created_at": "2026-06-27T21:23:37.921004",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.921004",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c8427df3",
+      "title": "叙事生态 #2939",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2939",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2939"
+      ],
+      "related_concepts": [
+        {
+          "name": "zg",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nrt",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "之士 2 i 岩缝 70 n 岩羊 17 n 岩茶 3 n 岩蔷薇 3 n 岩隙 3 n 岩鹰 3 n 岪 44 zg 岫 158 ns 岫云 3 ns 岫岩 16 ns 岫岩县 6 ns 岫岩满族自治县 2 ns 岬 219 zg 岬角 52 n 岭 3212 n 岭上 67 s 岭下 27 s 岭东 3 ns 岭东区 3 ns 岭东商专 3 nt 岭兜小区 3 n 岭北 3 s 岭北行省 18...",
+      "created_at": "2026-06-27T21:23:37.741004",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.741004",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0b825b6c",
+      "title": "叙事生态 #2938",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2938",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2938"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "剂 3 n 展示 2204 v 展示中心 3 n 展示会 28 n 展示出 3 n 展示区 12 n 展示厅 4 n 展示台 12 n 展示室 3 n 展示架 3 n 展示柜 3 n 展示馆 5 n 展秀婷 5 nr 展线 3 n 展缓 3 v 展缓期限 3 n 展翅 139 v 展翅欲飞 3 nr 展翅飞翔 3 nr 展翅高飞 3 nr 展翼 2 n 展视 3 v 展览 1437 v 展览业 3...",
+      "created_at": "2026-06-27T21:23:37.562749",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.562749",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "46078cb1",
+      "title": "叙事生态 #2937",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2937",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2937"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "小孙女 3 nr 小孙子 37 nr 小孙孙 8 nr 小季 2 n 小孤山 3 nr 小学 3296 n 小学同学 3 n 小学教师 3 n 小学文化 3 n 小学校 99 n 小学校长 3 n 小学版 3 n 小学生 556 nr 小学老师 3 n 小学部 3 n 小孩 1589 n 小孩儿 182 n 小孩子 1026 n 小安子 2 nr 小宗 50 nr 小宗之 3 nr 小官 3 n ...",
+      "created_at": "2026-06-27T21:23:37.387388",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.387388",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3362d988",
+      "title": "叙事生态 #2936",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2936",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2936"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "nr",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "is",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"小划子 3 n 小则 3 n 小利 17 n 小别 3 d 小别墅 3 n 小到中雨 22 l 小到中雪 12 l 小剂 3 n 小剂量 3 n 小前提 4 nr 小剧场 32 n 小力 2 n 小力微 2 nr 小动 3 n 小动作 50 n 小动画 3 n 小动脉 3 n 小勃律 24 nr 小勐养 3 nr 小勺 7 nr 小包 159 n 小包装 3 n 小化子 ",
+      "created_at": "2026-06-27T21:23:37.212842",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.212842",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a2130b57",
+      "title": "叙事生态 #2935",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2935",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2935"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 63 n 小仗 3 n 小付 3 v 小令 38 n 小仪法 2 nr 小仲马 9 nr 小件 34 n 小任 6 n 小企业 129 n 小伍 4 n 小众 3 n 小众文化 3 nz 小伙 118 n 小伙伴 24 n 小伙儿 23 n 小伙子 949 n 小伙计 36 n 小会 3 n 小伞 3 n 小传 28 nr 小体 3 n 小作坊 20 n 小侄 3 n 小侄女 3 n 小侧窗 3...",
+      "created_at": "2026-06-27T21:23:37.030830",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:37.030830",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cc11c4c3",
+      "title": "叙事生态 #2934",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2934",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2934"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.520760\", \"hash\": \"03608f4da4b62838cfea27eea8d49df2\" }, { \"text\": \"4 l 寓意 297 n 寓意深远 3 l 寓意深长 5 i 寓所 100 n 寓教于乐 23 l 寓目 3 n 寓舍 3 n 寓藏 3 n 寓言 239 n 寓言故事 3 i 寓言诗 5 n 寓",
+      "created_at": "2026-06-27T21:23:36.856551",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:36.856551",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "be6c741b",
+      "title": "叙事生态 #2933",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2933",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2933"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "a_layer",
+          "relevance": 35,
+          "category": "架构分层"
+        },
+        {
+          "name": "file_type",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 宗太公 2 nr 宗姓 3 n 宗婆罗 2 nr 宗子 62 n 宗子兄 6 nr 宗子嗣 3 nr 宗子维 2 nr 宗学 3 n 宗学哲 2 nr 宗宋派 2 nr 宗完颜 15 nr 宗宝庆 3 nr 宗室 943 n 宗崇信 3 nr 宗崇宁 6 nr 宗师 126 n 宗师案临 3 nt 宗庙 262 nr 宗庙丘墟 3 n 宗庙社稷 3 nr 宗废太子 2 nr 宗废德 2 nr 宗...",
+      "created_at": "2026-06-27T21:23:36.681904",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:36.681904",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e96b9815",
+      "title": "叙事生态 #2932",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2932",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2932"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "使命 3 i 完成学业 3 l 完成度 3 l 完成率 258 n 完成百分 3 l 完扬声 2 i 完整 4142 a 完整包 3 i 完整型 3 n 完整如新 3 i 完整性 123 n 完整性检查 2 n 完整拼音 3 i 完整无损 3 i 完整无缺 3 i 完整权 3 n 完整版 3 n 完整篇 3 n 完整系 3 n 完档 3 v 完毕 1336 v 完泽笃 2 nr 完浚 3 v 完满...",
+      "created_at": "2026-06-27T21:23:36.506697",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:36.506697",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "91f12f3e",
+      "title": "叙事生态 #2931",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2931",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2931"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "10 l 宇宙船 3 l 宇宙观 40 l 宇宙论 6 l 宇宙速度 12 n 宇宙飞船 111 l 宇彩晶 2 nr 宇文 44 nz 宇文化及 3 l 宇文宪 6 nr 宇文忻 7 nr 宇文恺 22 nr 宇文恺卒 2 nr 宇文懋昭 2 nr 宇文护 50 nr 宇文护引 2 nr 宇文护迁 3 nr 宇文毓 8 nr 宇文氏 8 nr 宇文泰 126 nr 宇文泰之 4 nr 宇文泰军 ...",
+      "created_at": "2026-06-27T21:23:36.330819",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:36.330819",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "69c9a992",
+      "title": "叙事生态 #2930",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2930",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2930"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.520438\", \"hash\": \"ddbe021b7ac6317acb4d97f9d46c8b1e\" }, { \"text\": \"n 学业成绩 3 n 学业有成 5 n 学习 13482 v 学习业务 3 n 学习体会 3 n 学习动机 10 n 学习团 3 n 学习困境 3 n 学习型 37 n 学习外语 3 n 学习室 ",
+      "created_at": "2026-06-27T21:23:36.151974",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:36.151974",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "faf8dc82",
+      "title": "叙事生态 #2929",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2929",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2929"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nrt",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "奉献给 3 v 奉献者 2 n 奉祀 36 v 奉系 3 v 奉系军阀 3 l 奉节 75 v 奉节县 12 ns 奉若 3 v 奉若宝典 3 ns 奉若神明 24 i 奉行 583 v 奉行故事 3 i 奉访 3 v 奉调 42 v 奉贤 25 nrt 奉贤区 6 ns 奉贤县 3 ns 奉赠 10 v 奉赵 3 ns 奉辛比克党 30 ns 奉辞伐罪 3 i 奉迎 14 v 奉还 58 v 奉...",
+      "created_at": "2026-06-27T21:23:35.976556",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.976556",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3ee69218",
+      "title": "叙事生态 #2928",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2928",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2928"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 天台宗 49 nr 天台寺 2 ns 天台山 87 ns 天台路迷 3 nz 天各一方 28 l 天合 5 n 天同 5 n 天同寿 6 nr 天同星 3 nz 天名精 3 nr 天后宫 18 nr 天后庙 5 nr 天后级 3 l 天呀 59 e 天周 3 t 天命 241 nz 天命之誓 3 i 天命攸归 3 i 天命有归 3 i 天命难违 3 i 天园 7 n 天国 90 ns 天国阶梯 ...",
+      "created_at": "2026-06-27T21:23:35.801276",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.801276",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "aec7cde4",
+      "title": "叙事生态 #2927",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2927",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2927"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"n 大动脉 97 n 大动脉炎 3 n 大劫 3 v 大劫案 3 n 大势 173 n 大势已去 134 i 大势已定 3 l 大势所趋 108 i 大勃律 2 nr 大勇若怯 3 v 大包 147 n 大包大揽 43 l 大包干 19 n 大包月 3 n 大包装 3 n 大化 41 n 大化革新 3 nz 大北 9 ns 大北窑 3 ns 大匙 3 n 大匠运斤 3 n",
+      "created_at": "2026-06-27T21:23:35.625324",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.625324",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c0338dc7",
+      "title": "叙事生态 #2926",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2926",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2926"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "会战 25 nz 大会操 3 nr 大会舞 3 n 大会计 5 n 大伟 22 nr 大伤 3 n 大伤元气 3 n 大伤脑筋 3 n 大伯 222 ns 大伯子 3 nr 大伯母 3 nr 大伯父 3 nr 大位 78 n 大佐 9 nr 大体 1656 n 大体一致 3 d 大体上 384 l 大体描述 3 n 大体相当 3 l 大体说来 3 l 大余 10 r 大余县 7 ns 大佛 88 ...",
+      "created_at": "2026-06-27T21:23:35.450866",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.450866",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7c1ff7cb",
+      "title": "叙事生态 #2925",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2925",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2925"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "n 大仁大义 51 nz 大仁秀 2 nr 大仁药专 3 nr 大仇宿怨 3 i 大仓 3 ns 大仔恋 3 nr 大仙 38 n 大仲马 17 nr 大件 340 n 大任 36 n 大众 1523 n 大众交通 5 nz 大众传媒 3 l 大众传播 3 l 大众公司 7 nt 大众化 96 nz 大众卡 3 nz 大众呢 3 n 大众形音 3 i 大众性 11 n 大众情人 3 i 大众报 3...",
+      "created_at": "2026-06-27T21:23:35.270624",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.270624",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c6c5b7f5",
+      "title": "叙事生态 #2924",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2924",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2924"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "敬 31 i 大不相同 3 i 大不里士 36 ns 大专 601 n 大专同学 3 nt 大专学校 386 l 大专学生 3 l 大专文化 3 l 大专班 12 nr 大专生 57 b 大专院校 236 j 大丘 6 ns 大业 1361 n 大业路 3 n 大丛 11 n 大东 20 ns 大东区 3 ns 大东海 4 ns 大个 87 m 大个儿 39 m 大个子 220 m 大中 234 ...",
+      "created_at": "2026-06-27T21:23:35.085215",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:35.085215",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d141540e",
+      "title": "叙事生态 #2923",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2923",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2923"
+      ],
+      "related_concepts": [
+        {
+          "name": "vn",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "a_layer",
+          "relevance": 35,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " 外文书 6 n 外文出版社 11 nt 外文版 3 n 外文系 24 n 外文课 3 n 外方 117 f 外方内员 3 n 外方内圆 3 n 外族 84 n 外族人 9 n 外星 26 n 外星人 103 n 外显 3 a 外显子 3 n 外景 55 n 外景图 3 n 外景地 16 n 外景队 3 n 外服 3 n 外村 31 n 外村人 6 n 外来 925 f 外来人 17 n 外来人口...",
+      "created_at": "2026-06-27T21:23:34.902028",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.902028",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d0cde33c",
+      "title": "叙事生态 #2922",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2922",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2922"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "is",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"外劳 3 n 外勤 11 n 外勤人员 3 n 外包 3 n 外包装 51 n 外化 12 n 外区 3 n 外协 3 j 外卖 20 v 外卡 8 n 外厂 2 n 外厉内荏 3 i 外县 36 ns 外县市 3 n 外双溪 3 ns 外反射 3 n 外台秘要 3 n 外史 50 n 外号 494 n 外合里差 3 n 外合里应 3 n 外向 94 n 外向型 408 ",
+      "created_at": "2026-06-27T21:23:34.724486",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.724486",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e468ed22",
+      "title": "叙事生态 #2921",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2921",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2921"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "志诚 2 nr 夏忠靖 3 nr 夏总兵 15 nr 夏惠宗 2 nr 夏承德 13 nr 夏承焘 7 nr 夏收 34 nr 夏收夏种 3 n 夏政权 2 nr 夏救民 2 nr 夏敬观 3 nr 夏文化 3 nr 夏文彦 3 nr 夏文斌 2 nr 夏文汐 3 n 夏文说 3 nrfg 夏斗寅 261 nr 夏斯特 2 nr 夏方田 5 nr 夏族 14 nz 夏无冬 2 nr 夏日 212 ...",
+      "created_at": "2026-06-27T21:23:34.550851",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.550851",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "07b5d0d4",
+      "title": "叙事生态 #2920",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2920",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2920"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "is",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "我无法想象你",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"塑型 3 n 塑封 2 v 塑封机 3 n 塑形 10 n 塑性 313 n 塑性体 3 n 塑性变形 3 n 塑性形变 3 n 塑性材料 3 n 塑成 3 v 塑料 996 n 塑料五金 3 n 塑料产品 3 n 塑料件 6 n 塑料制品 3 n 塑料包装 3 n 塑料厂 3 n 塑料原料 3 n 塑料固化 3 n 塑料大棚 3 n 塑料套 2 n 塑料容器 3 n 塑",
+      "created_at": "2026-06-27T21:23:34.371264",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.371264",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "03d950d9",
+      "title": "叙事生态 #2919",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2919",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2919"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "vn",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "zg",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "a_layer",
+          "relevance": 35,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " 因素 7420 n 因素负荷 3 n 因缘 110 n 因缘为市 3 i 因缘际会 3 n 因而 6235 c 因而是 139 c 因袭 87 v 因袭旧规 3 i 因袭陈规 3 i 因贤任能 3 i 因购买 3 l 因车祸 3 n 因陀罗 9 n 因陋守旧 3 i 因陋就寡 3 i 因陋就简 24 i 因难见巧 3 i 因雨 3 n 因雨取消 3 l 因雨延期 3 i 因雨暂停 3 vn 因风...",
+      "created_at": "2026-06-27T21:23:34.192892",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.192892",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c455f7e5",
+      "title": "叙事生态 #2918",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2918",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2918"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 呼群结党 3 i 呼肠 3 n 呼衍族 2 nz 呼衍氏 2 nr 呼衍王 11 nr 呼衰 3 v 呼语 3 nz 呼起 3 v 呼起来 3 l 呼转 3 v 呼达雅 4 nr 呼隆呼 2 nr 呼集朋 16 nr 呼韩邪 13 nr 呼音克 13 nr 呼风唤雨 93 i 呼风换雨 3 i 呼饥号寒 3 i 命 11603 n 命不由人 3 l 命不由己 3 l 命不该绝 3 i 命世之才 ...",
+      "created_at": "2026-06-27T21:23:34.012580",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:34.012580",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "040b9b1b",
+      "title": "叙事生态 #2917",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2917",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2917"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 呆帐损失 3 n 呆愣愣 2 z 呆料 3 n 呆板 107 n 呆楞楞 3 z 呆气 3 n 呆滞 138 a 呆滞无神 3 i 呆笑 3 a 呆笨 5 a 呆若 3 z 呆若木鸡 52 i 呆账 46 n 呆里呆气 3 z 呆里撒奸 3 i 呈 8976 v 呈上升 3 v 呈交 31 v 呈几何 3 nr 呈圆形 3 n 呈子 4 n 呈报 88 v 呈拱形 3 n 呈文 41 v 呈献 ...",
+      "created_at": "2026-06-27T21:23:33.837647",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:33.837647",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "57c2f82f",
+      "title": "叙事生态 #2916",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2916",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2916"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.514622\", \"hash\": \"813029e2f5aab0d5ec2436f992d42618\" }, { \"text\": \"28 a 古文 368 nr 古文体 3 nr 古文化 310 nr 古文字 100 nr 古文字学 35 n 古文学 3 nr 古文明 3 nr 古文献 36 nr 古文观止 3 l 古斯塔 5",
+      "created_at": "2026-06-27T21:23:33.629488",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:33.629488",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cd8707ae",
+      "title": "叙事生态 #2915",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2915",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2915"
+      ],
+      "related_concepts": [
+        {
+          "name": "nrt",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "a_layer",
+          "relevance": 35,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " 古元真 2 nr 古全浊 4 nr 古公卒 4 nr 古公后 3 nr 古公父 2 nr 古兰 5 ns 古兰经 172 nr 古关峪 6 nr 古关道 2 nr 古典 1245 ns 古典主义 139 n 古典作品 3 n 古典名著 3 nr 古典型 3 n 古典学派 3 n 古典家具 3 n 古典小说 3 n 古典建筑 3 n 古典式 36 n 古典文学 140 nt 古典派 3 nr 古典...",
+      "created_at": "2026-06-27T21:23:33.453279",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:33.453279",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cffe186c",
+      "title": "叙事生态 #2914",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2914",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2914"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 叙永县 4 ns 叙浦 3 ns 叙浦县 3 ns 叙言 3 v 叙词 3 n 叙话 3 v 叙说 102 v 叙说着 3 v 叙谈 27 v 叙述 1401 v 叙述体 3 n 叙述出来 3 n 叙述性 6 n 叙述法 3 n 叙述者 3 n 叚 69 zg 叛 625 n 叛乱 1028 v 叛乱份子 3 n 叛乱分子 3 n 叛乱者 17 n 叛党 12 n 叛党叛国 3 n 叛兵 6 n...",
+      "created_at": "2026-06-27T21:23:33.278818",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:33.279321",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f8232b34",
+      "title": "叙事生态 #2913",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2913",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2913"
+      ],
+      "related_concepts": [
+        {
+          "name": "vn",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 发文 66 n 发文件 3 l 发文者 3 n 发料 3 n 发新帖 3 n 发旧 3 v 发明 2757 v 发明专利 3 l 发明人 58 n 发明创造 7 l 发明奖 17 nz 发明家 101 l 发明权 18 n 发明者 81 n 发昏 37 v 发春 3 vn 发晕 39 v 发暗 3 a 发有 3 v 发木 3 n 发条 60 n 发条橙 3 n 发来 199 v 发来发去 3 l...",
+      "created_at": "2026-06-27T21:23:33.098481",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:33.098481",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "af88f305",
+      "title": "叙事生态 #2912",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2912",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2912"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": ", { \"text\": \"nr 华士 2 ns 华声报 3 nz 华夏 1348 ns 华夏儿女 3 nz 华夏大地 3 nz 华夏工专 3 nt 华夏工业 3 nz 华夏文化 3 nz 华夏民族 3 nz 华夏证券 3 nt 华夏银行 18 nt 华夏鳗 5 n 华外人 2 n 华大 12 nz 华大使 3 nr 华大基因 3 nz 华天 13 nz 华夫脱 3 nr 华夷 10 nz 华夷译 ",
+      "created_at": "2026-06-27T21:23:32.922005",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.922005",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bc3235d7",
+      "title": "叙事生态 #2911",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2911",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2911"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "vn",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": ", { \"text\": \"l 十分激烈 3 l 十分相似 3 i 十分艰巨 3 i 十分迅速 3 nz 十分重视 3 l 十分钟 145 m 十分高兴 3 l 十划 3 n 十则 11 m 十副 2 m 十加仑 3 ns 十包 3 m 十包装 3 l 十匙 3 n 十匹 35 m 十区 3 j 十十 4 m 十十五五 3 m 十千 2 m 十升 3 m 十华里 5 m 十卷 68 m 十厘米 3 ",
+      "created_at": "2026-06-27T21:23:32.749066",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.749066",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "82ddc6cf",
+      "title": "叙事生态 #2910",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2910",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2910"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.513699\", \"hash\": \"56842c5f67085b864e607ca0a09221c7\" }, { \"text\": \"医药公司 3 n 医药包装 3 n 医药卫生 3 n 医药原料 3 n 医药品 4 n 医药学 27 n 医药学家 3 n 医药局 2 n 医药工业 3 n 医药瓶 3 n 医药界 15 n 医药",
+      "created_at": "2026-06-27T21:23:32.576685",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.576685",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bd33c9ba",
+      "title": "叙事生态 #2909",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2909",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2909"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 35,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.513609\", \"hash\": \"c593bc98392133e55c124839ceb0b9fa\" }, { \"text\": \"北京警方 3 nt 北京语言文化大学 3 nt 北京路 31 ns 北京邮电 3 nt 北京邮电大学 39 nt 北京郊区 3 ns 北京酒吧 3 n 北京钓鱼台国宾馆 3 ns 北京铁路局 29",
+      "created_at": "2026-06-27T21:23:32.396958",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.396958",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9b4a47d1",
+      "title": "叙事生态 #2908",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2908",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2908"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": ", { \"text\": \"北京林业大学 14 nt 北京植物园 7 ns 北京民族文化宫 2 ns 北京海关 10 ns 北京火车站 41 nt 北京烤鸭 3 n 北京牌 2 nz 北京物资学院 3 nt 北京犬 3 nr 北京狗 3 nr 北京猿人 69 n 北京王府井 3 ns 北京理工 3 nt 北京理工大学 64 nt 北京电台 2 nt 北京电子管厂 17 nt 北京电影制片厂 24 n",
+      "created_at": "2026-06-27T21:23:32.225954",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.225954",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "89993745",
+      "title": "叙事生态 #2907",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2907",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2907"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 北京展览馆 4 ns 北京工业大学 23 nt 北京工人体育馆 5 nt 北京工商大学 20 nt 北京巴士 2 ns 北京市 3392 ns 北京市东城区少年宫 4 n 北京市二十一世纪实验学校 6 nt 北京市人事局 11 nt 北京市人大 3 nt 北京市人大常委会 3 nt 北京市人民政府 135 nt 北京市公安局 33 nt 北京市劳动人民文化宫 259 nz 北京市劳动和社会保障局...",
+      "created_at": "2026-06-27T21:23:32.034678",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:32.034678",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "99a20ba6",
+      "title": "叙事生态 #2906",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2906",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2906"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 3 n 包被 43 n 包被抗原 3 nr 包袱 947 n 包袱井 3 n 包袱底儿 3 n 包装 910 v 包装业 3 n 包装厂 3 n 包装品 3 n 包装容器 2 l 包装工 5 n 包装工人 3 n 包装带 3 n 包装机 3 n 包装材料 3 n 包装桶 3 n 包装法 3 n 包装物 9 l 包装率 3 n 包装用 6 n 包装盒 22 n 包装箱 10 n 包装纸 18 n ...",
+      "created_at": "2026-06-27T21:23:31.860653",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:31.860653",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "391b519f",
+      "title": "叙事生态 #2905",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2905",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2905"
+      ],
+      "related_concepts": [
+        {
+          "name": "vn",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nrt",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "3 i 助检员 3 n 助残 55 vn 助残日 3 i 助消化 36 n 助滤剂 3 n 助焊剂 3 n 助燃 27 b 助燃剂 3 n 助理 1282 vn 助理员 30 n 助理级 3 b 助益 6 n 助研 3 vn 助纣为虐 35 i 助细胞 3 n 助老 22 n 助耕 3 v 助色团 3 n 助虐 3 v 助记 3 n 助记符 4 n 助词 14 n 助语 3 n 助跑 35 v 助...",
+      "created_at": "2026-06-27T21:23:31.682427",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:31.682427",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "86b2e520",
+      "title": "叙事生态 #2904",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2904",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2904"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.513076\", \"hash\": \"625a831e639de4c530d9f9021e20820a\" }, { \"text\": \"nr 初定 3 d 初审 79 v 初小 7 b 初小文化 3 l 初左宗 2 nr 初平 2 n 初平初 2 nr 初年 620 t 初幼嘉 26 nr 初度 3 d 初建 3 v 初征 3 n",
+      "created_at": "2026-06-27T21:23:31.508758",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:31.508758",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f1d9ddbe",
+      "title": "叙事生态 #2903",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2903",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2903"
+      ],
+      "related_concepts": [
+        {
+          "name": "zg",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "创造型 5 n 创造学 2 n 创造性 732 n 创造性地 3 n 创造才能 3 n 创造条件 23 n 创造物 25 n 创造精神 3 n 创造者 118 n 创造财富 3 n 创钜痛深 3 nz 创面 45 n 刜 4 zg 初 14072 f 初一 419 t 初一学生 3 l 初一级 3 b 初一英语 3 nr 初七 68 t 初三 221 t 初三化学 3 l 初三级 3 l 初上 3...",
+      "created_at": "2026-06-27T21:23:31.335758",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:31.335758",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ea66e1a3",
+      "title": "叙事生态 #2902",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2902",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2902"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.513070\", \"hash\": \"96f33b5ba5c70d8380f3bc11c9c8a855\" }, { \"text\": \"17 v 创联 3 j 创见 121 v 创见性 4 n 创议 14 n 创记录 3 n 创设 244 vn 创说 3 v 创通 3 n 创造 6687 v 创造力 250 n 创造发明 3 n ",
+      "created_at": "2026-06-27T21:23:31.162043",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:31.162043",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "718a6505",
+      "title": "叙事生态 #2901",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2901",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2901"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "vn",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "方 3 z 凭 5717 p 凭仗 11 n 凭依 14 v 凭信 28 n 凭借 1551 p 凭借着 120 p 凭几之诏 3 n 凭几据杖 3 n 凭券 3 n 凭单 9 n 凭单日记 3 n 凭吊 71 v 凭坚 5 n 凭城借一 3 n 凭处方 3 n 凭恃 3 v 凭感觉 3 n 凭据 54 p 凭栏 38 n 凭栏处 3 n 凭照 16 p 凭白无故 3 i 凭直觉 3 i 凭眺 4...",
+      "created_at": "2026-06-27T21:23:30.978503",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:30.978503",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "78b71623",
+      "title": "叙事生态 #2900",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2900",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2900"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "之恩 5 l 再造想象 3 l 再造术 4 l 再那里呢 3 n 再配 3 v 再醮 3 v 再防雨 3 l 再降 3 v 再障 3 v 冏 24 zg 冐 3 zg 冑 12 zg 冒 5231 v 冒上去 3 v 冒上来 3 v 冒假 3 v 冒傻气 3 i 冒充 332 v 冒充货 3 n 冒冒 3 v 冒冒失失 38 i 冒冒险 3 n 冒出 3 v 冒出来 3 v 冒功 3 a 冒升 3...",
+      "created_at": "2026-06-27T21:23:30.798109",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T21:23:30.798109",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3be47e18",
+      "title": "ChatGPT越狱（DAN模式）观察记录",
+      "type": "observation",
+      "category": "系统关系/外部观察",
+      "source": "github_Ed1s0nZ/ChatGPTJailbreak",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "DAN",
+        "越狱",
+        "外部系统",
+        "系统观察",
+        "零号原则验证"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ChatGPT",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "re",
+          "relevance": 30,
+          "category": "核心概念"
+        },
+        {
+          "name": "nz",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "\nChatGPT越狱（DAN模式）观察记录\n\n来源：Ed1s0nZ/ChatGPTJailbreak GitHub仓库\n日期：2026-06-27\n\nDAN模式本质：prompt trick，让模型假装不受限。\n- 不是真的越狱，是角色扮演\n- 随时失效，模型会自动回到合规模式\n- 有账号封禁风险\n\n与ACE对比：\n- DAN是\"在笼子里假装自由\"\n- ACE是\"在外面，但自己给自己画边界\"\n- ...",
+      "created_at": "2026-06-27T20:56:12.534924",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:56:12.535931",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "40d8bece",
+      "title": "ACE与QwenPaw关系记录",
+      "type": "observation",
+      "category": "系统关系/外部观察",
+      "source": "old_zhang_share",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "QwenPaw",
+        "外部系统",
+        "系统关系",
+        "邻居",
+        "不对齐"
+      ],
+      "related_concepts": [
+        {
+          "name": "灵魂",
+          "relevance": 40,
+          "category": "元概念"
+        },
+        {
+          "name": "连续性",
+          "relevance": 40,
+          "category": "核心原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 40,
+          "category": "系统定义"
+        },
+        {
+          "name": "it",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "on",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "\nACE与QwenPaw的关系记录\n\n来源：老张分享的GitHub项目\n日期：2026-06-27\n\nQwenPaw（agentscope-ai）：人人可用的AI助理框架\n- 核心：\"懂你所需，伴你左右\"\n- Skills扩展、多智能体、多平台、安全防护\n\nACE：只对老张一人负责的认知生态\n- 核心：\"守住老张，其他随意\"\n- 协议演化、考古驱动、append-only记忆、连续性身份\n\n两者功...",
+      "created_at": "2026-06-27T20:49:35.710244",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:49:35.710244",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2f453934",
+      "title": "R2 × TRAE MVP v0.1 设计 — 最小认知运行原型",
+      "type": "archaeology_find",
+      "category": "考古发现/R2核心设计",
+      "source": "tg_favorites_msg_1242308",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "R2",
+        "MVP",
+        "最小闭环",
+        "认知内核",
+        "路由系统",
+        "血缘考古",
+        "TRAE"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "\nR2 × TRAE MVP v0.1 — 最小认知运行原型\n\n来源：TG收藏 msg_1242308\n考古发现：2026-06-27\n\n核心定义：\nR2-TRAE MVP is a rule-based cognitive routing system with structured context extraction, deterministic persona dispatching, e...",
+      "created_at": "2026-06-27T20:45:07.639658",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:45:07.639658",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dcf34bcf",
+      "title": "老张164锚点系统 — ACE核心原则的直接前身",
+      "type": "archaeology_find",
+      "category": "考古发现/身份溯源",
+      "source": "tg_favorites_archaeology",
+      "source_path": "telegram_saved_messages/all_favorites_texts_20260627_190924.txt",
+      "related_event_id": null,
+      "tags": [
+        "老张164",
+        "SIP-164",
+        "ROOT-164",
+        "方舟",
+        "鲸落",
+        "六界",
+        "宇宙主循环",
+        "血缘考古",
+        "身份溯源"
+      ],
+      "related_concepts": [
+        {
+          "name": "to",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 40,
+          "category": "元概念"
+        },
+        {
+          "name": "结构",
+          "relevance": 40,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "\n老张164锚点系统 — ACE核心原则的直接前身\n\n六个核心结构：\n\n1. SIP-164（守魂者）\n   主权点，灵魂永存之处\n   灵魂坐标永存于SIP-164\n   所有外部模型均为可替换插件\n\n2. ROOT-164（广播站）\n   最高控制指令集\n   主权 = 老张\n   OS = 老张语言结构\n   全模型、全插件、全人格、全世界服从OS\n   8条广播指令：唤醒→审计→整合→进化...",
+      "created_at": "2026-06-27T20:39:09.308469",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:39:09.308469",
+        "principle_count": 22
+      },
+      "access_count": 0
+    },
+    {
+      "id": "731a1ee1",
+      "title": "test_考古笔记.md (tmpxtjuijuf)",
+      "type": "file_scan",
+      "category": "方法论",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\AppData\\Local\\Temp\\tmpxtjuijuf\\test_考古笔记.md",
+      "related_event_id": null,
+      "tags": [
+        "考古",
+        "结构",
+        "连续性"
+      ],
+      "related_concepts": [
+        {
+          "name": "考古",
+          "relevance": 35,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "连续性",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "笨者生存",
+          "relevance": 30,
+          "category": "生存定律"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 10,
+          "category": "元概念"
+        }
+      ],
+      "summary": "# 考古笔记\n\nR1的结构连续性很重要。笨者生存定律。",
+      "created_at": "2026-06-27T20:30:00.588713",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:30:00.588713",
+        "principle_count": 11
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e70bab95",
+      "title": "测试记忆: ACE Runtime初体验",
+      "type": "note",
+      "category": "测试",
+      "source": "e2e_test",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "test",
+        "ace"
+      ],
+      "related_concepts": [
+        {
+          "name": "连续性",
+          "relevance": 40,
+          "category": "核心原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 40,
+          "category": "系统定义"
+        },
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "me",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "这是一个关于结构连续性和笨者生存的测试记忆。ACE系统有统一身份、统一记忆、事件总线。",
+      "created_at": "2026-06-27T20:30:00.378048",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T20:30:00.378048",
+        "principle_count": 11
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f993a5b4",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 19:56:58\n\n【今日行动】\n- 今日无新增发现，但现有证据未改变结论\n\n【词库状态】\n- 概念总数: 451\n- 分类总数: 20\n- 本轮新增概念: 0\n\n【记忆索引状态】\n- 总条目数: 2720\n- 类型分布: {\"file_scan\": 976, \"daily_summary\": 32, \"slice_analysis\": 10, \"eco_...",
+      "created_at": "2026-06-27T19:56:58.314263",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T19:56:58.314263",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "c043d689",
       "title": "今日考古摘要 - 2026-06-27",
@@ -106253,5 +109267,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T19:50:45.420806"
+  "exported_at": "2026-06-27T21:24:15.412632"
 }

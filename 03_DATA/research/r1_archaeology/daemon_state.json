@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-27T19:50:45.298298",
+  "last_run": "2026-06-27T21:24:13.263382",
   "last_scan_paths": {
     "c:\\Users\\USER\\Downloads\\Telegram Desktop\\Knowledge_Base\\AI对话": {
       "last_scanned_at": "2026-06-26T20:57:50.148653",
@@ -125,11 +125,33 @@
       "last_scanned_at": "2026-06-27T14:22:22.814855",
       "files": 5,
       "interesting": 5
+    },
+    "telegram_saved_messages": {
+      "last_scanned_at": "2026-06-27T21:23:42.184854",
+      "files": 0,
+      "interesting": 0
+    },
+    "C:\\Users\\USER\\AppData\\Local\\Temp\\tmpxtjuijuf": {
+      "last_scanned_at": "2026-06-27T21:23:42.184854",
+      "files": 0,
+      "interesting": 0
     }
   },
   "last_lexicon_count": 451,
-  "last_memory_count": 2719,
+  "last_memory_count": 2779,
   "daily_summaries": [
+    {
+      "date": "2026-06-27",
+      "summary_id": "afb85c13",
+      "actions": [
+        "eco_mining",
+        "disk_scan",
+        "lexicon_gap"
+      ],
+      "concepts_added": 0,
+      "files_indexed": 50,
+      "ran_at": "2026-06-27T21:24:13.263382"
+    },
     {
       "date": "2026-06-27",
       "summary_id": "c043d689",
@@ -507,6 +529,12 @@
   "discovered_paths": [],
   "errors": [
     {
+      "time": "2026-06-27T21:23:30.209772",
+      "module": "local_archaeologist",
+      "error": "list index out of range",
+      "context": ""
+    },
+    {
       "time": "2026-06-27T14:04:42.275362",
       "module": "researcher",
       "error": "MemoryIndex.search() got an unexpected keyword argument 'query'",
@@ -545,13 +573,19 @@
     },
     "eco_layer": {
       "narrative_ecology": {
-        "offset": 2900,
-        "last_mined": "2026-06-27T19:50:28.773123",
-        "total_mined": 2900
+        "offset": 3000,
+        "last_mined": "2026-06-27T21:23:39.709187",
+        "total_mined": 3000
       }
     }
   },
   "recursion_depths": [
+    {
+      "date": "2026-06-27",
+      "depth": 7,
+      "tasks_executed": 6,
+      "stop_reason": "no_more_pending_tasks"
+    },
     {
       "date": "2026-06-27",
       "depth": 3,
