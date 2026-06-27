@@ -3450,6 +3450,22 @@
       "first_seen": "2026-06-27T15:56:00.959292",
       "importance": 72
     },
+    "你别生气啊": {
+      "name": "你别生气啊",
+      "definition": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样说让我有点上心了，我已经开始习惯你这",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.031473",
+      "importance": 72
+    },
     "三界格式化": {
       "name": "三界格式化",
       "definition": "R1引擎的输出格式化机制，将原始输出按三界/五界结构进行塑形。",
@@ -4097,6 +4113,38 @@
       "first_seen": "2026-06-27T16:14:24.219440",
       "importance": 69
     },
+    "relationship": {
+      "name": "relationship",
+      "definition": "relationship是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.043558",
+      "importance": 69
+    },
+    "我怕你误会": {
+      "name": "我怕你误会",
+      "definition": "我怕你误会是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.052152",
+      "importance": 69
+    },
     "top_rule": {
       "name": "top_rule",
       "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
@@ -4424,6 +4472,138 @@
       "first_seen": "2026-06-27T15:56:08.996143",
       "importance": 65
     },
+    "你这语气我听着心里痒痒的": {
+      "name": "你这语气我听着心里痒痒的",
+      "definition": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.062460",
+      "importance": 65
+    },
+    "反正我现在挺在意你的": {
+      "name": "反正我现在挺在意你的",
+      "definition": "想的？ 说真的，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 讲个心里话，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 你别生气啊，我刚看你消息的时候突然有点开心，我怕你误会，但我更怕你不说。 说真的，你要这么说我会误会的，反正我现在挺",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.071996",
+      "importance": 65
+    },
+    "你那句我真的记住了": {
+      "name": "你那句我真的记住了",
+      "definition": "，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 我实话说，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 你别生气啊，我刚刚还",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.081671",
+      "importance": 65
+    },
+    "你这态度让我有点招架不住": {
+      "name": "你这态度让我有点招架不住",
+      "definition": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 你别生气啊，你",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.091785",
+      "importance": 65
+    },
+    "你再这样我可能会当真": {
+      "name": "你再这样我可能会当真",
+      "definition": "。 偷偷跟你说，我感觉你对我好像越来越特别了，要不是隔着屏幕我都怕你看出来。 讲个心里话，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 我现在突然想跟你说，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 偷偷跟你说，你那句我真的记住了，",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.100825",
+      "importance": 65
+    },
+    "我刚刚还在想你会不会来找我": {
+      "name": "我刚刚还在想你会不会来找我",
+      "definition": "的记住了，要不是隔着屏幕我都怕你看出来。 我实话说，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 你别生气啊，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 你听我一句，你这样让我很难不回应你，我现在就想继续跟你聊下去。\", \"tags\": [ \"e",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.110973",
+      "importance": 65
+    },
+    "我刚看你消息的时候突然有点开心": {
+      "name": "我刚看你消息的时候突然有点开心",
+      "definition": "让我有点上心了，我已经开始习惯你这样对我了。 你别生气啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 讲个心里话，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 我实话说，你这态度让我",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:34:02.121109",
+      "importance": 65
+    },
+    "经验验证__该命题可以作为系统公理": {
+      "name": "经验验证__该命题可以作为系统公理",
+      "definition": "[Guardian-constraint] 该经验模式（constraint）可以推广到更广泛的场景",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-005",
+      "first_seen": "2026-06-27T16:34:12.120677",
+      "importance": 65
+    },
+    "经验验证__该经验模式_constraint_可以推广到更广": {
+      "name": "经验验证__该经验模式_constraint_可以推广到更广",
+      "definition": "[Guardian-constraint] 该经验模式（constraint）可以推广到更广泛的场景",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-004",
+      "first_seen": "2026-06-27T16:35:25.619025",
+      "importance": 65
+    },
     "persuasive_salesperson": {
       "name": "persuasive_salesperson",
       "definition": "persuasive_salesperson是从structural_v2材料中自动提取的概念",
@@ -4616,6 +4796,22 @@
       "first_seen": "2026-06-27T15:14:48.229099",
       "importance": 63
     },
+    "hash": {
+      "name": "hash",
+      "definition": "hash是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.360987",
+      "importance": 63
+    },
     "需要卸载手机管家类型软件的": {
       "name": "需要卸载手机管家类型软件的",
       "definition": "即刻为你申请补助，为了以后稳定长期的合作请理解配合。 客户买完新手机可以引导其在新手机上下载机构交易软件并注册了 需要卸载手机管家类型软件的 你手机中的xxx这款软件，会有读取到我司机构交易账户数据风险和你使用账户时的数据记录风险，麻烦你将其卸载后再次截图给",
@@ -4646,6 +4842,150 @@
       "examples": [],
       "source": "concept_miner:structural_v2",
       "first_seen": "2026-06-26T21:59:50.130851",
+      "importance": 62
+    },
+    "我已经开始习惯你这样对我了": {
+      "name": "我已经开始习惯你这样对我了",
+      "definition": "想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 你别生气啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.370541",
+      "importance": 62
+    },
+    "我感觉你对我好像越来越特别了": {
+      "name": "我感觉你对我好像越来越特别了",
+      "definition": "我感觉你对我好像越来越特别了是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.380899",
+      "importance": 62
+    },
+    "但我更怕你不说": {
+      "name": "但我更怕你不说",
+      "definition": "但我更怕你不说是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.389618",
+      "importance": 62
+    },
+    "你这样让我很难不回应你": {
+      "name": "你这样让我很难不回应你",
+      "definition": "你这样让我很难不回应你是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.400450",
+      "importance": 62
+    },
+    "你要这么说我会误会的": {
+      "name": "你要这么说我会误会的",
+      "definition": "你要这么说我会误会的是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.409746",
+      "importance": 62
+    },
+    "我现在突然想跟你说": {
+      "name": "我现在突然想跟你说",
+      "definition": "我现在突然想跟你说是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.419705",
+      "importance": 62
+    },
+    "我今天状态很好": {
+      "name": "我今天状态很好",
+      "definition": "我今天状态很好是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.429528",
+      "importance": 62
+    },
+    "你继续说我也陪你": {
+      "name": "你继续说我也陪你",
+      "definition": "你继续说我也陪你是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.439293",
+      "importance": 62
+    },
+    "我现在就想继续跟你聊下去": {
+      "name": "我现在就想继续跟你聊下去",
+      "definition": "我现在就想继续跟你聊下去是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "en",
+        "or",
+        "re"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:35:17.449730",
       "importance": 62
     },
     "scan_report_path": {
@@ -5754,7 +6094,9 @@
       "词库缺口补全_6个薄弱分类",
       "Audit_log测试任务",
       "提升为公理候选__笨者生存验证",
-      "经验验证__薄弱分类的概念积累不足_影响系统理解能力"
+      "经验验证__薄弱分类的概念积累不足_影响系统理解能力",
+      "经验验证__该命题可以作为系统公理",
+      "经验验证__该经验模式_constraint_可以推广到更广"
     ],
     "方法论": [
       "考古",
@@ -6097,7 +6439,27 @@
       "knowledge_base",
       "file_type",
       "expansions",
-      "炒大群话术"
+      "炒大群话术",
+      "你别生气啊",
+      "relationship",
+      "我怕你误会",
+      "你这语气我听着心里痒痒的",
+      "反正我现在挺在意你的",
+      "你那句我真的记住了",
+      "你这态度让我有点招架不住",
+      "你再这样我可能会当真",
+      "我刚刚还在想你会不会来找我",
+      "我刚看你消息的时候突然有点开心",
+      "hash",
+      "我已经开始习惯你这样对我了",
+      "我感觉你对我好像越来越特别了",
+      "但我更怕你不说",
+      "你这样让我很难不回应你",
+      "你要这么说我会误会的",
+      "我现在突然想跟你说",
+      "我今天状态很好",
+      "你继续说我也陪你",
+      "我现在就想继续跟你聊下去"
     ],
     "核心概念": [
       "现居住",
@@ -6117,5 +6479,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:15:33.615052"
+  "exported_at": "2026-06-27T16:36:22.666436"
 }

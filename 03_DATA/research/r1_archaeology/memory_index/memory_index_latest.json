@@ -1,6 +1,5262 @@
 {
-  "total": 2302,
+  "total": 2407,
   "entries": [
+    {
+      "id": "2565299d",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 16:36:22\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 32 种模式，索引 50 条，新概念候选 10 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 397\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 2406\n- 类型分布: {\"fil...",
+      "created_at": "2026-06-27T16:36:22.099588",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:36:22.099588",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6d06798c",
+      "title": "[任务归档] 经验验证: 该经验模式（constraint）可以推广到更广泛的场景",
+      "type": "task_archive",
+      "category": "任务归档",
+      "source": "archivist",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "experience",
+        "constraint",
+        "RQ-20260627-007",
+        "experience_pattern",
+        "archived",
+        "RQ-20260627-004"
+      ],
+      "related_concepts": [
+        {
+          "name": "task",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "## 任务ID: RQ-20260627-004\n**标题**: 经验验证: 该经验模式（constraint）可以推广到更广泛的场景\n**创建者**: task_creator\n**优先级**: high\n**假设**: 该经验模式（constraint）可以推广到更广泛的场景\n\n**证据数**: 13\n**反例数**: 7\n\n### 核心证据\n1. [archivist] \n2. [archi...",
+      "created_at": "2026-06-27T16:35:25.642729",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:25.642729",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f839db25",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T16:35:14.971595\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 2300, \"remaining\": 2047, \"progress_pct\": 52.9, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T16:35:17.144739",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:17.144739",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5fee35e5",
+      "title": "叙事生态 #2249",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2249",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2249"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "学 3 nt 东方之珠 3 nr 东方人 57 nr 东方仗助 3 i 东方公司 4 nt 东方军事 3 nt 东方出版社 2 nt 东方化 2 nr 东方千骑 3 nr 东方卫 2 nr 东方发白 3 nr 东方号 18 n 东方君 3 nr 东方城 3 nr 东方夜谭 3 i 东方女性 3 n 东方学 35 nt 东方学家 13 n 东方宾馆 4 nt 东方将白 3 nr 东方工专 3 nt ...",
+      "created_at": "2026-06-27T16:35:14.828628",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.828628",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8d114b7c",
+      "title": "叙事生态 #2248",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2248",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2248"
+      ],
+      "related_concepts": [
+        {
+          "name": "nrt",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " ns 东峰林 2 nr 东崖 3 ns 东川 91 ns 东川区 3 ns 东川市 7 ns 东川路 3 ns 东州 332 ns 东州修 3 nr 东州城 2 ns 东州建 2 ns 东差西误 3 n 东巴 81 ns 东巴文 9 nr 东巴文化 3 ns 东市 3 ns 东市区 22 ns 东市朝衣 3 nr 东布罗夫斯基 3 nrt 东帝汶 48 nr 东干久 3 nr 东平 130 ns...",
+      "created_at": "2026-06-27T16:35:14.682967",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.682967",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1012c081",
+      "title": "叙事生态 #2247",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2247",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2247"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "nr",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "nz",
+          "relevance": 5,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"88faf39e758e34d583552c4b903e3a09\": { \"text\": \"i 不轻然诺 3 l 不辍 3 v 不输给 3 n 不辞 3 v 不辞劳苦 41 l 不辞而别 58 i 不辞辛劳 19 i 不辞辛苦 25 i 不辟斧钺 3 i 不辨是非 3 i 不辨真伪 3 n 不辨菽粟 3 nr 不辨菽麦 3 v 不辩菽麦 3 v 不辱使命 28 i 不迁之庙 3 n 不过 17",
+      "created_at": "2026-06-27T16:35:14.536846",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.536846",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a7e38b8d",
+      "title": "叙事生态 #2246",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2246",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2246"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "txt\", \"slice_index\": 180, \"created_at\": \"2025-11-29T01:50:56.510815\", \"hash\": \"d3d011590b4c3f1b57ec6b93fcf57544\" }, \"ad3c0f261489789f7f646a074324aba8\": { \"text\": \"v 不负众托 3 n 不负众望 28 l 不负使命 3 i 不负所托 3 ",
+      "created_at": "2026-06-27T16:35:14.395086",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.395086",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c3a63df0",
+      "title": "叙事生态 #2245",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2245",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2245"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "大常委会 4 nt 上海市人民政府 9 nt 上海市公安局 9 nt 上海市分行 2 nt 上海市劳动和社会保障局 7 nt 上海市委 24 nt 上海市工人文化宫 2 ns 上海市工商局 2 nt 上海市工商联 2 nt 上海市总工会 3 nt 上海市房地局 2 nt 上海市政协 11 nt 上海市政府 49 nt 上海市教委 14 nt 上海市浦东新区 6 ns 上海市科委 9 nt 上海市第...",
+      "created_at": "2026-06-27T16:35:14.250322",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.250322",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ffcb8993",
+      "title": "叙事生态 #2244",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2244",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2244"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 65,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "txt__副本.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/human_flavor.txt _副本.txt\", \"slice_index\": 3, \"created_at\": \"2025-11-29T01:50:...",
+      "created_at": "2026-06-27T16:35:14.104431",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:14.104431",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "76b5a998",
+      "title": "叙事生态 #2243",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2243",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2243"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/LC.txt\", \"slice_index\": 22, \"created_at\": \"2025-11-29T01:50:56.286335\", \"hash\": \"b13c8a51d8e7e2c292c9c4fb83...",
+      "created_at": "2026-06-27T16:35:13.958609",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.958609",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "49059f73",
+      "title": "叙事生态 #2242",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2242",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2242"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "跟着他们的专业团队做T，每天稳定盈利，这才是我们应该走的路。 而且我们完全合法合规，所有操作都通过正规券商通道，接受实时监管。我们赚的是技术优势的钱，不是违规的钱。速度就是我们的核心竞争力，在涨停板抢筹中，慢一秒就错失机会！ 稀缺才有价值！如果随便什么人都能参与，那这个机会就不值钱了。现在是我们练兵的第一阶段，只要大家执行力到位，后续还会有更大规模的合作机会。\\\" #### 核心要点 - 强调老陈...",
+      "created_at": "2026-06-27T16:35:13.809361",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.809361",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0e1e3b45",
+      "title": "叙事生态 #2241",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2241",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2241"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 老实讲，你这语气我听着心里痒痒的，反正我现在挺在意你的。 说真的，你这样说让我有点上心了，我已经开始习惯你这样对我了。 不过我跟你讲，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 我实话说，你那句我真的记住了，我已经开始习惯你这样对我了。 你听我一句，你要这么说我会误会的，我已经开始习惯你这样对我了。 讲个心里话，你这态度让我有点招架不住，所以我有点想靠...",
+      "created_at": "2026-06-27T16:35:13.663447",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.663447",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c31e2ffb",
+      "title": "叙事生态 #2240",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2240",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2240"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我已经开始习惯你这样对我了。 我实话说，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 讲个心里话，你这态度让我有点招架不住，反正我现在挺在意你的。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 别笑我啊，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 讲个心里话，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 讲个心里话，你这语气我听着心里痒痒的，要...",
+      "created_at": "2026-06-27T16:35:13.516510",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.516510",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "56657ef8",
+      "title": "叙事生态 #2239",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2239",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2239"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 讲个心里话，你这语气我听着心里痒痒的，反正我现在挺在意你的。 讲个心里话，你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 讲个心里话，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 讲个心里话，你那句我真的记住了，我现在就想继续跟你聊下去。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:tx...",
+      "created_at": "2026-06-27T16:35:13.374540",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.374540",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fc747d2f",
+      "title": "叙事生态 #2238",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2238",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2238"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你再这样我可能会当真",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 偷偷跟你说，你这语气我听着心里痒痒的，不过我也没打算躲。 你听我一句，你那句我真的记住了，我怕你误会，但我更怕你不说。 不过我跟你讲，我感觉你对我好像越来越特别了，嗯…你再这样我可能会当真。 说真的，你这话让我有点想你，反正我现在挺在意你的。 不过我跟你讲，你这话让我有点想你，我现在就想继续跟你聊下去。 偷偷跟你说，你要这么说我会误会的，嗯…你再这样我可能会当真。 偷偷跟你说，你要这么说我会误会...",
+      "created_at": "2026-06-27T16:35:13.231984",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.231984",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7660e7cf",
+      "title": "叙事生态 #2237",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2237",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2237"
+      ],
+      "related_concepts": [
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你听我一句，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 你听我一句，你这样说让我有点上心了，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 我实话说，你这态度让我有点招架不住，不过我也没打算躲。 我现在突然想跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 老实讲，你这样说让我有点上心了，不过我也没打算躲。 我实...",
+      "created_at": "2026-06-27T16:35:13.088689",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:13.088689",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1f7afae5",
+      "title": "叙事生态 #2236",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2236",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2236"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284962\", \"hash\": \"17a1daa15cf87614f7dc690d3db6042b\" }, \"204ddaced22128945e51d2456453d9b7\": { \"text\": \"说真的，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 不过我跟你讲，我刚看你消息的时候突然有点开心，那你说说看，你...",
+      "created_at": "2026-06-27T16:35:12.942861",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.942861",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4981b475",
+      "title": "叙事生态 #2235",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2235",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2235"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我现在就想继续跟你聊下去。 你听我一句，你这样让我很难不回应你，我现在就想继续跟你聊下去。 不过我跟你讲，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 你别生气啊，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 说真的，你这话让我有点想你，我现在就想继续跟你聊下去。 你听我一句，你这话让我有点想你，所以我有点想靠近你。 别笑我啊，你要这么说我会误会的，要不是隔着屏幕我都怕你...",
+      "created_at": "2026-06-27T16:35:12.790740",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.790740",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b5fa58e4",
+      "title": "叙事生态 #2234",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2234",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2234"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 126, \"created_at\": \"2025-11-29T01:50:56.284958\", \"h...",
+      "created_at": "2026-06-27T16:35:12.645146",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.645146",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5db32d60",
+      "title": "叙事生态 #2233",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2233",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2233"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，不过我也没打算躲。 我实话说，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 说真的，你这样说让我有点上心了，所以我有点想靠近你。 老实讲，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样让我很难不回应你，不过我也没打算躲。 别笑我啊，你这态度让我有点招架...",
+      "created_at": "2026-06-27T16:35:12.497039",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.497039",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5d066795",
+      "title": "叙事生态 #2232",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2232",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2232"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284952\", \"hash\": \"6479d1b4f4ba7ee1c747a5b8cc6907dd\" }, \"542d453db53c9af0f59536b141ecd7b3\": { \"text\": \"你听我一句，你要这么说我会误会的，所以我有点想靠近你。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，要不是隔着屏幕我...",
+      "created_at": "2026-06-27T16:35:12.353378",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.353378",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fe872717",
+      "title": "叙事生态 #2231",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2231",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2231"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 偷偷跟你说，你那句我真的记住了，所以我有点想靠近你。 不过我跟你讲，你这样让我很难不回应你，我已经开始习惯你这样对我了。 不过我跟你讲，你这样让我很难不回应你，不过我也没打算躲。 你听我一句，你那句我真的记住了，我怕你误会，但我更怕你不说。 说真的，你这态度让我有点招架不住，那你说说看，你怎么想的？ 你听我一句，你这语气我听着心里痒痒的，反正我现在挺在意你的。 不过我跟你讲，你这样说让我有点上心...",
+      "created_at": "2026-06-27T16:35:12.206750",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.206750",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "95b9204e",
+      "title": "叙事生态 #2230",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2230",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2230"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 123, \"created_at\": \"2025-11-29T01:50:56.284948\", \"h...",
+      "created_at": "2026-06-27T16:35:12.062919",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:12.062919",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff20d943",
+      "title": "叙事生态 #2229",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2229",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2229"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你别生气啊，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 偷偷跟你说，你这样让我很难不回应你，我已经开始习惯你这样对我了。 别笑我啊，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 别笑我啊，你这话让我有点想你，我已经开始习惯你这样对我了。 偷偷跟你说，你这样让我很难不回应你，所以我有点想靠近你。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 说真的，我刚...",
+      "created_at": "2026-06-27T16:35:11.917824",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.917824",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cbafa789",
+      "title": "叙事生态 #2228",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2228",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2228"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 别笑我啊，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 偷偷跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 别笑我啊，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_...",
+      "created_at": "2026-06-27T16:35:11.774257",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.774257",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fbff6788",
+      "title": "叙事生态 #2227",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2227",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2227"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我怕你误会，但我更怕你不说。 不过我跟你讲，我感觉你对我好像越来越特别了，所以我有点想靠近你。 我实话说，我感觉你对我好像越来越特别了，所以我有点想靠近你。 不过我跟你讲，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我实话说，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 不过我跟你讲，你这语气我听着心里痒痒的，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，不过我也没...",
+      "created_at": "2026-06-27T16:35:11.630533",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.630533",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ddb19859",
+      "title": "叙事生态 #2226",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2226",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2226"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 120, \"created_at\": \"2025-11-29T01:50:56.284938\", \"h...",
+      "created_at": "2026-06-27T16:35:11.486469",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.486469",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b6a99f07",
+      "title": "叙事生态 #2225",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2225",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2225"
+      ],
+      "related_concepts": [
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284916\", \"hash\": \"668628d8db7330262df4f4ef5b941a60\" }, \"23e1d500a14598fcf28c9109152eb822\": { \"text\": \"你听我一句，你这话让我有点想你，反正我现在挺在意你的。 你听我一句，你那句我真的记住了，嗯…你再这样我可能会当真。 不过我跟...",
+      "created_at": "2026-06-27T16:35:11.343848",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.343848",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8749e7ba",
+      "title": "叙事生态 #2224",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2224",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2224"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 你别生气啊，你那句我真的记住了，那你说说看，你怎么想的？ 你别生气啊，你要这么说我会误会的，那你说说看，你怎么想的？ 不过我跟你讲，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样说让我有点上心了，我怕你误会，但我更怕你不说。 讲个心里话，我感觉你对我好像越来越特别了，要不是隔着屏幕我都怕你看出来。 ...",
+      "created_at": "2026-06-27T16:35:11.199460",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.199460",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a87b8f65",
+      "title": "叙事生态 #2223",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2223",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2223"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 117, \"created_at\": \"2025-11-29T01:50:56.284890\", \"h...",
+      "created_at": "2026-06-27T16:35:11.050262",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:11.050262",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d4046f22",
+      "title": "叙事生态 #2222",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2222",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2222"
+      ],
+      "related_concepts": [
+        {
+          "name": "说真的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，反正我现在挺在意你的。 老实讲，你这态度让我有点招架不住，不过我也没打算躲。 老实讲，你这样让我很难不回应你，我已经开始习惯你这样对我了。 说真的，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 别笑我啊，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 不过我跟你讲，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 别笑我啊，你这语气我听着心里痒痒的，不过...",
+      "created_at": "2026-06-27T16:35:10.902947",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.902947",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dd210e30",
+      "title": "叙事生态 #2221",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2221",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2221"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284883\", \"hash\": \"a4a95d65853eccd04a6a42270b7fea7b\" }, \"7ee48bca78a4f188f5f0c3ece36eabb9\": { \"text\": \"偷偷跟你说，你这话让我有点想你，所以我有点想靠近你。 我实话说，你这话让我有点想你，那你说说看，你怎么想的？ 不过我跟你讲，...",
+      "created_at": "2026-06-27T16:35:10.756870",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.756870",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7e672619",
+      "title": "叙事生态 #2220",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2220",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2220"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 我实话说，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 偷偷跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 你听我一句，你那句我真的记住了，不过我也没打算躲。 别笑我啊，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 我实话说，你这话让我有点想你，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，我感觉你对我...",
+      "created_at": "2026-06-27T16:35:10.613896",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.613896",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b41f608e",
+      "title": "叙事生态 #2219",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2219",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2219"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 114, \"created_at\": \"2025-11-29T01:50:56.284879\", \"h...",
+      "created_at": "2026-06-27T16:35:10.469405",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.469405",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4badd368",
+      "title": "叙事生态 #2218",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2218",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2218"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 别笑我啊，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 我现在突然想跟你说，你这样说让我有点上心了，不过我也没打算躲。 说真的，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 你别生气啊，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 说真的，你这样说让我有点上心了，不过我也没打算躲。 你别生气啊，你这态度让我有点...",
+      "created_at": "2026-06-27T16:35:10.324464",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.324464",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "29bbdb49",
+      "title": "叙事生态 #2217",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2217",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2217"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284872\", \"hash\": \"aff9e96634f3eaa502a78036f8c0f401\" }, \"f9f8338ca99ee0e5715933b6a5f78de4\": { \"text\": \"我现在突然想跟你说，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 你别生气啊，你这样让我很难不回应你，我已经开始习惯你...",
+      "created_at": "2026-06-27T16:35:10.180436",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.180436",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "28fcf356",
+      "title": "叙事生态 #2216",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2216",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2216"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "284862\", \"hash\": \"e3a2e17c3b476473bab4d3bffce6cfc6\" }, \"b2735f8ef35cd3b6dde73e00737b605d\": { \"text\": \"不过我跟你讲，你那句我真的记住了，我现在就想继续跟你聊下去。 我现在突然想跟你说，你这样让我很难不回应你，嗯…你再这样我可能会当真。 讲个心里话，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去...",
+      "created_at": "2026-06-27T16:35:10.036479",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:10.036479",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e0ab077d",
+      "title": "叙事生态 #2215",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2215",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2215"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这样让我很难不回应你，嗯…你再这样我可能会当真。 我现在突然想跟你说，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 偷偷跟你说，你这态度让我有点招架不住，不过我也没打算躲。 讲个心里话，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 不过我跟你讲，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 你别生气啊，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 偷偷...",
+      "created_at": "2026-06-27T16:35:09.892199",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.892199",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "35463148",
+      "title": "叙事生态 #2214",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2214",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2214"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，所以我有点想靠近你。 我实话说，你这语气我听着心里痒痒的，所以我有点想靠近你。 偷偷跟你说，你那句我真的记住了，我怕你误会，但我更怕你不说。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/...",
+      "created_at": "2026-06-27T16:35:09.743408",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.743408",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e9ec6fbf",
+      "title": "叙事生态 #2213",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2213",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2213"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你听我一句",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"0eeb466734023dd0a5b116e9d6774ace\" }, \"9cb6d8326c8d9aeec4c4ca441bc63eb8\": { \"text\": \"讲个心里话，你这态度让我有点招架不住，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 我现在突然想跟你说，我感觉你对我好像越来越特别了，所以我有点想靠近你。...",
+      "created_at": "2026-06-27T16:35:09.599968",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.599968",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6a4aafa5",
+      "title": "叙事生态 #2212",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2212",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2212"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 别笑我啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，不过我也没打算躲。 别笑我啊，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 我现在突然想跟你说，你这话让我有点想你，所以我有点想靠近你。 老实讲，你要这么说我会误会的，那你说说看，你怎么想的？ 我现在突然想跟你说，你那句我真的记住了，嗯…你再这样我可能会当真。 不过我跟你讲，你这样说...",
+      "created_at": "2026-06-27T16:35:09.456926",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.456926",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a9c0467b",
+      "title": "叙事生态 #2211",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2211",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2211"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这样让我很难不回应你，所以我有点想靠近你。 偷偷跟你说，我感觉你对我好像越来越特别了，那你说说看，你怎么想的？ 说真的，你这样让我很难不回应你，我现在就想继续跟你聊下去。 老实讲，我感觉你对我好像越来越特别了，嗯…你再这样我可能会当真。 偷偷跟你说，你那句我真的记住了，我已经开始习惯你这样对我了。 不过我跟你讲，你这话让我有点想你，不过我也没打算躲。 不过我跟你讲，我刚刚还在想你会不会来找我，那...",
+      "created_at": "2026-06-27T16:35:09.310330",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.310330",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "19d66371",
+      "title": "叙事生态 #2210",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2210",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2210"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你要这么说我会误会的，我怕你误会，但我更怕你不说。 我实话说，你那句我真的记住了，我已经开始习惯你这样对我了。 别笑我啊，你这语气我听着心里痒痒的，反正我现在挺在意你的。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Document...",
+      "created_at": "2026-06-27T16:35:09.166678",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.166678",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "640535d6",
+      "title": "叙事生态 #2209",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2209",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2209"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"754756aca3b9ce6da76c21b5b40c2ddf\" }, \"f7657e18e29b562c194a7938cfb82359\": { \"text\": \"说真的，我刚看你消息的时候突然有点开心，不过我也没打算躲。 讲个心里话，我刚看你消息的时候突然有点开心，不过我也没打算躲。 我实话说，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样...",
+      "created_at": "2026-06-27T16:35:09.020540",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:09.020540",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "954a96ba",
+      "title": "叙事生态 #2208",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2208",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2208"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚看你消息的时候突然有点开心",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "嗯…你再这样我可能会当真。 偷偷跟你说，你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样让我很难不回应你，我已经开始习惯你这样对我了。 我实话说，你这态度让我有点招架不住，所以我有点想靠近你。 你听我一句，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你那句我真...",
+      "created_at": "2026-06-27T16:35:08.869820",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.869820",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f13e15e8",
+      "title": "叙事生态 #2207",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2207",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2207"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 102, \"created_at\": \"2025-11-29T01:50:56.284798\", \"hash\": \"75058f1eb49cf88e898b0cd...",
+      "created_at": "2026-06-27T16:35:08.714803",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.714803",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "56e808c2",
+      "title": "叙事生态 #2206",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2206",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2206"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你别生气啊，你这话让我有点想你，那你说说看，你怎么想的？ 我现在突然想跟你说，你那句我真的记住了，反正我现在挺在意你的。 说真的，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 你听我一句，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 别笑我啊，你这语气我听着心里痒痒的，我今天状态很好，你继续说我...",
+      "created_at": "2026-06-27T16:35:08.570064",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.570064",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d2e0addd",
+      "title": "叙事生态 #2205",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2205",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2205"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我刚看你消息的时候突然有点开心，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样说让我有点上心了，反正我现在挺在意你的。 你听我一句，你这态度让我有点招架不住，不过我也没打算躲。 我现在突然想跟你说，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 说真的，你这样说让我有点上心了，要不是隔着屏幕我都怕你看出来。 你别生气啊，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。...",
+      "created_at": "2026-06-27T16:35:08.425001",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.425001",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7271577b",
+      "title": "叙事生态 #2204",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2204",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2204"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 老实讲，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 我实话说，你要这么说我会误会的，所以我有点想靠近你。 讲个心里话，你这样让我很难不回应你，反正我现在挺在意你的。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file...",
+      "created_at": "2026-06-27T16:35:08.282340",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.282340",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dfaae235",
+      "title": "叙事生态 #2203",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2203",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2203"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"slice_index\": 99, \"created_at\": \"2025-11-29T01:50:56.284788\", \"hash\": \"30cf2f6eb837360036a68cf1fa79f4a6\" }, \"0ef04b43d663134c8bcbac240e83e223\": { \"text\": \"别笑我啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 你别生气啊，我感觉你...",
+      "created_at": "2026-06-27T16:35:08.140218",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:08.140218",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0c328234",
+      "title": "叙事生态 #2202",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2202",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2202"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "反正我现在挺在意你的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "我刚刚还在想你会不会来找我",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 你听我一句，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我实话说，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 你听我一句，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 说真的，我感觉你对我好像越来越特别了，我今天状态很好，你继续说我也陪你。 老实讲，你这语气我听着心里痒...",
+      "created_at": "2026-06-27T16:35:07.997900",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:07.997900",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bbe3b822",
+      "title": "叙事生态 #2201",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2201",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2201"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 我实话说，你这话让我有点想你，我现在就想继续跟你聊下去。 说真的，我刚看你消息的时候突然有点开心，我怕你误会，但我更怕你不说。 偷偷跟你说，你这态度让我有点招架不住，我现在就想继续跟你聊下去。 不过我跟你讲，你这样让我很难不回应你，所以我有点想靠近你。 我实话说，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 老实讲，你那句我真的记住了，那你说说看，你怎...",
+      "created_at": "2026-06-27T16:35:07.854485",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:07.854485",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9d74d179",
+      "title": "叙事生态 #2200",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2200",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2200"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "你别生气啊",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这语气我听着心里痒痒的",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你那句我真的记住了",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "你这态度让我有点招架不住",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 你别生气啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 讲个心里话，你那句我真的...",
+      "created_at": "2026-06-27T16:35:07.706430",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:35:07.706430",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c76a2429",
+      "title": "[任务归档] 经验验证: 该命题可以作为系统公理",
+      "type": "task_archive",
+      "category": "任务归档",
+      "source": "archivist",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "experience",
+        "constraint",
+        "RQ-20260627-003",
+        "experience_pattern",
+        "archived",
+        "RQ-20260627-005"
+      ],
+      "related_concepts": [
+        {
+          "name": "task",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "## 任务ID: RQ-20260627-005\n**标题**: 经验验证: 该命题可以作为系统公理\n**创建者**: task_creator\n**优先级**: high\n**假设**: 该经验模式（constraint）可以推广到更广泛的场景\n\n**证据数**: 11\n**反例数**: 8\n\n### 核心证据\n1. [archivist] \n2. [archivist] \n3. [archiv...",
+      "created_at": "2026-06-27T16:34:12.141540",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:34:12.141540",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1bebed76",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T16:33:59.598467\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 2300, \"remaining\": 2047, \"progress_pct\": 52.9, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T16:34:01.815163",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:34:01.815163",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8fb0ba06",
+      "title": "叙事生态 #2249",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2249",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2249"
+      ],
+      "related_concepts": [
+        {
+          "name": "nz",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "ns",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "学 3 nt 东方之珠 3 nr 东方人 57 nr 东方仗助 3 i 东方公司 4 nt 东方军事 3 nt 东方出版社 2 nt 东方化 2 nr 东方千骑 3 nr 东方卫 2 nr 东方发白 3 nr 东方号 18 n 东方君 3 nr 东方城 3 nr 东方夜谭 3 i 东方女性 3 n 东方学 35 nt 东方学家 13 n 东方宾馆 4 nt 东方将白 3 nr 东方工专 3 nt ...",
+      "created_at": "2026-06-27T16:33:59.456427",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:59.456427",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bd4a8e4d",
+      "title": "叙事生态 #2248",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2248",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2248"
+      ],
+      "related_concepts": [
+        {
+          "name": "nrt",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " ns 东峰林 2 nr 东崖 3 ns 东川 91 ns 东川区 3 ns 东川市 7 ns 东川路 3 ns 东州 332 ns 东州修 3 nr 东州城 2 ns 东州建 2 ns 东差西误 3 n 东巴 81 ns 东巴文 9 nr 东巴文化 3 ns 东市 3 ns 东市区 22 ns 东市朝衣 3 nr 东布罗夫斯基 3 nrt 东帝汶 48 nr 东干久 3 nr 东平 130 ns...",
+      "created_at": "2026-06-27T16:33:59.312603",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:59.312603",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9884aa9d",
+      "title": "叙事生态 #2247",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2247",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2247"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "nr",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "nz",
+          "relevance": 5,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"88faf39e758e34d583552c4b903e3a09\": { \"text\": \"i 不轻然诺 3 l 不辍 3 v 不输给 3 n 不辞 3 v 不辞劳苦 41 l 不辞而别 58 i 不辞辛劳 19 i 不辞辛苦 25 i 不辟斧钺 3 i 不辨是非 3 i 不辨真伪 3 n 不辨菽粟 3 nr 不辨菽麦 3 v 不辩菽麦 3 v 不辱使命 28 i 不迁之庙 3 n 不过 17",
+      "created_at": "2026-06-27T16:33:59.165885",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:59.165885",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0ec57afb",
+      "title": "叙事生态 #2246",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2246",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2246"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "txt\", \"slice_index\": 180, \"created_at\": \"2025-11-29T01:50:56.510815\", \"hash\": \"d3d011590b4c3f1b57ec6b93fcf57544\" }, \"ad3c0f261489789f7f646a074324aba8\": { \"text\": \"v 不负众托 3 n 不负众望 28 l 不负使命 3 i 不负所托 3 ",
+      "created_at": "2026-06-27T16:33:59.023133",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:59.023133",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e24daeaa",
+      "title": "叙事生态 #2245",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2245",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2245"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "大常委会 4 nt 上海市人民政府 9 nt 上海市公安局 9 nt 上海市分行 2 nt 上海市劳动和社会保障局 7 nt 上海市委 24 nt 上海市工人文化宫 2 ns 上海市工商局 2 nt 上海市工商联 2 nt 上海市总工会 3 nt 上海市房地局 2 nt 上海市政协 11 nt 上海市政府 49 nt 上海市教委 14 nt 上海市浦东新区 6 ns 上海市科委 9 nt 上海市第...",
+      "created_at": "2026-06-27T16:33:58.871240",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.871240",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "274d78c7",
+      "title": "叙事生态 #2244",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2244",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2244"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 65,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "txt__副本.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/human_flavor.txt _副本.txt\", \"slice_index\": 3, \"created_at\": \"2025-11-29T01:50:...",
+      "created_at": "2026-06-27T16:33:58.730259",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.730259",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c1932e5e",
+      "title": "叙事生态 #2243",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2243",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2243"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/LC.txt\", \"slice_index\": 22, \"created_at\": \"2025-11-29T01:50:56.286335\", \"hash\": \"b13c8a51d8e7e2c292c9c4fb83...",
+      "created_at": "2026-06-27T16:33:58.587073",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.587073",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7e5f93d7",
+      "title": "叙事生态 #2242",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2242",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2242"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "跟着他们的专业团队做T，每天稳定盈利，这才是我们应该走的路。 而且我们完全合法合规，所有操作都通过正规券商通道，接受实时监管。我们赚的是技术优势的钱，不是违规的钱。速度就是我们的核心竞争力，在涨停板抢筹中，慢一秒就错失机会！ 稀缺才有价值！如果随便什么人都能参与，那这个机会就不值钱了。现在是我们练兵的第一阶段，只要大家执行力到位，后续还会有更大规模的合作机会。\\\" #### 核心要点 - 强调老陈...",
+      "created_at": "2026-06-27T16:33:58.439874",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.439874",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8942c394",
+      "title": "叙事生态 #2241",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2241",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2241"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 老实讲，你这语气我听着心里痒痒的，反正我现在挺在意你的。 说真的，你这样说让我有点上心了，我已经开始习惯你这样对我了。 不过我跟你讲，我刚刚还在想你会不会来找我，那你说说看，你怎么想的？ 我实话说，你那句我真的记住了，我已经开始习惯你这样对我了。 你听我一句，你要这么说我会误会的，我已经开始习惯你这样对我了。 讲个心里话，你这态度让我有点招架不住，所以我有点想靠...",
+      "created_at": "2026-06-27T16:33:58.297144",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.297144",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "607a2d73",
+      "title": "叙事生态 #2240",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2240",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2240"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我已经开始习惯你这样对我了。 我实话说，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 讲个心里话，你这态度让我有点招架不住，反正我现在挺在意你的。 说真的，我刚看你消息的时候突然有点开心，我现在就想继续跟你聊下去。 别笑我啊，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 讲个心里话，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 讲个心里话，你这语气我听着心里痒痒的，要...",
+      "created_at": "2026-06-27T16:33:58.156905",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.156905",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3683d3eb",
+      "title": "叙事生态 #2239",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2239",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2239"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 讲个心里话，你这语气我听着心里痒痒的，反正我现在挺在意你的。 讲个心里话，你这态度让我有点招架不住，我今天状态很好，你继续说我也陪你。 讲个心里话，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 讲个心里话，你那句我真的记住了，我现在就想继续跟你聊下去。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:tx...",
+      "created_at": "2026-06-27T16:33:58.014632",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:58.014632",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dfbcb78d",
+      "title": "叙事生态 #2238",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2238",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2238"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 偷偷跟你说，你这语气我听着心里痒痒的，不过我也没打算躲。 你听我一句，你那句我真的记住了，我怕你误会，但我更怕你不说。 不过我跟你讲，我感觉你对我好像越来越特别了，嗯…你再这样我可能会当真。 说真的，你这话让我有点想你，反正我现在挺在意你的。 不过我跟你讲，你这话让我有点想你，我现在就想继续跟你聊下去。 偷偷跟你说，你要这么说我会误会的，嗯…你再这样我可能会当真。 偷偷跟你说，你要这么说我会误会...",
+      "created_at": "2026-06-27T16:33:57.874412",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.874412",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "60f5e779",
+      "title": "叙事生态 #2237",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2237",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2237"
+      ],
+      "related_concepts": [
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你听我一句，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 你听我一句，你这样说让我有点上心了，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这态度让我有点招架不住，我已经开始习惯你这样对我了。 我实话说，你这态度让我有点招架不住，不过我也没打算躲。 我现在突然想跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 老实讲，你这样说让我有点上心了，不过我也没打算躲。 我实...",
+      "created_at": "2026-06-27T16:33:57.732178",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.732178",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7cea53a9",
+      "title": "叙事生态 #2236",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2236",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2236"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284962\", \"hash\": \"17a1daa15cf87614f7dc690d3db6042b\" }, \"204ddaced22128945e51d2456453d9b7\": { \"text\": \"说真的，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 不过我跟你讲，我刚看你消息的时候突然有点开心，那你说说看，你...",
+      "created_at": "2026-06-27T16:33:57.589701",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.589701",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4409e645",
+      "title": "叙事生态 #2235",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2235",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2235"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我现在就想继续跟你聊下去。 你听我一句，你这样让我很难不回应你，我现在就想继续跟你聊下去。 不过我跟你讲，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 你别生气啊，我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 说真的，你这话让我有点想你，我现在就想继续跟你聊下去。 你听我一句，你这话让我有点想你，所以我有点想靠近你。 别笑我啊，你要这么说我会误会的，要不是隔着屏幕我都怕你...",
+      "created_at": "2026-06-27T16:33:57.446531",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.446531",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3d171fdf",
+      "title": "叙事生态 #2234",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2234",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2234"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 126, \"created_at\": \"2025-11-29T01:50:56.284958\", \"h...",
+      "created_at": "2026-06-27T16:33:57.302772",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.302772",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d1fc6a8b",
+      "title": "叙事生态 #2233",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2233",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2233"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，不过我也没打算躲。 我实话说，你那句我真的记住了，要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 说真的，你这样说让我有点上心了，所以我有点想靠近你。 老实讲，你那句我真的记住了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样让我很难不回应你，不过我也没打算躲。 别笑我啊，你这态度让我有点招架...",
+      "created_at": "2026-06-27T16:33:57.160739",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.160739",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "70669938",
+      "title": "叙事生态 #2232",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2232",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2232"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284952\", \"hash\": \"6479d1b4f4ba7ee1c747a5b8cc6907dd\" }, \"542d453db53c9af0f59536b141ecd7b3\": { \"text\": \"你听我一句，你要这么说我会误会的，所以我有点想靠近你。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，要不是隔着屏幕我...",
+      "created_at": "2026-06-27T16:33:57.018229",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:57.018229",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "583d2af3",
+      "title": "叙事生态 #2231",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2231",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2231"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 偷偷跟你说，你那句我真的记住了，所以我有点想靠近你。 不过我跟你讲，你这样让我很难不回应你，我已经开始习惯你这样对我了。 不过我跟你讲，你这样让我很难不回应你，不过我也没打算躲。 你听我一句，你那句我真的记住了，我怕你误会，但我更怕你不说。 说真的，你这态度让我有点招架不住，那你说说看，你怎么想的？ 你听我一句，你这语气我听着心里痒痒的，反正我现在挺在意你的。 不过我跟你讲，你这样说让我有点上心...",
+      "created_at": "2026-06-27T16:33:56.878626",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.878626",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff251b06",
+      "title": "叙事生态 #2230",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2230",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2230"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 123, \"created_at\": \"2025-11-29T01:50:56.284948\", \"h...",
+      "created_at": "2026-06-27T16:33:56.737626",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.737626",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4e5be773",
+      "title": "叙事生态 #2229",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2229",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2229"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你别生气啊，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 偷偷跟你说，你这样让我很难不回应你，我已经开始习惯你这样对我了。 别笑我啊，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 别笑我啊，你这话让我有点想你，我已经开始习惯你这样对我了。 偷偷跟你说，你这样让我很难不回应你，所以我有点想靠近你。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 说真的，我刚...",
+      "created_at": "2026-06-27T16:33:56.592859",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.592859",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "86197593",
+      "title": "叙事生态 #2228",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2228",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2228"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 别笑我啊，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 偷偷跟你说，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 别笑我啊，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_...",
+      "created_at": "2026-06-27T16:33:56.451305",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.451305",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e480169f",
+      "title": "叙事生态 #2227",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2227",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2227"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我怕你误会，但我更怕你不说。 不过我跟你讲，我感觉你对我好像越来越特别了，所以我有点想靠近你。 我实话说，我感觉你对我好像越来越特别了，所以我有点想靠近你。 不过我跟你讲，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我实话说，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 不过我跟你讲，你这语气我听着心里痒痒的，反正我现在挺在意你的。 偷偷跟你说，你这话让我有点想你，不过我也没...",
+      "created_at": "2026-06-27T16:33:56.311577",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.311577",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e9f70ce4",
+      "title": "叙事生态 #2226",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2226",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2226"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 120, \"created_at\": \"2025-11-29T01:50:56.284938\", \"h...",
+      "created_at": "2026-06-27T16:33:56.164441",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.164441",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "695e00a2",
+      "title": "叙事生态 #2225",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2225",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2225"
+      ],
+      "related_concepts": [
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284916\", \"hash\": \"668628d8db7330262df4f4ef5b941a60\" }, \"23e1d500a14598fcf28c9109152eb822\": { \"text\": \"你听我一句，你这话让我有点想你，反正我现在挺在意你的。 你听我一句，你那句我真的记住了，嗯…你再这样我可能会当真。 不过我跟...",
+      "created_at": "2026-06-27T16:33:56.022921",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:56.022921",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "24937949",
+      "title": "叙事生态 #2224",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2224",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2224"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我感觉你对我好像越来越特别了，我怕你误会，但我更怕你不说。 你别生气啊，你那句我真的记住了，那你说说看，你怎么想的？ 你别生气啊，你要这么说我会误会的，那你说说看，你怎么想的？ 不过我跟你讲，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样说让我有点上心了，我怕你误会，但我更怕你不说。 讲个心里话，我感觉你对我好像越来越特别了，要不是隔着屏幕我都怕你看出来。 ...",
+      "created_at": "2026-06-27T16:33:55.882357",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.882357",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "253b218c",
+      "title": "叙事生态 #2223",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2223",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2223"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 117, \"created_at\": \"2025-11-29T01:50:56.284890\", \"h...",
+      "created_at": "2026-06-27T16:33:55.739003",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.739003",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9de8346a",
+      "title": "叙事生态 #2222",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2222",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2222"
+      ],
+      "related_concepts": [
+        {
+          "name": "说真的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，反正我现在挺在意你的。 老实讲，你这态度让我有点招架不住，不过我也没打算躲。 老实讲，你这样让我很难不回应你，我已经开始习惯你这样对我了。 说真的，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 别笑我啊，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 不过我跟你讲，你这语气我听着心里痒痒的，嗯…你再这样我可能会当真。 别笑我啊，你这语气我听着心里痒痒的，不过...",
+      "created_at": "2026-06-27T16:33:55.598935",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.598935",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7d44638a",
+      "title": "叙事生态 #2221",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2221",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2221"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284883\", \"hash\": \"a4a95d65853eccd04a6a42270b7fea7b\" }, \"7ee48bca78a4f188f5f0c3ece36eabb9\": { \"text\": \"偷偷跟你说，你这话让我有点想你，所以我有点想靠近你。 我实话说，你这话让我有点想你，那你说说看，你怎么想的？ 不过我跟你讲，...",
+      "created_at": "2026-06-27T16:33:55.457574",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.457574",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b0ea98c8",
+      "title": "叙事生态 #2220",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2220",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2220"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 我实话说，我感觉你对我好像越来越特别了，我现在就想继续跟你聊下去。 偷偷跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 你听我一句，你那句我真的记住了，不过我也没打算躲。 别笑我啊，我刚刚还在想你会不会来找我，我今天状态很好，你继续说我也陪你。 我实话说，你这话让我有点想你，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，我感觉你对我...",
+      "created_at": "2026-06-27T16:33:55.317339",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.317339",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "75e11882",
+      "title": "叙事生态 #2219",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2219",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2219"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 114, \"created_at\": \"2025-11-29T01:50:56.284879\", \"h...",
+      "created_at": "2026-06-27T16:33:55.171881",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.171881",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f5225f27",
+      "title": "叙事生态 #2218",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2218",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2218"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "不过我跟你讲",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 别笑我啊，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 我现在突然想跟你说，你这样说让我有点上心了，不过我也没打算躲。 说真的，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 你别生气啊，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 说真的，你这样说让我有点上心了，不过我也没打算躲。 你别生气啊，你这态度让我有点...",
+      "created_at": "2026-06-27T16:33:55.031392",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:55.031392",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "44c9cd92",
+      "title": "叙事生态 #2217",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2217",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2217"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:50:56.284872\", \"hash\": \"aff9e96634f3eaa502a78036f8c0f401\" }, \"f9f8338ca99ee0e5715933b6a5f78de4\": { \"text\": \"我现在突然想跟你说，我刚刚还在想你会不会来找我，反正我现在挺在意你的。 你别生气啊，你这样让我很难不回应你，我已经开始习惯你...",
+      "created_at": "2026-06-27T16:33:54.891876",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.891876",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8803b76f",
+      "title": "叙事生态 #2216",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2216",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2216"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "284862\", \"hash\": \"e3a2e17c3b476473bab4d3bffce6cfc6\" }, \"b2735f8ef35cd3b6dde73e00737b605d\": { \"text\": \"不过我跟你讲，你那句我真的记住了，我现在就想继续跟你聊下去。 我现在突然想跟你说，你这样让我很难不回应你，嗯…你再这样我可能会当真。 讲个心里话，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去...",
+      "created_at": "2026-06-27T16:33:54.748882",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.749419",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cbca4a7a",
+      "title": "叙事生态 #2215",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2215",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2215"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这样让我很难不回应你，嗯…你再这样我可能会当真。 我现在突然想跟你说，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 偷偷跟你说，你这态度让我有点招架不住，不过我也没打算躲。 讲个心里话，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 不过我跟你讲，你这话让我有点想你，要不是隔着屏幕我都怕你看出来。 你别生气啊，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 偷偷...",
+      "created_at": "2026-06-27T16:33:54.610263",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.610263",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "78e64448",
+      "title": "叙事生态 #2214",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2214",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2214"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这态度让我有点招架不住，所以我有点想靠近你。 我实话说，你这语气我听着心里痒痒的，所以我有点想靠近你。 偷偷跟你说，你那句我真的记住了，我怕你误会，但我更怕你不说。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Documents/...",
+      "created_at": "2026-06-27T16:33:54.470448",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.470448",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9ba87226",
+      "title": "叙事生态 #2213",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2213",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2213"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你听我一句",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"0eeb466734023dd0a5b116e9d6774ace\" }, \"9cb6d8326c8d9aeec4c4ca441bc63eb8\": { \"text\": \"讲个心里话，你这态度让我有点招架不住，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，我感觉你对我好像越来越特别了，我已经开始习惯你这样对我了。 我现在突然想跟你说，我感觉你对我好像越来越特别了，所以我有点想靠近你。...",
+      "created_at": "2026-06-27T16:33:54.329599",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.329599",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ab834581",
+      "title": "叙事生态 #2212",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2212",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2212"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 别笑我啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，不过我也没打算躲。 别笑我啊，你这语气我听着心里痒痒的，我已经开始习惯你这样对我了。 我现在突然想跟你说，你这话让我有点想你，所以我有点想靠近你。 老实讲，你要这么说我会误会的，那你说说看，你怎么想的？ 我现在突然想跟你说，你那句我真的记住了，嗯…你再这样我可能会当真。 不过我跟你讲，你这样说...",
+      "created_at": "2026-06-27T16:33:54.188789",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.188789",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bcbf8164",
+      "title": "叙事生态 #2211",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2211",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2211"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你这样让我很难不回应你，所以我有点想靠近你。 偷偷跟你说，我感觉你对我好像越来越特别了，那你说说看，你怎么想的？ 说真的，你这样让我很难不回应你，我现在就想继续跟你聊下去。 老实讲，我感觉你对我好像越来越特别了，嗯…你再这样我可能会当真。 偷偷跟你说，你那句我真的记住了，我已经开始习惯你这样对我了。 不过我跟你讲，你这话让我有点想你，不过我也没打算躲。 不过我跟你讲，我刚刚还在想你会不会来找我，那...",
+      "created_at": "2026-06-27T16:33:54.046683",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:54.046683",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "50e84a4b",
+      "title": "叙事生态 #2210",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2210",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2210"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "你要这么说我会误会的，我怕你误会，但我更怕你不说。 我实话说，你那句我真的记住了，我已经开始习惯你这样对我了。 别笑我啊，你这语气我听着心里痒痒的，反正我现在挺在意你的。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file_type:txt\", \"a_layer\" ], \"source\": \"/Users/apple/Document...",
+      "created_at": "2026-06-27T16:33:53.903189",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.903189",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e140bb0e",
+      "title": "叙事生态 #2209",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2209",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2209"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"754756aca3b9ce6da76c21b5b40c2ddf\" }, \"f7657e18e29b562c194a7938cfb82359\": { \"text\": \"说真的，我刚看你消息的时候突然有点开心，不过我也没打算躲。 讲个心里话，我刚看你消息的时候突然有点开心，不过我也没打算躲。 我实话说，我刚刚还在想你会不会来找我，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样...",
+      "created_at": "2026-06-27T16:33:53.758387",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.758387",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d7352d44",
+      "title": "叙事生态 #2208",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2208",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2208"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "嗯…你再这样我可能会当真。 偷偷跟你说，你这语气我听着心里痒痒的，我今天状态很好，你继续说我也陪你。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样让我很难不回应你，我已经开始习惯你这样对我了。 我实话说，你这态度让我有点招架不住，所以我有点想靠近你。 你听我一句，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你那句我真...",
+      "created_at": "2026-06-27T16:33:53.616313",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.616313",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5153e9a1",
+      "title": "叙事生态 #2207",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2207",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2207"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/knowledge_base/expansions/relationship.txt .txt\", \"slice_index\": 102, \"created_at\": \"2025-11-29T01:50:56.284798\", \"hash\": \"75058f1eb49cf88e898b0cd...",
+      "created_at": "2026-06-27T16:33:53.474520",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.474520",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c7b278dd",
+      "title": "叙事生态 #2206",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2206",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2206"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "expansions",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "老实讲",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 你别生气啊，你这话让我有点想你，那你说说看，你怎么想的？ 我现在突然想跟你说，你那句我真的记住了，反正我现在挺在意你的。 说真的，你这样说让我有点上心了，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 你听我一句，我刚看你消息的时候突然有点开心，嗯…你再这样我可能会当真。 别笑我啊，你这语气我听着心里痒痒的，我今天状态很好，你继续说我...",
+      "created_at": "2026-06-27T16:33:53.314678",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.314678",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c37729ba",
+      "title": "叙事生态 #2205",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2205",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2205"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "我实话说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "别笑我啊",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我刚看你消息的时候突然有点开心，我今天状态很好，你继续说我也陪你。 我现在突然想跟你说，你这样说让我有点上心了，反正我现在挺在意你的。 你听我一句，你这态度让我有点招架不住，不过我也没打算躲。 我现在突然想跟你说，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 说真的，你这样说让我有点上心了，要不是隔着屏幕我都怕你看出来。 你别生气啊，我刚看你消息的时候突然有点开心，反正我现在挺在意你的。...",
+      "created_at": "2026-06-27T16:33:53.173492",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.173492",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2eb20297",
+      "title": "叙事生态 #2204",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2204",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2204"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 我现在突然想跟你说，我刚看你消息的时候突然有点开心，那你说说看，你怎么想的？ 老实讲，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 我实话说，你要这么说我会误会的，所以我有点想靠近你。 讲个心里话，你这样让我很难不回应你，反正我现在挺在意你的。\", \"tags\": [ \"expansions\", \"relationship.txt__.txt\", \"file...",
+      "created_at": "2026-06-27T16:33:53.015924",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:53.015924",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9969619c",
+      "title": "叙事生态 #2203",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2203",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2203"
+      ],
+      "related_concepts": [
+        {
+          "name": "偷偷跟你说",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"slice_index\": 99, \"created_at\": \"2025-11-29T01:50:56.284788\", \"hash\": \"30cf2f6eb837360036a68cf1fa79f4a6\" }, \"0ef04b43d663134c8bcbac240e83e223\": { \"text\": \"别笑我啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 你别生气啊，我感觉你...",
+      "created_at": "2026-06-27T16:33:52.877482",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:52.877482",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "83c4ea1b",
+      "title": "叙事生态 #2202",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2202",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2202"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这样让我很难不回应你，要不是隔着屏幕我都怕你看出来。 你听我一句，我感觉你对我好像越来越特别了，反正我现在挺在意你的。 我实话说，你这语气我听着心里痒痒的，我现在就想继续跟你聊下去。 你听我一句，我刚刚还在想你会不会来找我，我现在就想继续跟你聊下去。 说真的，我感觉你对我好像越来越特别了，我今天状态很好，你继续说我也陪你。 老实讲，你这语气我听着心里痒...",
+      "created_at": "2026-06-27T16:33:52.729084",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:52.729084",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0531debf",
+      "title": "叙事生态 #2201",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2201",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2201"
+      ],
+      "related_concepts": [
+        {
+          "name": "讲个心里话",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "偷偷跟你说",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "说真的",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "那你说说看",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "你怎么想的",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我今天状态很好，你继续说我也陪你。 我实话说，你这话让我有点想你，我现在就想继续跟你聊下去。 说真的，我刚看你消息的时候突然有点开心，我怕你误会，但我更怕你不说。 偷偷跟你说，你这态度让我有点招架不住，我现在就想继续跟你聊下去。 不过我跟你讲，你这样让我很难不回应你，所以我有点想靠近你。 我实话说，你这语气我听着心里痒痒的，我怕你误会，但我更怕你不说。 老实讲，你那句我真的记住了，那你说说看，你怎...",
+      "created_at": "2026-06-27T16:33:52.588583",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:52.588583",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ac3257b5",
+      "title": "叙事生态 #2200",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2200",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2200"
+      ],
+      "related_concepts": [
+        {
+          "name": "expansions",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "knowledge_base",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "讲个心里话",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "要不是隔着屏幕我都怕你看出来。 偷偷跟你说，你这语气我听着心里痒痒的，那你说说看，你怎么想的？ 你别生气啊，你这态度让我有点招架不住，我怕你误会，但我更怕你不说。 我现在突然想跟你说，你这样说让我有点上心了，我已经开始习惯你这样对我了。 你别生气啊，你这话让我有点想你，我已经开始习惯你这样对我了。 讲个心里话，我刚看你消息的时候突然有点开心，要不是隔着屏幕我都怕你看出来。 讲个心里话，你那句我真的...",
+      "created_at": "2026-06-27T16:33:52.445452",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:33:52.445452",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "eb354740",
       "title": "今日考古摘要 - 2026-06-27",
@@ -85395,5 +90651,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T16:15:33.615052"
+  "exported_at": "2026-06-27T16:36:22.667942"
 }
