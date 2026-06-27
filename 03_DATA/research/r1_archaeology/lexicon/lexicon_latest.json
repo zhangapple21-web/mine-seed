@@ -3914,6 +3914,16 @@
       "first_seen": "2026-06-27T15:19:53.010993",
       "importance": 65
     },
+    "Audit_log测试任务": {
+      "name": "Audit_log测试任务",
+      "definition": "[Guardian-constraint] 测试审计日志是否记录",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-004",
+      "first_seen": "2026-06-27T15:27:48.202998",
+      "importance": 65
+    },
     "persuasive_salesperson": {
       "name": "persuasive_salesperson",
       "definition": "persuasive_salesperson是从structural_v2材料中自动提取的概念",
@@ -5079,7 +5089,8 @@
       "真实造物主的尊名",
       "integration_rules",
       "top_rule",
-      "词库缺口补全_6个薄弱分类"
+      "词库缺口补全_6个薄弱分类",
+      "Audit_log测试任务"
     ],
     "方法论": [
       "考古",
@@ -5404,5 +5415,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:20:16.230886"
+  "exported_at": "2026-06-27T15:28:46.096430"
 }
