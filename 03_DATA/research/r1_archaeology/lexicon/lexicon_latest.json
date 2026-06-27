@@ -1341,6 +1341,22 @@
       "first_seen": "2026-06-26T22:06:35.453043",
       "importance": 82
     },
+    "中说道": {
+      "name": "中说道",
+      "definition": "om › question信息是什么？ - 知乎2011年11月23日 · 中国陈忠在其信息究竟是什么？（1984）中说道： 目前 , 人 们正以极大的兴趣谈论着“ 信息革命 ”，信息一词正在 各种意义上被使用着 。然而与这种繁荣局面相比 ,",
+      "category": "核心概念",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "提现分为两种"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.947782",
+      "importance": 82
+    },
     "词库层": {
       "name": "词库层",
       "definition": "系统的语言结构层，原始词库、合并词库、去重引擎、映射索引。R1中是body死了但soul活下来的典型。",
@@ -1762,6 +1778,70 @@
       "first_seen": "2026-06-27T14:03:13.143482",
       "importance": 79
     },
+    "沉浸玩家": {
+      "name": "沉浸玩家",
+      "definition": "有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.956870",
+      "importance": 79
+    },
+    "选择困难症": {
+      "name": "选择困难症",
+      "definition": "事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许可证：合字B",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.964306",
+      "importance": 79
+    },
+    "我从未想过": {
+      "name": "我从未想过",
+      "definition": "情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许可证：合字B2-2009",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.972857",
+      "importance": 79
+    },
+    "郭富城": {
+      "name": "郭富城",
+      "definition": "郭富城、任达华、吴镇宇、方中信领衔主演的电影内幕日前重磅官宣，将于12月6日贺岁档在全国公映。 qlwb.com.cnht",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.980053",
+      "importance": 79
+    },
     "现实权重": {
       "name": "现实权重",
       "definition": "心核中的现实权重矩阵，用于衡量不同现实维度的权重，影响决策优先级。",
@@ -2177,6 +2257,54 @@
       "first_seen": "2026-06-27T14:03:13.168258",
       "importance": 75
     },
+    "以下是一般的质粒转化的操作步骤": {
+      "name": "以下是一般的质粒转化的操作步骤",
+      "definition": "的操作步骤有哪些，有没有常用的转化方法？ - 知乎质粒转化是分子生物学中常用的实验技术，用于将外源质粒DNA转入细胞内。以下是一般的质粒转化的操作步骤： 1. 准备培养基和试剂： - 选择适合细胞生长的培养基，如Luria-Bertani (LB) …biomart.c",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.988981",
+      "importance": 75
+    },
+    "准备培养基和试剂": {
+      "name": "准备培养基和试剂",
+      "definition": "- 知乎质粒转化是分子生物学中常用的实验技术，用于将外源质粒DNA转入细胞内。以下是一般的质粒转化的操作步骤： 1. 准备培养基和试剂： - 选择适合细胞生长的培养基，如Luria-Bertani (LB) …biomart.cnhttps://www.",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:37.997060",
+      "importance": 75
+    },
+    "question剧本杀里有哪些好的情感本": {
+      "name": "question剧本杀里有哪些好的情感本",
+      "definition": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:38.004928",
+      "importance": 75
+    },
     "emotional_trigger": {
       "name": "emotional_trigger",
       "definition": "emotional_trigger是从structural_v2材料中自动提取的概念",
@@ -2223,6 +2351,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-26T22:06:35.502629",
+      "importance": 73
+    },
+    "AD": {
+      "name": "AD",
+      "definition": "AD是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "ZN-∞",
+        "双核心+影子运行时",
+        "知乎故事"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:38.013762",
+      "importance": 73
+    },
+    "在超净工作台中取1μL质粒": {
+      "name": "在超净工作台中取1μL质粒",
+      "definition": "2、在超净工作台中取1μL质粒（含目的基因）加 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京",
+      "category": "方法论",
+      "related": [
+        "身体",
+        "灵魂",
+        "知乎故事",
+        "感情经历",
+        "中说道"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T14:04:38.021614",
       "importance": 73
     },
     "量子引擎": {
@@ -3082,6 +3242,36 @@
       "first_seen": "2026-06-27T14:03:15.044105",
       "importance": 60
     },
+    "intent_keywords": {
+      "name": "intent_keywords",
+      "definition": "JSON结构字段（snake_case），来自sensory_config.json，类型: {'dict': 3, 'list': 26, 'float': 4}",
+      "category": "考古发现",
+      "related": [],
+      "examples": [],
+      "source": "disk_scanner:json",
+      "first_seen": "2026-06-27T14:04:42.066205",
+      "importance": 60
+    },
+    "emotion_keywords": {
+      "name": "emotion_keywords",
+      "definition": "JSON结构字段（snake_case），来自sensory_config.json，类型: {'dict': 3, 'list': 26, 'float': 4}",
+      "category": "考古发现",
+      "related": [],
+      "examples": [],
+      "source": "disk_scanner:json",
+      "first_seen": "2026-06-27T14:04:42.071924",
+      "importance": 60
+    },
+    "feature_weights": {
+      "name": "feature_weights",
+      "definition": "JSON结构字段（snake_case），来自sensory_config.json，类型: {'dict': 3, 'list': 26, 'float': 4}",
+      "category": "考古发现",
+      "related": [],
+      "examples": [],
+      "source": "disk_scanner:json",
+      "first_seen": "2026-06-27T14:04:42.077003",
+      "importance": 60
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -3255,7 +3445,16 @@
       "真实造物主的尊名"
     ],
     "方法论": [
-      "考古"
+      "考古",
+      "沉浸玩家",
+      "选择困难症",
+      "我从未想过",
+      "郭富城",
+      "以下是一般的质粒转化的操作步骤",
+      "准备培养基和试剂",
+      "question剧本杀里有哪些好的情感本",
+      "AD",
+      "在超净工作台中取1μL质粒"
     ],
     "系统定义": [
       "ACE"
@@ -3406,7 +3605,10 @@
       "protocols",
       "global_settings",
       "conflict_detection",
-      "tokens"
+      "tokens",
+      "intent_keywords",
+      "emotion_keywords",
+      "feature_weights"
     ],
     "待分类": [
       "小雪",
@@ -3460,9 +3662,10 @@
       "感情经历",
       "申请额度",
       "申请周期",
-      "客服回复"
+      "客服回复",
+      "中说道"
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T14:03:15.237996"
+  "exported_at": "2026-06-27T14:04:42.365249"
 }

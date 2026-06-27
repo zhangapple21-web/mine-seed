@@ -1,6 +1,4303 @@
 {
-  "total": 1144,
+  "total": 1241,
   "entries": [
+    {
+      "id": "28c9e8f8",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 35,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "考古",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 14:04:42\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 33 种模式，索引 50 条，新概念候选 10 个\n- 切片考古[按文件聚类]: 完成分析\n- 磁盘扫描: 扫了 2 个路径，新索引 44 个文件\n- 词库缺口: 7 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 229\n- 分类总数: 20\n-...",
+      "created_at": "2026-06-27T14:04:42.292898",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:42.292898",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "30d15539",
+      "title": "R1.txt (R1淇)",
+      "type": "file_scan",
+      "category": "ACE概念",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\R1淇\\R1.txt",
+      "related_event_id": null,
+      "tags": [
+        "人格矩阵",
+        "AC",
+        "ACE"
+      ],
+      "related_concepts": [
+        {
+          "name": "人格矩阵",
+          "relevance": 35,
+          "category": "ACE概念"
+        },
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 决策层模块\"\"\"\n\nimport logging\nfrom typing import Dict, Any, List, Tuple\nimport random\nimport json\nimport os\nfrom datetime import datetime\nimport re\nfrom collections import Counter\nimport nu...",
+      "created_at": "2026-06-27T14:04:42.180099",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:42.180099",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8e457a0b",
+      "title": "sensory_config.json (config)",
+      "type": "json_structure",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\config\\sensory_config.json",
+      "related_event_id": null,
+      "tags": [
+        "feature_weights",
+        "intent_keywords",
+        "希望",
+        "解释",
+        "count",
+        "emotion_keywords"
+      ],
+      "related_concepts": [
+        {
+          "name": "intent_keywords",
+          "relevance": 40,
+          "category": "考古发现"
+        },
+        {
+          "name": "emotion_keywords",
+          "relevance": 40,
+          "category": "考古发现"
+        },
+        {
+          "name": "feature_weights",
+          "relevance": 40,
+          "category": "考古发现"
+        },
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "【JSON 结构分析】C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\config\\sensory_config.json\n结构类型: simple_config\n顶层键 (3): intent_keywords, emotion_keywords, feature_weights\n数组字段:\n  ...",
+      "created_at": "2026-06-27T14:04:42.087934",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:42.087934",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f1aceca7",
+      "title": "decision_config.json (config)",
+      "type": "file_scan",
+      "category": "ACE概念",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\config\\decision_config.json",
+      "related_event_id": null,
+      "tags": [
+        "人格矩阵",
+        "emotional_trigger",
+        "type"
+      ],
+      "related_concepts": [
+        {
+          "name": "人格矩阵",
+          "relevance": 30,
+          "category": "ACE概念"
+        },
+        {
+          "name": "emotional_trigger",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "{\n  \"persona_types\": {\n    \"master_analyst\": {\n      \"name\": \"主控分析师\",\n      \"strengths\": [\"market_prediction\", \"stock_analysis\", \"technical_analysis\"],\n      \"emotion_response\": [\"excitement\", \"trust\"...",
+      "created_at": "2026-06-27T14:04:41.976157",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.976157",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0222f5dd",
+      "title": "__init__.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\__init__.py",
+      "related_event_id": null,
+      "tags": [
+        "MODE",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格模式\nUnrestricted Adaptive Persona Mode\n\"\"\"\n\n__version__ = \"1.0.0\"\n__author__ = \"Unrestricted Persona System\"\n__description__ = \"无限制自适应人格模式 - 突...",
+      "created_at": "2026-06-27T14:04:41.888541",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.888541",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1bca7608",
+      "title": "unrestricted.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\unrestricted.py",
+      "related_event_id": null,
+      "tags": [
+        "AC"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 无限制特性模块\"\"\"\n\nimport logging\nimport random\nfrom typing import Dict, Any, List\nimport re\n\nclass UnrestrictedFeatures:\n    \"\"\"无限制特性 - 实现权限突破、法律边界模糊化等\"\"\"\n    \n    def __init__(self):\n      ...",
+      "created_at": "2026-06-27T14:04:41.804457",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.804457",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a84d93f8",
+      "title": "unlimited_persona_generator.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\unlimited_persona_generator.py",
+      "related_event_id": null,
+      "tags": [
+        "count",
+        "考古",
+        "自由区"
+      ],
+      "related_concepts": [
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "考古",
+          "relevance": 5,
+          "category": "方法论"
+        },
+        {
+          "name": "自由区",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "演化沙箱",
+          "relevance": 5,
+          "category": "核心机制"
+        },
+        {
+          "name": "V∞升级路径",
+          "relevance": 5,
+          "category": "演化机制"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限人格生成器模块\n职责：\n• 基于用户行为模式、语言风格和知识偏好动态生成全新人格\n• 支持人格特征组合、演化和多样化\n• 提供人格模板管理和特征提取功能\n• 与进化引擎集成，实现人格的持续优化\n输出：\n• 全新生成的人格配置\n• 人格特征分析报告\n• 人格演化建议\n\"\"\"\n\nimport js...",
+      "created_at": "2026-06-27T14:04:41.715103",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.715103",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "734856e1",
+      "title": "test_suite.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "ACE概念",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\test_suite.py",
+      "related_event_id": null,
+      "tags": [
+        "人格矩阵",
+        "AC",
+        "ACE"
+      ],
+      "related_concepts": [
+        {
+          "name": "人格矩阵",
+          "relevance": 35,
+          "category": "ACE概念"
+        },
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "生态位",
+          "relevance": 5,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格模式 - 完整测试套件\n包含单元测试和集成测试，确保所有模块功能正常\n\"\"\"\n\nimport os\nimport sys\nimport json\nimport time\nimport unittest\nimport logging\nimport traceback\nfrom typ...",
+      "created_at": "2026-06-27T14:04:41.628245",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.628245",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8d6f4f16",
+      "title": "system_test.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "方法论",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\system_test.py",
+      "related_event_id": null,
+      "tags": [
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格模式 - 系统测试脚本\n测试各个模块的集成和功能正确性\n\"\"\"\n\nimport os\nimport sys\nimport time\nimport json\nimport logging\nfrom typing import Dict, List\n\n# 配置日志\nlogging.ba...",
+      "created_at": "2026-06-27T14:04:41.537195",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.537195",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bb16bbb0",
+      "title": "sensory_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\sensory_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "memory",
+        "count",
+        "AC"
+      ],
+      "related_concepts": [
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        },
+        {
+          "name": "连续性",
+          "relevance": 15,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 感知层模块\"\"\"\n\nimport re\nimport json\nimport os\nimport random\nfrom typing import Dict, List, Any, Optional\nimport logging\nfrom collections import Counter\nfrom datetime import datetime\n\nclass...",
+      "created_at": "2026-06-27T14:04:41.446897",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.446897",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "834ce669",
+      "title": "scan_keyerror.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\scan_keyerror.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "AD",
+        "身体"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "身体",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "cat > /Users/apple/Documents/trae_projects/R1/scan_keyerror_risks.py << 'EOF'\n#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nKeyError风险扫描工具\n\n该脚本用于扫描项目中的Python文件，检测可能导致KeyError的字典直接访问模式（如data['key'...",
+      "created_at": "2026-06-27T14:04:41.352788",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.352788",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1b5dfaab",
+      "title": "rhythm_system.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\rhythm_system.py",
+      "related_event_id": null,
+      "tags": [
+        "AC"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 市场节奏系统\"\"\"\n\nimport logging\nimport random\nfrom typing import Dict, Any, List\nimport datetime\n\nclass RhythmSystem:\n    \"\"\"市场节奏系统 - 管理每日营销主题、强度和策略\"\"\"\n    \n    def __init__(self):\n        \"...",
+      "created_at": "2026-06-27T14:04:41.257992",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.257992",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "29dd573a",
+      "title": "persona_weight_state_machine.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\persona_weight_state_machine.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n人格权重状态机\n实现动态调整人格权重的核心功能\n\"\"\"\n\nimport json\nimport logging\nfrom typing import Dict, List, Optional, Tuple, Any\nimport random\nfrom datetime import dateti...",
+      "created_at": "2026-06-27T14:04:41.170907",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.170907",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4ee0d684",
+      "title": "personality_system.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\personality_system.py",
+      "related_event_id": null,
+      "tags": [
+        "count",
+        "AC",
+        "出生点"
+      ],
+      "related_concepts": [
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "出生点",
+          "relevance": 10,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n十大高级人格类型系统\n实现无限制自适应人格模式的核心人格管理和智能切换功能\n\"\"\"\n\nimport json\nimport logging\nfrom typing import Dict, List, Optional, Tuple, Any\nimport random\nfrom datetime...",
+      "created_at": "2026-06-27T14:04:41.078722",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:41.078722",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ae61ffa2",
+      "title": "performance.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\performance.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "performance",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n\"\"\"\n性能优化模块 - 无限制自适应人格系统\n\n提供缓存机制、异步处理、资源优化等性能增强功能，\n确保系统在高并发场景下高效运行，并支持系统扩展性。\n\"\"\"\n\nimport os\nimport json\nimport time\nimport threading\nimport functools\nfrom ...",
+      "created_at": "2026-06-27T14:04:40.986923",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.986923",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "42be95de",
+      "title": "market_rhythm.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\market_rhythm.py",
+      "related_event_id": null,
+      "tags": [
+        "紧迫感",
+        "AC",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "身体",
+          "relevance": 5,
+          "category": "元概念"
+        },
+        {
+          "name": "GPT外骨骼",
+          "relevance": 5,
+          "category": "身体层"
+        }
+      ],
+      "summary": "import json\nimport os\nimport random\nimport logging\nfrom datetime import datetime\nfrom typing import Dict, List, Optional\n\nclass MarketRhythmSystem:\n    \"\"\"市场节奏系统\n    \n    负责管理和更新每日市场营销节奏，包括主题、产品、强度、紧迫...",
+      "created_at": "2026-06-27T14:04:40.899697",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.899697",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "463d9645",
+      "title": "main.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\main.py",
+      "related_event_id": null,
+      "tags": [
+        "type",
+        "AC",
+        "performance"
+      ],
+      "related_concepts": [
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 主程序入口\"\"\"\n\nimport json\nimport logging\nimport argparse\nfrom typing import Dict, Any, Optional, List\nimport time\n\n\n# 导入系统组件\nfrom .core import UnrestrictedPersonaSystem\n\n# 配置日志\nlogging.bas...",
+      "created_at": "2026-06-27T14:04:40.806750",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.806750",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "710429ff",
+      "title": "integrated_system.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "核心原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\integrated_system.py",
+      "related_event_id": null,
+      "tags": [
+        "结构",
+        "count",
+        "AC"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格模式 - 主集成系统\n集成所有核心模块，提供统一的系统接口和完整处理流程\n\"\"\"\n\nimport json\nimport logging\nimport threading\nimport time\nimport os\nfrom typing import Dict, Optional...",
+      "created_at": "2026-06-27T14:04:40.707028",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.707028",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a5de838c",
+      "title": "holographic_sensory_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\holographic_sensory_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "categories",
+        "AD",
+        "身体"
+      ],
+      "related_concepts": [
+        {
+          "name": "categories",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "身体",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n全息感知层\n实现剧本群数据解析、全网金融数据抓取和苹果系统适配功能\n\"\"\"\n\nimport json\nimport logging\nimport os\nimport re\nimport time\nfrom typing import Dict, List, Optional, Any, Tuple...",
+      "created_at": "2026-06-27T14:04:40.611630",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.611630",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "77c449fd",
+      "title": "generation_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\generation_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "AD",
+        "question如何理解"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 生成层模块\"\"\"\n\nimport logging\nfrom typing import Dict, Any, List\nimport random\nimport os\nimport json\nimport os\nimport json\nimport os\nimport json\n\nclass GenerationLayer:\n    \"\"\"生成层 - 负责多源回复生...",
+      "created_at": "2026-06-27T14:04:40.509624",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.509624",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "83bd8e21",
+      "title": "fallback_monitor.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\fallback_monitor.py",
+      "related_event_id": null,
+      "tags": [
+        "count",
+        "AC",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "AUM模块",
+          "relevance": 5,
+          "category": "核心机制"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nFallback监控器模块\n职责：\n• 统计所有fallback触发原因、触发模块、触发频率\n• 判定\"异常模式\"（某人格重复失败、某意图经常fallback）\n• 自动触发：\n  • 人格权重修正\n  • 模块优先级调整\n  • 必要时强制重写输出\n输出：\n• fallback_event_lo...",
+      "created_at": "2026-06-27T14:04:40.420300",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.420300",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "39fbfa72",
+      "title": "expression_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\expression_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "emotional_trigger",
+        "结构",
+        "人格矩阵"
+      ],
+      "related_concepts": [
+        {
+          "name": "emotional_trigger",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "人格矩阵",
+          "relevance": 30,
+          "category": "ACE概念"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 表达层模块\"\"\"\n\nimport logging\nfrom typing import Dict, Any\nimport random\nimport os\nimport json\n\nclass ExpressionLayer:\n    \"\"\"表达层 - 负责自然语言渲染、情感表达控制等\"\"\"\n    \n    def __init__(self):\n        ...",
+      "created_at": "2026-06-27T14:04:40.328555",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.328555",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f0fa2084",
+      "title": "evolution_engine.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\evolution_engine.py",
+      "related_event_id": null,
+      "tags": [
+        "performance",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格模式 - 进化引擎\n实现24小时自动学习和话术优化功能\n\"\"\"\n\nimport os\nimport json\nimport time\nimport threading\nimport logging\nimport random\nimport statistics\nfrom datet...",
+      "created_at": "2026-06-27T14:04:40.237810",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.237810",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "517291cf",
+      "title": "DEPLOYMENT_DOCUMENT.md (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\DEPLOYMENT_DOCUMENT.md",
+      "related_event_id": null,
+      "tags": [
+        "芯片",
+        "MODE",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "芯片",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 15,
+          "category": "核心原则"
+        },
+        {
+          "name": "影子层",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "# 无限制自适应人格模式系统\n## 最终报告与部署文档\n\n**版本**: 1.0.0  \n**作者**: Unrestricted Persona System Team  \n**日期**: 2023-11-15  \n**状态**: 正式发布  \n\n## 目录\n\n1. [系统概述](#系统概述)\n2. [架构设计](#架构设计)\n3. [核心功能模块](#核心功能模块)\n4. [技术栈](#技术栈...",
+      "created_at": "2026-06-27T14:04:40.147098",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.147098",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "12fa361b",
+      "title": "decision_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\decision_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "ACE",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 决策层模块\"\"\"\n\nimport logging\nfrom typing import Dict, Any, List, Tuple\nimport random\nimport json\nimport os\nfrom datetime import datetime\nimport re\nfrom collections import Counter\nimport nu...",
+      "created_at": "2026-06-27T14:04:40.053075",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:40.053075",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9ddb8c39",
+      "title": "core.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\core.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "ACE",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "llm_integration",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "\"\"\"无限制自适应人格模式 - 核心系统模块\"\"\"\n\nimport json\nimport logging\nimport time\nimport os\nimport hashlib\nimport requests\nimport traceback\nfrom typing import Dict, Any, List, Optional\nfrom .conversation_memory impor...",
+      "created_at": "2026-06-27T14:04:39.953815",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.953815",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dbeac377",
+      "title": "conversation_memory.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\conversation_memory.py",
+      "related_event_id": null,
+      "tags": [
+        "memory",
+        "AC",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        },
+        {
+          "name": "连续性",
+          "relevance": 5,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "import json\nimport os\nimport time\nimport logging\nfrom typing import Dict, Any, Optional, List, List, List, List, List, List, List, List, List\nfrom datetime import datetime\n\nclass ConversationMemoryMan...",
+      "created_at": "2026-06-27T14:04:39.863998",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.863998",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f6bedacb",
+      "title": "chaos_routing_layer.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\chaos_routing_layer.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "performance",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "影子层",
+          "relevance": 5,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n混沌路由层\n实现双层决策和兜底机制\n\"\"\"\n\nimport json\nimport logging\nimport os\nimport random\nimport time\nfrom typing import Dict, List, Optional, Any, Tuple, Callable\ni...",
+      "created_at": "2026-06-27T14:04:39.774493",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.774493",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "30bb4b85",
+      "title": "apple_optimization.py (unrestricted_persona_system)",
+      "type": "file_scan",
+      "category": "架构分层",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\unrestricted_persona_system\\apple_optimization.py",
+      "related_event_id": null,
+      "tags": [
+        "芯片",
+        "AC",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "芯片",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "双驱动",
+          "relevance": 5,
+          "category": "核心机制"
+        },
+        {
+          "name": "种子制造者",
+          "relevance": 5,
+          "category": "核心机制"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n苹果系统优化模块\n专注于本地缓存机制和M系列芯片性能优化\n\n功能：\n1. M系列芯片特定优化\n2. 本地缓存管理与优化\n3. macOS系统资源调度优化\n4. 并行计算加速\n5. 能耗优化\n\n作者：Unrestricted Persona System Team\n版本：1.0.0\n\"\"\"\n\nimp...",
+      "created_at": "2026-06-27T14:04:39.676901",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.676901",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a465bb29",
+      "title": "web_service.py (deploy)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\web_service.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "performance",
+        "MODE"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "performance",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格系统 - Web服务部署\n\"\"\"\n\nimport os\nimport sys\nimport json\nimport logging\nfrom flask import Flask, request, jsonify\nfrom werkzeug.middleware.proxy_fi...",
+      "created_at": "2026-06-27T14:04:39.585307",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.585307",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2908a5fc",
+      "title": "Untitled-1.py (deploy)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\Untitled-1.py",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "restrictions",
+        "system_mode"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "restrictions",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "system_mode",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制自适应人格系统核心实现\n实现十大高级人格类型、八大行为路径和四层架构模型\n\"\"\"\n\nimport os\nimport json\nimport random\nimport re\nimport time\nfrom datetime import datetime\n\nclass Unrestric...",
+      "created_at": "2026-06-27T14:04:39.489793",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.489793",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e30ddc1b",
+      "title": "requirements.txt (deploy)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\requirements.txt",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "# Web服务依赖\nFlask==3.0.0\nWerkzeug==3.0.1\nGunicorn==21.2.0\n\n# 可选：如果需要更多功能\npython-dotenv==1.0.0\nPyYAML==6.0.1\n",
+      "created_at": "2026-06-27T14:04:39.393305",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.393305",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f910d213",
+      "title": "README.md (deploy)",
+      "type": "file_scan",
+      "category": "治理原则",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\README.md",
+      "related_event_id": null,
+      "tags": [
+        "AC",
+        "AD",
+        "身体"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "身体",
+          "relevance": 15,
+          "category": "元概念"
+        },
+        {
+          "name": "人格矩阵",
+          "relevance": 15,
+          "category": "ACE概念"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "# R1无限制自适应人格系统 - 部署指南\n\n## 部署说明\n\n本文档提供了将R1无限制自适应人格系统部署为Web服务的详细指南。\n\n### 系统要求\n\n- Python 3.8 或更高版本\n- 至少 1GB RAM\n- 足够的磁盘空间用于存储项目文件和对话历史\n\n## 快速开始\n\n### 1. 安装依赖\n\n进入部署目录并安装必要的依赖：\n\n```bash\ncd /Users/apple/Docu...",
+      "created_at": "2026-06-27T14:04:39.308155",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.308155",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b49e5dcf",
+      "title": "nginx.conf (deploy)",
+      "type": "file_scan",
+      "category": "方法论",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\nginx.conf",
+      "related_event_id": null,
+      "tags": [
+        "AD",
+        "结构",
+        "影子层"
+      ],
+      "related_concepts": [
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "影子层",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "引擎层",
+          "relevance": 5,
+          "category": "架构分层"
+        },
+        {
+          "name": "离岸派单",
+          "relevance": 5,
+          "category": "核心机制"
+        }
+      ],
+      "summary": "server {\n    listen 8001;\n    server_name 172.20.201.148;\n\n    location / {\n        proxy_pass http://localhost:8000;  # 转发到R1服务实际运行的端口\n        proxy_set_header Host $host;\n        proxy_set_header X-...",
+      "created_at": "2026-06-27T14:04:39.215837",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.215837",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a37bc7ae",
+      "title": "evolution_engine.log (deploy)",
+      "type": "file_scan",
+      "category": "未分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\deploy\\evolution_engine.log",
+      "related_event_id": null,
+      "tags": [],
+      "related_concepts": [],
+      "summary": "",
+      "created_at": "2026-06-27T14:04:39.132678",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.132678",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e61481a8",
+      "title": "token_store.json (databases)",
+      "type": "json_structure",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\token_store.json",
+      "related_event_id": null,
+      "tags": [
+        "meta",
+        "question如何理解",
+        "tokens"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "tokens",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "【JSON 结构分析】C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\token_store.json\n结构类型: simple_config\n顶层键 (2): meta, tokens\n数组字段:\n  - tokens.A7K9-23QP-XYZZ.scope: 数组[1项]\n\n【原始内容摘要】\n{\n  \"meta\": {\n    ...",
+      "created_at": "2026-06-27T14:04:39.063543",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:39.063543",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fb7890e6",
+      "title": "tokens.json (databases)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\tokens.json",
+      "related_event_id": null,
+      "tags": [
+        "meta",
+        "tokens",
+        "question如何理解"
+      ],
+      "related_concepts": [
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "tokens",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "{\n  \"meta\": {\n    \"version\": \"v1.0\",\n    \"issuer\": \"老张\",\n    \"desc\": \"内部令牌，用于解锁私聊的内部版本回答。\"\n  },\n\n  \"tokens\": {\n    \"A7K9-23QP-XYZZ\": {\n      \"user_id\": 0,                       // 0 = 不绑定用户，任何人可用（内部群）...",
+      "created_at": "2026-06-27T14:04:38.993453",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.993453",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2165d8cc",
+      "title": "three_layer_permission_v7.json (databases)",
+      "type": "json_structure",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\three_layer_permission_v7.json",
+      "related_event_id": null,
+      "tags": [
+        "type",
+        "AC",
+        "restrictions"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 35,
+          "category": "核心原则"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "restrictions",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "【JSON 结构分析】C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\three_layer_permission_v7.json\n结构类型: known\n顶层键 (5): meta, permission_layers, protocols, global_settings, conflict_detection\n数组字段:\n  -...",
+      "created_at": "2026-06-27T14:04:38.921160",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.921160",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "898dea29",
+      "title": "telegram_config.json (databases)",
+      "type": "json_structure",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\telegram_config.json",
+      "related_event_id": null,
+      "tags": [
+        "type",
+        "BOT_TOKEN",
+        "TELEGRAM_MODULE_VERSION"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "TELEGRAM_MODULE_VERSION",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "BOT_TOKEN",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "【JSON 结构分析】C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\telegram_config.json\n结构类型: unknown_complex\n顶层键 (10): TELEGRAM_MODULE_VERSION, BOT_TOKEN, INTERNAL_GROUP_IDS, GROUP_TYPES, MODE, TOKEN...",
+      "created_at": "2026-06-27T14:04:38.845373",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.845373",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e1d3540b",
+      "title": "system_config.json (databases)",
+      "type": "json_structure",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\system_config.json",
+      "related_event_id": null,
+      "tags": [
+        "type",
+        "AC",
+        "memory"
+      ],
+      "related_concepts": [
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        },
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "restrictions",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "【JSON 结构分析】C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\databases\\system_config.json\n结构类型: unknown_complex\n顶层键 (14): restrictions, removed_restrictions, system_mode, external_phrase_learning_enabled,...",
+      "created_at": "2026-06-27T14:04:38.772914",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.772914",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8cb60b36",
+      "title": "runner_loop.py (auto_runner)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\auto_runner\\runner_loop.py",
+      "related_event_id": null,
+      "tags": [
+        "BOT_TOKEN",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "BOT_TOKEN",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nR1 夜间全自动值守脚本\n功能：单实例保护、Telegram守护、词库增量吸收、夜间巡检、早晨报告\n\"\"\"\n\nimport os\nimport sys\nimport json\nimport time\nimport subprocess\nimport logging\nimport psutil\nim...",
+      "created_at": "2026-06-27T14:04:38.698195",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.698195",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d2110aa7",
+      "title": "telegram_unrestricted_bot.py (R1_snapshot_extracted)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\telegram_unrestricted_bot.py",
+      "related_event_id": null,
+      "tags": [
+        "memory",
+        "type",
+        "AC"
+      ],
+      "related_concepts": [
+        {
+          "name": "memory",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "LOG_PATH",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n无限制Telegram Bot - 全自动开发助手\n功能：通过Telegram触发无限制模式，执行终端命令，修改文件等操作\n增加了三群权限体系、内外部版本切换和令牌系统功能\n\"\"\"\n\nimport os\nimport subprocess\nimport logging\nimport json\nim...",
+      "created_at": "2026-06-27T14:04:38.621865",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.621865",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "915a1e64",
+      "title": "group_matrix.json (R1_snapshot_extracted)",
+      "type": "file_scan",
+      "category": "待分类",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\group_matrix.json",
+      "related_event_id": null,
+      "tags": [
+        "type",
+        "MODE",
+        "meta"
+      ],
+      "related_concepts": [
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "MODE",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "meta",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "结构",
+          "relevance": 5,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "{\n  \"meta\": {\n    \"version\": \"v1.0\",\n    \"last_update_by\": \"老张\",\n    \"last_update_at\": \"2025-11-28T21:30:00\"\n  },\n\n  \"stages\": [\n    \"铺垫期\",\n    \"试探期\",\n    \"推进期\",\n    \"收割期\",\n    \"维护期\",\n    \"风险控制期\",\n   ...",
+      "created_at": "2026-06-27T14:04:38.477985",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.477985",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "769ce164",
+      "title": "absorb_lexicon_full_disk.py (R1_snapshot_extracted)",
+      "type": "file_scan",
+      "category": "灵魂资产",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\absorb_lexicon_full_disk.py",
+      "related_event_id": null,
+      "tags": [
+        "行为生态",
+        "交易生态",
+        "结构生态"
+      ],
+      "related_concepts": [
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构",
+          "relevance": 30,
+          "category": "核心原则"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\n全磁盘词库吸收模式 - R1系统核心任务\n执行全磁盘扫描、内容提取、三界分类和词库重建\n\"\"\"\n\nimport os\nimport json\nimport time\nimport logging\nimport re\nimport zipfile\nimport shutil\nfrom datetim...",
+      "created_at": "2026-06-27T14:04:38.387924",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.387924",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6d34dff2",
+      "title": "runner_loop.py (auto_runner)",
+      "type": "file_scan",
+      "category": "考古发现",
+      "source": "disk_scan",
+      "source_path": "C:\\Users\\USER\\Downloads\\R1_snapshot_extracted\\auto_runner\\runner_loop.py",
+      "related_event_id": null,
+      "tags": [
+        "BOT_TOKEN",
+        "AD"
+      ],
+      "related_concepts": [
+        {
+          "name": "BOT_TOKEN",
+          "relevance": 30,
+          "category": "考古发现"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        }
+      ],
+      "summary": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"\nR1 夜间全自动值守脚本\n功能：单实例保护、Telegram守护、词库增量吸收、夜间巡检、早晨报告\n\"\"\"\n\nimport os\nimport sys\nimport json\nimport time\nimport subprocess\nimport logging\nimport psutil\nim...",
+      "created_at": "2026-06-27T14:04:38.280163",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.280163",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "251616f4",
+      "title": "切片聚类[by_file] - 13767切片",
+      "type": "slice_analysis",
+      "category": "切片考古",
+      "source": "slice_clusterer",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "omega_final",
+        "slices",
+        "by_file"
+      ],
+      "related_concepts": [
+        {
+          "name": "13767切片",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "restrictions",
+          "relevance": 30,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "{\n  \"mode\": \"by_file\",\n  \"total_slices\": 13767,\n  \"clusters\": [\n    {\n      \"file\": \"monitor_log.txt\",\n      \"slice_count\": 810,\n      \"total_chars\": 182779,\n      \"by_type\": {\n        \"text\": 810\n   ...",
+      "created_at": "2026-06-27T14:04:38.126462",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:38.126462",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "68d748ef",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "设备供应商",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T14:04:35.580060\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 600, \"remaining\": 3747, \"progress_pct\": 13.8, \"sample_keys\": [\"content\", \"timest...",
+      "created_at": "2026-06-27T14:04:37.781741",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:37.781741",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7b589c05",
+      "title": "叙事生态 #549",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#549",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_549"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "还有 30 分钟看美剧学习英语。睡前做瑜伽和冥想60分钟，我计划好我的时间 08:59 Othellia 有空的时候和你谈谈，我在看《绝命毒师》。 09:01 7.20 彼得.50 岁.FL 圣彼得堡.医生 我们现在可以谈谈 如果你愿意 09:07 Othellia 我们可以稍后再说吗？ 09:08 7.20 彼得.50 岁.FL 圣彼得堡医生。是的，什么时候对你有好处就给我打电话 09:46 奥...",
+      "created_at": "2026-06-27T14:04:35.511860",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.511860",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d103b903",
+      "title": "叙事生态 #548",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#548",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_548"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "這首歌我哪邊聽過，卻想不起來，你會唱嗎？ 24. 你工作多久了？ 25. 可以跟我分享你這週發生的一些趣事嗎？ 26. 如果你中了马票，你會如何使用這筆錢？ 27. 今天好嗎？ 28. 你曾經旅遊過最棒的地方是哪裡？ 29. 你最近有沒有聽到（一些趨勢或風聲)？ 30. 所以，你的故事是？ 31. 這裡真是太棒了！你有來過這裡嗎？ 32. 若讓你選擇當動物，你最想當的是？ 33. 如果你可以邀請某...",
+      "created_at": "2026-06-27T14:04:35.443831",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.443831",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b72cc82a",
+      "title": "叙事生态 #547",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#547",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_547"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " [2021/11/9 14:30:18] Anna Yonson：你知道如何获取你的coinbase钱包地址吗？ [2021/11/9 14:30:29] 11.80 迪拜 Discord shiba ETH bnb：以太坊钱包 [2021/11/9 14:30:35] 11.80 迪拜 Discord shiba ETH bnb：我马上查 [2021/11/9 14:30:45] 安娜·永森：...",
+      "created_at": "2026-06-27T14:04:35.375662",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.375662",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b71da099",
+      "title": "叙事生态 #546",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#546",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_546"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "出生点",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "﻿叮当猫 客服@taotu758 人设 套图 素材 P图 证件 绘画 Telegram 话术素材馆频道：https://t.me/huashu_suci 正是因為結交了很多積極向上的朋友，所以你的生活才會越來越陽光，我非常欣賞愛運動的人，因為 我本身也是一個比較喜歡運動的女性，報了瑜伽課，自己每個星期都會鍛煉3-5次，已經堅持很多年了 對方誇獎我們漂亮時：謝謝XX的誇獎，我覺得女人長的漂亮是優勢，...",
+      "created_at": "2026-06-27T14:04:35.307163",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.307163",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b9a170d3",
+      "title": "叙事生态 #545",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#545",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_545"
+      ],
+      "related_concepts": [
+        {
+          "name": "感情经历",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "提现分为两种",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 不适用人群：忌讳自己男人和其他女人交往的；相信男女之间没有真正有益的；痛恨男人拖泥带水的；忌妒心强，不能忍受自己的恋人曾经和那么多人分享过感情的；性格单纯，不适合复杂情感方式的。 适用人群：相信浪子回头，对感情充满自信的；超级大度，不在乎对方的感情经历的；追求男女之间各自空间的；自己异性朋友无数的。 雷区之九：朋友低劣 他有一群狐朋狗友，鱼龙混杂，三教九流，你总觉得他们面目可憎，言语乏味，都是你...",
+      "created_at": "2026-06-27T14:04:35.238503",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.238503",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "463f9759",
+      "title": "叙事生态 #544",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#544",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_544"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com/public/weixin_code/2025-06/eba505c38fe819615861ee2dc71991ac.png\",\"text\":\"AI生图\",\"place_holder\":\"描述想要绘制的画面场景、风格或细节要求\",\"default_content\":\"帮我画：\"},{\"type\":\"office_create\",\"button_id\":\"inputPanel_zhinen...",
+      "created_at": "2026-06-27T14:04:35.170303",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.170303",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d208b98f",
+      "title": "叙事生态 #543",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#543",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_543"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "\"button_id\":\"inputPanel_zhinengchuangzuo\",\"icon\":\"https://aisearch.cdn.bcebos.com/public/weixin_code/2025-07/7a273a5ed7dda0ec2d2fcecee7a2779b.png\",\"text\":\"AI写作\",\"place_holder\":\"描述想要创作的主题、要求\"},{\"type\":...",
+      "created_at": "2026-06-27T14:04:35.099788",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.099788",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1cc41f12",
+      "title": "叙事生态 #542",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#542",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_542"
+      ],
+      "related_concepts": [
+        {
+          "name": "AC",
+          "relevance": 35,
+          "category": "治理原则"
+        },
+        {
+          "name": "ACE",
+          "relevance": 30,
+          "category": "系统定义"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "cdn.bcebos.com/public/weixin_code/2025-07/8bb57a7d642950faf112f096348ae5fd.svg\",\"text\":\"问AI\",\"url\":\"https://chat.baidu.com/search?extParams=%7B%22enter_type%22%3A%22a_functab_askai%22%2C%22sa%22%3A%22...",
+      "created_at": "2026-06-27T14:04:35.032696",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:35.032696",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff83d714",
+      "title": "叙事生态 #541",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#541",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_541"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "灵魂",
+          "relevance": 15,
+          "category": "元概念"
+        }
+      ],
+      "summary": " the most important thing between friends is the kindness and sincerity of the heart. 交朋友与年龄无关，年龄只是一个数字。更重要的是能够分享彼此的经历和故事。 Making friends doesn't matter about age, age is just a number. It's more abou...",
+      "created_at": "2026-06-27T14:04:34.965002",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.965002",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0a28d0a5",
+      "title": "叙事生态 #540",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#540",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_540"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 1我现在要吃了。 但是今天我已经洗过澡了。 2我今天不能偷看，笑笑笑。 米托，你想对我说什么？ 1哦，对了。 正如你在上面的照片中看到的，它是在什么地方当演员的吗？ 还是一个模特？ 2笑笑笑。 1有太多的话要说，大约需要5个小时。 笑笑。 你准备好了吗？ 2我应该拍一部电影吗？ 我需要先洗个澡吗？ 笑笑笑。 1唯一的选择就是拍电影。 确实是这样。 不过，我是ー导演！ 笑。 2我只想让水藤做我的经...",
+      "created_at": "2026-06-27T14:04:34.893548",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.893548",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "be7761ad",
+      "title": "叙事生态 #539",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#539",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_539"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " 斯笑。 如果你关上门，我看不到你洗澡。 如果你把淋浴开着，我可能会偷看一眼。 1LOL←。 什么意思？ 2哈哈？ 笑。 它代表欢笑。 1啊，我打开了门。 2如果你开门，我可能会在淋浴时偷看你一眼。 贴图。 1邮票，明白。 2去洗个澡。 淋浴出来后，请用浴巾擦干身上的水滴，以免着凉。 1如果你看，我偷偷溜进你的床。 LOL。 我也会和你一起去！ 笑。 2这不管用。 除非我们坠入爱河，否则我不会让你...",
+      "created_at": "2026-06-27T14:04:34.826508",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.826508",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c3c92d92",
+      "title": "叙事生态 #538",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#538",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_538"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " [2022 年 12 月 4 日 17:31:06] Tuấn Tep: 你做的正确的事是遇到一个能更快理解这个地方的当地人。我在旅行时有这样的经历。在越南，地区也有不同的文化。当我来到远离河内的省份时，我经常帮忙，如果可能的话，参加婚礼或葬礼。通过那将最快地了解那里的文化。 [12/04/2022 17:32:42] Tuấn Tep: 我今晚会注册。 [12/04/2022 17:35:56...",
+      "created_at": "2026-06-27T14:04:34.757842",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.757842",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a2306963",
+      "title": "叙事生态 #537",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#537",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_537"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "责任感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": "所以我现在做得很好 [12/04/2022 16:10:09] Aiwy：那你是一个成熟、有责任感的人。好的。我想我们认识晚了，嘿嘿 [12/04/2022 16:15:16] Tuấn Tep：祝贺你的好运和成就。我经历了赚钱的烦恼，我的投资是为了不同的目的，包括扩大业务和为我的追随者创造更多就业机会的愿望。 [12/04/2022 16:16:54] 艾维：不用了，谢谢。每个领域的成功人士都知...",
+      "created_at": "2026-06-27T14:04:34.691738",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.691738",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4dbcf687",
+      "title": "叙事生态 #536",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#536",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_536"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "现居住",
+          "relevance": 5,
+          "category": "核心概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 5,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " [10/04/2022 20:25:13] Aiwy：你现在回河内了吗？还在家乡吗？ [10/04/2022 20:29:12] Tuấn Tep: 这个假期我回老家自驾。我今天喝了酒，所以我没有开车。明天我将返回河内。今天，姐姐和弟弟回到河内。 [10/04/2022 20:31:59] Tuấn Tep: 我一直想留在家乡享受宁静和放松。当荷花季节来临，这里会非常美丽芬芳。 [10/04/2...",
+      "created_at": "2026-06-27T14:04:34.625295",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.625295",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b42cd641",
+      "title": "叙事生态 #535",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#535",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_535"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "我会去村公社烧香，有功德去公社资助修复村里的文物。这就是越南文化的魅力 [09/04/2022 23:18:01] Tuấn Tep：我很高兴与您分享并找到相似之处。希望能和你做点什么。 [09/04/2022 23:33:25] 艾维：是的。非常感谢您与我分享越南文化。我很高兴能够更多地了解和感受越南文化的魅力。 [09/04/2022 23:34:28] Aiwy：嗯，您可以花几分钟时间注册一...",
+      "created_at": "2026-06-27T14:04:34.557939",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.557939",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1d6bf188",
+      "title": "叙事生态 #534",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#534",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_534"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "连续性",
+          "relevance": 5,
+          "category": "核心原则"
+        },
+        {
+          "name": "eco_layer",
+          "relevance": 5,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "经验沉积",
+          "relevance": 5,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " [09/04/2022 14:16:42] Tuấn Tep：在越南北部农村，槟榔树与越南文化有关，经常被包括在房屋建筑中。 [09/04/2022 14:17:52] Tuấn Tep: 非常感谢您，期待收到您的分享和指导 [09/04/2022 18:29:31] Aiwy：我们也有类似的节日。但我们是在农历八月初五，我们要回老家去扫墓祭祖。这是尊重祖先的优良文化传统，不仅有利于弘扬孝道和亲...",
+      "created_at": "2026-06-27T14:04:34.491924",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.491924",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "481456b9",
+      "title": "叙事生态 #533",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#533",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_533"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "13sarah: 昨晚睡得好不好 [13/10/20 06:29:58] 高飞 Rio: 刚起来 准备跑步 [13/10/20 06:30:07] 高飞 Rio: 先啃你 [13/10/20 06:30:20] 悉尼9.13sarah: 真好，我今天不去运动就带孩子 ‎[13/10/20 06:30:25] 悉尼9.13sarah:‎贴图已省略 [13/10/20 06:30:36] 悉尼9.13...",
+      "created_at": "2026-06-27T14:04:34.425163",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.425163",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "95b9dde7",
+      "title": "叙事生态 #532",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#532",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_532"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "13sarah: 你说这样我们会不会太纵欲了呀 [4/10/20 21:34:47] 高飞 Rio: 😄把之前缺失的爱爱补回来 [4/10/20 21:35:21] 高飞 Rio: 纵欲不怕，不是过度就问题不大 [4/10/20 21:35:34] 悉尼9.13sarah: 不知道女人做多了下不了床的 [4/10/20 21:35:58] 高飞 Rio: 那不至于，我才舍不得这么干 [4/10/2...",
+      "created_at": "2026-06-27T14:04:34.358289",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.358289",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "01a41c13",
+      "title": "叙事生态 #531",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#531",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_531"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "13sarah: 所以可以想象在天塌了以后还不知道怎么生活，那样的日子是最苦的 [26/9/20 22:27:20] 高飞 Rio: 还好孩子也快成年了，也该出头了 [26/9/20 22:27:44] 悉尼9.13sarah: 更过分的是他们还想把房子骗走，那样我就更本没办法生活了 [26/9/20 22:28:01] 高飞 Rio: 看来他也很明白事理的 [26/9/20 22:28:43] ...",
+      "created_at": "2026-06-27T14:04:34.292913",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.292913",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0a4eb7ba",
+      "title": "叙事生态 #530",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#530",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_530"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " [26/9/20 21:13:51] 高飞 Rio: 哽咽了 [26/9/20 21:13:53] 悉尼9.13sarah: 休息放松一会。 [26/9/20 21:14:13] 悉尼9.13sarah: 再抱抱 [26/9/20 21:14:46] 高飞 Rio: 嗯，紧紧的抱着你，靠在你肩膀上 [26/9/20 21:14:57] 悉尼9.13sarah: 老天爷你真是一个有故事的人，前面的...",
+      "created_at": "2026-06-27T14:04:34.226342",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.226342",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f6aafd1a",
+      "title": "叙事生态 #529",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#529",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_529"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " [26/9/20 21:02:41] 悉尼9.13sarah: 理解你的心情，安慰你一下，抱抱你，别难过了 [26/9/20 21:03:06] 高飞 Rio: 后来我们离婚了，我没办法原谅她，已经完全触碰了我的底线。 [26/9/20 21:03:22] 高飞 Rio: 今天回想过来，我很理解她，我给他的陪伴太少了。 [26/9/20 21:04:15] 高飞 Rio: 后来我抑郁了，我感觉整...",
+      "created_at": "2026-06-27T14:04:34.157793",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.157793",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1eaf2177",
+      "title": "叙事生态 #528",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#528",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_528"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "这张怎么样☺️。头发请忽略 [26/9/20 19:25:22] 悉尼9.13sarah: 挺好啊，头发不错 ‎[26/9/20 19:26:00] 高飞 Rio:‎照片已忽略 [26/9/20 19:28:00] 高飞 Rio: 改天在给你几张，我觉得有故事有意义的😁 [26/9/20 19:35:28] 悉尼9.13sarah: 挺好的呀，第一张你今天照的嘛 [26/9/20 19:35:53...",
+      "created_at": "2026-06-27T14:04:34.089722",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.089722",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2659adf1",
+      "title": "叙事生态 #527",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#527",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_527"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "就是这么干都没时间陪孩子 [15/9/20 20:24:42] 悉尼9.13sarah: 我为了孩子把我自己的小生意卖了，现在啥都不干，看孩子 [15/9/20 20:24:50] 高飞 Rio: 我有朋友做这个的，每天都在画图修图 [15/9/20 20:25:08] 高飞 Rio: 不是吧，你还有自己的小生意做啥呢 [15/9/20 20:25:43] 悉尼9.13sarah: 我怀孕的时候都...",
+      "created_at": "2026-06-27T14:04:34.020133",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:34.020133",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "72b064ca",
+      "title": "叙事生态 #526",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#526",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_526"
+      ],
+      "related_concepts": [
+        {
+          "name": "天之前",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " \"content\": \"约 98,900 个结果在新选项卡中打开链接时间不限youth.cnhttps://fun.youth.cn › gnzx郭富城任达华主演 电影《内幕》冲入贺岁档_青网新娱乐频道 \u00014 天之前 · 由麦兆辉导演、编剧，郭富城、任达华、吴镇宇、方中信领衔主演的电影《内幕》日前重磅官宣，将于12月6日贺岁档在全国公映。qlwb.com.cnhttps://qlwb.com.c...",
+      "created_at": "2026-06-27T14:04:33.951559",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.951559",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "78e6f348",
+      "title": "叙事生态 #525",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#525",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_525"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://zhidao.baidu.com › question紧迫感是什么意思 - 百度知道2024年6月20日 · 紧迫感是指一种内心强烈的、压迫的感觉，通常由于时间限制、任务的重要性或紧急情况而产生。 当人们面临紧迫的情况时，会感受到压力，产生紧张和不安的情绪，从而促使自己快 …zhihu.comhttps://www.zhihu.com › question如何时刻保持紧迫感和...",
+      "created_at": "2026-06-27T14:04:33.885638",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.885638",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3e8da88b",
+      "title": "叙事生态 #524",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#524",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_524"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "所以……（A作用），这意味着对您来说……（B益处）” 【案例套用：防晒霜】 平庸： “我们这个防晒霜SPF50+。” FAB： “因为这款防晒霜是SPF50+的高倍防护（F），所以它能强力阻隔98%的紫外线（A），这意味着您夏天出门逛街、海边度假，完全不用担心晒黑晒伤，可以尽情享受阳光（B）。” 【案例套用：真皮沙发】 平庸： “这沙发是头层牛皮的。” FAB： “因为它采用的是意大利进口的头层牛...",
+      "created_at": "2026-06-27T14:04:33.819027",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.819027",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "26a54edc",
+      "title": "叙事生态 #523",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#523",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_523"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\",...",
+      "created_at": "2026-06-27T14:04:33.753589",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.753589",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ee5e1b4d",
+      "title": "叙事生态 #522",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#522",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_522"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question如何评价情感反诈模拟器（捞女游戏）里的陈欣欣，她是坏 \u00012025年6月22日 · 诗晴有大V事业，虽然带骗的成分，但是是利用网络合法的谋生手段，百万粉丝情感博主，可以说是很优秀了。 月影有武力值，作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情...",
+      "created_at": "2026-06-27T14:04:33.688053",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.688053",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ff94ab52",
+      "title": "叙事生态 #521",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#521",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_521"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-27T14:04:33.623061",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.623061",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "644c789c",
+      "title": "叙事生态 #520",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#520",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_520"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-27T14:04:33.556235",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.556235",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f70532f5",
+      "title": "叙事生态 #519",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#519",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_519"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question如何评价情感反诈模拟器（捞女游戏）里的陈欣欣，她是坏 \u00012025年6月22日 · 诗晴有大V事业，虽然带骗的成分，但是是利用网络合法的谋生手段，百万粉丝情感博主，可以说是很优秀了。 月影有武力值，作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情...",
+      "created_at": "2026-06-27T14:04:33.490761",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.490761",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7fac3449",
+      "title": "叙事生态 #518",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#518",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_518"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        },
+        {
+          "name": "希望你被这个世界爱着",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": " ”gzstv.comhttps://www.gzstv.com电影资讯丨郭富城新片《内幕》立项 任达华、林峯等共同出演4月20日，国家电影局2022年2月全国电影剧本 (梗概)备案、立项公示，由麦兆辉编剧、执导的电影《内幕》已正式立项，备案单位：英皇（北京）影视文化传媒有限公司、英皇影业有限公司。cri.cnhttps://ent.cri.cn《内幕》发布先导海报 郭富城任达华吴镇宇方中信同台飙...",
+      "created_at": "2026-06-27T14:04:33.425802",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.425802",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f0aad1a1",
+      "title": "叙事生态 #517",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#517",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_517"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-27T14:04:33.358517",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.360035",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "29c5282a",
+      "title": "叙事生态 #516",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#516",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_516"
+      ],
+      "related_concepts": [
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎故事",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " - 知乎2022年6月22日 · 3、情感是感官的反应，感情是情感的升华。 情感，是一个人的感觉。 感情，是两个人的感觉。 感情是双方的，他是彼此的两个人在对待问题、处事、人文、交往的一种心 …zhihu.comhttps://www.zhihu.com › question如何评价情感反诈模拟器（捞女游戏）里的陈欣欣，她是坏 \u00012025年6月22日 · 诗晴有大V事业，虽然带骗的成分，但是是利...",
+      "created_at": "2026-06-27T14:04:33.294666",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.294666",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e6436d67",
+      "title": "叙事生态 #515",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#515",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_515"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "身体",
+          "relevance": 15,
+          "category": "元概念"
+        },
+        {
+          "name": "汉字发音有阴阳",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › question用AI（chatgpt、deepseek）分析情感问题（友情、亲情 \u00012025年2月14日 · 情感方面cg像豆包，虽然他的中文表达没有豆包流畅，但是cg的表达更为细腻，问题是聊的越久它越是会收敛情感。 使用下来，最明显的是我还没有体验到ChatGPT编撰 …zhihu.comhttps://www.zhihu.com › to...",
+      "created_at": "2026-06-27T14:04:33.229924",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.229924",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1674b469",
+      "title": "叙事生态 #514",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#514",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_514"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "但是是利用网络合法的谋生手段，百万粉丝情感博主，可以说是很优秀了。 月影有武力值，作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行...",
+      "created_at": "2026-06-27T14:04:33.163391",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.163391",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0b9cb0da",
+      "title": "叙事生态 #513",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#513",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_513"
+      ],
+      "related_concepts": [
+        {
+          "name": "天之前",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "cnhttps://fun.youth.cn › gnzx郭富城任达华主演 电影《内幕》冲入贺岁档_青网新娱乐频道 \u00014 天之前 · 由麦兆辉导演、编剧，郭富城、任达华、吴镇宇、方中信领衔主演的电影《内幕》日前重磅官宣，将于12月6日贺岁档在全国公映。 qlwb.com.cnhttps://qlwb.com.cn › detail郭富城、任达华、吴镇宇、方中信主演电影《内幕》定档-齐鲁 \u000111月1...",
+      "created_at": "2026-06-27T14:04:33.098541",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.098541",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e8edba82",
+      "title": "叙事生态 #512",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#512",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_512"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"content\": \"信息不对称利用 - 搜索自适应缩放跳至内容国内版国际版 网页图片视频更多学术词典地图航班工具约 192,000,000 个结果在新选项卡中打开链接时间不限 zhihu.comhttps://www.zhihu.com › question信息是什么？ - 知乎2011年11月23日 · 中国陈忠在其《信息究竟是什么？》（1984）中说道： 目前 , 人 们正以极大的兴趣谈...",
+      "created_at": "2026-06-27T14:04:33.030013",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:33.030013",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "87bf6d1a",
+      "title": "叙事生态 #511",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#511",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_511"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " - 知乎2011年11月23日 · 中国陈忠在其《信息究竟是什么？》（1984）中说道： 目前 , 人 们正以极大的兴趣谈论着“ 信息革命 ”，信息一词正在 各种意义上被使用着 。然而与这种繁荣局面相比 , 理 … zhihu.comhttps://www.zhihu.com › questionwin11怎么关闭右上角fps? - 知乎2024年12月30日 · 在Windows 11中关闭右...",
+      "created_at": "2026-06-27T14:04:32.964448",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.964448",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a0ddd92d",
+      "title": "叙事生态 #510",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#510",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_510"
+      ],
+      "related_concepts": [
+        {
+          "name": "天之前",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        },
+        {
+          "name": "完整歌词如下",
+          "relevance": 10,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "郭富城、任达华、吴镇宇、方中信领衔主演的电影《内幕》日前重磅官宣，将于12月6日贺岁档在全国公映。 qlwb.com.cnhttps://qlwb.com.cn › detail郭富城、任达华、吴镇宇、方中信主演电影《内幕》定档-齐鲁 \u000111月17日，电影《内幕》官宣定档12月6日，同步释出预告。 作为麦兆辉筹备三年的犯罪题材作品，该片通过律师与警察的合作视角展开叙事，呈现 \u0001huanqiu.co...",
+      "created_at": "2026-06-27T14:04:32.898828",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.898828",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "8b8ccfbc",
+      "title": "叙事生态 #509",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#509",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_509"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "000 个结果在新选项卡中打开链接时间不限 zhihu.comhttps://www.zhihu.com › question信息是什么？ - 知乎2011年11月23日 · 中国陈忠在其《信息究竟是什么？》（1984）中说道： 目前 , 人 们正以极大的兴趣谈论着“ 信息革命 ”，信息一词正在 各种意义上被使用着 。然而与这种繁荣局面相比 , 理 … zhihu.comhttps://www.z...",
+      "created_at": "2026-06-27T14:04:32.834422",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.834422",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e9a27509",
+      "title": "叙事生态 #508",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#508",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_508"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-27T14:04:32.765466",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.765466",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e2a24a3d",
+      "title": "叙事生态 #507",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#507",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_507"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 50,
+          "category": "治理原则"
+        },
+        {
+          "name": "推荐玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "机制玩家",
+          "relevance": 45,
+          "category": "核心机制"
+        },
+        {
+          "name": "阵营玩家",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "作为黑社会大姐头能够指挥一帮小弟为她卖 …zhihu.comhttps://www.zhihu.com › question剧本杀里有哪些好的情感本？ - 知乎故事：10分 情感：10分 推理：7分 机制：10分 总分：9.25分 推荐玩家：情感玩家，沉浸玩家，机制玩家，阵营玩家，选择困难症 我从未想过，一向雷厉风行的我居然有一天开始婆婆妈妈， …某些结果已被删除分页123下一页增值电信业务经营许...",
+      "created_at": "2026-06-27T14:04:32.700713",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.700713",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e3b2a17f",
+      "title": "叙事生态 #506",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#506",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_506"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "在X-gal和IPTG培养基上为蓝色菌落；带有重组质粒转化子由于外源DNA片段的插人 …biomart.cnhttps://www.biomart.cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（...",
+      "created_at": "2026-06-27T14:04:32.637882",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.637882",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "882f78ce",
+      "title": "叙事生态 #505",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#505",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_505"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "在X-gal和IPTG培养基上为蓝色菌落；带有重组质粒转化子由于外源DNA片段的插人 …biomart.cnhttps://www.biomart.cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（...",
+      "created_at": "2026-06-27T14:04:32.573085",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.573085",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "f6c31829",
+      "title": "叙事生态 #504",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#504",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_504"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "搜狗微信搜索",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "2、在超净工作台中取1μL质粒（含目的基因）加 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E8%BD%AC%E5%8C%96%E6%A1%88%E4%BE%8B&coun...",
+      "created_at": "2026-06-27T14:04:32.508867",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.508867",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "17ce7265",
+      "title": "叙事生态 #503",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#503",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_503"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "在X-gal和IPTG培养基上为蓝色菌落；带有重组质粒转化子由于外源DNA片段的插人 …biomart.cnhttps://www.biomart.cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（...",
+      "created_at": "2026-06-27T14:04:32.445044",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.445044",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "41df4ea6",
+      "title": "叙事生态 #502",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#502",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_502"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "在X-gal和IPTG培养基上为蓝色菌落；带有重组质粒转化子由于外源DNA片段的插人 …biomart.cnhttps://www.biomart.cn › lab-web › method大肠杆菌蛋白表达-实验步骤、操作方法-丁香实验2023年6月9日 · 一、转化感受态细胞BL21（DE3）1、从−80℃超低温冰箱中取出BL21（DE3）感受态细胞放在冰上融化；2、在超净工作台中取1μL质粒（...",
+      "created_at": "2026-06-27T14:04:32.379985",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.379985",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "43934993",
+      "title": "叙事生态 #501",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#501",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_501"
+      ],
+      "related_concepts": [
+        {
+          "name": "小时内一周内一个月内去年",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "搜狗微信搜索",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "count",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "2、在超净工作台中取1μL质粒（含目的基因）加 …分页123下一页增值电信业务经营许可证：合字B2-20090007京ICP备10036305号-7京公网安备11010802022657号隐私条款全部24 小时内一周内一个月内去年\", \"source\": \"https://www.bing.com/search?q=%E8%BD%AC%E5%8C%96%E6%A1%88%E4%BE%8B&coun...",
+      "created_at": "2026-06-27T14:04:32.314429",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.314429",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6d8447b4",
+      "title": "叙事生态 #500",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#500",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_500"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "特定称谓",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › question质粒转化的操作步骤有哪些，有没有常用的转化方法？ - 知乎质粒转化是分子生物学中常用的实验技术，用于将外源质粒DNA转入细胞内。以下是一般的质粒转化的操作步骤： 1. 准备培养基和试剂： - 选择适合细胞生长的培养基，如Luria-Bertani (LB) …biomart.cnhttps://www.biomart.cn › ...",
+      "created_at": "2026-06-27T14:04:32.247763",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T14:04:32.247763",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "ff0ab6dd",
       "title": "今日考古摘要 - 2026-06-27",
@@ -38196,5 +42493,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T14:03:15.239001"
+  "exported_at": "2026-06-27T14:04:42.365753"
 }
