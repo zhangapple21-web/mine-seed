@@ -327,6 +327,22 @@
       "first_seen": "2026-06-26T20:46:48.328088",
       "importance": 92
     },
+    "original_context": {
+      "name": "original_context",
+      "definition": "original_context是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.826561",
+      "importance": 92
+    },
     "as": {
       "name": "as",
       "definition": "as是从eco:narrative_ecology材料中自动提取的概念",
@@ -565,6 +581,22 @@
       "first_seen": "2026-06-26T20:46:48.368579",
       "importance": 90
     },
+    "original_modify_request": {
+      "name": "original_modify_request",
+      "definition": "original_modify_request是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.835809",
+      "importance": 89
+    },
     "风险内化": {
       "name": "风险内化",
       "definition": "高风险内容不删除，而是转入内部治理层，封存、标注、复盘，转化为约束和守卫。",
@@ -752,6 +784,22 @@
       "first_seen": "2026-06-26T20:46:48.378599",
       "importance": 88
     },
+    "increment_task_count": {
+      "name": "increment_task_count",
+      "definition": "increment_task_count是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.844563",
+      "importance": 88
+    },
     "递归提示学习": {
       "name": "递归提示学习",
       "definition": "R1_ENGINE的高级能力，系统通过递归地优化自己的提示词来提升性能，是微进化的核心机制。",
@@ -767,6 +815,54 @@
       "source": "R1_Ω_FINAL.json V∞_BLUEPRINT_V2.R1_ENGINE",
       "first_seen": "2026-06-26T20:46:48.384231",
       "importance": 87
+    },
+    "stream_with_progress": {
+      "name": "stream_with_progress",
+      "definition": "stream_with_progress是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.853346",
+      "importance": 86
+    },
+    "length_score": {
+      "name": "length_score",
+      "definition": "length_score是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.860983",
+      "importance": 86
+    },
+    "handle_task_command": {
+      "name": "handle_task_command",
+      "definition": "e: self.send_message(chat_id, f\"❌ 指挥中心连接失败: {str(e)}\") def handle_task_command(self, chat_id: int, args: list): if args: task_text = \" \".j",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.871021",
+      "importance": 86
     },
     "考古": {
       "name": "考古",
@@ -1061,6 +1157,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-26T22:04:37.614890",
+      "importance": 83
+    },
+    "task_text": {
+      "name": "task_text",
+      "definition": "task_text是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.879560",
       "importance": 83
     },
     "双驱动": {
@@ -1517,6 +1629,22 @@
       "first_seen": "2026-06-27T15:14:48.165559",
       "importance": 81
     },
+    "telegram_bridge": {
+      "name": "telegram_bridge",
+      "definition": "telegram_bridge是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "核心概念",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.888085",
+      "importance": 81
+    },
     "词库层": {
       "name": "词库层",
       "definition": "系统的语言结构层，原始词库、合并词库、去重引擎、映射索引。R1中是body死了但soul活下来的典型。",
@@ -1664,6 +1792,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:14:28.772383",
+      "importance": 80
+    },
+    "tone_score": {
+      "name": "tone_score",
+      "definition": "tone_score是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.896619",
+      "importance": 80
+    },
+    "current_phrases": {
+      "name": "current_phrases",
+      "definition": "current_phrases是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "身体",
+        "nt",
+        "or",
+        "re",
+        "original_context"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:19:52.905140",
       "importance": 80
     },
     "提现分为两种": {
@@ -3744,6 +3904,16 @@
       "first_seen": "2026-06-27T14:33:49.560380",
       "importance": 65
     },
+    "词库缺口补全_6个薄弱分类": {
+      "name": "词库缺口补全_6个薄弱分类",
+      "definition": "[Guardian-constraint] 薄弱分类的概念积累不足，影响系统理解能力",
+      "category": "治理原则",
+      "related": [],
+      "examples": [],
+      "source": "guardian:RQ-20260627-001",
+      "first_seen": "2026-06-27T15:19:53.010993",
+      "importance": 65
+    },
     "persuasive_salesperson": {
       "name": "persuasive_salesperson",
       "definition": "persuasive_salesperson是从structural_v2材料中自动提取的概念",
@@ -4908,7 +5078,8 @@
       "古斯塔夫的尊名",
       "真实造物主的尊名",
       "integration_rules",
-      "top_rule"
+      "top_rule",
+      "词库缺口补全_6个薄弱分类"
     ],
     "方法论": [
       "考古",
@@ -5206,7 +5377,16 @@
       "web_learning",
       "task",
       "CreativeInsight",
-      "宏伟蓝图"
+      "宏伟蓝图",
+      "original_context",
+      "original_modify_request",
+      "increment_task_count",
+      "stream_with_progress",
+      "length_score",
+      "handle_task_command",
+      "task_text",
+      "tone_score",
+      "current_phrases"
     ],
     "核心概念": [
       "现居住",
@@ -5219,9 +5399,10 @@
       "re",
       "system_state",
       "SystemMode",
-      "context_info"
+      "context_info",
+      "telegram_bridge"
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:18:06.229635"
+  "exported_at": "2026-06-27T15:20:16.230886"
 }
