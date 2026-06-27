@@ -2304,6 +2304,22 @@
       "first_seen": "2026-06-27T14:03:13.160517",
       "importance": 76
     },
+    "brainstorming_ideas": {
+      "name": "brainstorming_ideas",
+      "definition": "brainstorming_ideas是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.307949",
+      "importance": 76
+    },
     "引擎层": {
       "name": "引擎层",
       "definition": "R1的运行时引擎层，API路由、三界格式化器、记忆核心、请求适配器、输出整形器。",
@@ -2769,6 +2785,54 @@
       "first_seen": "2026-06-27T14:04:38.021614",
       "importance": 73
     },
+    "current_formality": {
+      "name": "current_formality",
+      "definition": "current_formality是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.317762",
+      "importance": 73
+    },
+    "interaction_history": {
+      "name": "interaction_history",
+      "definition": "interaction_history是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.327009",
+      "importance": 73
+    },
+    "reasoning_type": {
+      "name": "reasoning_type",
+      "definition": "reasoning_type是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.335616",
+      "importance": 73
+    },
     "量子引擎": {
       "name": "量子引擎",
       "definition": "系统的量子级计算引擎，接受NPU加速，属于执行层身体组件。",
@@ -2968,6 +3032,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:13:23.704510",
+      "importance": 72
+    },
+    "成功案例": {
+      "name": "成功案例",
+      "definition": "294913, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"成功案例\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"lea",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.345783",
       "importance": 72
     },
     "三界格式化": {
@@ -3183,6 +3263,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T15:14:48.184114",
+      "importance": 70
+    },
+    "web_learning": {
+      "name": "web_learning",
+      "definition": "}, { \"topic\": \"情感共鸣\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:33:38.136383\", \"relevance_sc",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.354876",
       "importance": 70
     },
     "偷偷跟你说": {
@@ -3504,6 +3600,70 @@
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:33:49.552307",
       "importance": 69
+    },
+    "task": {
+      "name": "task",
+      "definition": "task是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.363935",
+      "importance": 69
+    },
+    "CreativeInsight": {
+      "name": "CreativeInsight",
+      "definition": "CreativeInsight是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.374059",
+      "importance": 69
+    },
+    "宏伟蓝图": {
+      "name": "宏伟蓝图",
+      "definition": "278349, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"宏伟蓝图\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\",",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.383272",
+      "importance": 69
+    },
+    "top_rule": {
+      "name": "top_rule",
+      "definition": "top_rule是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "治理原则",
+      "related": [
+        "nt",
+        "or",
+        "re",
+        "as",
+        "Emotional_Trigger_情感触发器"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T15:17:09.392905",
+      "importance": 68
     },
     "SubscribeAndInstall": {
       "name": "SubscribeAndInstall",
@@ -4747,7 +4907,8 @@
       "小时内一周内一个月内去年",
       "古斯塔夫的尊名",
       "真实造物主的尊名",
-      "integration_rules"
+      "integration_rules",
+      "top_rule"
     ],
     "方法论": [
       "考古",
@@ -5036,7 +5197,16 @@
       "LinkOut",
       "relevance_score",
       "insider_whisperer",
-      "希望描绘"
+      "希望描绘",
+      "brainstorming_ideas",
+      "current_formality",
+      "interaction_history",
+      "reasoning_type",
+      "成功案例",
+      "web_learning",
+      "task",
+      "CreativeInsight",
+      "宏伟蓝图"
     ],
     "核心概念": [
       "现居住",
@@ -5053,5 +5223,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T15:15:45.116039"
+  "exported_at": "2026-06-27T15:18:06.229635"
 }

@@ -1,6 +1,2606 @@
 {
-  "total": 1934,
+  "total": 1986,
   "entries": [
+    {
+      "id": "82cdf829",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "memory",
+          "relevance": 40,
+          "category": "考古发现"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 15:18:06\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 32 种模式，索引 50 条，新概念候选 10 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 321\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 1985\n- 类型分布: {\"fil...",
+      "created_at": "2026-06-27T15:18:06.112389",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:18:06.112389",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cab92be9",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T15:17:06.846719\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 1600, \"remaining\": 2747, \"progress_pct\": 36.8, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T15:17:09.102264",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:09.102264",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "279de9ef",
+      "title": "叙事生态 #1549",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1549",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1549"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "insider_whisperer",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "ID",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "id",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T17:05:56.955729\", \"relevance_score\": 0.9318977791313354, \"task\": \"Insider_Whisperer_内幕消息传递者\" }, { \"topic\": \"紧迫感\", \"content\": \"约 12,400,000 个结果在新选项卡中打开链接时间不限baidu.comhttps://...",
+      "created_at": "2026-06-27T15:17:06.735039",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.735039",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b3400ac3",
+      "title": "叙事生态 #1548",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1548",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1548"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › market › pub › manuscript › \u0001知乎盐选 | 3.2 信息不对称理论3.2 信息不对称理论 信息不对称理论是信息经济学研究的一个重要分支，一直以来就备受学术界的普遍关注，它是对古典经济学的重要补充和发展。 3.2.1 信息不对称的内涵 古典经济学认为，市场在亚当· …zhihu.comhttps://www.zhihu...",
+      "created_at": "2026-06-27T15:17:06.619310",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.619310",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "53c0ef33",
+      "title": "叙事生态 #1547",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1547",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1547"
+      ],
+      "related_concepts": [
+        {
+          "name": "天之前",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "郭富城",
+          "relevance": 40,
+          "category": "方法论"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "in",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "nr",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "将于12月6日贺岁档在全国公映。qlwb.com.cnhttps://qlwb.com.cn › detail郭富城、任达华、吴镇宇、方中信主演电影《内幕》定档-齐鲁 \u000111月17日，电影《内幕》官宣定档12月6日，同步释出预告。 作为麦兆辉筹备三年的犯罪题材作品，该片通过律师与警察的合作视角展开叙事，呈现 \u0001huanqiu.comhttps://m.huanqiu.com › article《内...",
+      "created_at": "2026-06-27T15:17:06.505270",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.505270",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fb174510",
+      "title": "叙事生态 #1546",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1546",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1546"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"content\": \"约 12,400,000 个结果在新选项卡中打开链接时间不限baidu.comhttps://zhidao.baidu.com › question紧迫感是什么意思 - 百度知道2024年6月20日 · 紧迫感是指一种内心强烈的、压迫的感觉，通常由于时间限制、任务的重要性或紧急情况而产生。 当人们面临紧迫的情况时，会感受到压力，产生紧张和不安的情绪，从而促使自己快 …zh...",
+      "created_at": "2026-06-27T15:17:06.390582",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.390582",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fda02512",
+      "title": "叙事生态 #1545",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1545",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1545"
+      ],
+      "related_concepts": [
+        {
+          "name": "天之前",
+          "relevance": 40,
+          "category": "治理原则"
+        },
+        {
+          "name": "郭富城",
+          "relevance": 40,
+          "category": "方法论"
+        },
+        {
+          "name": "nz",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "to",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " { \"topic\": \"内幕消息\", \"content\": \"约 98,900 个结果在新选项卡中打开链接时间不限youth.cnhttps://fun.youth.cn › gnzx郭富城任达华主演 电影《内幕》冲入贺岁档_青网新娱乐频道 \u00014 天之前 · 由麦兆辉导演、编剧，郭富城、任达华、吴镇宇、方中信领衔主演的电影《内幕》日前重磅官宣，将于12月6日贺岁档在全国公映。qlwb.com.c...",
+      "created_at": "2026-06-27T15:17:06.276693",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.276693",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b4e4af2b",
+      "title": "叙事生态 #1544",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1544",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1544"
+      ],
+      "related_concepts": [
+        {
+          "name": "知乎",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "一声",
+          "relevance": 15,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "question如何理解",
+          "relevance": 10,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 10,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › market › pub › manuscript › \u0001知乎盐选 | 3.2 信息不对称理论3.2 信息不对称理论 信息不对称理论是信息经济学研究的一个重要分支，一直以来就备受学术界的普遍关注，它是对古典经济学的重要补充和发展。 3.2.1 信息不对称的内涵 古典经济学认为，市场在亚当·斯密「看不见 …zhihu.comhttps://www.zhihu.com › question...",
+      "created_at": "2026-06-27T15:17:06.154162",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.154162",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7a55a1c1",
+      "title": "叙事生态 #1543",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1543",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1543"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "通常由于时间限制、任务的重要性或紧急情况而产生。 当人们面临紧迫的情况时，会感受到压力，产生紧张和不安的情绪，从而促使自己快 …zhihu.comhttps://www.zhihu.com › question如何时刻保持紧迫感和危机感呢？ - 知乎2025年2月26日 · 知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验...",
+      "created_at": "2026-06-27T15:17:06.035154",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:06.035154",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "9d89f5e0",
+      "title": "叙事生态 #1542",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1542",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1542"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "是什么意思",
+          "relevance": 40,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "com › question紧迫感是什么意思 - 百度知道2024年6月20日 · 紧迫感是指一种内心强烈的、压迫的感觉，通常由于时间限制、任务的重要性或紧急情况而产生。 当人们面临紧迫的情况时，会感受到压力，产生紧张和不安的情绪，从而促使自己快 …zhihu.comhttps://www.zhihu.com › question如何时刻保持紧迫感和危机感呢？ - 知乎2025年2月26日 · 知...",
+      "created_at": "2026-06-27T15:17:05.920850",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.920850",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6dcf526b",
+      "title": "叙事生态 #1541",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1541",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1541"
+      ],
+      "related_concepts": [
+        {
+          "name": "责任感",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "时代感",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "知乎",
+          "relevance": 45,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "紧迫感",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "comhttps://www.zhihu.com › question如何时刻保持紧迫感和危机感呢？ - 知乎2025年2月26日 · 知乎，中文互联网高质量的问答社区和创作者聚集的原创内容平台，于 2011 年 1 月正式上线，以「让人们更好的分享知识、经验和见解，找到自己的解答」为品牌使命。知乎凭借认真、 …baidu.comhttps://zhidao.baidu.com › questio...",
+      "created_at": "2026-06-27T15:17:05.807169",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.807169",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0c88f9fc",
+      "title": "叙事生态 #1540",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1540",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1540"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"宏伟蓝图\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T17:18:34.172413\", \"relevance_score\": 0.7171300908524766, \"tas...",
+      "created_at": "2026-06-27T15:17:05.691993",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.691993",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "01120137",
+      "title": "叙事生态 #1539",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1539",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1539"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"宏伟蓝图\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:59:22.103263\", \"relevance_score\": 0.7855077826518104, \"tas...",
+      "created_at": "2026-06-27T15:17:05.575479",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.575479",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c6c23f35",
+      "title": "叙事生态 #1538",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1538",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1538"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:21:16.304643\", \"relevance_score\": 0.7463503030545301, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:05.462030",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.462030",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bce9e76f",
+      "title": "叙事生态 #1537",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1537",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1537"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:02:10.270866\", \"relevance_score\": 0.810067853066518, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sour...",
+      "created_at": "2026-06-27T15:17:05.348371",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.348371",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d21ed0aa",
+      "title": "叙事生态 #1536",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1536",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1536"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T15:44:08.471655\", \"relevance_score\": 0.7749521577343259, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:05.235084",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.235084",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "4bed3e0d",
+      "title": "叙事生态 #1535",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1535",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1535"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T15:24:54.817172\", \"relevance_score\": 0.7673423723842169, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:05.121004",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.121004",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c349e561",
+      "title": "叙事生态 #1534",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1534",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1534"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T15:05:46.926681\", \"relevance_score\": 0.8920795473532634, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:05.006391",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:05.006391",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6ab29792",
+      "title": "叙事生态 #1533",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1533",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1533"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T14:46:34.740211\", \"relevance_score\": 0.9365258079063069, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:04.892232",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.892232",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "687d6cdc",
+      "title": "叙事生态 #1532",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1532",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1532"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T14:27:18.606818\", \"relevance_score\": 0.8986959458462852, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:04.778513",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.778513",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2781926c",
+      "title": "叙事生态 #1531",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1531",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1531"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T13:49:50.008094\", \"relevance_score\": 0.9660552644607601, \"tas...",
+      "created_at": "2026-06-27T15:17:04.662759",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.662759",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "930d5faf",
+      "title": "叙事生态 #1530",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1530",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1530"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T13:30:40.054989\", \"relevance_score\": 0.9610985340670295, \"tas...",
+      "created_at": "2026-06-27T15:17:04.547998",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.547998",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cbf8dc63",
+      "title": "叙事生态 #1529",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1529",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1529"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T13:11:30.328532\", \"relevance_score\": 0.8690826342716202, \"tas...",
+      "created_at": "2026-06-27T15:17:04.417226",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.417226",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ecc8ed8c",
+      "title": "叙事生态 #1528",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1528",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1528"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T12:52:17.026992\", \"relevance_score\": 0.7618216640120259, \"tas...",
+      "created_at": "2026-06-27T15:17:04.300865",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.300865",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "63a1535a",
+      "title": "叙事生态 #1527",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1527",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1527"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.7982442077881906, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"激励型领袖\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T12:31:11.451033\", \"re...",
+      "created_at": "2026-06-27T15:17:04.168630",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.168630",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b802ea33",
+      "title": "叙事生态 #1526",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1526",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1526"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.7943105839280167, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"激励型领袖\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T12:23:01.932350\", \"re...",
+      "created_at": "2026-06-27T15:17:04.055144",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:04.055144",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3a1c4b57",
+      "title": "叙事生态 #1525",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1525",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1525"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.9236845048273554, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"激励型领袖\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T12:03:52.118972\", \"re...",
+      "created_at": "2026-06-27T15:17:03.939012",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.939012",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c30c1a64",
+      "title": "叙事生态 #1524",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1524",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1524"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "com/\u0001 - 2014-8-19 推荐您搜索\", \"source\": \"https://www.sogou.com/web?query=%E6%BF%80%E5%8A%B1%E5%9E%8B%E9%A2%86%E8%A2%96\", \"category\": \"Inspirational_Leader_激励型领袖\", \"learned_at\": \"2025-11-24T11:44:55.261689...",
+      "created_at": "2026-06-27T15:17:03.826459",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.826459",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ac5d3f06",
+      "title": "叙事生态 #1523",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1523",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1523"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T08:37:16.714566\", \"relevance_score\": 0.7177359873164363, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.713730",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.713730",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "466dc77c",
+      "title": "叙事生态 #1522",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1522",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1522"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T08:17:39.271445\", \"relevance_score\": 0.8284200411596498, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.600860",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.600860",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5ddf55c8",
+      "title": "叙事生态 #1521",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1521",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1521"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T08:05:05.473556\", \"relevance_score\": 0.8599761901535211, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.487566",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.487566",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "af870f9c",
+      "title": "叙事生态 #1520",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1520",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1520"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T07:45:27.115262\", \"relevance_score\": 0.7972160799128574, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.374528",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.374528",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "458dd1f8",
+      "title": "叙事生态 #1519",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1519",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1519"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T07:26:00.053990\", \"relevance_score\": 0.7081711836210476, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.261164",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.261164",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2dc1982a",
+      "title": "叙事生态 #1518",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1518",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1518"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T07:06:28.089618\", \"relevance_score\": 0.9171383548781946, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.145429",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.145429",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "98b71662",
+      "title": "叙事生态 #1517",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1517",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1517"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T06:47:03.708759\", \"relevance_score\": 0.7248142462355156, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:03.032807",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:03.032807",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "50680654",
+      "title": "叙事生态 #1516",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1516",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1516"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T06:30:32.117975\", \"relevance_score\": 0.8951800799926561, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.917176",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.917176",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fd2285db",
+      "title": "叙事生态 #1515",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1515",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1515"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T06:11:00.858789\", \"relevance_score\": 0.9112432657113452, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.803784",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.803784",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bfa012da",
+      "title": "叙事生态 #1514",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1514",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1514"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:58:02.472820\", \"relevance_score\": 0.9494174390215847, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.690185",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.690185",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1346f634",
+      "title": "叙事生态 #1513",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1513",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1513"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:38:37.250269\", \"relevance_score\": 0.8532490918357792, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.575282",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.575282",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d2cd1084",
+      "title": "叙事生态 #1512",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1512",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1512"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T05:18:54.690751\", \"relevance_score\": 0.7070259968264451, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.460267",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.460267",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0c9594fe",
+      "title": "叙事生态 #1511",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1511",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1511"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:59:29.453114\", \"relevance_score\": 0.9166615155940503, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.346607",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.346607",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "42b5d54c",
+      "title": "叙事生态 #1510",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1510",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1510"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:40:05.159759\", \"relevance_score\": 0.9526675548060872, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.232661",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.232661",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3270c87b",
+      "title": "叙事生态 #1509",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1509",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1509"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T04:20:40.348782\", \"relevance_score\": 0.8822616500782621, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"sou...",
+      "created_at": "2026-06-27T15:17:02.118413",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.118413",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b4d133ce",
+      "title": "叙事生态 #1508",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1508",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1508"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T04:01:19.702406\", \"relevance_score\": 0.9933200320915739, \"task\": \"Inspirational_Leader_激励型领袖\" }, { \"topic\": \"愿景描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"lea...",
+      "created_at": "2026-06-27T15:17:02.002295",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:02.002295",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "877c053d",
+      "title": "叙事生态 #1507",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1507",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1507"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感共鸣\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T17:30:49.463791\", \"relevance_score\": 0.9539537015868187 } ], \"In...",
+      "created_at": "2026-06-27T15:17:01.874992",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.874992",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "227fa5a5",
+      "title": "叙事生态 #1506",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1506",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1506"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "希望描绘",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T17:19:31.102141\", \"relevance_score\": 0.803884202255237, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"焦虑放大\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned...",
+      "created_at": "2026-06-27T15:17:01.759134",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.759134",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "25427e7c",
+      "title": "叙事生态 #1505",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1505",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1505"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 40,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.9969586035708071 }, { \"topic\": \"情感触发\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T17:17:37.965271\", \"relevance_score\": 0.8275618081077585, \"ta...",
+      "created_at": "2026-06-27T15:17:01.629491",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.629491",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0c85ff66",
+      "title": "叙事生态 #1504",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1504",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1504"
+      ],
+      "related_concepts": [
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "希望描绘",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T17:01:16.107257\", \"relevance_score\": 0.8817353787881417, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"希望描绘\", \"conten...",
+      "created_at": "2026-06-27T15:17:01.503701",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.503701",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "939aa7b1",
+      "title": "叙事生态 #1503",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1503",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1503"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.8003124361718839, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"恐惧营销\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:59:23.854287\", \"releva...",
+      "created_at": "2026-06-27T15:17:01.358070",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.358070",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "23893d90",
+      "title": "叙事生态 #1502",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1502",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1502"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "希望描绘",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"希望描绘\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:43:15.078779\", \"relevance_score\": 0.9787970928720691, \"task\":...",
+      "created_at": "2026-06-27T15:17:01.210639",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.210639",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "41152e5a",
+      "title": "叙事生态 #1501",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1501",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1501"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"learned_at\": \"2025-11-24T16:40:32.816742\", \"relevance_score\": 0.8887198197699362, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"贪婪利用\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learne...",
+      "created_at": "2026-06-27T15:17:01.082412",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:01.082412",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a2cd1598",
+      "title": "叙事生态 #1500",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#1500",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_1500"
+      ],
+      "related_concepts": [
+        {
+          "name": "nt",
+          "relevance": 50,
+          "category": "核心概念"
+        },
+        {
+          "name": "relevance_score",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 45,
+          "category": "核心概念"
+        },
+        {
+          "name": "to",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"relevance_score\": 0.7718825453344736, \"task\": \"Emotional_Trigger_情感触发器\" }, { \"topic\": \"情感共鸣\", \"content\": \"持续学习是提升能力的关键\", \"source\": \"web_learning\", \"learned_at\": \"2025-11-24T16:33:38.136383\", \"releva...",
+      "created_at": "2026-06-27T15:17:00.965048",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T15:17:00.965048",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "8a4738e3",
       "title": "今日考古摘要 - 2026-06-27",
@@ -69351,5 +71951,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T15:15:45.116039"
+  "exported_at": "2026-06-27T15:18:06.231173"
 }
