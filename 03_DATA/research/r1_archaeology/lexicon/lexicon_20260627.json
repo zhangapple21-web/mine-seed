@@ -77,6 +77,22 @@
       "first_seen": "2026-06-27T15:47:02.061389",
       "importance": 100
     },
+    "ng": {
+      "name": "ng",
+      "definition": "ng是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "re",
+        "as",
+        "length_score"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.318729",
+      "importance": 100
+    },
     "老张-V∞Ω元协议": {
       "name": "老张-V∞Ω元协议",
       "definition": "伪算法内核的核心元协议。核心逻辑：只保留那个，在真实世界里，愿意为代价负责的判断。",
@@ -5004,6 +5020,22 @@
       "first_seen": "2026-06-27T15:42:38.388334",
       "importance": 61
     },
+    "trae_projects": {
+      "name": "trae_projects",
+      "definition": "trae_projects是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.328933",
+      "importance": 61
+    },
     "XXX": {
       "name": "XXX",
       "definition": "到 2–3 只更有把握的票上把资金留在更有价值的个股，这样节奏才好带利润才堆得起来。 我看了下你现在的持仓，票有点偏多了XXX有点XXX哪都沾一点，你这样做只会哪都赚不到。这种状态是散户最常见的涨的那几只因为仓位轻，赚不到什么钱，跌的那几只是重仓",
@@ -5916,6 +5948,102 @@
       "first_seen": "2026-06-27T15:42:38.491645",
       "importance": 57
     },
+    "txt": {
+      "name": "txt",
+      "definition": "txt是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.339672",
+      "importance": 57
+    },
+    "dict": {
+      "name": "dict",
+      "definition": "dict是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.349430",
+      "importance": 57
+    },
+    "tags": {
+      "name": "tags",
+      "definition": "tags是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.360114",
+      "importance": 57
+    },
+    "source": {
+      "name": "source",
+      "definition": "source是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.370266",
+      "importance": 57
+    },
+    "Users": {
+      "name": "Users",
+      "definition": "Users是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.381389",
+      "importance": 57
+    },
+    "apple": {
+      "name": "apple",
+      "definition": "apple是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "nt",
+        "en",
+        "ng",
+        "re",
+        "as"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:39:04.390732",
+      "importance": 57
+    },
     "小雪": {
       "name": "小雪",
       "definition": "9]德国教师：您有哪些爱好？你有什么爱好？（加密货币和赚钱除外） [4/9/20 20:30:56]小雪：在我眼中，朋友可以互相帮助 [4/9/20 20:31:26]小雪：高尔夫，旅行 [4/9/20",
@@ -6459,7 +6587,15 @@
       "我现在突然想跟你说",
       "我今天状态很好",
       "你继续说我也陪你",
-      "我现在就想继续跟你聊下去"
+      "我现在就想继续跟你聊下去",
+      "ng",
+      "trae_projects",
+      "txt",
+      "dict",
+      "tags",
+      "source",
+      "Users",
+      "apple"
     ],
     "核心概念": [
       "现居住",
@@ -6479,5 +6615,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:36:22.666436"
+  "exported_at": "2026-06-27T16:39:14.544407"
 }
