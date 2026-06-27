@@ -157,6 +157,38 @@
       "first_seen": "2026-06-27T16:43:21.623590",
       "importance": 100
     },
+    "disappointment_responses": {
+      "name": "disappointment_responses",
+      "definition": "愉快我们会记在心里，下次一定给您更好的体验\\\", \\\"如果您愿意给我们一个改进的机会，我们会加倍努力\\\" ] }, \\\"disappointment_responses\\\": { \\\"validation_statements\\\": [ \\\"您的失望我感同身受，这确实不是我们期望的结果\\",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.667116",
+      "importance": 100
+    },
+    "validation_statements": {
+      "name": "validation_statements",
+      "definition": "给我们一个改进的机会，我们会加倍努力\\\" ] }, \\\"disappointment_responses\\\": { \\\"validation_statements\\\": [ \\\"您的失望我感同身受，这确实不是我们期望的结果\\\", \\\"我能理解您的失落，这种情况下感到失望很正常\\\",",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.677758",
+      "importance": 100
+    },
     "老张-V∞Ω元协议": {
       "name": "老张-V∞Ω元协议",
       "definition": "伪算法内核的核心元协议。核心逻辑：只保留那个，在真实世界里，愿意为代价负责的判断。",
@@ -453,6 +485,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T14:13:23.673567",
+      "importance": 91
+    },
+    "responsibility_taking": {
+      "name": "responsibility_taking",
+      "definition": "\\\"我能感受到您的不满，这确实是我们需要改进的地方\\\", \\\"感谢您耐心表达不满，这能帮助我们发现问题\\\" ], \\\"responsibility_taking\\\": [ \\\"这次的问题确实是我们做得不够好，我承担这个责任\\\", \\\"给您带来不好的体验，我深表歉意，我们会立即改进",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.688460",
       "importance": 91
     },
     "生存层": {
@@ -896,6 +944,22 @@
       "first_seen": "2026-06-27T15:19:52.844563",
       "importance": 88
     },
+    "monitoring_followup": {
+      "name": "monitoring_followup",
+      "definition": "monitoring_followup是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.699577",
+      "importance": 88
+    },
     "递归提示学习": {
       "name": "递归提示学习",
       "definition": "R1_ENGINE的高级能力，系统通过递归地优化自己的提示词来提升性能，是微进化的核心机制。",
@@ -1205,6 +1269,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-26T22:04:37.607329",
+      "importance": 85
+    },
+    "solution_orientation": {
+      "name": "solution_orientation",
+      "definition": ", \\\"您的反馈很有价值，我们会认真对待并采取行动\\\", \\\"让您失望了，这是我们的失误，我们会加倍努力\\\" ], \\\"solution_orientation\\\": [ \\\"让我们把注意力放在如何解决问题上，我会全程跟进\\\", \\\"我已经制定了改进方案，确保类似问题不再发生\\\"",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.709673",
       "importance": 85
     },
     "system_state": {
@@ -1723,6 +1803,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:44:42.121631",
+      "importance": 82
+    },
+    "聊陌生人话题": {
+      "name": "聊陌生人话题",
+      "definition": "同事对你来说也是一种新的学习方式 聊陌生人话题： 我喜欢与陌生人聊天，因为和陌生人聊天，不管你们聊任何话题，对方总能没有任何顾虑的回答你的问题，因为他们不了解你，这往",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.721226",
+      "importance": 82
+    },
+    "immediate_response": {
+      "name": "immediate_response",
+      "definition": "immediate_response是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.732051",
       "importance": 82
     },
     "MeetingInviteTipsContent": {
@@ -2752,6 +2864,38 @@
       "first_seen": "2026-06-27T15:56:00.922875",
       "importance": 76
     },
+    "compensation_offers": {
+      "name": "compensation_offers",
+      "definition": "compensation_offers是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.743704",
+      "importance": 76
+    },
+    "assessment_phase": {
+      "name": "assessment_phase",
+      "definition": "assessment_phase是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.753153",
+      "importance": 76
+    },
     "引擎层": {
       "name": "引擎层",
       "definition": "R1的运行时引擎层，API路由、三界格式化器、记忆核心、请求适配器、输出整形器。",
@@ -3119,6 +3263,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:44:42.131410",
+      "importance": 75
+    },
+    "同事对你来说也": {
+      "name": "同事对你来说也",
+      "definition": "同事对你来说也是一种新的学习方式 聊陌生人话题： 我喜欢与陌生人聊天，因为和陌生人聊天，不管你们聊任何话题，对方总能没有任何顾虑的回答",
+      "category": "待分类",
+      "related": [
+        "灵魂",
+        "nt",
+        "en",
+        "ng",
+        "me"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-27T16:49:05.765756",
       "importance": 75
     },
     "emotional_trigger": {
@@ -6935,7 +7095,17 @@
       "pdf",
       "KoreaSoci",
       "照片已忽忽",
-      "瓜达拉哈拉"
+      "瓜达拉哈拉",
+      "disappointment_responses",
+      "validation_statements",
+      "responsibility_taking",
+      "monitoring_followup",
+      "solution_orientation",
+      "聊陌生人话题",
+      "immediate_response",
+      "compensation_offers",
+      "assessment_phase",
+      "同事对你来说也"
     ],
     "核心概念": [
       "现居住",
@@ -6955,5 +7125,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-27T16:44:55.890140"
+  "exported_at": "2026-06-27T16:49:26.719317"
 }

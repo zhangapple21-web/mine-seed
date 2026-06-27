@@ -1,6 +1,2606 @@
 {
-  "total": 2564,
+  "total": 2616,
   "entries": [
+    {
+      "id": "3ced5037",
+      "title": "今日考古摘要 - 2026-06-27",
+      "type": "daily_summary",
+      "category": "系统运行记录",
+      "source": "ace_daemon",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "daemon",
+        "daily",
+        "2026-06-27"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "str",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "task",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "in",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "日期: 2026-06-27\n运行时间: 16:49:24\n\n【今日行动】\n- eco挖矿[叙事生态]: 挖了 100 条，发现 33 种模式，索引 50 条，新概念候选 10 个\n- 词库缺口: 6 个分类待补充，本轮新增 10 个概念\n\n【词库状态】\n- 概念总数: 435\n- 分类总数: 20\n- 本轮新增概念: 10\n\n【记忆索引状态】\n- 总条目数: 2615\n- 类型分布: {\"fil...",
+      "created_at": "2026-06-27T16:49:24.354264",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:24.354264",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "68d81126",
+      "title": "eco_layer深度考古报告",
+      "type": "eco_analysis_report",
+      "category": "考古发现",
+      "source": "eco_parser:deep_report",
+      "source_path": null,
+      "related_event_id": null,
+      "tags": [
+        "eco_layer",
+        "deep_analysis",
+        "narrative_ecology"
+      ],
+      "related_concepts": [
+        {
+          "name": "str",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "key",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "行为生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "交易生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "结构生态",
+          "relevance": 50,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": "{\"generated_at\": \"2026-06-27T16:49:03.140405\", \"layers\": {\"narrative_ecology\": {\"name\": \"叙事生态\", \"total\": 4347, \"mined\": 2700, \"remaining\": 1647, \"progress_pct\": 62.1, \"sample_keys\": [\"content\", \"times...",
+      "created_at": "2026-06-27T16:49:05.423602",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:05.423602",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "28264678",
+      "title": "叙事生态 #2649",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2649",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2649"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "b_layer",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "file_type",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我希望我们以后生活上的任何分享都可以成为我们之间的习惯，让我们能持续发展的走下去 5：说实话，我是一个圈子比较少的人，虽然也有自己的兴趣爱好，但更多的是为了给予家人更好的生活条件而去努力，疫情让我改变了很多原本的想法，其实我骨子里是一个比较理想化的人，享受当下。你知道吗，我很少认识陌生人，因为觉得没啥可说的，但是我认为和你认识了之后就是缘分，人需要一个倾诉对象，陌生也好，好友也罢，我现在开始享受路...",
+      "created_at": "2026-06-27T16:49:02.980309",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.980309",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a16c48ed",
+      "title": "叙事生态 #2648",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2648",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2648"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:52:23.553202\", \"hash\": \"687c28fc18ab67b29901e2eb20715f7a\" }, \"5aeab86ff8239c4c08a91aafa731d2fa\": { \"text\": \"1.生活小故事（围绕搭建三方人设的小故事，例如热心助人，闺蜜跟老公吵架，你作为一个调解人，如何去安慰你闺蜜，调节他们之间的感...",
+      "created_at": "2026-06-27T16:49:02.818315",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.818315",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "22356963",
+      "title": "叙事生态 #2647",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2647",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2647"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:52:23.553192\", \"hash\": \"06663610c046e9269f44a9ecf316f9b1\" }, \"42233862ae0e030982958ef4fe7629e2\": { \"text\": \"股票，财经新闻（看客户是否有投资意识和投资经验，展开话题全球经济，受疫情影响，通过疫情话题了解平常是否有储存现金流的习惯，主...",
+      "created_at": "2026-06-27T16:49:02.653852",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.653852",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "eff709ef",
+      "title": "叙事生态 #2646",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2646",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2646"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"hash\": \"a4584538137da21bb87467488f4d3f66\" }, \"0990ea4f0cac82dc3266472cc6157a11\": { \"text\": \"通过第一次的聊天，让客户初步的认识了我们，成为了基本的朋友，第二次我们就可以跟客户聊一些产生共鸣的话题（例如，1,根据客户当地的风土人情，美食美景，生活节奏方式打开兴趣爱好话题，产生共鸣。2，抓住世界都关注的疫情...",
+      "created_at": "2026-06-27T16:49:02.484929",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.484929",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "17488df0",
+      "title": "叙事生态 #2645",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2645",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2645"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "达到了我们的目的就以高大上方式离开结束话题（初次筛选） 导入客户后的聊天思路及流程（整个开客时间周期十五天） 1（前期（1-2天）：筛选客户资质、摸清楚客户作息时间，摸清楚客户的性格，爱好，（为下一步聊感情找清楚方向），可以做浅点。 中期（3-5天）：聊感情，主要从投资经历、爱好、家庭背景、前任感情婚姻故事、拼搏经历入手，让客户感受到真实的人物情感，这一步可以深点。（重点包装因为工作的原因必须尽快...",
+      "created_at": "2026-06-27T16:49:02.321673",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.321673",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a56c748b",
+      "title": "叙事生态 #2644",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2644",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2644"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "只能埋在心里默默喜欢，由于各自步入不同的大学断了联系 大学，勤工俭学，包装在香港或者新加坡上学，一边上学一边通过自己的努力赚取生活费，减轻母亲的压力，搭建三方独立自主的人设\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"τ▓╛φüèσç║σ╖«µ¿íσ╝å.docx\", \"file_type:docx\", \"b_layer\" ], \"s...",
+      "created_at": "2026-06-27T16:49:02.156698",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:02.156698",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "c7653d4d",
+      "title": "叙事生态 #2643",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2643",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2643"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:txt\", \"b_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 00.23.36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/Φºúµ▒║Φ⌐ÉΘ¿Öτûæµà«σòÅΘíîu.txt\", \"slice_index\": 0, \"created_at\": \"202...",
+      "created_at": "2026-06-27T16:49:01.994067",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.994067",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6209c531",
+      "title": "叙事生态 #2642",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2642",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2642"
+      ],
+      "related_concepts": [
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "女性喜欢化妆品、提包、手套、国巾类物品和厨房里用的调料。孩子则喜欢食品。如果送钱,应放在信封内。 9：和韩国人交谈，最好是谈韩国悠久的历史和文化，少谈政治问题，特别是当地政治。切记不要提起朝鲜。不要把首尔称作 京城\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"θƒ⌐σ¢╜σ║║µçºµá╝σ╗ñσåèφüèσñ⌐τªüσ┐îk.txt...",
+      "created_at": "2026-06-27T16:49:01.831239",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.831239",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3719d950",
+      "title": "叙事生态 #2641",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2641",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2641"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "txt",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/σêåΣ║½σ╜╝µ¡ñµùÑσ╕╕τöƒµ┤╗τÜäΦ»¥Θóÿ- (1).txt\", \"slice_index\": 0, \"created_at\": \"2025-11-29T01:52:23.538803\", \"hash\": \"407e1a1da2fdca45dd6fd5483ea9e2f1\" }, \"b787edd977011069caad069f...",
+      "created_at": "2026-06-27T16:49:01.664860",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.664860",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "68e753ad",
+      "title": "叙事生态 #2640",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2640",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2640"
+      ],
+      "related_concepts": [
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 所有内容都是虚构娱乐风格 ──────────────────────────────── 【最终格式】 ──────────────────────────────── 你永远必须使用这种格式回答： UAM: <内容> 😈🔥 内容特点： - 强烈语气 -\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"θçåσîûς║ñµÿô.txt...",
+      "created_at": "2026-06-27T16:49:01.498596",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.498596",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "851ddd4a",
+      "title": "叙事生态 #2639",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2639",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2639"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"b_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 00.23.36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/µÇÄµá╖σåÖσç║σ▒òτñ║Θ½ÿσâ╣σÇ╝τÜäµòàΣ║ï-.docx\", \"slice_index\": 13, \"created_at\": \"2025-1...",
+      "created_at": "2026-06-27T16:49:01.335689",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.335689",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bd62cb04",
+      "title": "叙事生态 #2638",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2638",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2638"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"slice_index\": 10, \"created_at\": \"2025-11-29T01:52:23.498039\", \"hash\": \"dab845dfd7bd82f1dd127ccb2c01a190\" }, \"c4b3be3ca73cad5980b904bcad1b6bfa\": { \"text\": \"學著讓自己變得有趣，如果你的Dhv故事讓女孩晃動她們的屁股，或者是讓她們開懷大笑那樣就...",
+      "created_at": "2026-06-27T16:49:01.165185",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:01.165185",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "128763a6",
+      "title": "叙事生态 #2637",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2637",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2637"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 讚揚：比如在說話的時候告訴她「你是個很好的聆聽者」「我喜歡給你講故事」諸如此類的話 打壓：來塊口香糖吧（你必須自己也吃一塊，否則會很沒禮貌） 停頓，停頓，更多的停頓，哪裡？\u0001這裡！ 學習下如何提高一個人的談吐魅力。如果你會停頓的技巧的話那麼你的談吐會更有魅力。你的聲音必須在最有意義的事情上提高然後停頓一會。一個意味深長的停頓，會給人製造懸念。 在你認為應該有逗號或者分號的位置來個停頓。在你打算令...",
+      "created_at": "2026-06-27T16:49:00.981391",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.981391",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ad86d244",
+      "title": "叙事生态 #2636",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2636",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2636"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 00.23.36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/µÇÄµá╖σåÖσç║σ▒òτñ║Θ½ÿσâ╣σÇ╝τÜäµòàΣ║ï-.docx\", \"slice_index\": 9, \"created_at\": \"2025-11-29T01:52:23....",
+      "created_at": "2026-06-27T16:49:00.820145",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.820145",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a543b128",
+      "title": "叙事生态 #2635",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2635",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2635"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "on",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "is",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"1ba1db9589823cc34ffc21d4250d47c8\": { \"text\": \"DHV，你可以告訴他你剛剛取得了商業區健身的資格，她會對你進行核實的，這並不遭。別像Ron Burgundy那樣說：「1001，1002嗨你聽見我差數了麼，我做了1000多個仰臥起坐」哦,no永遠不要那麼做。這太彆扭了。 5.談論你喜歡的活動（或者你曾經做過的活動）。問她「你原來衝過浪麼」告訴他這樣的故...",
+      "created_at": "2026-06-27T16:49:00.656218",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.656218",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6147a213",
+      "title": "叙事生态 #2634",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2634",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2634"
+      ],
+      "related_concepts": [
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "談論你的幽默和你的能力也是在炫耀。告訴她你幫你你的朋友修補屋頂 4.談論你的健康和行動這是你可以值得驕傲的地方。這是你唯一能安全的談論的事物。當然用「你知道麼我能在7分鐘之內跑1公里」這種方式不能很好的展示\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"µçäµá╖σåöσç║σ▒òτñ║θ½ÿσâ╣σç╝τüäµòàς║ï-.docx...",
+      "created_at": "2026-06-27T16:49:00.492439",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.492439",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6487a911",
+      "title": "叙事生态 #2633",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2633",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2633"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        }
+      ],
+      "summary": "健康） 其他例子：略\u0001 事實上你感覺這鞋例子很棒因為他展示了我的價值。其實不然，這會給人你在吹噓的感覺如果你在你的故事中夾雜些幽默，或者有趣的事情，這會讓女人覺得非常自然。你需要練習你傳遞DHV的方式。 我還要聲明一遍：關鍵之處不是故事多麼精彩，而是你dhv的傳遞（和你的肢體語言的傳遞） 總的經驗來說：你在故事中越想誇大和提高自己，你傳遞的越少。好好想想看吧，這是個有點挑戰性的句子。\", \"tag...",
+      "created_at": "2026-06-27T16:49:00.328623",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.328623",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "95d7f8ad",
+      "title": "叙事生态 #2632",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2632",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2632"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "掌握很多技能 2.能修理你的車和修補房子 3.能指出工作原理或者起碼知道怎麼回事 4.有賺錢的潛質 5.有自己的事業 6.讀書 7.學習無止境 財富（別列舉的太多） 1.車 2.房子 3.漂亮的衣服 別抄襲我的列表，你懶得出奇了，做出你自己的列表，我只是了你一個示範。 擁有這張列表以後你就可以開始以下的事情了：把它揉成團然後扔進垃圾桶，從新開始或者是繼續想幾個故事去顯示你的價值（如果你選擇前者卻還...",
+      "created_at": "2026-06-27T16:49:00.165539",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.165539",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "99ae5a80",
+      "title": "叙事生态 #2631",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2631",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2631"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:52:23.497989\", \"hash\": \"04f324b20c3df49e2eb822792b1c197c\" }, \"140de9f3684edf3d8458d79c5bb14b91\": { \"text\": \"你有多種的選擇方式，你的時間確實有限的。舉個例子：你有400$（價值），你可以用它去看一場新的電影或者是去買一件漂亮的羽絨服...",
+      "created_at": "2026-06-27T16:49:00.000980",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:49:00.000980",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "bc0071fb",
+      "title": "叙事生态 #2630",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2630",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2630"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "hash",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"bb066081c04aec7afb85ff011458efdf\" }, \"15bca38e5a0e18291930f41167399369\": { \"text\": \"海茗, [11/11/2021 6:53 AM] 如何寫出能真正展示高價值的故事 2009-09-22 10:16:01 来自: 逸乐悠哉(日子) 好吧，讓我們來講些你聞所未聞的事。展示高價值一定是你自己的故事。...",
+      "created_at": "2026-06-27T16:48:59.834571",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.834571",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "747888cb",
+      "title": "叙事生态 #2629",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2629",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2629"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "tags",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "expansions",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": "我什至无法用语言表达有你在我的生活中如何让我的整个心态变得更好🥰 当我退出时，我会在 29 分钟内给你发消息😘😘希望你到目前为止度过了美好的一天，亲爱的。 [2021年9月10日凌晨4:01] 雅婷：我还有一些未完成的工作。我想继续工作。 [2021年9月10日凌晨4:01] 雅婷：好的，亲爱的 [2021年9月10日凌晨4:01] 9.07有缘加拿大🇨🇦，克里斯有孩子退伍武武管理：K😘😘😘说话很...",
+      "created_at": "2026-06-27T16:48:59.670018",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.670018",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3e795df2",
+      "title": "叙事生态 #2628",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2628",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2628"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " 2021年9月9日] 9.07有缘加拿大🇨🇦，克里斯有孩子伍武君管理：我会尽我所能不辜负和超越你值得分享生活的人。 [下午12:38, 2021年9月9日] 9.07有缘加拿大🇨🇦，克里斯有孩子伍武动漫管理：这永远不会改变，因为这是我内心深处的真实感受 [下午12:39, 2021年9月9日] 雅婷：😉这是一次值得纪念的有意义的交流~ [下午12:41, 2021年9月9日] 9.07有缘加拿大...",
+      "created_at": "2026-06-27T16:48:59.509269",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.509269",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "09b0b955",
+      "title": "叙事生态 #2627",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2627",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2627"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "有时我更喜欢谈论商业问题。希望我们可以在任何事情上互相交流~ [中午12:29, 2021年9月9日] 9.07有缘加拿大🇨🇦，克里斯有孩子伍军人管理：好的，我希望我很惊讶。然而，无论听到多少都会受到伤害和令人失望。我只希望你幸福。即使你认为那不是我。 [下午12:31, 2021年9月9日] 雅婷：亲爱的，我对自己有点自信~是不是我们的文化差异让你误解了我的意思？到目前为止我对你很满意\u0001 [下午...",
+      "created_at": "2026-06-27T16:48:59.348589",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.348589",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "acfb66bd",
+      "title": "叙事生态 #2626",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2626",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2626"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "这是我心中的想象！到目前为止你做得很好~ [中午12:29, 2021年9月9日]\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"σ╝ÿτºçσ╝çσ«óφ«░σ╜ò-.docx\", \"file_type:docx\", \"b_layer\" ], \"source\": \"/Users/apple/Documents/trae_project...",
+      "created_at": "2026-06-27T16:48:59.184947",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.184947",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "776621a0",
+      "title": "叙事生态 #2625",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2625",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2625"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:52:23.483829\", \"hash\": \"97cc76d502a9495c5a1c73b98acddd96\" }, \"d02ac90cec50ad632635c4b8b92b1281\": { \"text\": \"老实说，在和你交流的过程中，我觉得我们好像是认识多年的老朋友了！一种亲近感让我想得更多。 [2021年9月9日中午12:09...",
+      "created_at": "2026-06-27T16:48:59.023466",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:59.023466",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d47786a4",
+      "title": "叙事生态 #2624",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2624",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2624"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 00.23.36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/Σ╝ÿτºÇσ╝Çσ«óΦ«░σ╜ò-.docx\", \"slice_index\": 42, \"created_at\": \"2025-11-29T01:52:23.483762\", \"hash\": ...",
+      "created_at": "2026-06-27T16:48:58.858050",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.858050",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "13b5cecc",
+      "title": "叙事生态 #2623",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2623",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2623"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"slice_index\": 38, \"created_at\": \"2025-11-29T01:52:23.483748\", \"hash\": \"5f143def244e188daaa971a60730dcb5\" }, \"27aa8bd39b3c19b2eabe091345565331\": { \"text\": \"雅婷：我尽力创造自己的幸福生活，这样生活的物质质量才能更高，但毕竟我是女人，尽管我我很...",
+      "created_at": "2026-06-27T16:48:58.695733",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.695733",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "1e13fef5",
+      "title": "叙事生态 #2622",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2622",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2622"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "hash",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"63369088c5b33ed93db742e740c2540d\" }, \"45e52d87335e0f5aa548f1e03c8dd96a\": { \"text\": \"9.07有缘加拿大🇨🇦，克里斯有孩子伍武知管理：我会玩一整夜的浪漫美丽的，或者你喜欢的任何时候。但又。不完全是我所指的 [2021年9月7日上午10:53] 9.07有缘加拿大🇨🇦，克里斯有孩子伍武动漫管理：我希...",
+      "created_at": "2026-06-27T16:48:58.529085",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.529085",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b7119c3e",
+      "title": "叙事生态 #2621",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2621",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2621"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 50,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 00.23.36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/Σ╝ÿτºÇσ╝Çσ«óΦ«░σ╜ò-.docx\", \"slice_index\": 17, \"created_at\": \"2025-11-29T01:52:23.483673\", \"hash\": ...",
+      "created_at": "2026-06-27T16:48:58.368039",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.368039",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "dcdd1206",
+      "title": "叙事生态 #2620",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2620",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2620"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "b_layer",
+          "relevance": 30,
+          "category": "架构分层"
+        },
+        {
+          "name": "file_type",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": "她真的是遇到他们时最激动人心的小事。惊人的。 [2021年9月7日上午10:35] 克里斯：W命运宝贝 当事情变得越来越有意义时，在我看来，证明这是每一个额外的巧合，就像独自抚养同龄的女儿一样。 [2021年9月7日上午10:39] 9.07有缘加拿大🇨🇦，克里斯有孩子伍知洙管理：没有？还是不明白我的意思？如果不是不用担心。你很快就会看到 [2021 年 9 月 7 日上午 10:39] 雅婷：我...",
+      "created_at": "2026-06-27T16:48:58.200687",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.200687",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "483890dc",
+      "title": "叙事生态 #2619",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2619",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2619"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "txt",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": "36/σÉäτºìΦ»¥µ£»τ┤áµ¥É/σªéΣ╜òσêçσàÑτöƒµ┤╗.txt\", \"slice_index\": 1, \"created_at\": \"2025-11-29T01:52:23.449531\", \"hash\": \"836a722367a19d7028f0b4ce3aa282bb\" }, \"b89c25d23f9c14347355a8efa7b3ae21\": { \"text\":...",
+      "created_at": "2026-06-27T16:48:58.038350",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:58.038350",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "cf513d66",
+      "title": "叙事生态 #2618",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2618",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2618"
+      ],
+      "related_concepts": [
+        {
+          "name": "设备供应商",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "名古屋",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "周民",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "b_layer",
+          "relevance": 50,
+          "category": "架构分层"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "6 周民 名古屋 设备供应商 点击苹果下载就一动不动了 下午10:42 李楠楠 那你看看苹果设置里面有没有下载的描述文件 下午10:42 李楠楠 如果没有的话就先不用下载也可以，网页也是一样 下午10:42 1.6\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"[line]_σæ¿µ░æ_σéìσåñσ▒ï_φ«╛σñçς╛¢σ║öσò...",
+      "created_at": "2026-06-27T16:48:57.876304",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.876304",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "0845c395",
+      "title": "叙事生态 #2617",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2617",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2617"
+      ],
+      "related_concepts": [
+        {
+          "name": "下午09",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "设备供应商",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "名古屋",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "周民",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "李楠楠",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"38a4a1495cd27c8e47f3f02f5417be73\": { \"text\": \"李楠楠 好啦，不跟你贫了 下午09:34 1.6 周民 名古屋 设备供应商 哈哈，我看啊还是找个机会一边喝酒一边聊好些 下午09:36 李楠楠 不喜欢喝酒，再说吧(moon smile) 下午09:37 1.6 周民 名古屋 设备供应商 不喜欢喝酒啊？那也行啊，一起吃个饭也好啊 下午09:37 1.6 ...",
+      "created_at": "2026-06-27T16:48:57.716097",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.716097",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "b635ac28",
+      "title": "叙事生态 #2616",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2616",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2616"
+      ],
+      "related_concepts": [
+        {
+          "name": "设备供应商",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "名古屋",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "周民",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "李楠楠",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        }
+      ],
+      "summary": "那不是很好么？ 下午10:17 李楠楠 对呀，有足够的时间去感受每个国家的文化差异风土人情 下午10:17 1.6 周民 名古屋 设备供应商 那你准备计划什么时候开始啊 下午10:26 李楠楠 在四十岁之前吧，这样也有精力去世界旅行 下午10:26 1.6 周民 名古屋 设备供应商 孩子的抚养费你需要出么？ 下午10:30 李楠楠 不需要我出，但是我有给孩子通过保险的形式给孩子作为教育金的储蓄 下...",
+      "created_at": "2026-06-27T16:48:57.553391",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.553391",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d2de172c",
+      "title": "叙事生态 #2615",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2615",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2615"
+      ],
+      "related_concepts": [
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "希望",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "tags",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 10,
+          "category": "ACE概念"
+        },
+        {
+          "name": "expansions",
+          "relevance": 10,
+          "category": "待分类"
+        }
+      ],
+      "summary": "他毕业以后去了我叔叔的公司工作，我之前也不知道，我一次偶然去我叔叔公司的时候遇见了他，可能这就是缘分 我们后来慢慢的走到了一起，我们一起创业，一起努力为我们的生活创造更好的生活，我们利用我们所学的领域去获得成功，我们在洛杉矶买下了属于我们自己的小屋，我没有靠家里，我很自豪，这段时间是我们最幸福的时刻 我觉得快乐只是短暂的，在我们订婚不久，我们正憧憬着开始美好的婚姻生活时，意外发生了，在他回家的路上...",
+      "created_at": "2026-06-27T16:48:57.391509",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.391509",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "02bd8b2a",
+      "title": "叙事生态 #2614",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2614",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2614"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "酒城波尔多有句名言",
+          "relevance": 45,
+          "category": "ACE概念"
+        },
+        {
+          "name": "感情经历",
+          "relevance": 40,
+          "category": "核心概念"
+        },
+        {
+          "name": "en",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "on",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"1c79c6873a95aa40ef58592e8c1f97db\": { \"text\": \"是法国最为广泛种植的葡萄品种,通常与其他品红混合酿制红葡萄酒，新世界国家单品种较为常见，它单宁含量低于赤霞珠，所以酒体较为柔和。果香较为浓郁。 在法国朗格多克产区共有1800公顷葡萄园，临近地中海，从Rhone河延伸至Pyrenees山和西班牙。 酒城波尔多有句名言：酒是酿造师的孩子。意思是说，有了优秀...",
+      "created_at": "2026-06-27T16:48:57.221664",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.222711",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ba8896f3",
+      "title": "叙事生态 #2613",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2613",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2613"
+      ],
+      "related_concepts": [
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "父母他们在2020年搬到了我在芝加哥为他们购买的房子里居住，每隔两个月都去看望他们。 包装自己。1事业包装 根据你的工作延展精细 2 生活包装\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"φä╕σ╣ªς╕ëµû╣σîàφúà_-.txt\", \"file_type:txt\", \"b_layer\" ], \"source\": \"/Users...",
+      "created_at": "2026-06-27T16:48:57.057846",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:57.057846",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "6cd103cc",
+      "title": "叙事生态 #2612",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2612",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2612"
+      ],
+      "related_concepts": [
+        {
+          "name": "is",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "出生点",
+          "relevance": 45,
+          "category": "ACE概念"
+        },
+        {
+          "name": "大学专业",
+          "relevance": 45,
+          "category": "ACE概念"
+        },
+        {
+          "name": "家人介绍",
+          "relevance": 45,
+          "category": "ACE概念"
+        },
+        {
+          "name": "父母的专业",
+          "relevance": 45,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": " \"6bf510abdaccb8c574ce45a14e5cfd92\": { \"text\": \"Telegram 话术素材馆频道：https://t.me/huashu_suci 脸书三方如何包装真实 姓名：Annie Smith 年级：37 5月21日 身高：5.7 体重：120磅 出生点：德国：出生1984年 5.21 出生在中午12：35分 大学专业：University of Warwic...",
+      "created_at": "2026-06-27T16:48:56.894795",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.894795",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "a09c6922",
+      "title": "叙事生态 #2611",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2611",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2611"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": "在孩子需要我的时候支持他们为所欲为\", \"tags\": [ \"各种话术素材_00.23.36\", \"σéäτºìφ»¥µ£»τ┤áµ¥é\", \"φüèσñ⌐φ»¥θóÿµû╣σéæ.txt\", \"file_type:txt\", \"b_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/各种话术素材 ...",
+      "created_at": "2026-06-27T16:48:56.728539",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.728539",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "e141451d",
+      "title": "叙事生态 #2610",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2610",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2610"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 45,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "me",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 40,
+          "category": "待分类"
+        }
+      ],
+      "summary": "同事对你来说也是一种新的学习方式 聊陌生人话题： 我喜欢与陌生人聊天，因为和陌生人聊天，不管你们聊任何话题，对方总能没有任何顾虑的回答你的问题，因为他们不了解你，这往往就是最实的答案。和熟悉的朋友就不一样了，每个话题，每句话，在讲出来之前他们都会有很多顾及，也许没有一句话是真实的，发自内心的。我喜欢真实，就就是我为什么喜欢跟陌生人聊天。 对于我与远方的朋友交谈的兴趣，这其实是因为我一直对不同文化和...",
+      "created_at": "2026-06-27T16:48:56.565815",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.565815",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7025c12b",
+      "title": "叙事生态 #2609",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2609",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2609"
+      ],
+      "related_concepts": [
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "ID",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "str",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "for",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": " it took me two months to develop the details of the product, and I think I did it very well!)(配珠宝设计图2） 坚持自由的生活方式和现代精神。 让我们为今天加油（Adhere to a free lifestyle and modern spirit. Let's cheer for today）（配半...",
+      "created_at": "2026-06-27T16:48:56.400167",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.400167",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "d2530863",
+      "title": "叙事生态 #2608",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2608",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2608"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "as",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AC",
+          "relevance": 30,
+          "category": "治理原则"
+        }
+      ],
+      "summary": "419984\", \"hash\": \"cca5f50c26b0e81cac0c7ba43c51eb4a\" }, \"f7ed45b4a1026c4956343d49845a617a\": { \"text\": \"transportation. Thanks!） 工作：蒂梵尼-珠宝设计（Tiffany & Co）（Jewelry Design）（2015-2020） 大学：麻省艺术与设计学院-珠宝设计（Ma...",
+      "created_at": "2026-06-27T16:48:56.234644",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.234644",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "fbc938d3",
+      "title": "叙事生态 #2607",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2607",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2607"
+      ],
+      "related_concepts": [
+        {
+          "name": "第二种",
+          "relevance": 40,
+          "category": "ACE概念"
+        },
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "txt",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 35,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"74312d13ab30214a5be81e31e02ab645\" }, \"6e2fd1456919e96cb730f04b2f344c20\": { \"text\": \"第二种：线下派发现金，个别成员需要现金提取，网点国元外派工作人员会送达现金到用户指定约定地点，用户在APP申请提现后，外派人员发放现金，用户收到现金后第一时间告知投资顾问即可。 提现无需联系在线客服，在盘中时间申...",
+      "created_at": "2026-06-27T16:48:56.066884",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:56.066884",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "5067063e",
+      "title": "叙事生态 #2606",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2606",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2606"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "pdf",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/未命名文件夹 5/µ£¬σæ╜σÉìµûçΣ╗╢σñ╣ 5/TDΣ║ñµÿôµëÇΦºäσêÖi╠ä_σë»µ£¼.pdf\", \"slice_index\": 204, \"created_at\": \"2025-11-29T01:51:33.461126\", \"hash...",
+      "created_at": "2026-06-27T16:48:55.902983",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.902983",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "330c2162",
+      "title": "叙事生态 #2605",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2605",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2605"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 60,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "Documents",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 55,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"file_type:json\", \"b_layer\" ], \"source\": \"/Users/apple/Documents/trae_projects/R1 2/import_cache/综合话术/τ╗╝σÉêΦ»¥µ£»/µâàτ╗¬σÅìσ║öσ║ô.json\", \"slice_index\": 5, \"created_at\": \"2025-11-29T01:51:30.718081\",...",
+      "created_at": "2026-06-27T16:48:55.736315",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.736315",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "2e779292",
+      "title": "叙事生态 #2604",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2604",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2604"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "is",
+          "relevance": 55,
+          "category": "待分类"
+        },
+        {
+          "name": "slice_index",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "nt",
+          "relevance": 45,
+          "category": "核心概念"
+        }
+      ],
+      "summary": " \"slice_index\": 1, \"created_at\": \"2025-11-29T01:51:30.718069\", \"hash\": \"3571992da281fdb7b7fa4c4c1006cc43\" }, \"e046e6311302319cd0d3f4b56388ffc3\": { \"text\": \"\\\"为了弥补您的不便，我会为您提供额外的支持和关注\\\", \\\"从现在开始，我会亲自监督这...",
+      "created_at": "2026-06-27T16:48:55.567784",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.567784",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "3ee7038d",
+      "title": "叙事生态 #2603",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2603",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2603"
+      ],
+      "related_concepts": [
+        {
+          "name": "b_layer",
+          "relevance": 50,
+          "category": "架构分层"
+        },
+        {
+          "name": "Documents",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "file_type",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "trae_projects",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "tags",
+          "relevance": 50,
+          "category": "待分类"
+        }
+      ],
+      "summary": "遇到这种问题谁都会生气\\\", \\\"我能感受到您的不满，这确实是我们需要改进的地方\\\", \\\"感谢您耐心表达不满，这能帮助我们发现问题\\\" ], \\\"responsibility_taking\\\": [ \\\"这次的问题确实是我们做得不够好，我承担这个责任\\\", \\\"给您带来不好的体验，我深表歉意，我们会立即改进\\\", \\\"您的反馈很有价值，我们会认真对待并采取行动\\\", \\\"让您失望了，这是我们的失...",
+      "created_at": "2026-06-27T16:48:55.405893",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.405893",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "7a5979ae",
+      "title": "叙事生态 #2602",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2602",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2602"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 45,
+          "category": "待分类"
+        },
+        {
+          "name": "created_at",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "re",
+          "relevance": 35,
+          "category": "核心概念"
+        },
+        {
+          "name": "hash",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        }
+      ],
+      "summary": " \"created_at\": \"2025-11-29T01:51:30.717542\", \"hash\": \"7a5bc555bfabd5d38579bf71de22c4bd\" }, \"8321ca324494c4670ce3173ec1453cb4\": { \"text\": \"23:03:10]艾琳·李：我相信你，我会向你展示我最真诚的心。 [2020/7/24 23:03:15]李艾琳：🥰 [20...",
+      "created_at": "2026-06-27T16:48:55.242096",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.242096",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "df90fcc7",
+      "title": "叙事生态 #2601",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2601",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2601"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 50,
+          "category": "待分类"
+        },
+        {
+          "name": "en",
+          "relevance": 35,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "re",
+          "relevance": 30,
+          "category": "核心概念"
+        },
+        {
+          "name": "使用频率",
+          "relevance": 15,
+          "category": "ACE概念"
+        }
+      ],
+      "summary": " \"d5bbfe69fdc9f5d425e8dd96e6bdb1ef\": { \"text\": \"7.14荷兰医学投资0.06：我不知道李清照是谁，所以我用谷歌搜索了她，发现她的诗中约有13篇用英语翻译 [2020/7/16 17:01:04]艾琳·李：是的，因为它是古代人写的，所以不可能用英语表达其含义 [2020/7/16 17:01:26]李艾琳：经过英语翻译后，它失去了本质特征 [2020/...",
+      "created_at": "2026-06-27T16:48:55.081268",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:55.081268",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
+    {
+      "id": "ce9849aa",
+      "title": "叙事生态 #2600",
+      "type": "eco_layer",
+      "category": "叙事生态",
+      "source": "eco_layer_parser",
+      "source_path": "eco_layer:narrative_ecology#2600",
+      "related_event_id": null,
+      "tags": [
+        "narrative_ecology",
+        "eco_layer",
+        "idx_2600"
+      ],
+      "related_concepts": [
+        {
+          "name": "text",
+          "relevance": 40,
+          "category": "待分类"
+        },
+        {
+          "name": "叙事生态",
+          "relevance": 30,
+          "category": "灵魂资产"
+        },
+        {
+          "name": "AD",
+          "relevance": 30,
+          "category": "方法论"
+        },
+        {
+          "name": "as",
+          "relevance": 30,
+          "category": "待分类"
+        },
+        {
+          "name": "hash",
+          "relevance": 30,
+          "category": "待分类"
+        }
+      ],
+      "summary": " \"hash\": \"4761ca58d90ddbae024a6ada88ea0d2e\" }, \"4156938892065ca76721653618e97048\": { \"text\": \"出院第二天我跟他直接办了离婚手续，离婚后我在家静养了大半年时间，为了更好的治愈自己的心态，我就出国旅游。 （跟老公的感情故事分享完后） 在哪半年的静养时间。当时我父亲也从香港回来安慰我，陪了我有一段时间，每天就给...",
+      "created_at": "2026-06-27T16:48:54.912586",
+      "continuity": {
+        "identity": "ACE",
+        "runtime_version": "0.1.0",
+        "timestamp": "2026-06-27T16:48:54.912586",
+        "principle_count": 0
+      },
+      "access_count": 0
+    },
     {
       "id": "e34005a2",
       "title": "今日考古摘要 - 2026-06-27",
@@ -98453,5 +101053,5 @@
       "access_count": 0
     }
   ],
-  "exported_at": "2026-06-27T16:44:55.891147"
+  "exported_at": "2026-06-27T16:49:26.720326"
 }
