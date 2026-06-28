@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-27T09:00:02",
+  "generated_at": "2026-06-28T09:00:03",
   "source_scan": "C:\\Users\\USER\\AppData\\Roaming\\TRAE SOLO\\ModularData\\ai-agent\\work-mode-projects\\6a3be8d2084d33999ccdf8c4\\TelegramDesktop_R1_文明遗迹扫描.json",
   "graph_version": "v0.1",
   "stats": {
     "node_count": 12,
     "edge_count": 10,
-    "source_items": 459,
+    "source_items": 599,
     "zip_event_sample_count": 200
   },
   "nodes": [
@@ -77,12 +77,13 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-06-26T22:06:35",
+          "mtime": "2026-06-27T21:37:51",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
             "lexicon",
             "档案官",
+            "守夜人",
             "观察者",
             "经验",
             "约束",
@@ -129,6 +130,25 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\lexicon.json",
+          "mtime": "2026-06-27T21:10:18",
+          "lineage_level": "medium",
+          "lineage_score": 50,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "派单",
+            "矿场",
+            "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\core\\lexicon.py",
           "mtime": "2026-06-26T20:11:43",
           "lineage_level": "medium",
@@ -143,6 +163,29 @@
             "派单",
             "矿场",
             "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\telegram_archive\\02_INDEX\\r1_structure_lexicon.json",
+          "mtime": "2026-06-27T19:13:06",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "人格",
+            "派单",
+            "矿场",
+            "三界",
+            "eco_layer",
+            "Ω"
           ],
           "note": ""
         },
@@ -405,7 +448,7 @@
         "v10_lexicon_slices"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-06-26T22:06:35",
+      "last_seen": "2026-06-27T21:37:51",
       "descendants": [],
       "notes": []
     },
@@ -610,12 +653,13 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-06-26T22:06:35",
+          "mtime": "2026-06-27T21:37:51",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
             "lexicon",
             "档案官",
+            "守夜人",
             "观察者",
             "经验",
             "约束",
@@ -663,7 +707,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\memory_index.json",
-          "mtime": "2026-06-26T22:06:36",
+          "mtime": "2026-06-27T21:38:05",
           "lineage_level": "medium",
           "lineage_score": 48,
           "keywords": [
@@ -774,7 +818,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\daemon_state.json",
-          "mtime": "2026-06-26T22:06:36",
+          "mtime": "2026-06-27T21:38:05",
           "lineage_level": "weak",
           "lineage_score": 26,
           "keywords": [
@@ -853,6 +897,42 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\research\\20260627_观察_ QwenPaw与ACE - 邻居关系_不同灵魂.md",
+          "mtime": "2026-06-27T21:00:26",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "守夜人",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\daily\\2026-06-27-ace.md",
+          "mtime": "2026-06-27T20:30:00",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "观察者",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\MEMORY.md",
+          "mtime": "2026-06-27T15:57:56",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "档案官",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\daily\\2026-06-26-ace.md",
           "mtime": "2026-06-26T20:15:01",
           "lineage_level": "weak",
@@ -872,6 +952,39 @@
           "keywords": [
             "vectorstore",
             "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\research\\20260627_观察_ ChatGPT越狱_DAN模式_与ACE的本质区别.md",
+          "mtime": "2026-06-27T21:00:26",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\research\\20260627_分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-06-27T20:30:00",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\research\\20260627_归档_ 验证_ 分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-06-27T20:30:00",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
           ],
           "note": ""
         },
@@ -978,7 +1091,7 @@
         "memory"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-06-26T22:06:36",
+      "last_seen": "2026-06-27T21:38:05",
       "descendants": [],
       "notes": []
     },
@@ -1150,6 +1263,18 @@
           "note": ""
         },
         {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\telegram_archive\\AUM-TASK-2026-06-27-TG-001.yaml",
+          "mtime": "2026-06-27T19:18:47",
+          "lineage_level": "weak",
+          "lineage_score": 12,
+          "keywords": [
+            "AUM",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
           "source": "zip_entry",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/aum_system.py",
           "mtime": "2026-06-25T10:31:16",
@@ -1166,7 +1291,7 @@
         "aum"
       ],
       "first_seen": "2025-12-04T11:05:49",
-      "last_seen": "2026-06-25T10:31:16",
+      "last_seen": "2026-06-27T19:18:47",
       "descendants": [],
       "notes": []
     },
@@ -1343,6 +1468,19 @@
             "芯片",
             "人格",
             "freezone"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\telegram_archive\\04_FINDINGS\\dead_structures\\Persona人格系统.json",
+          "mtime": "2026-06-27T19:18:16",
+          "lineage_level": "weak",
+          "lineage_score": 16,
+          "keywords": [
+            "人格",
+            "观察者",
+            "影子层"
           ],
           "note": ""
         },
@@ -1631,7 +1769,7 @@
         "chip"
       ],
       "first_seen": "2025-12-04T11:05:49",
-      "last_seen": "2026-05-21T20:01:54",
+      "last_seen": "2026-06-27T19:18:16",
       "descendants": [],
       "notes": []
     },
