@@ -134,7 +134,7 @@
       "cost_score": 100,
       "context_window": 1000000,
       "last_reason": "canonical_v2胜率29%过低",
-      "last_update": "2026-06-28T12:53:30.672393"
+      "last_update": "2026-06-28T20:00:01.918848"
     },
     "nim_llama_70b": {
       "model": "meta/llama-3.3-70b-instruct",
@@ -172,7 +172,7 @@
         }
       },
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.675229"
+      "last_update": "2026-06-28T20:00:01.921894"
     },
     "nim_gpt_120b": {
       "model": "openai/gpt-oss-120b",
@@ -202,7 +202,7 @@
       "cost_score": 100,
       "context_window": 128000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.676395"
+      "last_update": "2026-06-28T20:00:01.923518"
     },
     "nim_nemotron_120b": {
       "model": "nvidia/nemotron-3-super-120b-a12b",
@@ -258,7 +258,7 @@
       "weaknesses": [
         "latency"
       ],
-      "avg_latency": 25.1,
+      "avg_latency": 26.7,
       "success_rate": 0.999,
       "cost_score": 100,
       "context_window": 128000,
@@ -309,7 +309,7 @@
       "cost_score": 100,
       "context_window": 128000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.677643"
+      "last_update": "2026-06-28T20:00:01.925185"
     },
     "nim_kimi_k2": {
       "model": "moonshotai/kimi-k2.6",
@@ -336,7 +336,7 @@
       "cost_score": 100,
       "context_window": 128000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.673815"
+      "last_update": "2026-06-28T20:00:01.920367"
     },
     "nim_nemo_49b": {
       "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
@@ -390,7 +390,7 @@
       "cost_score": 100,
       "context_window": 128000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.678992"
+      "last_update": "2026-06-28T20:00:01.927077"
     },
     "nim_deepseek_flash": {
       "model": "deepseek-ai/deepseek-v4-flash",
@@ -528,7 +528,7 @@
       "cost_score": 100,
       "context_window": 128000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.680262"
+      "last_update": "2026-06-28T20:00:01.928459"
     },
     "nim_minimax": {
       "model": "minimaxai/minimax-m2.7",
@@ -609,7 +609,7 @@
       "context_window": 128000,
       "model_id": "z-ai/glm-5.1",
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.681417"
+      "last_update": "2026-06-28T20:00:01.929827"
     },
     "nim_step_35": {
       "model": "stepfun-ai/step-3.5-flash",
@@ -679,7 +679,7 @@
         }
       },
       "last_reason": "canonical_v2胜率20%过低",
-      "last_update": "2026-06-28T12:53:30.670052"
+      "last_update": "2026-06-28T20:00:01.915986"
     },
     "gh_4omini": {
       "model": "gpt-4o-mini",
@@ -695,7 +695,7 @@
       "weaknesses": [
         "deep_reasoning"
       ],
-      "avg_latency": 7.0,
+      "avg_latency": 6.6,
       "success_rate": 0.999,
       "cost_score": 80,
       "context_window": 128000,
@@ -769,7 +769,7 @@
       "cost_score": 100,
       "context_window": 1000000,
       "last_reason": "canonical_v2胜率0%过低",
-      "last_update": "2026-06-28T12:53:30.671210"
+      "last_update": "2026-06-28T20:00:01.917055"
     },
     "nim_step_37_flash": {
       "model": "stepfun-ai/step-3.7-flash",
@@ -789,7 +789,7 @@
       "weaknesses": [
         "ultra_deep_reasoning"
       ],
-      "avg_latency": 3.2,
+      "avg_latency": 1.8,
       "success_rate": 0.001,
       "cost_score": 100,
       "context_window": 128000,
@@ -812,7 +812,7 @@
         "timeout_prone"
       ],
       "notes": "128B MoE, reasoning+coding强, 旧key可用新key超时, 需用旧key",
-      "avg_latency": 58.0,
+      "avg_latency": 107.2,
       "success_rate": 0.999
     },
     "nim_nemotron_omni": {
@@ -855,10 +855,10 @@
         "no_multimodal"
       ],
       "avg_latency_s": 7,
-      "success_rate": 0.996,
+      "success_rate": 0.998,
       "tier": 1,
       "note": "2026-06-15新增，推理强速度快，主力池",
-      "avg_latency": 66.8
+      "avg_latency": 63.7
     },
     "gemini_flash": {
       "model": "gemini-2.5-flash",
