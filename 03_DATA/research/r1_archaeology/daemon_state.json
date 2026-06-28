@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-06-28T13:51:30.000267",
+  "last_run": "2026-06-28T14:37:32.160667",
   "last_scan_paths": {
     "c:\\Users\\USER\\Downloads\\Telegram Desktop\\Knowledge_Base\\AI对话": {
       "last_scanned_at": "2026-06-26T20:57:50.148653",
@@ -137,9 +137,21 @@
       "interesting": 0
     }
   },
-  "last_lexicon_count": 477,
-  "last_memory_count": 2937,
+  "last_lexicon_count": 487,
+  "last_memory_count": 2995,
   "daily_summaries": [
+    {
+      "date": "2026-06-28",
+      "summary_id": "fbd020c1",
+      "actions": [
+        "eco_mining",
+        "slice_mining",
+        "lexicon_gap"
+      ],
+      "concepts_added": 10,
+      "files_indexed": 50,
+      "ran_at": "2026-06-28T14:37:32.160667"
+    },
     {
       "date": "2026-06-28",
       "summary_id": "67ad9f4c",
@@ -552,6 +564,12 @@
   "discovered_paths": [],
   "errors": [
     {
+      "time": "2026-06-28T14:37:32.237333",
+      "module": "obs_to_task_converter",
+      "error": "'gap_categories'",
+      "context": ""
+    },
+    {
       "time": "2026-06-27T21:23:30.209772",
       "module": "local_archaeologist",
       "error": "list index out of range",
@@ -581,9 +599,9 @@
       "overview_last_date": "2026-06-28",
       "overview_done_today": 1,
       "overview_total_done": 3,
-      "by_file_last_date": "2026-06-27",
+      "by_file_last_date": "2026-06-28",
       "by_file_done_today": 1,
-      "by_file_total_done": 2,
+      "by_file_total_done": 3,
       "by_category_last_date": "2026-06-27",
       "by_category_done_today": 1,
       "by_category_total_done": 2,
@@ -596,13 +614,19 @@
     },
     "eco_layer": {
       "narrative_ecology": {
-        "offset": 3200,
-        "last_mined": "2026-06-28T13:51:03.131836",
-        "total_mined": 3200
+        "offset": 3300,
+        "last_mined": "2026-06-28T14:37:04.854370",
+        "total_mined": 3300
       }
     }
   },
   "recursion_depths": [
+    {
+      "date": "2026-06-28",
+      "depth": 5,
+      "tasks_executed": 4,
+      "stop_reason": "no_more_pending_tasks"
+    },
     {
       "date": "2026-06-28",
       "depth": 4,

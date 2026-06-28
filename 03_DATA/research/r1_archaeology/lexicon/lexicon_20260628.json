@@ -3441,6 +3441,22 @@
       "first_seen": "2026-06-27T16:14:24.200873",
       "importance": 74
     },
+    "acknowledgment_statements": {
+      "name": "acknowledgment_statements",
+      "definition": "acknowledgment_statements是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.377665",
+      "importance": 74
+    },
     "count": {
       "name": "count",
       "definition": "count是从eco:narrative_ecology材料中自动提取的概念",
@@ -3946,6 +3962,22 @@
       "first_seen": "2026-06-28T13:51:05.766261",
       "importance": 72
     },
+    "圣彼得堡": {
+      "name": "圣彼得堡",
+      "definition": "\", \"hash\": \"a189909266cb72f3283c1697df04574a\" }, { \"text\": \"圣彼得堡。医生科尼赛克的资助者是一个真正的天才汽油头。他的所作所为太神奇了，我是他的工厂。 11:11 7.20 彼得.50 岁",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.389778",
+      "importance": 72
+    },
     "三界格式化": {
       "name": "三界格式化",
       "definition": "R1引擎的输出格式化机制，将原始输出按三界/五界结构进行塑形。",
@@ -4207,6 +4239,22 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-27T16:44:42.151773",
+      "importance": 70
+    },
+    "frustration_responses": {
+      "name": "frustration_responses",
+      "definition": "frustration_responses是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.400655",
       "importance": 70
     },
     "偷偷跟你说": {
@@ -4735,6 +4783,38 @@
       "examples": [],
       "source": "concept_miner:eco:narrative_ecology",
       "first_seen": "2026-06-28T13:51:05.790478",
+      "importance": 69
+    },
+    "克里斯": {
+      "name": "克里斯",
+      "definition": "克里斯是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.412659",
+      "importance": 69
+    },
+    "代理人": {
+      "name": "代理人",
+      "definition": "代理人是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.424164",
       "importance": 69
     },
     "top_rule": {
@@ -5326,6 +5406,54 @@
       "examples": [],
       "source": "guardian:RQ-20260627-012",
       "first_seen": "2026-06-27T21:37:51.777491",
+      "importance": 65
+    },
+    "神经医生聊天记录": {
+      "name": "神经医生聊天记录",
+      "definition": "神经医生聊天记录是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.436336",
+      "importance": 65
+    },
+    "中森秋菜听说近藤雅彦": {
+      "name": "中森秋菜听说近藤雅彦",
+      "definition": "明菜是在大火中来到香港的。常盘贵子的表演非常真实，似乎与电影的故事融为一体。还有，小时候很漂亮，很容易吸引观众的眼球。 中森秋菜听说近藤雅彦是一个伤心的女演员，导致抑郁症放弃了自己的事业。” 21:26 顾客 “我想收到来自‘线程’和纽曼的消息，并同情他们。",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.448655",
+      "importance": 65
+    },
+    "医生科尼赛克的资助者": {
+      "name": "医生科尼赛克的资助者",
+      "definition": "ash\": \"a189909266cb72f3283c1697df04574a\" }, { \"text\": \"圣彼得堡。医生科尼赛克的资助者是一个真正的天才汽油头。他的所作所为太神奇了，我是他的工厂。 11:11 7.20 彼得.50 岁.FL 圣彼得堡。是的",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.460507",
       "importance": 65
     },
     "persuasive_salesperson": {
@@ -6402,6 +6530,38 @@
       "first_seen": "2026-06-27T16:44:42.194691",
       "importance": 60
     },
+    "FL": {
+      "name": "FL",
+      "definition": "FL是从eco:narrative_ecology材料中自动提取的概念",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.472655",
+      "importance": 60
+    },
+    "Othellia": {
+      "name": "Othellia",
+      "definition": "。是的，我们可以去慈善机构。 11:13 7.20彼得.50岁.FL圣彼得堡.医生 你在做公益教育，对吗？ 11:15 Othellia 我听说过关于 Christian von Koenigsegg 的故事，我认为他的成功在于他的坚持和努力。1977年，",
+      "category": "架构分层",
+      "related": [
+        "身体",
+        "灵魂",
+        "nt",
+        "en",
+        "ng"
+      ],
+      "examples": [],
+      "source": "concept_miner:eco:narrative_ecology",
+      "first_seen": "2026-06-28T14:37:07.484189",
+      "importance": 60
+    },
     "照片已忽忽": {
       "name": "照片已忽忽",
       "definition": "55:55] Maria：现在有58万？ [9/6/21 下午10:56:23] 2.8.9 H 奥斯丁尼克 402: 照片已忽忽 [9/6/21 下午10:57:44] Maria：因为官方客服说可以持续到11月1日。 [9/6/21 下午10:5",
@@ -7348,7 +7508,17 @@
       "恭喜群内成员",
       "而这座教堂也",
       "今天又",
-      "大A一直都"
+      "大A一直都",
+      "acknowledgment_statements",
+      "圣彼得堡",
+      "frustration_responses",
+      "克里斯",
+      "代理人",
+      "神经医生聊天记录",
+      "中森秋菜听说近藤雅彦",
+      "医生科尼赛克的资助者",
+      "FL",
+      "Othellia"
     ],
     "生存定律": [
       "笨者生存"
@@ -7827,5 +7997,5 @@
     ]
   },
   "version": "auto_export",
-  "exported_at": "2026-06-28T13:51:30.103840"
+  "exported_at": "2026-06-28T14:37:35.397244"
 }
