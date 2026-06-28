@@ -1,0 +1,231 @@
+{
+  "version": "1.0",
+  "updated": "2026-06-28",
+  "description": "\u4fe1\u53f7\u9a8c\u8bc1\u56e0\u5b50\u5e93\u7d22\u5f15 - \u542blast_verified\u65e5\u671f\u7528\u4e8e\u65f6\u95f4\u8870\u51cf\u8ba1\u7b97",
+  "signals": {
+    "momentum": {
+      "ic": 0.0207,
+      "direction": "positive",
+      "last_verified": "2026-06-16",
+      "source": "signal_discovery"
+    },
+    "volatility": {
+      "ic": 0.0436,
+      "direction": "positive",
+      "last_verified": "2026-06-16",
+      "source": "signal_discovery"
+    },
+    "mean_reversion": {
+      "ic": 0.03,
+      "direction": "positive",
+      "last_verified": "2026-06-15",
+      "source": "signal_discovery"
+    },
+    "volatility_regime_shift": {
+      "ic": 0.0225,
+      "direction": "positive",
+      "last_verified": "2026-06-17",
+      "source": "signal_discovery"
+    },
+    "volatility_ratio_market_cap_normalized": {
+      "ic": 0.0449,
+      "direction": "positive",
+      "last_verified": "2026-06-16",
+      "source": "signal_discovery"
+    },
+    "mean_reversion_signal_1": {
+      "ic": 0.025,
+      "direction": "positive",
+      "last_verified": "2026-06-15",
+      "source": "signal_discovery"
+    },
+    "momentum_continuation": {
+      "ic": 0.028,
+      "direction": "positive",
+      "last_verified": "2026-06-16",
+      "source": "signal_discovery"
+    },
+    "sector_rotation_signal": {
+      "ic": 0.021,
+      "direction": "positive",
+      "last_verified": "2026-06-17",
+      "source": "signal_discovery"
+    },
+    "volume_price_divergence": {
+      "ic": 0.023,
+      "direction": "positive",
+      "last_verified": "2026-06-15",
+      "source": "signal_discovery"
+    },
+    "Volume_Shock_3x": {
+      "ic": -0.0267,
+      "direction": "negative",
+      "last_verified": "2026-06-17",
+      "source": "signal_discovery"
+    },
+    "signal_volatile_price_range": {
+      "ic": -0.0462,
+      "direction": "negative",
+      "last_verified": "2026-06-18",
+      "source": "signal_discovery"
+    },
+    "signal_high_volatility_price_drop_signal": {
+      "ic": -0.0314,
+      "direction": "negative",
+      "last_verified": "2026-06-20",
+      "source": "signal_discovery",
+      "formula": "Rank_Add(TS_Std(Close, 20), Rank(TS_Delta(Close, 20)))",
+      "p_value": 1.3e-05
+    },
+    "signal_volume_price_divergence_signal_2": {
+      "ic": 0.0439,
+      "direction": "positive",
+      "last_verified": "2026-06-22",
+      "source": "signal_discovery",
+      "formula": "TS_Std(Volume, 10) / TS_Std(Close, 10) - Rank(TS_Std(Volume, 10) / TS_Std(Close, 10))",
+      "p_value": 2.21e-07,
+      "category": "volatility",
+      "data_fields": [
+        "Volume",
+        "Close"
+      ]
+    },
+    "signal_relative_strength_index_rsi": {
+      "ic": 0.0225,
+      "direction": "positive",
+      "last_verified": "2026-06-22",
+      "source": "signal_discovery",
+      "category": "momentum",
+      "formula": "Rank_Div(TS_Return(Close, 14), TS_Return(Close, 28))",
+      "p_value": 0.0006527879910871448
+    },
+    "signal_enhanced_volume_price_divergence_momentum_signal": {
+      "ic": -0.0269,
+      "direction": "negative",
+      "last_verified": "2026-06-23",
+      "source": "signal_discovery",
+      "formula": "Rank_Add(TS_Return(Close, 50), Rank(Mul(TS_Delta(Volume, 5), 0.5)))",
+      "p_value": 8.581026289666838e-05,
+      "category": "momentum",
+      "data_fields": [
+        "Close",
+        "Volume"
+      ]
+    },
+    "signal_relative_volatility_change_signal": {
+      "ic": -0.0267,
+      "direction": "negative",
+      "last_verified": "2026-06-23",
+      "source": "signal_discovery",
+      "formula": "Rank_Div(TS_Std(Volume, 5), TS_Std(Volume, 20))",
+      "p_value": 2.195946140481908e-06,
+      "category": "volatility",
+      "data_fields": [
+        "Volume"
+      ]
+    },
+    "signal_relative_volatility_momentum": {
+      "ic": 0.0351,
+      "direction": "positive",
+      "last_verified": "2026-06-24",
+      "source": "signal_discovery",
+      "category": "momentum",
+      "formula": "TS_Mean(TS_Std(Volume, 20), 20)",
+      "p_value": 8.298349748470102e-06,
+      "data_fields": [
+        "Volume"
+      ]
+    },
+    "signal_volume_decay": {
+      "ic": 0.034,
+      "direction": "positive",
+      "last_verified": "2026-06-25",
+      "source": "signal_discovery",
+      "formula": "Decay_Linear(Volume, 20)",
+      "p_value": 1.62e-05,
+      "category": "momentum",
+      "data_fields": [
+        "Volume"
+      ]
+    },
+    "signal_volatility_high_relative_to_mean": {
+      "ic": -0.3072,
+      "direction": "negative",
+      "last_verified": "2026-06-25",
+      "source": "signal_discovery",
+      "formula": "TS_Std(Volume, 20) / TS_Mean(Volume, 20) > 1.5",
+      "p_value": 1.38e-08,
+      "category": "volatility",
+      "data_fields": [
+        "Volume"
+      ],
+      "num_periods": 6
+    },
+    "signal_volatility_increase_signal": {
+      "ic": -0.0437,
+      "direction": "negative",
+      "last_verified": "2026-06-25",
+      "source": "signal_discovery",
+      "formula": "Rank_Add(TS_Std(Open, 10), TS_Std(Close, 10))",
+      "p_value": 1.44e-07,
+      "category": "volatility",
+      "data_fields": [
+        "Open",
+        "Close"
+      ],
+      "num_periods": 1303
+    },
+    "signal_volatility_inversion_signal": {
+      "ic": 0.0237,
+      "direction": "positive",
+      "last_verified": "2026-06-26",
+      "source": "signal_discovery",
+      "formula": "Rank_Div(TS_Std(Volume, 30), TS_Std(Volume, 10))",
+      "p_value": 1.13e-05,
+      "category": "volatility",
+      "data_fields": [
+        "Volume"
+      ]
+    },
+    "signal_volume_price_divergence_volatility": {
+      "ic": 0.0487,
+      "direction": "positive",
+      "last_verified": "2026-06-26",
+      "source": "signal_discovery",
+      "formula": "Rank_Div(TS_Std(Volume, 20), TS_Std(Close, 20))",
+      "p_value": 8.509010163137987e-09,
+      "category": "volatility",
+      "data_fields": [
+        "Volume",
+        "Close"
+      ]
+    },
+    "signal_price_range_volatility_ratio": {
+      "ic": -0.0253,
+      "direction": "negative",
+      "last_verified": "2026-06-27",
+      "source": "signal_discovery",
+      "formula": "Div(TS_Max(High, 10), TS_Mean(High, 10))",
+      "p_value": 5.311752165182426e-05,
+      "category": "volatility",
+      "data_fields": [
+        "High",
+        "Low"
+      ],
+      "num_periods": 1303
+    },
+    "signal_momentum_volatility_ratio": {
+      "ic": -0.0216,
+      "direction": "negative",
+      "last_verified": "2026-06-28",
+      "source": "signal_discovery",
+      "formula": "TS_Return(Close, 50) / (TS_Std(Close, 50) / TS_Std(Close, 200))",
+      "p_value": 0.009142435703209717,
+      "category": "momentum",
+      "data_fields": [
+        "Close"
+      ],
+      "num_periods": 1113
+    }
+  }
+}
