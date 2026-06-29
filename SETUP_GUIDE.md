@@ -35,8 +35,8 @@ cp 02_miner_config/signal_registry.json /home/coze/mine_output/signals/signal_re
 # 复制systemd服务
 cp 04_zrok/zrok-*.service /etc/systemd/system/
 systemctl daemon-reload
-systemctl enable zrok-oneapi-v1 zrok-data-r1-v5
-systemctl start zrok-oneapi-v1 zrok-data-r1-v5
+systemctl enable zrok-mine-v6 zrok-data-r1-v6
+systemctl start zrok-mine-v6 zrok-data-r1-v6
 ```
 
 ## 四、验证
@@ -49,5 +49,5 @@ python3 -c "print('矿场环境就绪')"
 curl -s http://localhost:3000/api/status
 
 # 检查zrok公网
-curl -s https://oneapi-v1.shares.zrok.io/api/status
+curl -s https://mine-v6.shares.zrok.io/api/status
 ```

@@ -1,0 +1,7 @@
+0 */4 * * * /home/coze/miner_cron.sh >> /home/coze/mine_output/cron.log 2>&1
+30 2,6,10,14,18,22 * * * /home/coze/signal_cron.sh >> /home/coze/mine_output/signals/signal_cron.log 2>&1
+4 20 * * * /home/coze/archivist_cron.sh
+@reboot cd /home/coze && python3 shared_api.py > shared_api.log 2>&1 &
+* * * * * pgrep -f shared_api.py > /dev/null || (cd /home/coze && python3 shared_api.py > shared_api.log 2>&1 &)
+0 * * * * python3 /home/coze/lab_ntfy.py ping >> /home/coze/lab_ntfy.log 2>&1
+*/5 * * * * /usr/local/bin/tunnel_guardian.sh >/dev/null 2>&1

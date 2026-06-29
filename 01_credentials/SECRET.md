@@ -11,7 +11,7 @@
 - Base: https://integrate.api.nvidia.com/v1
 
 ### GitHub Models
-- Token: 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
+- Token: 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
 - Base: https://models.inference.ai.azure.com
 
 ### 智谱 GLM
@@ -31,7 +31,7 @@
 - Base: https://api.apiyi.com
 
 ### OpenRouter
-- Key: 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
+- Key: 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
 - Base: https://openrouter.ai/api/v1
 
 ---
@@ -53,7 +53,7 @@
 - Bot2: 8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI
 
 ### GitHub PAT
-- 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
+- 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
 
 ---
 
