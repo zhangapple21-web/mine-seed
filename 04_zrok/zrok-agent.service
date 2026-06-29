@@ -1,0 +1,14 @@
+[Unit]
+Description=zrok Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/zrok2 agent start
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

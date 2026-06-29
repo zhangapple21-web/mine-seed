@@ -1,0 +1,14 @@
+[Unit]
+Description=zrok Reserved Share - r1-oneapi
+After=zrok-agent.service
+Wants=zrok-agent.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/zrok2 share public --subordinate -b proxy -n public:r1-oneapi http://127.0.0.1:3000
+Restart=always
+RestartSec=15
+User=root
+
+[Install]
+WantedBy=multi-user.target

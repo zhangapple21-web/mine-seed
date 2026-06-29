@@ -1,0 +1,16 @@
+[Unit]
+Description=zrok share - OneAPI (port 3000)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/script -q -c "/usr/local/bin/zrok2 share public --subordinate -b proxy -n public:oneapi-v1 http://127.0.0.1:3000" /dev/null
+Restart=always
+RestartSec=10
+StartLimitInterval=300
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

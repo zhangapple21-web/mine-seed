@@ -1,0 +1,14 @@
+[Unit]
+Description=zrok Share - port 3001
+After=zrok-agent.service
+Wants=zrok-agent.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/script -q -c "/usr/local/bin/zrok2 share public --subordinate -b proxy -n public:data-r1-v5 http://127.0.0.1:3001" /dev/null
+Restart=always
+RestartSec=15
+User=root
+
+[Install]
+WantedBy=multi-user.target
