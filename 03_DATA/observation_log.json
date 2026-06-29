@@ -22502,12 +22502,558 @@
       "tokens_out": 2440,
       "error": "",
       "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:03:39.606600",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 95.82,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1550,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:04:03.522990",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 21.88,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 2602,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:06:14.855041",
+      "task": "slice_mining",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 129.3,
+      "success": true,
+      "tokens_in": 6835,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:06:39.216658",
+      "task": "upgrade_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 22.31,
+      "success": true,
+      "tokens_in": 869,
+      "tokens_out": 2500,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:07:05.700680",
+      "task": "canonical_v2",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 24.22,
+      "success": true,
+      "tokens_in": 4604,
+      "tokens_out": 2670,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T13:07:06.880068",
+      "task": "canonical_v2",
+      "worker_id": "nim_step_37_flash",
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "elapsed": 1.15,
+      "success": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "can only concatenate str (not \"NoneType\") to str",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:00:09.250351",
+      "task": "slice_classification",
+      "worker_id": "gh_4omini",
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "elapsed": 6.86,
+      "success": true,
+      "tokens_in": 3138,
+      "tokens_out": 436,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:01:37.035625",
+      "task": "persona_deep",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 85.75,
+      "success": true,
+      "tokens_in": 2579,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:02:14.760603",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 35.69,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1972,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:02:39.156953",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 22.36,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 2305,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:05:59.112613",
+      "task": "slice_mining",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 197.92,
+      "success": true,
+      "tokens_in": 7290,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:06:23.813998",
+      "task": "upgrade_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 22.67,
+      "success": true,
+      "tokens_in": 869,
+      "tokens_out": 2500,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:06:50.846293",
+      "task": "canonical_v2",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 23.72,
+      "success": true,
+      "tokens_in": 3545,
+      "tokens_out": 2313,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:06:59.196157",
+      "task": "canonical_v2",
+      "worker_id": "nim_step_37_flash",
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "elapsed": 8.32,
+      "success": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "can only concatenate str (not \"NoneType\") to str",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:53:51.135365",
+      "task": "slice_classification",
+      "worker_id": "gh_4omini",
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "elapsed": 6.64,
+      "success": true,
+      "tokens_in": 3187,
+      "tokens_out": 402,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:55:05.518948",
+      "task": "persona_deep",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 72.35,
+      "success": true,
+      "tokens_in": 2579,
+      "tokens_out": 2360,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:56:11.193626",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 63.64,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1489,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:56:34.999016",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 21.77,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 2229,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:57:46.759035",
+      "task": "slice_mining",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 69.73,
+      "success": true,
+      "tokens_in": 6244,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:58:41.110677",
+      "task": "upgrade_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 52.32,
+      "success": true,
+      "tokens_in": 869,
+      "tokens_out": 2500,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:59:26.540399",
+      "task": "canonical_v2",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 43.11,
+      "success": true,
+      "tokens_in": 4604,
+      "tokens_out": 2268,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T16:59:27.422238",
+      "task": "canonical_v2",
+      "worker_id": "nim_step_37_flash",
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "elapsed": 0.85,
+      "success": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "can only concatenate str (not \"NoneType\") to str",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:00:08.017808",
+      "task": "slice_classification",
+      "worker_id": "gh_4omini",
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "elapsed": 5.85,
+      "success": true,
+      "tokens_in": 3037,
+      "tokens_out": 395,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:02:17.184267",
+      "task": "persona_deep",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 127.13,
+      "success": true,
+      "tokens_in": 2579,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:02:55.626568",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 36.41,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1295,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:04:33.335904",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 95.68,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 2183,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:05:40.942939",
+      "task": "slice_mining",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 65.57,
+      "success": true,
+      "tokens_in": 6858,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:06:28.581518",
+      "task": "upgrade_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 45.6,
+      "success": true,
+      "tokens_in": 869,
+      "tokens_out": 2500,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:07:32.215986",
+      "task": "canonical_v2",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 61.0,
+      "success": true,
+      "tokens_in": 3545,
+      "tokens_out": 2019,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:07:32.819026",
+      "task": "canonical_v2",
+      "worker_id": "nim_step_37_flash",
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "elapsed": 0.57,
+      "success": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "can only concatenate str (not \"NoneType\") to str",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:54:23.396273",
+      "task": "slice_classification",
+      "worker_id": "gh_4omini",
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "elapsed": 7.13,
+      "success": true,
+      "tokens_in": 3065,
+      "tokens_out": 483,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:56:44.185406",
+      "task": "persona_deep",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 138.76,
+      "success": true,
+      "tokens_in": 2579,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:57:15.248565",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 29.03,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1569,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:58:54.428734",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 97.15,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 1993,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T20:59:47.420119",
+      "task": "slice_classification",
+      "worker_id": "gh_4omini",
+      "model": "gpt-4o-mini",
+      "corps": "GitHub",
+      "elapsed": 5.62,
+      "success": true,
+      "tokens_in": 3181,
+      "tokens_out": 342,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:00:46.326232",
+      "task": "persona_deep",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 56.87,
+      "success": true,
+      "tokens_in": 2579,
+      "tokens_out": 2440,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:02:51.514371",
+      "task": "shadow_analysis",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 123.16,
+      "success": true,
+      "tokens_in": 425,
+      "tokens_out": 1354,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:03:24.733946",
+      "task": "routing_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 31.19,
+      "success": true,
+      "tokens_in": 435,
+      "tokens_out": 2837,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:05:48.837172",
+      "task": "slice_mining",
+      "worker_id": "nim_mistral_35",
+      "model": "mistralai/mistral-medium-3.5-128b",
+      "corps": "NIM",
+      "elapsed": 142.07,
+      "success": true,
+      "tokens_in": 7145,
+      "tokens_out": 3000,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:06:31.334105",
+      "task": "upgrade_analysis",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 40.46,
+      "success": true,
+      "tokens_in": 869,
+      "tokens_out": 2253,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:07:03.448443",
+      "task": "canonical_v2",
+      "worker_id": "nim_mistral_675b",
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "corps": "NIM",
+      "elapsed": 29.86,
+      "success": true,
+      "tokens_in": 4604,
+      "tokens_out": 2963,
+      "error": "",
+      "quality": null
+    },
+    {
+      "ts": "2026-06-29T21:07:04.115603",
+      "task": "canonical_v2",
+      "worker_id": "nim_step_37_flash",
+      "model": "stepfun-ai/step-3.7-flash",
+      "corps": "NIM",
+      "elapsed": 0.64,
+      "success": false,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "error": "can only concatenate str (not \"NoneType\") to str",
+      "quality": null
     }
   ],
   "stats_by_task": {
     "slice_classification": {
-      "total": 242,
-      "success": 199,
+      "total": 247,
+      "success": 204,
       "avg_time": 13.4,
       "by_corps": {
         "GLM": {
@@ -22515,8 +23061,8 @@
           "success": 47
         },
         "GitHub": {
-          "total": 165,
-          "success": 152
+          "total": 170,
+          "success": 157
         },
         "NIM": {
           "total": 25,
@@ -22525,13 +23071,13 @@
       }
     },
     "persona_deep": {
-      "total": 233,
-      "success": 193,
-      "avg_time": 81.2,
+      "total": 238,
+      "success": 198,
+      "avg_time": 81.5,
       "by_corps": {
         "NIM": {
-          "total": 231,
-          "success": 193
+          "total": 236,
+          "success": 198
         },
         "GitHub": {
           "total": 2,
@@ -22540,23 +23086,23 @@
       }
     },
     "shadow_analysis": {
-      "total": 240,
-      "success": 189,
-      "avg_time": 58.5,
+      "total": 246,
+      "success": 195,
+      "avg_time": 58.7,
       "by_corps": {
         "GitHub": {
           "total": 28,
           "success": 18
         },
         "NIM": {
-          "total": 212,
-          "success": 171
+          "total": 218,
+          "success": 177
         }
       }
     },
     "routing_analysis": {
-      "total": 217,
-      "success": 183,
+      "total": 223,
+      "success": 189,
       "avg_time": 44.3,
       "by_corps": {
         "GitHub": {
@@ -22564,19 +23110,19 @@
           "success": 15
         },
         "NIM": {
-          "total": 196,
-          "success": 168
+          "total": 202,
+          "success": 174
         }
       }
     },
     "slice_mining": {
-      "total": 211,
-      "success": 178,
-      "avg_time": 77.7,
+      "total": 216,
+      "success": 183,
+      "avg_time": 78.7,
       "by_corps": {
         "NIM": {
-          "total": 208,
-          "success": 178
+          "total": 213,
+          "success": 183
         },
         "GitHub": {
           "total": 3,
@@ -22585,28 +23131,28 @@
       }
     },
     "upgrade_analysis": {
-      "total": 206,
-      "success": 173,
-      "avg_time": 41.2,
+      "total": 211,
+      "success": 178,
+      "avg_time": 41.1,
       "by_corps": {
         "GitHub": {
           "total": 19,
           "success": 15
         },
         "NIM": {
-          "total": 187,
-          "success": 158
+          "total": 192,
+          "success": 163
         }
       }
     },
     "canonical_v2": {
-      "total": 382,
-      "success": 266,
-      "avg_time": 47.7,
+      "total": 392,
+      "success": 271,
+      "avg_time": 47.0,
       "by_corps": {
         "NIM": {
-          "total": 310,
-          "success": 261
+          "total": 320,
+          "success": 266
         },
         "GitHub": {
           "total": 72,
@@ -22634,26 +23180,26 @@
       }
     },
     "gh_4omini": {
-      "total": 168,
-      "success": 153,
+      "total": 173,
+      "success": 158,
       "avg_time": 7.9,
       "tasks": {
-        "slice_classification": 165,
+        "slice_classification": 170,
         "shadow_analysis": 2,
         "slice_mining": 1
       }
     },
     "nim_mistral_675b": {
-      "total": 643,
-      "success": 616,
-      "avg_time": 50.4,
+      "total": 659,
+      "success": 632,
+      "avg_time": 50.6,
       "tasks": {
         "persona_deep": 66,
-        "canonical_v2": 215,
+        "canonical_v2": 220,
         "slice_mining": 19,
         "shadow_analysis": 51,
-        "upgrade_analysis": 156,
-        "routing_analysis": 136
+        "upgrade_analysis": 161,
+        "routing_analysis": 142
       }
     },
     "gh_4o": {
@@ -22748,24 +23294,24 @@
       }
     },
     "nim_step_37_flash": {
-      "total": 51,
+      "total": 56,
       "success": 0,
-      "avg_time": 14.2,
+      "avg_time": 13.2,
       "tasks": {
         "slice_classification": 12,
-        "canonical_v2": 37,
+        "canonical_v2": 42,
         "shadow_analysis": 2
       }
     },
     "nim_mistral_35": {
-      "total": 319,
-      "success": 297,
-      "avg_time": 82.3,
+      "total": 335,
+      "success": 313,
+      "avg_time": 82.7,
       "tasks": {
         "routing_analysis": 34,
-        "slice_mining": 73,
-        "persona_deep": 81,
-        "shadow_analysis": 126,
+        "slice_mining": 78,
+        "persona_deep": 86,
+        "shadow_analysis": 132,
         "upgrade_analysis": 5
       }
     },

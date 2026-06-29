@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-06-28",
+  "updated": "2026-06-29",
   "description": "\u4fe1\u53f7\u9a8c\u8bc1\u56e0\u5b50\u5e93\u7d22\u5f15 - \u542blast_verified\u65e5\u671f\u7528\u4e8e\u65f6\u95f4\u8870\u51cf\u8ba1\u7b97",
   "signals": {
     "momentum": {
@@ -226,6 +226,34 @@
         "Close"
       ],
       "num_periods": 1113
+    },
+    "signal_modified_200_day_price_return_with_volatility_adjustment": {
+      "ic": -0.027428,
+      "direction": "negative",
+      "last_verified": "2026-06-29",
+      "source": "signal_discovery",
+      "formula": "TS_Return(Close, 200) * TS_Std(Volume, 50) / TS_Return(Volume, 50)",
+      "p_value": 2.6261163778684704e-05,
+      "category": "momentum",
+      "data_fields": [
+        "Close",
+        "Volume"
+      ],
+      "num_periods": 1112
+    },
+    "signal_recent_high_volatility_to_low_volume_ratio": {
+      "ic": -0.044442,
+      "direction": "negative",
+      "last_verified": "2026-06-29",
+      "source": "signal_discovery",
+      "formula": "TS_Std(Volume, 20) / TS_Std(Volume, 5) * Rank(TS_Return(Close, 10))",
+      "p_value": 1.968e-07,
+      "category": "volatility",
+      "data_fields": [
+        "Volume",
+        "Close"
+      ],
+      "num_periods": 1303
     }
   }
 }
