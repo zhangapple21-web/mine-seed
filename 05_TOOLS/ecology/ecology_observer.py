@@ -347,11 +347,16 @@ def write_outputs(cands: List[Candidate], days: int) -> None:
         # 前置 \n 保证即使文件末尾无换行也能正确分隔
         f.write("\n" + render_daily_log(cands, days))
 
-    # per-candidate nomination stub (ensure exists)
+    # per-candidate nomination stub (ensure exists, only for ELIGIBLE)
     for c in cands:
-        stub_path = os.path.join(NOM_DIR, f"AUM-RESIDENT-{c.slug}.md")
-        if os.path.exists(stub_path):
+        if c.status != "ELIGIBLE":
             continue
+        stub_path = os.path.join(NOM_DIR, f"AUM-RESIDENT-{c.slug}.md")
+        # 读取已有stub，只刷新 machine-generated JSON block
+        existing_content = None
+        if os.path.exists(stub_path):
+            with open(stub_path, 'r', encoding='utf-8') as ef:
+                existing_content = ef.read()
         eco_json = json.dumps(
             {
                 "ecological_need": c.ecological_need,
@@ -360,39 +365,53 @@ def write_outputs(cands: List[Candidate], days: int) -> None:
             indent=2,
             ensure_ascii=False,
         )
-        with open(stub_path, "w", encoding="utf-8") as f:
-            f.write(
-                "\n".join(
-                    [
-                        f"# {c.name}",
-                        "",
-                        "## 申请单（草案）",
-                        "",
-                        "- 生态位长期存在：",
-                        "- 无法被现有角色覆盖：",
-                        "- 稳定输入：",
-                        "- 稳定输出：",
-                        "- 独立记忆沉积：",
-                        "- 独立协议：",
-                        "",
-                        "### 生态必要性审查",
-                        "",
-                        "```json",
-                        eco_json,
-                        "```",
-                        "",
-                        "### 证据",
-                        "",
-                        f"- occurrences_30d: `{c.occurrences_30d}`",
-                        f"- status: `{c.status}`",
-                        "",
-                        "### 结论（治理层见证）",
-                        "",
-                        "- result: PENDING",
-                        "",
-                    ]
-                )
+        # 构建stub内容
+        stub_lines = [
+            f"# {c.name}",
+            "",
+            "## 申请单（草案）",
+            "",
+            "- 生态位长期存在：",
+            "- 无法被现有角色覆盖：",
+            "- 稳定输入：",
+            "- 稳定输出：",
+            "- 独立记忆沉积：",
+            "- 独立协议：",
+            "",
+            "<!-- MACHINE_GENERATED_BLOCK_START -->",
+            "### 生态必要性审查",
+            "",
+            "```json",
+            eco_json,
+            "```",
+            "<!-- MACHINE_GENERATED_BLOCK_END -->",
+            "",
+            "### 证据",
+            "",
+            f"- occurrences_30d: `{c.occurrences_30d}`",
+            f"- status: `{c.status}`",
+            "",
+            "### 结论（治理层见证）",
+            "",
+            "- result: PENDING",
+            "",
+        ]
+        stub_content = "\n".join(stub_lines)
+
+        # 如果已有stub存在，只替换machine-generated block；否则创建新文件
+        if existing_content is not None:
+            import re as _re
+            new_stub = _re.sub(
+                r'<!-- MACHINE_GENERATED_BLOCK_START -->.*?<!-- MACHINE_GENERATED_BLOCK_END -->',
+                '<!-- MACHINE_GENERATED_BLOCK_START -->\n### 生态必要性审查\n\n```json\n' + eco_json + '\n```\n<!-- MACHINE_GENERATED_BLOCK_END -->',
+                existing_content,
+                flags=_re.DOTALL
             )
+            with open(stub_path, "w", encoding="utf-8") as f:
+                f.write(new_stub)
+        else:
+            with open(stub_path, "w", encoding="utf-8") as f:
+                f.write(stub_content)
 
 
 def main() -> None:
