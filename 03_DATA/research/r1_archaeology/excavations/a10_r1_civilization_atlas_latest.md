@@ -2,7 +2,7 @@
 
 这不是文件清单，而是把文件证据折叠为结构节点后的文明图谱初版。文件只是化石，结构才是生物。
 
-- 生成时间：`2026-06-28T09:00:03`
+- 生成时间：`2026-06-29T09:00:04`
 - 结构节点：`12`
 - 结构关系：`10`
 
@@ -11,15 +11,15 @@
 | 节点 | 类别 | 状态 | 重要度 | 证据数 | 首次/最近 |
 | --- | --- | --- | ---: | ---: | --- |
 | Experience Compression Layer | memory | alive | 5 | 6 | 2025-12-04T11:05:46 / 2026-06-26T20:44:52 |
-| Lexicon System | structure | alive | 5 | 30 | 2025-12-04T11:05:45 / 2026-06-27T21:37:51 |
-| Memory System | memory | alive | 5 | 37 | 2025-12-04T11:05:45 / 2026-06-27T21:38:05 |
+| Lexicon System | structure | alive | 5 | 38 | 2025-12-04T11:05:45 / 2026-06-28T22:05:15 |
+| Memory System | memory | alive | 5 | 145 | 2025-12-04T11:05:45 / 2026-06-28T22:11:28 |
 | Permission Protocol | protocol | alive | 5 | 1 | 2025-12-04T11:05:45 / 2025-12-04T11:05:45 |
 | Runtime Core | runtime | alive | 5 | 7 | 2025-12-04T11:05:49 / 2026-06-25T10:31:16 |
 | Central Nervous System | ancestor-hypothesis | fossil | 4 | 86 | 2026-06-25T10:31:16 / 2026-06-25T10:31:16 |
-| Dispatch / Routing System | routing | alive | 4 | 6 | 2025-12-04T11:05:49 / 2026-06-27T19:18:47 |
+| Dispatch / Routing System | routing | alive | 4 | 7 | 2025-12-04T11:05:49 / 2026-06-28T21:34:51 |
 | Expanded Knowledge | ancestor-hypothesis | fossil | 4 | 1 | 2026-06-25T10:31:16 / 2026-06-25T10:31:16 |
 | Integrated Vocabulary | ancestor-hypothesis | fossil | 4 | 1 | 2026-06-25T10:31:16 / 2026-06-25T10:31:16 |
-| Persona / Chip System | persona | alive | 4 | 37 | 2025-12-04T11:05:49 / 2026-06-27T19:18:16 |
+| Persona / Chip System | persona | alive | 4 | 41 | 2025-12-04T11:05:49 / 2026-06-28T16:12:50 |
 | Battleview | ancestor-hypothesis | fossil | 3 | 1 | 2026-06-25T10:31:16 / 2026-06-25T10:31:16 |
 | Simulation System | simulation | alive | 3 | 11 | 2025-12-04T11:05:51 / 2026-06-25T10:31:16 |
 
@@ -56,12 +56,12 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764608809.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-27T21:37:51 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-28T22:05:15 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-06-28T14:37:07 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\data\memory\lexicon.json` | 2026-06-26T20:27:57 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\lexicon.json` | 2026-06-27T21:10:18 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\core\lexicon.py` | 2026-06-26T20:11:43 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\telegram_archive\02_INDEX\r1_structure_lexicon.json` | 2026-06-27T19:13:06 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764495281.json` | 2025-12-04T11:05:47 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\backups\backup_20260628_162055\lexicon.json` | 2026-06-28T15:02:41 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\backups\backup_20260628_162131\lexicon.json` | 2026-06-28T15:02:41 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\backups\backup_20260628_164313\lexicon.json` | 2026-06-28T15:02:41 | scan_item
 
 ### Memory System
 
@@ -76,11 +76,11 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\system_state.json` | 2025-12-04T11:05:45 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-27T21:37:51 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-06-28T22:05:15 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-06-28T14:37:07 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\data\memory\lexicon.json` | 2026-06-26T20:27:57 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\memory_index.json` | 2026-06-27T21:38:05 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\eco_layer.json` | 2025-12-04T11:05:46 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764495281.json` | 2025-12-04T11:05:47 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\backups\backup_20260628_162055\memory_index.json` | 2026-06-28T15:03:09 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\backups\backup_20260628_162131\memory_index.json` | 2026-06-28T15:03:09 | scan_item
 
 ### Permission Protocol
 
@@ -142,6 +142,7 @@ R1 的权限与边界协议，体现三层权限、门禁与可访问性控制�
 - `connects`:
   - `routes` -> `runtime_core` (high)：派单/路由是运行调度层
 - `evidence`:
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\07_TASKS\pending\AUM-TASK-2026-06-28-GOV-001.md` | 2026-06-28T21:34:51 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_System\Runtime\offshore_dispatch_config.json` | 2026-05-21T20:01:43 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\offshore_dispatch_config.json` | 2026-06-24T22:47:48 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\config\router_config.json` | 2025-12-04T11:05:49 | scan_item
@@ -185,16 +186,16 @@ R1 的权限与边界协议，体现三层权限、门禁与可访问性控制�
 - `connects`:
   - `extends` -> `runtime_core` (medium)：人格/芯片为执行入口与推理行为提供可插拔层
 - `evidence`:
+  - `C:\Users\USER\Downloads\Telegram Desktop\mine-seed\01_AGENTS\xiaofengzi\research\modules\r1_archaeology\fragments\persona_matrix_pc_v1.txt` | 2026-06-28T16:12:50 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\mine-seed\01_AGENTS\xiaofengzi\research\modules\r1_archaeology\excavations\a09_persona_matrix_pc_v1.md` | 2026-06-28T16:12:50 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\mine-seed\03_DATA\research\r1_archaeology\excavations\a09_persona_matrix_pc_v1.md` | 2026-06-28T16:12:50 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\mine-seed\01_AGENTS\xiaofengzi\research\modules\r1_archaeology\excavations\persona_decoupling_architecture.md` | 2026-06-28T16:12:50 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v3\chip_v3_core.json` | 2025-12-04T11:05:51 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v2\core_v2_launcher.py` | 2025-12-04T11:05:51 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v3\chip_v3_seeds.json` | 2025-12-04T11:05:51 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v1\reasoning_kernel_v1.json` | 2025-12-04T11:05:52 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v1\chip_manifest.json` | 2025-12-04T11:05:52 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\core\personas\curator_freezone.json` | 2025-12-04T11:05:49 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v2\auto_dispatch_runner.py` | 2025-12-04T11:05:51 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_v1\abstraction_log.txt` | 2025-12-04T11:05:52 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_core\chip_v1_metadata.json` | 2025-12-04T11:05:51 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\sandbox\chip_core\chip_v1_root.json` | 2025-12-04T11:05:51 | scan_item
 
 ### Battleview
 
