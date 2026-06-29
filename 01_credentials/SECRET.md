@@ -93,12 +93,30 @@
 
 ---
 
-## 五、Gemini说明
+## 五、Google Gemini
 
-没有独立的Google Gemini API Key需要备份。
+### Key #1（2026-06-16 老板提供）
 
-当前Gemini Flash/Pro全部通过以下渠道调用：
-1. API易中转（主力，Key已备份在上文补充弹药） — OneAPI channel 87/92
-2. Google原生通道(type=24) — 曾尝试配置但因网络直连不通+Key格式兼容问题搁置
+- `AQ.Ab8RN6IhjKRabd7VkRFh1IBod3S_ade2QkJwDSrifNoTgmOXGg`
 
-如果后续拿到了独立的Google AI Studio API Key，记得更新到本节。
+
+### Key #2（2026-06-19 新增）
+
+- `AQ.Ab8RN6IFCwwdAZ7aUP4uBF_9QgzEN6k4cbOkIjVTqtuABjO0Hw`
+
+
+### 调用方式
+
+- Endpoint: https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent
+
+- 模型: gemini-flash-latest
+
+- 定位: Google免费层新矿工，待接入矿场测试
+
+
+### 补充说明
+
+- 原生通道(type=24)直连不通+Key格式兼容问题尚未解决
+
+- 当前Gemini Flash/Pro仍通过API易中转（OneAPI channel 87/92）
+
