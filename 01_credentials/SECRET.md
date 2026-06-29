@@ -81,8 +81,8 @@
 - Bot1: `8384310757:AAEhfTTMaYrV_n9hXFjBUMh2LdeeWkB-Czo`
 - Bot2: `8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI`
 
-### GitHub PAT（coze-assets仓库用）
-- `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`
+### GitHub PAT（coze-assets仓库访问用）
+- `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`
 
 ---
 
