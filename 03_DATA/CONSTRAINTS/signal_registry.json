@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-06-29",
+  "updated": "2026-06-30",
   "description": "\u4fe1\u53f7\u9a8c\u8bc1\u56e0\u5b50\u5e93\u7d22\u5f15 - \u542blast_verified\u65e5\u671f\u7528\u4e8e\u65f6\u95f4\u8870\u51cf\u8ba1\u7b97",
   "signals": {
     "momentum": {
@@ -254,6 +254,70 @@
         "Close"
       ],
       "num_periods": 1303
+    },
+    "signal_momentum_12m": {
+      "ic": -0.037687,
+      "direction": "negative",
+      "last_verified": "2026-06-30",
+      "source": "signal_discovery",
+      "p_value": 2.68e-07,
+      "category": "momentum",
+      "data_fields": [
+        "Close"
+      ],
+      "num_periods": 947
+    },
+    "signal_momentum_signal_2": {
+      "ic": 0.02022,
+      "direction": "positive",
+      "last_verified": "2026-06-30",
+      "source": "signal_discovery",
+      "p_value": 0.00898,
+      "category": "momentum",
+      "data_fields": [
+        "Close",
+        "Volume"
+      ],
+      "num_periods": 696
+    },
+    "signal_atr_variance": {
+      "ic": -0.02537,
+      "direction": "negative",
+      "last_verified": "2026-06-30",
+      "source": "signal_discovery",
+      "p_value": 2.54e-05,
+      "category": "volatility",
+      "data_fields": [
+        "High",
+        "Low"
+      ],
+      "num_periods": 1284
+    },
+    "signal_average_daily_range_volatility": {
+      "ic": -0.04236,
+      "direction": "negative",
+      "last_verified": "2026-06-29",
+      "source": "signal_discovery",
+      "p_value": 6.57e-07,
+      "category": "volatility",
+      "data_fields": [
+        "High",
+        "Low"
+      ],
+      "num_periods": 1303
+    },
+    "signal_volume_decaying_average_30_day_momentum": {
+      "ic": 0.034,
+      "direction": "positive",
+      "last_verified": "2026-06-30",
+      "source": "signal_discovery",
+      "formula": "Decay_Linear(Volume, 30)",
+      "p_value": 1.851465783264672e-05,
+      "category": "momentum",
+      "data_fields": [
+        "Volume"
+      ],
+      "num_periods": 1283
     }
   }
 }
