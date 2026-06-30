@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-29T09:00:04",
+  "generated_at": "2026-06-30T09:00:03",
   "source_scan": "C:\\Users\\USER\\AppData\\Roaming\\TRAE SOLO\\ModularData\\ai-agent\\work-mode-projects\\6a3be8d2084d33999ccdf8c4\\TelegramDesktop_R1_文明遗迹扫描.json",
   "graph_version": "v0.1",
   "stats": {
     "node_count": 12,
     "edge_count": 10,
-    "source_items": 1001,
+    "source_items": 1454,
     "zip_event_sample_count": 200
   },
   "nodes": [
@@ -76,8 +76,8 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-06-28T22:05:15",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_connect_20260629_214110.json",
+          "mtime": "2026-06-29T21:30:39",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -105,7 +105,231 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon.json",
-          "mtime": "2026-06-28T14:37:07",
+          "mtime": "2026-06-29T21:27:46",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260629_212226.json",
+          "mtime": "2026-06-29T21:22:26",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260629_212226.json",
+          "mtime": "2026-06-29T21:22:26",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
+          "mtime": "2026-06-30T01:30:56",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_connect2_20260629_214214.json",
+          "mtime": "2026-06-29T21:41:10",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260629_211829.json",
+          "mtime": "2026-06-29T21:15:29",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260629_211829.json",
+          "mtime": "2026-06-29T21:15:29",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_20260629_211529.json",
+          "mtime": "2026-06-29T15:03:36",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_20260629_211529.json",
+          "mtime": "2026-06-29T15:03:36",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -451,6 +675,23 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\08_GOVERNANCE\\civilization\\graveyard\\lexicon_garbage_20260629.json",
+          "mtime": "2026-06-29T21:15:29",
+          "lineage_level": "medium",
+          "lineage_score": 41,
+          "keywords": [
+            "lexicon",
+            "影子层",
+            "人格矩阵",
+            "人格",
+            "矿场",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\lexicon_snapshot_v3.json",
           "mtime": "2026-06-25T10:29:12",
           "lineage_level": "medium",
@@ -551,6 +792,18 @@
             "lexicon",
             "约束",
             "芯片"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\diagnose_lexicon.py",
+          "mtime": "2026-06-29T21:14:06",
+          "lineage_level": "weak",
+          "lineage_score": 12,
+          "keywords": [
+            "lexicon",
+            "矿场"
           ],
           "note": ""
         },
@@ -671,7 +924,7 @@
         "v10_lexicon_slices"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-06-28T22:05:15",
+      "last_seen": "2026-06-30T01:30:56",
       "descendants": [],
       "notes": []
     },
@@ -699,6 +952,17 @@
             "eco_layer"
           ],
           "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\claude-code-l3tchupkt\\utils\\permissions\\shadowedRuleDetection.ts",
+          "mtime": "2026-06-29T19:22:11",
+          "lineage_level": "weak",
+          "lineage_score": 6,
+          "keywords": [
+            "影子层"
+          ],
+          "note": ""
         }
       ],
       "aliases": [
@@ -706,7 +970,7 @@
         "permission"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2025-12-04T11:05:45",
+      "last_seen": "2026-06-29T19:22:11",
       "descendants": [],
       "notes": []
     },
@@ -875,8 +1139,8 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-06-28T22:05:15",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_connect_20260629_214110.json",
+          "mtime": "2026-06-29T21:30:39",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -904,7 +1168,231 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon.json",
-          "mtime": "2026-06-28T14:37:07",
+          "mtime": "2026-06-29T21:27:46",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260629_212226.json",
+          "mtime": "2026-06-29T21:22:26",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260629_212226.json",
+          "mtime": "2026-06-29T21:22:26",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
+          "mtime": "2026-06-30T01:30:56",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_connect2_20260629_214214.json",
+          "mtime": "2026-06-29T21:41:10",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260629_211829.json",
+          "mtime": "2026-06-29T21:15:29",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260629_211829.json",
+          "mtime": "2026-06-29T21:15:29",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_20260629_211529.json",
+          "mtime": "2026-06-29T15:03:36",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_20260629_211529.json",
+          "mtime": "2026-06-29T15:03:36",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -951,6 +1439,83 @@
             "五域",
             "三界",
             "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\evolution.json",
+          "mtime": "2026-06-29T11:27:14",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "档案官",
+            "馆长",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "人格",
+            "派单",
+            "矿场",
+            "三界",
+            "freezone",
+            "holo_memory",
+            "vectorstore",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\memory_index.json",
+          "mtime": "2026-06-29T21:27:47",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "馆长",
+            "经验",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "五域",
+            "三界",
+            "freezone",
+            "holo_memory",
+            "lexicon",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\local_archaeologist_state.json",
+          "mtime": "2026-06-29T21:27:31",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "三界",
+            "freezone",
+            "lexicon",
             "Ω"
           ],
           "note": ""
@@ -1035,60 +1600,8 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\memory_index.json",
-          "mtime": "2026-06-28T15:03:09",
-          "lineage_level": "medium",
-          "lineage_score": 48,
-          "keywords": [
-            "馆长",
-            "经验",
-            "影子层",
-            "行动指南",
-            "芯片",
-            "人格矩阵",
-            "人格",
-            "派单",
-            "AUM",
-            "五域",
-            "三界",
-            "freezone",
-            "holo_memory",
-            "lexicon",
-            "eco_layer",
-            "Ω"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\memory_index.json",
-          "mtime": "2026-06-28T14:37:32",
-          "lineage_level": "medium",
-          "lineage_score": 48,
-          "keywords": [
-            "馆长",
-            "经验",
-            "影子层",
-            "行动指南",
-            "芯片",
-            "人格矩阵",
-            "人格",
-            "派单",
-            "AUM",
-            "五域",
-            "三界",
-            "freezone",
-            "holo_memory",
-            "lexicon",
-            "eco_layer",
-            "Ω"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\local_archaeologist_state.json",
-          "mtime": "2026-06-28T14:36:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\fragment_index.json",
+          "mtime": "2026-06-27T21:23:53",
           "lineage_level": "medium",
           "lineage_score": 48,
           "keywords": [
@@ -1097,14 +1610,15 @@
             "经验",
             "约束",
             "影子层",
+            "行动指南",
             "芯片",
             "人格",
             "派单",
-            "AUM",
-            "矿场",
             "三界",
-            "freezone",
+            "battlefield",
+            "holo_memory",
             "lexicon",
+            "eco_layer",
             "Ω"
           ],
           "note": ""
@@ -1400,6 +1914,81 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-008.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 31,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-004.json",
+          "mtime": "2026-06-27T16:35:25",
+          "lineage_level": "weak",
+          "lineage_score": 31,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-005.json",
+          "mtime": "2026-06-27T16:34:12",
+          "lineage_level": "weak",
+          "lineage_score": 31,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-007.json",
+          "mtime": "2026-06-27T15:56:09",
+          "lineage_level": "weak",
+          "lineage_score": 31,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\memory_index.json",
+          "mtime": "2026-06-30T01:31:53",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "档案官",
+            "经验",
+            "影子层",
+            "芯片",
+            "人格",
+            "AUM",
+            "矿场",
+            "三界",
+            "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\2026-06-27_r2_phase2_worker_creator_summary.md",
           "mtime": "2026-06-27T15:24:09",
           "lineage_level": "weak",
@@ -1413,6 +2002,22 @@
             "派单",
             "矿场",
             "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\daemon_state.json",
+          "mtime": "2026-06-29T21:41:38",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "经验",
+            "影子层",
+            "人格",
+            "矿场",
+            "lexicon",
+            "eco_layer"
           ],
           "note": ""
         },
@@ -1582,8 +2187,8 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\daemon_state.json",
-          "mtime": "2026-06-28T15:03:09",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\daemon_state.json",
+          "mtime": "2026-06-29T21:27:47",
           "lineage_level": "weak",
           "lineage_score": 26,
           "keywords": [
@@ -1597,15 +2202,75 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\daemon_state.json",
-          "mtime": "2026-06-28T14:37:32",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\night_review_2026-06-29.json",
+          "mtime": "2026-06-29T21:04:39",
           "lineage_level": "weak",
           "lineage_score": 26,
           "keywords": [
+            "馆长",
+            "约束",
             "影子层",
             "人格",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-011.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-012.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "观察者",
+            "经验",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-011.json",
+          "mtime": "2026-06-27T21:37:52",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "约束",
             "矿场",
-            "lexicon",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-006.json",
+          "mtime": "2026-06-27T16:44:51",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "影子层",
             "eco_layer"
           ],
           "note": ""
@@ -1622,6 +2287,21 @@
             "影子层",
             "矿场",
             "freezone"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-001.json",
+          "mtime": "2026-06-27T15:19:53",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "观察者",
+            "约束",
+            "lexicon"
           ],
           "note": ""
         },
@@ -1668,6 +2348,48 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-001.json",
+          "mtime": "2026-06-28T15:02:53",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "AUM"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-010.json",
+          "mtime": "2026-06-28T14:37:19",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-019.json",
+          "mtime": "2026-06-28T14:37:19",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\SKILL-local_archaeology_absorption.json",
           "mtime": "2026-06-28T14:35:13",
           "lineage_level": "weak",
@@ -1696,6 +2418,20 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-012.json",
+          "mtime": "2026-06-27T21:37:52",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "约束",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\EXP-20260627212353.json",
           "mtime": "2026-06-27T21:23:53",
           "lineage_level": "weak",
@@ -1704,6 +2440,20 @@
             "档案官",
             "经验",
             "约束",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-009.json",
+          "mtime": "2026-06-27T21:23:53",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验",
             "lexicon"
           ],
           "note": ""
@@ -1733,6 +2483,34 @@
             "约束",
             "矿场",
             "freezone"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-003.json",
+          "mtime": "2026-06-27T15:47:10",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "约束",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-002.json",
+          "mtime": "2026-06-27T14:14:29",
+          "lineage_level": "weak",
+          "lineage_score": 22,
+          "keywords": [
+            "守夜人",
+            "观察者",
+            "经验",
+            "lexicon"
           ],
           "note": ""
         },
@@ -1789,6 +2567,71 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-003.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "馆长",
+            "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\EXP-20260628150253.json",
+          "mtime": "2026-06-28T15:02:53",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\index.json",
+          "mtime": "2026-06-28T15:02:53",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "经验",
+            "约束",
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\EXP-20260628150252.json",
+          "mtime": "2026-06-28T15:02:52",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "经验",
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-015.json",
+          "mtime": "2026-06-28T15:02:52",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\SKILL-fragment_archaeology.json",
           "mtime": "2026-06-28T14:39:55",
           "lineage_level": "weak",
@@ -1815,14 +2658,14 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\index.json",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-014.json",
           "mtime": "2026-06-28T14:37:19",
           "lineage_level": "weak",
           "lineage_score": 18,
           "keywords": [
-            "经验",
-            "约束",
-            "lexicon"
+            "档案官",
+            "守夜人",
+            "经验"
           ],
           "note": ""
         },
@@ -1836,6 +2679,32 @@
             "档案官",
             "经验",
             "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-013.json",
+          "mtime": "2026-06-28T14:37:18",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260627-018.json",
+          "mtime": "2026-06-28T14:37:18",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "守夜人",
+            "经验"
           ],
           "note": ""
         },
@@ -2088,12 +2957,96 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\miner_pool_report.json",
+          "mtime": "2026-06-29T20:38:36",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "矿场",
+            "档案官"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\core\\agent\\memory_system.py",
+          "mtime": "2026-06-29T19:25:06",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "约束",
+            "行动指南"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-013.json",
+          "mtime": "2026-06-28T16:18:30",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "守夜人",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\mine-seed\\02_MEMORY\\knowledge\\protocol_index_20260616.md",
           "mtime": "2026-06-28T16:12:50",
           "lineage_level": "weak",
           "lineage_score": 14,
           "keywords": [
             "约束",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-004.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "档案官",
+            "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-009.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "档案官",
+            "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\RQ-20260628-010.json",
+          "mtime": "2026-06-28T15:59:34",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "档案官",
+            "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\repo_registry.json",
+          "mtime": "2026-06-28T15:15:27",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "馆长",
             "矿场"
           ],
           "note": ""
@@ -2339,12 +3292,23 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\manifest.json",
-          "mtime": "2026-06-28T14:40:56",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\mengpo_test\\mengpo_auto_records.jsonl",
+          "mtime": "2026-06-29T21:18:29",
           "lineage_level": "weak",
           "lineage_score": 10,
           "keywords": [
-            "经验"
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\ace_proxy_report.json",
+          "mtime": "2026-06-29T21:04:31",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "矿场"
           ],
           "note": ""
         },
@@ -2395,6 +3359,28 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260627_203000_RFC_efd579ad.json",
+          "mtime": "2026-06-27T20:30:00",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260627_分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-06-27T20:30:00",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260627_归档_ 验证_ 分析_ E2E测试_ 发现一个有趣的模式.md",
           "mtime": "2026-06-27T20:30:00",
           "lineage_level": "weak",
           "lineage_score": 10,
@@ -2461,6 +3447,28 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260626_201501_RFC_2965feb5.json",
+          "mtime": "2026-06-26T20:15:01",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260626_分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-06-26T20:15:01",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "约束"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\20260626_归档_ 验证_ 分析_ E2E测试_ 发现一个有趣的模式.md",
           "mtime": "2026-06-26T20:15:01",
           "lineage_level": "weak",
           "lineage_score": 10,
@@ -2647,6 +3655,50 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\analysis_claude_code\\claude_code_v_1.0.33\\stage1_analysis_workspace\\docs\\ana_docs\\memory_context_analysis.md",
+          "mtime": "2026-06-29T19:22:27",
+          "lineage_level": "weak",
+          "lineage_score": 6,
+          "keywords": [
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\analysis_claude_code\\claude_code_v_1.0.33\\stage1_analysis_workspace\\docs\\ana_docs\\memory_context_verified.md",
+          "mtime": "2026-06-29T19:22:27",
+          "lineage_level": "weak",
+          "lineage_score": 6,
+          "keywords": [
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\analysis_claude_code\\claude_code_v_1.0.33\\stage1_analysis_workspace\\docs\\static_analysis_reports\\H2_CONTEXT_MEMORY.md",
+          "mtime": "2026-06-29T19:22:27",
+          "lineage_level": "weak",
+          "lineage_score": 6,
+          "keywords": [
+            "行动指南"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\reva\\src\\main\\java\\reva\\tools\\memory\\CLAUDE.md",
+          "mtime": "2026-06-29T19:04:31",
+          "lineage_level": "weak",
+          "lineage_score": 6,
+          "keywords": [
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\mine-seed\\02_MEMORY\\knowledge\\r1_axiom_001_security_exclusion_first_20260617.md",
           "mtime": "2026-06-28T16:12:50",
           "lineage_level": "weak",
@@ -2792,7 +3844,7 @@
         "memory"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-06-28T22:11:28",
+      "last_seen": "2026-06-30T01:31:53",
       "descendants": [],
       "notes": []
     },
@@ -2913,7 +3965,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\07_TASKS\\pending\\AUM-TASK-2026-06-28-GOV-001.md",
-          "mtime": "2026-06-28T21:34:51",
+          "mtime": "2026-06-29T11:41:21",
           "lineage_level": "weak",
           "lineage_score": 39,
           "keywords": [
@@ -2994,6 +4046,17 @@
           "note": ""
         },
         {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\re_archaeology\\claude-code-l3tchupkt\\ink\\events\\dispatcher.ts",
+          "mtime": "2026-06-29T19:22:10",
+          "lineage_level": "weak",
+          "lineage_score": 4,
+          "keywords": [
+            "派单"
+          ],
+          "note": ""
+        },
+        {
           "source": "zip_entry",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/aum_system.py",
           "mtime": "2026-06-25T10:31:16",
@@ -3010,7 +4073,7 @@
         "aum"
       ],
       "first_seen": "2025-12-04T11:05:49",
-      "last_seen": "2026-06-28T21:34:51",
+      "last_seen": "2026-06-29T19:22:10",
       "descendants": [],
       "notes": []
     },
@@ -4456,33 +5519,6 @@
           "lineage_score": 0,
           "keywords": [],
           "note": "已跳过重复（首次出现于 C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/central_nervous_system/venv/lib/python3.9/site-packages/aiofiles-25.1.0.dist-info/REQUESTED）"
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/central_nervous_system/venv/lib/python3.9/site-packages/aiohappyeyeballs/types.py",
-          "mtime": "2026-06-25T10:31:16",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/central_nervous_system/venv/lib/python3.9/site-packages/aiohappyeyeballs/utils.py",
-          "mtime": "2026-06-25T10:31:16",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\新建文件夹.zip::╨┬╜¿╬─╝■╝╨/central_nervous_system/venv/lib/python3.9/site-packages/aiohappyeyeballs/_staggered.py",
-          "mtime": "2026-06-25T10:31:16",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
         }
       ],
       "aliases": [
