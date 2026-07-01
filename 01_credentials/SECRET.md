@@ -56,8 +56,9 @@
 - 说明: Gemini Flash/Pro 通过API易中转调用，无独立Google Key
 
 ### OpenRouter
-- Key: `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`
+- Key: `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`
 - Base: https://openrouter.ai/api/v1
+- 说明: 原 Key 已失效，2026-07-01 更新。可用模型: qwen/qwen3.7-plus、qwen/qwen-2.5-72b-instruct
 
 ### HuggingFace（DNS被墙）
 - Key: `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`
