@@ -43,3 +43,9 @@ miner_env.sh
 .vscode/
 基础设定/GITHUB_BACKUP_CONFIG.md
 AGENT_WORLD_CONFIG.md
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
