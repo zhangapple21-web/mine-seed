@@ -31,8 +31,9 @@
 | 15 | `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` | mistral-medium-3.5-128b |
 | 16 | `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` | deepseek-ai/deepseek-v4-pro |
 ### 2. GitHub Models
-- Token: `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`
+- Token: `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`
 - Base: https://models.inference.ai.azure.com
+- 说明: 2026-07-01 更新，原 Token 过期。可用模型: gpt-4o, gpt-4o-mini, DeepSeek-R1
 
 ### 3. 智谱 GLM
 - Key: `c4c766faaf974bfaba30f381ccc7b066.E7VUlQfxnMXnvVRx`
