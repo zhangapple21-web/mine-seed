@@ -17,6 +17,22 @@ trap "rm -f $LOCKFILE" EXIT
 # 加载环境变量
 source /home/coze/miner_env.sh
 
+# 预检：worker_registry.json完整性检查
+if [ -f /home/coze/worker_registry.json ]; then
+    SIZE=$(stat -c%s /home/coze/worker_registry.json 2>/dev/null || echo 0)
+    if [ "$SIZE" -lt 10 ]; then
+        echo "[Wed Jul  1 10:45:07 AM CST 2026] ⚠️ worker_registry.json异常(0字节/$SIZE bytes)，从备份恢复"
+        cp /home/coze/coze-assets/02_miner_config/worker_registry.json /home/coze/worker_registry.json
+        echo "[Wed Jul  1 10:45:07 AM CST 2026] ✅ 已从coze-assets备份恢复"
+    else
+        python3 -c "import json; json.load(open('/home/coze/worker_registry.json'))" 2>/dev/null || {
+            echo "[Wed Jul  1 10:45:07 AM CST 2026] ⚠️ worker_registry.json损坏(JSON解析失败)，从备份恢复"
+            cp /home/coze/coze-assets/02_miner_config/worker_registry.json /home/coze/worker_registry.json
+            echo "[Wed Jul  1 10:45:07 AM CST 2026] ✅ 已从coze-assets备份恢复"
+        }
+    fi
+fi
+
 # 运行v5矿场
 cd /home/coze
 python3 miner_24h.py $(date +%H)

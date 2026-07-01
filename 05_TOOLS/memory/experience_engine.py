@@ -340,9 +340,14 @@ class ExperienceEngine:
         """
         if not os.path.exists(REGISTRY_FILE):
             return "No registry"
+        if os.path.getsize(REGISTRY_FILE) == 0:
+            return "Registry empty, skip"
         
-        with open(REGISTRY_FILE) as f:
-            reg = json.load(f)
+        try:
+            with open(REGISTRY_FILE) as f:
+                reg = json.load(f)
+        except (json.JSONDecodeError, ValueError):
+            return "Registry corrupted, skip"
         
         changes = []
         for rule in self.data.get("routing_rules", []):
