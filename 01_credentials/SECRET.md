@@ -180,12 +180,22 @@
 - **Free计划**: 250次搜索/月, 50次/小时吞吐量
 - **定位**: Google搜索API备选，需要真实Google搜索结果时使用
 - **来源**: 老板给的免费Key
-## Kimi (Moonshot AI) API — 2026-07-02 老板提供
-- **国内URL**: https://api.moonshot.cn/v1（国内IP 401，注册的是海外平台）
-- **海外URL**: https://api.moonshot.ai/v1（认证通过，余额不足）
+## Kimi (Moonshot AI) API — 2026-07-02
+
+### 海外账号（platform.kimi.ai）
+- **URL**: https://api.moonshot.ai/v1
 - **旧Key**: sk-9F1YJJQYAZoBiZzQFE75IDeuIcP7oWzdfmvUY6NBACwj0Sj4
 - **新Key**: sk-1jBWEWW4GxskxaIXZGREiauTRjmCAbNtgX8c0THi5fsxd1oW
-- **注册平台**: 海外 platform.kimi.ai
-- **可用模型**: kimi-k2.7-code, kimi-k2.7-code-highspeed, kimi-k2.6, kimi-k2.5, moonshot-v1系列
-- **状态**: Key有效但余额不足("insufficient balance")，待充值或切海外环境后启用
-- **定位**: 补充算力，不急着配One API
+- **状态**: 认证通过，余额不足("insufficient balance")
+
+### 国内账号（platform.moonshot.cn）
+- **URL**: https://api.moonshot.cn/v1（国内IP直连✅）
+- **Key**: sk-c1qODqN3Gv2j27X8xTfraJv32LEkLARMfZdTNiP6PYjASpC6
+- **状态**: 认证通过，余额0（available_balance=0，需充值）
+- **账户ID**: org-0bcddd8419e04dbd91efa755c97d3458
+
+### 可用模型（通用）
+kimi-k2.7-code, kimi-k2.7-code-highspeed, kimi-k2.6, kimi-k2.5, moonshot-v1系列(8k/32k/128k), moonshot-v1-vision系列
+
+### 定位
+三个Key都有效但均无余额，需充值后才能用。国内账号延迟更低，优先考虑。不急着配One API。
