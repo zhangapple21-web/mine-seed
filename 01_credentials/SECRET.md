@@ -165,3 +165,12 @@
 - **可用模型**: llama-3.3-70b-versatile, llama-3.1-8b-instant, mixtral-8x7b-32768, gemma2-9b-it
 - **定位**: 海外环境部署后启用，国内IP被Groq封禁
 - **提示**: 若迁移到海外环境，启用渠道#58，改status=1、weight设1即可
+## Sixfinger API (2026-07-02)
+- **Key**: sixfinger_jv5ts2elbbsgxb87f32g
+- **Base URL**: https://api.sixfinger.live/v1 (OpenAI兼容)
+- **One API渠道**: #97 Sixfinger-Free (status=1 ✅启用, weight=1)
+- **Free计划**: 1000请求/月, 10万token/月, 10 RPM
+- **可用Claude模型**: claude-sonnet-4-6, claude-haiku-4-5, claude-sonnet-4-5, claude-sonnet-4
+- **其他免费模型**: gpt-5, gpt-5.4, gpt-5.5, glm-5, kimi-k2.7-code, deepseek-v3.2, deepseek-v4-flash 等20个
+- **注册邮箱**: mine-ops@coze.email (被拒，老板用自己的邮箱注册)
+- **定位**: 补充矿场Claude系算力，用于canonical_v2验证或约束系统评审
