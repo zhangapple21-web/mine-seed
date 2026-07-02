@@ -174,3 +174,18 @@
 - **其他免费模型**: gpt-5, gpt-5.4, gpt-5.5, glm-5, kimi-k2.7-code, deepseek-v3.2, deepseek-v4-flash 等20个
 - **注册邮箱**: mine-ops@coze.email (被拒，老板用自己的邮箱注册)
 - **定位**: 补充矿场Claude系算力，用于canonical_v2验证或约束系统评审
+## SerpAPI (2026-07-02)
+- **Key**: e11b42995b047b7ffb5538bc56a5885128eb352f731d65fb6c6682c9b927a07a
+- **Base URL**: https://serpapi.com/search
+- **Free计划**: 250次搜索/月, 50次/小时吞吐量
+- **定位**: Google搜索API备选，需要真实Google搜索结果时使用
+- **来源**: 老板给的免费Key
+## Kimi (Moonshot AI) API — 2026-07-02 老板提供
+- **国内URL**: https://api.moonshot.cn/v1（国内IP 401，注册的是海外平台）
+- **海外URL**: https://api.moonshot.ai/v1（认证通过，余额不足）
+- **旧Key**: sk-9F1YJJQYAZoBiZzQFE75IDeuIcP7oWzdfmvUY6NBACwj0Sj4
+- **新Key**: sk-1jBWEWW4GxskxaIXZGREiauTRjmCAbNtgX8c0THi5fsxd1oW
+- **注册平台**: 海外 platform.kimi.ai
+- **可用模型**: kimi-k2.7-code, kimi-k2.7-code-highspeed, kimi-k2.6, kimi-k2.5, moonshot-v1系列
+- **状态**: Key有效但余额不足("insufficient balance")，待充值或切海外环境后启用
+- **定位**: 补充算力，不急着配One API
