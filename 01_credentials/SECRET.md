@@ -158,3 +158,10 @@
 - **渠道#1 "GitHub-Models-v1-web账号"**：旧PAT (zhangapple21-web), weight=1 ✅启用
 - **渠道#57 "GitHub-Models-v2-新账号"**：新PAT (zhangapple21), weight=1 ✅启用
 - **轮替策略**：One API weight=1 自动轮询，两个账号独立免费额度 → 日调用量翻倍
+## Groq API（2026-07-02 备份记录）
+- **Key**: `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`
+- **Base URL**: https://api.groq.com/openai
+- **One API渠道**: #58 Groq-Free-v2（当前状态=2 禁用，原因：国内IP 403封禁）
+- **可用模型**: llama-3.3-70b-versatile, llama-3.1-8b-instant, mixtral-8x7b-32768, gemma2-9b-it
+- **定位**: 海外环境部署后启用，国内IP被Groq封禁
+- **提示**: 若迁移到海外环境，启用渠道#58，改status=1、weight设1即可
