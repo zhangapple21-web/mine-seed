@@ -1,6 +1,6 @@
 {
     "version": "1.0",
-    "updated": "2026-07-01",
+    "updated": "2026-07-02",
     "description": "信号验证因子库索引 - 含last_verified日期用于时间衰减计算",
     "signals": {
         "momentum": {
@@ -93,7 +93,7 @@
         "signal_relative_strength_index_rsi": {
             "ic": 0.0225,
             "direction": "positive",
-            "last_verified": "2026-06-22",
+            "last_verified": "2026-07-02",
             "source": "signal_discovery",
             "category": "momentum",
             "formula": "Rank_Div(TS_Return(Close, 14), TS_Return(Close, 28))",
@@ -325,6 +325,34 @@
             "last_verified": "2026-07-01",
             "source": "signal_discovery",
             "description": "20日高低价差波动率(TS_Std(Mul(High,Low),20))，负IC表明高波动预示负收益"
+        },
+        "signal_intraday_range_volatility_signal": {
+            "ic": -0.0279,
+            "direction": "negative",
+            "last_verified": "2026-07-02",
+            "source": "signal_discovery",
+            "formula": "Rank_Add(TS_Max(Low,5),TS_Min(High,5))/Rank(TS_Std(TS_Return(Close,5),5))",
+            "p_value": 3.38e-05,
+            "category": "volatility",
+            "data_fields": [
+                "Close",
+                "High",
+                "Low"
+            ],
+            "num_periods": 1303
+        },
+        "signal_volume_based_mean_reversion_signal": {
+            "ic": -0.0211,
+            "direction": "negative",
+            "last_verified": "2026-07-02",
+            "source": "signal_discovery",
+            "formula": "Rank(TS_Delta(Volume,10))*Rank(TS_Delta(Volume,30))",
+            "p_value": 0.000724,
+            "category": "reversal",
+            "data_fields": [
+                "Volume"
+            ],
+            "num_periods": 1282
         }
     }
 }
