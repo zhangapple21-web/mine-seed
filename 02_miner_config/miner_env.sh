@@ -20,6 +20,8 @@ export NIM_KEY_7="nvapi-cr3-2DWlX28lTHdFztF5bdOuf5MnpQCzaF-cz7rLD6M7EYsNSef0urz2
 export NIM_KEY_8="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"
 
 # === GitHub Models ===
+# - 渠道#1 旧PAT (zhangapple21-web账号): One API轮询
+# - 渠道#57 新PAT (zhangapple21账号): One API轮询
 export GITHUB_PAT="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"
 
 # === 智谱GLM ===
