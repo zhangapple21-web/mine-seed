@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "description": "信号验证因子库索引 - 含last_verified日期用于时间衰减计算",
   "signals": {
     "momentum": {
@@ -362,7 +362,18 @@
       "p_value": 0.00068,
       "category": "momentum",
       "formula": "TS_Return(Close, 200) / TS_Std(Close, 200) * TS_Return(Volume, 50) / TS_Std(Volume, 50)"
+    },
+    "signal_volatility_liquidity_signal_vls": {
+      "name": "Volatility Liquidity Signal (VLS)",
+      "type": "volatility",
+      "direction": "negative",
+      "ic": -0.0456,
+      "p_value": 1.29e-07,
+      "discovery_date": "2026-07-04",
+      "last_verified": "2026-07-04",
+      "formula": "Div(TS_Mean(TS_Std(Close, 10), 14), TS_Mean(Volume, 14))",
+      "description": "高波动低成交量比值，预示价格反转"
     }
   },
-  "total_count": 35
+  "total_count": 36
 }
