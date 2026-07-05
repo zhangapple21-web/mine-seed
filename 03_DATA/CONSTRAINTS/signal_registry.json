@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-07-04",
+  "updated": "2026-07-05",
   "description": "信号验证因子库索引 - 含last_verified日期用于时间衰减计算",
   "signals": {
     "momentum": {
@@ -373,6 +373,12 @@
       "last_verified": "2026-07-04",
       "formula": "Div(TS_Mean(TS_Std(Close, 10), 14), TS_Mean(Volume, 14))",
       "description": "高波动低成交量比值，预示价格反转"
+    },
+    "signal_decaying_average_momentum_with_volatility_adjustment": {
+      "ic": -0.026,
+      "direction": "negative",
+      "last_verified": "2026-07-05",
+      "source": "signal_discovery"
     }
   },
   "total_count": 36
