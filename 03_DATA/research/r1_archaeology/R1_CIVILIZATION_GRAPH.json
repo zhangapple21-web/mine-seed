@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-04T09:00:04",
+  "generated_at": "2026-07-05T09:00:03",
   "source_scan": "C:\\Users\\USER\\AppData\\Roaming\\TRAE SOLO\\ModularData\\ai-agent\\work-mode-projects\\6a3be8d2084d33999ccdf8c4\\TelegramDesktop_R1_文明遗迹扫描.json",
   "graph_version": "v0.1",
   "stats": {
     "node_count": 8,
     "edge_count": 6,
-    "source_items": 3902,
+    "source_items": 4039,
     "zip_event_sample_count": 200
   },
   "nodes": [
@@ -77,7 +77,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-07-03T15:35:06",
+          "mtime": "2026-07-04T15:26:45",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -108,6 +108,68 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon.json",
+          "mtime": "2026-07-04T15:23:48",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "freezone",
+            "vectorstore",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260704_152645.json",
+          "mtime": "2026-07-04T15:23:48",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "freezone",
+            "vectorstore",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260702_155746.json",
           "mtime": "2026-07-02T15:55:26",
           "lineage_level": "medium",
           "lineage_score": 52,
@@ -2071,6 +2133,30 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\graveyard\\lexicon_batch_20260704_152645.json",
+          "mtime": "2026-07-04T15:26:45",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "lexicon",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_batch_20260702_155746.json",
+          "mtime": "2026-07-02T15:57:46",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "lexicon",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\graveyard\\lexicon_batch_20260702_155746.json",
           "mtime": "2026-07-02T15:57:46",
           "lineage_level": "weak",
@@ -2371,66 +2457,12 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART3_R1_ARCHIVE.zip::R1_V11_lexicon_upgrade 2.zip",
-          "mtime": "2026-07-03T16:22:22",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": "条目过大（>64MB），跳过内容哈希"
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_20260626.json",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-30_lexicon_import_fix_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
           "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_20260627.json",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_20260628.json",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_categories.cpython-311.pyc",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_categories.py",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_latest.json",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": "已跳过重复（首次出现于 C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/lexicon_20260628.json）"
         }
       ],
       "aliases": [
@@ -2441,7 +2473,7 @@
         "v10_lexicon_slices"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-07-03T20:43:41",
+      "last_seen": "2026-07-04T15:26:48",
       "descendants": [],
       "notes": []
     },
@@ -2722,7 +2754,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon.json",
-          "mtime": "2026-07-03T15:35:06",
+          "mtime": "2026-07-04T15:26:45",
           "lineage_level": "medium",
           "lineage_score": 52,
           "keywords": [
@@ -2753,6 +2785,68 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon.json",
+          "mtime": "2026-07-04T15:23:48",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "freezone",
+            "vectorstore",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\lexicon_backup_mengpo_20260704_152645.json",
+          "mtime": "2026-07-04T15:23:48",
+          "lineage_level": "medium",
+          "lineage_score": 52,
+          "keywords": [
+            "lexicon",
+            "档案官",
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "五域",
+            "三界",
+            "freezone",
+            "vectorstore",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_backup_mengpo_20260702_155746.json",
           "mtime": "2026-07-02T15:55:26",
           "lineage_level": "medium",
           "lineage_score": 52,
@@ -3263,6 +3357,35 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\local_archaeologist_state.json",
+          "mtime": "2026-07-04T15:13:56",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "馆长",
+            "守夜人",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "安全屋",
+            "行动指南",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "三界",
+            "freezone",
+            "lexicon",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_CIVILIZATION_BACKUP\\shard_1_constitution\\02_MEMORY\\lexicon_backup_connect_20260629_214110.json",
           "mtime": "2026-06-29T21:30:39",
           "lineage_level": "medium",
@@ -3484,33 +3607,6 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\local_archaeologist_state.json",
-          "mtime": "2026-07-02T15:40:38",
-          "lineage_level": "medium",
-          "lineage_score": 48,
-          "keywords": [
-            "馆长",
-            "守夜人",
-            "观察者",
-            "经验",
-            "约束",
-            "影子层",
-            "行动指南",
-            "芯片",
-            "人格",
-            "派单",
-            "AUM",
-            "矿场",
-            "三界",
-            "freezone",
-            "lexicon",
-            "eco_layer",
-            "Ω"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\fragment_index.json",
           "mtime": "2026-07-01T15:05:54",
           "lineage_level": "medium",
@@ -3532,6 +3628,32 @@
             "holo_memory",
             "lexicon",
             "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\COGNITIVE_KERNEL_MAP.json",
+          "mtime": "2026-07-03T22:01:53",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "馆长",
+            "观察者",
+            "经验",
+            "约束",
+            "影子层",
+            "安全屋",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "三界",
+            "freezone",
+            "lexicon",
             "Ω"
           ],
           "note": ""
@@ -3611,6 +3733,25 @@
             "lexicon",
             "eco_layer",
             "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\2026-07-03_r1_engine_archaeology.md",
+          "mtime": "2026-07-03T20:30:56",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "经验",
+            "约束",
+            "影子层",
+            "芯片",
+            "人格",
+            "矿场",
+            "三界",
+            "freezone",
+            "lexicon"
           ],
           "note": ""
         },
@@ -3918,7 +4059,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\PROTOCOL_INDEX.md",
-          "mtime": "2026-07-02T10:46:17",
+          "mtime": "2026-07-03T20:24:20",
           "lineage_level": "medium",
           "lineage_score": 43,
           "keywords": [
@@ -3927,6 +4068,7 @@
             "观察者",
             "经验",
             "约束",
+            "芯片",
             "矿场",
             "lexicon"
           ],
@@ -4403,6 +4545,19 @@
             "经验",
             "约束",
             "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\PROTO-ACL-001_autonomous_civilization_loop.md",
+          "mtime": "2026-07-04T10:23:15",
+          "lineage_level": "weak",
+          "lineage_score": 36,
+          "keywords": [
+            "经验",
+            "约束",
+            "派单"
           ],
           "note": ""
         },
@@ -5212,31 +5367,6 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\repo_diff_state.json",
-          "mtime": "2026-07-02T15:56:35",
-          "lineage_level": "weak",
-          "lineage_score": 30,
-          "keywords": [
-            "档案官",
-            "馆长",
-            "守夜人",
-            "回声",
-            "经验",
-            "约束",
-            "影子层",
-            "行动指南",
-            "芯片",
-            "人格",
-            "AUM",
-            "矿场",
-            "lexicon",
-            "eco_layer",
-            "Ω"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\repository_diff_2026-06-29.json",
           "mtime": "2026-06-29T21:41:39",
           "lineage_level": "weak",
@@ -5305,6 +5435,94 @@
             "lexicon",
             "eco_layer",
             "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\repository_diff_2026-07-04.json",
+          "mtime": "2026-07-04T15:24:43",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "档案官",
+            "馆长",
+            "守夜人",
+            "回声",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "人格",
+            "矿场",
+            "lexicon",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\repo_diff_state.json",
+          "mtime": "2026-07-04T15:24:43",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "档案官",
+            "馆长",
+            "守夜人",
+            "回声",
+            "经验",
+            "约束",
+            "影子层",
+            "行动指南",
+            "人格",
+            "矿场",
+            "lexicon",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\env_watcher_state.json",
+          "mtime": "2026-07-04T10:40:13",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "守夜人",
+            "约束",
+            "影子层",
+            "行动指南",
+            "芯片",
+            "人格",
+            "派单",
+            "AUM",
+            "矿场",
+            "battlefield",
+            "lexicon",
+            "eco_layer",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\walker_state.json",
+          "mtime": "2026-07-04T10:40:13",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "回声",
+            "约束",
+            "影子层",
+            "行动指南",
+            "人格",
+            "派单",
+            "矿场",
+            "lexicon",
+            "eco_layer"
           ],
           "note": ""
         },
@@ -5430,40 +5648,8 @@
         },
         {
           "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\memory_index.json",
-          "mtime": "2026-07-03T15:35:06",
-          "lineage_level": "weak",
-          "lineage_score": 30,
-          "keywords": [
-            "档案官",
-            "经验",
-            "约束",
-            "影子层",
-            "矿场",
-            "eco_layer"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\daemon_state.json",
-          "mtime": "2026-07-03T15:33:03",
-          "lineage_level": "weak",
-          "lineage_score": 30,
-          "keywords": [
-            "经验",
-            "影子层",
-            "人格",
-            "矿场",
-            "lexicon",
-            "eco_layer"
-          ],
-          "note": ""
-        },
-        {
-          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\daemon_state.json",
-          "mtime": "2026-07-02T15:55:44",
+          "mtime": "2026-07-04T15:24:12",
           "lineage_level": "weak",
           "lineage_score": 30,
           "keywords": [
@@ -5479,7 +5665,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\memory_index.json",
-          "mtime": "2026-07-02T15:55:44",
+          "mtime": "2026-07-04T15:24:12",
           "lineage_level": "weak",
           "lineage_score": 30,
           "keywords": [
@@ -5489,6 +5675,54 @@
             "影子层",
             "矿场",
             "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\daemon_state.json",
+          "mtime": "2026-07-04T15:24:12",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "经验",
+            "影子层",
+            "人格",
+            "矿场",
+            "lexicon",
+            "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\memory_index.json",
+          "mtime": "2026-07-04T15:24:12",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "档案官",
+            "经验",
+            "约束",
+            "影子层",
+            "矿场",
+            "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\night_review_2026-07-03.json",
+          "mtime": "2026-07-03T14:38:01",
+          "lineage_level": "weak",
+          "lineage_score": 30,
+          "keywords": [
+            "馆长",
+            "约束",
+            "影子层",
+            "人格",
+            "矿场",
+            "Ω"
           ],
           "note": ""
         },
@@ -6654,6 +6888,19 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\2026-07-04_acl_diagnosis.md",
+          "mtime": "2026-07-04T10:20:24",
+          "lineage_level": "weak",
+          "lineage_score": 27,
+          "keywords": [
+            "经验",
+            "派单",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\EXP-20260629213941-000.json",
           "mtime": "2026-07-02T15:09:36",
           "lineage_level": "weak",
@@ -7777,7 +8024,7 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\SKILL-archaeology_report_analysis.json",
-          "mtime": "2026-07-02T15:55:27",
+          "mtime": "2026-07-04T15:23:49",
           "lineage_level": "weak",
           "lineage_score": 26,
           "keywords": [
@@ -7786,6 +8033,21 @@
             "影子层",
             "lexicon",
             "eco_layer"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\night_review_20260704.json",
+          "mtime": "2026-07-04T10:36:17",
+          "lineage_level": "weak",
+          "lineage_score": 26,
+          "keywords": [
+            "馆长",
+            "约束",
+            "影子层",
+            "人格",
+            "矿场"
           ],
           "note": ""
         },
@@ -9747,13 +10009,26 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\knowledge_lineage.json",
-          "mtime": "2026-07-02T15:40:39",
+          "mtime": "2026-07-04T15:13:57",
           "lineage_level": "weak",
           "lineage_score": 18,
           "keywords": [
             "经验",
             "约束",
             "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\EXP-20260702155526.json",
+          "mtime": "2026-07-02T15:55:26",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "档案官",
+            "经验",
+            "约束"
           ],
           "note": ""
         },
@@ -10877,6 +11152,30 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\graveyard\\lexicon_batch_20260704_152645.json",
+          "mtime": "2026-07-04T15:26:45",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "lexicon",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\lexicon_batch_20260702_155746.json",
+          "mtime": "2026-07-02T15:57:46",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "lexicon",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\graveyard\\lexicon_batch_20260702_155746.json",
           "mtime": "2026-07-02T15:57:46",
           "lineage_level": "weak",
@@ -10889,6 +11188,18 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\memory_snapshot_2026-07-03.json",
+          "mtime": "2026-07-03T15:55:50",
+          "lineage_level": "weak",
+          "lineage_score": 16,
+          "keywords": [
+            "经验",
+            "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\recent_memory\\memory_snapshot_2026-07-03.json",
           "mtime": "2026-07-03T15:55:50",
           "lineage_level": "weak",
@@ -10896,6 +11207,18 @@
           "keywords": [
             "经验",
             "Ω"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\knowledge_snapshot.json",
+          "mtime": "2026-07-03T15:55:31",
+          "lineage_level": "weak",
+          "lineage_score": 16,
+          "keywords": [
+            "经验",
+            "lexicon"
           ],
           "note": ""
         },
@@ -12209,6 +12532,30 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\asset_index.json",
+          "mtime": "2026-07-04T10:40:12",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "人格",
+            "矿场"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\2026-07-03_gpt_memory_py_audit.md",
+          "mtime": "2026-07-03T17:04:37",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "观察者",
+            "影子层"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\08_ARCHAEOLOGY\\2026-07-03_gpt_memory_py_audit.md",
           "mtime": "2026-07-03T17:04:37",
           "lineage_level": "weak",
@@ -12569,6 +12916,17 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\projects_snapshot.json",
+          "mtime": "2026-07-03T15:55:13",
+          "lineage_level": "weak",
+          "lineage_score": 12,
+          "keywords": [
+            "影子层"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\projects\\projects_snapshot.json",
           "mtime": "2026-07-03T15:55:13",
           "lineage_level": "weak",
@@ -12580,12 +12938,34 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\preferences_snapshot.json",
+          "mtime": "2026-07-03T15:55:03",
+          "lineage_level": "weak",
+          "lineage_score": 12,
+          "keywords": [
+            "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\preferences\\preferences_snapshot.json",
           "mtime": "2026-07-03T15:55:03",
           "lineage_level": "weak",
           "lineage_score": 12,
           "keywords": [
             "守夜人"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\identity_snapshot.json",
+          "mtime": "2026-07-03T15:54:54",
+          "lineage_level": "weak",
+          "lineage_score": 12,
+          "keywords": [
+            "经验"
           ],
           "note": ""
         },
@@ -13211,11 +13591,66 @@
         {
           "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\06_RUNTIME\\ace\\data\\memory\\mengpo_auto_records.jsonl",
-          "mtime": "2026-07-02T15:57:46",
+          "mtime": "2026-07-04T15:26:45",
           "lineage_level": "weak",
           "lineage_score": 10,
           "keywords": [
             "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\binary_analysis_Biscuit-setup-latest_20260704_143628.json",
+          "mtime": "2026-07-04T14:36:28",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "派单"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\vital_signs.json",
+          "mtime": "2026-07-04T10:48:43",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "经验"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\loop_state.json",
+          "mtime": "2026-07-04T10:40:13",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "lexicon"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\02_MEMORY\\discovery_log.json",
+          "mtime": "2026-07-04T10:35:58",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "观察者"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\PROTO-009_memory_structure.md",
+          "mtime": "2026-07-02T16:00:05",
+          "lineage_level": "weak",
+          "lineage_score": 10,
+          "keywords": [
+            "经验"
           ],
           "note": ""
         },
@@ -14684,8 +15119,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/MEMORY.md",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/00_credential_source_report.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14693,8 +15128,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_architecture.md",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/01_provider_lineage.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14702,8 +15137,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_dual_write_research.md",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/02_provider_http_trace.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14711,8 +15146,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_index_20260626.json",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/03_failure_taxonomy.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14720,8 +15155,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_index_20260627.json",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/04_root_cause_report.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14729,8 +15164,8 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_index_20260628.json",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/05_deployment_truth.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
@@ -14738,12 +15173,1749 @@
         },
         {
           "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_index_latest.json",
-          "mtime": "2026-07-03T16:19:54",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/06_configuration_override.json",
+          "mtime": "2026-07-04T15:26:48",
           "lineage_level": "",
           "lineage_score": 0,
           "keywords": [],
-          "note": "已跳过重复（首次出现于 C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/memory_index_20260628.json）"
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/07_provider_golden_diff.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/08_autonomous_repair_assessment.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/09_governor_verdict.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-27_r2_phase2_worker_creator_summary.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-30_governance_protocol_layer_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-30_hunting_report.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-30_lexicon_import_fix_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-06-30_sekiro_rpc_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-01_diary_backtrace.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-01_provider_fix_report.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-02_continuity_amendment.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-03_gpt_memory_py_audit.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-03_r1_engine_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-03_reverse_proxy_archaeology.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/2026-07-04_acl_diagnosis.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_521a0441.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_d1242dbb.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_e5a5be76.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_OBS_9d13caac.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_OBS_d8649505.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200852_RFC_280c23d9.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200853_bdd94850.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_37ffddaf.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_ad0bb6b1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_df9e8e3b.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_f40f3fb0.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_OBS_4fa64d03.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_200956_RFC_cb03716a.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_415a706b.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_f1a8e47d.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_f4b7bc9e.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_f9f57f3a.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_OBS_0111006a.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_201501_RFC_2965feb5.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260626_归档_ 验证_ 分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_4032d4b1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_891a63f9.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_ec58b0b9.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_ff7351e1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_OBS_800acd8e.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_203000_RFC_efd579ad.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/20260627_归档_ 验证_ 分析_ E2E测试_ 发现一个有趣的模式.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/ACE_PROXY_FORENSICS_RAW.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/ACE_PROXY_FORENSICS_REPORT.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/ace_proxy_report.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/ace_runtime_cross_validated.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/archaeology_report_v1_20260701.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/asset_index.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/binary_analysis_Biscuit-setup-latest_20260704_143628.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/binary_sense_demo_2026-06-29.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/candidate_miners.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/COGNITIVE_KERNEL_MAP.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/concept_miner_v2_20260701.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/curation_history.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/daemon_state.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/daily_evolution_2026-06-30.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/daily_evolution_2026-07-01.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/daily_evolution_2026-07-04.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/discovery_log.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/env_watcher_state.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/evolution.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627142348.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627151953.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627152748.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627154710.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627155609.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627163412.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627163525.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627164451.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627212353.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260627213752.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260628143718.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260628143719.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260628150252.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260628150253.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-000.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-001.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-002.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-003.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-004.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-005.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-006.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-007.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-008.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-009.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-010.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-011.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-012.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-013.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-014.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629213941-015.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629214809.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629215344.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629220328.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629220847.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629221415.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629221854.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629222323.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629222841.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629223245.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629223808.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629224239.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629224707.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629225140.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629225615.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629230025.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629230504.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629230910.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629231330.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629231739.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629232305.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629232747.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629233333.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629233800.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629234221.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629234637.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629235320.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260629235914.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630000325.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630000743.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630001220.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630001643.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630002124.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630002539.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630003009.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630003852.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630004300.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630005056.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630005506.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630010328.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630010723.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630011525.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630011932.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630012735.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630013153.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630095539.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630100005.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630101007.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630101915.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630102348.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630102819.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630103246.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630103721.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630104252.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630104724.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630105149.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630110112.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630110557.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630111035.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630111620.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630112102.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630112545.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630113022.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630113518.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630114015.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630114451.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630114921.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630115405.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630115914.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260630184905.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260701150940.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260702155526.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-20260702155527.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-ARX-axi-010.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-ARX-con-007.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-ARX-con-008.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-ARX-pat-006.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/EXP-ARX-pat-009.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_212609_0.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_212845_1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_213050_2.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_213213_0.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_213255_1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_213258_0.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/exp_20260630_213340_1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/fragment_index.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/GOV-001_naming_collision_governance.md",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/healing_log.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/heartbeat.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/identity_snapshot.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/index.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184120_0.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184121_1.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184121_2.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184121_3.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184121_4.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184318_5.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184318_6.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184318_7.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
+        },
+        {
+          "source": "zip_entry",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\10_BACKUP\\ace_backup_2026-07-04.zip::02_MEMORY/kernel_cycle_20260630_184318_8.json",
+          "mtime": "2026-07-04T15:26:48",
+          "lineage_level": "",
+          "lineage_score": 0,
+          "keywords": [],
+          "note": ""
         }
       ],
       "aliases": [
@@ -14753,7 +16925,7 @@
         "memory"
       ],
       "first_seen": "2025-12-04T11:05:45",
-      "last_seen": "2026-07-03T17:04:37",
+      "last_seen": "2026-07-04T15:26:48",
       "descendants": [],
       "notes": []
     },
@@ -14866,6 +17038,40 @@
             "观察者",
             "经验",
             "芯片",
+            "人格矩阵",
+            "人格",
+            "派单"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\2026-07-03_aum_archaeology.md",
+          "mtime": "2026-07-03T20:14:30",
+          "lineage_level": "medium",
+          "lineage_score": 48,
+          "keywords": [
+            "AUM",
+            "档案官",
+            "馆长",
+            "观察者",
+            "经验",
+            "芯片",
+            "人格矩阵",
+            "人格",
+            "派单"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\EXP-AUM-001.json",
+          "mtime": "2026-07-03T20:22:46",
+          "lineage_level": "medium",
+          "lineage_score": 44,
+          "keywords": [
+            "AUM",
+            "馆长",
             "人格矩阵",
             "人格",
             "派单"
@@ -15018,6 +17224,19 @@
         },
         {
           "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\EXP-AUM-003.json",
+          "mtime": "2026-07-03T20:23:04",
+          "lineage_level": "weak",
+          "lineage_score": 18,
+          "keywords": [
+            "AUM",
+            "经验",
+            "芯片"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
           "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\constraint\\EXP-AUM-003.json",
           "mtime": "2026-07-03T20:23:04",
           "lineage_level": "weak",
@@ -15039,6 +17258,18 @@
             "AUM",
             "经验",
             "芯片"
+          ],
+          "note": ""
+        },
+        {
+          "source": "scan_item",
+          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ace_runtime\\09_KNOWLEDGE\\EXP-AUM-002.json",
+          "mtime": "2026-07-03T20:22:58",
+          "lineage_level": "weak",
+          "lineage_score": 14,
+          "keywords": [
+            "AUM",
+            "馆长"
           ],
           "note": ""
         },
@@ -16143,33 +18374,6 @@
             "人格"
           ],
           "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/a09_persona_matrix_pc_v1.md",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/persona_decoupling_architecture.md",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
-        },
-        {
-          "source": "zip_entry",
-          "path": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\ACE_BACKUP_PART1_SOUL_CORE.zip::mine-seed/persona_matrix_pc_v1.txt",
-          "mtime": "2026-07-03T16:19:54",
-          "lineage_level": "",
-          "lineage_score": 0,
-          "keywords": [],
-          "note": ""
         }
       ],
       "aliases": [
@@ -16180,7 +18384,7 @@
         "chip"
       ],
       "first_seen": "2025-12-04T11:05:49",
-      "last_seen": "2026-07-03T16:19:54",
+      "last_seen": "2026-07-02T10:20:39",
       "descendants": [],
       "notes": []
     },
