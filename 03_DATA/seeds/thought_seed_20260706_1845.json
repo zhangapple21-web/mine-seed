@@ -1,0 +1,21 @@
+{
+  "timestamp": "20260706_1845",
+  "signal": "signal_momentum_score",
+  "ic": -0.0231,
+  "p_value": 0.000696,
+  "formula": "Rank(Mul(TS_Return(Close, 30), Decay_Exp(Volume, 30)))",
+  "discovery_model": "glm-4-flash",
+  "thought_seed_protocol_v2": {
+    "model_a": {
+      "name": "glm-4-flash",
+      "key_insight": "高动量+高成交量=超买市场，触发趋势反转和价格下行"
+    },
+    "model_b": {
+      "name": "gpt-4o-mini",
+      "key_insight": "高动量+高成交量=超买条件，触发获利了结和负收益"
+    },
+    "divergence_insight": "GLM强调反转（市场行为视角），GPT强调止盈（交易行为视角）。差异在归因：GLM认为是市场结构被破坏，GPT认为是参与者主动出货。两个框架都指向同一结论但解释了不同驱动力。",
+    "seed_one_sentence": "高动量叠加高成交量是市场过热的前奏，筹码从强手转向弱手时就是反转临界点。"
+  },
+  "new_regulation_context": "2026-07-06 A股新规(ST涨跌幅调至10%/盘后交易扩容/创业板做市商)可能影响动量因子的信号强度，ST涨跌幅扩大后极端动量更容易被捕捉"
+}
