@@ -1,0 +1,21 @@
+{
+  "timestamp": "20260707_1246",
+  "signal": "signal_volume_price_divergence_signal_2_30d",
+  "ic": -0.050186339286485436,
+  "p_value": 3.6664880020964574e-09,
+  "direction": "negative",
+  "formula": "Rank_Div(TS_Std(Close, 30), TS_Std(Volume, 30))",
+  "thought_seed_v2": {
+    "model_a": {
+      "name": "glm-4-flash",
+      "perspective": "行为金融学视角：价格波动率/成交量波动率比值增加→市场情绪极端变化→过度反应→均值回归。与signal_volume_price_divergence_signal_2（正向IC=0.0439）形成互补：不同市场条件下切换，过度乐观时正向信号失效，负向信号生效。风险：市场环境变化、数据质量、过拟合、实施成本、预测滞后。"
+    },
+    "model_b": {
+      "name": "nim_mistral_675b",
+      "perspective": "市场微观结构视角：价格波动率显著高于成交量波动率→虚假波动（缺乏真实成交支撑）、流动性错配（市场深度不足）、博弈失衡（主力小单操纵价格）。与signal_volume_price_divergence_signal_2基于不同价量关系逻辑，侧重量价背离的微观结构成因。"
+    },
+    "difference_insight": "GLM从行为金融学（过度反应→均值回归）解释，Mistral从市场微观结构（流动性错配、庄股操纵）解释。GLM强调与现有因子的互补性，Mistral强调虚假波动与流动性缺乏的市场机制。两者殊途同归：价格波动脱离成交量支撑是危险信号",
+    "seed_one_liner": "价格波动脱离成交量支撑时，市场在用虚假繁荣酝酿回调",
+    "seed_type": "price_volume_divergence"
+  }
+}
