@@ -2,7 +2,7 @@
 
 这不是文件清单，而是把文件证据折叠为结构节点后的文明图谱初版。文件只是化石，结构才是生物。
 
-- 生成时间：`2026-07-07T09:00:03`
+- 生成时间：`2026-07-08T09:00:03`
 - 结构节点：`8`
 - 结构关系：`6`
 
@@ -11,11 +11,11 @@
 | 节点 | 类别 | 状态 | 重要度 | 证据数 | 首次/最近 |
 | --- | --- | --- | ---: | ---: | --- |
 | Experience Compression Layer | memory | alive | 5 | 11 | 2025-12-04T11:05:46 / 2026-07-03T16:14:51 |
-| Lexicon System | structure | alive | 5 | 130 | 2025-12-04T11:05:45 / 2026-07-06T15:59:55 |
-| Memory System | memory | alive | 5 | 1101 | 2025-12-04T11:05:45 / 2026-07-06T15:59:55 |
+| Lexicon System | structure | alive | 5 | 132 | 2025-12-04T11:05:45 / 2026-07-07T15:17:36 |
+| Memory System | memory | alive | 5 | 1108 | 2025-12-04T11:05:45 / 2026-07-07T15:17:36 |
 | Permission Protocol | protocol | alive | 5 | 2 | 2025-12-04T11:05:45 / 2026-06-29T19:22:11 |
 | Runtime Core | runtime | alive | 5 | 5 | 2025-12-04T11:05:49 / 2026-06-16T19:24:09 |
-| Dispatch / Routing System | routing | alive | 4 | 27 | 2025-12-04T11:05:49 / 2026-07-06T15:59:55 |
+| Dispatch / Routing System | routing | alive | 4 | 27 | 2025-12-04T11:05:49 / 2026-07-07T15:17:36 |
 | Persona / Chip System | persona | alive | 4 | 71 | 2025-12-04T11:05:49 / 2026-07-02T10:20:39 |
 | Simulation System | simulation | alive | 3 | 10 | 2025-12-04T11:05:51 / 2025-12-04T11:05:51 |
 
@@ -56,12 +56,12 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764608809.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-07-06T15:59:51 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-07-06T15:56:28 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-07-07T15:13:56 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-07-07T15:13:56 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon_backup_mengpo_20260706_155951.json` | 2026-07-06T15:56:28 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon_backup_mengpo_20260706_155951.json` | 2026-07-06T15:56:28 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon_backup_mengpo_20260705_152536.json` | 2026-07-05T15:22:54 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon_backup_mengpo_20260705_152536.json` | 2026-07-05T15:22:54 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon_backup_mengpo_20260704_152645.json` | 2026-07-04T15:23:48 | scan_item
 
 ### Memory System
 
@@ -76,11 +76,11 @@ R1 的词汇体系核心，负责沉淀、组织和供给 tri_world / lexicon �
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764735384.json` | 2025-12-04T11:05:46 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\v10_lexicon_slices_1764700609.json` | 2025-12-04T11:05:45 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\R1_CORE_COPY\core_copy\databases\holo_memory\system_state.json` | 2025-12-04T11:05:45 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-07-06T15:59:51 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-07-06T15:56:28 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon.json` | 2026-07-07T15:13:56 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon.json` | 2026-07-07T15:13:56 | scan_item
+  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon_backup_mengpo_20260706_155951.json` | 2026-07-06T15:56:28 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon_backup_mengpo_20260706_155951.json` | 2026-07-06T15:56:28 | scan_item
   - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\02_MEMORY\lexicon_backup_mengpo_20260705_152536.json` | 2026-07-05T15:22:54 | scan_item
-  - `C:\Users\USER\Downloads\Telegram Desktop\ace_runtime\06_RUNTIME\ace\data\memory\lexicon_backup_mengpo_20260705_152536.json` | 2026-07-05T15:22:54 | scan_item
 
 ### Permission Protocol
 
