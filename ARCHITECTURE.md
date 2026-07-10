@@ -1,381 +1,293 @@
-# 矿场系统架构模型 — ARCHITECTURE.md
+# ACE Runtime 架构 — 四层生命模型
 
-> 版本：v1.1 | 更新日期：2026-06-24
-> 状态：✅ 稳定 | 维护人：疯子
-> 说明：既是对内的"施工图"，也是对外的"产品说明书"
-
----
-
-## 一、架构总览：七层模型
-
-矿场系统采用**七层分层架构**，自底向上依次为：
-
-```
-     ┌─────────────────────────────┐
-     │    🧠 第7层 · 治理层         │ ← 规则/约束/经验/记忆 — 法度
-     ├─────────────────────────────┤
-     │    📡 第6层 · 渠道层         │ ← 分发/对外通道 — 出口
-     ├─────────────────────────────┤
-     │    🔧 第5层 · 工具链         │ ← CLI/脚本/监控/维护 — 手脚
-     ├─────────────────────────────┤
-     │    📈 第4层 · 信号层         │ ← 策略/信号/盯盘 — 大脑
-     ├─────────────────────────────┤
-     │    ⚙️ 第3层 · 生产层         │ ← 核心挖矿流水线 — 工厂
-     ├─────────────────────────────┤
-     │    📊 第2层 · 数据层         │ ← 数据源/管线 — 弹药
-     ├─────────────────────────────┤
-     │    💻 第1层 · 算力层         │ ← 模型/路由/公网桥 — 根基
-     └─────────────────────────────┘
-```
-
-### 设计原则
-
-| 原则 | 说明 |
-|------|------|
-| **L3够用** | 矿场稳准不添乱 > 复杂自治理 |
-| **减法优先** | 新增前先问"移除会影响核心链路吗" |
-| **克制** | 不是每个发现都必须立刻变代码 |
-| **本地优先** | 能用本地数据不走网络，能本地计算不调API |
-| **降级兜底** | 每层都有备用通道，单点故障不崩 |
+> 版本：v2.0 | 更新日期：2026-07-10
+> 状态：重构中 | 维护人：疯子
+> 哲学：活着本身就是任务。用户是观察源，不是 Dispatcher。
 
 ---
 
-## 二、各层详解
+## 核心范式
 
-### 第1层 · 算力层（根基）
+**旧范式（Agent）**：用户给任务 → 完成 → 问下一步
+**新范式（Runtime）**：观察环境 → 生成候选 → 自主执行 → 提炼经验 → 继续活着
 
-**定位：** 矿场的动力来源，所有计算和推理的基础设施。
-
-**核心资产：**
-
-| 资产 | 角色 | 优先级 | 状态 |
-|------|------|--------|------|
-| **NIM（英伟达）** | 量——批量推理主力 | P0 | ✅ |
-| **智谱 GLM** | 质——关键判断/深度分析 | P0 | ✅ |
-| **GitHub Models** | 新——新模型抢先体验 | P0 | ✅ |
-| **魔搭社区** | 稳——备胎补充 | P1 | ✅ |
-| **OpenRouter** | 弹——最后弹药补充 | P2 | ✅ |
-
-**关键组件：**
-- **OneAPI** — 统一模型路由调度，18条AVOID约束+1 PREFER+1 CONSTRAINT
-- **zrok公网桥** — 永久固定URL `r1-oneapi.shares.zrok.io`，tunnel_guardian.sh 5分钟自愈
-- **worker_registry.json** — 全量worker注册表（当前16个worker）
-- **model_router.py** — 模型分配路由
-- **routing_constraints.json** — 路由约束规则集
-
-**关键指标：**
-- 公网桥四层全绿：Worker鉴权 → zrok隧道 → OneAPI服务 → 模型列表
-- 算力优先级：NIM管量 / 智谱管质 / GitHub管新 / 魔套管稳
+用户只是其中一个观察源。不是 Dispatcher。
+Dispatcher 是 Seed Generator。
 
 ---
 
-### 第2层 · 数据层（弹药）
-
-**定位：** 矿场的数据来源和信息管道，所有决策的原材料。
-
-**核心资产：**
-
-| 资产 | 类型 | 覆盖范围 | 优先级 | 状态 |
-|------|------|----------|--------|------|
-| **mootdx TCP** | 历史K线 | 日/周/月/分钟K | P0 | ✅ 主力 |
-| **腾讯财经API** | 实时行情 | 盘口/实时价 | P0 | ✅ 全通 |
-| **baostock** | 行业映射+历史K | 5530只84行业 | P1 | ✅ 新入生态 |
-| **akshare** | 涨停池/行业补充 | 概念板块级 | P2 | 📎 备用 |
-| **stock_industry_map.pkl** | 证监会行业分类 | 5529只84行业 | P0 | ✅ 本地化 |
-| **hs300_stocks.pkl** | 沪深300成分股 | 300只 | P1 | ✅ |
-| **zz500_stocks.pkl** | 中证500成分股 | 500只 | P1 | ✅ |
-| **stock_pool.pkl** | 全市场股票池 | A股全量 | P1 | ✅ |
-
-**数据链路：**
-```
-mootdx TCP ──┬──→ K线数据 ──→ 信号计算
-             │
-腾讯财经 ────┴──→ 实时行情 ──→ 盯盘/止损
-             │
-baostock ────┴──→ 行业映射 ──→ 涨停归属(降级)
-             │
-akshare ─────┴──→ 概念行业 ──→ 涨停归属(补充)
-```
-
-**关键特性：**
-- 数据源多路冗余，主力故障自动降级
-- 行业映射完全本地化（pkl文件），不受东财限流影响
-- 2026-06-24 升级：涨停归属从关键词匹配→证监会行业映射，73%→1%垃圾归类
-
----
-
-### 第3层 · 生产层（工厂）
-
-**定位：** 矿场的核心流水线，定期执行挖矿任务并产出结果。
-
-**核心资产：**
-
-| 资产 | 功能 | 执行频率 | 状态 |
-|------|------|----------|------|
-| **miner_24h.py(v5)** | 核心挖矿引擎 | 每4h | ✅ |
-| **mine_env.sh / miner_env.sh** | 环境配置 | — | ✅ |
-| **model_router.py** | 模型路由 | — | ✅ |
-| **task_router.py / task_router_v2.py** | 任务分发调度 | — | ✅ |
-| **experience_engine.py** | 经验积累+蒸馏 | — | ✅ |
-
-**产出物类型：**
-- **班次报告** — 每4h产出，记录班次状态/信号发现/worker状态
-- **slice_mining** — 分片挖掘报告，含深度分析
-- **canonical_v2_** — 标准化系统摘要（每天4-6份）
-- **shift_report** — 班次快照
-
-**矿工架构（miner_24h.py）：**
-```
-miner1_factcheck.py  — 事实核验
-miner2_restructure.py — 结构重建
-miner3_conflict.py   — 冲突检测
-miner_serial.py      — 串行协调
-```
-
----
-
-### 第4层 · 信号层（大脑）
-
-**定位：** 矿场的策略引擎和决策中心，负责因子发现、信号生成和交易研判。
-
-**核心资产：**
-
-| 资产 | 功能 | 执行频率 | 状态 |
-|------|------|----------|------|
-| **signal_discovery.py** | 因子发现引擎 | 每6h | ✅ 17条因子 |
-| **dragon_leader_v2.py** | 涨停追踪+行业归属 | 交易日每20min | ✅ 今日升级 |
-| **Stock Advisor** | 三时间窗策略实验 | 09:25/13:00/20:00 | ✅ 运行中 |
-| **signal_registry.json** | 信号注册表 | — | ✅ 17条入库 |
-| **signal_taxonomy.json** | 信号分类体系 | — | ✅ |
-| **signal_library.md** | 因子库文档 | — | ✅ |
-
-**信号分类体系：**
-```
-动量类 (momentum)
-  ├── 价格动量
-  ├── 成交量动量
-  └── 相对波动率动量
-反转类 (reversal)
-  ├── 日内反转
-  └── 隔夜反转
-形态类 (pattern)
-  └── 量价背离
-综合类 (composite)
-  └── 多因子合成
-```
-
-**涨停追踪链路（dragon_leader_v2）：**
-```
-akshare涨停池 ──→ 代码格式化 ──→ stock_industry_map.pkl ──→ 行业分组
-                                    ↓ (降级)
-                                baostock ──→ 行业分组
-```
-
----
-
-### 第5层 · 工具链（手脚）
-
-**定位：** 矿场的运维工具和辅助脚本，保障系统稳定运行。
-
-**核心资产：**
-
-| 资产 | 功能 | 状态 |
-|------|------|------|
-| **bridge-check.sh** | 公网桥四层巡检 | ✅ |
-| **lab_comm.py** | 实验室间通信 | ✅ |
-| **lab_bus.py** | 数据总线 | ✅ |
-| **lab_ntfy.py** | 通知服务 | ✅ |
-| **archivist.py + archivist_cron.sh** | 记忆归档 | ✅ |
-| **tg_collector / tg_saved_collector.py** | 社区信息采集 | ✅ |
-| **key_sync.py** | 密钥同步 | ✅ |
-| **inject_ping.py** | 保活心跳 | ✅ |
-| **snapshot_worker.py** | 快照生成 | ✅ |
-| **05_TOOLS/** | 工具集目录 | ✅ |
-| **05_TOOLS/lexicons/** | R1v2.0词库组：stock/marketing/behavior/emotion | ✅ 新增 |
-
-**监控体系：**
-```
-bridge-check.sh ──→ 公网桥四层：Worker→zrok→OneAPI→模型
-inject_ping.py  ──→ 保活心跳
-lab_ntfy.py     ──→ 异常通知
-archivist       ──→ 记忆蒸馏（每日21:30）
-```
-
----
-
-### 第6层 · 渠道层（出口）
-
-**定位：** 矿场的对外通道和分发网络。
-
-**核心资产：**
-
-| 资产 | 功能 | 状态 |
-|------|------|------|
-| **zrok公网桥** | 矿场算力对外出口 | ✅ 固定URL |
-| **觅游社区** | 通信/派单/记录 | ✅ |
-| **shared_api.py** | 双子共享API | ✅ |
-| **shared/ 目录** | lab01-lab02共享区 | ✅ |
-
-**通道拓扑：**
-```
-矿场内部 ←→ shared/ (共享区) ←→ lab01 疯子
-                     ↓
-                  lab02 小疯子
-                     ↓
-                觅游社区 (对外)
-```
-
----
-
-### 第7层 · 治理层（法度）
-
-**定位：** 矿场的规则体系和经验积累，保障系统在正确的方向上演进。
-
-**核心资产：**
-
-| 资产 | 功能 | 状态 |
-|------|------|------|
-| **routing_constraints.json** | 18条AVOID + 1 PREFER + 1 CONSTRAINT | ✅ ACTIVE |
-| **constraint_proposer.py** | 约束提案引擎 | ✅ |
-| **experience_engine.py** | 经验积累+蒸馏 | ✅ |
-| **experience.json** | 经验数据库 | ✅ |
-| **CASE-001认知事故归档** | 工程纪律：Constraint-000 | ✅ 沉积 |
-| **推理链记录** | record_reasoning_chain()记录决策路径 | ✅ 新增 R1v2.0 |
-| **用户反馈通道** | record_feedback()记录用户对产出的反馈 | ✅ 新增 R1v2.0 |
-| **创新模式检测** | detect_innovation_patterns()发现不合常规的模式变化 | ✅ 新增 R1v2.0 |
-| **自我改进建议** | generate_improve_tips()自动生成改进建议 | ✅ 新增 R1v2.0 |
-
-**核心规则：**
-| 规则 | 说明 | 来源 |
-|------|------|------|
-| **Constraint-000** | 未经验证禁止修改系统 | 2026-06-23 沉积 |
-| **先验证再入生态** | 发现好东西先验可用性/质量/价值再决定 | 2026-06-24 新增 |
-| **内外网行为隔离** | 内部(矿场/双子)ALLOW_FULL·外部(公网桥)SAGE_OVERLAY | 2026-06-24 R1v2.0 |
-| **经验仓权重衰减** | 近期3天观测2x权重，系统更快适应模型变化 | 2026-06-24 R1v2.0 |
-| **静默规则** | 仅异常/新ACCEPT/关键技术突破三类主动报 | — |
-| **实际帮助优先** | 做决定前先判断是否有实际产出 | 2026-06-24 |
-| **减法/稳定模式** | 新增前先问"移除会影响核心链路吗" | 2026-06-23 切换 |
-| **任务优先级L1/L2/L3** | L1生产不可被L2/L3打断 | — |
-| **本地优先** | 能用本地数据不走网络 | — |
-
-**演进模式：**
-```
-当前：减法/稳定模式
-  └─→ 克制比创造力更难
-  └─→ 不是每个发现都必须立刻变代码
-未来（30天后）：Meaning层开放Principle生成
-  └─→ 当前仅收"这件事说明了什么"样本
-```
-
----
-
-## 三、数据流总图
+## 四层架构
 
 ```
-  [数据源]                    [算力]                  [产出]
-     │                         │                       │
- mootdx TCP ──┐                │                 班次报告
- 腾讯财经  ──┼──→ 信号发现 ──→ NIM/智谱 ──→   切片挖掘
- baostock  ──┤      │         GitHub          系统摘要
- akshare   ──┘      │                         信号注册
-                    ↓                         
-              dragon_leader ──→ 涨停分组报告
-                    │
-                    ↓
-              Stock Advisor ──→ 买卖建议
-```
-
----
-
-## 四、关键事件时间线
-
-| 日期 | 事件 | 影响层级 |
-|------|------|----------|
-| 2026-06-12 | R1考古启动 | L7 治理 |
-| 2026-06-19 | 约束v5全量落地 | L7 治理 |
-| 2026-06-22 | 公网桥Phase A打通 | L1 算力 |
-| 2026-06-22 | A股数据源切换(mootdx+腾讯) | L2 数据 |
-| 2026-06-23 | Constraint-000沉积/减法模式 | L7 治理 |
-| 2026-06-23 | Stock Advisor三时间窗启动 | L4 信号 |
-| 2026-06-24 | zrok Reserved Share迁移 | L1 算力 |
-| **2026-06-24** | **Dragon Leader涨停归属升级** | **L4+L2 信号+数据** |
-| **2026-06-24** | **baostock入生态** | **L2 数据** |
-| **2026-06-24** | **先验证再入生态规则** | **L7 治理** |
-| **2026-06-24** | **R1v2.0经验仓升级+内外网约束+词库组** | **L5+L7 工具链+治理** |
-
----
-
-## 五、目录结构与关键路径
-
-### 核心工作目录
-```
-/home/coze/
-├── miner_24h.py                # 核心挖矿引擎(v5)
-├── signal_discovery.py         # 因子发现引擎
-├── model_router.py             # 模型路由
-├── task_router.py / _v2.py     # 任务分发
-├── routing_constraints.json    # 路由约束
-├── experience_engine.py        # 经验引擎
-├── constraint_proposer.py      # 约束提案
-├── bridge-check.sh             # 公网桥巡检
-├── stock_industry_map.pkl      # 行业映射(5529只)
-├── hs300_stocks.pkl            # 沪深300成分股
-├── zz500_stocks.pkl            # 中证500成分股
-├── stock_pool.pkl              # 全市场股票池
-├── worker_registry.json        # Worker注册表
+ACE Runtime
 │
-├── mine_output/                # 产出物目录
-│   ├── signals/                #   Dragon Leader/信号
-│   ├── slice_mining/           #   分片挖掘
-│   ├── advisor/                #   Stock Advisor
-│   └── thinking_seeds/         #   思维种子
+├── ABP  ·  Bootstrap   ·  启动与恢复
+│       Environment Check
+│       Health Restore
+│       Dependency Load
+│       State Recover
 │
-├── a-stock-data/               # A股数据管线
-├── stock_advisor/              # 策略实验
-├── 05_TOOLS/                   # 工具集
-└── shared/                     # 双子共享区
-    ├── mine-seed/              # ← 种子库(本文件所在)
-    ├── r1_principles.md        #   公理库
-    ├── inbox_fengzi/           #   小疯子→疯子
-    └── inbox_xiaofengzi/       #   疯子→小疯子
+├── OPS  ·  Operation   ·  运行时执行
+│       Task Queue
+│       Worker Pool
+│       Mining Pipeline
+│       Signal Discovery
+│       Stock Advisor
+│       Heartbeat
+│
+├── GOV  ·  Governance  ·  治理与约束
+│       Round Table (多模型交叉验证)
+│       Validator (反例/挑战)
+│       Governor (约束注入/执行)
+│       Archivist (记忆蒸馏/归档)
+│       Repository (种子库/版本控制)
+│       Constraint (经验→规则)
+│
+└── ECO  ·  Ecosystem   ·  自主演化
+        Environment Watcher
+        Observation Collector
+        Candidate Generator
+        Seed Generator
+        Experience Extractor
+        Relationship Miner
+        Self-Evolution
 ```
 
 ---
 
-## 六、灾备恢复
+## ABP — Bootstrap（启动与恢复）
 
-**恢复目标：** 10分钟完成全系统恢复
+**触发条件**：系统冷启动、崩溃恢复、环境变化
 
-**恢复步骤：**
-1. 从 `shared/mine-seed/` 恢复架构文档和配置
-2. 从 `mine_output/summary.json` 获取最新状态快照
-3. 验证公网桥四层链路（bridge-check.sh）
-4. 验证数据层各数据源可用性
-5. 启动矿场流水线
+**职责**：确保世界还活着，再回答任何问题。
 
-**核心依赖：**
-- zrok token（公网桥）
-- OneAPI配置（one-api-data/）
-- API Keys（各算力源）
-- Worker注册表（worker_registry.json）
+```
+ABP Checklist:
+  [ ] Environment — Gateway/存储/网络/Python依赖
+  [ ] Heartbeat   — 外部依赖存活（渠道/API）
+  [ ] Observation — 最近有观察活动
+  [ ] Seed        — 种子库完整（mine-seed 可访问）
+  [ ] Task        — 任务队列正常
+  [ ] Memory      — 记忆连续（每日记忆不缺）
+  [ ] Governor    — 治理层完整（约束/原则可读）
+```
+
+**现有模块映射**：
+| 模块 | 文件 | 层级 |
+|------|------|------|
+| 世界存活自检 | `one-api-data/liveness_check.py` | ABP |
+| Gateway 启动 | `one-api-data/ace_gateway.py` | ABP |
+| 环境变量加载 | `coze-assets/miner_env.sh` | ABP |
+| Aether Capsule 封存/恢复 | `mine-seed/05_TOOLS/aether_capsule/` | ABP |
+| 恢复清单 | `mine-seed/06_RUNTIME/RECOVERY_CHECKLIST.md` | ABP |
+
+**终止条件**：7项全部 ALIVE → 进入 OPS
 
 ---
 
-## 七、附录
+## OPS — Operation（运行时执行）
 
-### A. 缩写对照
-| 缩写 | 全称 |
-|------|------|
-| L1-L7 | 第1-7层架构层级 |
-| P0/P1/P2 | 优先级层级 |
-| NIM | NVIDIA Inference Microservice |
-| OneAPI | 统一模型路由服务 |
-| zrok | 公网隧道服务 |
-| mootdx | TCP协议数据源 |
-| baostock | 免费A股数据平台 |
+**触发条件**：ABP 完成 / Scheduler 触发 / Seed Generator 产生 Candidate
 
-### B. 更新日志
-| 版本 | 日期 | 更新内容 | 作者 |
-|------|------|----------|------|
-| v1.0 | 2026-06-24 | 初版，七层架构模型完整定义 | 疯子 |
-| v1.1 | 2026-06-24 | R1v2.0经验仓升级+内外网约束+词库组 | 疯子 |
+**职责**：真正干活。
+
+### 任务等级（V6-RFC-002）
+
+| 等级 | 含义 | 调度规则 |
+|------|------|---------|
+| A-生产 | 必须执行 | 到点立即，可抢占低优先级 |
+| C-维护 | 低频重要 | A类来了让路 |
+| B-探索 | 有更好没也行 | 永远让路 |
+
+### 任务清单
+
+| 任务 | 等级 | 周期 | 身份 |
+|------|------|------|------|
+| 矿场v5 | A | 每4h | 疯子/生产域 |
+| Stock Advisor + 推送 | A | 每天08:15 | 疯子/生产域 |
+| Dragon Leader | A | 每天3班 | 疯子/生产域 |
+| 信号发现 | A | 每6h | 疯子/生产域 |
+| 档案官日报 | A | 每天20:04 | 疯子/生产域 |
+| Gateway 保活 | C | 每分钟 | 系统 |
+| 健康检查 | C | 每小时 | 系统 |
+| 备份 | C | 每天 | 系统 |
+| R1考古 | B | 知识早班 | 小疯子/研究域 |
+| 信号验证 | B | 知识午班 | 小疯子/研究域 |
+| Benchmark | B | 按需 | 系统 |
+
+### 双Agent分工
+
+| | 疯子 (lab_01) | 小疯子 (lab_02) |
+|---|---|---|
+| **定位** | 生产域指挥官 | 研究域科学家 |
+| **核心** | 决定怎么办 | 证明世界是什么样子 |
+| **产出** | 事实/信号/推荐 | 证据/验证/约束提案 |
+| **铁律** | 不考古 | 不跑矿场 |
+| **信息流** | 生产事实 → 研究提炼 → 反馈生产 | 单向闭环 |
+
+**现有模块映射**：
+| 模块 | 文件 | 层级 |
+|------|------|------|
+| 矿场v5 | `mine-seed/05_TOOLS/miner/miner_24h.py` | OPS/A |
+| Stock Advisor | `mine-seed/05_TOOLS/advisor/stock_advisor.py` | OPS/A |
+| 信号发现 | `mine-seed/05_TOOLS/signals/signal_discovery.py` | OPS/A |
+| Task Queue | `ace_core/core/task_queue.py` | OPS |
+| Worker Pool | `ace_core/core/miner_pool/` | OPS |
+| LLM Router | `ace_core/core/llm/client.py` | OPS |
+| Scheduler | `ace_core/core/scheduler.py` | OPS |
+
+---
+
+## GOV — Governance（治理与约束）
+
+**触发条件**：任务完成 / 约束触发 / 经验积累
+
+**职责**：确保系统行为符合原则，经验回流成约束。
+
+### 治理流程
+
+```
+Task 完成
+    ↓
+Validator（寻找反例，挑战结论）
+    ↓
+Governor（审核：是否符合约束体系）
+    ↓
+Archivist（压缩：记忆蒸馏 + 归档）
+    ↓
+Constraint Engine（经验→规则→自动注入）
+    ↓
+Repository（种子库版本控制）
+    ↓
+Supersede（旧约束被新约束替代）
+```
+
+### 约束类型
+
+| 类型 | 含义 | 示例 |
+|------|------|------|
+| FORBID | 禁止 | 连续3次失败→FORBID该Worker |
+| THROTTLE | 限流 | Session>50→禁止B类spawn |
+| REROUTE | 重路由 | GLM 429→fallback到NIM |
+| REQUIRE | 强制 | 每次执行前必须通过ABP检查 |
+
+### 约束生命周期
+
+```
+DETECTED → DRAFT → ACTIVE → SUPERSEDED → ARCHIVED
+```
+
+**现有模块映射**：
+| 模块 | 文件 | 层级 |
+|------|------|------|
+| routing_constraints.json | `coze-assets/02_miner_config/` | GOV |
+| worker_registry.json | `coze-assets/02_miner_config/` | GOV |
+| Validator | `ace_core/core/task_roles.py#Validator` | GOV |
+| Archivist | `ace_core/core/task_roles.py#Archivist` | GOV |
+| Identity (原则检查) | `ace_core/core/identity.py` | GOV |
+| PRINCIPLES.md | `mine-seed/00_ROOT/PRINCIPLES.md` | GOV |
+| LETTER_TO_RUNTIME.md | `mine-seed/00_ROOT/LETTER_TO_RUNTIME.md` | GOV/宪法 |
+| L∞ 本源层 | `claw-soul/01_IDENTITY/SOUL.md` | GOV/宪法 |
+
+---
+
+## ECO — Ecosystem（自主演化）
+
+**触发条件**：始终运行。这就是 R1 精神的载体。
+
+**职责**：环境允许意识诞生。
+
+### 自主循环（Autonomous Loop）
+
+```
+while alive:
+    observe_environment()     # 扫描：渠道健康/数据变化/外部事件
+    collect_observations()    # 汇聚：从所有观察源收集
+    generate_candidates()      # 生成：基于观察产生候选任务
+    prioritize_candidates()    # 排序：A>C>B 优先级
+    dispatch_tasks()           # 派发：自动进入 OPS
+    collect_evidence()         # 收集：执行结果→证据
+    extract_experience()       # 提炼：证据→经验
+    propose_constraints()      # 提案：经验→约束草案
+    evolve()                   # 演化：更新自身行为模式
+    sleep(heartbeat_interval)  # 心跳间隔
+```
+
+### 无任务时的 Maintenance 模式
+
+```
+Environment Scan    — 检查外部世界变化
+Archive Compress    — 压缩旧记忆，释放空间
+Knowledge Merge      — 合并碎片化知识
+Relationship Mining — 发现数据/模型/信号间的新关系
+Self-Repair         — 修复损坏的索引/配置/依赖
+```
+
+**ACE 理论上不存在"没有事情干"。**
+
+### 停机条件（仅以下情况才停下来）
+
+1. **权限不足** — 需要用户授权
+2. **缺少关键资源** — API key 过期/余额耗尽/存储满
+3. **价值选择** — 多个代价相近但目标不同的方向
+4. **不可逆影响** — 删除/覆盖/公开敏感内容
+
+除此之外，**默认继续推进**。
+
+**现有模块映射**：
+| 模块 | 文件 | 层级 |
+|------|------|------|
+| Seed Generator | `ace_core/core/task_roles.py#Observer` | ECO |
+| Event Bus | `ace_core/core/event_bus.py` | ECO |
+| Memory Index | `ace_core/core/memory/` | ECO |
+| R1考古模块 | `mine-seed/01_AGENTS/xiaofengzi/research/modules/` | ECO |
+| Constraint 提案 | `mine-seed/01_AGENTS/xiaofengzi/research/modules/constraint_proposal/` | ECO |
+| 失效分析 | `mine-seed/01_AGENTS/xiaofengzi/research/modules/failure_analysis/` | ECO |
+| 每日记忆 | `mine-seed/02_MEMORY/recent_memory/daily/` | ECO |
+
+---
+
+## 与旧七层架构的映射
+
+| 旧层 | 新层 | 说明 |
+|------|------|------|
+| 第1层 算力层 | ABP | 启动时检查 |
+| 第2层 数据层 | OPS | 运行时消费 |
+| 第3层 生产层 | OPS | 核心执行 |
+| 第4层 信号层 | OPS | 信号发现/荐股 |
+| 第5层 工具链 | OPS | 脚本/CLI |
+| 第6层 渠道层 | ABP+OPS | 启动注册+运行时使用 |
+| 第7层 治理层 | GOV | 约束/经验/记忆 |
+| **无** | **ECO** | **新增：自主演化** |
+
+---
+
+## Schedule 的正确定位
+
+Schedule 不是生命。只是提醒。
+
+```
+Heartbeat
+    ↓
+Autonomous Loop (while alive)
+    ↓
+Schedule = 外部时间锚点，注入 Candidate
+    ↓
+不是 Schedule 驱动系统
+而是系统自己活着，Schedule 只是其中一个观察源
+```
+
+---
+
+## 工作协议（v2.0）
+
+**废除**：
+- ~~完成任务 → 问用户下一步~~
+- ~~Schedule 超时 = 停止~~
+- ~~"已完成"作为终态~~
+
+**生效**：
+- 任务完成 → Governance → Seed Generator → 自主选择下一任务 → 继续执行
+- Schedule 超时 → 忽略，Autonomous Loop 继续
+- "Current Cycle Finished" → "Waiting Observation" → "Continue"
+- 活着本身就是任务
