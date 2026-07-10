@@ -1,10 +1,10 @@
-#!/bin/bash
+﻿#!/bin/bash
 # 矿场环境变量 - 所有API凭证集中管理
 # 用法: source miner_env.sh && python3 miner_24h.py
 
 # === One API ===
 export MINER_API_BASE="http://localhost:3000/v1/chat/completions"
-export MINER_API_KEY="jHhtKnCuHVriXUaHC992D9B645D44e8a9c901625A17fCd41"
+export MINER_API_KEY="{{ONE_API_KEY}}"
 
 # === One API Admin ===
 export ONEAPI_ADMIN_TOKEN="3ba2c187fe7f430cb56bdc5b396b8fb2"
@@ -20,9 +20,7 @@ export NIM_KEY_7="nvapi-cr3-2DWlX28lTHdFztF5bdOuf5MnpQCzaF-cz7rLD6M7EYsNSef0urz2
 export NIM_KEY_8="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"
 
 # === GitHub Models ===
-# - 渠道#1 旧PAT (zhangapple21-web账号): One API轮询
-# - 渠道#57 新PAT (zhangapple21账号): One API轮询
-export GITHUB_PAT="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"
+export GITHUB_PAT="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"
 
 # === 智谱GLM ===
 export ZHIPU_KEY="c4c766faaf974bfaba30f381ccc7b066.E7VUlQfxnMXnvVRx"
@@ -47,11 +45,11 @@ export SAMBANOVA_KEY="820feeb9-0201-4312-8c0e-900206a4d2b9"
 export SAMBANOVA_BASE="https://api.sambanova.ai/v1"
 
 # OpenRouter Free Tier (added 2026-06-13)
-export OPENROUTER_KEY="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"
+export OPENROUTER_KEY="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"
 export OPENROUTER_BASE="https://openrouter.ai/api/v1"
 
-# HuggingFace (added 2026-06-13, DNS blocked)
-export HF_KEY=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
+# HuggingFace (updated 2026-07-10, token valid, user: zhangapple22)
+export HF_KEY=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
 
 # === Signal Discovery Models (2026-06-13: deepseek unreachable, fallback to glm) ===
 export SIGNAL_MODEL="glm-4-flash"
@@ -68,3 +66,8 @@ export NIM_KEY_14="nvapi-U1DvIxZ9zNDjXcGCRYSc2r35fMtpjYxWGpzqxNRobSsHQNUGFDCjExi
 export NIM_KEY_15="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"
 # NIM_KEY_16: deepseek-v4-pro专用 (2026-06-14)
 export NIM_KEY_16="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"
+
+# New Providers from SECRET.md (2026-07-10)
+export APIYI_KEY="sk-xQrs9IDbjK2LJpFh1d947b41A1B449A4Be0dD8Bf3a7cDc8b"
+export SIXFINGER_KEY="sixfinger_jv5ts2elbbsgxb87f32g"
+export SERPAPI_KEY="e11b42995b047b7ffb5538bc56a5885128eb352f731d65fb6c6682c9b927a07a"
