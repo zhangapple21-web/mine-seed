@@ -193,56 +193,16 @@ MODELS = {
 # ============================================================
 
 class ProviderHealth:
-    """Provider 健康度监控 — 不用试错，看 Health Score 选 Provider
-
-    失败回写机制：当 Provider 状态降级时，自动沉淀 Experience，
-    形成"失败→经验→约束"闭环，而不是只在内存里留痕。
-    """
+    """Provider 健康度监控 — 不用试错，看 Health Score 选 Provider"""
 
     def __init__(self):
         self._health = {}  # provider → {latency_ms, success_rate, total, success, last_check, status}
-        self._exp_dir = Path(__file__).parent.parent / "02_MEMORY" / "experience"
-        self._last_sedimented = {}  # provider → last status that was sedimented (避免重复写)
-
-    def _sediment_failure(self, provider: str, prev_status: str, new_status: str):
-        """当状态降级时，自动写一条 Experience"""
-        if new_status == prev_status:
-            return
-        # 只在降级到 degraded/down 时写
-        if new_status not in ("degraded", "down"):
-            return
-        # 同一状态不重复写
-        if self._last_sedimented.get(provider) == new_status:
-            return
-        self._last_sedimented[provider] = new_status
-
-        h = self._health.get(provider, {})
-        exp = {
-            "type": "provider_failure",
-            "provider": provider,
-            "prev_status": prev_status,
-            "new_status": new_status,
-            "success_rate": h.get("success", 0) / max(h.get("total", 1), 1),
-            "total_calls": h.get("total", 0),
-            "timestamp": datetime.now().isoformat(),
-            "analysis": f"Provider '{provider}' 状态从 '{prev_status}' 降级到 '{new_status}'。"
-                       f"成功率 {h.get('success',0)}/{h.get('total',0)}。"
-                       f"建议：检查 API key/网络/配额，或切换到备用 Provider。",
-        }
-        try:
-            self._exp_dir.mkdir(parents=True, exist_ok=True)
-            fname = f"exp_provider_{provider}_{datetime.now().strftime('%Y%m%dT%H%M%S')}.json"
-            with open(self._exp_dir / fname, "w", encoding="utf-8") as f:
-                json.dump(exp, f, ensure_ascii=False, indent=2, default=str)
-        except Exception:
-            pass  # 经验写入失败不影响主流程
 
     def record(self, provider: str, success: bool, latency_ms: float = 0):
         """记录一次调用结果"""
         h = self._health.setdefault(provider, {
             "total": 0, "success": 0, "latency_sum": 0, "last_check": "", "status": "unknown"
         })
-        prev_status = h.get("status", "unknown")
         h["total"] += 1
         if success:
             h["success"] += 1
@@ -258,8 +218,6 @@ class ProviderHealth:
             h["status"] = "degraded"
         else:
             h["status"] = "down"
-        # 状态降级时自动沉淀 Experience
-        self._sediment_failure(provider, prev_status, h["status"])
 
     def get_score(self, provider: str) -> float:
         """获取 Health Score (0.0~1.0)"""

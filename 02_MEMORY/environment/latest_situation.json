@@ -1,0 +1,114 @@
+{
+  "date": "2026-07-10",
+  "timestamp": "2026-07-10T19:59:49.591570",
+  "summary": "扫描到 5 个观察，其中 5 个新变化，2 个高优先级",
+  "total_observations": 5,
+  "new_observations": 5,
+  "by_source": {
+    "local": 3,
+    "provider": 2
+  },
+  "high_priority": [
+    {
+      "source": "local",
+      "category": "git_log",
+      "severity": "info",
+      "title": "Recent commits",
+      "detail": {
+        "commits": [
+          "4bf7463 feat: TASK-001/002 Model Registry + Capability routing 5 minutes ago",
+          "37b7739 feat: Local Miner v2 — multi-source model fallback (Ollama + GitHub Models + Zhipu + OpenRouter) 9 minutes ago",
+          "d2c213e Merge branch 'main' of https://github.com/zhangapple21-web/mine-seed 15 minutes ago",
+          "ec1d46b memory: 2026-07-10 cloud worker first production run 15 minutes ago",
+          "19dc317 Merge branch 'main' of https://github.com/zhangapple21-web/mine-seed 16 minutes ago"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:49.222915"
+    },
+    {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:59:49.588724"
+    }
+  ],
+  "all_observations": [
+    {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "1 files modified",
+      "detail": {
+        "files": [
+          "M 04_PROTOCOLS/local_miner.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:49.191858"
+    },
+    {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "188 untracked files",
+      "detail": {
+        "files": [
+          "?? 00_ROOT/ARCHITECTURE_REAL.md",
+          "?? 00_ROOT/GOVERNANCE.md",
+          "?? 00_ROOT/MANIFESTO.md",
+          "?? 00_ROOT/README.md",
+          "?? 01_AGENTS/PROFILE.md",
+          "?? 01_AGENTS/PROTOCOLS.md",
+          "?? 01_AGENTS/SOUL.md",
+          "?? 01_AGENTS/USER.md",
+          "?? 02_MEMORY/E2C_Closure_Principles_20260616.md",
+          "?? 02_MEMORY/archivist_20260710.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:49.191858"
+    },
+    {
+      "source": "local",
+      "category": "git_log",
+      "severity": "info",
+      "title": "Recent commits",
+      "detail": {
+        "commits": [
+          "4bf7463 feat: TASK-001/002 Model Registry + Capability routing 5 minutes ago",
+          "37b7739 feat: Local Miner v2 — multi-source model fallback (Ollama + GitHub Models + Zhipu + OpenRouter) 9 minutes ago",
+          "d2c213e Merge branch 'main' of https://github.com/zhangapple21-web/mine-seed 15 minutes ago",
+          "ec1d46b memory: 2026-07-10 cloud worker first production run 15 minutes ago",
+          "19dc317 Merge branch 'main' of https://github.com/zhangapple21-web/mine-seed 16 minutes ago"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:49.222915"
+    },
+    {
+      "source": "provider",
+      "category": "provider_ok",
+      "severity": "info",
+      "title": "Tencent quote API OK",
+      "detail": {
+        "api": "qt.gtimg.cn",
+        "latency_ms": 0
+      },
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:59:49.588724"
+    },
+    {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:59:49.588724"
+    }
+  ]
+}
