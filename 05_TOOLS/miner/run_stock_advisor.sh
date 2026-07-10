@@ -1,11 +1,24 @@
 #!/bin/bash
-# Stock Advisor 每日荐股 + 推送
-# 用法: bash run_stock_advisor.sh
-# 时间: 每天 08:15 (A股开盘前)
+# Cloud Stock Worker — 云端荐股 Worker
+# 职责：生成荐股报告 → Push GitHub → ntfy.sh 保底通知 → 结束
+# TG 推送由本地 Runtime 负责，本脚本不碰
 
 set -e
 
-# 加载环境变量
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MINE_SEED="/workspace/fengzi-repos/mine-seed"
+CLOUD_DIR="$MINE_SEED/cloud/advisor"
+TODAY=$(date +%Y%m%d)
+TODAY_MD=$(date +%Y-%m-%d)
+
+echo "[STOCK-WORKER] ===== $(date) ====="
+echo "[STOCK-WORKER] 云端荐股 Worker 启动"
+
+# 1. 拉取最新 Repository
+cd "$MINE_SEED"
+git pull origin main 2>/dev/null || true
+
+# 2. 加载环境变量
 ENV_SH="/workspace/fengzi-repos/coze-assets/02_miner_config/miner_env.sh"
 if [ -f "$ENV_SH" ]; then
     while IFS= read -r line; do
@@ -18,9 +31,9 @@ if [ -f "$ENV_SH" ]; then
     done < "$ENV_SH"
 fi
 
-# 启动 Gateway（如果死了）
+# 3. 启动 Gateway（如果死了）
 if ! curl -s http://localhost:3000/api/status > /dev/null 2>&1; then
-    echo "[ADVISOR] Starting Gateway..."
+    echo "[STOCK-WORKER] Starting Gateway..."
     cd /workspace/one-api-data
     nohup python3 ace_gateway.py > gateway.log 2>&1 &
     for i in {1..15}; do
@@ -29,62 +42,68 @@ if ! curl -s http://localhost:3000/api/status > /dev/null 2>&1; then
     done
 fi
 
-# 确保输出目录存在
-mkdir -p /tmp/mine_output/advisor
+# 4. 确保 cloud/ 目录存在
+mkdir -p "$CLOUD_DIR"
 
-# 运行 Stock Advisor
-echo "[ADVISOR] Running stock_advisor.py..."
-cd /workspace/fengzi-repos/mine-seed/05_TOOLS/advisor
+# 5. 运行 Stock Advisor
+REPORT_FILE="$CLOUD_DIR/advisor_${TODAY}.md"
+echo "[STOCK-WORKER] Running stock_advisor.py..."
 
-# 尝试运行，失败则用 Gateway 生成降级报告
-python3 stock_advisor.py > /tmp/mine_output/advisor/advisor_run.log 2>&1
+cd "$MINE_SEED/05_TOOLS/advisor"
+if python3 stock_advisor.py > /tmp/mine_output/advisor/advisor_run.log 2>&1; then
+    # 查找生成的报告
+    LATEST_REPORT=$(find /tmp/mine_output/advisor -name "advisor_*.md" -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | tail -1 | cut -d' ' -f2-)
+    if [ -n "$LATEST_REPORT" ] && [ -f "$LATEST_REPORT" ]; then
+        cp "$LATEST_REPORT" "$REPORT_FILE"
+        echo "[STOCK-WORKER] Report generated: $REPORT_FILE"
+    else
+        echo "[STOCK-WORKER] Report not found, creating fallback..."
+        _create_fallback_report
+    fi
+else
+    echo "[STOCK-WORKER] stock_advisor.py failed, creating fallback..."
+    _create_fallback_report
+fi
 
-# 检查报告是否生成
-REPORT_FILE="/tmp/mine_output/advisor/advisor_$(date +%Y%m%d).md"
-if [ ! -f "$REPORT_FILE" ]; then
-    echo "[ADVISOR] Report not generated, trying fallback..."
-    # 降级：用 Gateway 生成市场概览
-    python3 -c "
-import requests, json, datetime
-today = datetime.datetime.now().strftime('%Y-%m-%d')
-report = f'''# A股每日荐股报告 — {today}
+# 6. 推送到 GitHub
+echo "[STOCK-WORKER] Pushing to GitHub..."
+cd "$MINE_SEED"
+git add cloud/advisor/ 2>/dev/null || true
+git commit -m "cloud: stock advisor report ${TODAY_MD}" 2>/dev/null || true
+git push origin main 2>/dev/null || echo "[STOCK-WORKER] Git push may need auth"
 
-## 市场概览
+# 7. ntfy.sh 保底通知
+echo "[STOCK-WORKER] Sending ntfy.sh notification..."
+cd "$SCRIPT_DIR"
+python3 ntfy_push.py --file "$REPORT_FILE" --topic ace-stock-advisor 2>/dev/null || echo "[STOCK-WORKER] ntfy.sh failed"
+
+# 8. 写入当日记忆（云端视角）
+mkdir -p "$MINE_SEED/02_MEMORY/recent_memory/daily"
+echo "# ${TODAY_MD} — Stock Worker 产出" >> "$MINE_SEED/02_MEMORY/recent_memory/daily/${TODAY_MD}-cloud.md"
+echo "报告: cloud/advisor/advisor_${TODAY}.md" >> "$MINE_SEED/02_MEMORY/recent_memory/daily/${TODAY_MD}-cloud.md"
+echo "推送: GitHub + ntfy.sh" >> "$MINE_SEED/02_MEMORY/recent_memory/daily/${TODAY_MD}-cloud.md"
+
+echo "[STOCK-WORKER] Done at $(date)"
+echo "[STOCK-WORKER] 本地 Runtime 将从 GitHub 拉取报告并推送到 TG"
+
+_create_fallback_report() {
+    cat > "$REPORT_FILE" << EOF
+# A股每日荐股报告 — ${TODAY_MD}
 
 > [FALLBACK] 实时数据获取失败，以下为模板报告。
+> 云端 Worker 生成，本地 Runtime 将推送到 TG。
 
 ## 免责声明
 
-本报告由 ACE Runtime 自动生成，仅供参考，不构成投资建议。
+本报告由 ACE Cloud Worker 自动生成，仅供参考，不构成投资建议。
 
 ## 风险提示
 
 股市有风险，投资需谨慎。
-'''
-with open('$REPORT_FILE', 'w') as f:
-    f.write(report)
-print(f'[ADVISOR] Fallback report: $REPORT_FILE')
-"
-fi
 
-# 推送到 ntfy.sh（沙箱内可用）
-echo "[ADVISOR] Pushing to ntfy.sh..."
-cd /workspace/fengzi-repos/mine-seed/05_TOOLS/miner
-python3 ntfy_push.py --file "$REPORT_FILE" --topic ace-stock-advisor
-
-# 尝试推送到 TG（如果网络允许）
-echo "[ADVISOR] Trying TG push..."
-export TG_BOT_TOKEN_1="8384310757:AAEhfTTMaYrV_n9hXFjBUMh2LdeeWkB-Czo"
-python3 tg_push.py --file "$REPORT_FILE" 2>/dev/null || echo "[ADVISOR] TG push failed (network limit), ntfy.sh already sent"
-
-# 保存到 mine-seed
-mkdir -p /workspace/fengzi-repos/mine-seed/02_MEMORY/daily_reports/advisor
-cp "$REPORT_FILE" /workspace/fengzi-repos/mine-seed/02_MEMORY/daily_reports/advisor/
-
-# git commit
-cd /workspace/fengzi-repos/mine-seed
-git add 02_MEMORY/daily_reports/advisor/ 2>/dev/null || true
-git commit -m "daily: stock advisor $(date +%Y%m%d)" 2>/dev/null || true
-git push origin main 2>/dev/null || true
-
-echo "[ADVISOR] Done at $(date)"
+---
+生成时间: $(date)
+Worker: Cloud Stock Worker
+Gateway: localhost:3000
+EOF
+}
