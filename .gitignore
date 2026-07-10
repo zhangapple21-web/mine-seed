@@ -3,14 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+*.egg-info/
+.pytest_cache/
 
-# Runtime data
-mine_output/
-*.log
-
-# OS
-.DS_Store
-Thumbs.db
+# Virtual envs
+.venv/
+venv/
+env/
 
 # IDE
 .vscode/
@@ -18,20 +18,44 @@ Thumbs.db
 *.swp
 *.swo
 
-# Temporary
-*.tmp
-*.bak
-*.orig
+# OS
+.DS_Store
+Thumbs.db
 
-# Telegram session (sensitive auth)
+# Sessions & secrets
 *.session
 *.session-journal
+.env
+*.env
+miner_env.sh
+miner_env.sh.local
 
-# Large zip archives (stored locally, not in git)
-03_DATA/raw_sources/zips/*.zip
-03_DATA/raw_sources/zips/*.tar.gz
-03_DATA/raw_sources/zips/*.7z
+# Recovery staging (auto-cleaned, 11GB+)
+99_*/
+recovery_temp/
+_99_*/
 
-# Large JSON files (exceed GitHub 100MB limit, stored locally only)
-03_DATA/raw_sources/configs/eco_layer.json
-03_DATA/raw_sources/configs/lexicon_snapshot_v3.json
+# Large data files (over GitHub 100MB limit)
+*.zip
+*.7z
+*.tar.gz
+*.tgz
+eco_layer.json
+lexicon_snapshot_v*.json
+*_p*.bin
+*.data
+
+# Logs
+*.log
+*.log.gz
+
+# Temporary
+tmp/
+_tmp/
+*.tmp
+*.bak
+*~
+
+# Worktrees and merge state
+.worktrees/
+.git/worktrees/
