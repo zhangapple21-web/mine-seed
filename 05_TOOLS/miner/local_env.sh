@@ -17,3 +17,13 @@ export REPO_DIR="/workspace/fengzi-repos/mine-seed"
 export TEMPLATE_DIR="/workspace/fengzi-repos/mine-seed/05_TOOLS/signals/template"
 export DATA_DIR="/tmp/sp500_data"
 export OUTPUT_DIR="/tmp/mine_output"
+
+# task_router 路径覆盖
+export WORKER_REGISTRY="/workspace/fengzi-repos/coze-assets/02_miner_config/worker_registry.json"
+export OBSERVATION_FILE="/tmp/mine_output/observation_log.json"
+export JUDGE_FILE="/tmp/mine_output/judge_history.json"
+export ROUTING_CONSTRAINTS="/workspace/fengzi-repos/coze-assets/02_miner_config/routing_constraints.json"
+
+# miner_24h 的 API 配置
+export MINER_API_BASE="http://localhost:3000/v1/chat/completions"
+export MINER_API_KEY="jHhtKnCuHVriXUaHC992D9B645D44e8a9c901625A17fCd41"

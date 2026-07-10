@@ -11,9 +11,9 @@
 import json, time, os, threading, requests
 from datetime import datetime
 
-REGISTRY_FILE = "/home/coze/worker_registry.json"
-OBSERVATION_FILE = "/home/coze/mine_output/observation_log.json"
-JUDGE_FILE = "/home/coze/mine_output/judge_history.json"
+REGISTRY_FILE = os.environ.get("WORKER_REGISTRY", "/home/coze/worker_registry.json")
+OBSERVATION_FILE = os.environ.get("OBSERVATION_FILE", "/home/coze/mine_output/observation_log.json")
+JUDGE_FILE = os.environ.get("JUDGE_FILE", "/home/coze/mine_output/judge_history.json")
 
 API_BASE = os.environ.get("MINER_API_BASE", "http://localhost:3000/v1/chat/completions")
 API_KEY = os.environ.get("MINER_API_KEY", "{{ONE_API_KEY}}")
@@ -230,7 +230,7 @@ class ObservationLog:
 
 class TaskRouter:
     """P1: 任务路由器 — 按任务需求匹配工人画像 + O→E→C→R约束路由"""
-    CONSTRAINT_FILE = "/home/coze/routing_constraints.json"
+    CONSTRAINT_FILE = os.environ.get("ROUTING_CONSTRAINTS", "/home/coze/routing_constraints.json")
 
     def __init__(self, registry=None, observation=None):
         self.registry = registry or WorkerRegistry()
@@ -338,7 +338,7 @@ class TaskRouter:
                 # 保存更新后的约束
                 from constraint_proposer import save_constraints
                 import json
-                with open('/home/coze/routing_constraints.json') as f:
+                with open(os.environ.get('ROUTING_CONSTRAINTS', '/home/coze/routing_constraints.json')) as f:
                     constraints = json.load(f)
                 save_constraints(constraints)
                 pardoned = [r for r in constraints.get('rules', []) if r.get('review_status') == 'PARDONED']
