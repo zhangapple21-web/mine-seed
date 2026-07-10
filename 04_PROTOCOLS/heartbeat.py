@@ -28,6 +28,7 @@ try:
     ops_004 = import_module(WORKSPACE / "04_PROTOCOLS" / "ops_004_recovery_first.py")
     mem = import_module(WORKSPACE / "06_RUNTIME" / "core" / "memory_manager.py")
     ace_logger = import_module(WORKSPACE / "06_RUNTIME" / "core" / "ace_logger.py")
+    env_sensor_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "environment_sensor.py")
 
     scan_directory = ef.scan_directory
     build_recovery_graph = ef.build_recovery_graph
@@ -37,6 +38,8 @@ try:
     MemoryManager = mem.MemoryManager
     get_logger = ace_logger.get_logger
     silence_all = ace_logger.silence_all
+    EnvironmentSensor = env_sensor_mod.EnvironmentSensor
+    SituationBuilder = env_sensor_mod.SituationBuilder
 except Exception as e:
     print(f"[HEARTBEAT] Import error: {e}", file=sys.stderr)
     sys.exit(1)
@@ -97,6 +100,25 @@ def beat(log):
     except Exception as e:
         report["steps"]["archivist"] = {"error": str(e)}
         log.error(f"Archivist error: {e}")
+
+    # ENV-001: Environment Sensor
+    try:
+        sensor = EnvironmentSensor()
+        builder = SituationBuilder()
+        obs = sensor.scan_all(sources=["local", "providers"])
+        situation = builder.build(obs)
+        report["steps"]["env_sensor"] = {
+            "total": situation["total_observations"],
+            "new": situation["new_observations"],
+            "high_priority": len(situation["high_priority"]),
+        }
+        if situation["high_priority"]:
+            log.warning(f"EnvSensor: {len(situation['high_priority'])} high priority items")
+        else:
+            log.info(f"EnvSensor: {situation['new_observations']} new observations")
+    except Exception as e:
+        report["steps"]["env_sensor"] = {"error": str(e)}
+        log.error(f"EnvSensor error: {e}")
 
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
