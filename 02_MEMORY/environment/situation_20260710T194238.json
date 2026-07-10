@@ -1,0 +1,270 @@
+{
+  "date": "2026-07-10",
+  "timestamp": "2026-07-10T19:42:38.311939",
+  "summary": "扫描到 12 个观察，其中 12 个新变化，6 个高优先级",
+  "total_observations": 12,
+  "new_observations": 12,
+  "by_source": {
+    "local": 4,
+    "provider": 2,
+    "github": 5,
+    "model": 1
+  },
+  "high_priority": [
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: OpenGradient/BitQuant (★50)",
+      "detail": {
+        "url": "https://github.com/OpenGradient/BitQuant",
+        "stars": 50,
+        "description": "BitQuant is an open-source AI agent framework for building quantitative AI agents, leveraging specialized models for ML-powered analytics, trading, portfolio management, and more.",
+        "updated": "2026-07-09T19:13:22Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: Barca0412/Introduction-to-Quantitative-Finance (★1543)",
+      "detail": {
+        "url": "https://github.com/Barca0412/Introduction-to-Quantitative-Finance",
+        "stars": 1543,
+        "description": "入门资料整理：1.多因子股票量化框架开源教程 2.学界和业界的经典资料收录 3.AI + 金融的相关工作，包括LLM, Agent, benchmark(evaluation), etc.",
+        "updated": "2026-07-10T08:19:37Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: janushendersonassetallocation/loman (★118)",
+      "detail": {
+        "url": "https://github.com/janushendersonassetallocation/loman",
+        "stars": 118,
+        "description": "Control complex calculation flow for quantitative research and trading",
+        "updated": "2026-07-10T11:18:50Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: maxrisk/quantitative_trading (★64)",
+      "detail": {
+        "url": "https://github.com/maxrisk/quantitative_trading",
+        "stars": 64,
+        "description": "基于长桥API和DeepSeek AI的量化交易分析工具，支持技术指标分析和自动交易",
+        "updated": "2026-07-07T18:27:29Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: alphanume-markets/Alphanume-Strategy-Lab (★55)",
+      "detail": {
+        "url": "https://github.com/alphanume-markets/Alphanume-Strategy-Lab",
+        "stars": 55,
+        "description": "Production-ready quantitative trading research powered by Alphanume market data APIs.",
+        "updated": "2026-07-09T20:51:35Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:42:36.660170"
+    }
+  ],
+  "all_observations": [
+    {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "5 files modified",
+      "detail": {
+        "files": [
+          "M  01_AGENTS/fengzi/SOUL.md",
+          "M  05_TOOLS/miner/miner_24h.py",
+          "M  05_TOOLS/miner/miner_env.sh.tpl",
+          "M  05_TOOLS/signals/signal_discovery.py",
+          "M  06_RUNTIME/CRONTAB.md"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:42:36.303813"
+    },
+    {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "189 untracked files",
+      "detail": {
+        "files": [
+          "?? 00_ROOT/ARCHITECTURE_REAL.md",
+          "?? 00_ROOT/GOVERNANCE.md",
+          "?? 00_ROOT/MANIFESTO.md",
+          "?? 00_ROOT/README.md",
+          "?? 01_AGENTS/PROFILE.md",
+          "?? 01_AGENTS/PROTOCOLS.md",
+          "?? 01_AGENTS/SOUL.md",
+          "?? 01_AGENTS/USER.md",
+          "?? 02_MEMORY/E2C_Closure_Principles_20260616.md",
+          "?? 02_MEMORY/archivist_20260710.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:42:36.303813"
+    },
+    {
+      "source": "local",
+      "category": "file_deleted",
+      "severity": "warning",
+      "title": "4 files deleted",
+      "detail": {
+        "files": [
+          "D  CIVILIZATION_MANIFEST.md",
+          "D  MANIFESTO.md",
+          "D  MEMORY.md",
+          "D  README.md"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:42:36.303813"
+    },
+    {
+      "source": "local",
+      "category": "git_log",
+      "severity": "info",
+      "title": "Recent commits",
+      "detail": {
+        "commits": [
+          "a2a59e8 archaeology: vn.py structural analysis — Gateway/EventEngine/MainEngine patterns mapped to ACE 3 minutes ago",
+          "34bdde5 merge: cloud advisor report 7 minutes ago",
+          "36a7525 cloud: stock advisor report 2026-07-10 (360 + 上海建工) 7 minutes ago",
+          "fb84e98 fix: sync mirror copies + remove unused import 8 minutes ago",
+          "1e14afc fix: data plane bug fixes + audit archive 13 minutes ago"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:42:36.328169"
+    },
+    {
+      "source": "provider",
+      "category": "provider_ok",
+      "severity": "info",
+      "title": "Tencent quote API OK",
+      "detail": {
+        "api": "qt.gtimg.cn",
+        "latency_ms": 0
+      },
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:42:36.659577"
+    },
+    {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-10T19:42:36.660170"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: Barca0412/Introduction-to-Quantitative-Finance (★1543)",
+      "detail": {
+        "url": "https://github.com/Barca0412/Introduction-to-Quantitative-Finance",
+        "stars": 1543,
+        "description": "入门资料整理：1.多因子股票量化框架开源教程 2.学界和业界的经典资料收录 3.AI + 金融的相关工作，包括LLM, Agent, benchmark(evaluation), etc.",
+        "updated": "2026-07-10T08:19:37Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: janushendersonassetallocation/loman (★118)",
+      "detail": {
+        "url": "https://github.com/janushendersonassetallocation/loman",
+        "stars": 118,
+        "description": "Control complex calculation flow for quantitative research and trading",
+        "updated": "2026-07-10T11:18:50Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: maxrisk/quantitative_trading (★64)",
+      "detail": {
+        "url": "https://github.com/maxrisk/quantitative_trading",
+        "stars": 64,
+        "description": "基于长桥API和DeepSeek AI的量化交易分析工具，支持技术指标分析和自动交易",
+        "updated": "2026-07-07T18:27:29Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: alphanume-markets/Alphanume-Strategy-Lab (★55)",
+      "detail": {
+        "url": "https://github.com/alphanume-markets/Alphanume-Strategy-Lab",
+        "stars": 55,
+        "description": "Production-ready quantitative trading research powered by Alphanume market data APIs.",
+        "updated": "2026-07-09T20:51:35Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "github",
+      "category": "trending_repo",
+      "severity": "info",
+      "title": "GitHub: OpenGradient/BitQuant (★50)",
+      "detail": {
+        "url": "https://github.com/OpenGradient/BitQuant",
+        "stars": 50,
+        "description": "BitQuant is an open-source AI agent framework for building quantitative AI agents, leveraging specialized models for ML-powered analytics, trading, portfolio management, and more.",
+        "updated": "2026-07-09T19:13:22Z"
+      },
+      "capability_ref": "external_asset",
+      "timestamp": "2026-07-10T19:42:37.393885"
+    },
+    {
+      "source": "model",
+      "category": "models_available",
+      "severity": "info",
+      "title": "GitHub Models: 8 models available",
+      "detail": {
+        "count": 8
+      },
+      "capability_ref": "llm_inference",
+      "timestamp": "2026-07-10T19:42:38.308700"
+    }
+  ]
+}

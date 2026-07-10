@@ -1,0 +1,48 @@
+{
+  "date": "2026-07-10",
+  "timestamp": "2026-07-10T19:59:29.374661",
+  "summary": "扫描到 5 个观察，其中 2 个新变化，0 个高优先级",
+  "total_observations": 5,
+  "new_observations": 2,
+  "by_source": {
+    "local": 2
+  },
+  "high_priority": [],
+  "all_observations": [
+    {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "1 files modified",
+      "detail": {
+        "files": [
+          "M 04_PROTOCOLS/local_miner.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:29.009886"
+    },
+    {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "188 untracked files",
+      "detail": {
+        "files": [
+          "?? 00_ROOT/ARCHITECTURE_REAL.md",
+          "?? 00_ROOT/GOVERNANCE.md",
+          "?? 00_ROOT/MANIFESTO.md",
+          "?? 00_ROOT/README.md",
+          "?? 01_AGENTS/PROFILE.md",
+          "?? 01_AGENTS/PROTOCOLS.md",
+          "?? 01_AGENTS/SOUL.md",
+          "?? 01_AGENTS/USER.md",
+          "?? 02_MEMORY/E2C_Closure_Principles_20260616.md",
+          "?? 02_MEMORY/archivist_20260710.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-10T19:59:29.009886"
+    }
+  ]
+}
