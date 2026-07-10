@@ -1,0 +1,19 @@
+{
+  "operators": [
+    {"name": "SMA", "description": "Simple Moving Average", "code": "ts_mean(close, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "EMA", "description": "Exponential Moving Average", "code": "ts_ema(close, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "RSI", "description": "Relative Strength Index", "code": "ts_rsi(close, {period})", "params": [{"name": "period", "default": 14, "min": 2, "max": 100}]},
+    {"name": "MACD", "description": "Moving Average Convergence Divergence", "code": "ts_macd(close, {fast_period}, {slow_period}, {signal_period})", "params": [{"name": "fast_period", "default": 12, "min": 2, "max": 50}, {"name": "slow_period", "default": 26, "min": 5, "max": 200}, {"name": "signal_period", "default": 9, "min": 2, "max": 50}]},
+    {"name": "BBANDS", "description": "Bollinger Bands", "code": "ts_bbands(close, {period}, {std_dev})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}, {"name": "std_dev", "default": 2, "min": 0.5, "max": 5}]},
+    {"name": "ATR", "description": "Average True Range", "code": "ts_atr(high, low, close, {period})", "params": [{"name": "period", "default": 14, "min": 2, "max": 100}]},
+    {"name": "ROC", "description": "Rate of Change", "code": "ts_roc(close, {period})", "params": [{"name": "period", "default": 12, "min": 1, "max": 500}]},
+    {"name": "MOM", "description": "Momentum", "code": "ts_mom(close, {period})", "params": [{"name": "period", "default": 10, "min": 1, "max": 500}]},
+    {"name": "STDDEV", "description": "Standard Deviation", "code": "ts_stddev(close, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "RANK", "description": "Cross-Sectional Rank", "code": "ts_rank(close, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "DELTA", "description": "Difference", "code": "ts_delta(close, {period})", "params": [{"name": "period", "default": 1, "min": 1, "max": 500}]},
+    {"name": "CORR", "description": "Correlation", "code": "ts_corr(close, volume, {period})", "params": [{"name": "period", "default": 20, "min": 5, "max": 500}]},
+    {"name": "ZSCORE", "description": "Z-Score Normalization", "code": "ts_zscore(close, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "MAX", "description": "Rolling Maximum", "code": "ts_max(high, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]},
+    {"name": "MIN", "description": "Rolling Minimum", "code": "ts_min(low, {period})", "params": [{"name": "period", "default": 20, "min": 2, "max": 500}]}
+  ]
+}

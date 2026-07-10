@@ -1,0 +1,16 @@
+{
+  "signal_name": "",
+  "description": "",
+  "formula": "",
+  "code": "",
+  "ic_mean": 0.0,
+  "ic_std": 0.0,
+  "sharpe": 0.0,
+  "long_short_return": 0.0,
+  "turnover": 0.0,
+  "max_drawdown": 0.0,
+  "parameters": {},
+  "iterations": [],
+  "status": "",
+  "timestamp": ""
+}

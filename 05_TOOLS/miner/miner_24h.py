@@ -12,9 +12,9 @@ from datetime import datetime
 
 API_BASE = os.environ.get("MINER_API_BASE", "http://localhost:3000/v1/chat/completions")
 API_KEY = os.environ.get("MINER_API_KEY", "jHhtKnCuHVriXUaHC992D9B645D44e8a9c901625A17fCd41")
-OUTPUT_DIR = "/home/coze/mine_output"
+OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/home/coze/mine_output")
 
-sys.path.insert(0, "/home/coze")
+sys.path.insert(0, os.environ.get("COZE_HOME", "/home/coze"))
 from task_router import registry, observation, router, judge, TASK_PROFILES
 
 # === CONSTRAINT MONKEY PATCH v5 (2026-06-20) ===
@@ -339,9 +339,9 @@ def save_result(task_name, result):
     return outfile
 
 def load_r1_data():
-    r1_path = "/app/data/所有对话/主对话/R1_Ω_FINAL.json"
+    r1_path = os.environ.get("R1_DATA_PATH", "/app/data/所有对话/主对话/R1_Ω_FINAL.json")
     if not os.path.exists(r1_path):
-        r1_path = "/home/coze/R1_Ω_FINAL.json"
+        r1_path = os.environ.get("R1_DATA_PATH_FALLBACK", "/home/coze/R1_Ω_FINAL.json")
     with open(r1_path, "r") as f:
         return json.load(f)
 
