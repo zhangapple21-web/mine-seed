@@ -1,98 +1,135 @@
 #!/usr/bin/env python3
 """
-ACE Heartbeat - 自治循环心跳 (集成五大 OPS 原则)
-==================================================
+ACE Heartbeat - Silent background heartbeat
+============================================
 
-执行: EFP + Signal + Archivist + OPS-004 检查, 15 分钟一次
-
-五大 OPS 原则集成:
-  OPS-000 Asset First     — 已通过环境发现
-  OPS-001 ABA             — 行动前先检查
-  OPS-002 Find Before     — 7 层查找
-  OPS-003 Worker Pool     — github_models 作为主矿工
-  OPS-004 Recovery First  — 每次心跳检查接管状态
-  OPS-005 Self-Loop       — 心跳是自循环的一部分
+Default: silent (logs to file only)
+  - Logs: 02_MEMORY/logs/heartbeat_YYYYMMDD.log
+  - No console output unless --verbose
 """
-import os, sys, json, time, argparse
+import os, sys, json, time, argparse, logging
 from pathlib import Path
 from datetime import datetime
 
-sys.path.insert(0, str(Path(__file__).parent))
+WORKSPACE = Path(__file__).parent.parent
+sys.path.insert(0, str(WORKSPACE))
+
+import importlib.util
+
+def import_module(path):
+    spec = importlib.util.spec_from_file_location(path.stem, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
 try:
-    from environment_first import scan_directory, build_recovery_graph
-    from local_miner import task_signal_discovery, task_archivist
-    from ops_004_recovery_first import recovery_first as ops_004_check
-except ImportError as e:
-    print(f"[HEARTBEAT] Import error: {e}")
+    ef = import_module(WORKSPACE / "04_PROTOCOLS" / "environment_first.py")
+    lm = import_module(WORKSPACE / "04_PROTOCOLS" / "local_miner.py")
+    ops_004 = import_module(WORKSPACE / "04_PROTOCOLS" / "ops_004_recovery_first.py")
+    mem = import_module(WORKSPACE / "06_RUNTIME" / "core" / "memory_manager.py")
+    ace_logger = import_module(WORKSPACE / "06_RUNTIME" / "core" / "ace_logger.py")
+
+    scan_directory = ef.scan_directory
+    build_recovery_graph = ef.build_recovery_graph
+    task_signal_discovery = lm.task_signal_discovery
+    task_archivist = lm.task_archivist
+    ops_004_check = ops_004.recovery_first
+    MemoryManager = mem.MemoryManager
+    get_logger = ace_logger.get_logger
+    silence_all = ace_logger.silence_all
+except Exception as e:
+    print(f"[HEARTBEAT] Import error: {e}", file=sys.stderr)
     sys.exit(1)
 
-HEARTBEAT_DIR = Path(__file__).parent.parent / "02_MEMORY" / "heartbeat"
 
-
-def beat():
+def beat(log):
     ts = datetime.now().isoformat()
     beat_id = ts.replace("-", "").replace(":", "").replace(".", "")[:15]
-    print(f"[HEARTBEAT] Beat @ {ts}")
+    log.info(f"=== Heartbeat {beat_id} ===")
+    
     report = {
         "beat_id": beat_id,
         "time": ts,
         "status": "ok",
-        "ops_principles": ["ops_000", "ops_001", "ops_002", "ops_003", "ops_004", "ops_005"],
         "steps": {},
     }
-    # OPS-004 Recovery First check
+
+    mm = MemoryManager()
+
+    # OPS-004 Recovery First
     try:
         ops_004 = ops_004_check(check_only=True)
         report["ops_004_status"] = ops_004.get("summary", {})
+        mm.save_memory("heartbeat", f"ops_004_{beat_id}", ops_004)
         if not ops_004.get("summary", {}).get("ready", False):
-            print(f"  [OPS-004] {ops_004['summary']}")
+            log.warning(f"OPS-004 not ready: {ops_004['summary']}")
     except Exception as e:
         report["ops_004_status"] = {"error": str(e)}
+        log.error(f"OPS-004 error: {e}")
+
     # EFP
-    workspace = Path(__file__).parent.parent
     try:
-        idx = scan_directory(workspace, max_depth=3)
-        report["steps"]["efp"] = {"files": idx["files_total"], "recovery_assets": len(idx["recovery_assets"])}
-        print(f"  [EFP] {idx['files_total']} files")
+        idx = scan_directory(WORKSPACE, max_depth=3)
+        report["steps"]["efp"] = {
+            "files": idx["files_total"],
+            "recovery_assets": len(idx["recovery_assets"])
+        }
+        mm.save_memory("environment", "latest_scan", idx)
+        log.info(f"EFP: {idx['files_total']} files, {len(idx['recovery_assets'])} recovery assets")
     except Exception as e:
         report["steps"]["efp"] = {"error": str(e)}
+        log.error(f"EFP error: {e}")
+
     # Signal
     try:
         sig = task_signal_discovery()
         report["steps"]["signal"] = {"status": sig.get("status"), "model": sig.get("model")}
-        print(f"  [SIGNAL] {sig.get('status')}")
+        log.info(f"Signal: {sig.get('status')}")
     except Exception as e:
         report["steps"]["signal"] = {"error": str(e)}
+        log.error(f"Signal error: {e}")
+
     # Archivist
     try:
         arc = task_archivist()
         report["steps"]["archivist"] = {"status": arc.get("status"), "model": arc.get("model")}
-        print(f"  [ARCHIVIST] {arc.get('status')}")
+        log.info(f"Archivist: {arc.get('status')}")
     except Exception as e:
         report["steps"]["archivist"] = {"error": str(e)}
+        log.error(f"Archivist error: {e}")
+
     # Save
-    HEARTBEAT_DIR.mkdir(parents=True, exist_ok=True)
-    log_file = HEARTBEAT_DIR / f"beat_{beat_id}.json"
-    with open(log_file, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-    print(f"[HEARTBEAT] Saved: {log_file.name}")
+    mm.save_memory("heartbeat", f"beat_{beat_id}", report)
+    log.info("Heartbeat saved")
     return report
 
 
-def loop(interval_min=15):
-    print(f"[HEARTBEAT] loop interval={interval_min}min")
+def loop(interval_min=15, log=None):
+    log.info(f"Heartbeat loop started (interval={interval_min}min)")
     while True:
-        beat()
+        beat(log)
         time.sleep(interval_min * 60)
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--loop", action="store_true")
-    parser.add_argument("--interval", type=int, default=15)
+    parser = argparse.ArgumentParser(description="ACE Heartbeat (silent by default)")
+    parser.add_argument("--loop", action="store_true", help="Run as background loop")
+    parser.add_argument("--interval", type=int, default=15, help="Interval in minutes")
+    parser.add_argument("--verbose", action="store_true", help="Print to console")
+    parser.add_argument("--log-level", choices=["DEBUG", "INFO", "WARNING", "ERROR"],
+                       default="INFO", help="Log level")
     args = parser.parse_args()
-    if args.loop: loop(args.interval)
-    else: print(json.dumps(beat(), ensure_ascii=False, indent=2))
+
+    log_level = getattr(logging, args.log_level)
+    log = get_logger("heartbeat", level=log_level, silent=not args.verbose)
+    silence_all()
+
+    if args.loop:
+        loop(args.interval, log=log)
+    else:
+        result = beat(log)
+        if args.verbose:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
