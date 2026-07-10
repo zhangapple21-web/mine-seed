@@ -4,42 +4,43 @@
   "recommendations": [
     {
       "recommendation_id": "sa_20260710_001",
-      "ticker": "601360",
-      "signal_count": 4,
+      "ticker": "688111",
+      "signal_count": 5,
       "signal_combo": [
-        "今日上涨",
-        "换手率活跃",
-        "涨幅温和",
-        "技术形态待确认"
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
       ],
       "source": {
         "provider": "tencent",
         "endpoint": "qt.gtimg.cn/q"
       },
-      "snapshot_time": "2026-07-10T11:35:11",
-      "recommend_time": "2026-07-10T11:35:11",
-      "recommend_price": 9.06,
+      "snapshot_time": "2026-07-10T19:01:40",
+      "recommend_time": "2026-07-10T19:01:40",
+      "recommend_price": 233.76,
       "close_price": null,
       "return_pct": null,
       "review_status": "pending"
     },
     {
       "recommendation_id": "sa_20260710_002",
-      "ticker": "600170",
+      "ticker": "601939",
       "signal_count": 4,
       "signal_combo": [
-        "今日上涨",
-        "换手率活跃",
-        "涨幅温和",
-        "技术形态待确认"
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
       ],
       "source": {
         "provider": "tencent",
         "endpoint": "qt.gtimg.cn/q"
       },
-      "snapshot_time": "2026-07-10T11:35:11",
-      "recommend_time": "2026-07-10T11:35:11",
-      "recommend_price": 2.28,
+      "snapshot_time": "2026-07-10T19:01:40",
+      "recommend_time": "2026-07-10T19:01:40",
+      "recommend_price": 10.03,
       "close_price": null,
       "return_pct": null,
       "review_status": "pending"
