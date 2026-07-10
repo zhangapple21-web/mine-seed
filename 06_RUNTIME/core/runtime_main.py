@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
-import os, sys, json, time, argparse, subprocess, shutil
+"""
+ACE Runtime Main - Local daemon (silent by default)
+===================================================
+
+Default behavior: silent background operation
+  - Logs go to 02_MEMORY/logs/runtime_YYYYMMDD.log
+  - No console output unless --verbose
+  - Critical errors printed to stderr even in silent mode
+
+Usage:
+  python runtime_main.py                    # silent, single cycle
+  python runtime_main.py --daemon           # silent, background loop
+  python runtime_main.py --verbose          # console output for debugging
+  python runtime_main.py --daemon --verbose # loop with console output
+"""
+import os, sys, json, time, argparse, subprocess, shutil, logging
 from pathlib import Path
 from datetime import datetime
 
@@ -14,10 +29,14 @@ def import_module(path):
     spec.loader.exec_module(module)
     return module
 
+# Import components
+ace_logger = import_module(WORKSPACE / "06_RUNTIME" / "core" / "ace_logger.py")
 env_scan = import_module(WORKSPACE / "06_RUNTIME" / "core" / "environment_scan.py")
 mem_manager = import_module(WORKSPACE / "06_RUNTIME" / "core" / "memory_manager.py")
 tg_push_module = import_module(WORKSPACE / "06_RUNTIME" / "connectors" / "tg_pusher.py")
 
+get_logger = ace_logger.get_logger
+silence_all = ace_logger.silence_all
 scan_environment = env_scan.scan_environment
 MemoryManager = mem_manager.MemoryManager
 TGPusher = tg_push_module.TGPusher
@@ -25,6 +44,9 @@ TGPusher = tg_push_module.TGPusher
 CLOUD_DIR = WORKSPACE / "cloud"
 MEM_DIR = WORKSPACE / "02_MEMORY"
 PUSHED_FILES = MEM_DIR / "tg_pushed.json"
+
+# Global logger, initialized in main()
+log = None
 
 
 def load_pushed_files():
@@ -44,16 +66,18 @@ def save_pushed_files(pushed):
 
 def git_pull():
     try:
-        result = subprocess.run(["git", "pull", "--rebase", "origin", "main"],
-                               cwd=str(WORKSPACE), capture_output=True, text=True, timeout=30)
+        result = subprocess.run(
+            ["git", "pull", "--rebase", "origin", "main"],
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=30
+        )
         if result.returncode == 0:
-            print(f"    Pull successful")
+            log.info("Git pull successful")
             return True
         else:
-            print(f"    Pull failed: {result.stderr}")
+            log.warning(f"Git pull failed: {result.stderr.strip()}")
             return False
     except Exception as e:
-        print(f"    Pull error: {e}")
+        log.error(f"Git pull error: {e}")
         return False
 
 
@@ -77,77 +101,91 @@ def archive_report(file_path):
 
 def run_cycle(chat_id=None, dry_run=False):
     ts = datetime.now().isoformat()
-    print(f"\n[RUNTIME] Cycle @ {ts}")
+    log.info(f"=== Cycle start @ {ts} ===")
     
     pushed = load_pushed_files()
     mm = MemoryManager()
     
-    # 1. EFP 环境扫描
-    print("  [1/5] Environment Scan...")
+    # 1. EFP Environment Scan
     try:
         scan_result = scan_environment(WORKSPACE)
         mm.save_memory("environment", "latest_scan", scan_result)
-        print(f"    Scanned: {len(scan_result['files'])} files, {len(scan_result['recovery_assets'])} recovery assets")
+        log.info(f"EFP scan: {len(scan_result['files'])} files, {len(scan_result['recovery_assets'])} recovery assets")
     except Exception as e:
-        print(f"    Scan failed: {e}")
+        log.error(f"EFP scan failed: {e}")
     
     # 2. Git Pull
-    print("  [2/5] Git Pull...")
+    log.info("Git pull...")
     git_pull()
     
-    # 3. 检测新报告
-    print("  [3/5] Detecting new reports...")
+    # 3. Detect new reports
     new_files = detect_new_reports(pushed)
-    print(f"    Found {len(new_files)} new files")
+    if new_files:
+        log.info(f"Found {len(new_files)} new cloud reports")
+    else:
+        log.debug("No new reports")
     
-    # 4. 推送 TG
+    # 4. Push to TG
     if new_files and chat_id:
-        print(f"  [4/5] Pushing to TG ({len(new_files)})...")
+        log.info(f"Pushing {len(new_files)} reports to TG...")
         pusher = TGPusher(chat_id=chat_id)
         for f in new_files:
             if dry_run:
-                print(f"    DRY: {f.name}")
+                log.info(f"[DRY] Would push: {f.name}")
             else:
-                content = f.read_text(encoding="utf-8")[:4000]
-                title = f.name.replace(".md", "")
-                result = pusher.send_message(f"📊 {title}\n\n{content}")
-                if result.get("ok"):
-                    pushed.add(f.name)
-                    archive_report(f)
-                    print(f"    ✓ {f.name}")
-                else:
-                    print(f"    ✗ {f.name}: {result.get('error')}")
+                try:
+                    content = f.read_text(encoding="utf-8")[:4000]
+                    title = f.name.replace(".md", "")
+                    result = pusher.send_message(f"📊 {title}\n\n{content}")
+                    if result.get("ok"):
+                        pushed.add(f.name)
+                        archive_report(f)
+                        log.info(f"Pushed: {f.name}")
+                    else:
+                        log.error(f"TG push failed for {f.name}: {result.get('error')}")
+                except Exception as e:
+                    log.error(f"TG push error for {f.name}: {e}")
         save_pushed_files(pushed)
     
-    # 5. 心跳
-    print("  [5/5] Heartbeat...")
+    # 5. Heartbeat
     try:
-        result = subprocess.run([sys.executable, str(WORKSPACE / "04_PROTOCOLS" / "heartbeat.py")],
-                               cwd=str(WORKSPACE), capture_output=True, text=True, timeout=60)
+        result = subprocess.run(
+            [sys.executable, str(WORKSPACE / "04_PROTOCOLS" / "heartbeat.py")],
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=60
+        )
         if result.returncode == 0:
-            print("    Heartbeat ok")
+            log.debug("Heartbeat ok")
         else:
-            print(f"    Heartbeat failed: {result.stderr}")
+            log.warning(f"Heartbeat failed: {result.stderr.strip()}")
     except Exception as e:
-        print(f"    Heartbeat error: {e}")
+        log.error(f"Heartbeat error: {e}")
     
-    print(f"[RUNTIME] Cycle complete")
+    log.info("=== Cycle complete ===")
 
 
 def run_daemon(interval_min=15, chat_id=None):
-    print(f"[RUNTIME] Daemon started (interval={interval_min}min)")
+    log.info(f"Daemon started (interval={interval_min}min, silent=True)")
     while True:
         run_cycle(chat_id=chat_id)
         time.sleep(interval_min * 60)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="ACE Runtime")
-    parser.add_argument("--daemon", action="store_true", help="持续运行")
-    parser.add_argument("--interval", type=int, default=15, help="间隔(分钟)")
-    parser.add_argument("--chat-id", help="TG Chat ID")
-    parser.add_argument("--dry-run", action="store_true", help="模拟运行")
+    parser = argparse.ArgumentParser(description="ACE Runtime (silent by default)")
+    parser.add_argument("--daemon", action="store_true", help="Run as background daemon")
+    parser.add_argument("--interval", type=int, default=15, help="Cycle interval in minutes")
+    parser.add_argument("--chat-id", help="TG Chat ID for notifications")
+    parser.add_argument("--dry-run", action="store_true", help="Simulate without sending")
+    parser.add_argument("--verbose", action="store_true", help="Print logs to console")
+    parser.add_argument("--log-level", choices=["DEBUG", "INFO", "WARNING", "ERROR"],
+                       default="INFO", help="Log level")
     args = parser.parse_args()
+    
+    # Setup logging
+    global log
+    log_level = getattr(logging, args.log_level)
+    log = get_logger("runtime", level=log_level, silent=not args.verbose)
+    silence_all()
     
     if args.daemon:
         run_daemon(interval_min=args.interval, chat_id=args.chat_id)
