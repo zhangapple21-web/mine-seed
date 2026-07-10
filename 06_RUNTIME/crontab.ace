@@ -1,0 +1,31 @@
+# ACE Runtime 系统级 crontab
+# 用法: crontab -l 查看当前，crontab crontab.ace 安装
+# 位置: /workspace/fengzi-repos/mine-seed/06_RUNTIME/crontab.ace
+# 时间: Asia/Shanghai (UTC+8)
+
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+
+# === 世界存活自检（每小时） ===
+0 * * * * cd /workspace/one-api-data && python3 liveness_check.py >> /tmp/mine_output/liveness/cron.log 2>&1
+
+# === 矿场v5（疯子/生产域，每4小时） ===
+0 */4 * * * bash /workspace/one-api-data/run_shift.sh miner >> /tmp/mine_output/miner_cron.log 2>&1
+
+# === 信号发现（疯子/生产域，每6小时） ===
+30 2,8,14,20 * * * bash /workspace/one-api-data/run_shift.sh signals >> /tmp/mine_output/signals_cron.log 2>&1
+
+# === 每日荐股 + 推送（疯子/生产域，08:15） ===
+15 8 * * 1-5 bash /workspace/fengzi-repos/mine-seed/05_TOOLS/miner/run_stock_advisor.sh >> /tmp/mine_output/advisor_cron.log 2>&1
+
+# === 知识早班（小疯子/研究域，每天05:00） ===
+0 5 * * * bash /workspace/one-api-data/run_shift.sh morning_research >> /tmp/mine_output/xiaofengzi_cron.log 2>&1
+
+# === 知识午班（小疯子/研究域，每天12:00） ===
+0 12 * * * bash /workspace/one-api-data/run_shift.sh noon_research >> /tmp/mine_output/xiaofengzi_cron.log 2>&1
+
+# === 档案官归档（疯子/生产域，每天20:04） ===
+4 20 * * * bash /workspace/one-api-data/run_shift.sh archivist >> /tmp/mine_output/archivist_cron.log 2>&1
+
+# === Gateway 保活（每分钟检查，死了就重启） ===
+* * * * * curl -s http://localhost:3000/api/status > /dev/null 2>&1 || (cd /workspace/one-api-data && nohup python3 ace_gateway.py > gateway.log 2>&1 &)
