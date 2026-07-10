@@ -32,5 +32,5 @@ $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-Executio
 $Trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(15) -RepetitionInterval (New-TimeSpan -Hours 1) -RepetitionDuration (New-TimeSpan -Days 3650)
 Register-ScheduledTask -TaskName "ACE_Heartbeat" -Action $Action -Trigger $Trigger -Principal $Principal -Settings $Settings -Force
 
-Write-Host "ACE Windows 自主循环任务已配置完成！"
-Write-Host "打开 任务计划程序（taskschd.msc）查看和管理任务。"
+Write-Host "ACE Windows Daily Loop Tasks configured successfully!"
+Write-Host "Open Task Scheduler (taskschd.msc) to view and manage tasks."
