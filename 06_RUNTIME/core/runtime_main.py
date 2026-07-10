@@ -144,13 +144,11 @@ def run_cycle(chat_id=None, dry_run=False):
                 log.info(f"[DRY] Would push: {f.name}")
             else:
                 try:
-                    content = f.read_text(encoding="utf-8")[:4000]
-                    title = f.name.replace(".md", "")
-                    result = pusher.send_message(f"📊 {title}\n\n{content}")
+                    result = pusher.send_report(str(f))
                     if result.get("ok"):
                         pushed.add(f.name)
                         archive_report(f)
-                        log.info(f"Pushed: {f.name}")
+                        log.info(f"Pushed: {f.name} (msg={result.get('message_sent')}, doc={result.get('document_sent')})")
                     else:
                         log.error(f"TG push failed for {f.name}: {result.get('error')}")
                 except Exception as e:

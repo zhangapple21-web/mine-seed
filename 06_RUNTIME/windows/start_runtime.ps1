@@ -1,7 +1,7 @@
 # ACE Runtime - Windows Background Launcher (PowerShell)
 # Usage: .\start_runtime.ps1 [-ChatId <id>] [-Verbose]
 param(
-    [string]$ChatId = $env:TG_CHAT_ID,
+    [string]$ChatId = "5016609451",
     [switch]$Verbose
 )
 

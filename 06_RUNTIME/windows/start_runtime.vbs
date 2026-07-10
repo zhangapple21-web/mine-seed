@@ -32,10 +32,9 @@ If PythonExe = "" Then PythonExe = "python"
 WShell.Environment("Process").Item("TG_BOT_TOKEN_2") = "8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI"
 WShell.Environment("Process").Item("NTPY_TOPIC") = "ace-cloud-worker"
 
-' Read TG_CHAT_ID from user environment if set
+' Read TG_CHAT_ID (Zhang Ningjing)
 Dim ChatId
-ChatId = WShell.Environment("User").Item("TG_CHAT_ID")
-If ChatId = "" Then ChatId = WShell.Environment("Process").Item("TG_CHAT_ID")
+ChatId = "5016609451"
 
 ' Build command - daemon mode, silent
 Cmd = "cmd /c cd /d """ & Workspace & """ && set TG_BOT_TOKEN_2=8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI&& set NTPY_TOPIC=ace-cloud-worker"
