@@ -1,10 +1,10 @@
-# ACE 档案官 - Windows 适配运行脚本
+# ACE Archivist - Windows Runtime Script
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
 $Python = "C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe"
 
-# 加载环境变量
+# Load environment variables
 $EnvFile = "$Workspace\05_TOOLS\miner\miner_env.sh"
 if (Test-Path $EnvFile) {
     Get-Content $EnvFile | ForEach-Object {
@@ -14,5 +14,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# 运行档案官
+# Run archivist
 & $Python "$Workspace\05_TOOLS\memory\archivist.py" 2>&1

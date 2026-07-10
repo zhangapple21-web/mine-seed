@@ -1,4 +1,4 @@
-# ACE 信号发现 - Windows 适配运行脚本
+# ACE Signal Discovery - Windows Runtime Script
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
@@ -8,7 +8,7 @@ $LogFile = "$LogDir\signal_cron.log"
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
-# 加载环境变量
+# Load environment variables
 $EnvFile = "$Workspace\05_TOOLS\miner\miner_env.sh"
 if (Test-Path $EnvFile) {
     Get-Content $EnvFile | ForEach-Object {
@@ -18,5 +18,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# 运行信号发现
+# Run signal discovery
 & $Python "$Workspace\05_TOOLS\signals\signal_discovery.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
