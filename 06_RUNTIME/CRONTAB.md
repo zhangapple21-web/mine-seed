@@ -38,6 +38,26 @@
 | TRAE巡逻 | 每日9:00 | 代码库PR/commit检查 |
 | 种子归档 | 每日/每班次 | 同步运行时数据到仓库 |
 
+## Windows 适配
+
+本地工作区路径：`C:\Users\User\ace_workspace\mine-seed`
+
+PowerShell 运行脚本位于 `06_RUNTIME/windows/`：
+
+| 任务 | 脚本 | 配置方式 |
+|------|------|----------|
+| 矿场v5 | `run_miner.ps1` | Task Scheduler 每4小时 |
+| 信号发现 | `run_signals.ps1` | Task Scheduler 每6小时 |
+| 档案官 | `run_archivist.ps1` | Task Scheduler 每天 20:04 |
+| 共享API保活 | `run_shared_api.ps1` | Task Scheduler 开机+每分钟 |
+| 跨机心跳 | `run_heartbeat.ps1` | Task Scheduler 每小时 |
+
+一键注册所有任务（管理员 PowerShell）：
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+. C:\Users\User\ace_workspace\mine-seed\06_RUNTIME\windows\setup_tasks.ps1
+```
+
 ## 重要说明
 
 - 所有脚本假设运行在 `/home/coze/` 目录下
