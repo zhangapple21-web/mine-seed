@@ -21,7 +21,6 @@ import time
 import json
 import logging
 import warnings
-import socket
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
