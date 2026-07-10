@@ -5,11 +5,36 @@
 
 ## 目录
 
+### ABP (Bootstrap) 层
 | 脚本 | 协议 | 状态 |
 |------|------|------|
+| `bootstrap.py` | ACE Bootstrap Protocol (ABP) | ✅ v1.0 2026-07-10 |
 | `environment_first.py` | Environment First Protocol (EFP) | ✅ v1.0 2026-07-10 |
 | `recovery_protocol.py` | Recovery Protocol (RP) | ✅ v1.0 2026-07-10 |
 | `awaken.py` | 统一入口 (EFP + RP) | ✅ v1.0 2026-07-10 |
+
+### OPS (Operations) 层
+| 脚本 | 协议 | 状态 |
+|------|------|------|
+| `ops_000_asset_first.py` | 资产优先 (7 步资产盘点) | ✅ v1.0 2026-07-10 |
+| `ops_001_aba.py` | Asset Before Action | ✅ v1.0 2026-07-10 |
+| `ops_002_find_first.py` | Find Before Build (笨者生存) | ✅ v1.0 2026-07-10 |
+| `ops_003_worker_pool.py` | Worker Pool (矿工调度) | ✅ v1.0 2026-07-10 |
+| `ops_004_recovery_first.py` | Recovery First (接管恢复) | ✅ v1.0 2026-07-10 |
+| `ops_005_self_loop.py` | Self-Loop (14 步自治) | ✅ v1.0 2026-07-10 |
+| `ops_cycle.py` | OPS 七步闭环 | ✅ v1.0 2026-07-10 |
+| `heartbeat.py` | 自治心跳 (15 分钟) | ✅ v1.0 2026-07-10 |
+| `local_miner.py` | 本地矿工 (GitHub Models) | ✅ v1.0 2026-07-10 |
+
+### GOV (Governance) 层
+| 脚本 | 协议 | 状态 |
+|------|------|------|
+| `roundtable.py` | RoundTable 圆桌会议 | ✅ v1.0 2026-07-10 |
+| `governor.py` | Governor 治理者 | ✅ v1.0 2026-07-10 |
+
+### 旧协议 (遗留)
+| 脚本 | 协议 | 状态 |
+|------|------|------|
 | `lab_bus.py` | 双实验室消息总线 | ✅ 旧协议 |
 | `lab_comm.py` | 跨实验室通信 | ✅ 旧协议 |
 | `lab_ntfy.py` | 通知层 | ✅ 旧协议 |
