@@ -1,0 +1,20 @@
+{
+  "timestamp": "20260702_1845",
+  "protocol": "反哺验证协议v1-协议2(思维种子)",
+  "factor": "signal_relative_strength_index_rsi",
+  "ic": 0.0225,
+  "p_value": 0.00065,
+  "models_used": [
+    "zhipu_glm-4-flash",
+    "github_llama405b"
+  ],
+  "model_a_name": "zhipu_glm-4-flash",
+  "model_b_name": "github_llama405b",
+  "model_a_summary": "该因子通过动量原理，利用短期与长期回报率比值排序，捕捉市场趋势。其优势在于捕捉趋势，复验IC和p值表明其有效性。局限在于趋势反转时可能失效。应用时，可结合其他因子，配置于趋势跟踪策略，但需注意趋势反转风险。",
+  "model_b_summary": "[调用失败: {\"error\": {\"message\": \" (request id: 2026070218472673458998493345580)\", \"type\": \"upstream_error\", \"param\": \"404\", \"code\": \"bad_response_status_code\"}}]",
+  "insights": [
+    "仅zhipu_glm-4-flash成功运行",
+    "种子一句话: signal_relative_strength_index_rsi复验IC=0.0225稳定有效，zhipu确认因子动量属性持续"
+  ],
+  "seed": "signal_relative_strength_index_rsi复验IC=0.0225稳定有效，zhipu确认因子动量属性持续"
+}
