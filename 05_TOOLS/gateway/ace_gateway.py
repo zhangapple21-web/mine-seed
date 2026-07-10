@@ -269,9 +269,13 @@ async def forward_to_channel(channel: Dict, model: str, body: Dict, stream: bool
 
     timeout = httpx.Timeout(120.0, connect=30.0)
 
-    async with httpx.AsyncClient(timeout=timeout) as client:
-        if stream:
-            async def stream_generator():
+    if stream:
+        # Stream 模式：client 必须在 StreamingResponse 生命周期内存活
+        # 不能用 async with，因为返回后 client 会立即关闭
+        client = httpx.AsyncClient(timeout=timeout)
+
+        async def stream_generator():
+            try:
                 async with client.stream("POST", url, json=payload, headers=headers) as response:
                     if response.status_code != 200:
                         error_body = await response.aread()
@@ -281,8 +285,12 @@ async def forward_to_channel(channel: Dict, model: str, body: Dict, stream: bool
                         )
                     async for chunk in response.aiter_bytes():
                         yield chunk
-            return StreamingResponse(stream_generator(), media_type="text/event-stream")
-        else:
+            finally:
+                await client.aclose()
+
+        return StreamingResponse(stream_generator(), media_type="text/event-stream")
+    else:
+        async with httpx.AsyncClient(timeout=timeout) as client:
             response = await client.post(url, json=payload, headers=headers)
             if response.status_code != 200:
                 raise HTTPException(
