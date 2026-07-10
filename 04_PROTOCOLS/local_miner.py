@@ -133,16 +133,80 @@ PROVIDERS = {
     "openrouter": call_openrouter,
 }
 
+# ============================================================
+# TASK-001: Model Registry — 按 Capability 索引
+# ============================================================
 
-def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None):
-    """统一模型调用 — 自动 fallback
+MODEL_REGISTRY = {
+    "ollama-qwen-vl": {
+        "provider": "ollama",
+        "model": OLLAMA_MODEL,
+        "capabilities": ["vision", "summarize", "archaeology", "code", "chinese", "fast"],
+        "priority": 1,
+    },
+    "github-gpt4omini": {
+        "provider": "github",
+        "model": "gpt-4o-mini",
+        "capabilities": ["reasoning", "coding", "debate", "summarize", "chinese"],
+        "priority": 2,
+    },
+    "glm-flash": {
+        "provider": "zhipu",
+        "model": "glm-4-flash",
+        "capabilities": ["fast", "chinese", "summarize", "reasoning"],
+        "priority": 3,
+    },
+    "openrouter-llama": {
+        "provider": "openrouter",
+        "model": "meta-llama/llama-3.3-70b-instruct:free",
+        "capabilities": ["debate", "long_context", "reasoning", "coding"],
+        "priority": 4,
+    },
+}
 
-    优先级：prefer(如果指定) → ollama → github → zhipu → openrouter
+# Capability → Model 优先级索引（运行时构建）
+_CAPABILITY_INDEX: dict = {}
+
+def _build_capability_index():
+    """构建 capability → 按优先级排序的 model 列表"""
+    global _CAPABILITY_INDEX
+    _CAPABILITY_INDEX = {}
+    for entry_name, info in MODEL_REGISTRY.items():
+        for cap in info["capabilities"]:
+            _CAPABILITY_INDEX.setdefault(cap, []).append((info["priority"], entry_name, info))
+    for cap in _CAPABILITY_INDEX:
+        _CAPABILITY_INDEX[cap].sort(key=lambda x: x[0])
+
+_build_capability_index()
+
+
+def list_capabilities() -> list:
+    """列出所有可用 capability"""
+    return sorted(_CAPABILITY_INDEX.keys())
+
+
+def list_models() -> list:
+    """列出所有注册的模型"""
+    return list(MODEL_REGISTRY.keys())
+
+
+def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None, capability=None):
+    """统一模型调用 — 按 Capability 路由 + 自动 fallback
+
+    路由逻辑：
+    1. 如果指定 capability，按 Model Registry 中该 capability 的优先级排序
+    2. 如果指定 prefer，把它移到最前面
+    3. 如果都没指定，用默认 fallback 链
+
     任何一个成功就返回，不继续尝试。
     """
-    chain = list(MODEL_FALLBACK_CHAIN)
+    # 构建调用链
+    if capability and capability in _CAPABILITY_INDEX:
+        chain = [(info["provider"], info["model"]) for _, _, info in _CAPABILITY_INDEX[capability]]
+    else:
+        chain = list(MODEL_FALLBACK_CHAIN)
+
     if prefer and prefer in PROVIDERS:
-        # 把 prefer 移到最前面
         chain = [(prefer, chain[0][1])] + [(p, m) for p, m in chain if p != prefer]
 
     errors = []
@@ -150,7 +214,6 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None):
         provider_fn = PROVIDERS.get(provider_name)
         if not provider_fn:
             continue
-        # 快速检测 ollama 是否可用（避免每次都等超时）
         if provider_name == "ollama" and not check_ollama_available():
             errors.append(f"ollama: not available")
             continue
@@ -159,6 +222,7 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None):
         if "error" not in result:
             result.setdefault("model", model_name)
             result["provider"] = provider_name
+            result["capability"] = capability or "default"
             return result
         errors.append(f"{provider_name}: {result['error']}")
 
@@ -216,17 +280,23 @@ def main():
     args = parser.parse_args()
 
     if args.test:
-        print("=== Model Connectivity Test ===")
+        print("=== Model Registry ===")
+        for name, info in MODEL_REGISTRY.items():
+            print(f"  {name:25s} provider={info['provider']:12s} priority={info['priority']} caps={info['capabilities']}")
+        print(f"\n  Capabilities: {list_capabilities()}")
+        print(f"\n=== Provider Connectivity ===")
         print(f"  Ollama ({OLLAMA_BASE}): {'OK' if check_ollama_available() else 'NOT AVAILABLE'}")
         print(f"  GitHub Models: {'OK' if GITHUB_PAT else 'NO PAT'}")
         print(f"  Zhipu: {'OK' if ZHIPU_KEY else 'NO KEY'}")
         print(f"  OpenRouter: {'OK' if OPENROUTER_KEY else 'NO KEY'}")
-        print("\n  Testing call_model()...")
-        r = call_model("Say hello in one word.", max_tokens=10)
-        if "error" in r:
-            print(f"  Result: FAILED — {r.get('errors', r.get('error'))}")
-        else:
-            print(f"  Result: OK — provider={r.get('provider')}, model={r.get('model')}")
+
+        print(f"\n=== Capability Routing Test ===")
+        for cap in ["fast", "archaeology", "debate"]:
+            r = call_model(f"Say one word about {cap}.", max_tokens=10, capability=cap)
+            if "error" in r:
+                print(f"  {cap:15s} → FAILED ({r.get('errors', r.get('error'))})")
+            else:
+                print(f"  {cap:15s} → provider={r.get('provider'):12s} model={r.get('model')}")
         return
 
     if not args.task:
