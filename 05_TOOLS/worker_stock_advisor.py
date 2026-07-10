@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-import os, sys, json, argparse, subprocess, urllib.request
+"""
+Stock Advisor Worker - Cloud Worker
+====================================
+Runs stock_advisor.py, saves report to cloud/advisor/, pushes to GitHub.
+"""
+import os, sys, json, argparse, subprocess, urllib.request, importlib.util
 from pathlib import Path
 from datetime import datetime
 
@@ -9,22 +14,43 @@ sys.path.insert(0, str(WORKSPACE))
 CLOUD_DIR = WORKSPACE / "cloud" / "advisor"
 
 
+def import_module(path):
+    spec = importlib.util.spec_from_file_location(path.stem, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def run_stock_advisor(date=None):
     date_str = date or datetime.now().strftime("%Y%m%d")
     CLOUD_DIR.mkdir(parents=True, exist_ok=True)
     output_file = CLOUD_DIR / f"advisor_{date_str}.md"
 
     if output_file.exists():
-        return {"status": "skipped", "reason": f"already exists"}
+        return {"status": "skipped", "reason": f"already exists: {output_file.name}"}
 
     try:
-        from advisor.stock_advisor import generate_report
-        report = generate_report(date=date_str)
+        # Import stock_advisor.py from 05_TOOLS/advisor/
+        advisor_path = WORKSPACE / "05_TOOLS" / "advisor" / "stock_advisor.py"
+        if not advisor_path.exists():
+            return {"status": "error", "error": f"stock_advisor.py not found at {advisor_path}"}
+
+        advisor_module = import_module(advisor_path)
+        advisor = advisor_module.StockAdvisor()
+        success, report = advisor.run()
+
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(report)
-        return {"status": "ok", "output": str(output_file), "date": date_str, "size": len(report)}
+
+        return {
+            "status": "ok" if success else "warning",
+            "output": str(output_file),
+            "date": date_str,
+            "size": len(report)
+        }
     except Exception as e:
-        return {"status": "error", "error": str(e)}
+        import traceback
+        return {"status": "error", "error": str(e), "trace": traceback.format_exc()}
 
 
 def git_push():
@@ -56,15 +82,25 @@ def notify_ntfy(message):
 
 def main():
     parser = argparse.ArgumentParser(description="Stock Advisor Worker")
-    parser.add_argument("--date", help="日期 (YYYYMMDD)")
-    parser.add_argument("--push", action="store_true", help="Push Git")
-    parser.add_argument("--notify", action="store_true", help="ntfy.sh 通知")
+    parser.add_argument("--date", help="Date (YYYYMMDD)")
+    parser.add_argument("--push", action="store_true", help="Push to Git")
+    parser.add_argument("--notify", action="store_true", help="ntfy.sh notification")
+    parser.add_argument("--force", action="store_true", help="Overwrite existing report")
     args = parser.parse_args()
 
-    result = run_stock_advisor(date=args.date)
+    date_str = args.date or datetime.now().strftime("%Y%m%d")
+    output_file = CLOUD_DIR / f"advisor_{date_str}.md"
+
+    if output_file.exists() and not args.force:
+        result = {"status": "skipped", "reason": f"already exists: {output_file.name}"}
+    else:
+        if output_file.exists():
+            output_file.unlink()
+        result = run_stock_advisor(date=args.date)
+
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
-    if args.push and result.get("status") == "ok":
+    if args.push and result.get("status") in ("ok", "warning"):
         git_push()
 
     if args.notify:

@@ -66,9 +66,19 @@ def save_pushed_files(pushed):
 
 def git_pull():
     try:
+        # Stash any local changes before pulling
+        subprocess.run(
+            ["git", "stash"],
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10
+        )
         result = subprocess.run(
             ["git", "pull", "--rebase", "origin", "main"],
             cwd=str(WORKSPACE), capture_output=True, text=True, timeout=30
+        )
+        # Restore stashed changes
+        subprocess.run(
+            ["git", "stash", "pop"],
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10
         )
         if result.returncode == 0:
             log.info("Git pull successful")

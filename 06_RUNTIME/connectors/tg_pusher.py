@@ -4,7 +4,8 @@ import os, json, urllib.request
 
 class TGPusher:
     def __init__(self, token=None, chat_id=None):
-        self.token = token or os.environ.get("TG_BOT_TOKEN_1", "")
+        # Bot 1 (8384...) is invalid. Use Bot 2 (@Sck01Bot) as default.
+        self.token = token or os.environ.get("TG_BOT_TOKEN_2", "") or os.environ.get("TG_BOT_TOKEN_1", "")
         self.chat_id = chat_id or os.environ.get("TG_CHAT_ID", "")
         self.base_url = f"https://api.telegram.org/bot{self.token}"
 
