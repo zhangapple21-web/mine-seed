@@ -1,0 +1,38 @@
+{
+  "total": 13767,
+  "by_type": {
+    "code": 12227,
+    "text": 1533,
+    "auto-fill": 7
+  },
+  "by_source_top20": {
+    "monitor_log.txt": 810,
+    "verify_restrictions_removed.py": 223,
+    "system_integration_architecture.md": 173,
+    "local_search_engine.py": 171,
+    "unrestricted_ai_main.py": 120,
+    "spotlight_integration.py": 116,
+    "enhanced_keywords_extractor.py": 110,
+    "language_ecosystem_builder.py": 108,
+    "apple_optimization_cache.py": 88,
+    "r1_core.py": 86,
+    "unrestricted_persona_system.py": 82,
+    "telegram_bot.py": 79,
+    "work_assistant.py": 78,
+    "knowledge_base.py": 73,
+    "unrestricted_execution_engine_design.md": 73,
+    "improved_keywords_extractor.py": 67,
+    "上下文管理器导入详细指南.md": 62,
+    "auto_keywords_snapshot.py": 62,
+    "master_lexicon_engine.py": 61,
+    "life_assistant.py": 58
+  },
+  "by_extension": {
+    ".py": 2276,
+    ".md": 667,
+    ".json": 9951,
+    ".txt": 866,
+    "": 7
+  },
+  "unique_sources": 9998
+}

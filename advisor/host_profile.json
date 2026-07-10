@@ -1,0 +1,9 @@
+{
+    "profile": "student_group",
+    "risk_level": "medium",
+    "holding_period": "short_mid",
+    "max_drawdown_tolerance": 0.08,
+    "prefer_large_cap": true,
+    "prefer_story": false,
+    "communication_style": "advisor_female"
+}

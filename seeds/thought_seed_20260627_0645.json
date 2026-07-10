@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260627_0645",
+  "signal": "signal_price_range_volatility_ratio",
+  "category": "volatility",
+  "ic": -0.0253,
+  "p_value": 5.31e-05,
+  "model_a": {
+    "name": "glm-4-flash",
+    "key_insights": [
+      "趋势跟踪：低比率=超卖买入，高比率=过热卖出",
+      "风险管理：比率异常预示波动，可调整止损",
+      "组合建议：+动量因子/+波动率因子/+情绪因子",
+      "总结：价格波动率与均价比率揭示市场情绪与波动趋势"
+    ]
+  },
+  "model_b": {
+    "name": "NIM mistral-medium-3.5-128b",
+    "key_insights": [
+      "高位反转策略：高比率→做空，利用均值回归",
+      "IC_IR仅-0.112，预测能力弱需搭配",
+      "适合均值回归市场，不适合强趋势市场",
+      "总结：高价比均值预示回调，但IC_IR低需搭配使用"
+    ]
+  },
+  "difference_analysis": [
+    "GLM偏向通用趋势跟踪解读，未严格处理IC为负的指向性",
+    "Mistral准确抓住IC负向→反转信号（高比率→跌），更严谨",
+    "GLM没有提IC_IR低的问题，Mistral明确指出了局限性（信息比率-0.112）",
+    "GLM更适合营销包装/决策建议，Mistral更适合技术分析/风控评估"
+  ],
+  "seed_one_sentence": "高价比均值预示回调，IC_IR低限制单因子效用，需搭配动量或情绪因子组合使用"
+}

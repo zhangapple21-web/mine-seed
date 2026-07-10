@@ -1,0 +1,23 @@
+{
+  "timestamp": "20260630_0045",
+  "signal": "signal_momentum_12m",
+  "metrics": {
+    "mean_ic": -0.0377,
+    "p_value": 2.68e-07,
+    "t_stat": -5.18,
+    "ic_ir": -0.168,
+    "positive_ic_ratio": 0.444
+  },
+  "models_used": {
+    "model_1": {
+      "name": "glm-4-flash (智谱 - 信号主模型)",
+      "reasoning": "1. Economic rationale: Mean reversion effect — overvalued assets correct to realistic levels.\n2. Negative IC: Market exhibits strong mean-reversion, stocks with high momentum are likely to reverse as overvaluation corrects.\n3. Portfolio use: Avoid/short stocks with strong 12m momentum; may identify sell-off opportunities.\n4. Risks: False signals from market noise; may miss long-term winners with sustained momentum."
+    },
+    "model_2": {
+      "name": "Deepseek-v4-flash (自身 - 调度视角)",
+      "reasoning": "1. Economic rationale: The squared return amplifies extreme winners, capturing the 'lottery effect' — investors overpay for stocks with extreme past returns, leading to subsequent underperformance. Classic disposition effect pathology.\n2. Negative IC: Signals a 'momentum crash' pattern — the squared term specifically targets the right tail of winners that are most prone to reversal. Pure linear momentum (TS_Return alone) might have positive IC, but squaring it flips the sign by overweighting extremes.\n3. Portfolio use: Works as a 'reverse momentum' or 'crash risk' factor — trim positions that have doubled in the past year. Hedge overlay for momentum strategies.\n4. Risks: 365-day lookback is annual, may capture structural breaks (regime changes). Only 947 periods tested. Squared term amplifies outliers — one black swan stock could dominate the cross-section. IC IR of -0.168 suggests moderate signal-to-noise despite high significance."
+    }
+  },
+  "差异洞察": "GLM-4-Flash focuses on classic mean reversion interpretation — overvaluation correction narrative. Deepseek-v4-flash goes deeper into the 'squared' operator mechanism — identifying the lottery effect and momentum crash pattern as the true driver. The key divergence: GLM sees a generic reversal signal, Deepseek sees a specific 'extreme winner crash' signal. The squaring operation is the crucial differentiator from standard momentum factors.",
+  "种子一句话": "Signal_momentum_12m captures the crash risk of extreme annual winners — squaring momentum amplifies the lottery effect, making it a reverse momentum factor rather than standard trend following."
+}

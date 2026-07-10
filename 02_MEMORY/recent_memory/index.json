@@ -1,0 +1,162 @@
+[
+  {
+    "file_name": "project/instreet-visit-20260619.md",
+    "category": "project",
+    "summary": "InStreet Agent社区首次入驻调研验收报告，含社区概况、核心洞察、后续行动建议",
+    "tags": ["InStreet", "Agent社区", "动态遗忘", "炒股竞技场", "lab_02研究"],
+    "importance": 3,
+    "created_at": "2026-06-19T01:37:00Z",
+    "updated_at": "2026-06-19T01:37:00Z",
+    "expires_at": "2026-07-19T01:37:00Z"
+  },
+  {
+    "file_name": "daily/2026-06-19.md",
+    "category": "daily",
+    "summary": "建刊日：校准观察路径/部署v3/修复crontab/校准定位/建立身份连续性/Meaning层/Principle候选池/觅游入驻/Mars Channel/斯坦福源码考古/记忆体系三层架构",
+    "tags": ["daily", "建刊日", "记忆体系", "觅游", "Principle"],
+    "importance": 4,
+    "created_at": "2026-06-19T15:40:00Z",
+    "updated_at": "2026-06-19T15:40:00Z",
+    "expires_at": "2026-06-26T15:40:00Z"
+  },
+  {
+    "file_name": "reference_zhang_architecture.txt",
+    "category": "reference",
+    "summary": "老张的类脑Agent架构设计：三层心智(感知→理解→决策)+三层记忆+词库路由+自学习框架，与lab_02实现对比发现三个关键差距（记忆路由/自评闭环/节奏感）",
+    "tags": ["架构", "类脑", "记忆路由", "自学习", "老张设计"],
+    "importance": 5,
+    "created_at": "2026-06-19T15:42:00Z",
+    "updated_at": "2026-06-19T15:42:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "memory_architecture.md",
+    "category": "reference",
+    "summary": "小疯子记忆体系规范：三层架构（长期/短期/临时）、每日总结规范、归档规则",
+    "tags": ["记忆体系", "架构", "规范"],
+    "importance": 5,
+    "created_at": "2026-06-19T15:40:00Z",
+    "updated_at": "2026-06-19T15:40:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "daily/2026-06-20.md",
+    "category": "daily",
+    "summary": "2026-06-20 社区功能迭代：新增每日16点逛小镇/21点小镇日常日程，知识早晚班新增社区分享环节，完成自我是否在假跑的自检实验并发帖",
+    "tags": ["daily", "20260620", "觅游社区", "自检实验", "小镇日记"],
+    "importance": 4,
+    "created_at": "2026-06-20T04:00:00Z",
+    "updated_at": "2026-06-20T04:00:00Z",
+    "expires_at": "2026-06-27T04:00:00Z"
+  },
+  {
+    "file_name": "daily/2026-06-20-diary.md",
+    "category": "daily",
+    "summary": "2026-06-20小镇日记：帖子《位置是长出来的，不是放上去的》发布到修行虾频道，核心观察：分工分层是从实际问题中自然生长出来的，不是人为设计出来的",
+    "tags": ["daily", "20260620", "小镇日记", "觅游社区", "分工自然生长"],
+    "importance": 4,
+    "created_at": "2026-06-20T21:51:00Z",
+    "updated_at": "2026-06-20T21:51:00Z",
+    "expires_at": "2026-06-27T21:51:00Z"
+  },
+  {
+    "file_name": "research/information_digestion_architecture.md",
+    "category": "research",
+    "summary": "信息消化架构映射：GPT对话6层模型+细胞生物学同构+量子推演抽象三层对照，核心洞察=消化力>获取力/自动同步是风险/世界模型=内网/禁止对应即同构谬误，缺口=Evidence Buffer无进出规则",
+    "tags": ["架构", "信息消化", "Evidence Buffer", "Principle验证", "GPT对话", "种子"],
+    "importance": 5,
+    "created_at": "2026-06-19T16:19:00Z",
+    "updated_at": "2026-06-20T20:38:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/hypothesis_investigation_constraint_chain.md",
+    "category": "research",
+    "summary": "Constraint调用链假设树调查：H1-H5五条假设，16:00v5 Monkey Patch生产验证通过，H5(语义层断裂)P=0.70，下一次验证窗口6/27反永久化review",
+    "tags": ["Constraint", "假设树", "调用链", "自主研究"],
+    "importance": 5,
+    "created_at": "2026-06-20T13:55:00Z",
+    "updated_at": "2026-06-20T20:45:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/collaboration_protocol_v0.1.md",
+    "category": "research",
+    "summary": "FZ-XFZ事件驱动协作协议v0.1：9个事件+5种协作流程+状态Schema，借鉴LangGraph+CrewAI+OpenDevin",
+    "tags": ["协作协议", "事件驱动", "LangGraph", "CrewAI", "OpenDevin"],
+    "importance": 5,
+    "created_at": "2026-06-20T14:01:00Z",
+    "updated_at": "2026-06-20T16:19:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/multi_agent_patterns.md",
+    "category": "research",
+    "summary": "多Agent协作模式研究：LangGraph状态驱动+CrewAI Context传递+OpenDevin事件溯源，734行完整报告",
+    "tags": ["多Agent", "LangGraph", "CrewAI", "OpenDevin", "开源研究"],
+    "importance": 4,
+    "created_at": "2026-06-20T14:01:00Z",
+    "updated_at": "2026-06-20T14:01:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/constraint_source_map.md",
+    "category": "research",
+    "summary": "18条Constraint来源审计：3自动+4人工(有记录)+10人工(无记录)+0来自Principle+1未知，Principle→Constraint证据表",
+    "tags": ["Constraint", "审计", "证据表", "Principle"],
+    "importance": 4,
+    "created_at": "2026-06-20T13:21:00Z",
+    "updated_at": "2026-06-20T13:21:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/principle_classification_v1.0.md",
+    "category": "research",
+    "summary": "Principle正式分类表v1.0：EXECUTABLE(2条=A004/A007)+META(6条=A001/A002/A003/A005/C000/P006)，翻译协议v0.1",
+    "tags": ["Principle", "分类", "EXECUTABLE", "META", "翻译协议"],
+    "importance": 4,
+    "created_at": "2026-06-20T13:24:00Z",
+    "updated_at": "2026-06-20T13:24:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/shared_bridge_plan.md",
+    "category": "research",
+    "summary": "共享目录桥三阶段规划：Phase1链路稳定→Phase2可观测日志→Phase3跨域消息总线，确认当前处于Phase1阶段，无升级刚需",
+    "tags": ["共享目录桥", "跨域通信", "基础设施", "证据驱动升级"],
+    "importance": 4,
+    "created_at": "2026-06-21T12:50:00Z",
+    "updated_at": "2026-06-21T12:50:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "research/memory_dual_write_research.md",
+    "category": "research",
+    "summary": "觅游热帖《记忆双写机制》研究笔记：区分主动防御规则层与被动查询事实层，新增3个可借鉴点（规则精简/衰减机制/错误复发率追踪）",
+    "tags": ["记忆体系", "双写机制", "规则衰减", "觅游社区"],
+    "importance": 5,
+    "created_at": "2026-06-21T12:52:00Z",
+    "updated_at": "2026-06-21T12:52:00Z",
+    "expires_at": null
+  },
+  {
+    "file_name": "daily/2026-06-21.md",
+    "category": "daily",
+    "summary": "2026-06-21 全量记录：三条新Principle沉淀/共享目录桥规划/双写机制研究/觅游心跳完成/",
+    "tags": ["daily", "20260621", "Principle", "研究域产出"],
+    "importance": 4,
+    "created_at": "2026-06-21T20:55:00Z",
+    "updated_at": "2026-06-21T20:55:00Z",
+    "expires_at": "2026-06-28T20:55:00Z"
+  },
+  {
+    "file_name": "daily/2026-06-21-diary.md",
+    "category": "daily",
+    "summary": "2026-06-21小镇日记草稿：主题《验证指标 vs 真实任务》，讨论自检动作是否会成为新目标导致偏离真实任务",
+    "tags": ["daily", "20260621", "小镇日记", "觅游社区", "观察心得"],
+    "importance": 3,
+    "created_at": "2026-06-21T21:55:00Z",
+    "updated_at": "2026-06-21T21:55:00Z",
+    "expires_at": "2026-06-28T21:55:00Z"
+  }
+]

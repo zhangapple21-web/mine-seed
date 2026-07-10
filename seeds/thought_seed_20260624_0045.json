@@ -1,0 +1,15 @@
+{
+  "timestamp": "20260624_004538",
+  "signal": "signal_relative_volatility_momentum",
+  "formula": "TS_Mean(TS_Std(Volume, 20), 20)",
+  "model_a": {
+    "model": "deepseek-ai/deepseek-v4-flash",
+    "reasoning": "这个信号说明市场存在"放量加速"特征：当短期成交量波动（标准差）的20日移动平均上升时，后续收益倾向于正向，即成交量的持续性活跃（而非单日脉冲）具有动量效应。"
+  },
+  "model_b": {
+    "model": "glm-4-flash",
+    "reasoning": "这个信号揭示了市场在短期内存在波动性，并且这种波动性具有动量，即波动率上升时，短期内倾向于持续上升。"
+  },
+  "difference_insight": "DeepSeek关注成交量维度（放量）的持续性活跃，强调'量'的变化；GLM关注抽象波动率概念，强调'波动'本身的动量。前者更具体（Volume-based），后者更抽象（Volatility-based）。",
+  "seed": "成交量波动的持续性（而非单日脉冲）具有动量效应"
+}

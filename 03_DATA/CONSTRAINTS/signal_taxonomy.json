@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "created": "2026-06-19",
+  "philosophy": "分类基于观察，不基于假设。泛化需要30天数据支撑。",
+  "categories": {
+    "simple_signal": {
+      "description": "单因子、单条件、模板化运算",
+      "types": ["momentum", "breakout", "trend", "volume_spike", "price_level"],
+      "evidence_basis": "待积累"
+    },
+    "complex_signal": {
+      "description": "多因子组合、条件链、跨窗口运算",
+      "types": ["mean_reversion", "volume_price_divergence", "cross_factor", "multi_window", "conditional_chain"],
+      "evidence_basis": "待积累"
+    }
+  },
+  "tracking_schema": {
+    "fields": ["task_type", "worker", "success", "error_type", "timestamp"],
+    "note": "每次信号发现执行都记录，无论成功失败"
+  },
+  "generalization_rule": "至少30天数据+每类5+样本才允许从specific AVOID升级为category AVOID",
+  "current_constraints": {
+    "AVOID_specific": [
+      "glm_4_flash + mean_reversion",
+      "glm_4_flash + volume_price_divergence"
+    ],
+    "AVOID_category": [],
+    "note": "category级AVOID为空，证据不足，禁止泛化"
+  }
+}
