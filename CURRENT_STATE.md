@@ -71,24 +71,23 @@ It doesn't keep gaining new abilities — it keeps improving collaboration effic
 
 ---
 
-## Civilization Map (7 repos)
+## Civilization Map
+
+Last scanned: 2026-07-10T21:08:48.009817
 
 ```
 zhangapple21-web
 │
-├── 🏠 mine-seed              Active     9.3MB   R2 HQ (今天的主战场)
-├── ⚡ ace_core               Active     1.5MB   Runtime 精选 (刚从 8 天停更恢复)
-├── 🏛️ r1-archaeology          Warming    310KB   考古档案馆 (昨天更新过)
-├── 🌱 r1-open-source-seed    Stale       32KB   开源种子 (几乎空的)
-├── 📜 R1                     Dormant      0KB   文明思想/官网 (空壳)
-├── 🧪 -                      Dormant      0KB   测试仓库
-└── 🔑 coze-assets            PRIVATE      ?     文明钥匙 (密钥，绝不公开)
+├── ✅ ace_core             Runtime Core         0d stale
+├── ✅ mine-seed            Civilization Seed    0d stale
+├── 🟡 r1-archaeology       Civilization Memory  1d stale
+├── 🟡 r1-open-source-seed  Open Source Seed     2d stale
+├── 🔴 R1                   Civilization Philosophy 19d stale
+├── 🔴 -                    Unknown              21d stale
 ```
 
-**Cross-repo observation:** Each repo is an organ, not a silo.
-When one is stale, it's a civilization health problem, not just "inactive".
-
----
+**Stats**: 6 repos (6 public, 0 private)
+**Stale**: 0
 
 ## Latest Evolution (this week)
 
