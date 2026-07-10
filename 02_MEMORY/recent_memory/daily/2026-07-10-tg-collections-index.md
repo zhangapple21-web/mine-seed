@@ -58,19 +58,41 @@
 |------|------|------|------|
 | TG_BOT_TOKEN_1 | Bot API | ❌ 失效 | 只能收消息 |
 | TG_BOT_TOKEN_2 (@Sck01Bot) | Bot API | ✅ 有效 | 可发消息、收消息 |
-| **api_id** | **MTProto** | **❌ 不存在** | **需my.telegram.org申请** |
-| **api_hash** | **MTProto** | **❌ 不存在** | **需my.telegram.org申请** |
+| **api_id** | **MTProto** | **✅ 已配置** | **38398440** |
+| **api_hash** | **MTProto** | **✅ 已配置** | **已写入 miner_env.sh** |
+| MTProto服务器 (测试) | MTProto | ✅ | 149.154.167.40:443 DC 2 |
+| MTProto服务器 (生产) | MTProto | ✅ | 149.154.167.50:443 DC 2 |
 
-## 后续行动（待你确认）
+### Telethon 拉取脚本
 
-1. **如果你有新的收藏消息（2026-06-18之后）**：
-   - 提供方式 A：直接告诉我"我加了几条新收藏"，我建立新的考古任务
-   - 提供方式 B：在 my.telegram.org 申请 api_id/api_hash → 我用 Telethon 自动拉取
+- 脚本位置: `05_TOOLS/miner/tg_collections_miner.py`
+- 已配置: api_id=38398440, api_hash, 5个已知收藏夹
+- 已支持: 验证码输入 + 两步验证密码
+- Session: `tg_collections.session` (首次运行后自动保存)
 
-2. **如果你的收藏夹是私密的**：
-   - 当前公开可访问的是 `@Sck01Bot` 加好友后能看到的内容
-   - 你的私人收藏需要 MTProto API
+### 登录状态
 
-3. **如果只是想保持当前考古成果**：
-   - 当前已 100% 覆盖可见的 769 条消息
-   - 增量为 0（除非有新增）
+- 2026-07-10: 多次验证码尝试失败 → 触发Telegram限流(24h)
+- 根因: 脚本未处理两步验证密码 → 已修复
+- 下次运行: 2026-07-11 11:46 UTC 后 (限流解除)
+
+运行命令:
+```cmd
+cd C:\Users\User\ace_workspace\mine-seed\05_TOOLS\miner
+"C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe" tg_collections_miner.py --phone "+85592538691"
+```
+
+## 后续行动
+
+1. **2026-07-11 拉取收藏夹**:
+   - 限流解除后运行脚本
+   - 输入验证码 + 两步验证密码
+   - 自动拉取5个收藏夹全量消息
+
+2. **新增收藏消息检测**:
+   - Telethon 拉取后与现有769条对比
+   - 如有增量，触发新考古任务
+
+3. **当前考古成果**:
+   - 已 100% 覆盖可见的 769 条消息
+   - 10个核心Artifact已沉淀为21条公理

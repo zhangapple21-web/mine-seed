@@ -65,11 +65,29 @@
 8. lab_01 观测脚本（observe_lab01.py）
 9. TG 考古：5收藏夹 769条消息结构已完整理解
 10. R1 快照解压（v1 + v2 + skeleton + v11）
+11. TG MTProto API 配置（api_id=38398440, api_hash 已写入 miner_env.sh）
+12. Telethon 收藏夹拉取脚本（tg_collections_miner.py，支持验证码+两步验证密码）
+13. Windows 路径适配器（win_run.py，将 /home/coze/ 映射到工作区）
+14. 所有5个运行脚本更新使用 win_run.py 适配器
+15. Telegram Desktop 下载文件整理归档（5个JSON配置 + 12个文档 + 21个zip归档）
+
+## TG 收藏夹拉取状态
+
+- api_id/api_hash: 已配置
+- Telethon 1.44.0: 已安装
+- 脚本: tg_collections_miner.py 已就绪
+- 阻塞: Telegram 限流（24h），需等 2026-07-11 11:46 UTC 后重试
+- 运行命令: `python tg_collections_miner.py --phone "+85592538691"`
+
+## lab_01 状态
+
+- zrok 隧道: 仍然 502（oneapi + data 均不可达）
+- 需在 lab_01 上重建 zrok share
 
 ## 今日待你执行
 
 1. 以管理员身份运行 `setup_tasks.ps1` 激活 Windows 自主循环
-2. （可选）补一个 TG api_id/api_hash，让 Telethon 拉取实时收藏夹
+2. 明天运行 tg_collections_miner.py 拉取收藏夹
 
 ## 长期任务（ACE 自主循环每周/月节奏）
 

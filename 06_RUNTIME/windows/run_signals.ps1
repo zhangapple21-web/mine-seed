@@ -2,6 +2,7 @@
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
+$ScriptDir = "$Workspace\06_RUNTIME\windows"
 $Python = "C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe"
 $LogDir = "$Workspace\mine_output\signals"
 $LogFile = "$LogDir\signal_cron.log"
@@ -18,5 +19,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# Run signal discovery
-& $Python "$Workspace\05_TOOLS\signals\signal_discovery.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+# Run signal discovery via Windows adapter
+& $Python "$ScriptDir\win_run.py" "$Workspace\05_TOOLS\signals\signal_discovery.py" 2>&1 | Tee-Object -FilePath $LogFile -Append

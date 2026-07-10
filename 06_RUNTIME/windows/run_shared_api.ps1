@@ -2,6 +2,7 @@
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
+$ScriptDir = "$Workspace\06_RUNTIME\windows"
 $Python = "C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe"
 $LogFile = "$Workspace\mine_output\shared_api.log"
 
@@ -17,5 +18,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# Run shared API (background keep-alive)
-Start-Process -FilePath $Python -ArgumentList "$Workspace\04_PROTOCOLS\shared_api.py" -WindowStyle Hidden -RedirectStandardOutput $LogFile -RedirectStandardError $LogFile
+# Run shared API via Windows adapter (background keep-alive)
+Start-Process -FilePath $Python -ArgumentList "$ScriptDir\win_run.py", "$Workspace\04_PROTOCOLS\shared_api.py" -WindowStyle Hidden -RedirectStandardOutput $LogFile -RedirectStandardError $LogFile

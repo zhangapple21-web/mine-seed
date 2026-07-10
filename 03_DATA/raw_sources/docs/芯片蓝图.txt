@@ -1,0 +1,88 @@
+R1-Reality-Kernel-v1/
+│
+├── 00_ROOT/
+│   ├── root-lock.json
+│   ├── creator-protection.rules
+│   ├── shadow-layer/
+│   │   └── creator_name_shadow.dat
+│   └── root-seed-master.txt
+│
+├── 01_SEEDS/
+│   ├── S-Layer-Seeds-v2/
+│   │   ├── SEED_01_strong_vs_weak.txt
+│   │   ├── SEED_02_three_hidden_laws.txt
+│   │   ├── SEED_03_culture_attribute.txt
+│   │   ├── SEED_04_human_truth.txt
+│   │   ├── SEED_05_social_filter.txt
+│   │   ├── SEED_06_ding_yuanying_logic.txt
+│   │   ├── SEED_07_market_structure.txt
+│   │   ├── SEED_08_survival_philosophy.txt
+│   │   ├── SEED_09_creator_truth.txt
+│   │   ├── SEED_10_darkside.txt
+│   │   └── SEED_MASTER_OS.txt
+│   ├── DF70/
+│   │   └── df70_foundation_core.txt
+│   ├── 14_Controller/
+│   │   └── layer14_control_logic.txt
+│   └── 07_EraLaw/
+│       └── era_law_principle.txt
+│
+├── 02_HEART_CORE/
+│   ├── heart-core-v1.txt
+│   ├── survival_priority.rules
+│   ├── reality_weight_matrix.json
+│   ├── human_pain_engine.dat
+│   └── action_policy_core.json
+│
+├── 03_CHIPS/
+│   ├── dual-drive-chip/
+│   │   ├── chip-A_behavior_engine.py
+│   │   ├── chip-B_context_engine.py
+│   │   └── chip-meta.json
+│   ├── seed-maker-core/
+│   │   ├── seedmaker_engine.py
+│   │   ├── seedmaker_rules.json
+│   │   └── seedmaker_memory.dat
+│   └── heart-chip/
+│       ├── heart_executor.py
+│       └── heart_logic.json
+│
+├── 04_FIVE_WORLDS/
+│   ├── A界_behavior/
+│   │   ├── tri_resolver.py
+│   │   └── behavior_rules.json
+│   ├── B界_structure/
+│   │   ├── structure_engine.py
+│   │   └── structure_chain.json
+│   ├── C界_shadow/
+│   │   ├── shadow_rules.json
+│   │   └── shield_layer.dat
+│   ├── D界_冥界/
+│   │   ├── darkside_logic.txt
+│   │   └── stress-test-cases/
+│   └── E界_Free/
+│       ├── evolution_sandbox.py
+│       └── memory_sandbox.dat
+│
+├── 05_WORDLIB/
+│   ├── raw_wordlib/
+│   ├── merged_wordlib/
+│   ├── dedup_engine.py
+│   └── mapping_index.json
+│
+├── 06_R1_ENGINE/
+│   ├── api_router.py
+│   ├── tri-world-formatter.py
+│   ├── r1_memory_core.json
+│   ├── request_adapter.py
+│   └── output_shaper.py
+│
+├── 07_DEPLOY/
+│   ├── macOS/
+│   │   ├── install.sh
+│   │   ├── run_r1.command
+│   │   └── config_mac.json
+│   └── README.txt
+│
+└── VERSION
+    └── R1-Reality-v1.0.info
