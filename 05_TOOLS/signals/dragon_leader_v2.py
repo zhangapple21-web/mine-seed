@@ -3,7 +3,7 @@
 Dragon Leader v2 — 基于 a-stock-data 的龙头发现系统
 
 数据源优先级：
-  mootdx TCP → 腾讯行情 → 东财(限流+重试退避) → akshare(全市场+板块降级)
+  东财(限流+重试退避) → akshare(全市场+板块降级) → baostock(行业分类降级)
 
 数据源：akshare(全市场+板块) + baostock(行业分类降级)
 
@@ -66,112 +66,7 @@ logger = logging.getLogger(__name__)
 
 
 # ====================================================================
-# 数据层 — 第一优先级：mootdx TCP
-# ====================================================================
-def _tdx_probe(ip, port, timeout=2.0):
-    try:
-        with socket.create_connection((ip, port), timeout=timeout):
-            return True
-    except Exception:
-        return False
-
-_TDX_SERVERS = [
-    ('119.97.185.59', 7709), ('124.70.133.119', 7709),
-    ('116.205.183.150', 7709), ('123.60.73.44', 7709),
-    ('116.205.163.254', 7709), ('121.36.225.169', 7709),
-]
-
-def get_tdx_client():
-    """创建 mootdx 客户端"""
-    from mootdx.quotes import Quotes
-    for ip, port in _TDX_SERVERS:
-        if _tdx_probe(ip, port):
-            return Quotes.factory(market='std', server=(ip, port))
-    try:
-        return Quotes.factory(market='std', bestip=True)
-    except Exception:
-        pass
-    return Quotes.factory(market='std')
-
-
-def get_mootdx_kline(symbol: str, count: int = 10) -> Optional[pd.DataFrame]:
-    """从 mootdx 获取日K线"""
-    try:
-        client = get_tdx_client()
-        klines = client.bars(symbol=symbol, category=4, offset=count)
-        if klines is not None and not klines.empty:
-            return klines
-        return None
-    except Exception as e:
-        logger.warning(f"mootdx K线 {symbol} 失败: {e}")
-        return None
-
-
-def get_mootdx_quotes(symbols: list) -> Optional[pd.DataFrame]:
-    """从 mootdx 获取实时报价（46字段）"""
-    try:
-        client = get_tdx_client()
-        return client.quotes(symbol=symbols)
-    except Exception as e:
-        logger.warning(f"mootdx quotes 失败: {e}")
-        return None
-
-
-# ====================================================================
-# 数据层 — 第二优先级：腾讯行情
-# ====================================================================
-def get_tencent_batch(codes: list) -> dict:
-    """腾讯批量行情（不封IP，GBK编码）"""
-    result = {}
-    try:
-        # 分批查，每批最多50只
-        batch_size = 50
-        for i in range(0, len(codes), batch_size):
-            batch = codes[i:i+batch_size]
-            prefixed = []
-            for c in batch:
-                if c.startswith(("6", "9")):
-                    prefixed.append(f"sh{c}")
-                elif c.startswith("8"):
-                    prefixed.append(f"bj{c}")
-                else:
-                    prefixed.append(f"sz{c}")
-            url = "https://qt.gtimg.cn/q=" + ",".join(prefixed)
-            req = urllib.request.Request(url)
-            req.add_header("User-Agent", "Mozilla/5.0")
-            resp = urllib.request.urlopen(req, timeout=10)
-            data = resp.read().decode("gbk")
-            for line in data.strip().split(";"):
-                if not line.strip() or "=" not in line or '"' not in line:
-                    continue
-                vals = line.split('"')[1].split("~")
-                if len(vals) < 53:
-                    continue
-                code_raw = vals[0]
-                code_clean = code_raw[2:] if len(code_raw) > 2 else code_raw
-                result[code_clean] = {
-                    "name": vals[1],
-                    "code": code_clean,
-                    "price": float(vals[3]) if vals[3] else 0,
-                    "last_close": float(vals[4]) if vals[4] else 0,
-                    "change_pct": float(vals[32]) if vals[32] else 0,
-                    "high": float(vals[33]) if vals[33] else 0,
-                    "low": float(vals[34]) if vals[34] else 0,
-                    "amount_wan": float(vals[37]) if vals[37] else 0,
-                    "turnover_pct": float(vals[38]) if vals[38] else 0,
-                    "pe_ttm": float(vals[39]) if vals[39] else 0,
-                    "mcap_yi": float(vals[44]) if vals[44] else 0,
-                    "pb": float(vals[46]) if vals[46] else 0,
-                }
-            if i + batch_size < len(codes):
-                time.sleep(0.3)  # 限流
-    except Exception as e:
-        logger.warning(f"腾讯行情批量查询失败: {e}")
-    return result
-
-
-# ====================================================================
-# 数据层 — 第三优先级：东财（限流+重试退避）
+# 数据层 — 主数据源：东财（限流+重试退避）
 # ====================================================================
 def _ip_retry(max_tries: int = 3, delay: float = 2.0, backoff: float = 2.0):
     """指数退避重试装饰器 — 专门对付IP风控"""

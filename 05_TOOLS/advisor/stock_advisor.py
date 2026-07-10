@@ -271,7 +271,7 @@ class AkshareAPI:
         
         result = self._try_akshare(
             _akshare_func,
-            fallback_func=lambda: {'main_inflow_days': random.randint(0, 3), 'total_main_inflow': random.uniform(-1000, 5000)}
+            fallback_func=lambda: self.fallback.get_fund_flow(symbol)
         )
         
         return result if result else {'main_inflow_days': 0, 'total_main_inflow': 0.0}
