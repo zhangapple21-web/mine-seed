@@ -6,9 +6,12 @@
 import time
 import json
 import random
+import logging
 from typing import Optional, List, Dict, Any
 import urllib.request
 import urllib.error
+
+logger = logging.getLogger(__name__)
 
 class StockQuery:
     """腾讯行情查询工具"""
@@ -159,6 +162,7 @@ class StockQuery:
                 results.append(result)
                 
             except Exception as e:
+                logger.debug(f"行情解析跳过 {line[:50]}: {e}")
                 continue
         
         return results
@@ -185,7 +189,13 @@ class StockQuery:
             return []
         
         try:
-            json_str = response.replace('var kline_dayfqnone=', '')
+            # Remove variable prefix (with or without "var ")
+            json_str = response
+            if json_str.startswith('var '):
+                json_str = json_str[4:]
+            eq_pos = json_str.find('=')
+            if eq_pos > 0:
+                json_str = json_str[eq_pos+1:]
             data = json.loads(json_str)
             
             qt_data = data.get('data', {}).get(full_code, {})
@@ -193,19 +203,20 @@ class StockQuery:
             
             results = []
             for item in qfqday:
-                if len(item) >= 6:
+                if len(item) >= 5:
                     results.append({
                         'date': item[0],
                         'open': float(item[1]),
                         'close': float(item[2]),
                         'high': float(item[3]),
                         'low': float(item[4]),
-                        'volume': int(item[5]) if len(item) > 5 else 0
+                        'volume': int(float(item[5])) if len(item) > 5 else 0
                     })
             
             return results[-days:] if len(results) > days else results
             
         except Exception as e:
+            logger.warning(f"K线解析失败 {code}: {e}")
             return []
     
     def get_fund_flow(self, code: str) -> Dict[str, Any]:
@@ -264,6 +275,7 @@ class StockQuery:
             }
             
         except Exception as e:
+            logger.warning(f"资金流向解析失败 {code}: {e}")
             return {'main_inflow_days': 0, 'total_main_inflow': 0}
 
 

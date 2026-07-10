@@ -1,4 +1,17 @@
 #!/usr/bin/env python3
+"""
+TG Pusher - Telegram Bot Connector
+===================================
+
+Message Pipeline:
+  Stock Advisor (Markdown)
+    → _extract_summary (parse tables, build HTML)
+    → send_message (HTML parse_mode)
+    → Telegram API
+
+SAFETY RULE: Never escape HTML after adding tags.
+Always escape raw text FIRST, then wrap in tags.
+"""
 import os, json, urllib.request, re
 
 
@@ -8,22 +21,40 @@ class TGPusher:
         self.chat_id = chat_id or os.environ.get("TG_CHAT_ID", "")
         self.base_url = f"https://api.telegram.org/bot{self.token}"
 
-    def _escape_markdown(self, text):
-        special_chars = r'_*[]()~`>#+-=|{}.!'
-        return ''.join(f'\\{c}' if c in special_chars else c for c in text)
+    @staticmethod
+    def _html_escape(text):
+        """Escape HTML special chars. Use BEFORE adding any HTML tags."""
+        return (
+            text.replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+        )
+
+    @staticmethod
+    def _tag(tag, text):
+        """Wrap already-escaped text in an HTML tag."""
+        return f"<{tag}>{text}</{tag}>"
+
+    @staticmethod
+    def _bold(text):
+        return TGPusher._tag("b", TGPusher._html_escape(text))
+
+    @staticmethod
+    def _italic(text):
+        return TGPusher._tag("i", TGPusher._html_escape(text))
+
+    @staticmethod
+    def _code(text):
+        return TGPusher._tag("code", TGPusher._html_escape(text))
 
     def send_message(self, text, parse_mode="HTML"):
+        """Send message. If parse_mode=HTML, text must already have proper HTML tags."""
         if not self.token or not self.chat_id:
             return {"ok": False, "error": "Missing token or chat_id"}
 
         text = text.strip()
         if len(text) > 4096:
-            text = text[:4096] + "..."
-
-        if parse_mode == "Markdown":
-            text = self._escape_markdown(text)
-        elif parse_mode == "HTML":
-            text = text.replace("<", "&lt;").replace(">", "&gt;").replace("&", "&amp;")
+            text = text[:4093] + "..."
 
         data = {
             "chat_id": self.chat_id,
@@ -44,6 +75,7 @@ class TGPusher:
             return {"ok": False, "error": str(e)}
 
     def send_document(self, file_path, caption=""):
+        """Send document file."""
         if not self.token or not self.chat_id:
             return {"ok": False, "error": "Missing token or chat_id"}
 
@@ -74,7 +106,14 @@ class TGPusher:
             return {"ok": False, "error": str(e)}
 
     def send_report(self, file_path):
-        """Send report to TG: summary message + full document"""
+        """
+        Send full report to TG:
+        1. Parse Markdown report → extract key info
+        2. Build clean HTML summary message
+        3. Send summary message + full document
+
+        This is the MAIN entry point for report delivery.
+        """
         if not self.token or not self.chat_id:
             return {"ok": False, "error": "Missing token or chat_id"}
 
@@ -82,56 +121,132 @@ class TGPusher:
             with open(file_path, encoding="utf-8") as f:
                 content = f.read()
 
-            summary = self._extract_summary(content)
-            msg_result = self.send_message(summary, parse_mode="HTML")
+            summary_html = self._build_summary_html(content)
 
+            msg_result = self.send_message(summary_html, parse_mode="HTML")
             if not msg_result.get("ok"):
-                msg_result = self.send_message(summary, parse_mode=None)
+                plain_summary = self._build_summary_plain(content)
+                msg_result = self.send_message(plain_summary, parse_mode=None)
                 if not msg_result.get("ok"):
                     return {"ok": False, "error": f"Message send failed: {msg_result.get('error')}"}
 
             doc_result = self.send_document(file_path, caption="完整报告")
 
-            if doc_result.get("ok"):
-                return {"ok": True, "message_sent": True, "document_sent": True}
-            else:
-                return {"ok": True, "message_sent": True, "document_sent": False, "doc_error": doc_result.get("error")}
+            return {
+                "ok": True,
+                "message_sent": True,
+                "document_sent": doc_result.get("ok", False),
+                "doc_error": None if doc_result.get("ok") else doc_result.get("error"),
+            }
 
         except Exception as e:
-            return {"ok": False, "error": str(e)}
+            import traceback
+            return {"ok": False, "error": str(e), "trace": traceback.format_exc()}
 
-    def _extract_summary(self, content):
+    def _build_summary_html(self, content):
+        """
+        Parse Markdown report and build HTML summary for TG.
+        
+        SAFETY: All user-facing text is escaped via _bold() / _html_escape()
+        before being inserted into HTML. No raw user text goes into <b> tags
+        without escaping first.
+        
+        Supported sections:
+        - 推荐1/推荐2 sections (with | key | value | tables)
+        - 操作建议 section
+        """
         lines = content.split('\n')
-        summary_lines = []
+        parts = []
         in_recommend = False
         recommend_count = 0
+        in_suggestion = False
 
         for line in lines:
-            if line.startswith('## 推荐') and recommend_count < 2:
-                in_recommend = True
-                recommend_count += 1
-                summary_lines.append(line.replace('#', ''))
-            elif in_recommend and recommend_count <= 2:
-                if line.startswith('|') and '指标' not in line:
-                    parts = line.split('|')
-                    if len(parts) >= 3:
-                        summary_lines.append(f"<b>{parts[1].strip()}:</b> {parts[2].strip()}")
-                elif line.startswith('- ') and len(summary_lines) < 20:
-                    summary_lines.append(line)
-                elif line.startswith('### ') or line.startswith('---'):
-                    in_recommend = False
-            elif line.startswith('## 操作建议'):
-                summary_lines.append("\n<b>操作建议:</b>")
-            elif line.startswith('| 操作 |') or line.startswith('|------'):
-                continue
-            elif line.startswith('|') and ('仓位' in line or '止损' in line or '止盈' in line):
-                parts = line.split('|')
-                if len(parts) >= 3:
-                    summary_lines.append(f"- {parts[1].strip()}: {parts[2].strip()}")
+            line = line.rstrip()
 
-        return '\n'.join(summary_lines)[:3000]
+            # Recommend section headers: "## 推荐1：xxx"
+            rec_match = re.match(r'^##\s*推荐\d+[：:]\s*(.+)', line)
+            if rec_match and recommend_count < 2:
+                in_recommend = True
+                in_suggestion = False
+                recommend_count += 1
+                title = rec_match.group(1).strip()
+                parts.append(self._bold(f"推荐{recommend_count}：{title}"))
+                continue
+
+            # Other level-2 headers (stop recommend parsing)
+            if line.startswith('## '):
+                in_recommend = False
+                if '操作建议' in line:
+                    in_suggestion = True
+                    parts.append("")
+                    parts.append(self._bold("操作建议:"))
+                else:
+                    in_suggestion = False
+                continue
+
+            # Skip all level-3 headers inside recommend
+            if line.startswith('### ') or line.startswith('---'):
+                continue
+
+            # Table separator: |------|------|
+            if re.match(r'^\|[-:| ]+\|$', line):
+                continue
+
+            # Table rows inside recommend section: | 指标名 | 数值 |
+            if in_recommend and line.startswith('|'):
+                cells = [c.strip() for c in line.split('|') if c.strip()]
+                if len(cells) >= 2 and cells[0] not in ('指标', '项目', '操作'):
+                    key = cells[0]
+                    val = cells[1]
+                    parts.append(f"{self._bold(key + ':')} {self._html_escape(val)}")
+                continue
+
+            # Table rows inside suggestion section
+            if in_suggestion and line.startswith('|'):
+                cells = [c.strip() for c in line.split('|') if c.strip()]
+                if len(cells) >= 2 and cells[0] not in ('操作', '指标'):
+                    key = cells[0]
+                    val = cells[1]
+                    parts.append(f"• {self._bold(key)}: {self._html_escape(val)}")
+                continue
+
+            # Bullet points
+            if in_recommend and line.startswith('- '):
+                parts.append(f"• {self._html_escape(line[2:])}")
+                continue
+
+        # Truncate to safe length
+        result = "\n".join(parts)
+        if len(result) > 3800:
+            result = result[:3797] + "..."
+        return result
+
+    def _build_summary_plain(self, content):
+        """Fallback: plain text summary if HTML fails."""
+        lines = content.split('\n')
+        parts = []
+        in_rec = False
+        count = 0
+
+        for line in lines:
+            if re.match(r'^##\s*推荐\d+', line) and count < 2:
+                in_rec = True
+                count += 1
+                parts.append(line.replace('#', '').strip())
+            elif in_rec and line.startswith('|'):
+                if re.match(r'^\|[-:| ]+\|$', line):
+                    continue
+                cells = [c.strip() for c in line.split('|') if c.strip()]
+                if len(cells) >= 2 and cells[0] not in ('指标',):
+                    parts.append(f"  {cells[0]}: {cells[1]}")
+            elif line.startswith('## ') and count >= 2:
+                break
+
+        return "\n".join(parts)[:3800]
 
     def test_connection(self):
+        """Test bot API connection."""
         if not self.token:
             return {"ok": False, "error": "No token"}
 

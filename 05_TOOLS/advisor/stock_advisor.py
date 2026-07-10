@@ -394,8 +394,18 @@ class StockAdvisor:
         return vol_p70, scores
     
     def layer1_factor_filter(self, all_stocks: List[Dict]) -> List[StockData]:
-        """第1层：因子筛选 CCO₁"""
-        logger.info(f"第1层因子筛选：从 {len(all_stocks)} 只股票中筛选")
+        """
+        第1层：实时指标快速初筛 CCO₁
+        使用实时行情可直接获取的指标做快速筛选，不依赖历史K线。
+        
+        筛选维度：
+        - 价格区间（排除低价垃圾股和高价股）
+        - 当日涨跌幅（温和上涨优先）
+        - 换手率（活跃度）
+        - 市值（中大盘优先）
+        - PE（排除高估值）
+        """
+        logger.info(f"第1层实时初筛：从 {len(all_stocks)} 只股票中筛选")
         
         stock_data_list = []
         for raw in all_stocks[:self.max_stocks]:
@@ -407,20 +417,77 @@ class StockAdvisor:
             logger.warning("无有效股票数据")
             return []
         
-        # 计算因子数据（简化版，使用当日数据模拟）
+        # 实时打分（基于当日可直接获取的数据）
         for sd in stock_data_list:
-            # 模拟5日/60日动量
-            sd.momentum_5d = sd.change_pct * random.uniform(0.8, 1.2) * 5
-            sd.return_60d = sd.change_pct * random.uniform(-3, -0.5) * 20
+            score = 0
             
-            # 模拟波动率
-            sd.volatility_20d = abs(sd.change_pct) * random.uniform(0.5, 1.5) + 0.5
+            # 价格筛选：5-300元区间
+            if 5 <= sd.price <= 300:
+                price_score = 15
+                score += price_score
+                sd.layer1_reasons.append(f"price_range +{price_score}")
+            else:
+                sd.layer1_reject_flags.append(f"price_out_of_range({sd.price:.2f})")
+            
+            # 当日涨跌幅：1%-7%温和上涨最佳
+            if 1 <= sd.change_pct <= 7:
+                change_score = 25
+                score += change_score
+                sd.layer1_reasons.append(f"change_moderate +{change_score}")
+            elif 0 < sd.change_pct < 1:
+                change_score = 10
+                score += change_score
+                sd.layer1_reasons.append(f"change_small +{change_score}")
+            elif sd.change_pct > 7:
+                sd.layer1_reject_flags.append(f"change_too_high({sd.change_pct:.1f}%)")
+            elif sd.change_pct < 0:
+                sd.layer1_reject_flags.append(f"change_negative({sd.change_pct:.1f}%)")
+            
+            # 换手率：1%-10% 活跃但不过度
+            if 1 <= sd.turnover_rate <= 10:
+                turnover_score = 20
+                score += turnover_score
+                sd.layer1_reasons.append(f"turnover_healthy +{turnover_score}")
+            elif sd.turnover_rate < 1:
+                sd.layer1_reject_flags.append(f"turnover_low({sd.turnover_rate:.1f}%)")
+            elif sd.turnover_rate > 10:
+                sd.layer1_reject_flags.append(f"turnover_too_high({sd.turnover_rate:.1f}%)")
+            
+            # 市值：100亿-5000亿中大盘
+            if 100 <= sd.total_capital <= 5000:
+                cap_score = 15
+                score += cap_score
+                sd.layer1_reasons.append(f"cap_mid_large +{cap_score}")
+            elif sd.total_capital < 100:
+                sd.layer1_reject_flags.append(f"cap_small({sd.total_capital:.0f}亿)")
+            
+            # PE：0-80 合理估值区间
+            if 0 < sd.pe <= 80:
+                pe_score = 15
+                score += pe_score
+                sd.layer1_reasons.append(f"pe_reasonable +{pe_score}")
+            elif sd.pe > 80:
+                sd.layer1_reject_flags.append(f"pe_high({sd.pe:.1f})")
+            elif sd.pe < 0:
+                sd.layer1_reject_flags.append(f"pe_negative({sd.pe:.1f})")
+            
+            # 成交额：用换手率*市值近似，或者跳过
+            # （腾讯行情接口不直接提供成交额，用换手率作为流动性代理）
+            if 1 <= sd.turnover_rate <= 10:
+                amount_score = 10
+                score += amount_score
+                sd.layer1_reasons.append(f"liquidity_ok +{amount_score}")
+            elif sd.turnover_rate < 1:
+                sd.layer1_reject_flags.append(f"liquidity_low(turnover={sd.turnover_rate:.1f}%)")
+            
+            sd.score = score
         
-        # 因子打分
-        vol_p70, scores = self._factor_scoring(stock_data_list)
+        # 过滤：得分>40且没有致命拒绝项
+        def is_valid(sd):
+            fatal_flags = ['price_out_of_range', 'change_negative', 'turnover_too_high']
+            return sd.score > 40 and not any(f in str(sd.layer1_reject_flags) for f in fatal_flags)
         
-        # 过滤得分>40的股票
-        passed = [sd for sd in stock_data_list if sd.score > 40]
+        passed = [sd for sd in stock_data_list if is_valid(sd)]
         
         # 标记 layer1_passed
         for sd in passed:
@@ -437,7 +504,14 @@ class StockAdvisor:
         return passed[:50]  # 最多保留50只
     
     def layer2_technical_confirm(self, stocks: List[StockData]) -> List[StockData]:
-        """第2层：技术确认 CCO₂"""
+        """
+        第2层：技术确认 + 真实因子计算 CCO₂
+        
+        1. 获取真实K线数据
+        2. 计算真实动量、波动率等因子（替换第1层的模拟值）
+        3. 技术形态确认
+        4. 用真实因子重新打分排序
+        """
         logger.info(f"第2层技术确认：从 {len(stocks)} 只股票中确认")
         
         confirmed = []
@@ -447,91 +521,134 @@ class StockAdvisor:
                 break
             
             try:
-                # 获取K线数据
-                kline = self.api.get_hist_data(sd.code, days=30)
+                # 获取真实K线数据（60天以计算更准确的因子）
+                kline = self.api.get_hist_data(sd.code, days=60)
                 sd.kline_data = kline
                 
-                # 计算技术指标
                 signals = []
-                has_kline_data = len(kline) > 10
+                has_kline_data = len(kline) >= 20
                 
                 if has_kline_data:
-                    # 简化技术指标计算
                     closes = [float(k.get('close', 0)) for k in kline]
+                    volumes = [int(k.get('volume', 0)) for k in kline]
+                    current_price = closes[-1]
+                    
+                    # ========== 真实因子计算 ==========
+                    
+                    # 5日动量（真实）
+                    if len(closes) >= 5:
+                        sd.momentum_5d = (closes[-1] / closes[-5] - 1) * 100
+                    
+                    # 20日动量
                     if len(closes) >= 20:
-                        # MA计算
+                        sd.momentum_20d = (closes[-1] / closes[-20] - 1) * 100
+                    
+                    # 60日收益（真实，用于均值回归）
+                    if len(closes) >= 60:
+                        sd.return_60d = (closes[-1] / closes[-60] - 1) * 100
+                    elif len(closes) >= 30:
+                        sd.return_60d = (closes[-1] / closes[0] - 1) * 100 * 2
+                    
+                    # 20日波动率（真实）
+                    if len(closes) >= 20:
+                        daily_returns = []
+                        for i in range(1, min(20, len(closes))):
+                            if closes[i-1] > 0:
+                                daily_returns.append((closes[i] / closes[i-1] - 1) * 100)
+                        if daily_returns:
+                            mean_ret = sum(daily_returns) / len(daily_returns)
+                            variance = sum((r - mean_ret) ** 2 for r in daily_returns) / len(daily_returns)
+                            sd.volatility_20d = (variance ** 0.5) * (252 ** 0.5) / 10  # 年化再调整
+                    
+                    # RSI计算（真实）
+                    if len(closes) >= 14:
+                        gains = []
+                        losses = []
+                        for i in range(1, 14):
+                            change = closes[-i] - closes[-i-1]
+                            if change > 0:
+                                gains.append(change)
+                            else:
+                                losses.append(-change)
+                        avg_gain = sum(gains) / 14 if gains else 0
+                        avg_loss = sum(losses) / 14 if losses else 0.001
+                        rs = avg_gain / avg_loss
+                        sd.rsi6 = 100 - (100 / (1 + rs))
+                    
+                    # MA计算
+                    if len(closes) >= 5:
                         sd.ma5 = sum(closes[-5:]) / 5
+                    if len(closes) >= 10:
                         sd.ma10 = sum(closes[-10:]) / 10
+                    if len(closes) >= 20:
                         sd.ma20 = sum(closes[-20:]) / 20
-                        sd.ma60 = sum(closes[-60:]) / 60 if len(closes) >= 60 else sd.ma20
-                        
-                        # 价格位置判断
-                        current_price = closes[-1]
-                        
-                        # MA多头排列
+                    if len(closes) >= 60:
+                        sd.ma60 = sum(closes[-60:]) / 60
+                    
+                    # ========== 技术信号确认 ==========
+                    
+                    # MA多头排列
+                    if sd.ma5 and sd.ma10 and sd.ma20:
                         if sd.ma5 > sd.ma10 > sd.ma20:
                             signals.append('MA多头排列')
-                        
-                        # MACD金叉
-                        if len(closes) >= 26:
-                            ema12 = sum(closes[-12:]) / 12
-                            ema26 = sum(closes[-26:]) / 26
-                            dif = ema12 - ema26
-                            
-                            prev_closes = closes[-27:-1]
-                            prev_ema12 = sum(prev_closes[-12:]) / 12
-                            prev_ema26 = sum(prev_closes[-26:]) / 26
-                            prev_dif = prev_ema12 - prev_ema26
-                            
-                            if prev_dif < 0 < dif:
-                                signals.append('MACD金叉')
-                            
-                            sd.macd_dif = dif
-                            sd.macd_hist = dif - (dif * 0.9)  # 简化DEA
-                        
-                        # RSI健康区间
-                        if sd.rsi6 < 70:
-                            signals.append('RSI健康区间')
-                        
-                        # 布林带中轨支撑
-                        if current_price > sd.ma20:
-                            signals.append('站稳中轨')
-                        
-                        # 成交量放大
-                        if len(kline) >= 5:
-                            recent_vol = sum([int(k.get('volume', 0)) for k in kline[-3:]])
-                            prev_vol = sum([int(k.get('volume', 0)) for k in kline[-8:-3]])
-                            if recent_vol > prev_vol * 1.2:
-                                signals.append('量能放大')
-                    else:
-                        # 数据不足时的简单信号
-                        if sd.change_pct > 0:
-                            signals.append('今日上涨')
-                        if sd.change_pct < 5:
-                            signals.append('涨幅温和')
-                        signals.append('技术形态待确认')
+                    
+                    # 价格站上MA20
+                    if sd.ma20 and current_price > sd.ma20:
+                        signals.append('站稳中轨')
+                    
+                    # MACD金叉
+                    if len(closes) >= 26:
+                        ema12 = sum(closes[-12:]) / 12
+                        ema26 = sum(closes[-26:]) / 26
+                        dif = ema12 - ema26
+                        prev_ema12 = sum(closes[-13:-1]) / 12
+                        prev_ema26 = sum(closes[-27:-1]) / 26
+                        prev_dif = prev_ema12 - prev_ema26
+                        if prev_dif < 0 < dif:
+                            signals.append('MACD金叉')
+                        sd.macd_dif = dif
+                    
+                    # RSI健康（30-70）
+                    if sd.rsi6 and 30 < sd.rsi6 < 70:
+                        signals.append('RSI健康区间')
+                    
+                    # 量能放大
+                    if len(volumes) >= 8:
+                        recent_vol = sum(volumes[-3:]) / 3
+                        prev_vol = sum(volumes[-8:-3]) / 5
+                        if prev_vol > 0 and recent_vol > prev_vol * 1.2:
+                            signals.append('量能放大')
+                    
+                    # 5日动量正向且不过热
+                    if sd.momentum_5d is not None:
+                        if 0 < sd.momentum_5d < 15:
+                            signals.append('短期动量正向')
+                        elif sd.momentum_5d >= 15:
+                            signals.append('动量过热警示')
+                    
+                    # ========== 用真实因子重新打分 ==========
+                    factor_score = self._calc_tech_factor_score(sd)
+                    sd.score = sd.score * 0.4 + factor_score * 0.6  # 技术因子权重更高
+                    
                 else:
-                    # 无K线数据时的简单信号
+                    # 无K线数据时用第1层的分数，但降级处理
+                    signals.append('K线数据不足')
                     if sd.change_pct > 0:
                         signals.append('今日上涨')
-                    if sd.turnover_rate > 1:
-                        signals.append('换手率活跃')
                     if 0 < sd.change_pct < 5:
                         signals.append('涨幅温和')
-                    signals.append('技术形态待确认')
                 
                 sd.tech_signals = signals
-                
-                # ========== CCO₂ Selection Trace ==========
                 sd.layer2_reasons = signals.copy()
                 
-                # 满足2条即可（如果有K线数据）或3条以上（无K线数据需要更多信号）
+                # 通过条件：有K线数据时2个信号以上，无数据时3个以上
                 min_signals = 2 if has_kline_data else 3
                 if len(signals) >= min_signals:
                     sd.layer2_passed = True
                     confirmed.append(sd)
-                    sig_str = ', '.join(signals[:3])
-                    logger.info(f"  ✓ {sd.name}({sd.code}): {sig_str}")
+                    sig_str = ', '.join(signals[:4])
+                    mom_str = f"mom5d={sd.momentum_5d:.1f}%" if sd.momentum_5d is not None else ""
+                    logger.info(f"  ✓ {sd.name}({sd.code}): score={sd.score:.1f} {mom_str} | {sig_str}")
                 else:
                     sd.layer2_passed = False
                     logger.info(f"  ○ {sd.name}({sd.code}): 信号不足({len(signals)}/{min_signals})")
@@ -540,12 +657,59 @@ class StockAdvisor:
                 logger.warning(f"技术分析失败 {sd.code}: {e}")
                 continue
         
-        # 取TOP5
+        # 取TOP5，按重新计算的分数排序
         top5 = sorted(confirmed, key=lambda x: x.score, reverse=True)[:5]
         
         logger.info(f"技术确认后 TOP5: {[s.name for s in top5]}")
         
         return top5
+    
+    def _calc_tech_factor_score(self, sd) -> float:
+        """用真实技术因子计算得分"""
+        score = 0
+        
+        # 5日动量：2%-10% 最佳
+        if sd.momentum_5d is not None:
+            if 2 <= sd.momentum_5d <= 10:
+                score += 30
+            elif 0 < sd.momentum_5d < 2:
+                score += 15
+            elif sd.momentum_5d > 10:
+                score += 10  # 过热减分
+            else:
+                score -= 20
+        
+        # 波动率：中等波动最佳（年化20%-50%）
+        if sd.volatility_20d is not None and sd.volatility_20d > 0:
+            vol_annual = sd.volatility_20d * 10
+            if 20 <= vol_annual <= 50:
+                score += 20
+            elif vol_annual < 20:
+                score += 10
+            else:
+                score -= 10
+        
+        # 60日收益：用于均值回归，前期有回调但不深跌
+        if sd.return_60d is not None:
+            if -20 < sd.return_60d < -5:
+                score += 20  # 充分回调
+            elif -5 <= sd.return_60d <= 5:
+                score += 10  # 横盘震荡
+            elif sd.return_60d > 5:
+                score += 15  # 中期趋势向上
+            elif sd.return_60d < -20:
+                score -= 10  # 跌太深
+        
+        # MA多头排列
+        if sd.ma5 and sd.ma10 and sd.ma20:
+            if sd.ma5 > sd.ma10 > sd.ma20:
+                score += 15
+        
+        # RSI健康
+        if sd.rsi6 and 40 < sd.rsi6 < 70:
+            score += 10
+        
+        return max(0, score)
     
     def layer3_fundamental_confirm(self, stocks: List[StockData]) -> List[StockData]:
         """第3层：基本面+资金面确认 CCO₃"""
