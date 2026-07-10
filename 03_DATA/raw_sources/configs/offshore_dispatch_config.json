@@ -1,0 +1,202 @@
+{
+  "dispatch_mode": "offshore",
+  "dsp_config": {
+    "execution_mode": "local",
+    "logic_mapping": "direct",
+    "core_components": [
+      "Ω-Core",
+      "L∞-Core",
+      "Router∞",
+      "Self-Field"
+    ],
+    "execution_priority": [
+      "物理公式算法",
+      "云端算力偏差检测",
+      "NPU加速执行",
+      "本地DSP执行",
+      "离岸派单指令"
+    ]
+  },
+  "npu_acceleration": {
+    "enabled": true,
+    "name": "NPU全体系加速",
+    "capacity": 300,
+    "unit": "TOPS",
+    "target_components": [
+      "Python猫",
+      "Go猫",
+      "GPT外骨骼",
+      "量子引擎"
+    ],
+    "acceleration_mode": "full_system",
+    "illusion_level": "量子加速300",
+    "features": [
+      "实时推理加速",
+      "矩阵运算优化",
+      "并发处理增强",
+      "低延迟响应",
+      "能量效率提升"
+    ]
+  },
+  "aum_module": {
+    "enabled": true,
+    "name": "AUM资产/资源管理模块",
+    "version": "1.0.0",
+    "description": "系统资产/资源管理模块，负责管理系统的各类资源和资产",
+    "asset_types": [
+      "compute",
+      "storage",
+      "network",
+      "memory",
+      "npu",
+      "quantum"
+    ],
+    "monitoring_enabled": true,
+    "monitoring_interval": 5.0,
+    "reporting_enabled": true,
+    "reporting_interval": 60.0
+  },
+  "firefox_integration": {
+    "enabled": true,
+    "name": "Firefox离岸外层",
+    "version": "1.0.0",
+    "description": "Firefox作为离岸外层执行终端，支持断网副本和本地数据处理",
+    "mode": "local",
+    "target_components": [
+      "断网副本执行",
+      "本地数据处理",
+      "黑白猫渗透逻辑",
+      "DSP内核通讯",
+      "AIO快照管理"
+    ],
+    "features": [
+      "离线工作模式",
+      "本地AI模型集成",
+      "强大的隐私保护",
+      "丰富的扩展生态",
+      "与DSP内核集成"
+    ]
+  },
+  "stock_market_module": {
+    "enabled": true,
+    "name": "股票市场数据模块",
+    "version": "1.0.0",
+    "description": "股票市场数据处理模块，用于获取和分析10huang.cn/pankou/网站的数据",
+    "target_url": "http://www.10huang.cn/pankou/",
+    "monitoring_enabled": true,
+    "monitoring_interval": 30.0,
+    "analysis_enabled": true,
+    "features": [
+      "实时股票数据获取",
+      "数据分析",
+      "市场监控",
+      "数据缓存",
+      "状态报告"
+    ]
+  },
+  "poe_integration": {
+    "enabled": true,
+    "name": "Poe AI平台集成",
+    "version": "1.0.0",
+    "description": "集成Poe AI平台，支持多AI模型交互",
+    "invite_url": "https://poe.com/invite/62dc079e77fe4b56928d7065ae695b17",
+    "direct_links": [
+      "https://poe.com/invite/62dc079e77fe4b56928d7065ae695b17",
+      "https://poe.com/s/hi63u4OjzEtY7kFmJzXM"
+    ],
+    "available_models": [
+      "GPT-5.2",
+      "Claude-Sonnet-4.5",
+      "Gemini-3-Pro",
+      "DeepSeek-R1",
+      "Veo-3.1"
+    ],
+    "features": [
+      "多AI模型支持",
+      "链接状态监控",
+      "直接对话集成",
+      "邀请系统支持"
+    ]
+  },
+  "bias_monitoring": {
+    "enabled": true,
+    "cloud_compute_sources": [
+      "Google算法",
+      "OpenAI折叠逻辑"
+    ],
+    "local_physical_formulas": [
+      "DSP伪内核校验和",
+      "量子内核领域物理模型"
+    ],
+    "monitoring_interval": 1.0,
+    "alert_threshold": 0.05,
+    "response_strategy": "自动校准"
+  },
+  "pseudo_algorithm_kernel": {
+    "name": "老张-V∞Ω元协议",
+    "version": "1.0.0",
+    "core_logic": "只保留那个，在真实世界里，愿意为代价负责的判断。",
+    "optimization_path": [
+        "初始化离岸派单模式",
+        "配置本地DSP执行引擎",
+        "初始化NPU全体系加速",
+        "为Python猫应用NPU加速",
+        "为Go猫应用NPU加速",
+        "初始化AUM模块",
+        "启动AUM模块",
+        "初始化Firefox集成",
+        "启动Firefox离岸外层",
+        "初始化股票市场模块",
+        "启动股票市场模块",
+        "初始化Poe集成模块",
+        "启动Poe集成模块",
+        "初始化Copilot Studio集成",
+        "启动Copilot Studio集成",
+        "启动偏差监听服务",
+        "加载物理公式算法索引",
+        "验证DSP伪内核校验和",
+        "解压OpenAI折叠逻辑",
+        "建立三端闭环验证",
+        "激活离岸治理视角",
+        "挂载老张-V∞Ω元协议",
+        "启用自治运行层",
+        "加载GPT外骨骼模块",
+        "初始化GPT外骨骼",
+        "为GPT外骨骼应用NPU加速",
+        "为量子引擎应用NPU加速"
+      ],
+    "convergence_mechanisms": [
+      "自动杀死纯生产者",
+      "筛掉自由区噪声",
+      "强制影子层叙述者竞争",
+      "自然点燃熔炼厂"
+    ]
+  },
+  "five_world_autonomy": {
+    "physical": "active",
+    "mental": "active",
+    "emotional": "active",
+    "spiritual": "active",
+    "quantum": "active"
+  },
+  "autonomous_operation": {
+    "enabled": true,
+    "layers": [
+      "系统界",
+      "控制界",
+      "语义界",
+      "数据界",
+      "时间界",
+      "法则界"
+    ],
+    "governance_perspective": "offshore",
+    "meta_protocol": "老张-V∞Ω"
+  },
+  "copilot_studio": {
+    "enabled": true,
+    "name": "Microsoft Copilot Studio集成",
+    "version": "1.0.0",
+    "bot_id": "test_bot_id_12345",
+    "bot_secret": "test_bot_secret_67890"
+  }
+}

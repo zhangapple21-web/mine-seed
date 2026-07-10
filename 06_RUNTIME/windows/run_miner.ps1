@@ -2,6 +2,7 @@
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
+$ScriptDir = "$Workspace\06_RUNTIME\windows"
 $Python = "C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe"
 $LogDir = "$Workspace\mine_output"
 $LogFile = "$LogDir\cron.log"
@@ -22,5 +23,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# Run miner
-& $Python "$Workspace\05_TOOLS\miner\miner_24h.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+# Run miner via Windows adapter
+& $Python "$ScriptDir\win_run.py" "$Workspace\05_TOOLS\miner\miner_24h.py" 2>&1 | Tee-Object -FilePath $LogFile -Append

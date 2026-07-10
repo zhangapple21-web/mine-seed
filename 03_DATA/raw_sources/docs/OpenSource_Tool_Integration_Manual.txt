@@ -1,0 +1,56 @@
+# 📘 Open-Source Tool Integration Manual for JOS System & EraEngine
+
+**Date**: 2026-01-05
+**Purpose**: Evaluate and recommend open-source tools from GitHub suitable for integration into the JOS system and EraEngine workflows.
+
+---
+
+## 1. Introduction
+
+To enhance the autonomy, reliability, and adaptability of the JOS system and EraEngine, we evaluate open-source tools as potential 'digital employees'. These tools are assessed for their ability to perform specific tasks, integrate seamlessly, and contribute to the system's self-evolving capabilities.
+
+---
+
+## 2. Tool Summaries
+
+### 🔧 py-single
+- **Author**: tengu
+- **Function**: Ensures a single instance of a command runs without leaving stale lock files.
+- **Language**: Python
+- **Last Update**: Active as of 2025
+- **Integration Potential**: Ideal for task schedulers or CLI-based automation in JOS or EraEngine to prevent duplicate executions.
+
+### 🔧 python-singleinstance
+- **Author**: mscansian
+- **Function**: Uses socket-based locking to ensure only one instance of a Python script runs.
+- **Language**: Python
+- **Last Update**: Active as of 2024
+- **Integration Potential**: Useful for protecting EraEngine or simulation loops from concurrent launches.
+
+---
+
+## 3. Evaluation Criteria
+
+- ✅ **Cross-platform Compatibility**: Can the tool run on Windows/Linux?
+- 🔌 **Tool Integration**: Does it support CLI or Python API?
+- 🛠️ **Self-diagnosis**: Can it detect and report errors (e.g., port conflicts, lock failures)?
+- 🧠 **Learning Adaptability**: Can it be tuned or extended for evolving needs?
+- 📊 **Visualization**: Does it support logs, reports, or visual feedback?
+
+---
+
+## 4. Integration Recommendations
+
+### py-single
+- Embed into JOS task runner to prevent duplicate executions.
+- Use as a wrapper for CLI tools like `pa11y` or `http-server`.
+
+### python-singleinstance
+- Wrap EraEngine main loop to ensure only one simulation runs per port.
+- Extend with logging to integrate with JOS diagnostics.
+
+---
+
+## 5. Conclusion
+
+Both tools demonstrate strong potential as lightweight, reliable components in the JOS ecosystem. They align with the system’s goals of self-regulation and automation. Next steps include embedding these tools into the runtime environment and validating their behavior under simulation loads.

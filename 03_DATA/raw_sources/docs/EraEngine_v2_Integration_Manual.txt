@@ -1,0 +1,115 @@
+
+# 📘 Integration Manual: EraEngine v2 in JOS System
+
+---
+
+## 1. Title Page
+
+**Project Name**: EraEngine v2 Integration into JOS System  
+**Date**: 2026-01-05  
+**Responsible Team**: Core Systems Development Team
+
+---
+
+## 2. Introduction
+
+### Background
+The JOS system required an enhancement to simulate the natural evolution of civilizations through dynamically emerging eras. The goal was to eliminate manual era assignment and instead allow the system to infer the current era based on ecological and sociological indicators.
+
+### Objectives
+- Implement a natural era generator (EraEngine v2)
+- Integrate it seamlessly into the JOS ecosystem
+- Enable automatic era transitions based on system state
+
+---
+
+## 3. System Updates
+
+### era_engine.py
+- Introduced new **EraScore** formula:
+  ```
+  EraScore = (awakened_ratio * 0.4 + civilization_score_norm * 0.3 + (1 - avg_entropy) * 0.2 + avg_trust * 0.1)
+  ```
+- Era transitions are now **automatically inferred** from EraScore
+- Removed complexity metric; replaced with average entropy and trust
+
+### jos_system.py
+- Integrated new EraEngine logic
+- Added average entropy and trust to ecosystem state
+- Adapted to updated return values from `EraEngine.update()`
+- Enhanced logging with detailed era transition information
+
+### run.py
+- Updated to import the new JOS class from jos_system module
+
+---
+
+## 4. Testing and Validation
+
+- Ran **20 simulation cycles**
+- Observed natural transition from **Era-0 (Primordial Ecology)** to **Era-1 (Literary Era)**
+- Verified correctness of EraScore calculations and transitions
+- Logs confirmed stable and interpretable behavior
+
+---
+
+## 5. Achievements
+
+- Fully implemented **Natural Era Generator**
+- Era transitions are now **data-driven**, not hardcoded
+- EraScore reflects:
+  - Awakening ratio
+  - Normalized civilization score
+  - Inverse entropy
+  - Average trust
+- System now models **emergent civilization dynamics**
+
+---
+
+## 6. Multi-environment AI Recruitment Evaluation
+
+### Cross-platform Compatibility
+- Operates reliably in Windows environment
+- CLI-based execution supports automation
+
+### Tool Integration
+- Compatible with `http-server`, `pa11y`, and HTML reporting
+- Supports local server testing and accessibility validation
+
+### Self-diagnosis and Recovery
+- Detects port errors, missing resources (e.g., 404s)
+- Provides actionable feedback in logs and reports
+
+### Learning and Adaptability
+- Era transitions adapt to ecological indicators
+- Formula can be tuned for different civilizations
+
+### Visualization and Usability
+- Generates HTML logs and reports
+- Can be launched via desktop shortcuts or scripts
+
+---
+
+## 7. Conclusion
+
+The JOS system with EraEngine v2 is now:
+- **Fully operational**
+- **Self-adaptive**
+- **Ready for deployment**
+- Capable of acting as a **digital employee** in simulation and analysis tasks
+
+---
+
+## 8. Future Outlook
+
+### Short-term
+- Expand test coverage for additional accessibility issues
+
+### Mid-term
+- Integrate with CI/CD pipelines for automated validation
+
+### Long-term
+- Develop a full AI recruitment evaluation framework
+- Enable multi-agent, multi-platform collaboration
+
+---

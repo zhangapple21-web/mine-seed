@@ -28,6 +28,8 @@ export ZHIPU_KEY="c4c766faaf974bfaba30f381ccc7b066.E7VUlQfxnMXnvVRx"
 # === Telegram ===
 export TG_BOT_TOKEN_1="8384310757:AAEhfTTMaYrV_n9hXFjBUMh2LdeeWkB-Czo"
 export TG_BOT_TOKEN_2="8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI"
+export TELEGRAM_API_ID="38398440"
+export TELEGRAM_API_HASH="3460f304c16a186c2300debc673b2ed0"
 
 echo "✅ 矿场环境变量已加载"
 export NIM_KEY_9="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"

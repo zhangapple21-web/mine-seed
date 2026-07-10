@@ -2,6 +2,7 @@
 $ErrorActionPreference = "Continue"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
+$ScriptDir = "$Workspace\06_RUNTIME\windows"
 $Python = "C:\Users\User\AppData\Local\Programs\Python\Python311\python.exe"
 $LogFile = "$Workspace\mine_output\lab_ntfy.log"
 
@@ -17,5 +18,5 @@ if (Test-Path $EnvFile) {
     }
 }
 
-# Send heartbeat
-& $Python "$Workspace\04_PROTOCOLS\lab_ntfy.py" ping 2>&1 | Tee-Object -FilePath $LogFile -Append
+# Send heartbeat via Windows adapter
+& $Python "$ScriptDir\win_run.py" "$Workspace\04_PROTOCOLS\lab_ntfy.py" ping 2>&1 | Tee-Object -FilePath $LogFile -Append
