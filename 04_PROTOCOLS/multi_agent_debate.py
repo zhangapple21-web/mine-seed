@@ -93,7 +93,7 @@ confidence 标准:
                 "confidence": 0,
             }
 
-        content = result.get("choices", [{}])[0].get("message", {}, {}).get("content", "")
+        content = result.get("choices", [{}])[0].get("message", {}).get("content", "")
         try:
             if content.strip().startswith("```"):
                 lines = content.strip().split("\n")
@@ -242,6 +242,38 @@ class DebateRoom:
         self.governor = Governor()
         self.qc = QuestionCenter()
 
+    def _apply_anti_overfit(self, opinions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """反过拟合检查（C-001/C-002/C-003）"""
+        for op in opinions:
+            if "error" in op or op.get("confidence", 0) == 0:
+                continue
+
+            # C-001: 复杂度惩罚 — 信号/证据数量>5时扣confidence
+            evidence_count = len(op.get("evidence", []))
+            risks_count = len(op.get("risks", []))
+            concerns_count = len(op.get("concerns", []))
+            total_signals = evidence_count + risks_count + concerns_count
+            if total_signals > 5:
+                penalty = (total_signals - 5) * 10
+                original = op.get("confidence", 50)
+                op["confidence"] = max(0, original - penalty)
+                op["anti_overfit"] = {
+                    "rule": "C-001_complexity_cap",
+                    "signals": total_signals,
+                    "penalty": penalty,
+                    "original_confidence": original,
+                }
+
+            # C-003: 脆弱性检测 — 如果只有1条证据，标记fragile
+            if evidence_count <= 1 and op.get("confidence", 0) >= 70:
+                op["fragile"] = True
+                op["confidence"] = max(0, op["confidence"] - 15)
+                op.setdefault("anti_overfit", {})
+                op["anti_overfit"]["fragile"] = True
+                op["anti_overfit"]["fragile_reason"] = "Only 1 evidence, conclusion may be fragile"
+
+        return opinions
+
     def debate(self, question: Dict[str, Any], context: str = "") -> Dict[str, Any]:
         """对一个问题进行完整辩论"""
         print(f"\n[DEBATE] {question.get('qid', '?')} — {question.get('question', '')[:60]}")
@@ -262,7 +294,10 @@ class DebateRoom:
 
         opinions = [scout_opinion, researcher_opinion, validator_opinion]
 
-        # 4. Governor 决策
+        # 4. 反过拟合检查（C-001/C-002/C-003）
+        opinions = self._apply_anti_overfit(opinions)
+
+        # 5. Governor 决策
         decision = self.governor.decide(question, opinions)
         print(f"  Governor: {decision.get('decision')} | {decision.get('action', '')[:80]}")
 

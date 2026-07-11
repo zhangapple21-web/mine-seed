@@ -22,7 +22,7 @@ QE-002: Question Engine — 问题生成引擎
   - 历史去重: 如果相似问题已在 Question Center 且状态为 open/researching，则更新而不是新建
   - 问题不是按 category 一对一，而是按"异常"一对一
 """
-import os, sys, json, hashlib
+import os, sys, json, hashlib, argparse
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -261,11 +261,14 @@ def main():
     else:
         # 默认读取最新 situation
         situation_file = WORKSPACE / "02_MEMORY" / "environment" / "latest_situation.json"
+        obs_file = WORKSPACE / "02_MEMORY" / "environment" / "latest_observations.json"
+        observations = []
         if situation_file.exists():
             situation = json.loads(situation_file.read_text(encoding="utf-8"))
             observations = situation.get("all_observations", [])
-        else:
-            observations = []
+        # Fallback: if all_observations is empty, use latest_observations.json
+        if not observations and obs_file.exists():
+            observations = json.loads(obs_file.read_text(encoding="utf-8"))
 
     candidates = engine.generate_batch(observations)
 

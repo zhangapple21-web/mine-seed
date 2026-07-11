@@ -5,7 +5,7 @@
     "source": "environment",
     "priority": "P1",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-11T14:27:48.561880",
     "last_seen": "2026-07-11T14:27:48.561880",
     "hypotheses": [
@@ -14,8 +14,30 @@
       "H-003"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": []
+    "decisions": [
+      "D-001"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的信心度均高于70%，且不存在重大 concerns。根据他们的建议，下一步应检查 GitHub Models API 认证信息和配置文件，并分析请求日志以确定具体原因。. Action: 与 Scout 合作进一步验证认证信息和配置设置是否正确，然后查看最近的 API 请求日志以找出问题所在。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 85
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 75
+          }
+        ],
+        "added_at": "2026-07-11T15:31:36.589855"
+      }
+    ]
   },
   {
     "qid": "Q-002",
@@ -29,7 +51,27 @@
     "hypotheses": [],
     "experiments": [],
     "decisions": [],
-    "evidence": []
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 当前没有足够的信息来确定 r1-open-source-seed 没有内容的原因。虽然 Scout 和 Validator 提出的调查建议能提供一些线索，但缺乏具体的项目管理工具或系统记录可能会影响决策的准确性和及时性。. Action: 联系 r1-open-source-seed 的负责人和开发团队，确认是否有更新计划，并获取更多关于项目动态的信息。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 50
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-11T15:41:49.810808"
+      }
+    ]
   },
   {
     "qid": "Q-003",
@@ -43,6 +85,221 @@
     "hypotheses": [],
     "experiments": [],
     "decisions": [],
-    "evidence": []
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 尽管 Scout 和 Validator 建议首先进行小规模试点，并获取专家意见，但整体信心度较低（60、50），且存在评估难度大和时间成本高的问题。需要进一步的详细研究以确认可行性。. Action: ",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 60
+          },
+          {
+            "role": "researcher",
+            "confidence": 30
+          },
+          {
+            "role": "validator",
+            "confidence": 50
+          }
+        ],
+        "added_at": "2026-07-11T15:44:35.395852"
+      }
+    ]
+  },
+  {
+    "qid": "Q-004",
+    "question": "是否应该在 ACE 的 Capability Graph 中加入安全的技能注册、版本化和 RBAC 审计机制？",
+    "source": "explorer:T-007",
+    "priority": "P2",
+    "capability": "archaeology",
+    "status": "answered",
+    "created_at": "2026-07-11T15:23:37.557225",
+    "last_seen": "2026-07-11T15:23:37.557225",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-002"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Researcher 的提案建议在 Capability Graph 中加入安全的技能注册、版本化和 RBAC 审计机制。Evidence 显示这些功能是必要的，并且已有开源项目提供相关实践，风险虽有但可控。. Action: 开始开发并实施新的安全模块，同时逐步整合现有技能管理工具。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": null
+          },
+          {
+            "role": "researcher",
+            "confidence": 70
+          },
+          {
+            "role": "validator",
+            "confidence": 70
+          }
+        ],
+        "added_at": "2026-07-11T15:47:01.779830"
+      }
+    ],
+    "exploration_topic": {
+      "id": "T-007",
+      "name": "Capability Graph / Skill Registry",
+      "keywords": [
+        "skill registry",
+        "capability graph",
+        "tool registry",
+        "agent capability"
+      ],
+      "capability_ref": "capability_graph",
+      "why_for_ace": "ACE 的 Capability Graph 是核心抽象，可以借鉴插件系统的设计"
+    },
+    "exploration_projects": [
+      {
+        "full_name": "VoltAgent/awesome-openclaw-skills",
+        "html_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+        "stars": 51113,
+        "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+        "updated_at": "2026-07-11T06:25:53Z",
+        "language": null,
+        "score": 60
+      },
+      {
+        "full_name": "openclaw/clawhub",
+        "html_url": "https://github.com/openclaw/clawhub",
+        "stars": 9130,
+        "description": "Skill + Plugin Registry for OpenClaw",
+        "updated_at": "2026-07-11T03:20:25Z",
+        "language": "TypeScript",
+        "score": 60
+      },
+      {
+        "full_name": "tech-leads-club/agent-skills",
+        "html_url": "https://github.com/tech-leads-club/agent-skills",
+        "stars": 4857,
+        "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+        "updated_at": "2026-07-10T18:49:24Z",
+        "language": "TypeScript",
+        "score": 60
+      },
+      {
+        "full_name": "iflytek/skillhub",
+        "html_url": "https://github.com/iflytek/skillhub",
+        "stars": 3970,
+        "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
+        "updated_at": "2026-07-11T06:20:56Z",
+        "language": "Java",
+        "score": 60
+      },
+      {
+        "full_name": "Observal/Observal",
+        "html_url": "https://github.com/Observal/Observal",
+        "stars": 2190,
+        "description": "Observal is a local registry and analytics platform for your AI components.  Setup Observal, define the scope and share your Skills, MCPs and Agents.",
+        "updated_at": "2026-07-11T01:41:23Z",
+        "language": "Python",
+        "score": 60
+      }
+    ],
+    "exploration_report_file": "02_MEMORY/exploration/exploration_20260711.md"
+  },
+  {
+    "qid": "Q-005",
+    "question": "为什么最近有多个文件被修改，且这些修改集中在系统的关键模块和状态文件上？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T15:38:33.642704",
+    "last_seen": "2026-07-11T15:38:33.642704",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "这可能意味着存在一些重要的系统更改或潜在的问题需要解决。如果不研究这些问题，可能会导致数据丢失、功能异常或系统性能下降。",
+    "approach": "首先，对比最近的版本以确定哪些内容被修改了；其次，验证这些修改是否与当前系统的运行状态一致；最后，通过实验验证这些修改的影响并提出相应的解决方案。",
+    "expected_value": "回答这个问题后，系统能更好地理解最近的代码更改对当前系统状态的影响，并采取适当的措施来保持系统的稳定性和高效性。",
+    "source_fingerprint": "98acbdaf32b0",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "10 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/question_center/decisions.json",
+          "M 02_MEMORY/question_center/questions.json",
+          "M 04_PROTOCOLS/explorer_v2.py",
+          "M 04_PROTOCOLS/heartbeat.py",
+          "M 04_PROTOCOLS/multi_agent_debate.py",
+          "M 04_PROTOCOLS/question_engine.py",
+          "M CURRENT_STATE.md"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-11T15:36:38.672767"
+    }
+  },
+  {
+    "qid": "Q-006",
+    "question": "为什么在工作空间中有未追踪的文件且它们位于不同的目录下？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T15:38:33.646392",
+    "last_seen": "2026-07-11T15:38:33.646392",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "这个问题现在值得研究是因为这些未追踪的文件可能会影响项目的完整性。如果不解决这些问题，可能会导致数据丢失或版本控制混乱。",
+    "approach": "建议的研究路径包括查看这些文件的内容、检查他们的历史记录以及确定其是否已经合并到主分支中。可以进一步对比其他开发人员的工作环境来确保一致性，并且验证是否有任何配置错误导致它们未被追踪。",
+    "expected_value": "回答这个问题后，系统能够更好地了解和管理项目文件的完整性和一致性，从而提高项目的可靠性和效率。",
+    "source_fingerprint": "93ac7664ddb8",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "2 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/exploration/",
+          "?? 05_TOOLS/miner/tg_test_codesettings.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-11T15:36:38.672767"
+    }
+  },
+  {
+    "qid": "Q-007",
+    "question": "为什么 akshare 没有安装导致 provider 缺陷？",
+    "source": "question_engine",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T15:38:33.649504",
+    "last_seen": "2026-07-11T15:38:33.649504",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "akshare 是一个用于获取金融数据的库。它未安装可能影响系统在使用金融数据时的功能，特别是在需要实时股票数据（stock_data）时。不解决这个问题可能会导致对市场分析、投资策略制定等产生负面影响。",
+    "approach": "首先，检查 akshare 库是否已正确安装。如果未安装，则尝试通过包管理工具如 pip 安装 akshare。验证安装后，测试其功能以确保金融数据获取的正常性。",
+    "expected_value": "安装并确认 akshare 的可用性后，系统能够继续提供必要的金融数据分析服务，保障市场策略制定和投资决策的有效性。",
+    "source_fingerprint": "01a704d0a32d",
+    "source_observation": {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-11T15:36:39.081518"
+    }
   }
 ]

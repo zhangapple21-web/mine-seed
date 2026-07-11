@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "did": "D-001",
+    "qid": "Q-001",
+    "decision": "与 Scout 合作进一步验证认证信息和配置设置是否正确，然后查看最近的 API 请求日志以找出问题所在。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的信心度均高于70%，且不存在重大 concerns。根据他们的建议，下一步应检查 GitHub Models API 认证信息和配置文件，并分析请求日志以确定具体原因。",
+    "created_at": "2026-07-11T15:31:36.592688"
+  },
+  {
+    "did": "D-002",
+    "qid": "Q-004",
+    "decision": "开始开发并实施新的安全模块，同时逐步整合现有技能管理工具。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Researcher 的提案建议在 Capability Graph 中加入安全的技能注册、版本化和 RBAC 审计机制。Evidence 显示这些功能是必要的，并且已有开源项目提供相关实践，风险虽有但可控。",
+    "created_at": "2026-07-11T15:47:01.781904"
+  }
+]

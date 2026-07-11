@@ -1,0 +1,67 @@
+{
+  "topic": {
+    "id": "T-007",
+    "name": "Capability Graph / Skill Registry",
+    "keywords": [
+      "skill registry",
+      "capability graph",
+      "tool registry",
+      "agent capability"
+    ],
+    "capability_ref": "capability_graph",
+    "why_for_ace": "ACE 的 Capability Graph 是核心抽象，可以借鉴插件系统的设计"
+  },
+  "projects": [
+    {
+      "full_name": "VoltAgent/awesome-openclaw-skills",
+      "html_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "stars": 51113,
+      "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+      "updated_at": "2026-07-11T06:25:53Z",
+      "language": null,
+      "score": 60
+    },
+    {
+      "full_name": "openclaw/clawhub",
+      "html_url": "https://github.com/openclaw/clawhub",
+      "stars": 9130,
+      "description": "Skill + Plugin Registry for OpenClaw",
+      "updated_at": "2026-07-11T03:20:25Z",
+      "language": "TypeScript",
+      "score": 60
+    },
+    {
+      "full_name": "tech-leads-club/agent-skills",
+      "html_url": "https://github.com/tech-leads-club/agent-skills",
+      "stars": 4857,
+      "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+      "updated_at": "2026-07-10T18:49:24Z",
+      "language": "TypeScript",
+      "score": 60
+    },
+    {
+      "full_name": "iflytek/skillhub",
+      "html_url": "https://github.com/iflytek/skillhub",
+      "stars": 3970,
+      "description": "Self-hosted, open-source agent skill registry for enterprises. Publish & version skill packages, govern with RBAC and audit logs, deploy   on-premise with Docker or Kubernetes.",
+      "updated_at": "2026-07-11T06:20:56Z",
+      "language": "Java",
+      "score": 60
+    },
+    {
+      "full_name": "Observal/Observal",
+      "html_url": "https://github.com/Observal/Observal",
+      "stars": 2190,
+      "description": "Observal is a local registry and analytics platform for your AI components.  Setup Observal, define the scope and share your Skills, MCPs and Agents.",
+      "updated_at": "2026-07-11T01:41:23Z",
+      "language": "Python",
+      "score": 60
+    }
+  ],
+  "findings": "这5个项目都围绕技能/插件注册与分发实现，提供了搜索、分类、版本控制、审计、RBAC 等功能。VoltAgent 的集合侧重海量公开技能，Clawhub 与 tech-leads-club 提供 TypeScript 实现的可插拔注册框架，iflytek 引入企业级治理，Observal 则关注本地分析与可视化。整体来看，它们展示了从轻量化目录到企业级治理的完整生态，可为 ACE 的 Capability Graph 在插件化、治理、可观测性方面提供参考。",
+  "most_relevant_project": "tech-leads-club/agent-skills",
+  "question_for_ace": "是否应该在 ACE 的 Capability Graph 中加入安全的技能注册、版本化和 RBAC 审计机制？",
+  "absorb_recommendation": "absorb",
+  "rationale": "该项目直接面向 AI 代理的安全、可验证技能注册，提供成熟的 TypeScript 实现和治理模型，最贴合 ACE 将 Capability Graph 作为插件系统核心的需求，值得纳入研究。",
+  "timestamp": "2026-07-11T15:23:37.554694"
+}

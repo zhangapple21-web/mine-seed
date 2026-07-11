@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-07-11T15:04:29.170401",
+  "scan_time": "2026-07-11T15:49:29.124335",
   "root": "C:\\Users\\User\\ace_workspace\\mine-seed",
-  "files_total": 1102,
-  "files_indexed": 1102,
+  "files_total": 1135,
+  "files_indexed": 1135,
   "by_extension": {
     ".gitignore": 1,
-    ".md": 675,
+    ".md": 676,
+    ".json": 237,
     ".ps1": 12,
-    ".py": 108,
-    ".json": 218,
+    ".py": 112,
     ".log": 5,
     ".txt": 25,
     ".pyc": 3,
@@ -20,7 +20,7 @@
     ".gitignore__superseded_20260710_143025": 1,
     ".sh": 20,
     ".tpl": 2,
-    ".session": 1,
+    ".session": 10,
     ".ace": 1,
     ".html": 2,
     ".css": 2,
@@ -28,7 +28,7 @@
     ".vbs": 1
   },
   "by_priority": {
-    "MEDIUM": 27,
+    "MEDIUM": 28,
     "HIGH": 3
   },
   "readme_files": [
@@ -367,9 +367,9 @@
       "type": "data",
       "description": "",
       "recovery_triggers": [
-        "readme",
+        "backup",
         "recovery",
-        "backup"
+        "readme"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\docs\\ACE_BACKUP_RECOVERY_README.md",
@@ -818,6 +818,18 @@
       "triggers_recovery": true,
       "path": "05_TOOLS\\aether_capsule\\README.md",
       "size_bytes": 1908
+    },
+    {
+      "name": "tg_test_App Sandbox.session",
+      "priority": "MEDIUM",
+      "type": "execution_env",
+      "description": "沙箱",
+      "recovery_triggers": [
+        "sandbox"
+      ],
+      "triggers_recovery": true,
+      "path": "05_TOOLS\\miner\\tg_test_App Sandbox.session",
+      "size_bytes": 28672
     },
     {
       "name": "RECOVERY_CHECKLIST.md",
@@ -1796,6 +1808,18 @@
       "size_bytes": 18766
     },
     {
+      "name": "tg_test_App Sandbox.session",
+      "priority": "MEDIUM",
+      "type": "execution_env",
+      "description": "沙箱",
+      "recovery_triggers": [
+        "sandbox"
+      ],
+      "triggers_recovery": true,
+      "path": "05_TOOLS\\miner\\tg_test_App Sandbox.session",
+      "size_bytes": 28672
+    },
+    {
       "name": "lexicon_20260626.json",
       "priority": "MEDIUM",
       "type": "knowledge_pool",
@@ -2195,9 +2219,9 @@
       "principles\\validation_report.md",
       "recent_memory\\principles\\validation_report.md"
     ],
-    "1f54f78e0ea3e3a2061a942bcdda567c": [
+    "63d5a9c4cbd69214c14863f4de2266c5": [
       "02_MEMORY\\environment\\latest_situation.json",
-      "02_MEMORY\\environment\\situation_20260711T145100.json"
+      "02_MEMORY\\environment\\situation_20260711T153650.json"
     ],
     "298bbf180d0d77c3cd58ad1e5969361b": [
       "02_MEMORY\\knowledge\\r1_axiom_001_security_exclusion_first_20260617.md",
@@ -3244,14 +3268,14 @@
   "all_files": [
     {
       "path": ".gitignore",
-      "size": 649,
+      "size": 1841,
       "ext": ".gitignore",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "AGENTS.md",
-      "size": 9925,
+      "size": 10693,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3264,8 +3288,15 @@
       "type": "data"
     },
     {
+      "path": "constraints.json",
+      "size": 4840,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "CURRENT_STATE.md",
-      "size": 3283,
+      "size": 4211,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3783,7 +3814,7 @@
     },
     {
       "path": "02_MEMORY\\environment\\latest_scan.json",
-      "size": 307955,
+      "size": 314955,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -3929,9 +3960,79 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\environment\\situation_20260711T150631.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T152051.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T152350.json",
+      "size": 2122,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T152351.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T153638.json",
+      "size": 1898,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T153639.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T153650.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\experience\\exp_20260710T200009.json",
       "size": 822,
       "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_20260711T230000_archaeology_distillation.json",
+      "size": 4440,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\exploration\\exploration_20260711.json",
+      "size": 3393,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\exploration\\exploration_20260711.md",
+      "size": 2096,
+      "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -4062,6 +4163,34 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T150429.json",
+      "size": 850,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T151929.json",
+      "size": 1323,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T152126.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T153354.json",
+      "size": 1362,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json",
       "size": 1121,
       "ext": ".json",
@@ -4167,6 +4296,41 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T151929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T152126.json",
+      "size": 1122,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T153354.json",
+      "size": 1122,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T153429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T154929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\knowledge\\E2C_Closure_Principles_20260616.md",
       "size": 1363,
       "ext": ".md",
@@ -4231,7 +4395,7 @@
     },
     {
       "path": "02_MEMORY\\logs\\heartbeat_20260711.log",
-      "size": 3988,
+      "size": 8474,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
@@ -4252,7 +4416,7 @@
     },
     {
       "path": "02_MEMORY\\question_center\\decisions.json",
-      "size": 2,
+      "size": 1016,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4273,7 +4437,7 @@
     },
     {
       "path": "02_MEMORY\\question_center\\questions.json",
-      "size": 1223,
+      "size": 12479,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -5806,7 +5970,7 @@
     },
     {
       "path": "04_PROTOCOLS\\explorer_v2.py",
-      "size": 17256,
+      "size": 17238,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5827,7 +5991,7 @@
     },
     {
       "path": "04_PROTOCOLS\\heartbeat.py",
-      "size": 9724,
+      "size": 15576,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5862,7 +6026,7 @@
     },
     {
       "path": "04_PROTOCOLS\\multi_agent_debate.py",
-      "size": 13396,
+      "size": 15012,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5932,7 +6096,7 @@
     },
     {
       "path": "04_PROTOCOLS\\question_engine.py",
-      "size": 11530,
+      "size": 11816,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5967,7 +6131,7 @@
     },
     {
       "path": "04_PROTOCOLS\\self_evolution.py",
-      "size": 15473,
+      "size": 15961,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5981,7 +6145,7 @@
     },
     {
       "path": "04_PROTOCOLS\\state_generator.py",
-      "size": 12083,
+      "size": 13608,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6204,6 +6368,13 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\check_session.py",
+      "size": 1017,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\FREE_WORKER_ARMY.md",
       "size": 5437,
       "ext": ".md",
@@ -6288,6 +6459,27 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\tg_bot_Bot1_Invalid.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_bot_Bot2_Sck01Bot.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_bot_login.py",
+      "size": 1180,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\tg_code_type_check.py",
       "size": 2541,
       "ext": ".py",
@@ -6304,6 +6496,13 @@
     {
       "path": "05_TOOLS\\miner\\tg_collections_miner.py",
       "size": 11189,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_login_file.py",
+      "size": 4427,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6333,6 +6532,62 @@
       "path": "05_TOOLS\\miner\\tg_push.py",
       "size": 7843,
       "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_All False except App Hash.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_Allow App Hash.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_App Hash + Current Number.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_App Sandbox.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "MEDIUM",
+      "type": "execution_env"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_codesettings.py",
+      "size": 2825,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_Default (no settings).session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_Firebase + App Hash.session",
+      "size": 28672,
+      "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_test_Unknown Number + App Hash.session",
+      "size": 28672,
+      "ext": ".session",
       "priority": "NORMAL",
       "type": "data"
     },

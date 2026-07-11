@@ -188,7 +188,7 @@ class PatchApplier:
         return backup_path
 
     def apply_constraint_patch(self, patch: Dict[str, Any]) -> Dict[str, Any]:
-        """应用约束 patch"""
+        """应用约束 patch — 新约束不直接 ACTIVE，先 PENDING_REVIEW（C-010）"""
         target = WORKSPACE / "constraints.json"
         if not target.exists():
             target.write_text(json.dumps({"constraints": []}, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -204,9 +204,17 @@ class PatchApplier:
             if any(c.get("id") == new_id for c in constraints):
                 return {"status": "skipped", "reason": f"Constraint {new_id} already exists"}
 
+            # C-010: 新约束不直接 ACTIVE，先 PENDING_REVIEW
+            # C-004: 7天后必须重新评估
+            from datetime import timedelta
+            patch["review_status"] = "PENDING_REVIEW"
+            patch["review_schedule"] = (datetime.now() + timedelta(days=7)).strftime("%Y-%m-%d")
+            patch["review_count"] = 0
+            patch["auto_generated"] = True
+
             constraints.append(patch)
             target.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-            return {"status": "applied", "file": str(target), "constraint_id": new_id}
+            return {"status": "applied", "file": str(target), "constraint_id": new_id, "review_status": "PENDING_REVIEW"}
         except Exception as e:
             return {"status": "failed", "error": str(e)}
 

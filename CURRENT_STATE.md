@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-11 15:07*
+*Last updated: 2026-07-11 15:49*
 
 ---
 
@@ -28,14 +28,18 @@
 
 ## Current Questions
 
-> 3 open questions. Priority: P0=紧急, P1=高, P2=中.
+> 5 open questions. Priority: P0=紧急, P1=高, P2=中.
 > These are the most important things the system needs to understand.
-
-🟡 **Q-001** 为什么 GitHub Models 连续返回 401？
 
 🟢 **Q-002** 为什么 r1-open-source-seed 一直没有内容？
 
 🟢 **Q-003** HF Router 是否应该走 OneAPI？
+
+🟡 **Q-005** 为什么最近有多个文件被修改，且这些修改集中在系统的关键模块和状态文件上？
+
+🟡 **Q-006** 为什么在工作空间中有未追踪的文件且它们位于不同的目录下？
+
+🟢 **Q-007** 为什么 akshare 没有安装导致 provider 缺陷？
 
 ---
 
@@ -92,7 +96,7 @@
   Explorer     ████████░░ 85%  v2 daily exploration active
   Curator      ████████░░ 88%  Manual sync
   Governor     ██████████ 100%  Invariant checks active
-  QuestionCenter █████████░ 90%  3 questions, 3 hypotheses, 1 experiments
+  QuestionCenter █████████░ 90%  5 questions, 3 hypotheses, 1 experiments
   MultiAgentDebate █████████░ 90%  4-role debate active
   SelfEvolution ████████░░ 80%  Auto-apply + rollback + audit
 

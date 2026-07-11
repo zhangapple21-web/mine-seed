@@ -170,19 +170,22 @@ def beat(log):
             log.info("QuestionEngine: generating questions from new observations")
             qe = QuestionEngine()
             situation_file = WORKSPACE / "02_MEMORY" / "environment" / "latest_situation.json"
+            obs_file = WORKSPACE / "02_MEMORY" / "environment" / "latest_observations.json"
+            observations = []
             if situation_file.exists():
                 situation = json.loads(situation_file.read_text(encoding="utf-8"))
                 observations = situation.get("all_observations", [])
-                candidates = qe.generate_batch(observations)
-                created = qe.push_to_question_center(candidates)
-                report["steps"]["question_engine"] = {
-                    "candidates": len(candidates),
-                    "created": len(created),
-                    "qids": created,
-                }
-                log.info(f"QuestionEngine: {len(created)} new questions created")
-            else:
-                report["steps"]["question_engine"] = {"status": "skipped", "reason": "no situation file"}
+            # Fallback: if all_observations is empty (already seen), use latest_observations.json
+            if not observations and obs_file.exists():
+                observations = json.loads(obs_file.read_text(encoding="utf-8"))
+            candidates = qe.generate_batch(observations)
+            created = qe.push_to_question_center(candidates)
+            report["steps"]["question_engine"] = {
+                "candidates": len(candidates),
+                "created": len(created),
+                "qids": created,
+            }
+            log.info(f"QuestionEngine: {len(created)} new questions created")
         else:
             report["steps"]["question_engine"] = {"status": "skipped", "reason": "no new observations"}
             log.info("QuestionEngine: skipped (no new observations)")

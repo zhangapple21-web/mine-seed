@@ -30,7 +30,7 @@ EXP-002: Explorer v2 — 主动探索者
   02_MEMORY/exploration/exploration_YYYYMMDD.json
   02_MEMORY/exploration/exploration_YYYYMMDD.md
 """
-import os, sys, json, random, urllib.request, urllib.error, argparse
+import os, sys, json, random, urllib.request, urllib.error, urllib.parse, argparse
 from pathlib import Path
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
@@ -422,5 +422,4 @@ def main():
 
 
 if __name__ == "__main__":
-    import urllib.parse  # noqa
     main()
