@@ -1,0 +1,74 @@
+{
+  "cycle_id": "20260710T155648",
+  "time": "2026-07-10T15:56:48.261059",
+  "steps": {
+    "environment": {
+      "step": "environment",
+      "python": "3.11.9",
+      "cwd": "C:\\Users\\User\\ace_workspace\\mine-seed",
+      "git_repo": true
+    },
+    "observe": {
+      "step": "observe",
+      "changes": {
+        "git_changes": 204,
+        "new_files_24h": 1
+      }
+    },
+    "audit": {
+      "step": "audit",
+      "protocols": 20,
+      "axioms": 263
+    },
+    "recovery": {
+      "step": "recovery",
+      "files": 722,
+      "recovery_assets": 93,
+      "needs_recovery": true
+    },
+    "discovery": {
+      "step": "discovery",
+      "new_archives": []
+    },
+    "candidate": {
+      "step": "candidate",
+      "candidates": []
+    },
+    "seed": {
+      "step": "seed",
+      "seeds": []
+    },
+    "task": {
+      "step": "task",
+      "active_tasks": [],
+      "queue_depth": 0
+    },
+    "validator": {
+      "step": "validator",
+      "validated": 0,
+      "failed": 0
+    },
+    "governor": {
+      "step": "governor",
+      "decisions": []
+    },
+    "archive": {
+      "step": "archive",
+      "archived": 0
+    },
+    "evolution": {
+      "step": "evolution",
+      "constraints_updated": 0,
+      "new_principles": 0
+    },
+    "heartbeat": {
+      "step": "heartbeat",
+      "alive": true,
+      "ts": "2026-07-10T15:56:49.490745"
+    },
+    "repeat": {
+      "step": "repeat",
+      "next_iteration_in": "ready"
+    }
+  }
+}
