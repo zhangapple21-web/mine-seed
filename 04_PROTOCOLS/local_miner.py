@@ -359,6 +359,8 @@ class ProviderHealth:
             "total": 0, "success": 0, "latency_sum": 0, "last_check": "", "status": "unknown"
         })
         prev_status = h.get("status", "unknown")
+        # C-008: 记录变更前的成功率，用于创新模式检测
+        prev_rate = h["success"] / h["total"] if h.get("total", 0) > 0 else None
         h["total"] += 1
         if success:
             h["success"] += 1
@@ -378,6 +380,54 @@ class ProviderHealth:
             h["status"] = "down"
         # 状态降级时自动沉淀 Experience
         self._sediment_failure(provider, prev_status, h["status"])
+        # C-008: 创新模式检测 — 成功率突变>30%时生成 innovation experience
+        self._detect_innovation(provider, prev_rate, rate, capability)
+
+    def _detect_innovation(self, provider: str, prev_rate, new_rate: float, capability: str):
+        """C-008: 当成功率突然变化(>30%)时，标记为创新模式而非失败"""
+        if prev_rate is None or new_rate is None:
+            return
+        # 需要足够的数据点才检测
+        h = self._health.get(provider, {})
+        if h.get("total", 0) < 3:
+            return
+        delta = new_rate - prev_rate
+        if abs(delta) < 0.30:
+            return
+        # 避免重复写：同一 provider 30分钟内只写一次
+        key = (provider, "innovation")
+        last = self._proven_at.get(key)
+        if last:
+            try:
+                last_dt = datetime.fromisoformat(last)
+                if (datetime.now() - last_dt).total_seconds() < 1800:
+                    return
+            except Exception:
+                pass
+        self._proven_at[key] = datetime.now().isoformat()
+
+        direction = "improvement" if delta > 0 else "degradation"
+        exp = {
+            "type": "innovation_pattern",
+            "provider": provider,
+            "capability": capability,
+            "prev_rate": round(prev_rate, 3),
+            "new_rate": round(new_rate, 3),
+            "delta": round(delta, 3),
+            "direction": direction,
+            "total_calls": h.get("total", 0),
+            "timestamp": datetime.now().isoformat(),
+            "analysis": f"Provider '{provider}' 成功率从 {prev_rate:.0%} 突变到 {new_rate:.0%}（{direction}）。"
+                       f"这可能意味着模型升级、数据源变化或 API 配额调整。"
+                       f"建议：生成 Question 调查原因。",
+        }
+        try:
+            self._exp_dir.mkdir(parents=True, exist_ok=True)
+            fname = f"exp_innovation_{provider}_{datetime.now().strftime('%Y%m%dT%H%M%S')}.json"
+            with open(self._exp_dir / fname, "w", encoding="utf-8") as f:
+                json.dump(exp, f, ensure_ascii=False, indent=2, default=str)
+        except Exception:
+            pass
 
     def get_score(self, provider: str) -> float:
         """获取 Health Score (0.0~1.0)"""
