@@ -16,10 +16,12 @@ import json, os, time
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-EXPERIENCE_FILE = "/home/coze/mine_output/experience.json"
-OBSERVATION_FILE = "/home/coze/mine_output/observation_log.json"
-FEEDBACK_FILE = "/home/coze/mine_output/user_feedback.jsonl"
-REGISTRY_FILE = "/home/coze/worker_registry.json"
+_BASE_DIR = os.environ.get("BASE_DIR", "/home/coze")
+_MINE_OUTPUT_DIR = os.environ.get("MINE_OUTPUT_DIR", "mine_output")
+EXPERIENCE_FILE = os.path.join(_BASE_DIR, _MINE_OUTPUT_DIR, "experience.json")
+OBSERVATION_FILE = os.path.join(_BASE_DIR, _MINE_OUTPUT_DIR, "observation_log.json")
+FEEDBACK_FILE = os.path.join(_BASE_DIR, _MINE_OUTPUT_DIR, "user_feedback.jsonl")
+REGISTRY_FILE = os.path.join(_BASE_DIR, "worker_registry.json")
 
 class ExperienceEngine:
     def __init__(self):
@@ -244,14 +246,14 @@ class ExperienceEngine:
         # 如果某个category（complex/simple）的失败率系统性高于另一个
         try:
             import json as _j
-            with open("/home/coze/signal_taxonomy.json") as _f:
+            with open(os.environ.get("SIGNAL_TAXONOMY_FILE", "/home/coze/signal_taxonomy.json")) as _f:
                 taxonomy = _j.load(_f)
             
             simple_types = taxonomy.get("categories", {}).get("simple_signal", {}).get("types", [])
             complex_types = taxonomy.get("categories", {}).get("complex_signal", {}).get("types", [])
             
             # 统计fitness_log
-            fitness_log = "/home/coze/mine_output/fitness_log.jsonl"
+            fitness_log = os.path.join(_BASE_DIR, _MINE_OUTPUT_DIR, "fitness_log.jsonl")
             if os.path.exists(fitness_log):
                 from collections import defaultdict as _dd
                 cat_stats = _dd(lambda: {"success": 0, "fail": 0})

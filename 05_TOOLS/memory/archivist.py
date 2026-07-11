@@ -13,8 +13,8 @@ from typing import Dict, List, Any, Optional
 from collections import defaultdict
 
 # 配置路径
-BASE_DIR = Path("/home/coze")
-MINE_OUTPUT = BASE_DIR / "mine_output"
+BASE_DIR = Path(os.environ.get("BASE_DIR", "/home/coze"))
+MINE_OUTPUT = BASE_DIR / os.environ.get("MINE_OUTPUT_DIR", "mine_output")
 OBSERVATION_LOG = MINE_OUTPUT / "observation_log.json"
 EXPERIENCE_FILE = MINE_OUTPUT / "experience.json"
 SUMMARY_FILE = MINE_OUTPUT / "summary.json"
@@ -538,7 +538,7 @@ class Archivist:
         # 2. 新增约束/毒组合（从experience同步）
         try:
             import json as _j
-            with open("/home/coze/routing_constraints.json") as _f:
+            with open(os.environ.get("ROUTING_CONSTRAINTS_FILE", "/home/coze/routing_constraints.json")) as _f:
                 rc = _j.load(_f)
             recent = [r for r in rc.get('rules', []) 
                      if r.get('review_status') == 'ACTIVE' and '2026-06-18' in str(r.get('confirmed_ts', '')) or '2026-06-19' in str(r.get('confirmed_ts', ''))]

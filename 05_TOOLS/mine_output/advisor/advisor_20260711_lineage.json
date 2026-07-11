@@ -1,0 +1,47 @@
+{
+  "lineage_version": "mvp-v1",
+  "date": "20260711",
+  "recommendations": [
+    {
+      "recommendation_id": "sa_20260711_001",
+      "ticker": "688111",
+      "signal_count": 5,
+      "signal_combo": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "source": {
+        "provider": "tencent",
+        "endpoint": "qt.gtimg.cn/q"
+      },
+      "snapshot_time": "2026-07-11T06:15:01",
+      "recommend_time": "2026-07-11T06:15:01",
+      "recommend_price": 233.76,
+      "close_price": null,
+      "return_pct": null,
+      "review_status": "pending"
+    },
+    {
+      "recommendation_id": "sa_20260711_002",
+      "ticker": "600362",
+      "signal_count": 2,
+      "signal_combo": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "source": {
+        "provider": "tencent",
+        "endpoint": "qt.gtimg.cn/q"
+      },
+      "snapshot_time": "2026-07-11T06:15:01",
+      "recommend_time": "2026-07-11T06:15:01",
+      "recommend_price": 42.89,
+      "close_price": null,
+      "return_pct": null,
+      "review_status": "pending"
+    }
+  ]
+}

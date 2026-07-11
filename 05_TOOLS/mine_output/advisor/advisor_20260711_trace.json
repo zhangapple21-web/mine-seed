@@ -1,0 +1,1522 @@
+{
+  "date": "2026-07-11",
+  "ccco1_signal_space": {
+    "accepted_factors": [
+      "momentum",
+      "volatility",
+      "mean_reversion",
+      "volume_normal"
+    ],
+    "rejected_factors": [
+      "volume_shock"
+    ],
+    "factor_count": 5
+  },
+  "cco2_selection_trace": [
+    {
+      "symbol": "600547",
+      "name": "山东黄金",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "600489",
+      "name": "中金黄金",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "600637",
+      "name": "东方明珠",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 55.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 55.0
+    },
+    {
+      "symbol": "688111",
+      "name": "金山办公",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 175.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": true,
+      "layer3_reasons": [
+        "PE合理 +10",
+        "大市值 +15",
+        "少量流入 +5",
+        "行业龙头 +5"
+      ],
+      "layer3_bonus_detail": {
+        "PE合理": 10,
+        "大市值": 15,
+        "少量流入": 5,
+        "行业龙头": 5
+      },
+      "final_score": 175.0
+    },
+    {
+      "symbol": "600352",
+      "name": "浙江龙盛",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 52.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 52.0
+    },
+    {
+      "symbol": "600436",
+      "name": "片仔癀",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 55.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 55.0
+    },
+    {
+      "symbol": "600256",
+      "name": "广汇能源",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "300142",
+      "name": "沃森生物",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "300496",
+      "name": "中科创达",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 73.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 73.0
+    },
+    {
+      "symbol": "603259",
+      "name": "药明康德",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 58.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 58.0
+    },
+    {
+      "symbol": "600521",
+      "name": "华海药业",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 110.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": true,
+      "layer3_reasons": [
+        "PE合理 +10",
+        "小市值 +5",
+        "少量流入 +5",
+        "央企/政策催化 +5"
+      ],
+      "layer3_bonus_detail": {
+        "PE合理": 10,
+        "小市值": 5,
+        "少量流入": 5,
+        "央企/政策催化": 5
+      },
+      "final_score": 110.0
+    },
+    {
+      "symbol": "601888",
+      "name": "中国中免",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "601939",
+      "name": "建设银行",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 114.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": true,
+      "layer3_reasons": [
+        "PE合理 +10",
+        "中市值 +10",
+        "少量流入 +5",
+        "行业龙头 +5",
+        "央企/政策催化 +5"
+      ],
+      "layer3_bonus_detail": {
+        "PE合理": 10,
+        "中市值": 10,
+        "少量流入": 5,
+        "行业龙头": 5,
+        "央企/政策催化": 5
+      },
+      "final_score": 114.0
+    },
+    {
+      "symbol": "600196",
+      "name": "复星医药",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 61.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 61.0
+    },
+    {
+      "symbol": "600267",
+      "name": "海正药业",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 64.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 64.0
+    },
+    {
+      "symbol": "600362",
+      "name": "江西铜业",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 172.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": true,
+      "layer3_reasons": [
+        "PE合理 +10",
+        "中市值 +10",
+        "少量流入 +5",
+        "行业龙头 +5",
+        "央企/政策催化 +5"
+      ],
+      "layer3_bonus_detail": {
+        "PE合理": 10,
+        "中市值": 10,
+        "少量流入": 5,
+        "行业龙头": 5,
+        "央企/政策催化": 5
+      },
+      "final_score": 172.0
+    },
+    {
+      "symbol": "300896",
+      "name": "爱美客",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "688561",
+      "name": "奇安信-U",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_negative(-14.0)"
+      ],
+      "layer1_score": 79.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 79.0
+    },
+    {
+      "symbol": "000876",
+      "name": "新 希 望",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_negative(-10.3)"
+      ],
+      "layer1_score": 37.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "MACD金叉",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 37.0
+    },
+    {
+      "symbol": "601360",
+      "name": "三六零",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_high(98.2)"
+      ],
+      "layer1_score": 172.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": true,
+      "layer3_reasons": [
+        "PE合理 +10",
+        "中市值 +10",
+        "少量流入 +5",
+        "行业龙头 +5",
+        "央企/政策催化 +5"
+      ],
+      "layer3_bonus_detail": {
+        "PE合理": 10,
+        "中市值": 10,
+        "少量流入": 5,
+        "行业龙头": 5,
+        "央企/政策催化": 5
+      },
+      "final_score": 172.0
+    },
+    {
+      "symbol": "000425",
+      "name": "徐工机械",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 34.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 34.0
+    },
+    {
+      "symbol": "600887",
+      "name": "伊利股份",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 46.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 46.0
+    },
+    {
+      "symbol": "600426",
+      "name": "DR华鲁恒",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 34.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 34.0
+    },
+    {
+      "symbol": "601117",
+      "name": "中国化学",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 46.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 46.0
+    },
+    {
+      "symbol": "601336",
+      "name": "新华保险",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 55.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 55.0
+    },
+    {
+      "symbol": "600271",
+      "name": "航天信息",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_negative(-18.3)"
+      ],
+      "layer1_score": 64.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 64.0
+    },
+    {
+      "symbol": "600570",
+      "name": "恒生电子",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 49.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 49.0
+    },
+    {
+      "symbol": "688599",
+      "name": "天合光能",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_negative(-5.1)"
+      ],
+      "layer1_score": 34.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 34.0
+    },
+    {
+      "symbol": "600233",
+      "name": "圆通速递",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "pe_reasonable +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [],
+      "layer1_score": 61.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 61.0
+    },
+    {
+      "symbol": "600588",
+      "name": "用友网络",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_negative(-24.0)"
+      ],
+      "layer1_score": 64.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 64.0
+    },
+    {
+      "symbol": "600406",
+      "name": "国电南瑞",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.9%)",
+        "liquidity_low(turnover=0.9%)"
+      ],
+      "layer1_score": 46.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "RSI健康区间",
+        "量能放大"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 46.0
+    },
+    {
+      "symbol": "300760",
+      "name": "迈瑞医疗",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.9%)",
+        "liquidity_low(turnover=0.9%)"
+      ],
+      "layer1_score": 67.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 67.0
+    },
+    {
+      "symbol": "601728",
+      "name": "中国电信",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.1%)",
+        "liquidity_low(turnover=0.1%)"
+      ],
+      "layer1_score": 55.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 55.0
+    },
+    {
+      "symbol": "688339",
+      "name": "亿华通-U",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "cap_small(37亿)",
+        "pe_negative(-7.3)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600009",
+      "name": "上海机场",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.7%)",
+        "liquidity_low(turnover=0.7%)"
+      ],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "600585",
+      "name": "海螺水泥",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.8%)",
+        "liquidity_low(turnover=0.8%)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "688185",
+      "name": "康希诺",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "turnover_healthy +20",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "cap_small(59亿)",
+        "pe_negative(-12591.2)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "601601",
+      "name": "中国太保",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.8%)",
+        "liquidity_low(turnover=0.8%)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600690",
+      "name": "海尔智家",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.8%)",
+        "liquidity_low(turnover=0.8%)"
+      ],
+      "layer1_score": 34.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 34.0
+    },
+    {
+      "symbol": "601328",
+      "name": "XD交通银",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.7%)",
+        "liquidity_low(turnover=0.7%)"
+      ],
+      "layer1_score": 64.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 64.0
+    },
+    {
+      "symbol": "600188",
+      "name": "兖矿能源",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(1.0%)",
+        "liquidity_low(turnover=1.0%)"
+      ],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "601186",
+      "name": "中国铁建",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.4%)",
+        "liquidity_low(turnover=0.4%)"
+      ],
+      "layer1_score": 40.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 40.0
+    },
+    {
+      "symbol": "600893",
+      "name": "航发动力",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_high(151.5)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600760",
+      "name": "中航沈飞",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.8%)",
+        "liquidity_low(turnover=0.8%)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": false,
+      "layer2_reasons": [
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600201",
+      "name": "生物股份",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "turnover_healthy +20",
+        "cap_mid_large +15",
+        "liquidity_ok +10"
+      ],
+      "layer1_reject_flags": [
+        "pe_high(129.9)"
+      ],
+      "layer1_score": 51.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 51.0
+    },
+    {
+      "symbol": "601919",
+      "name": "中远海控",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.5%)",
+        "liquidity_low(turnover=0.5%)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600223",
+      "name": "福瑞达",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_moderate +25",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.8%)",
+        "cap_small(55亿)",
+        "liquidity_low(turnover=0.8%)"
+      ],
+      "layer1_score": 22.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 22.0
+    },
+    {
+      "symbol": "601838",
+      "name": "成都银行",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.6%)",
+        "liquidity_low(turnover=0.6%)"
+      ],
+      "layer1_score": 52.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 52.0
+    },
+    {
+      "symbol": "600535",
+      "name": "天士力",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(0.7%)",
+        "liquidity_low(turnover=0.7%)"
+      ],
+      "layer1_score": 28.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 28.0
+    },
+    {
+      "symbol": "600298",
+      "name": "安琪酵母",
+      "layer1_passed": true,
+      "layer1_reasons": [
+        "price_range +15",
+        "change_small +10",
+        "cap_mid_large +15",
+        "pe_reasonable +15"
+      ],
+      "layer1_reject_flags": [
+        "turnover_low(1.0%)",
+        "liquidity_low(turnover=1.0%)"
+      ],
+      "layer1_score": 43.0,
+      "layer2_passed": true,
+      "layer2_reasons": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间"
+      ],
+      "layer3_passed": false,
+      "layer3_reasons": [],
+      "layer3_bonus_detail": {},
+      "final_score": 43.0
+    }
+  ],
+  "cco4_value_trace": {
+    "host_profile": "student_group",
+    "top2": [
+      {
+        "symbol": "688111",
+        "name": "金山办公",
+        "matched_rules": [
+          "large_cap",
+          "low_risk",
+          "easy_to_hold",
+          "short_mid_ok"
+        ],
+        "value_score": 55
+      },
+      {
+        "symbol": "600362",
+        "name": "江西铜业",
+        "matched_rules": [
+          "large_cap",
+          "low_risk",
+          "easy_to_hold",
+          "short_mid_ok"
+        ],
+        "value_score": 55
+      }
+    ]
+  },
+  "rejected_candidates": [
+    {
+      "symbol": "600547",
+      "name": "山东黄金",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    },
+    {
+      "symbol": "600489",
+      "name": "中金黄金",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600637",
+      "name": "东方明珠",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600352",
+      "name": "浙江龙盛",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600436",
+      "name": "片仔癀",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600256",
+      "name": "广汇能源",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    },
+    {
+      "symbol": "300142",
+      "name": "沃森生物",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "300496",
+      "name": "中科创达",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "603259",
+      "name": "药明康德",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600521",
+      "name": "华海药业",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": true,
+      "reject_layer": "cco4_no_match",
+      "reject_reason": "cco4_no_match"
+    },
+    {
+      "symbol": "601888",
+      "name": "中国中免",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    },
+    {
+      "symbol": "601939",
+      "name": "建设银行",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": true,
+      "reject_layer": "cco4_no_match",
+      "reject_reason": "cco4_no_match"
+    },
+    {
+      "symbol": "600196",
+      "name": "复星医药",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600267",
+      "name": "海正药业",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "300896",
+      "name": "爱美客",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    },
+    {
+      "symbol": "688561",
+      "name": "奇安信-U",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "000876",
+      "name": "新 希 望",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "000425",
+      "name": "徐工机械",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    },
+    {
+      "symbol": "600887",
+      "name": "伊利股份",
+      "layer1_passed": true,
+      "layer2_passed": true,
+      "layer3_passed": false,
+      "reject_layer": "cco3_failed",
+      "reject_reason": "cco3_failed"
+    },
+    {
+      "symbol": "600426",
+      "name": "DR华鲁恒",
+      "layer1_passed": true,
+      "layer2_passed": false,
+      "layer3_passed": false,
+      "reject_layer": "cco2_failed",
+      "reject_reason": "cco2_failed"
+    }
+  ]
+}

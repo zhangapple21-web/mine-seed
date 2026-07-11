@@ -12,9 +12,9 @@ from datetime import datetime
 
 API_BASE = os.environ.get("MINER_API_BASE", "http://localhost:3000/v1/chat/completions")
 API_KEY = os.environ.get("MINER_API_KEY", "jHhtKnCuHVriXUaHC992D9B645D44e8a9c901625A17fCd41")
-OUTPUT_DIR = "/home/coze/mine_output"
+OUTPUT_DIR = os.environ.get("MINER_OUTPUT_DIR", "/home/coze/mine_output")
 
-sys.path.insert(0, "/home/coze")
+sys.path.insert(0, os.environ.get("BASE_DIR", "/home/coze"))
 from task_router import registry, observation, router, judge, TASK_PROFILES
 
 # === CONSTRAINT MONKEY PATCH v5 (2026-06-20) ===
@@ -338,10 +338,61 @@ def save_result(task_name, result):
     log(f"  产出: {outfile} ({result.get('elapsed',0):.1f}s, {len(result.get('content',''))} chars) [{result.get('corps','?')}]")
     return outfile
 
+def _run_production_mode(registry, corps_stats):
+    """云端生产模式 — 无R1数据时运行可用任务"""
+    from pathlib import Path
+    import shutil
+
+    log("=" * 50)
+    log("生产模式 — 市场情绪 + 模型基准测试")
+    log("=" * 50)
+
+    tasks_done = []
+
+    # 任务1：市场情绪分析
+    log("\n>>> 开始: 市场情绪分析")
+    try:
+        prompt = "你是疯子矿场的市场分析师。简短分析当前A股市场情绪（100字以内），输出格式：[情绪] [方向] [建议]"
+        result = call_model(prompt, "market_sentiment")
+        if result:
+            save_result("market_sentiment", result)
+            tasks_done.append("market_sentiment")
+    except Exception as e:
+        log(f"  市场情绪分析失败: {e}")
+
+    # 任务2：模型基准测试
+    log("\n>>> 开始: 模型基准测试")
+    test_prompt = "用一句话解释什么是动量因子在量化交易中的应用。"
+    for model_key, model_name in [("glm_flash", "glm-4-flash"), ("nim_deepseek", "deepseek-ai/deepseek-v4-flash"), ("github_mini", "gpt-4o-mini")]:
+        try:
+            result = call_model(test_prompt, f"benchmark_{model_key}")
+            if result:
+                save_result(f"benchmark_{model_key}", result)
+                tasks_done.append(f"benchmark_{model_key}")
+        except Exception as e:
+            log(f"  {model_name} 基准测试失败: {e}")
+
+    # 复制产出到 cloud/
+    cloud_out = Path(os.environ.get("MINE_SEED", "/workspace/fengzi-repos/mine-seed")) / "cloud" / "miner"
+    cloud_out.mkdir(parents=True, exist_ok=True)
+    for task in tasks_done:
+        latest = sorted(Path(OUTPUT_DIR).glob(f"{task}_*.md"), reverse=True)
+        if latest:
+            shutil.copy(latest[0], cloud_out)
+            log(f"  产出复制到 cloud/: {latest[0].name}")
+
+    log(f"\n{'='*50}")
+    log(f"生产模式完成: {len(tasks_done)} 个任务")
+    log(f"{'='*50}")
+
 def load_r1_data():
-    r1_path = "/app/data/所有对话/主对话/R1_Ω_FINAL.json"
+    r1_path = os.environ.get("R1_DATA_PATH", "/app/data/所有对话/主对话/R1_Ω_FINAL.json")
     if not os.path.exists(r1_path):
-        r1_path = "/home/coze/R1_Ω_FINAL.json"
+        r1_path = os.environ.get("R1_DATA_PATH_FALLBACK", "/home/coze/R1_Ω_FINAL.json")
+    if not os.path.exists(r1_path):
+        import logging
+        logging.warning(f"[MINER] R1 data not found, skipping archaeology tasks")
+        return None
     with open(r1_path, "r") as f:
         return json.load(f)
 
@@ -594,6 +645,12 @@ def run_shift():
             log(f"🔄 {wid} 恢复alive")
     
     data = load_r1_data()
+    if data is None:
+        corps_stats = {"🚀GLM": 0, "🏆NIM": 0, "🆓GH": 0}
+        log("⚠️ R1数据不可用，切换到生产模式")
+        _run_production_mode(registry, corps_stats)
+        return
+    
     log(f"R1数据加载完成: {len(data['core_data']['slices'])} 切片")
     
     tasks = [

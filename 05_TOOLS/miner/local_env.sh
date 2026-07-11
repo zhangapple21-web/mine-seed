@@ -10,7 +10,7 @@ export ADVISOR_MODEL="glm-4-flash"
 
 # 创建兼容目录结构
 mkdir -p /tmp/mine_output/signals
-mkdir -p /tmp/mine_output/observation_log.json
+touch /tmp/mine_output/observation_log.json
 
 # 路径覆盖
 export REPO_DIR="/workspace/fengzi-repos/mine-seed"

@@ -35,10 +35,10 @@ MAX_ITERATIONS = 3
 NUM_SIGNALS = 2
 FORWARD_PERIODS = 5
 
-REPO_DIR = Path("/home/coze/quantitative-signal-discovery-agent")
+REPO_DIR = Path(os.environ.get("QUANT_REPO_DIR", "/home/coze/quantitative-signal-discovery-agent"))
 TEMPLATE_DIR = REPO_DIR / "src" / "signal_discovery_workflow" / "template"
 DATA_DIR = REPO_DIR / "src" / "signal_discovery_workflow" / "data" / "sp500"
-OUTPUT_DIR = Path("/home/coze/mine_output/signals")
+OUTPUT_DIR = Path(os.environ.get("SIGNAL_OUTPUT_DIR", "/home/coze/mine_output/signals"))
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
