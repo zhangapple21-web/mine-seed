@@ -93,3 +93,19 @@ _tmp/
 
 # === R1 archaeology root (canonical in r1-archaeology repo) ===
 /r1_archaeology/
+
+# === Timestamped seed/memory files (keep latest only) ===
+02_MEMORY/thought_seed_202*.json
+02_MEMORY/seed_202*.json
+02_MEMORY/seed_momentum_202*.json
+02_MEMORY/seed_volatility_202*.json
+02_MEMORY/memory_index_2026*.json
+02_MEMORY/binary_sense_demo_*.json
+02_MEMORY/tg_pushed.json
+
+# === Runtime generated indexes ===
+06_RUNTIME/daemon_state.json
+06_RUNTIME/index.html
+06_RUNTIME/index.json
+06_RUNTIME/index.md
+06_RUNTIME/styles.css
