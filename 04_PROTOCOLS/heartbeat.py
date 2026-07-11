@@ -30,6 +30,7 @@ try:
     ace_logger = import_module(WORKSPACE / "06_RUNTIME" / "core" / "ace_logger.py")
     env_sensor_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "environment_sensor.py")
     awareness_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "awareness_loop.py")
+    state_gen_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "state_generator.py")
 
     scan_directory = ef.scan_directory
     build_recovery_graph = ef.build_recovery_graph
@@ -42,6 +43,7 @@ try:
     EnvironmentSensor = env_sensor_mod.EnvironmentSensor
     SituationBuilder = env_sensor_mod.SituationBuilder
     AwarenessLoop = awareness_mod.AwarenessLoop
+    StateGenerator = state_gen_mod.StateGenerator
 except Exception as e:
     print(f"[HEARTBEAT] Import error: {e}", file=sys.stderr)
     sys.exit(1)
@@ -172,6 +174,16 @@ def beat(log):
     except Exception as e:
         report["steps"]["civilization_map"] = {"error": str(e)}
         log.error(f"CivMap error: {e}")
+
+    # STATE-001: Update Current State Dashboard
+    try:
+        sg = StateGenerator()
+        sg.update_current_state()
+        report["steps"]["state_generator"] = {"status": "updated"}
+        log.info("CURRENT_STATE.md updated")
+    except Exception as e:
+        report["steps"]["state_generator"] = {"error": str(e)}
+        log.error(f"StateGenerator error: {e}")
 
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
