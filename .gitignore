@@ -97,8 +97,8 @@ _tmp/
 # === Timestamped seed/memory files (keep latest only) ===
 02_MEMORY/thought_seed_202*.json
 02_MEMORY/seed_202*.json
-02_MEMORY/seed_momentum_202*.json
-02_MEMORY/seed_momentum_202*.md
+02_MEMORY/seed_momentum*202*.json
+02_MEMORY/seed_momentum*202*.md
 02_MEMORY/seed_volatility_202*.json
 02_MEMORY/memory_index_2026*.json
 02_MEMORY/binary_sense_demo_*.json
