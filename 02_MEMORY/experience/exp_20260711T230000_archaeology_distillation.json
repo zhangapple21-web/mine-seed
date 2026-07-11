@@ -1,0 +1,80 @@
+{
+  "exp_id": "EXP-20260711-ARCH-001",
+  "type": "archaeology_distillation",
+  "title": "R1 ExperienceEngine + Constraint Proposer 考古蒸馏",
+  "timestamp": "2026-07-11T23:00:00+08:00",
+  "source_files": [
+    "02_MEMORY/experience_engine.py",
+    "06_RUNTIME/constraint_proposer.py",
+    "06_RUNTIME/sync_constraints.py",
+    "03_DATA/routing_constraints.json",
+    "03_DATA/worker_registry.json"
+  ],
+  "discoveries": [
+    {
+      "name": "三层经验压缩",
+      "description": "R1 ExperienceEngine 实现了 Raw Observation → Pattern Extraction → Executable Rule 的三层压缩。不是简单记录原始数据，而是提取可复用模式，最终生成可执行的路由规则。",
+      "ace_impact": "R2 的 Self Evolution 应该借鉴这个三层结构，不是直接从 Decision 跳到 Code Change，而是先提取 Pattern，再生成 Rule",
+      "constraint_id": "C-005"
+    },
+    {
+      "name": "Meaning vs Principle 分离",
+      "description": "R1 严格区分 Meaning（洞察样本）和 Principle（原则）。Meaning 是'这件事说明了什么'的观察，不自动升级为 Principle。30天后重复出现的 Meaning 才允许升级。",
+      "ace_impact": "R2 的 Question Engine 生成的假设不应直接成为约束，需要经过类似的沉淀周期",
+      "constraint_id": "C-006"
+    },
+    {
+      "name": "反过拟合框架 RFC-008",
+      "description": "三个机制：复杂度惩罚（信号>5个扣confidence）、时间衰减（90天后stale）、脆弱性检测（移除1个信号看结论是否改变）",
+      "ace_impact": "R2 的 Multi-Agent Debate 在做决策时应该应用这些反过拟合规则",
+      "constraint_id": "C-001, C-002, C-003"
+    },
+    {
+      "name": "反永久化规则",
+      "description": "所有 AVOID 约束 7 天后必须重新评估。连续 3 次通过（成功率>=60%）则洗白（PARDONED），从 AVOID 降级为 MONITOR。没有终身监禁。",
+      "ace_impact": "R2 的 constraints.json 中所有约束都应有 review_schedule 和 review_status",
+      "constraint_id": "C-004"
+    },
+    {
+      "name": "约束复活机制",
+      "description": "DISABLED 的约束可以被 experience_engine 自动复活为 PENDING_REVIEW。新规则不直接 ACTIVE，先 PENDING_REVIEW 观察。",
+      "ace_impact": "R2 的 Self Evolution 在添加新约束时应该用 PENDING_REVIEW 而不是直接 ACTIVE",
+      "constraint_id": "C-010"
+    },
+    {
+      "name": "时间权重衰减压缩",
+      "description": "近期观测（3天内）权重 2x，使系统更快适应模型能力变化。效率分 = 近期表现×60% + 历史表现×40%。",
+      "ace_impact": "R2 的 Provider Health 可以借鉴这个权重策略",
+      "constraint_id": "C-007"
+    },
+    {
+      "name": "创新模式检测",
+      "description": "当 Worker 成功率突然变化(>30%)时，标记为创新模式而非失败。不合常规的变化可能意味着模型升级或数据源变化。",
+      "ace_impact": "R2 的 Environment Sensor 应该检测这种突变并生成 Question",
+      "constraint_id": "C-008"
+    },
+    {
+      "name": "渐进式三层检索",
+      "description": "Layer1 索引摘要(50-80 token/条) → Layer2 时间线上下文 → Layer3 完整记录。避免一次性加载过多数据。",
+      "ace_impact": "R2 的 Question Center 在搜索记忆时应该用渐进式检索",
+      "constraint_id": "C-009"
+    },
+    {
+      "name": "Worker 能力画像",
+      "description": "worker_registry.json 记录了每个 Worker 的 strengths/weaknesses/avg_latency/success_rate/proven_at。proven_at 记录在哪个任务上验证过。",
+      "ace_impact": "R2 的 Provider Health 已经有类似能力，但可以增加 proven_at 字段"
+    },
+    {
+      "name": "R1 约束规则实例",
+      "description": "routing_constraints.json 包含 21 条活生生的约束规则，涵盖 AVOID/PREFER/FIRST_PASS_AVOID 等多种动作类型。每条都有 evidence、review_schedule、review_status。",
+      "ace_impact": "这些规则是 R1 留下的宝贵经验，虽然 R2 的 Provider 不同，但模式可以复用"
+    }
+  ],
+  "distilled_constraints_count": 12,
+  "action_items": [
+    "在 Self Evolution 中实现 PENDING_REVIEW 机制",
+    "在 Multi-Agent Debate 中应用反过拟合规则",
+    "在 Question Center 中集成渐进式检索",
+    "在 Provider Health 中增加 proven_at 字段"
+  ]
+}

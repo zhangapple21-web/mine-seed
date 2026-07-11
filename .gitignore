@@ -59,3 +59,37 @@ _tmp/
 # Worktrees and merge state
 .worktrees/
 .git/worktrees/
+
+# === R1 Archaeology: Root-level duplicate flat directories ===
+# Canonical versions are in numbered dirs (00_ROOT ~ 07_GUARDIAN)
+/CONSTRAINTS/
+/WORKERS/
+/ace/
+/advisor/
+/aether_capsule/
+/assets/
+/cloud/
+/daily/
+/docs/
+/excavations/
+/insights/
+/lexicon/
+/memory/
+/memory_index/
+/miner/
+/modules/
+/research/
+/V6_RFC/
+/xiaofengzi/
+/signals/
+/constraint_proposal/
+/world_models/
+
+# === Timestamped history snapshots (keep latest_*.json only) ===
+02_MEMORY/environment/situation_202*.json
+02_MEMORY/heartbeat/beat_202*.json
+02_MEMORY/heartbeat/ops_004_202*.json
+02_MEMORY/heartbeat/ops_202*.json
+
+# === R1 archaeology root (canonical in r1-archaeology repo) ===
+/r1_archaeology/

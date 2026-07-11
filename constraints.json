@@ -1,0 +1,107 @@
+{
+  "version": "1.0",
+  "updated": "2026-07-11T23:00:00+08:00",
+  "source": "R1 archaeology distillation",
+  "constraints": [
+    {
+      "id": "C-001",
+      "name": "Anti-Overfit: Complexity Cap",
+      "description": "信号/因素数量>=5时自动降权，每多1个扣10% confidence。防止过拟合。",
+      "severity": "must",
+      "source": "R1 RFC-008 反过拟合框架",
+      "file_ref": "06_RUNTIME/constraint_proposer.py",
+      "rule": {"signal_count_max": 5, "penalty_per_extra": 0.10}
+    },
+    {
+      "id": "C-002",
+      "name": "Anti-Overfit: Temporal Decay",
+      "description": "任何IC/成功率数据超过90天标记为stale，每天衰减2%。旧数据不代表未来。",
+      "severity": "must",
+      "source": "R1 RFC-008 反过拟合框架",
+      "file_ref": "06_RUNTIME/constraint_proposer.py",
+      "rule": {"ic_stale_days": 90, "decay_rate": 0.02}
+    },
+    {
+      "id": "C-003",
+      "name": "Anti-Overfit: Fragile Flag",
+      "description": "移除1个信号后结论改变则标记fragile。脆弱的结论不应直接执行。",
+      "severity": "should",
+      "source": "R1 RFC-008 反过拟合框架",
+      "file_ref": "06_RUNTIME/constraint_proposer.py",
+      "rule": {"perturbation_signals": 1, "conclusion_change_is_fragile": true}
+    },
+    {
+      "id": "C-004",
+      "name": "Anti-Permanent: No Life Sentence",
+      "description": "没有终身监禁。所有AVOID约束7天后必须重新评估。连续3次通过(成功率>=60%)则洗白(PARDONED)。",
+      "severity": "must",
+      "source": "R1 反永久化规则",
+      "file_ref": "06_RUNTIME/constraint_proposer.py",
+      "rule": {"review_interval_days": 7, "probation_success_threshold": 0.6, "pardon_after_consecutive_passes": 3}
+    },
+    {
+      "id": "C-005",
+      "name": "Experience Three-Layer Compression",
+      "description": "经验必须经过三层压缩：Raw Observation → Pattern Extraction → Executable Rule。原始数据不是经验，可执行规则才是。",
+      "severity": "must",
+      "source": "R1 ExperienceEngine",
+      "file_ref": "02_MEMORY/experience_engine.py"
+    },
+    {
+      "id": "C-006",
+      "name": "Meaning vs Principle Separation",
+      "description": "Meaning是'这件事说明了什么'的洞察样本，不是Principle。30天后观察哪些Meaning重复出现，才允许升级为Principle Candidate。禁止自动生成Principle。",
+      "severity": "must",
+      "source": "R1 ExperienceEngine._extract_meanings",
+      "file_ref": "02_MEMORY/experience_engine.py"
+    },
+    {
+      "id": "C-007",
+      "name": "Time-Weighted Compression",
+      "description": "经验压缩必须使用时间权重衰减：近期观测(3天内)权重2x，使系统更快适应模型能力变化。",
+      "severity": "should",
+      "source": "R1 ExperienceEngine.compress_with_decay",
+      "file_ref": "02_MEMORY/experience_engine.py"
+    },
+    {
+      "id": "C-008",
+      "name": "Innovation Pattern Detection",
+      "description": "当Worker成功率突然变化(>30%)时，标记为创新模式而非失败。不合常规的变化可能意味着模型升级或数据源变化。",
+      "severity": "should",
+      "source": "R1 ExperienceEngine.detect_innovation_patterns",
+      "file_ref": "02_MEMORY/experience_engine.py"
+    },
+    {
+      "id": "C-009",
+      "name": "Progressive Retrieval",
+      "description": "记忆检索必须三层渐进：Layer1 索引摘要(50-80 token/条) → Layer2 时间线上下文 → Layer3 完整记录。避免一次性加载过多数据。",
+      "severity": "should",
+      "source": "R1 ExperienceEngine.retrieve_by_layer",
+      "file_ref": "02_MEMORY/experience_engine.py"
+    },
+    {
+      "id": "C-010",
+      "name": "Constraint Resurrection",
+      "description": "DISABLED的约束可以被experience_engine自动复活为PENDING_REVIEW。新规则不直接ACTIVE，先PENDING_REVIEW观察。",
+      "severity": "must",
+      "source": "R1 sync_constraints.py",
+      "file_ref": "06_RUNTIME/sync_constraints.py"
+    },
+    {
+      "id": "C-011",
+      "name": "Self-Evolution Safety Allowlist",
+      "description": "Self Evolution只能修改白名单内的文件(constraints.json, provider_config.json等)。核心协议文件绝对禁止自动修改。所有变更必须可回滚。",
+      "severity": "must",
+      "source": "R2 EVO-001",
+      "file_ref": "04_PROTOCOLS/self_evolution.py"
+    },
+    {
+      "id": "C-012",
+      "name": "Question Is First Citizen",
+      "description": "Question是R2的第一公民。环境感知不是目的，自动创建任务也不是目的，它们都只是为了回答一个更重要的问题：系统现在最值得弄清楚的事情是什么。",
+      "severity": "must",
+      "source": "R2 宪法",
+      "file_ref": "AGENTS.md"
+    }
+  ]
+}
