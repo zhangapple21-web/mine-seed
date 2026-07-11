@@ -33,6 +33,12 @@ ZHIPU_KEY = os.environ.get("ZHIPU_KEY", "")
 ZHIPU_BASE = "https://open.bigmodel.cn/api/paas/v4"
 OPENROUTER_KEY = os.environ.get("OPENROUTER_KEY", "")
 OPENROUTER_BASE = "https://openrouter.ai/api/v1"
+HF_KEY = os.environ.get("HF_KEY", "")
+HF_BASE = "https://router.huggingface.co/v1"
+APIYI_KEY = os.environ.get("APIYI_KEY", "")
+APIYI_BASE = "https://api.apiyi.com/v1"
+SIXFINGER_KEY = os.environ.get("SIXFINGER_KEY", "")
+SIXFINGER_BASE = "https://api.sixfinger.live/v1"
 
 # Ollama 本地模型（默认 localhost:11434）
 OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
@@ -41,7 +47,10 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "huihui_ai/qwen2.5-vl-abliterated:
 # 模型 fallback 链
 MODEL_FALLBACK_CHAIN = [
     ("ollama", OLLAMA_MODEL),
+    ("apiyi", "gpt-4o-mini"),
+    ("hf", "openai/gpt-oss-120b"),
     ("github", "gpt-4o-mini"),
+    ("sixfinger", "claude-haiku-4-5"),
     ("zhipu", "glm-4-flash"),
     ("openrouter", "meta-llama/llama-3.3-70b-instruct:free"),
 ]
@@ -125,10 +134,60 @@ def call_openrouter(prompt, model="meta-llama/llama-3.3-70b-instruct:free", max_
     except Exception as e: return {"error": f"Error: {e}", "source": "openrouter"}
 
 
+def call_hf(prompt, model="openai/gpt-oss-120b", max_tokens=500, temperature=0.7):
+    """调用 HuggingFace Inference Providers (OpenAI 兼容, router.huggingface.co)
+
+    测试结果 (2026-07-10): 30ms 延迟, gpt-oss-120b 可用
+    支持自动路由: :fastest / :cheapest / :preferred
+    注意: 必须带 User-Agent, 否则 Cloudflare 会拦截 (403)
+    """
+    if not HF_KEY: return {"error": "HF_KEY not set", "source": "hf"}
+    data = {"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens, "temperature": temperature, "stream": False}
+    headers = {"Authorization": f"Bearer {HF_KEY}", "Content-Type": "application/json", "User-Agent": "ACE-Miner/2.0"}
+    req = urllib.request.Request(f"{HF_BASE}/chat/completions", data=json.dumps(data).encode(), headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            result = json.loads(r.read().decode())
+            result["source"] = "hf"
+            return result
+    except Exception as e: return {"error": f"Error: {e}", "source": "hf"}
+
+
+def call_apiyi(prompt, model="gpt-4o-mini", max_tokens=500, temperature=0.7):
+    """调用 API易 (310+模型, 主力推荐)"""
+    if not APIYI_KEY: return {"error": "APIYI_KEY not set", "source": "apiyi"}
+    data = {"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens, "temperature": temperature}
+    headers = {"Authorization": f"Bearer {APIYI_KEY}", "Content-Type": "application/json"}
+    req = urllib.request.Request(f"{APIYI_BASE}/chat/completions", data=json.dumps(data).encode(), headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            result = json.loads(r.read().decode())
+            result["source"] = "apiyi"
+            return result
+    except Exception as e: return {"error": f"Error: {e}", "source": "apiyi"}
+
+
+def call_sixfinger(prompt, model="claude-haiku-4-5", max_tokens=500, temperature=0.7):
+    """调用 Sixfinger (Claude 系列专用)"""
+    if not SIXFINGER_KEY: return {"error": "SIXFINGER_KEY not set", "source": "sixfinger"}
+    data = {"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens, "temperature": temperature}
+    headers = {"Authorization": f"Bearer {SIXFINGER_KEY}", "Content-Type": "application/json"}
+    req = urllib.request.Request(f"{SIXFINGER_BASE}/chat/completions", data=json.dumps(data).encode(), headers=headers)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            result = json.loads(r.read().decode())
+            result["source"] = "sixfinger"
+            return result
+    except Exception as e: return {"error": f"Error: {e}", "source": "sixfinger"}
+
+
 # Provider 注册表
 PROVIDERS = {
     "ollama": call_ollama,
+    "apiyi": call_apiyi,
+    "hf": call_hf,
     "github": call_github_models,
+    "sixfinger": call_sixfinger,
     "zhipu": call_zhipu,
     "openrouter": call_openrouter,
 }
@@ -161,30 +220,84 @@ CAPABILITY_GRAPH = {
 
 # Provider → 模型 → 支持的能力
 # 模型只是资源，挂在能力下面
+# HF Router 是一个 Provider 文明：一个入口，多个模型，按 capability 自动分工
 MODELS = {
+    # === Ollama (本地，优先级最高) ===
     "ollama-qwen-vl": {
         "provider": "ollama",
         "model": OLLAMA_MODEL,
         "capabilities": ["vision", "summarize", "archaeology", "coding", "chinese", "fast", "reasoning"],
         "priority": 1,
     },
-    "github-gpt4omini": {
-        "provider": "github",
+    # === API易 (主力推荐，310+模型) ===
+    "apiyi-gpt4omini": {
+        "provider": "apiyi",
         "model": "gpt-4o-mini",
         "capabilities": ["reasoning", "coding", "debate", "summarize", "chinese", "long_context"],
         "priority": 2,
     },
+    "apiyi-deepseek-v3": {
+        "provider": "apiyi",
+        "model": "DeepSeek-V3",
+        "capabilities": ["coding", "reasoning", "code_review", "long_context"],
+        "priority": 2,
+    },
+    # === HuggingFace Router (一个入口，多个模型) ===
+    # reasoning → gpt-oss-120b (120B, OpenAI 开源, 推理最强)
+    "hf-gpt-oss-120b": {
+        "provider": "hf",
+        "model": "openai/gpt-oss-120b",
+        "capabilities": ["reasoning", "research", "planning", "debate", "long_context"],
+        "priority": 2,
+    },
+    # coding → DeepSeek-V3 (编码专精)
+    "hf-deepseek-v3": {
+        "provider": "hf",
+        "model": "deepseek-ai/DeepSeek-V3",
+        "capabilities": ["coding", "reasoning", "code_review", "long_context"],
+        "priority": 3,
+    },
+    # fast/chinese → Qwen2.5-7B (轻量, 中文好)
+    "hf-qwen-7b": {
+        "provider": "hf",
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "capabilities": ["fast", "chinese", "summarize", "coding"],
+        "priority": 3,
+    },
+    # summarize/debate → Llama-3.3-70B (通用大模型)
+    "hf-llama-70b": {
+        "provider": "hf",
+        "model": "meta-llama/Llama-3.3-70B-Instruct",
+        "capabilities": ["summarize", "debate", "reasoning", "long_context", "execution"],
+        "priority": 4,
+    },
+    # === GitHub Models (备用) ===
+    "github-gpt4omini": {
+        "provider": "github",
+        "model": "gpt-4o-mini",
+        "capabilities": ["reasoning", "coding", "debate", "summarize", "chinese", "long_context"],
+        "priority": 5,
+    },
+    # === Zhipu GLM (备用, 中文好) ===
     "glm-flash": {
         "provider": "zhipu",
         "model": "glm-4-flash",
         "capabilities": ["fast", "chinese", "summarize", "reasoning", "coding"],
-        "priority": 3,
+        "priority": 6,
     },
+    # === Sixfinger (Claude 系列专用) ===
+    "sixfinger-claude": {
+        "provider": "sixfinger",
+        "model": "claude-haiku-4-5",
+        "capabilities": ["summarize", "debate", "reasoning", "chinese"],
+        "priority": 6,
+    },
+    # === OpenRouter (最后兜底) ===
     "openrouter-llama": {
         "provider": "openrouter",
         "model": "meta-llama/llama-3.3-70b-instruct:free",
         "capabilities": ["debate", "long_context", "reasoning", "coding", "summarize"],
-        "priority": 4,
+        "priority": 7,
     },
 }
 
@@ -363,15 +476,20 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None, capability=
     else:
         chain = list(MODEL_FALLBACK_CHAIN)
 
+    # 如果指定 prefer，把该 provider 的模型移到最前面（保留原 model 名）
     if prefer and prefer in PROVIDERS:
-        chain = [(prefer, chain[0][1])] + [(p, m) for p, m in chain if p != prefer]
+        prefer_chain = [(p, m) for p, m in chain if p == prefer]
+        other_chain = [(p, m) for p, m in chain if p != prefer]
+        chain = prefer_chain + other_chain
 
     # 按 Health Score 排序（跳过 down 的 provider）
+    # 但如果指定了 prefer，prefer 的 provider 永远在最前面
     def _sort_key(item):
         provider_name = item[0]
         if health.should_skip(provider_name):
-            return (1, 0)  # 排到最后
-        return (0, -health.get_score(provider_name))  # score 高的排前面
+            return (1, 0, 0)  # 排到最后
+        prefer_boost = 0 if (prefer and provider_name == prefer) else 1
+        return (prefer_boost, 0, -health.get_score(provider_name))
 
     chain.sort(key=_sort_key)
 
