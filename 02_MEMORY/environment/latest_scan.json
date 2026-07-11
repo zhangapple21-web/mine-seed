@@ -1,14 +1,14 @@
 {
-  "scan_time": "2026-07-11T16:04:29.118656",
+  "scan_time": "2026-07-11T18:49:29.275036",
   "root": "C:\\Users\\User\\ace_workspace\\mine-seed",
-  "files_total": 1141,
-  "files_indexed": 1141,
+  "files_total": 1182,
+  "files_indexed": 1182,
   "by_extension": {
     ".gitignore": 1,
-    ".md": 676,
-    ".json": 243,
+    ".md": 677,
+    ".json": 280,
     ".ps1": 12,
-    ".py": 112,
+    ".py": 115,
     ".log": 5,
     ".txt": 25,
     ".pyc": 3,
@@ -240,6 +240,30 @@
       "size_bytes": 5756
     },
     {
+      "name": "recovery_report_20260711.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\recovery\\recovery_report_20260711.json",
+      "size_bytes": 231517
+    },
+    {
+      "name": "recovery_report_20260711.md",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\recovery\\recovery_report_20260711.md",
+      "size_bytes": 39589
+    },
+    {
       "name": "lexicon_categories.py",
       "priority": "MEDIUM",
       "type": "knowledge_pool",
@@ -367,9 +391,9 @@
       "type": "data",
       "description": "",
       "recovery_triggers": [
+        "backup",
         "recovery",
-        "readme",
-        "backup"
+        "readme"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\docs\\ACE_BACKUP_RECOVERY_README.md",
@@ -806,6 +830,18 @@
       "triggers_recovery": true,
       "path": "04_PROTOCOLS\\recovery_protocol.py",
       "size_bytes": 11538
+    },
+    {
+      "name": "recovery_scanner.py",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "04_PROTOCOLS\\recovery_scanner.py",
+      "size_bytes": 31971
     },
     {
       "name": "README.md",
@@ -2219,9 +2255,9 @@
       "principles\\validation_report.md",
       "recent_memory\\principles\\validation_report.md"
     ],
-    "10c33717d952dc416b51e45a5d757cc1": [
+    "ef868a5c3dbb9993bdc5db7a1c14d311": [
       "02_MEMORY\\environment\\latest_situation.json",
-      "02_MEMORY\\environment\\situation_20260711T155843.json"
+      "02_MEMORY\\environment\\situation_20260711T183554.json"
     ],
     "298bbf180d0d77c3cd58ad1e5969361b": [
       "02_MEMORY\\knowledge\\r1_axiom_001_security_exclusion_first_20260617.md",
@@ -3296,7 +3332,7 @@
     },
     {
       "path": "CURRENT_STATE.md",
-      "size": 4084,
+      "size": 3907,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3807,21 +3843,21 @@
     },
     {
       "path": "02_MEMORY\\environment\\latest_observations.json",
-      "size": 2375,
+      "size": 543,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\environment\\latest_scan.json",
-      "size": 316586,
+      "size": 322685,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\environment\\latest_situation.json",
-      "size": 1006,
+      "size": 282,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4023,6 +4059,83 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\environment\\situation_20260711T160548.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T162029.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T163536.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T165028.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T170607.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T172058.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T173602.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T175033.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T180517.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T182036.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T183554.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\experience\\exp_20260710T200009.json",
       "size": 822,
       "ext": ".json",
@@ -4039,6 +4152,13 @@
     {
       "path": "02_MEMORY\\experience\\exp_provider_github_20260711T155631.json",
       "size": 395,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_provider_test2_20260711T160826.json",
+      "size": 393,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4219,6 +4339,90 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T155649.json",
+      "size": 1496,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T160429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T161929.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T163429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T164929.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T170429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T171929.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T173429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T174929.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T180429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T181929.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T183429.json",
+      "size": 1292,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json",
       "size": 1121,
       "ext": ".json",
@@ -4373,6 +4577,83 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T161929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T163429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T164929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T170429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T171929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T173429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T174929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T180429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T181929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T183429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T184929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\knowledge\\E2C_Closure_Principles_20260616.md",
       "size": 1363,
       "ext": ".md",
@@ -4437,7 +4718,7 @@
     },
     {
       "path": "02_MEMORY\\logs\\heartbeat_20260711.log",
-      "size": 10229,
+      "size": 21869,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
@@ -4458,7 +4739,7 @@
     },
     {
       "path": "02_MEMORY\\question_center\\decisions.json",
-      "size": 1611,
+      "size": 3260,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4479,7 +4760,7 @@
     },
     {
       "path": "02_MEMORY\\question_center\\questions.json",
-      "size": 18675,
+      "size": 39428,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4943,6 +5224,27 @@
       "path": "02_MEMORY\\recent_memory\\research\\v6_architecture_research.md",
       "size": 5826,
       "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\recovery\\recovery_report_20260711.json",
+      "size": 231517,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\recovery\\recovery_report_20260711.md",
+      "size": 39589,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\recovery\\session_validation_20260711_184902.json",
+      "size": 1148,
+      "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -6061,7 +6363,7 @@
     },
     {
       "path": "04_PROTOCOLS\\local_miner.py",
-      "size": 29032,
+      "size": 31444,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6160,6 +6462,13 @@
     {
       "path": "04_PROTOCOLS\\recovery_protocol.py",
       "size": 11538,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\recovery_scanner.py",
+      "size": 31971,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6487,6 +6796,13 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\session_validator.py",
+      "size": 8202,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\task_router.py",
       "size": 22315,
       "ext": ".py",
@@ -6630,6 +6946,13 @@
       "path": "05_TOOLS\\miner\\tg_test_Unknown Number + App Hash.session",
       "size": 28672,
       "ext": ".session",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\verify_sessions.py",
+      "size": 2813,
+      "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },

@@ -97,6 +97,7 @@ class StateGenerator:
             {"name": "RoundTable", "status": "Running", "reason": "Audits evolution patches"},
             {"name": "ProviderHealth", "status": "Running" if lm_health else "Not Installed"},
             {"name": "RecoveryEngine", "status": recovery_status, "reason": recovery_reason},
+            {"name": "TGPush", "status": "Ready", "reason": "Bot @Sck01Bot alive, awaiting chat_id"},
             {"name": "Environment", "status": "Healthy", "reason": "No critical observations"},
             {"name": "Governor", "status": "Running"},
         ]

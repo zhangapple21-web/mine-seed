@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-11 18:54*
+*Last updated: 2026-07-11 18:59*
 
 ---
 
@@ -22,6 +22,7 @@
 | ✅ RoundTable | Running — Audits evolution patches |
 | ✅ ProviderHealth | Running |
 | 🟡 RecoveryEngine | BOT_ONLY — alive_user=0, alive_bot=1, need_login=False |
+| 🟡 TGPush | Ready — Bot @Sck01Bot alive, awaiting chat_id |
 | 🟢 Environment | Healthy — No critical observations |
 | ✅ Governor | Running |
 
@@ -29,12 +30,10 @@
 
 ## Current Questions
 
-> 2 open questions. Priority: P0=紧急, P1=高, P2=中.
+> 1 open questions. Priority: P0=紧急, P1=高, P2=中.
 > These are the most important things the system needs to understand.
 
 🟢 **Q-002** 为什么 r1-open-source-seed 一直没有内容？
-
-🟢 **Q-003** HF Router 是否应该走 OneAPI？
 
 ---
 
@@ -91,7 +90,7 @@
   Explorer     ████████░░ 85%  v2 daily exploration active
   Curator      ████████░░ 88%  Manual sync
   Governor     ██████████ 100%  Invariant checks active
-  QuestionCenter █████████░ 90%  2 questions, 3 hypotheses, 1 experiments
+  QuestionCenter █████████░ 90%  1 questions, 3 hypotheses, 1 experiments
   MultiAgentDebate █████████░ 90%  4-role debate active
   SelfEvolution ████████░░ 80%  Auto-apply + rollback + audit
 

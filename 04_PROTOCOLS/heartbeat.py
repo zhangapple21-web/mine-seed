@@ -301,10 +301,113 @@ def beat(log):
         report["steps"]["state_generator"] = {"error": str(e)}
         log.error(f"StateGenerator error: {e}")
 
+    # TG Push — push heartbeat summary to Telegram if Bot available
+    try:
+        tg_result = _push_heartbeat_summary(report, log)
+        report["steps"]["tg_push"] = tg_result
+    except Exception as e:
+        report["steps"]["tg_push"] = {"status": "error", "error": str(e)}
+        log.error(f"TG push error: {e}")
+
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
     log.info("Heartbeat saved")
     return report
+
+
+def _push_heartbeat_summary(report: dict, log) -> dict:
+    """Push a brief heartbeat summary to TG via Bot (if available)"""
+    import urllib.request, json as _json
+    from pathlib import Path
+
+    # Load bot token from miner_env.sh
+    env_file = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
+    token = None
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            if "export TG_BOT_TOKEN_2=" in line:
+                token = line.split("=", 1)[1].strip().strip('"').strip("'")
+                break
+    if not token:
+        return {"status": "skipped", "reason": "no TG_BOT_TOKEN_2"}
+
+    # Get chat_id from getUpdates
+    try:
+        url = f"https://api.telegram.org/bot{token}/getUpdates?limit=5"
+        resp = urllib.request.urlopen(url, timeout=10)
+        data = _json.loads(resp.read())
+        chat_id = None
+        for u in data.get("result", []):
+            if "message" in u:
+                chat_id = u["message"]["chat"]["id"]
+                break
+            if "channel_post" in u:
+                chat_id = u["channel_post"]["chat"]["id"]
+                break
+        if not chat_id:
+            return {"status": "skipped", "reason": "no chat_id (user has not messaged the bot yet)"}
+    except Exception as e:
+        return {"status": "error", "reason": f"getUpdates failed: {e}"}
+
+    # Build summary message
+    steps = report.get("steps", {})
+    beat_id = report.get("beat_id", "?")
+    ts = report.get("timestamp", "")[:19]
+
+    lines = [f"ACE Heartbeat #{beat_id}", f"Time: {ts}", ""]
+
+    # Key metrics
+    if "environment" in steps:
+        env = steps["environment"]
+        lines.append(f"Env: {env.get('observations', 0)} obs, {env.get('new', 0)} new")
+    if "question_engine" in steps:
+        qe = steps["question_engine"]
+        lines.append(f"Questions: {qe.get('generated', 0)} generated")
+    if "debate" in steps:
+        db = steps["debate"]
+        lines.append(f"Debate: {db.get('approved', 0)} approved, {db.get('deferred', 0)} deferred")
+    if "self_evolution" in steps:
+        se = steps["self_evolution"]
+        lines.append(f"Evolution: {se.get('processed', 0)} processed")
+    if "explorer_v2" in steps:
+        ex = steps["explorer_v2"]
+        if ex.get("status") != "skipped":
+            lines.append(f"Explorer: {ex.get('status', '?')}")
+
+    # Check for alerts
+    alerts = []
+    for name, step in steps.items():
+        if isinstance(step, dict) and step.get("error"):
+            alerts.append(f"  {name}: {step['error'][:50]}")
+    if alerts:
+        lines.append("")
+        lines.append("Alerts:")
+        lines.extend(alerts[:3])
+
+    text = "\n".join(lines)[:1000]  # TG message limit
+
+    # Send
+    try:
+        url = f"https://api.telegram.org/bot{token}/sendMessage"
+        payload = _json.dumps({
+            "chat_id": str(chat_id),
+            "text": text,
+            "disable_web_page_preview": True,
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            url, data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        resp = urllib.request.urlopen(req, timeout=15)
+        result = _json.loads(resp.read())
+        if result.get("ok"):
+            log.info(f"TG push sent to chat_id={chat_id}")
+            return {"status": "sent", "chat_id": chat_id}
+        else:
+            return {"status": "failed", "result": result}
+    except Exception as e:
+        return {"status": "error", "reason": str(e)}
 
 
 def loop(interval_min=15, log=None):

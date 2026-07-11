@@ -30,5 +30,29 @@
     "outcome": "approved",
     "rationale": "经过研究者和验证者的讨论，已确认至少两方建议（方案1、2 和 3）的可信度较高。这表明我们需要检查未追踪文件的内容、历史记录以及分支合并状态来解决这个问题。",
     "created_at": "2026-07-11T16:05:37.231158"
+  },
+  {
+    "did": "D-005",
+    "qid": "Q-007",
+    "decision": "执行 P-001 操作计划：使用 pip 安装 akshare 并验证其功能是否正常。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的提案中，至少两方（Scout 和 Validator）的信心大于70，并且不存在重大 concerns。因此，决定批准通过包管理工具如 pip 安装 akshare 库并验证其功能。",
+    "created_at": "2026-07-11T16:11:07.986711"
+  },
+  {
+    "did": "D-006",
+    "qid": "Q-008",
+    "decision": "根据 Scout 提议，对这些修改记录进行详细追踪并对比不同目录下的相同文件内容；同时检查配置错误或工具缺失是否是导致不一致的原因。完成后，验证所有发现的问题已被解决。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Researcher 的建议已获得较高置信度（75% 和 70%），且 Validator 没有重大 concerns。这表明应采取措施调查和解决未追踪的修改问题，以确保文件的一致性和完整性。",
+    "created_at": "2026-07-11T16:26:42.636223"
+  },
+  {
+    "did": "D-007",
+    "qid": "Q-003",
+    "decision": "根据 decision 执行或补充证据",
+    "outcome": "rejected",
+    "rationale": "平均置信度 17，Validator 置信度 0。LLM 决策失败，使用规则回退。",
+    "created_at": "2026-07-11T18:56:45.981348"
   }
 ]
