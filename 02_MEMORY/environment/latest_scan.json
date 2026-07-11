@@ -1,14 +1,15 @@
 {
-  "scan_time": "2026-07-10T18:46:02.724360",
+  "scan_time": "2026-07-11T15:04:29.170401",
   "root": "C:\\Users\\User\\ace_workspace\\mine-seed",
-  "files_total": 1021,
-  "files_indexed": 1021,
+  "files_total": 1102,
+  "files_indexed": 1102,
   "by_extension": {
     ".gitignore": 1,
-    ".md": 657,
-    ".py": 95,
-    ".json": 171,
-    ".log": 4,
+    ".md": 675,
+    ".ps1": 12,
+    ".py": 108,
+    ".json": 218,
+    ".log": 5,
     ".txt": 25,
     ".pyc": 3,
     ".pdf": 1,
@@ -23,7 +24,6 @@
     ".ace": 1,
     ".html": 2,
     ".css": 2,
-    ".ps1": 10,
     ".bat": 1,
     ".vbs": 1
   },
@@ -341,8 +341,8 @@
       "type": "knowledge_pool",
       "description": "词库",
       "recovery_triggers": [
-        "snapshot",
-        "lexicon"
+        "lexicon",
+        "snapshot"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v2.json",
@@ -354,8 +354,8 @@
       "type": "knowledge_pool",
       "description": "词库",
       "recovery_triggers": [
-        "snapshot",
-        "lexicon"
+        "lexicon",
+        "snapshot"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v3.json",
@@ -367,9 +367,9 @@
       "type": "data",
       "description": "",
       "recovery_triggers": [
+        "readme",
         "recovery",
-        "backup",
-        "readme"
+        "backup"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\docs\\ACE_BACKUP_RECOVERY_README.md",
@@ -782,6 +782,18 @@
       "triggers_recovery": true,
       "path": "04_PROTOCOLS\\README.md",
       "size_bytes": 6206
+    },
+    {
+      "name": "recovery_protocol.md",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "04_PROTOCOLS\\recovery_protocol.md",
+      "size_bytes": 5696
     },
     {
       "name": "recovery_protocol.py",
@@ -1691,8 +1703,8 @@
       "type": "knowledge_pool",
       "description": "词库",
       "recovery_triggers": [
-        "snapshot",
-        "lexicon"
+        "lexicon",
+        "snapshot"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v2.json",
@@ -1704,8 +1716,8 @@
       "type": "knowledge_pool",
       "description": "词库",
       "recovery_triggers": [
-        "snapshot",
-        "lexicon"
+        "lexicon",
+        "snapshot"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v3.json",
@@ -2003,7 +2015,6 @@
     ],
     "86a723fd8dc6e7d263ded83501d914af": [
       "01_AGENTS\\xiaofengzi\\research\\tasks.md",
-      "02_MEMORY\\tasks.md",
       "research\\tasks.md",
       "xiaofengzi\\research\\tasks.md"
     ],
@@ -2039,7 +2050,6 @@
     ],
     "e380fecf7e953466b4f8244e6c4074dc": [
       "02_MEMORY\\experience_engine.py",
-      "05_TOOLS\\memory\\experience_engine.py",
       "memory\\experience_engine.py"
     ],
     "c86e28d37ee3e454797595c7eadfff0b": [
@@ -2185,10 +2195,9 @@
       "principles\\validation_report.md",
       "recent_memory\\principles\\validation_report.md"
     ],
-    "af75d019eb3529025a0e519ce35f4590": [
-      "02_MEMORY\\cloud_reports\\advisor_20260710.md",
-      "05_TOOLS\\mine_output\\advisor\\advisor_20260710.md",
-      "cloud\\advisor\\advisor_20260710.md"
+    "1f54f78e0ea3e3a2061a942bcdda567c": [
+      "02_MEMORY\\environment\\latest_situation.json",
+      "02_MEMORY\\environment\\situation_20260711T145100.json"
     ],
     "298bbf180d0d77c3cd58ad1e5969361b": [
       "02_MEMORY\\knowledge\\r1_axiom_001_security_exclusion_first_20260617.md",
@@ -2766,11 +2775,11 @@
       "05_TOOLS\\advisor\\lineage_review.py",
       "advisor\\lineage_review.py"
     ],
-    "ad6a72cfd74855dc51736e4989920c5b": [
+    "5ff862d40a66d4ad4359380ca52baad4": [
       "05_TOOLS\\advisor\\stock_advisor.py",
       "advisor\\stock_advisor.py"
     ],
-    "79f58a9baddc9c325d54706d0aae69cc": [
+    "1c3bc3f3deac32c77f66c560b88c25be": [
       "05_TOOLS\\advisor\\stock_query.py",
       "advisor\\stock_query.py"
     ],
@@ -2802,10 +2811,6 @@
       "06_RUNTIME\\sync_constraints.py",
       "CONSTRAINTS\\sync_constraints.py"
     ],
-    "261697a7aac13d29cf5f1eecaa8a04c5": [
-      "05_TOOLS\\memory\\archivist.py",
-      "memory\\archivist.py"
-    ],
     "a1a0d0d70050655f5d85dd6d8eeda954": [
       "05_TOOLS\\memory\\archivist_cron.sh",
       "memory\\archivist_cron.sh"
@@ -2817,10 +2822,6 @@
     "fb30b22f40700a444009ddcf6bce39a0": [
       "05_TOOLS\\memory\\knowledge_cron_noon.sh",
       "memory\\knowledge_cron_noon.sh"
-    ],
-    "fc1a3c165bf4d1d700a30b5bd077e2ac": [
-      "05_TOOLS\\miner\\miner_24h.py",
-      "miner\\miner_24h.py"
     ],
     "cf64ce73f51612fbe92af2bd80f97250": [
       "05_TOOLS\\miner\\miner_cron.sh",
@@ -2838,7 +2839,11 @@
       "05_TOOLS\\miner\\task_router_v2.py",
       "miner\\task_router_v2.py"
     ],
-    "c43d739addcb7c4f75510c75d2b76686": [
+    "a2989472813e0be786a398c17fe3d759": [
+      "05_TOOLS\\mine_output\\advisor\\advisor_20260710.md",
+      "cloud\\advisor\\advisor_20260710v3.md"
+    ],
+    "a111c196b7f565e5ae5d64d592c0a58a": [
       "05_TOOLS\\signals\\dragon_leader_v2.py",
       "signals\\dragon_leader_v2.py"
     ],
@@ -2849,10 +2854,6 @@
     "e25a49d8ac40d635451f92f927a507f3": [
       "05_TOOLS\\signals\\signal_cron.sh",
       "signals\\signal_cron.sh"
-    ],
-    "14bcc3d3f4a0333eee69482de7352455": [
-      "05_TOOLS\\signals\\signal_discovery.py",
-      "signals\\signal_discovery.py"
     ],
     "9a3f77916f0a652860e7b0679ec7369d": [
       "06_RUNTIME\\CALL_CHAIN.md",
@@ -3249,9 +3250,44 @@
       "type": "data"
     },
     {
-      "path": "ARCHITECTURE.md",
-      "size": 7143,
+      "path": "AGENTS.md",
+      "size": 9925,
       "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "size": 7424,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "size": 3283,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "NEW_COMPUTER_RESURRECTION.md",
+      "size": 1691,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "register_task.ps1",
+      "size": 1442,
+      "ext": ".ps1",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "run_heartbeat.ps1",
+      "size": 621,
+      "ext": ".ps1",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -3599,6 +3635,13 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\pending_tasks.json",
+      "size": 353,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\principle_classification_v1.0.md",
       "size": 3438,
       "ext": ".md",
@@ -3656,7 +3699,7 @@
     },
     {
       "path": "02_MEMORY\\tasks.md",
-      "size": 5551,
+      "size": 5988,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3732,8 +3775,162 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\environment\\latest_observations.json",
+      "size": 543,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\environment\\latest_scan.json",
-      "size": 178395,
+      "size": 307955,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\latest_situation.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T194238.json",
+      "size": 9730,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T195929.json",
+      "size": 1337,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T195949.json",
+      "size": 3822,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T201234.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T201241.json",
+      "size": 1416,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T201256.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260710T210847.json",
+      "size": 2086,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T140531.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T140903.json",
+      "size": 1564,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T140911.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141045.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141100.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141230.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141236.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141530.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T141951.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T143544.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T144351.json",
+      "size": 1009,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260711T145100.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_20260710T200009.json",
+      "size": 822,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -3809,6 +4006,62 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\beat_20260710T184602.json",
+      "size": 424,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260710T210602.json",
+      "size": 640,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T140352.json",
+      "size": 999,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T141313.json",
+      "size": 973,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T141844.json",
+      "size": 789,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T143430.json",
+      "size": 789,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T144136.json",
+      "size": 1034,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260711T144929.json",
+      "size": 850,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json",
       "size": 1121,
       "ext": ".json",
@@ -3846,6 +4099,69 @@
     {
       "path": "02_MEMORY\\heartbeat\\ops_004_20260710T184602.json",
       "size": 1117,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260710T210602.json",
+      "size": 1140,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T140352.json",
+      "size": 1135,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T141233.json",
+      "size": 1074,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T141313.json",
+      "size": 1135,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T141844.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T143430.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T144136.json",
+      "size": 1141,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T144929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260711T150429.json",
+      "size": 1069,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -3908,14 +4224,21 @@
     },
     {
       "path": "02_MEMORY\\logs\\heartbeat_20260710.log",
-      "size": 1094,
+      "size": 1661,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\logs\\heartbeat_20260711.log",
+      "size": 3988,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\logs\\runtime_20260710.log",
-      "size": 2115,
+      "size": 2166,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
@@ -3923,6 +4246,34 @@
     {
       "path": "02_MEMORY\\ops_logs\\ops_20260710T154013.json",
       "size": 2765,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\question_center\\decisions.json",
+      "size": 2,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\question_center\\experiments.json",
+      "size": 369,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\question_center\\hypotheses.json",
+      "size": 798,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\question_center\\questions.json",
+      "size": 1223,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4215,6 +4566,13 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\recent_memory\\daily\\2026-07-10-cloud-worker.md",
+      "size": 1304,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\recent_memory\\daily\\2026-07-10-liveness.md",
       "size": 1647,
       "ext": ".md",
@@ -4442,6 +4800,13 @@
       "path": "03_DATA\\active_manifest.json",
       "size": 275,
       "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\data_plane_audit_20260710.md",
+      "size": 4528,
+      "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -5398,8 +5763,22 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\awareness_loop.py",
+      "size": 14700,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\bootstrap.py",
       "size": 6212,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\civilization_map.py",
+      "size": 12328,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5419,6 +5798,27 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\environment_sensor.py",
+      "size": 18428,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\explorer_v2.py",
+      "size": 17256,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\first_day.md",
+      "size": 5561,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\governor.py",
       "size": 6858,
       "ext": ".py",
@@ -5427,7 +5827,7 @@
     },
     {
       "path": "04_PROTOCOLS\\heartbeat.py",
-      "size": 4623,
+      "size": 9724,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5455,7 +5855,14 @@
     },
     {
       "path": "04_PROTOCOLS\\local_miner.py",
-      "size": 5034,
+      "size": 27174,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\multi_agent_debate.py",
+      "size": 13396,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5517,8 +5924,29 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\question_center.py",
+      "size": 21413,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\question_engine.py",
+      "size": 11530,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\README.md",
       "size": 6206,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\recovery_protocol.md",
+      "size": 5696,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -5538,8 +5966,22 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\self_evolution.py",
+      "size": 15473,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\shared_api.py",
       "size": 14989,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\state_generator.py",
+      "size": 12083,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5637,14 +6079,14 @@
     },
     {
       "path": "05_TOOLS\\advisor\\stock_advisor.py",
-      "size": 47636,
+      "size": 54974,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\advisor\\stock_query.py",
-      "size": 10408,
+      "size": 10901,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5728,7 +6170,7 @@
     },
     {
       "path": "05_TOOLS\\memory\\archivist.py",
-      "size": 25457,
+      "size": 25564,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5742,7 +6184,7 @@
     },
     {
       "path": "05_TOOLS\\memory\\experience_engine.py",
-      "size": 38280,
+      "size": 38537,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5770,14 +6212,21 @@
     },
     {
       "path": "05_TOOLS\\miner\\local_env.sh",
-      "size": 1257,
+      "size": 1254,
       "ext": ".sh",
       "priority": "NORMAL",
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\local_miner.py",
+      "size": 19342,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\miner_24h.py",
-      "size": 29372,
+      "size": 31888,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5791,7 +6240,7 @@
     },
     {
       "path": "05_TOOLS\\miner\\miner_env.sh",
-      "size": 3378,
+      "size": 3645,
       "ext": ".sh",
       "priority": "NORMAL",
       "type": "data"
@@ -5839,6 +6288,13 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\tg_code_type_check.py",
+      "size": 2541,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\tg_collections.session",
       "size": 28672,
       "ext": ".session",
@@ -5853,6 +6309,27 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\tg_login_interactive.py",
+      "size": 3903,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_login_state.json",
+      "size": 92,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_login_test.py",
+      "size": 5052,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\tg_push.py",
       "size": 7843,
       "ext": ".py",
@@ -5861,28 +6338,49 @@
     },
     {
       "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260710.md",
-      "size": 2538,
+      "size": 2463,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260710_lineage.json",
-      "size": 1240,
+      "size": 1261,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260710_trace.json",
-      "size": 36568,
+      "size": 38609,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260711.md",
+      "size": 2505,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260711_lineage.json",
+      "size": 1211,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260711_trace.json",
+      "size": 39043,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\mine_output\\advisor\\advisor_cron.log",
-      "size": 15169,
+      "size": 48123,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
@@ -5896,7 +6394,7 @@
     },
     {
       "path": "05_TOOLS\\signals\\dragon_leader_v2.py",
-      "size": 26332,
+      "size": 22125,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -5917,7 +6415,7 @@
     },
     {
       "path": "05_TOOLS\\signals\\signal_discovery.py",
-      "size": 28785,
+      "size": 28856,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6085,7 +6583,7 @@
     },
     {
       "path": "06_RUNTIME\\connectors\\tg_pusher.py",
-      "size": 7188,
+      "size": 10649,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6323,14 +6821,14 @@
     },
     {
       "path": "advisor\\stock_advisor.py",
-      "size": 47636,
+      "size": 54974,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "advisor\\stock_query.py",
-      "size": 10408,
+      "size": 10901,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -6421,7 +6919,56 @@
     },
     {
       "path": "cloud\\advisor\\advisor_20260710.md",
-      "size": 2538,
+      "size": 4073,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\advisor\\advisor_20260710v2.md",
+      "size": 2313,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\advisor\\advisor_20260710v3.md",
+      "size": 2463,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\miner\\benchmark_github_mini_20260711_061734.md",
+      "size": 258,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\miner\\benchmark_glm_flash_20260711_061728.md",
+      "size": 238,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\miner\\benchmark_nim_deepseek_20260711_061731.md",
+      "size": 257,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\miner\\market_sentiment_20260710_114313.md",
+      "size": 354,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "cloud\\miner\\market_sentiment_20260711_061725.md",
+      "size": 212,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -10075,7 +10622,7 @@
     },
     {
       "path": "signals\\dragon_leader_v2.py",
-      "size": 26332,
+      "size": 22125,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -10179,6 +10726,20 @@
       "type": "data"
     },
     {
+      "path": "V6_RFC\\evolution_roadmap_20260710.md",
+      "size": 2839,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "V6_RFC\\RFC-ENV-001-Environment-Layer.md",
+      "size": 4859,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "V6_RFC\\V6-RFC-001-why-scheduler.md",
       "size": 2349,
       "ext": ".md",
@@ -10195,6 +10756,13 @@
     {
       "path": "V6_RFC\\V6-RFC-004-constraint-injection.md",
       "size": 3736,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "V6_RFC\\vnpy_archaeology.md",
+      "size": 9718,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"

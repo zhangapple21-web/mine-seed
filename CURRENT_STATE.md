@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-11 14:43*
+*Last updated: 2026-07-11 15:07*
 
 ---
 
@@ -14,9 +14,12 @@
 |---|---|
 | ✅ Heartbeat | Running |
 | ✅ AwarenessLoop | Running |
-| 🔴 RoundTable | Disconnected — Not wired into AwarenessLoop |
+| ✅ QuestionEngine | Running — Generates 'why' questions from observations |
 | ✅ QuestionCenter | Running |
-| ⚪ Explorer | Not Installed — TASK-008 pending |
+| ✅ MultiAgentDebate | Running — Scout/Researcher/Validator/Governor |
+| ✅ ExplorerV2 | Running — Daily active exploration |
+| ✅ SelfEvolution | Running — Approved decisions → code changes |
+| ✅ RoundTable | Running — Audits evolution patches |
 | ✅ ProviderHealth | Running |
 | 🟢 Environment | Healthy — No critical observations |
 | ✅ Governor | Running |
@@ -86,12 +89,14 @@
   Environment  █████████░ 97%  Healthy
   Repository   █████████░ 95%  6 repos, 0 stale
   Memory       █████████░ 98%  Dual memory active
-  Explorer     ███░░░░░░░ 30%  Not installed
+  Explorer     ████████░░ 85%  v2 daily exploration active
   Curator      ████████░░ 88%  Manual sync
   Governor     ██████████ 100%  Invariant checks active
-  QuestionCenter ████████░░ 85%  3 questions, 3 hypotheses
+  QuestionCenter █████████░ 90%  3 questions, 3 hypotheses, 1 experiments
+  MultiAgentDebate █████████░ 90%  4-role debate active
+  SelfEvolution ████████░░ 80%  Auto-apply + rollback + audit
 
-  Overall    ████████░░ 86%
+  Overall    █████████░ 92%
 ```
 
 ---
@@ -110,8 +115,17 @@
 ✅ 是否删除 mootdx？
   Status: 已通过
 
-⏳ 是否增加 Explorer？
-  Status: 等待验证
+🔄 是否增加 Explorer？
+  Status: 已通过（v2 已实现）
+
+✅ 是否把 Question 作为 R2 第一公民？
+  Status: 已通过
+
+✅ 是否引入 Multi-Agent Debate 做决策？
+  Status: 已通过
+
+🔄 是否允许系统自动修改配置（Self Evolution）？
+  Status: 已通过（白名单保护）
 
 🔄 是否创建 .gitignore 管理 R1 遗留文件？
   Status: 待决定

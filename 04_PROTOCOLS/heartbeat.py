@@ -31,6 +31,11 @@ try:
     env_sensor_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "environment_sensor.py")
     awareness_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "awareness_loop.py")
     state_gen_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "state_generator.py")
+    question_engine_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "question_engine.py")
+    debate_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "multi_agent_debate.py")
+    explorer_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "explorer_v2.py")
+    evolution_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "self_evolution.py")
+    qc_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "question_center.py")
 
     scan_directory = ef.scan_directory
     build_recovery_graph = ef.build_recovery_graph
@@ -44,6 +49,11 @@ try:
     SituationBuilder = env_sensor_mod.SituationBuilder
     AwarenessLoop = awareness_mod.AwarenessLoop
     StateGenerator = state_gen_mod.StateGenerator
+    QuestionEngine = question_engine_mod.QuestionEngine
+    DebateRoom = debate_mod.DebateRoom
+    ExplorerV2 = explorer_mod.ExplorerV2
+    SelfEvolution = evolution_mod.SelfEvolution
+    QuestionCenter = qc_mod.QuestionCenter
 except Exception as e:
     print(f"[HEARTBEAT] Import error: {e}", file=sys.stderr)
     sys.exit(1)
@@ -151,6 +161,109 @@ def beat(log):
     except Exception as e:
         report["steps"]["awareness_loop"] = {"error": str(e)}
         log.error(f"AwarenessLoop error: {e}")
+
+    # QE-002: Question Engine — 把环境观察变成"为什么"的问题
+    try:
+        env_step = report["steps"].get("env_sensor", {})
+        has_new = env_step.get("new", 0) > 0
+        if has_new:
+            log.info("QuestionEngine: generating questions from new observations")
+            qe = QuestionEngine()
+            situation_file = WORKSPACE / "02_MEMORY" / "environment" / "latest_situation.json"
+            if situation_file.exists():
+                situation = json.loads(situation_file.read_text(encoding="utf-8"))
+                observations = situation.get("all_observations", [])
+                candidates = qe.generate_batch(observations)
+                created = qe.push_to_question_center(candidates)
+                report["steps"]["question_engine"] = {
+                    "candidates": len(candidates),
+                    "created": len(created),
+                    "qids": created,
+                }
+                log.info(f"QuestionEngine: {len(created)} new questions created")
+            else:
+                report["steps"]["question_engine"] = {"status": "skipped", "reason": "no situation file"}
+        else:
+            report["steps"]["question_engine"] = {"status": "skipped", "reason": "no new observations"}
+            log.info("QuestionEngine: skipped (no new observations)")
+    except Exception as e:
+        report["steps"]["question_engine"] = {"error": str(e)}
+        log.error(f"QuestionEngine error: {e}")
+
+    # DEB-001: Multi-Agent Debate — 对开放问题进行角色竞争与决策
+    try:
+        qc = QuestionCenter()
+        open_qs = qc.get_open_questions()
+        if open_qs:
+            log.info(f"DebateRoom: debating {len(open_qs)} open questions")
+            room = DebateRoom()
+            # 每次心跳最多辩论 3 个问题，控制成本
+            debate_results = room.debate_batch(open_qs[:3])
+            approved = [r for r in debate_results if r.get("decision") == "approved"]
+            report["steps"]["multi_agent_debate"] = {
+                "debated": len(debate_results),
+                "approved": len(approved),
+                "deferred": len([r for r in debate_results if r.get("decision") == "deferred"]),
+                "rejected": len([r for r in debate_results if r.get("decision") == "rejected"]),
+            }
+            log.info(f"DebateRoom: {len(approved)} approved, {len(debate_results) - len(approved)} not approved")
+        else:
+            report["steps"]["multi_agent_debate"] = {"status": "skipped", "reason": "no open questions"}
+            log.info("DebateRoom: skipped (no open questions)")
+    except Exception as e:
+        report["steps"]["multi_agent_debate"] = {"error": str(e)}
+        log.error(f"DebateRoom error: {e}")
+
+    # EXP-002: Explorer v2 — 每天主动探索一个主题
+    try:
+        # 每天只运行一次（通过检查今天的报告是否存在）
+        today_str = datetime.now().strftime("%Y%m%d")
+        today_report = WORKSPACE / "02_MEMORY" / "exploration" / f"exploration_{today_str}.md"
+        if not today_report.exists():
+            log.info("ExplorerV2: starting daily exploration")
+            explorer = ExplorerV2()
+            exp_report = explorer.run(dry_run=False)
+            report["steps"]["explorer_v2"] = {
+                "topic": exp_report.get("topic", {}).get("name"),
+                "recommendation": exp_report.get("absorb_recommendation"),
+                "qid": exp_report.get("qid"),
+            }
+            log.info(f"ExplorerV2: explored {exp_report.get('topic', {}).get('name')}")
+        else:
+            report["steps"]["explorer_v2"] = {"status": "skipped", "reason": "already explored today"}
+            log.info("ExplorerV2: skipped (already explored today)")
+    except Exception as e:
+        report["steps"]["explorer_v2"] = {"error": str(e)}
+        log.error(f"ExplorerV2 error: {e}")
+
+    # EVO-001: Self Evolution — 把 approved 决策变成代码/配置变更
+    try:
+        qc = QuestionCenter()
+        # 获取最近 approved 但还没演化过的决策
+        recent_decisions = [d for d in qc.decisions if d.get("outcome") == "approved"]
+        # 过滤：只处理最近 24 小时内的
+        recent_decisions = [
+            d for d in recent_decisions
+            if (datetime.now() - datetime.fromisoformat(d.get("created_at", "2000-01-01T00:00:00"))).total_seconds() < 86400
+        ]
+        if recent_decisions:
+            log.info(f"SelfEvolution: processing {len(recent_decisions)} recent approved decisions")
+            evo = SelfEvolution()
+            evo_results = evo.process_approved_decisions(recent_decisions)
+            evolved = [r for r in evo_results if r.get("status") == "evolved"]
+            report["steps"]["self_evolution"] = {
+                "processed": len(evo_results),
+                "evolved": len(evolved),
+                "deferred": len([r for r in evo_results if r.get("status") == "deferred_to_human"]),
+                "failed": len([r for r in evo_results if r.get("status") in ["failed", "error"]]),
+            }
+            log.info(f"SelfEvolution: {len(evolved)} evolved, {len(evo_results) - len(evolved)} not evolved")
+        else:
+            report["steps"]["self_evolution"] = {"status": "skipped", "reason": "no recent approved decisions"}
+            log.info("SelfEvolution: skipped (no recent approved decisions)")
+    except Exception as e:
+        report["steps"]["self_evolution"] = {"error": str(e)}
+        log.error(f"SelfEvolution error: {e}")
 
     # CIV-001: Civilization Map Monitor
     try:

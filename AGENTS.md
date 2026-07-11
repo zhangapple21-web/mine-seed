@@ -126,8 +126,13 @@ User input is the last source, not the first.
 
 - **Environment Sensor** — Scan local/providers/github/models, build situation reports
 - **Situation Builder** — Aggregate observations, deduplicate, score priority
-- **Heartbeat** — 15-min self-loop, runs EFP/Recovery/Signal/Archivist/EnvSensor
+- **Heartbeat** — 15-min self-loop, runs EFP/Recovery/Signal/Archivist/EnvSensor/P1 engines
 - **Awareness Loop** — Sensor→Question→Task→Miner→Experience closed loop
+- **Question Engine (QE-002)** — Generate "why" questions from observations, not hard rules
+- **Question Center (QC-001)** — First-class citizen managing Question→Hypothesis→Experiment→Evidence→Decision
+- **Multi-Agent Debate (DEB-001)** — Scout / Researcher / Validator / Governor competitive decision-making
+- **Explorer v2 (EXP-002)** — Daily active exploration of one external topic, generate research questions
+- **Self Evolution (EVO-001)** — Turn approved decisions into code/config changes, with rollback + audit
 - **Capability Graph** — 13 capabilities with inheritance, capability-first routing
 - **Provider Health Monitor** — Track latency/success_rate/status, health-score-driven routing
 - **Provider Failure Sediment** — Auto-write Experience when provider degrades (failure→experience→constraint)
@@ -173,24 +178,38 @@ Health score drives routing — skip down providers, prefer healthy ones.
 
 ## Current Priority
 
-**Not adding abilities. Increase collaboration.**
+**Question is the first citizen. Collaboration over capability.**
 
 ```
-Capability (first-class citizens)
+Environment
     ↓
-Routing (health-score-driven, auto-fallback)
+Question (why investigate?)
     ↓
-Observation (environment awareness)
+Hypothesis
     ↓
-Experience (failure sediment, knowledge distillation)
+Experiment
     ↓
-Evolution (self-improvement)
+Evidence
+    ↓
+Decision (Multi-Agent Debate)
+    ↓
+Task
+    ↓
+Miner
+    ↓
+Experience
+    ↓
+Evolution (self-modify)
+    ↓
+Heartbeat → Repeat
 ```
 
 Stop growing the capability list. Start making existing capabilities work together.
 
 A mature system gets more restrained, not larger.
 It doesn't keep gaining new abilities — it keeps improving collaboration efficiency.
+
+The ultimate goal: the system continuously asks the most valuable question, debates answers, validates hypotheses, and evolves itself without waiting for the user.
 
 ---
 

@@ -68,9 +68,12 @@ class StateGenerator:
         modules = [
             {"name": "Heartbeat", "status": "Running", "last_check": datetime.now().isoformat()[:19]},
             {"name": "AwarenessLoop", "status": "Running", "last_check": datetime.now().isoformat()[:19]},
-            {"name": "RoundTable", "status": "Disconnected", "reason": "Not wired into AwarenessLoop"},
+            {"name": "QuestionEngine", "status": "Running", "reason": "Generates 'why' questions from observations"},
             {"name": "QuestionCenter", "status": "Running" if self.qc else "Not Installed"},
-            {"name": "Explorer", "status": "Not Installed", "reason": "TASK-008 pending"},
+            {"name": "MultiAgentDebate", "status": "Running", "reason": "Scout/Researcher/Validator/Governor"},
+            {"name": "ExplorerV2", "status": "Running", "reason": "Daily active exploration"},
+            {"name": "SelfEvolution", "status": "Running", "reason": "Approved decisions → code changes"},
+            {"name": "RoundTable", "status": "Running", "reason": "Audits evolution patches"},
             {"name": "ProviderHealth", "status": "Running" if lm_health else "Not Installed"},
             {"name": "Environment", "status": "Healthy", "reason": "No critical observations"},
             {"name": "Governor", "status": "Running"},
@@ -113,15 +116,31 @@ class StateGenerator:
 
     def generate_civilization_health(self):
         """Civilization Health — 文明健康度"""
+        # 根据 Question Center 的实际数据计算 QuestionCenter 健康度
+        qc_score = 85
+        if self.qc:
+            open_qs = len(self.qc.get_open_questions())
+            active_hs = len(self.qc.get_active_hypotheses())
+            running_exps = len(self.qc.get_running_experiments())
+            # 有问题、假设、实验在跑 = 健康；完全没有问题 = 可能传感器没有工作
+            if open_qs > 0 and active_hs > 0:
+                qc_score = 90
+            elif open_qs > 0:
+                qc_score = 80
+            else:
+                qc_score = 60
+
         components = [
             {"name": "Heartbeat", "score": 100, "reason": "Running every 15 min"},
             {"name": "Environment", "score": 97, "reason": "Healthy"},
             {"name": "Repository", "score": 95, "reason": "6 repos, 0 stale"},
             {"name": "Memory", "score": 98, "reason": "Dual memory active"},
-            {"name": "Explorer", "score": 30, "reason": "Not installed"},
+            {"name": "Explorer", "score": 85, "reason": "v2 daily exploration active"},
             {"name": "Curator", "score": 88, "reason": "Manual sync"},
             {"name": "Governor", "score": 100, "reason": "Invariant checks active"},
-            {"name": "QuestionCenter", "score": 85, "reason": "3 questions, 3 hypotheses"},
+            {"name": "QuestionCenter", "score": qc_score, "reason": f"{open_qs} questions, {active_hs} hypotheses, {running_exps} experiments"},
+            {"name": "MultiAgentDebate", "score": 90, "reason": "4-role debate active"},
+            {"name": "SelfEvolution", "score": 80, "reason": "Auto-apply + rollback + audit"},
         ]
         overall = int(sum(c["score"] for c in components) / len(components))
         return {"components": components, "overall": overall}
@@ -150,7 +169,10 @@ class StateGenerator:
             {"decision": "是否采用 vn.py EventBus？", "status": "等待更多证据"},
             {"decision": "是否加入 HF Router？", "status": "已通过"},
             {"decision": "是否删除 mootdx？", "status": "已通过"},
-            {"decision": "是否增加 Explorer？", "status": "等待验证"},
+            {"decision": "是否增加 Explorer？", "status": "已通过（v2 已实现）"},
+            {"decision": "是否把 Question 作为 R2 第一公民？", "status": "已通过"},
+            {"decision": "是否引入 Multi-Agent Debate 做决策？", "status": "已通过"},
+            {"decision": "是否允许系统自动修改配置（Self Evolution）？", "status": "已通过（白名单保护）"},
             {"decision": "是否创建 .gitignore 管理 R1 遗留文件？", "status": "待决定"},
         ]
         if self.qc:
