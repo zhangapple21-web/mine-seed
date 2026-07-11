@@ -1,0 +1,9 @@
+{
+  "schema": "RealityGovernance.ActiveManifest.v1",
+  "active_model_id": null,
+  "reason": "初版占位：允许多 world model 并存；active 只是当前共识快照，不是最终真理。",
+  "confidence": 0.0,
+  "updated_at": null,
+  "decision_ref": null
+}
+

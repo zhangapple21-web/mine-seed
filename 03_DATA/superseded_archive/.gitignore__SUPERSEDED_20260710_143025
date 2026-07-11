@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Runtime data
+mine_output/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary
+*.tmp
+*.bak
+*.orig
+
+# Telegram session (sensitive auth)
+*.session
+*.session-journal
+
+# Large zip archives (stored locally, not in git)
+03_DATA/raw_sources/zips/*.zip
+03_DATA/raw_sources/zips/*.tar.gz
+03_DATA/raw_sources/zips/*.7z
+
+# Large JSON files (exceed GitHub 100MB limit, stored locally only)
+03_DATA/raw_sources/configs/eco_layer.json
+03_DATA/raw_sources/configs/lexicon_snapshot_v3.json

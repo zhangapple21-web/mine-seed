@@ -1,0 +1,290 @@
+﻿
+[ROUNDTABLE] r1_archaeology\rfc\EGP-CE-Constraint-Engine.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\EGP-EJ-Event-Journal.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\EGP-Execution-Governance-Protocol.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\EGP-SA-Scheduler-Authority.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\EGP-WR-Worker-Registry.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\t00_htspm_candidate_architecture.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\t01_关于未知理论_隐喻与世界模型.md
+  Archivist: reject | Governor: approve | Validator: approve
+  Decision: approved (2/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\V6-RFC-001-why-scheduler.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\V6-RFC-002-priority-system.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+
+[ROUNDTABLE] r1_archaeology\rfc\V6-RFC-004-constraint-injection.md
+  Archivist: approve | Governor: approve | Validator: approve
+  Decision: approved (3/3 approve, 无需 LLM 复议)
+{
+  "pattern": "r1_archaeology/rfc/*.md",
+  "total": 10,
+  "approved": [
+    "r1_archaeology\\rfc\\EGP-CE-Constraint-Engine.md",
+    "r1_archaeology\\rfc\\EGP-EJ-Event-Journal.md",
+    "r1_archaeology\\rfc\\EGP-Execution-Governance-Protocol.md",
+    "r1_archaeology\\rfc\\EGP-SA-Scheduler-Authority.md",
+    "r1_archaeology\\rfc\\EGP-WR-Worker-Registry.md",
+    "r1_archaeology\\rfc\\t00_htspm_candidate_architecture.md",
+    "r1_archaeology\\rfc\\t01_关于未知理论_隐喻与世界模型.md",
+    "r1_archaeology\\rfc\\V6-RFC-001-why-scheduler.md",
+    "r1_archaeology\\rfc\\V6-RFC-002-priority-system.md",
+    "r1_archaeology\\rfc\\V6-RFC-004-constraint-injection.md"
+  ],
+  "rejected": [],
+  "pending": [],
+  "details": [
+    {
+      "asset": "r1_archaeology\\rfc\\EGP-CE-Constraint-Engine.md",
+      "time": "2026-07-10T16:20:02.635368",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\EGP-CE-Constraint-Engine.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\EGP-EJ-Event-Journal.md",
+      "time": "2026-07-10T16:20:02.635368",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\EGP-EJ-Event-Journal.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\EGP-Execution-Governance-Protocol.md",
+      "time": "2026-07-10T16:20:02.635368",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\EGP-Execution-Governance-Protocol.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\EGP-SA-Scheduler-Authority.md",
+      "time": "2026-07-10T16:20:02.635368",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\EGP-SA-Scheduler-Authority.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\EGP-WR-Worker-Registry.md",
+      "time": "2026-07-10T16:20:02.635368",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\EGP-WR-Worker-Registry.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\t00_htspm_candidate_architecture.md",
+      "time": "2026-07-10T16:20:02.637382",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\t00_htspm_candidate_architecture.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\t01_关于未知理论_隐喻与世界模型.md",
+      "time": "2026-07-10T16:20:02.637382",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "reject",
+          "reason": "size=666 < 1000, 可能不完整"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "2/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\V6-RFC-001-why-scheduler.md",
+      "time": "2026-07-10T16:20:02.637895",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\V6-RFC-001-why-scheduler.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\V6-RFC-002-priority-system.md",
+      "time": "2026-07-10T16:20:02.637895",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\V6-RFC-002-priority-system.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    },
+    {
+      "asset": "r1_archaeology\\rfc\\V6-RFC-004-constraint-injection.md",
+      "time": "2026-07-10T16:20:02.637895",
+      "opinions": [
+        {
+          "role": "archivist",
+          "vote": "approve",
+          "reason": "关键资产类型 (path contains r1_archaeology\\rfc\\V6-RFC-004-constraint-injection.md)"
+        },
+        {
+          "role": "governor",
+          "vote": "approve",
+          "reason": "RFC 变更, 治理层应跟进"
+        },
+        {
+          "role": "validator",
+          "vote": "approve",
+          "reason": "有效 Markdown 结构"
+        }
+      ],
+      "decision": "approved",
+      "reason": "3/3 approve, 无需 LLM 复议"
+    }
+  ]
+}

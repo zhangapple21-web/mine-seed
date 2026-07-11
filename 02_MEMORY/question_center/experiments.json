@@ -1,0 +1,11 @@
+[
+  {
+    "eid": "EXP-001",
+    "hid": "H-001",
+    "name": "权限设置错误验证",
+    "description": "通过模拟 GitHub Models API 的请求来验证是否存在由于权限设置错误导致的连续返回 401 错误。具体步骤包括：",
+    "status": "running",
+    "created_at": "2026-07-11T14:29:19.249382",
+    "evidence_collected": []
+  }
+]

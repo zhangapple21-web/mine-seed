@@ -1,0 +1,11 @@
+[
+  {
+    "question": "发现 205 untracked files — 这些新文件是否需要纳入治理？是否包含未蒸馏的原始数据？",
+    "capability": "research",
+    "priority": "P2",
+    "status": "pending",
+    "dedup_key": "new_files",
+    "timestamp": "2026-07-11T14:12:30.869700",
+    "last_seen": "2026-07-11T14:43:51.701167"
+  }
+]

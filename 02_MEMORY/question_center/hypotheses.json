@@ -1,0 +1,29 @@
+[
+  {
+    "hid": "H-001",
+    "qid": "Q-001",
+    "hypothesis": "GitHub Models API 的权限设置错误导致连续返回 401",
+    "confidence": 30,
+    "status": "testing",
+    "created_at": "2026-07-11T14:28:37.161353",
+    "evidence": []
+  },
+  {
+    "hid": "H-002",
+    "qid": "Q-001",
+    "hypothesis": "GitHub Models API 连接超时或网络延迟引起连续的 401 错误",
+    "confidence": 30,
+    "status": "proposed",
+    "created_at": "2026-07-11T14:28:37.162904",
+    "evidence": []
+  },
+  {
+    "hid": "H-003",
+    "qid": "Q-001",
+    "hypothesis": "GitHub Models API 认证令牌未正确配置，导致请求失败并返回 401",
+    "confidence": 30,
+    "status": "proposed",
+    "created_at": "2026-07-11T14:28:37.163418",
+    "evidence": []
+  }
+]

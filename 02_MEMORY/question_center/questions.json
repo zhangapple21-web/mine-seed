@@ -1,0 +1,48 @@
+[
+  {
+    "qid": "Q-001",
+    "question": "为什么 GitHub Models 连续返回 401？",
+    "source": "environment",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T14:27:48.561880",
+    "last_seen": "2026-07-11T14:27:48.561880",
+    "hypotheses": [
+      "H-001",
+      "H-002",
+      "H-003"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": []
+  },
+  {
+    "qid": "Q-002",
+    "question": "为什么 r1-open-source-seed 一直没有内容？",
+    "source": "environment",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T14:28:01.411729",
+    "last_seen": "2026-07-11T14:28:01.411729",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": []
+  },
+  {
+    "qid": "Q-003",
+    "question": "HF Router 是否应该走 OneAPI？",
+    "source": "environment",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-11T14:28:01.517217",
+    "last_seen": "2026-07-11T14:28:01.517217",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": []
+  }
+]

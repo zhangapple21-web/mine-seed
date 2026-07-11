@@ -1,0 +1,60 @@
+{
+  "version": "2.0",
+  "updated": "2026-06-16T07:59:00+08:00",
+  "observations": [
+    {
+      "id": "obs_20260616_01",
+      "time": "20260616T040000+08:00",
+      "type": "worker_performance",
+      "finding": "gh_r1 sr=0.00 连续失败，应加入黑名单",
+      "action": "update_blacklist",
+      "priority": "P1"
+    },
+    {
+      "id": "obs_20260616_02",
+      "time": "20260616T040000+08:00",
+      "type": "worker_performance",
+      "finding": "nim_ultra_550b sr=0.04 极低效率，考虑降级",
+      "action": "monitor",
+      "priority": "P2"
+    },
+    {
+      "id": "obs_20260616_03",
+      "time": "20260616T040000+08:00",
+      "type": "task_success_rate",
+      "finding": "canonical_v2任务量53次最高，但胜率仅57%，需要优化模型选择",
+      "action": "route_optimization",
+      "priority": "P1"
+    },
+    {
+      "id": "obs_20260616_04",
+      "time": "20260616T040000+08:00",
+      "type": "task_success_rate",
+      "finding": "upgrade_analysis胜率93%最高，slice_classification胜率71%最低",
+      "action": "pattern_learn",
+      "priority": "P2"
+    },
+    {
+      "id": "obs_20260616_05",
+      "time": "20260616T040000+08:00",
+      "type": "worker_performance",
+      "finding": "nim_kimi_k26 lat=0.0s 数据异常，需排查",
+      "action": "investigate",
+      "priority": "P2"
+    }
+  ],
+  "rules": [
+    {
+      "rule": "gh_r1加入黑名单",
+      "condition": "sr=0.00持续失败",
+      "action": "禁止分配任何任务",
+      "verified": true
+    },
+    {
+      "rule": "nim_ultra_550b降为P3优先级",
+      "condition": "sr<0.10",
+      "action": "仅用于备用",
+      "verified": false
+    }
+  ]
+}
