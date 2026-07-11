@@ -318,6 +318,27 @@ def beat(log):
         report["steps"]["advisor_review"] = {"status": "error", "error": str(e)}
         log.error(f"Advisor review error: {e}")
 
+    # Civilization Audit — 每周一次（周一运行）
+    try:
+        today = datetime.now()
+        if today.weekday() == 0:  # Monday
+            from civilization_auditor import CivilizationAuditor
+            auditor = CivilizationAuditor()
+            audit_report = auditor.run_all()
+            report["steps"]["civilization_audit"] = {
+                "status": "completed",
+                "health_score": audit_report["stats"]["health_score"],
+                "duplicates": audit_report["stats"]["duplicate_clusters"],
+                "zombies": audit_report["stats"]["zombie_files"],
+                "missing_links": audit_report["stats"]["missing_links"],
+            }
+            log.info(f"Civilization audit: health={audit_report['stats']['health_score']}/100")
+        else:
+            report["steps"]["civilization_audit"] = {"status": "skipped", "reason": "not Monday"}
+    except Exception as e:
+        report["steps"]["civilization_audit"] = {"status": "error", "error": str(e)}
+        log.error(f"Civilization audit error: {e}")
+
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
     log.info("Heartbeat saved")

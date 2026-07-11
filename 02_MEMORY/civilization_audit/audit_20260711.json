@@ -1,0 +1,2031 @@
+{
+  "timestamp": "2026-07-11T20:28:03.388806",
+  "date": "20260711",
+  "stats": {
+    "total_files": 1452,
+    "duplicate_clusters": 127,
+    "duplicate_files": 445,
+    "zombie_files": 228,
+    "zombie_by_type": {
+      "suspected_deprecated": 1,
+      "unreferenced_module": 30,
+      "unreferenced_config": 197
+    },
+    "missing_links": 8,
+    "link_by_type": {
+      "protocol_not_wired": 6,
+      "constraint_not_implemented": 2
+    },
+    "health_score": 0
+  },
+  "duplicates": [
+    {
+      "base_name": "asset_curator",
+      "files": [
+        {
+          "path": "02_modules\\assets\\asset_curator.py",
+          "size": 25645,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "05_TOOLS\\asset_curator.py",
+          "size": 25645,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "assets\\asset_curator.py",
+          "size": 25645,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_ARCHITECTURE\\02_modules\\assets\\asset_curator.py",
+          "size": 24973,
+          "modified": "2026-06-30"
+        }
+      ],
+      "count": 4,
+      "recommendation": "保留 02_modules\\assets\\asset_curator.py (最新), 考虑归档其他 3 个"
+    },
+    {
+      "base_name": "__init__",
+      "files": [
+        {
+          "path": "02_modules\\assets\\__init__.py",
+          "size": 273,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_modules\\lexicon\\__init__.py",
+          "size": 720,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "05_TOOLS\\assets\\__init__.py",
+          "size": 720,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "assets\\__init__.py",
+          "size": 273,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\__init__.py",
+          "size": 720,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_ARCHITECTURE\\02_modules\\assets\\__init__.py",
+          "size": 259,
+          "modified": "2026-06-30"
+        },
+        {
+          "path": "02_ARCHITECTURE\\02_modules\\lexicon\\__init__.py",
+          "size": 720,
+          "modified": "2026-06-30"
+        }
+      ],
+      "count": 7,
+      "recommendation": "保留 02_modules\\assets\\__init__.py (最新), 考虑归档其他 6 个"
+    },
+    {
+      "base_name": "lexicon_categories",
+      "files": [
+        {
+          "path": "02_modules\\lexicon\\lexicon_categories.py",
+          "size": 18766,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\lexicon_categories.py",
+          "size": 18766,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\lexicon_categories.py",
+          "size": 18766,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_ARCHITECTURE\\02_modules\\lexicon\\lexicon_categories.py",
+          "size": 18326,
+          "modified": "2026-06-30"
+        }
+      ],
+      "count": 4,
+      "recommendation": "保留 02_modules\\lexicon\\lexicon_categories.py (最新), 考虑归档其他 3 个"
+    },
+    {
+      "base_name": "archivist",
+      "files": [
+        {
+          "path": "05_TOOLS\\memory\\archivist.py",
+          "size": 25564,
+          "modified": "2026-07-11"
+        },
+        {
+          "path": "02_MEMORY\\archivist_20260710.json",
+          "size": 546,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory\\archivist.py",
+          "size": 25457,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 05_TOOLS\\memory\\archivist.py (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "binary_sense_demo_2026-06",
+      "files": [
+        {
+          "path": "02_MEMORY\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "daily\\binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+          "size": 602,
+          "modified": "2026-06-29"
+        }
+      ],
+      "count": 6,
+      "recommendation": "保留 02_MEMORY\\binary_sense_demo_2026-06-29.json (最新), 考虑归档其他 5 个"
+    },
+    {
+      "base_name": "experience",
+      "files": [
+        {
+          "path": "02_MEMORY\\experience.json",
+          "size": 1744,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\experience.json",
+          "size": 1744,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 02_MEMORY\\experience.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "experience_engine",
+      "files": [
+        {
+          "path": "05_TOOLS\\memory\\experience_engine.py",
+          "size": 38537,
+          "modified": "2026-07-11"
+        },
+        {
+          "path": "02_MEMORY\\experience_engine.py",
+          "size": 38280,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory\\experience_engine.py",
+          "size": 38280,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 05_TOOLS\\memory\\experience_engine.py (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "memory_index",
+      "files": [
+        {
+          "path": "02_MEMORY\\memory_index_20260626.json",
+          "size": 1371872,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_MEMORY\\memory_index_20260627.json",
+          "size": 4078897,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_MEMORY\\memory_index_20260628.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory_index\\memory_index_20260626.json",
+          "size": 1371872,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory_index\\memory_index_20260627.json",
+          "size": 4078897,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory_index\\memory_index_20260628.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\memory_index\\memory_index_20260626.json",
+          "size": 1371872,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\memory_index\\memory_index_20260627.json",
+          "size": 4078897,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\memory_index\\memory_index_20260628.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\memory_index\\memory_index_20260626.json",
+          "size": 1371872,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\memory_index\\memory_index_20260627.json",
+          "size": 4078897,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\memory_index\\memory_index_20260628.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\memory_index\\memory_index_20260626.json",
+          "size": 1371872,
+          "modified": "2026-06-28"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\memory_index\\memory_index_20260627.json",
+          "size": 4078897,
+          "modified": "2026-06-28"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\memory_index\\memory_index_20260628.json",
+          "size": 4261551,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 15,
+      "recommendation": "保留 02_MEMORY\\memory_index_20260626.json (最新), 考虑归档其他 14 个"
+    },
+    {
+      "base_name": "memory_index_latest",
+      "files": [
+        {
+          "path": "02_MEMORY\\memory_index_latest.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "memory_index\\memory_index_latest.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\memory_index\\memory_index_latest.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\memory_index\\memory_index_latest.json",
+          "size": 4261551,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\memory_index\\memory_index_latest.json",
+          "size": 4261551,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 02_MEMORY\\memory_index_latest.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "observation_log",
+      "files": [
+        {
+          "path": "02_MEMORY\\observation_log.json",
+          "size": 723559,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\observation_log.json",
+          "size": 723559,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 02_MEMORY\\observation_log.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "seed_20260626",
+      "files": [
+        {
+          "path": "02_MEMORY\\seed_20260626_124756.json",
+          "size": 1312,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\seed_20260626_124756.json",
+          "size": 1312,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\seed_20260626_124756.json",
+          "size": 1312,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\seed_20260626_124756.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "seed_momentum_12m",
+      "files": [
+        {
+          "path": "02_MEMORY\\seed_momentum_12m_20260630.json",
+          "size": 2532,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\seed_momentum_12m_20260630.json",
+          "size": 2532,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\seed_momentum_12m_20260630.json",
+          "size": 2532,
+          "modified": "2026-07-02"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\seed_momentum_12m_20260630.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "seed_volatility_20260625",
+      "files": [
+        {
+          "path": "02_MEMORY\\seed_volatility_20260625_0646.json",
+          "size": 1505,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\seed_volatility_20260625_0646.json",
+          "size": 1505,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\seed_volatility_20260625_0646.json",
+          "size": 1505,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\seed_volatility_20260625_0646.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "thought_seed_20260623",
+      "files": [
+        {
+          "path": "02_MEMORY\\thought_seed_20260623_1249.json",
+          "size": 2216,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260623_1249.json",
+          "size": 2216,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260623_1249.json",
+          "size": 2216,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\thought_seed_20260623_1249.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "thought_seed_20260624",
+      "files": [
+        {
+          "path": "02_MEMORY\\thought_seed_20260624_0045.json",
+          "size": 1021,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260624_0045.json",
+          "size": 1021,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260624_0045.json",
+          "size": 1021,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\thought_seed_20260624_0045.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "thought_seed_20260626",
+      "files": [
+        {
+          "path": "02_MEMORY\\thought_seed_20260626_0645.json",
+          "size": 1528,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260626_0645.json",
+          "size": 1528,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260626_0645.json",
+          "size": 1528,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\thought_seed_20260626_0645.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "thought_seed_20260627",
+      "files": [
+        {
+          "path": "02_MEMORY\\thought_seed_20260627_0645.json",
+          "size": 1403,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260627_0645.json",
+          "size": 1403,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260627_0645.json",
+          "size": 1403,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\thought_seed_20260627_0645.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "thought_seed_20260630",
+      "files": [
+        {
+          "path": "02_MEMORY\\thought_seed_20260630_0645.json",
+          "size": 1740,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "02_MEMORY\\thought_seed_20260630_1846.json",
+          "size": 1888,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260630_0645.json",
+          "size": 1740,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "seeds\\thought_seed_20260630_1846.json",
+          "size": 1888,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260630_0645.json",
+          "size": 1740,
+          "modified": "2026-07-02"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260630_1846.json",
+          "size": 1888,
+          "modified": "2026-07-02"
+        }
+      ],
+      "count": 6,
+      "recommendation": "保留 02_MEMORY\\thought_seed_20260630_0645.json (最新), 考虑归档其他 5 个"
+    },
+    {
+      "base_name": "index",
+      "files": [
+        {
+          "path": "02_MEMORY\\recent_memory\\index.json",
+          "size": 7760,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "06_RUNTIME\\index.json",
+          "size": 7760,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "recent_memory\\index.json",
+          "size": 7760,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 02_MEMORY\\recent_memory\\index.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "recovery_engine",
+      "files": [
+        {
+          "path": "02_MEMORY\\recovery\\recovery_engine_20260711.json",
+          "size": 180855,
+          "modified": "2026-07-11"
+        },
+        {
+          "path": "04_PROTOCOLS\\recovery_engine.py",
+          "size": 15214,
+          "modified": "2026-07-11"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 02_MEMORY\\recovery\\recovery_engine_20260711.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "ace_config",
+      "files": [
+        {
+          "path": "03_DATA\\ace_config.json",
+          "size": 0,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "ace\\ace_config.json",
+          "size": 0,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "06_RUNTIME\\ace\\ace_config.json",
+          "size": 0,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\ace_config.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "active_manifest",
+      "files": [
+        {
+          "path": "03_DATA\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\reality_governance_v1\\world_models\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "reality_governance_v1\\world_models\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\reality_governance_v1\\world_models\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "world_models\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\reality_governance_v1\\world_models\\active_manifest.json",
+          "size": 275,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 6,
+      "recommendation": "保留 03_DATA\\active_manifest.json (最新), 考虑归档其他 5 个"
+    },
+    {
+      "base_name": "host_profile",
+      "files": [
+        {
+          "path": "03_DATA\\host_profile.json",
+          "size": 245,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "advisor\\host_profile.json",
+          "size": 245,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "05_TOOLS\\advisor\\host_profile.json",
+          "size": 245,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\host_profile.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "layer_stats",
+      "files": [
+        {
+          "path": "03_DATA\\layer_stats.json",
+          "size": 677,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "eco_layer\\layer_stats.json",
+          "size": 677,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\eco_layer\\layer_stats.json",
+          "size": 677,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\eco_layer\\layer_stats.json",
+          "size": 677,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\eco_layer\\layer_stats.json",
+          "size": 677,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 03_DATA\\layer_stats.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "lexicon",
+      "files": [
+        {
+          "path": "03_DATA\\lexicon_20260626.json",
+          "size": 109926,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\lexicon_20260627.json",
+          "size": 271014,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\lexicon_20260628.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\lexicon_20260626.json",
+          "size": 109926,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\lexicon_20260627.json",
+          "size": 271014,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\lexicon_20260628.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\lexicon\\lexicon_20260626.json",
+          "size": 109926,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\lexicon\\lexicon_20260627.json",
+          "size": 271014,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\lexicon\\lexicon_20260628.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\lexicon\\lexicon_20260626.json",
+          "size": 109926,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\lexicon\\lexicon_20260627.json",
+          "size": 271014,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\lexicon\\lexicon_20260628.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\lexicon\\lexicon_20260626.json",
+          "size": 109926,
+          "modified": "2026-06-28"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\lexicon\\lexicon_20260627.json",
+          "size": 271014,
+          "modified": "2026-06-28"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\lexicon\\lexicon_20260628.json",
+          "size": 283378,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 15,
+      "recommendation": "保留 03_DATA\\lexicon_20260626.json (最新), 考虑归档其他 14 个"
+    },
+    {
+      "base_name": "lexicon_latest",
+      "files": [
+        {
+          "path": "03_DATA\\lexicon_latest.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "lexicon\\lexicon_latest.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\lexicon\\lexicon_latest.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\lexicon\\lexicon_latest.json",
+          "size": 283378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\lexicon\\lexicon_latest.json",
+          "size": 283378,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 03_DATA\\lexicon_latest.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "overview",
+      "files": [
+        {
+          "path": "03_DATA\\overview.json",
+          "size": 1035,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\slices\\overview.json",
+          "size": 1035,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\slices\\overview.json",
+          "size": 1035,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "slices\\overview.json",
+          "size": 1035,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\slices\\overview.json",
+          "size": 1035,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 03_DATA\\overview.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "routing_constraints",
+      "files": [
+        {
+          "path": "03_DATA\\routing_constraints.json",
+          "size": 11841,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "CONSTRAINTS\\routing_constraints.json",
+          "size": 11841,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\CONSTRAINTS\\routing_constraints.json",
+          "size": 11841,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\routing_constraints.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "signal_registry",
+      "files": [
+        {
+          "path": "03_DATA\\signal_registry.json",
+          "size": 11694,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\CONSTRAINTS\\signal_registry.json",
+          "size": 11694,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "CONSTRAINTS\\signal_registry.json",
+          "size": 11694,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\signal_registry.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "signal_taxonomy",
+      "files": [
+        {
+          "path": "03_DATA\\signal_taxonomy.json",
+          "size": 1180,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "CONSTRAINTS\\signal_taxonomy.json",
+          "size": 1180,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\CONSTRAINTS\\signal_taxonomy.json",
+          "size": 1180,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\signal_taxonomy.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "worker_registry",
+      "files": [
+        {
+          "path": "03_DATA\\worker_registry.json",
+          "size": 20748,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\WORKERS\\worker_registry.json",
+          "size": 20748,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "WORKERS\\worker_registry.json",
+          "size": 20748,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\worker_registry.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "lexicon_snapshot",
+      "files": [
+        {
+          "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v2.json",
+          "size": 23914470,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\raw_sources\\configs\\lexicon_snapshot_v3.json",
+          "size": 95696023,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 03_DATA\\raw_sources\\configs\\lexicon_snapshot_v2.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "daemon_state",
+      "files": [
+        {
+          "path": "06_RUNTIME\\daemon_state.json",
+          "size": 17669,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daemon_state.json",
+          "size": 17669,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daemon_state.json",
+          "size": 17669,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daemon_state.json",
+          "size": 17669,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 4,
+      "recommendation": "保留 06_RUNTIME\\daemon_state.json (最新), 考虑归档其他 3 个"
+    },
+    {
+      "base_name": "R1_CIVILIZATION_GRAPH",
+      "files": [
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\R1_CIVILIZATION_GRAPH.json",
+          "size": 193501,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\R1_CIVILIZATION_GRAPH.json",
+          "size": 193501,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\R1_CIVILIZATION_GRAPH.json",
+          "size": 193501,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\research\\r1_archaeology\\R1_CIVILIZATION_GRAPH.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "SKILL-本地考古吸收",
+      "files": [
+        {
+          "path": "daily\\SKILL-本地考古吸收.json",
+          "size": 3805,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\SKILL-本地考古吸收.json",
+          "size": 3805,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\skills\\SKILL-本地考古吸收.json",
+          "size": 3805,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\SKILL-本地考古吸收.json",
+          "size": 3805,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\SKILL-本地考古吸收.json",
+          "size": 3805,
+          "modified": "2026-06-29"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 daily\\SKILL-本地考古吸收.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "SKILL-碎片考古",
+      "files": [
+        {
+          "path": "daily\\SKILL-碎片考古.json",
+          "size": 3210,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\SKILL-碎片考古.json",
+          "size": 3210,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\skills\\SKILL-碎片考古.json",
+          "size": 3210,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\SKILL-碎片考古.json",
+          "size": 3210,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\SKILL-碎片考古.json",
+          "size": 3210,
+          "modified": "2026-06-29"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 daily\\SKILL-碎片考古.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "SKILL-考古报告分析",
+      "files": [
+        {
+          "path": "daily\\SKILL-考古报告分析.json",
+          "size": 3378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\SKILL-考古报告分析.json",
+          "size": 3378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\skills\\SKILL-考古报告分析.json",
+          "size": 3378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\SKILL-考古报告分析.json",
+          "size": 3378,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\SKILL-考古报告分析.json",
+          "size": 3378,
+          "modified": "2026-06-30"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 daily\\SKILL-考古报告分析.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "SKILL-跨智能体考古",
+      "files": [
+        {
+          "path": "daily\\SKILL-跨智能体考古.json",
+          "size": 2570,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\SKILL-跨智能体考古.json",
+          "size": 2570,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\skills\\SKILL-跨智能体考古.json",
+          "size": 2570,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\SKILL-跨智能体考古.json",
+          "size": 2570,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\SKILL-跨智能体考古.json",
+          "size": 2570,
+          "modified": "2026-06-30"
+        }
+      ],
+      "count": 5,
+      "recommendation": "保留 daily\\SKILL-跨智能体考古.json (最新), 考虑归档其他 4 个"
+    },
+    {
+      "base_name": "binary_analysis_BlueStacksMicroInstaller_20260629",
+      "files": [
+        {
+          "path": "binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "daily\\binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "r1_archaeology\\daily\\binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "research\\r1_archaeology\\daily\\binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\research\\r1_archaeology\\daily\\binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json",
+          "size": 30502,
+          "modified": "2026-06-29"
+        }
+      ],
+      "count": 6,
+      "recommendation": "保留 binary_sense_reports\\binary_analysis_BlueStacksMicroInstaller_20260629_194939.json (最新), 考虑归档其他 5 个"
+    },
+    {
+      "base_name": "thought_seed_20260702",
+      "files": [
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260702_1247.json",
+          "size": 1886,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260702_1845.json",
+          "size": 1184,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 03_DATA\\seeds\\thought_seed_20260702_1247.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "thought_seed_20260706",
+      "files": [
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260706_0045.json",
+          "size": 1901,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260706_064757.json",
+          "size": 1315,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\seeds\\thought_seed_20260706_1845.json",
+          "size": 1176,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 3,
+      "recommendation": "保留 03_DATA\\seeds\\thought_seed_20260706_0045.json (最新), 考虑归档其他 2 个"
+    },
+    {
+      "base_name": "asset_curator__SUPERSEDED_20260710",
+      "files": [
+        {
+          "path": "03_DATA\\superseded_archive\\02_modules\\assets\\asset_curator__SUPERSEDED_20260710_143027.py",
+          "size": 25645,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\superseded_archive\\assets\\asset_curator__SUPERSEDED_20260710_143027.py",
+          "size": 25645,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 03_DATA\\superseded_archive\\02_modules\\assets\\asset_curator__SUPERSEDED_20260710_143027.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "__init____SUPERSEDED_20260710",
+      "files": [
+        {
+          "path": "03_DATA\\superseded_archive\\02_modules\\assets\\__init____SUPERSEDED_20260710_143027.py",
+          "size": 273,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\superseded_archive\\assets\\__init____SUPERSEDED_20260710_143027.py",
+          "size": 273,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 03_DATA\\superseded_archive\\02_modules\\assets\\__init____SUPERSEDED_20260710_143027.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "lexicon_categories__SUPERSEDED_20260710",
+      "files": [
+        {
+          "path": "03_DATA\\superseded_archive\\02_modules\\lexicon\\lexicon_categories__SUPERSEDED_20260710_143027.py",
+          "size": 18766,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "03_DATA\\superseded_archive\\lexicon\\lexicon_categories__SUPERSEDED_20260710_143027.py",
+          "size": 18766,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 03_DATA\\superseded_archive\\02_modules\\lexicon\\lexicon_categories__SUPERSEDED_20260710_143027.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "local_miner",
+      "files": [
+        {
+          "path": "04_PROTOCOLS\\local_miner.py",
+          "size": 31444,
+          "modified": "2026-07-11"
+        },
+        {
+          "path": "05_TOOLS\\miner\\local_miner.py",
+          "size": 19342,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 04_PROTOCOLS\\local_miner.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "SETUP",
+      "files": [
+        {
+          "path": "05_TOOLS\\SETUP.sh",
+          "size": 2659,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "06_RUNTIME\\SETUP.sh",
+          "size": 2659,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 05_TOOLS\\SETUP.sh (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "advisor_cron",
+      "files": [
+        {
+          "path": "05_TOOLS\\advisor\\advisor_cron.sh",
+          "size": 889,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "advisor\\advisor_cron.sh",
+          "size": 889,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 05_TOOLS\\advisor\\advisor_cron.sh (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "lineage_review",
+      "files": [
+        {
+          "path": "advisor\\lineage_review.py",
+          "size": 2986,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "05_TOOLS\\advisor\\lineage_review.py",
+          "size": 2986,
+          "modified": "2026-06-28"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 advisor\\lineage_review.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "stock_advisor",
+      "files": [
+        {
+          "path": "05_TOOLS\\advisor\\stock_advisor.py",
+          "size": 54974,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "advisor\\stock_advisor.py",
+          "size": 54974,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 05_TOOLS\\advisor\\stock_advisor.py (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "stock_query",
+      "files": [
+        {
+          "path": "05_TOOLS\\advisor\\stock_query.py",
+          "size": 10901,
+          "modified": "2026-07-10"
+        },
+        {
+          "path": "advisor\\stock_query.py",
+          "size": 10901,
+          "modified": "2026-07-10"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 05_TOOLS\\advisor\\stock_query.py (最新), 考虑归档其他 1 个"
+    }
+  ],
+  "zombies": [
+    {
+      "type": "suspected_deprecated",
+      "path": "05_TOOLS\\miner\\tg_login_test.py",
+      "reason": "文件名包含废弃标记: tg_login_test",
+      "size": 5052,
+      "modified": "2026-07-11"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "02_ARCHITECTURE\\02_modules\\assets\\asset_curator.py",
+      "reason": "模块 asset_curator 未被任何文件 import",
+      "size": 24973,
+      "modified": "2026-06-30"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "02_ARCHITECTURE\\02_modules\\lexicon\\lexicon_categories.py",
+      "reason": "模块 lexicon_categories 未被任何文件 import",
+      "size": 18326,
+      "modified": "2026-06-30"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "02_modules\\assets\\asset_curator.py",
+      "reason": "模块 asset_curator 未被任何文件 import",
+      "size": 25645,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "02_modules\\lexicon\\lexicon_categories.py",
+      "reason": "模块 lexicon_categories 未被任何文件 import",
+      "size": 18766,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\lexicon_categories.py",
+      "reason": "模块 lexicon_categories 未被任何文件 import",
+      "size": 18766,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\api\\router.py",
+      "reason": "模块 router 未被任何文件 import",
+      "size": 42,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\config\\settings.py",
+      "reason": "模块 settings 未被任何文件 import",
+      "size": 24,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\core\\scheduler.py",
+      "reason": "模块 scheduler 未被任何文件 import",
+      "size": 1290,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\core\\task.py",
+      "reason": "模块 task 未被任何文件 import",
+      "size": 1872,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\executor\\executor.py",
+      "reason": "模块 executor 未被任何文件 import",
+      "size": 278,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\monitor\\metrics.py",
+      "reason": "模块 metrics 未被任何文件 import",
+      "size": 34,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\queue\\redis_queue.py",
+      "reason": "模块 redis_queue 未被任何文件 import",
+      "size": 1720,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\jos_system_final\\jos_system_final\\jos\\utils\\logger.py",
+      "reason": "模块 logger 未被任何文件 import",
+      "size": 22,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\R1-Reality-Kernel-v1\\03_CHIPS\\dual-drive-chip\\chipA.py",
+      "reason": "模块 chipA 未被任何文件 import",
+      "size": 11,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\raw_sources\\extracted\\R1-Reality-Kernel-v1\\03_CHIPS\\dual-drive-chip\\chipB.py",
+      "reason": "模块 chipB 未被任何文件 import",
+      "size": 11,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\02_modules\\assets\\asset_curator__SUPERSEDED_20260710_143027.py",
+      "reason": "模块 asset_curator__SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 25645,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\02_modules\\assets\\__init____SUPERSEDED_20260710_143027.py",
+      "reason": "模块 __init____SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 273,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\02_modules\\lexicon\\lexicon_categories__SUPERSEDED_20260710_143027.py",
+      "reason": "模块 lexicon_categories__SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 18766,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\assets\\asset_curator__SUPERSEDED_20260710_143027.py",
+      "reason": "模块 asset_curator__SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 25645,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\assets\\__init____SUPERSEDED_20260710_143027.py",
+      "reason": "模块 __init____SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 273,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "03_DATA\\superseded_archive\\lexicon\\lexicon_categories__SUPERSEDED_20260710_143027.py",
+      "reason": "模块 lexicon_categories__SUPERSEDED_20260710_143027 未被任何文件 import",
+      "size": 18766,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "05_TOOLS\\asset_curator.py",
+      "reason": "模块 asset_curator 未被任何文件 import",
+      "size": 25645,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "05_TOOLS\\constraints\\constraint_injector.py",
+      "reason": "模块 constraint_injector 未被任何文件 import",
+      "size": 4776,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "05_TOOLS\\miner\\check_session.py",
+      "reason": "模块 check_session 未被任何文件 import",
+      "size": 1017,
+      "modified": "2026-07-11"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "05_TOOLS\\miner\\verify_sessions.py",
+      "reason": "模块 verify_sessions 未被任何文件 import",
+      "size": 2813,
+      "modified": "2026-07-11"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "06_RUNTIME\\constraint_injector.py",
+      "reason": "模块 constraint_injector 未被任何文件 import",
+      "size": 4776,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "06_RUNTIME\\windows\\test_tg.py",
+      "reason": "模块 test_tg 未被任何文件 import",
+      "size": 2108,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "assets\\asset_curator.py",
+      "reason": "模块 asset_curator 未被任何文件 import",
+      "size": 25645,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "CONSTRAINTS\\constraint_injector.py",
+      "reason": "模块 constraint_injector 未被任何文件 import",
+      "size": 4776,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_module",
+      "path": "lexicon\\lexicon_categories.py",
+      "reason": "模块 lexicon_categories 未被任何文件 import",
+      "size": 18766,
+      "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\archivist_20260710.json",
+      "reason": "配置 archivist_20260710.json 未被代码引用",
+      "size": 546
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\archivist_report_20260710.json",
+      "reason": "配置 archivist_report_20260710.json 未被代码引用",
+      "size": 643
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "research\\r1_archaeology\\daily\\binary_sense_reports\\binary_sense_demo_2026-06-29.json",
+      "reason": "配置 binary_sense_demo_2026-06-29.json 未被代码引用",
+      "size": 602
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "research\\r1_archaeology\\memory_index\\memory_index_20260626.json",
+      "reason": "配置 memory_index_20260626.json 未被代码引用",
+      "size": 1371872
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "research\\r1_archaeology\\memory_index\\memory_index_20260627.json",
+      "reason": "配置 memory_index_20260627.json 未被代码引用",
+      "size": 4078897
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "research\\r1_archaeology\\memory_index\\memory_index_20260628.json",
+      "reason": "配置 memory_index_20260628.json 未被代码引用",
+      "size": 4261551
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "research\\r1_archaeology\\memory_index\\memory_index_latest.json",
+      "reason": "配置 memory_index_latest.json 未被代码引用",
+      "size": 4261551
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\roundtable_rfc.json",
+      "reason": "配置 roundtable_rfc.json 未被代码引用",
+      "size": 9620
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\seed_20260626_124756.json",
+      "reason": "配置 seed_20260626_124756.json 未被代码引用",
+      "size": 1312
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\seed_momentum_12m_20260630.json",
+      "reason": "配置 seed_momentum_12m_20260630.json 未被代码引用",
+      "size": 2532
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\seed_volatility_20260625_0646.json",
+      "reason": "配置 seed_volatility_20260625_0646.json 未被代码引用",
+      "size": 1505
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260623_1249.json",
+      "reason": "配置 thought_seed_20260623_1249.json 未被代码引用",
+      "size": 2216
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260624_0045.json",
+      "reason": "配置 thought_seed_20260624_0045.json 未被代码引用",
+      "size": 1021
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260626_0645.json",
+      "reason": "配置 thought_seed_20260626_0645.json 未被代码引用",
+      "size": 1528
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260627_0645.json",
+      "reason": "配置 thought_seed_20260627_0645.json 未被代码引用",
+      "size": 1403
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260630_0645.json",
+      "reason": "配置 thought_seed_20260630_0645.json 未被代码引用",
+      "size": 1740
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "seeds\\thought_seed_20260630_1846.json",
+      "reason": "配置 thought_seed_20260630_1846.json 未被代码引用",
+      "size": 1888
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T194238.json",
+      "reason": "配置 situation_20260710T194238.json 未被代码引用",
+      "size": 9730
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T195929.json",
+      "reason": "配置 situation_20260710T195929.json 未被代码引用",
+      "size": 1337
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T195949.json",
+      "reason": "配置 situation_20260710T195949.json 未被代码引用",
+      "size": 3822
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T201234.json",
+      "reason": "配置 situation_20260710T201234.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T201241.json",
+      "reason": "配置 situation_20260710T201241.json 未被代码引用",
+      "size": 1416
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T201256.json",
+      "reason": "配置 situation_20260710T201256.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260710T210847.json",
+      "reason": "配置 situation_20260710T210847.json 未被代码引用",
+      "size": 2086
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T140531.json",
+      "reason": "配置 situation_20260711T140531.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T140903.json",
+      "reason": "配置 situation_20260711T140903.json 未被代码引用",
+      "size": 1564
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T140911.json",
+      "reason": "配置 situation_20260711T140911.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141045.json",
+      "reason": "配置 situation_20260711T141045.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141100.json",
+      "reason": "配置 situation_20260711T141100.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141230.json",
+      "reason": "配置 situation_20260711T141230.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141236.json",
+      "reason": "配置 situation_20260711T141236.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141530.json",
+      "reason": "配置 situation_20260711T141530.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T141951.json",
+      "reason": "配置 situation_20260711T141951.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T143544.json",
+      "reason": "配置 situation_20260711T143544.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T144351.json",
+      "reason": "配置 situation_20260711T144351.json 未被代码引用",
+      "size": 1009
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T145100.json",
+      "reason": "配置 situation_20260711T145100.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T150631.json",
+      "reason": "配置 situation_20260711T150631.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T152051.json",
+      "reason": "配置 situation_20260711T152051.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T152350.json",
+      "reason": "配置 situation_20260711T152350.json 未被代码引用",
+      "size": 2122
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T152351.json",
+      "reason": "配置 situation_20260711T152351.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T153638.json",
+      "reason": "配置 situation_20260711T153638.json 未被代码引用",
+      "size": 1898
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T153639.json",
+      "reason": "配置 situation_20260711T153639.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T153650.json",
+      "reason": "配置 situation_20260711T153650.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T155018.json",
+      "reason": "配置 situation_20260711T155018.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T155843.json",
+      "reason": "配置 situation_20260711T155843.json 未被代码引用",
+      "size": 1006
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T160548.json",
+      "reason": "配置 situation_20260711T160548.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T162029.json",
+      "reason": "配置 situation_20260711T162029.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T163536.json",
+      "reason": "配置 situation_20260711T163536.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T165028.json",
+      "reason": "配置 situation_20260711T165028.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T170607.json",
+      "reason": "配置 situation_20260711T170607.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T172058.json",
+      "reason": "配置 situation_20260711T172058.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T173602.json",
+      "reason": "配置 situation_20260711T173602.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T175033.json",
+      "reason": "配置 situation_20260711T175033.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T180517.json",
+      "reason": "配置 situation_20260711T180517.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T182036.json",
+      "reason": "配置 situation_20260711T182036.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T183554.json",
+      "reason": "配置 situation_20260711T183554.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T185109.json",
+      "reason": "配置 situation_20260711T185109.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T190347.json",
+      "reason": "配置 situation_20260711T190347.json 未被代码引用",
+      "size": 806
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T190653.json",
+      "reason": "配置 situation_20260711T190653.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T192040.json",
+      "reason": "配置 situation_20260711T192040.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T193613.json",
+      "reason": "配置 situation_20260711T193613.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T195055.json",
+      "reason": "配置 situation_20260711T195055.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T200623.json",
+      "reason": "配置 situation_20260711T200623.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\environment\\situation_20260711T202046.json",
+      "reason": "配置 situation_20260711T202046.json 未被代码引用",
+      "size": 282
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\experience\\exp_20260710T200009.json",
+      "reason": "配置 exp_20260710T200009.json 未被代码引用",
+      "size": 822
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\experience\\exp_20260711T230000_archaeology_distillation.json",
+      "reason": "配置 exp_20260711T230000_archaeology_distillation.json 未被代码引用",
+      "size": 4440
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\experience\\exp_innovation_ollama_20260711T190940.json",
+      "reason": "配置 exp_innovation_ollama_20260711T190940.json 未被代码引用",
+      "size": 451
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\experience\\exp_provider_github_20260711T155631.json",
+      "reason": "配置 exp_provider_github_20260711T155631.json 未被代码引用",
+      "size": 395
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\experience\\exp_provider_ollama_20260711T190940.json",
+      "reason": "配置 exp_provider_ollama_20260711T190940.json 未被代码引用",
+      "size": 395
+    }
+  ],
+  "missing_links": [
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "civilization_auditor.py",
+      "reason": "协议 civilization_auditor.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "ops_001_aba.py",
+      "reason": "协议 ops_001_aba.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "ops_002_find_first.py",
+      "reason": "协议 ops_002_find_first.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "ops_003_worker_pool.py",
+      "reason": "协议 ops_003_worker_pool.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "ops_cycle.py",
+      "reason": "协议 ops_cycle.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "organize_recovery.py",
+      "reason": "协议 organize_recovery.py 未被 Heartbeat 或其他协议调用"
+    },
+    {
+      "type": "constraint_not_implemented",
+      "source": "constraints.json",
+      "target": "C-011",
+      "reason": "约束 C-011 在代码中未被引用"
+    },
+    {
+      "type": "constraint_not_implemented",
+      "source": "constraints.json",
+      "target": "C-012",
+      "reason": "约束 C-012 在代码中未被引用"
+    }
+  ]
+}
