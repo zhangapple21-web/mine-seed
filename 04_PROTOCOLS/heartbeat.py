@@ -8,6 +8,7 @@ Default: silent (logs to file only)
   - No console output unless --verbose
 """
 import os, sys, json, time, argparse, logging
+from typing import Optional
 from pathlib import Path
 from datetime import datetime
 
@@ -316,98 +317,142 @@ def beat(log):
 
 
 def _push_heartbeat_summary(report: dict, log) -> dict:
-    """Push a brief heartbeat summary to TG via Bot (if available)"""
-    import urllib.request, json as _json
+    """Push heartbeat summary + stock advisor to TG via Bot."""
     from pathlib import Path
+    from datetime import datetime
 
-    # Load bot token from miner_env.sh
+    # Load credentials
     env_file = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
     token = None
+    chat_id = None
     if env_file.exists():
         for line in env_file.read_text(encoding="utf-8").splitlines():
             if "export TG_BOT_TOKEN_2=" in line:
                 token = line.split("=", 1)[1].strip().strip('"').strip("'")
-                break
+            elif "export TG_CHAT_ID=" in line:
+                chat_id = line.split("=", 1)[1].strip().strip('"').strip("'")
     if not token:
         return {"status": "skipped", "reason": "no TG_BOT_TOKEN_2"}
 
-    # Get chat_id from getUpdates
+    # Get chat_id from getUpdates if not in env
+    if not chat_id:
+        chat_id = _get_chat_id(token)
+        if not chat_id:
+            return {"status": "skipped", "reason": "no chat_id"}
+
+    # Import TGPusher (archaeology: use existing implementation)
+    sys.path.insert(0, str(Path(__file__).parent.parent / "06_RUNTIME" / "connectors"))
+    from tg_pusher import TGPusher
+
+    pusher = TGPusher(token=token, chat_id=chat_id)
+    results = []
+
+    # 1. Push Heartbeat summary (中文)
+    summary_html = _build_heartbeat_html(report)
+    msg_result = pusher.send_message(summary_html, parse_mode="HTML")
+    if msg_result.get("ok"):
+        results.append({"type": "heartbeat", "status": "sent"})
+        log.info(f"TG heartbeat sent")
+    else:
+        results.append({"type": "heartbeat", "status": "failed", "error": msg_result.get("description")})
+        log.error(f"TG heartbeat failed: {msg_result.get('description')}")
+
+    # 2. Push today's stock advisor report (if exists and not pushed today)
+    advisor_result = _push_today_advisor(pusher, log)
+    if advisor_result:
+        results.append(advisor_result)
+
+    return {"status": "completed", "results": results, "chat_id": chat_id}
+
+
+def _get_chat_id(token: str) -> Optional[str]:
+    """Get chat_id from Telegram Bot getUpdates."""
+    import urllib.request, json
     try:
         url = f"https://api.telegram.org/bot{token}/getUpdates?limit=5"
         resp = urllib.request.urlopen(url, timeout=10)
-        data = _json.loads(resp.read())
-        chat_id = None
+        data = json.loads(resp.read())
         for u in data.get("result", []):
             if "message" in u:
-                chat_id = u["message"]["chat"]["id"]
-                break
+                return str(u["message"]["chat"]["id"])
             if "channel_post" in u:
-                chat_id = u["channel_post"]["chat"]["id"]
-                break
-        if not chat_id:
-            return {"status": "skipped", "reason": "no chat_id (user has not messaged the bot yet)"}
-    except Exception as e:
-        return {"status": "error", "reason": f"getUpdates failed: {e}"}
+                return str(u["channel_post"]["chat"]["id"])
+        return None
+    except Exception:
+        return None
 
-    # Build summary message
+
+def _build_heartbeat_html(report: dict) -> str:
+    """Build Chinese HTML summary for TG."""
+    from tg_pusher import TGPusher
+    p = TGPusher
+
     steps = report.get("steps", {})
     beat_id = report.get("beat_id", "?")
     ts = report.get("timestamp", "")[:19]
 
-    lines = [f"ACE Heartbeat #{beat_id}", f"Time: {ts}", ""]
+    parts = [
+        p._bold(f"ACE Heartbeat #{beat_id}"),
+        p._italic(f"时间: {ts}"),
+        "",
+    ]
 
-    # Key metrics
     if "environment" in steps:
         env = steps["environment"]
-        lines.append(f"Env: {env.get('observations', 0)} obs, {env.get('new', 0)} new")
+        parts.append(f"环境观测: {env.get('observations', 0)} 条, 新增 {env.get('new', 0)} 条")
     if "question_engine" in steps:
         qe = steps["question_engine"]
-        lines.append(f"Questions: {qe.get('generated', 0)} generated")
+        parts.append(f"问题生成: {qe.get('generated', 0)} 个")
     if "debate" in steps:
         db = steps["debate"]
-        lines.append(f"Debate: {db.get('approved', 0)} approved, {db.get('deferred', 0)} deferred")
+        parts.append(f"多智能体辩论: 通过 {db.get('approved', 0)} 个, 暂缓 {db.get('deferred', 0)} 个")
     if "self_evolution" in steps:
         se = steps["self_evolution"]
-        lines.append(f"Evolution: {se.get('processed', 0)} processed")
+        parts.append(f"自我演化: 处理 {se.get('processed', 0)} 个决策")
     if "explorer_v2" in steps:
         ex = steps["explorer_v2"]
         if ex.get("status") != "skipped":
-            lines.append(f"Explorer: {ex.get('status', '?')}")
+            parts.append(f"探索者: {ex.get('status', '?')}")
 
-    # Check for alerts
     alerts = []
     for name, step in steps.items():
         if isinstance(step, dict) and step.get("error"):
-            alerts.append(f"  {name}: {step['error'][:50]}")
+            alerts.append(f"• {p._bold(name)}: {step['error'][:50]}")
     if alerts:
-        lines.append("")
-        lines.append("Alerts:")
-        lines.extend(alerts[:3])
+        parts.append("")
+        parts.append(p._bold("⚠️ 告警:"))
+        parts.extend(alerts[:3])
 
-    text = "\n".join(lines)[:1000]  # TG message limit
+    return "\n".join(parts)[:3800]
 
-    # Send
-    try:
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        payload = _json.dumps({
-            "chat_id": str(chat_id),
-            "text": text,
-            "disable_web_page_preview": True,
-        }).encode("utf-8")
-        req = urllib.request.Request(
-            url, data=payload,
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        resp = urllib.request.urlopen(req, timeout=15)
-        result = _json.loads(resp.read())
-        if result.get("ok"):
-            log.info(f"TG push sent to chat_id={chat_id}")
-            return {"status": "sent", "chat_id": chat_id}
-        else:
-            return {"status": "failed", "result": result}
-    except Exception as e:
-        return {"status": "error", "reason": str(e)}
+
+def _push_today_advisor(pusher, log) -> Optional[dict]:
+    """Push today's stock advisor report if not already pushed."""
+    from datetime import datetime
+    from pathlib import Path
+
+    today = datetime.now().strftime("%Y%m%d")
+    advisor_dir = Path(__file__).parent.parent / "05_TOOLS" / "mine_output" / "advisor"
+    report_path = advisor_dir / f"advisor_{today}.md"
+
+    if not report_path.exists():
+        return {"type": "advisor", "status": "skipped", "reason": "no report today"}
+
+    # Check if already pushed today
+    pushed_dir = Path(__file__).parent.parent / "02_MEMORY" / "recovery"
+    pushed_file = pushed_dir / f"advisor_pushed_{today}.flag"
+    if pushed_file.exists():
+        return {"type": "advisor", "status": "skipped", "reason": "already pushed today"}
+
+    # Push report
+    result = pusher.send_report(str(report_path))
+    if result.get("ok"):
+        pushed_file.write_text("pushed", encoding="utf-8")
+        log.info(f"TG advisor report sent")
+        return {"type": "advisor", "status": "sent"}
+    else:
+        log.error(f"TG advisor failed: {result.get('error')}")
+        return {"type": "advisor", "status": "failed", "error": result.get("error")}
 
 
 def loop(interval_min=15, log=None):
