@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-07-11T18:49:02.130675",
+  "validations": [
+    {
+      "session": "tg_collections",
+      "path": "C:\\Users\\User\\tg_collections.session",
+      "timestamp": "2026-07-11T18:49:01.371202",
+      "status": "not_authorized",
+      "need_login": true
+    },
+    {
+      "session": "tg_collections",
+      "path": "C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections.session",
+      "timestamp": "2026-07-11T18:49:01.741657",
+      "status": "not_authorized",
+      "need_login": true
+    },
+    {
+      "session": "tg_bot_Bot2_Sck01Bot",
+      "path": "C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_Bot2_Sck01Bot.session",
+      "timestamp": "2026-07-11T18:49:01.911848",
+      "status": "alive",
+      "need_login": false,
+      "need_2fa": false,
+      "can_push": true,
+      "user": {
+        "id": 8446702999,
+        "username": "Sck01Bot",
+        "phone": null,
+        "first_name": "景宁",
+        "last_name": null,
+        "is_bot": true
+      }
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "alive": 1,
+    "need_login": 2
+  }
+}

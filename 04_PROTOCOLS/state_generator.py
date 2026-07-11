@@ -62,9 +62,30 @@ class StateGenerator:
 
     def __init__(self):
         self.qc = QuestionCenter() if QuestionCenter else None
+        self.workspace = Path(__file__).parent.parent
 
     def generate_runtime_status(self):
         """Runtime Status — 各模块运行状态"""
+        # Check Recovery Engine status
+        recovery_status = "Not Run"
+        recovery_reason = "Run Awaken to trigger"
+        recovery_dir = self.workspace / "02_MEMORY" / "recovery"
+        if recovery_dir.exists():
+            reports = sorted(recovery_dir.glob("recovery_engine_*.json"), reverse=True)
+            if reports:
+                try:
+                    data = json.loads(reports[0].read_text(encoding="utf-8"))
+                    overall = data.get("overall_status", "unknown")
+                    val = data.get("validation_summary", {})
+                    recovery_status = overall
+                    recovery_reason = (
+                        f"alive_user={val.get('alive_user', 0)}, "
+                        f"alive_bot={val.get('alive_bot', 0)}, "
+                        f"need_login={data.get('need_login', True)}"
+                    )
+                except Exception:
+                    pass
+
         modules = [
             {"name": "Heartbeat", "status": "Running", "last_check": datetime.now().isoformat()[:19]},
             {"name": "AwarenessLoop", "status": "Running", "last_check": datetime.now().isoformat()[:19]},
@@ -75,6 +96,7 @@ class StateGenerator:
             {"name": "SelfEvolution", "status": "Running", "reason": "Approved decisions → code changes"},
             {"name": "RoundTable", "status": "Running", "reason": "Audits evolution patches"},
             {"name": "ProviderHealth", "status": "Running" if lm_health else "Not Installed"},
+            {"name": "RecoveryEngine", "status": recovery_status, "reason": recovery_reason},
             {"name": "Environment", "status": "Healthy", "reason": "No critical observations"},
             {"name": "Governor", "status": "Running"},
         ]
