@@ -316,6 +316,9 @@ class ProviderHealth:
         self._health = {}  # provider → {latency_ms, success_rate, total, success, last_check, status}
         self._exp_dir = Path(__file__).parent.parent / "02_MEMORY" / "experience"
         self._last_sedimented = {}  # provider → last status that was sedimented (避免重复写)
+        # C-002: proven_at tracks when a (provider, capability) was last proven
+        # Used for temporal decay: capabilities not proven in 90 days are stale
+        self._proven_at = {}  # (provider, capability) → ISO timestamp
 
     def _sediment_failure(self, provider: str, prev_status: str, new_status: str):
         """当状态降级时，自动写一条 Experience"""
@@ -350,8 +353,8 @@ class ProviderHealth:
         except Exception:
             pass  # 经验写入失败不影响主流程
 
-    def record(self, provider: str, success: bool, latency_ms: float = 0):
-        """记录一次调用结果"""
+    def record(self, provider: str, success: bool, latency_ms: float = 0, capability: str = "default"):
+        """记录一次调用结果，并更新 (provider, capability) 的 proven_at"""
         h = self._health.setdefault(provider, {
             "total": 0, "success": 0, "latency_sum": 0, "last_check": "", "status": "unknown"
         })
@@ -360,6 +363,8 @@ class ProviderHealth:
         if success:
             h["success"] += 1
             h["latency_sum"] += latency_ms
+            # C-002: 记录 capability 被证明的时间
+            self._proven_at[(provider, capability)] = datetime.now().isoformat()
         h["last_check"] = datetime.now().isoformat()
         # 计算状态
         rate = h["success"] / h["total"] if h["total"] > 0 else 0
@@ -387,10 +392,39 @@ class ProviderHealth:
             return rate * 0.7
         return rate
 
+    def get_capability_score(self, provider: str, capability: str) -> float:
+        """
+        C-002: 获取 (provider, capability) 的衰减后分数。
+        - 基础分 = get_score(provider)
+        - 如果该 capability 从未被该 provider 证明过，给 0.5（中性）
+        - 如果 proven_at 超过 90 天，每天衰减 2%（C-002 temporal decay）
+        """
+        base = self.get_score(provider)
+        key = (provider, capability)
+        proven = self._proven_at.get(key)
+        if not proven:
+            return base * 0.5  # 未证明过，降权但不为零
+
+        try:
+            proven_dt = datetime.fromisoformat(proven)
+            days_since = (datetime.now() - proven_dt).days
+            if days_since <= 90:
+                return base  # 新鲜，不衰减
+            # C-002: 超过90天，每天衰减2%
+            decay = 1 - (days_since - 90) * 0.02
+            return max(0.1, base * decay)
+        except Exception:
+            return base
+
     def get_status(self, provider: str) -> dict:
         """获取 Provider 状态摘要"""
         h = self._health.get(provider, {})
         avg_latency = h.get("latency_sum", 0) / h.get("success", 1) if h.get("success", 0) > 0 else 0
+        # C-002: 收集该 provider 已证明的 capabilities 及其 proven_at
+        proven_caps = {}
+        for (p, cap), ts in self._proven_at.items():
+            if p == provider:
+                proven_caps[cap] = ts
         return {
             "provider": provider,
             "status": h.get("status", "unknown"),
@@ -399,6 +433,7 @@ class ProviderHealth:
             "avg_latency_ms": round(avg_latency, 1),
             "last_check": h.get("last_check", ""),
             "health_score": round(self.get_score(provider), 2),
+            "proven_capabilities": proven_caps,
         }
 
     def all_status(self) -> list:
@@ -504,7 +539,7 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None, capability=
             continue
         if provider_name == "ollama" and not check_ollama_available():
             errors.append(f"ollama: not available")
-            health.record("ollama", success=False)
+            health.record("ollama", success=False, capability=capability or "default")
             continue
 
         import time as _time
@@ -513,14 +548,14 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None, capability=
         latency = (_time.time() - t0) * 1000
 
         if "error" not in result:
-            health.record(provider_name, success=True, latency_ms=latency)
+            health.record(provider_name, success=True, latency_ms=latency, capability=capability or "default")
             result.setdefault("model", model_name)
             result["provider"] = provider_name
             result["capability"] = capability or "default"
             result["latency_ms"] = round(latency, 1)
             return result
 
-        health.record(provider_name, success=False, latency_ms=latency)
+        health.record(provider_name, success=False, latency_ms=latency, capability=capability or "default")
         errors.append(f"{provider_name}: {result['error']}")
 
     return {"error": "All providers failed", "errors": errors}

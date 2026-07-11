@@ -9,7 +9,7 @@
       "latency_ms": 0
     },
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-11T15:50:18.712731"
+    "timestamp": "2026-07-11T16:05:48.852216"
   },
   {
     "source": "provider",
@@ -18,6 +18,6 @@
     "title": "akshare not installed",
     "detail": {},
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-11T15:50:18.715265"
+    "timestamp": "2026-07-11T16:05:48.852216"
   }
 ]

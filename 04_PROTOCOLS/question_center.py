@@ -334,22 +334,106 @@ class QuestionCenter:
         return []
 
     def search_related_memories(self, query, limit=5):
-        """搜索相关记忆（复用现有记忆索引）"""
+        """搜索相关记忆（复用现有记忆索引）— 默认返回 Layer2 结果"""
+        return self.progressive_search(query, layer=2, limit=limit)
+
+    def progressive_search(self, query, layer=1, limit=5):
+        """
+        C-009 渐进式三层检索：
+          Layer 1: 索引摘要 — 只返回 id/title/category/created_at（50-80 token/条），快速扫描
+          Layer 2: 时间线上下文 — Layer1 + summary + tags + 时间线邻居
+          Layer 3: 完整记录 — 包含 summary/tags/related_concepts/access_count
+
+        避免一次性加载过多数据。先 Layer1 扫描大量条目，再按需下钻。
+        """
         entries = self._load_memory_index()
-        results = []
         query_lower = query.lower()
+
+        # Layer 1: 轻量扫描 — 只看 title + category + tags
+        matched = []
         for entry in entries:
-            text = (entry.get("title", "") + " " + entry.get("summary", "")).lower()
-            if query_lower in text:
-                results.append({
-                    "id": entry.get("id", ""),
-                    "title": entry.get("title", ""),
-                    "summary": entry.get("summary", ""),
-                    "category": entry.get("category", ""),
-                    "created_at": entry.get("created_at", ""),
+            title = entry.get("title", "")
+            category = entry.get("category", "")
+            tags = entry.get("tags", [])
+            scan_text = (title + " " + category + " " + " ".join(tags)).lower()
+            if query_lower in scan_text:
+                matched.append(entry)
+
+        # Fallback: 如果 title/tags 没匹配到，再扫 summary（仍然只返回 Layer1 字段）
+        if not matched:
+            for entry in entries:
+                summary = entry.get("summary", "")
+                if query_lower in summary.lower():
+                    matched.append(entry)
+
+        # 按时间倒序
+        matched.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+        matched = matched[:limit]
+
+        if layer == 1:
+            # Layer 1: 索引摘要（50-80 token/条）
+            return [
+                {
+                    "id": e.get("id", ""),
+                    "title": e.get("title", ""),
+                    "category": e.get("category", ""),
+                    "created_at": e.get("created_at", ""),
+                }
+                for e in matched
+            ]
+
+        if layer == 2:
+            # Layer 2: 时间线上下文 — Layer1 + summary 截断 + tags + 时间线邻居
+            result = []
+            for e in matched:
+                summary = e.get("summary", "")
+                result.append({
+                    "id": e.get("id", ""),
+                    "title": e.get("title", ""),
+                    "category": e.get("category", ""),
+                    "created_at": e.get("created_at", ""),
+                    "summary_brief": summary[:200] + "..." if len(summary) > 200 else summary,
+                    "tags": e.get("tags", [])[:5],
                 })
-        results.sort(key=lambda x: x.get("created_at", ""), reverse=True)
-        return results[:limit]
+            return result
+
+        # Layer 3: 完整记录
+        return matched
+
+    def get_memory_detail(self, entry_id, include_neighbors=True):
+        """
+        C-009 Layer 3: 获取完整记录 + 可选时间线邻居
+        """
+        entries = self._load_memory_index()
+        target = next((e for e in entries if e.get("id") == entry_id), None)
+        if not target:
+            return None
+
+        result = {"entry": target, "neighbors": []}
+        if include_neighbors:
+            # 找时间线上下文：前后各2条
+            try:
+                sorted_entries = sorted(entries, key=lambda x: x.get("created_at", ""))
+                idx = next((i for i, e in enumerate(sorted_entries) if e.get("id") == entry_id), -1)
+                if idx >= 0:
+                    start = max(0, idx - 2)
+                    end = min(len(sorted_entries), idx + 3)
+                    result["neighbors"] = [
+                        {
+                            "id": e.get("id", ""),
+                            "title": e.get("title", ""),
+                            "created_at": e.get("created_at", ""),
+                            "relation": "before" if i < idx else "after",
+                        }
+                        for i, e in enumerate(sorted_entries[start:end], start=start)
+                        if e.get("id") != entry_id
+                    ]
+            except Exception:
+                pass
+
+        # 更新访问计数
+        target["access_count"] = target.get("access_count", 0) + 1
+        return result
 
     def get_dag_graph(self):
         """
@@ -478,9 +562,10 @@ def main():
     p_graph = subparsers.add_parser("graph", help="Show DAG graph")
     p_graph.add_argument("--dag", action="store_true", help="Show DAG relation graph")
 
-    p_search = subparsers.add_parser("search", help="Search related memories")
+    p_search = subparsers.add_parser("search", help="Search related memories (C-009 progressive retrieval)")
     p_search.add_argument("--query", required=True, help="Search query")
     p_search.add_argument("--limit", type=int, default=5, help="Result limit")
+    p_search.add_argument("--layer", type=int, default=2, choices=[1, 2, 3], help="Retrieval layer: 1=index summary, 2=timeline context, 3=full record")
 
     p_close = subparsers.add_parser("close", help="Close question")
     p_close.add_argument("--qid", required=True, help="Question ID")
@@ -547,12 +632,16 @@ def main():
                 print(f"    {edge['source']} → {edge['target']} ({edge['relation']})")
 
     elif args.action == "search":
-        results = qc.search_related_memories(args.query, args.limit)
-        print(f"Found {len(results)} related memories:")
+        results = qc.progressive_search(args.query, layer=args.layer, limit=args.limit)
+        print(f"Found {len(results)} related memories (Layer {args.layer}):")
         for r in results:
-            print(f"  [{r['id']}] {r['title']}")
-            print(f"      {r['summary'][:100]}...")
-            print(f"      Category: {r['category']}")
+            print(f"  [{r.get('id', '')}] {r.get('title', '')}")
+            if args.layer >= 2:
+                brief = r.get("summary_brief", r.get("summary", ""))
+                print(f"      {brief[:100]}")
+                print(f"      Category: {r.get('category', '')} | Tags: {r.get('tags', [])}")
+            else:
+                print(f"      Category: {r.get('category', '')} | {r.get('created_at', '')[:10]}")
 
     elif args.action == "close":
         qc.close_question(args.qid, args.reason)
