@@ -310,6 +310,14 @@ def beat(log):
         report["steps"]["tg_push"] = {"status": "error", "error": str(e)}
         log.error(f"TG push error: {e}")
 
+    # Advisor Review — 荐股复核 (T+1/T+7/T+15/T+30) + 胜率统计
+    try:
+        review_result = _run_advisor_review(log)
+        report["steps"]["advisor_review"] = review_result
+    except Exception as e:
+        report["steps"]["advisor_review"] = {"status": "error", "error": str(e)}
+        log.error(f"Advisor review error: {e}")
+
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
     log.info("Heartbeat saved")
@@ -427,9 +435,21 @@ def _build_heartbeat_html(report: dict) -> str:
 
 
 def _push_today_advisor(pusher, log) -> Optional[dict]:
-    """Push today's stock advisor report if not already pushed."""
-    from datetime import datetime
+    """Push today's stock advisor report if not already pushed.
+
+    非交易日跳过荐股推送（法定节日 + 周末）。
+    """
+    from datetime import datetime, date
     from pathlib import Path
+
+    # 检查是否为交易日
+    try:
+        sys.path.insert(0, str(Path(__file__).parent.parent / "05_TOOLS" / "advisor"))
+        from trading_calendar import is_trading_day
+        if not is_trading_day():
+            return {"type": "advisor", "status": "skipped", "reason": "非交易日（周末/节假日）"}
+    except ImportError:
+        pass  # 模块不存在时 fallback 到原逻辑
 
     today = datetime.now().strftime("%Y%m%d")
     advisor_dir = Path(__file__).parent.parent / "05_TOOLS" / "mine_output" / "advisor"
@@ -453,6 +473,96 @@ def _push_today_advisor(pusher, log) -> Optional[dict]:
     else:
         log.error(f"TG advisor failed: {result.get('error')}")
         return {"type": "advisor", "status": "failed", "error": result.get("error")}
+
+
+def _run_advisor_review(log) -> dict:
+    """运行荐股复核 — T+1/T+7/T+15/T+30 收盘价对比 + 胜率统计
+
+    每个交易日收盘后自动复核到期的荐股记录。
+    """
+    from pathlib import Path
+
+    try:
+        sys.path.insert(0, str(Path(__file__).parent.parent / "05_TOOLS" / "advisor"))
+        from advisor_tracker import AdvisorTracker
+
+        tracker = AdvisorTracker()
+        tracker.sync_records()
+        result = tracker.review_pending()
+        report = tracker.generate_win_rate_report()
+
+        reviewed = len(result.get("reviewed", []))
+        skipped = len(result.get("skipped", []))
+        log.info(f"Advisor review: {reviewed} reviewed, {skipped} skipped")
+
+        # 如果有新复核结果，推送胜率摘要
+        if reviewed > 0:
+            win_rate_summary = _build_win_rate_summary(report)
+            if win_rate_summary:
+                # 加载 TG pusher
+                env_file = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
+                token = None
+                chat_id = None
+                if env_file.exists():
+                    for line in env_file.read_text(encoding="utf-8").splitlines():
+                        if "export TG_BOT_TOKEN_2=" in line:
+                            token = line.split("=", 1)[1].strip().strip('"').strip("'")
+                        elif "export TG_CHAT_ID=" in line:
+                            chat_id = line.split("=", 1)[1].strip().strip('"').strip("'")
+                if token and not chat_id:
+                    chat_id = _get_chat_id(token)
+                if token and chat_id:
+                    sys.path.insert(0, str(Path(__file__).parent.parent / "06_RUNTIME" / "connectors"))
+                    from tg_pusher import TGPusher
+                    pusher = TGPusher(token=token, chat_id=chat_id)
+                    pusher.send_message(win_rate_summary, parse_mode="HTML")
+                    log.info(f"Win rate summary pushed to TG")
+
+        return {
+            "status": "completed",
+            "reviewed": reviewed,
+            "skipped": skipped,
+            "total_records": report.get("total_records", 0),
+        }
+    except Exception as e:
+        log.error(f"Advisor review error: {e}")
+        return {"status": "error", "error": str(e)}
+
+
+def _build_win_rate_summary(report: dict) -> Optional[str]:
+    """构建胜率摘要 HTML 消息"""
+    try:
+        sys.path.insert(0, str(Path(__file__).parent.parent / "06_RUNTIME" / "connectors"))
+        from tg_pusher import TGPusher
+        p = TGPusher
+    except ImportError:
+        return None
+
+    lines = [
+        p._bold("📊 荐股胜率报告"),
+        p._italic(f"总荐股数: {report.get('total_records', 0)}"),
+        "",
+    ]
+
+    periods = report.get("periods", {})
+    has_data = False
+    for period_name in ["T+1", "T+7", "T+15", "T+30"]:
+        p_data = periods.get(period_name, {})
+        total = p_data.get("total", 0)
+        if total > 0:
+            has_data = True
+            wins = p_data.get("wins", 0)
+            win_rate = p_data.get("win_rate", 0)
+            avg_ret = p_data.get("avg_return", 0)
+            lines.append(
+                f"{p._bold(period_name)}: {wins}/{total} 胜率 {win_rate}% "
+                f"(平均 {avg_ret:+.2f}%)"
+            )
+
+    if not has_data:
+        return None
+
+    return "\n".join(lines)[:3800]
 
 
 def loop(interval_min=15, log=None):
