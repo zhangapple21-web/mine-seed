@@ -29,6 +29,7 @@ try:
     mem = import_module(WORKSPACE / "06_RUNTIME" / "core" / "memory_manager.py")
     ace_logger = import_module(WORKSPACE / "06_RUNTIME" / "core" / "ace_logger.py")
     env_sensor_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "environment_sensor.py")
+    awareness_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "awareness_loop.py")
 
     scan_directory = ef.scan_directory
     build_recovery_graph = ef.build_recovery_graph
@@ -40,6 +41,7 @@ try:
     silence_all = ace_logger.silence_all
     EnvironmentSensor = env_sensor_mod.EnvironmentSensor
     SituationBuilder = env_sensor_mod.SituationBuilder
+    AwarenessLoop = awareness_mod.AwarenessLoop
 except Exception as e:
     print(f"[HEARTBEAT] Import error: {e}", file=sys.stderr)
     sys.exit(1)
@@ -119,6 +121,34 @@ def beat(log):
     except Exception as e:
         report["steps"]["env_sensor"] = {"error": str(e)}
         log.error(f"EnvSensor error: {e}")
+
+    # ENV-002: Awareness Loop — 扫描→提问→派单→研究→沉淀
+    # 关键：只有有新观察或高优先级项时才跑，避免无意义重复
+    try:
+        env_step = report["steps"].get("env_sensor", {})
+        has_new = env_step.get("new", 0) > 0
+        has_high = env_step.get("high_priority", 0) > 0
+        if has_new or has_high:
+            log.info(f"AwarenessLoop: triggering (new={has_new}, high={has_high})")
+            loop = AwarenessLoop()
+            loop_result = loop.run(scan_only=False)
+            reports_saved = loop_result.get("experiences_saved", [])
+            questions = loop_result.get("questions", [])
+            report["steps"]["awareness_loop"] = {
+                "questions": len(questions),
+                "reports_saved": len(reports_saved),
+                "questions_detail": [{"priority": q["priority"], "question": q["question"][:100]} for q in questions],
+            }
+            if reports_saved:
+                log.info(f"AwarenessLoop: {len(reports_saved)} experiences saved")
+            else:
+                log.info(f"AwarenessLoop: {len(questions)} questions, 0 experiences saved")
+        else:
+            report["steps"]["awareness_loop"] = {"status": "skipped", "reason": "no new observations"}
+            log.info("AwarenessLoop: skipped (no new observations)")
+    except Exception as e:
+        report["steps"]["awareness_loop"] = {"error": str(e)}
+        log.error(f"AwarenessLoop error: {e}")
 
     # CIV-001: Civilization Map Monitor
     try:
