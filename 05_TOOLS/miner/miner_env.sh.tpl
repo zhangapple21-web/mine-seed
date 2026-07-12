@@ -26,6 +26,9 @@ export GITHUB_PAT="{{GITHUB_PAT}}"
 export ZHIPU_KEY="c4c766faaf974bfaba30f381ccc7b066.E7VUlQfxnMXnvVRx"
 
 # === Telegram ===
+export TG_API_ID="38398440"
+export TG_API_HASH="3460f304c16a186c2300debc673b2ed0"
+export TG_PHONE="+85592538691"
 export TG_BOT_TOKEN_1="8384310757:AAEhfTTMaYrV_n9hXFjBUMh2LdeeWkB-Czo"
 export TG_BOT_TOKEN_2="8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI"
 

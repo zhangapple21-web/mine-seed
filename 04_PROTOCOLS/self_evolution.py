@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-011
 """
 EVO-001: Self Evolution — 自我演化引擎
 ========================================
@@ -380,19 +382,49 @@ class SelfEvolution:
         filepath.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     def process_approved_decisions(self, decisions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """批量处理 approved decisions"""
+        """批量处理 approved decisions
+
+        去重策略：每个决策只处理一次。
+        - 有 evolved_status 字段的 → 已处理过，跳过
+        - 处理后更新 evolved_status + evolved_at，写回 decisions.json
+        """
+        from question_center import QuestionCenter
+        qc = QuestionCenter()
         results = []
+
         for d in decisions:
-            if d.get("outcome") == "approved" or d.get("decision") == "approved":
-                try:
-                    r = self.evolve(d)
-                    results.append(r)
-                except Exception as e:
-                    results.append({
-                        "qid": d.get("qid"),
-                        "status": "error",
-                        "error": str(e),
-                    })
+            did = d.get("did", "")
+            if not (d.get("outcome") == "approved" or d.get("decision") == "approved"):
+                continue
+
+            if d.get("evolved_status"):
+                results.append({
+                    "qid": d.get("qid"),
+                    "did": did,
+                    "status": "skipped",
+                    "reason": f"already processed: {d['evolved_status']}",
+                })
+                continue
+
+            try:
+                r = self.evolve(d)
+            except Exception as e:
+                r = {
+                    "qid": d.get("qid"),
+                    "did": did,
+                    "status": "error",
+                    "error": str(e),
+                }
+
+            status = r.get("status", "unknown")
+            d["evolved_status"] = status
+            d["evolved_at"] = datetime.now().isoformat()
+            if r.get("reason"):
+                d["evolved_reason"] = r["reason"]
+
+            results.append(r)
+
+        qc._save_all()
         return results
 
 

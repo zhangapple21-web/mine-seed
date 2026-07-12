@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# TYPE: dev_tool
 """
 organize_recovery - 恢复资产归档器
 ===================================

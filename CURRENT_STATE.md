@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-11 18:59*
+*Last updated: 2026-07-12 15:06*
 
 ---
 
@@ -22,7 +22,7 @@
 | ✅ RoundTable | Running — Audits evolution patches |
 | ✅ ProviderHealth | Running |
 | 🟡 RecoveryEngine | BOT_ONLY — alive_user=0, alive_bot=1, need_login=False |
-| 🟡 TGPush | Ready — Bot @Sck01Bot alive, awaiting chat_id |
+| ✅ TGPush | Running — Bot @Sck01Bot, chat_id=5016609451 |
 | 🟢 Environment | Healthy — No critical observations |
 | ✅ Governor | Running |
 
@@ -33,7 +33,7 @@
 > 1 open questions. Priority: P0=紧急, P1=高, P2=中.
 > These are the most important things the system needs to understand.
 
-🟢 **Q-002** 为什么 r1-open-source-seed 一直没有内容？
+🟡 **Q-013** 为什么我们需要立即关注 akshare 的安装问题？
 
 ---
 

@@ -9,11 +9,12 @@
     "last_seen": "2026-07-11T14:43:51.701167"
   },
   {
-    "question": "文件变更 8 files modified — 是否符合演化约束？是否破坏不变量？",
+    "question": "文件变更 4 files modified — 是否符合演化约束？是否破坏不变量？",
     "capability": "reasoning",
     "priority": "P2",
     "status": "pending",
     "dedup_key": "file_change",
-    "timestamp": "2026-07-11T15:58:43.941202"
+    "timestamp": "2026-07-11T15:58:43.941202",
+    "last_seen": "2026-07-11T19:03:47.557061"
   }
 ]

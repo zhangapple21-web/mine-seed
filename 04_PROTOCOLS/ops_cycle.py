@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# TYPE: dev_tool
 """
 OPS Cycle - 运营闭环
 ====================

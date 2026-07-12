@@ -1,23 +1,24 @@
 {
-  "timestamp": "2026-07-11T21:09:31.879201",
-  "date": "20260711",
+  "timestamp": "2026-07-12T14:47:55.209467",
+  "date": "20260712",
   "stats": {
-    "total_files": 1463,
-    "duplicate_clusters": 127,
-    "duplicate_files": 445,
-    "zombie_files": 41,
+    "total_files": 1682,
+    "duplicate_clusters": 128,
+    "duplicate_files": 447,
+    "zombie_files": 42,
     "zombie_by_type": {
-      "suspected_deprecated": 1,
-      "unreferenced_module": 14,
-      "unreferenced_config": 26
+      "unreferenced_module": 13,
+      "unreferenced_config": 29
     },
-    "missing_links": 0,
-    "link_by_type": {},
+    "missing_links": 1,
+    "link_by_type": {
+      "protocol_not_wired": 1
+    },
     "canonical_violations": 30,
     "retention_violations": 4,
     "memory_health": 18,
-    "civilization_coverage": 51.3,
-    "health_score": 19
+    "civilization_coverage": 50.9,
+    "health_score": 14
   },
   "duplicates": [
     {
@@ -535,6 +536,40 @@
       ],
       "count": 6,
       "recommendation": "保留 02_MEMORY\\thought_seed_20260630_0645.json (最新), 考虑归档其他 5 个"
+    },
+    {
+      "base_name": "audit",
+      "files": [
+        {
+          "path": "02_MEMORY\\civilization_audit\\audit_20260712.json",
+          "size": 211751,
+          "modified": "2026-07-12"
+        },
+        {
+          "path": "02_MEMORY\\civilization_audit\\audit_20260711.json",
+          "size": 190979,
+          "modified": "2026-07-11"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 02_MEMORY\\civilization_audit\\audit_20260712.json (最新), 考虑归档其他 1 个"
+    },
+    {
+      "base_name": "exploration",
+      "files": [
+        {
+          "path": "02_MEMORY\\exploration\\exploration_20260712.json",
+          "size": 3515,
+          "modified": "2026-07-12"
+        },
+        {
+          "path": "02_MEMORY\\exploration\\exploration_20260711.json",
+          "size": 3393,
+          "modified": "2026-07-11"
+        }
+      ],
+      "count": 2,
+      "recommendation": "保留 02_MEMORY\\exploration\\exploration_20260712.json (最新), 考虑归档其他 1 个"
     },
     {
       "base_name": "index",
@@ -1310,50 +1345,9 @@
       ],
       "count": 2,
       "recommendation": "保留 advisor\\lineage_review.py (最新), 考虑归档其他 1 个"
-    },
-    {
-      "base_name": "stock_advisor",
-      "files": [
-        {
-          "path": "05_TOOLS\\advisor\\stock_advisor.py",
-          "size": 54974,
-          "modified": "2026-07-10"
-        },
-        {
-          "path": "advisor\\stock_advisor.py",
-          "size": 54974,
-          "modified": "2026-07-10"
-        }
-      ],
-      "count": 2,
-      "recommendation": "保留 05_TOOLS\\advisor\\stock_advisor.py (最新), 考虑归档其他 1 个"
-    },
-    {
-      "base_name": "stock_query",
-      "files": [
-        {
-          "path": "05_TOOLS\\advisor\\stock_query.py",
-          "size": 10901,
-          "modified": "2026-07-10"
-        },
-        {
-          "path": "advisor\\stock_query.py",
-          "size": 10901,
-          "modified": "2026-07-10"
-        }
-      ],
-      "count": 2,
-      "recommendation": "保留 05_TOOLS\\advisor\\stock_query.py (最新), 考虑归档其他 1 个"
     }
   ],
   "zombies": [
-    {
-      "type": "suspected_deprecated",
-      "path": "05_TOOLS\\miner\\tg_login_test.py",
-      "reason": "文件名包含废弃标记: tg_login_test",
-      "size": 5052,
-      "modified": "2026-07-11"
-    },
     {
       "type": "unreferenced_module",
       "path": "02_ARCHITECTURE\\02_modules\\assets\\asset_curator.py",
@@ -1402,13 +1396,6 @@
       "reason": "模块 constraint_injector 未被任何文件 import",
       "size": 4776,
       "modified": "2026-07-10"
-    },
-    {
-      "type": "unreferenced_module",
-      "path": "05_TOOLS\\miner\\check_session.py",
-      "reason": "模块 check_session 未被任何文件 import",
-      "size": 1017,
-      "modified": "2026-07-11"
     },
     {
       "type": "unreferenced_module",
@@ -1504,13 +1491,31 @@
       "type": "unreferenced_config",
       "path": "02_MEMORY\\civilization_audit\\audit_20260711.json",
       "reason": "配置 audit_20260711.json 未被代码引用",
-      "size": 187643
+      "size": 190979
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\civilization_audit\\audit_20260712.json",
+      "reason": "配置 audit_20260712.json 未被代码引用",
+      "size": 211751
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\diary\\diary_2026-07-11.json",
+      "reason": "配置 diary_2026-07-11.json 未被代码引用",
+      "size": 1575
     },
     {
       "type": "unreferenced_config",
       "path": "02_MEMORY\\exploration\\exploration_20260711.json",
       "reason": "配置 exploration_20260711.json 未被代码引用",
       "size": 3393
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "02_MEMORY\\exploration\\exploration_20260712.json",
+      "reason": "配置 exploration_20260712.json 未被代码引用",
+      "size": 3515
     },
     {
       "type": "unreferenced_config",
@@ -1609,7 +1614,14 @@
       "size": 289
     }
   ],
-  "missing_links": [],
+  "missing_links": [
+    {
+      "type": "protocol_not_wired",
+      "source": "04_PROTOCOLS",
+      "target": "capability_router.py",
+      "reason": "协议 capability_router.py 未被 Heartbeat 或其他协议调用"
+    }
+  ],
   "canonical_violations": [
     {
       "base_name": "asset_curator",
@@ -2368,11 +2380,82 @@
     },
     {
       "base_pattern": "situation",
-      "total_files": 50,
+      "total_files": 121,
       "keep_latest_n": 7,
-      "excess": 43,
-      "latest": "02_MEMORY\\environment\\situation_20260711T210634.json",
+      "excess": 114,
+      "latest": "02_MEMORY\\environment\\situation_20260712T143613.json",
       "oldest_to_clean": [
+        "02_MEMORY\\environment\\situation_20260712T130843.json",
+        "02_MEMORY\\environment\\situation_20260712T125132.json",
+        "02_MEMORY\\environment\\situation_20260712T123534.json",
+        "02_MEMORY\\environment\\situation_20260712T122045.json",
+        "02_MEMORY\\environment\\situation_20260712T120522.json",
+        "02_MEMORY\\environment\\situation_20260712T115102.json",
+        "02_MEMORY\\environment\\situation_20260712T113527.json",
+        "02_MEMORY\\environment\\situation_20260712T112031.json",
+        "02_MEMORY\\environment\\situation_20260712T110532.json",
+        "02_MEMORY\\environment\\situation_20260712T105050.json",
+        "02_MEMORY\\environment\\situation_20260712T103547.json",
+        "02_MEMORY\\environment\\situation_20260712T102024.json",
+        "02_MEMORY\\environment\\situation_20260712T100555.json",
+        "02_MEMORY\\environment\\situation_20260712T095050.json",
+        "02_MEMORY\\environment\\situation_20260712T093607.json",
+        "02_MEMORY\\environment\\situation_20260712T092038.json",
+        "02_MEMORY\\environment\\situation_20260712T090547.json",
+        "02_MEMORY\\environment\\situation_20260712T085033.json",
+        "02_MEMORY\\environment\\situation_20260712T083535.json",
+        "02_MEMORY\\environment\\situation_20260712T082020.json",
+        "02_MEMORY\\environment\\situation_20260712T080553.json",
+        "02_MEMORY\\environment\\situation_20260712T075045.json",
+        "02_MEMORY\\environment\\situation_20260712T073522.json",
+        "02_MEMORY\\environment\\situation_20260712T072053.json",
+        "02_MEMORY\\environment\\situation_20260712T070523.json",
+        "02_MEMORY\\environment\\situation_20260712T065056.json",
+        "02_MEMORY\\environment\\situation_20260712T063601.json",
+        "02_MEMORY\\environment\\situation_20260712T062056.json",
+        "02_MEMORY\\environment\\situation_20260712T060544.json",
+        "02_MEMORY\\environment\\situation_20260712T055025.json",
+        "02_MEMORY\\environment\\situation_20260712T053620.json",
+        "02_MEMORY\\environment\\situation_20260712T052024.json",
+        "02_MEMORY\\environment\\situation_20260712T050530.json",
+        "02_MEMORY\\environment\\situation_20260712T045044.json",
+        "02_MEMORY\\environment\\situation_20260712T043613.json",
+        "02_MEMORY\\environment\\situation_20260712T042020.json",
+        "02_MEMORY\\environment\\situation_20260712T040559.json",
+        "02_MEMORY\\environment\\situation_20260712T035022.json",
+        "02_MEMORY\\environment\\situation_20260712T033550.json",
+        "02_MEMORY\\environment\\situation_20260712T032037.json",
+        "02_MEMORY\\environment\\situation_20260712T030617.json",
+        "02_MEMORY\\environment\\situation_20260712T025030.json",
+        "02_MEMORY\\environment\\situation_20260712T023553.json",
+        "02_MEMORY\\environment\\situation_20260712T022051.json",
+        "02_MEMORY\\environment\\situation_20260712T020520.json",
+        "02_MEMORY\\environment\\situation_20260712T015056.json",
+        "02_MEMORY\\environment\\situation_20260712T013549.json",
+        "02_MEMORY\\environment\\situation_20260712T012050.json",
+        "02_MEMORY\\environment\\situation_20260712T010535.json",
+        "02_MEMORY\\environment\\situation_20260712T005029.json",
+        "02_MEMORY\\environment\\situation_20260712T003555.json",
+        "02_MEMORY\\environment\\situation_20260712T002044.json",
+        "02_MEMORY\\environment\\situation_20260712T000621.json",
+        "02_MEMORY\\environment\\situation_20260711T235041.json",
+        "02_MEMORY\\environment\\situation_20260711T233553.json",
+        "02_MEMORY\\environment\\situation_20260711T232029.json",
+        "02_MEMORY\\environment\\situation_20260711T230542.json",
+        "02_MEMORY\\environment\\situation_20260711T225053.json",
+        "02_MEMORY\\environment\\situation_20260711T223604.json",
+        "02_MEMORY\\environment\\situation_20260711T222058.json",
+        "02_MEMORY\\environment\\situation_20260711T220555.json",
+        "02_MEMORY\\environment\\situation_20260711T215153.json",
+        "02_MEMORY\\environment\\situation_20260711T213604.json",
+        "02_MEMORY\\environment\\situation_20260711T212040.json",
+        "02_MEMORY\\environment\\situation_20260711T210634.json",
+        "02_MEMORY\\environment\\situation_20260711T205052.json",
+        "02_MEMORY\\environment\\situation_20260711T203529.json",
+        "02_MEMORY\\environment\\situation_20260711T202046.json",
+        "02_MEMORY\\environment\\situation_20260711T200623.json",
+        "02_MEMORY\\environment\\situation_20260711T195055.json",
+        "02_MEMORY\\environment\\situation_20260711T193613.json",
         "02_MEMORY\\environment\\situation_20260711T192040.json",
         "02_MEMORY\\environment\\situation_20260711T190653.json",
         "02_MEMORY\\environment\\situation_20260711T190347.json",
@@ -2417,15 +2500,84 @@
         "02_MEMORY\\environment\\situation_20260710T195929.json",
         "02_MEMORY\\environment\\situation_20260710T194238.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 43 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 114 份超期文件"
     },
     {
       "base_pattern": "beat",
-      "total_files": 46,
+      "total_files": 115,
       "keep_latest_n": 7,
-      "excess": 39,
-      "latest": "02_MEMORY\\heartbeat\\beat_20260711T210429.json",
+      "excess": 108,
+      "latest": "02_MEMORY\\heartbeat\\beat_20260712T141928.json",
       "oldest_to_clean": [
+        "02_MEMORY\\heartbeat\\beat_20260712T123428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T121929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T120429.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T114929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T113428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T111929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T110429.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T104929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T103428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T101929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T100429.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T094929.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T093428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T091928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T090428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T084928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T083428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T081928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T080428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T074928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T073428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T071928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T070428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T064928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T063428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T061928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T060428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T054928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T053428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T051928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T050428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T044928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T043428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T041928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T040428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T034928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T033428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T031928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T030428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T024928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T023428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T021928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T020428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T014928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T013428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T011928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T010428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T004928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T003428.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T001928.json",
+        "02_MEMORY\\heartbeat\\beat_20260712T000428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T234928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T233428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T231928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T230428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T224928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T223428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T221928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T220428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T214928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T213428.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T211928.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T210429.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T204929.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T203429.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T201929.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T200429.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T194929.json",
+        "02_MEMORY\\heartbeat\\beat_20260711T193429.json",
         "02_MEMORY\\heartbeat\\beat_20260711T191929.json",
         "02_MEMORY\\heartbeat\\beat_20260711T190128.json",
         "02_MEMORY\\heartbeat\\beat_20260711T190429.json",
@@ -2466,15 +2618,86 @@
         "02_MEMORY\\heartbeat\\beat_20260710T155830.json",
         "02_MEMORY\\heartbeat\\beat_20260710T155841.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 39 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 108 份超期文件"
     },
     {
       "base_pattern": "ops_004",
-      "total_files": 43,
+      "total_files": 114,
       "keep_latest_n": 7,
-      "excess": 36,
-      "latest": "02_MEMORY\\heartbeat\\ops_004_20260711T210429.json",
+      "excess": 107,
+      "latest": "02_MEMORY\\heartbeat\\ops_004_20260712T143429.json",
       "oldest_to_clean": [
+        "02_MEMORY\\heartbeat\\ops_004_20260712T130439.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T124929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T123428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T121929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T120429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T114929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T113428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T111929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T110429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T104929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T103428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T101929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T100429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T094929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T093428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T091928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T090428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T084928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T083428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T081928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T080428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T074928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T073428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T071928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T070428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T064928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T063428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T061928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T060428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T054928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T053428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T051928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T050428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T044928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T043428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T041928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T040428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T034928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T033428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T031928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T030428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T024928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T023428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T021928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T020428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T014928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T013428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T011928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T010428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T004928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T003428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T001928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260712T000428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T234928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T233428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T231928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T230428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T224928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T223428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T221928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T220428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T214928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T213428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T211928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T210429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T204929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T203429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T201929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T200429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T194929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260711T193429.json",
         "02_MEMORY\\heartbeat\\ops_004_20260711T191929.json",
         "02_MEMORY\\heartbeat\\ops_004_20260711T190429.json",
         "02_MEMORY\\heartbeat\\ops_004_20260711T190128.json",
@@ -2512,7 +2735,7 @@
         "02_MEMORY\\heartbeat\\ops_004_20260710T165515.json",
         "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 36 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 107 份超期文件"
     }
   ],
   "memory_health": {
@@ -4739,8 +4962,8 @@
     "workspace_coverage": {
       "score": 14.1,
       "weight": 15,
-      "total_files": 1046,
-      "referenced_files": 147
+      "total_files": 1051,
+      "referenced_files": 148
     },
     "memory_indexed": {
       "score": 18,
@@ -4751,18 +4974,19 @@
     "session_recovery": {
       "score": 60,
       "weight": 10,
-      "session_files_found": 32,
+      "session_files_found": 35,
       "note": "Bot ALIVE + User Session 文件存在 (revoked)"
     },
     "protocol_coverage": {
-      "score": 85.2,
+      "score": 82.1,
       "weight": 15,
-      "total_runtime_protos": 27,
+      "total_runtime_protos": 28,
       "wired_protos": 23,
       "runtime_protos": [
         "awaken.py",
         "awareness_loop.py",
         "bootstrap.py",
+        "capability_router.py",
         "civilization_auditor.py",
         "civilization_map.py",
         "compare_integrate.py",
@@ -4833,7 +5057,7 @@
       "alive_providers": 0
     },
     "_overall": {
-      "score": 51.3,
+      "score": 50.9,
       "total_weight": 100,
       "verdict": "部分接管 — 大量沉睡文明待唤醒"
     }
@@ -4849,7 +5073,16 @@
           "priority": "P1",
           "source": "environment",
           "created_at": "2026-07-11T14:27:48.561880"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-002",
@@ -4860,7 +5093,16 @@
           "priority": "P2",
           "source": "environment",
           "created_at": "2026-07-11T14:28:01.411729"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-003",
@@ -4871,7 +5113,16 @@
           "priority": "P2",
           "source": "environment",
           "created_at": "2026-07-11T14:28:01.517217"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-004",
@@ -4882,7 +5133,16 @@
           "priority": "P2",
           "source": "explorer:T-007",
           "created_at": "2026-07-11T15:23:37.557225"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-005",
@@ -4893,7 +5153,16 @@
           "priority": "P1",
           "source": "question_engine",
           "created_at": "2026-07-11T15:38:33.642704"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-006",
@@ -4904,7 +5173,16 @@
           "priority": "P1",
           "source": "question_engine",
           "created_at": "2026-07-11T15:38:33.646392"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-007",
@@ -4915,7 +5193,16 @@
           "priority": "P2",
           "source": "question_engine",
           "created_at": "2026-07-11T15:38:33.649504"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-008",
@@ -4926,7 +5213,16 @@
           "priority": "P2",
           "source": "question_engine",
           "created_at": "2026-07-11T15:59:12.301161"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "Q-009",
@@ -4937,7 +5233,96 @@
           "priority": "P2",
           "source": "question_engine",
           "created_at": "2026-07-11T19:04:20.081324"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
+      },
+      {
+        "id": "Q-010",
+        "type": "question",
+        "label": "是否应该在 ACE 中自行实现一个跨语言、跨进程的统一事件总线，而不是直接采用现有的 Java/EventBus 框架？",
+        "properties": {
+          "status": "answered",
+          "priority": "P2",
+          "source": "explorer:T-002",
+          "created_at": "2026-07-12T00:06:23.258532"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
+      },
+      {
+        "id": "Q-011",
+        "type": "question",
+        "label": "这些频繁的文件修改对系统性能有何影响？",
+        "properties": {
+          "status": "answered",
+          "priority": "P2",
+          "source": "question_engine",
+          "created_at": "2026-07-12T14:33:43.678604"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
+      },
+      {
+        "id": "Q-012",
+        "type": "question",
+        "label": "为什么新发现的未追踪文件会影响文明系统健康？",
+        "properties": {
+          "status": "answered",
+          "priority": "P1",
+          "source": "question_engine",
+          "created_at": "2026-07-12T14:33:43.683783"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
+      },
+      {
+        "id": "Q-013",
+        "type": "question",
+        "label": "为什么我们需要立即关注 akshare 的安装问题？",
+        "properties": {
+          "status": "open",
+          "priority": "P1",
+          "source": "question_engine",
+          "created_at": "2026-07-12T14:33:43.689594"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
       },
       {
         "id": "H-001",
@@ -4947,7 +5332,16 @@
           "qid": "Q-001",
           "confidence": 30,
           "status": "testing"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.7,
+          "memory": 0.5,
+          "generation": 0.8,
+          "execution": 0.2,
+          "experience": 0.3
+        },
+        "civilization_score": 0.485
       },
       {
         "id": "H-002",
@@ -4957,7 +5351,16 @@
           "qid": "Q-001",
           "confidence": 30,
           "status": "proposed"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.7,
+          "memory": 0.5,
+          "generation": 0.8,
+          "execution": 0.2,
+          "experience": 0.3
+        },
+        "civilization_score": 0.485
       },
       {
         "id": "H-003",
@@ -4967,7 +5370,16 @@
           "qid": "Q-001",
           "confidence": 30,
           "status": "proposed"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.7,
+          "memory": 0.5,
+          "generation": 0.8,
+          "execution": 0.2,
+          "experience": 0.3
+        },
+        "civilization_score": 0.485
       },
       {
         "id": "EXP-001",
@@ -4977,7 +5389,16 @@
           "hid": "H-001",
           "status": "running",
           "evidence_count": 0
-        }
+        },
+        "coords": {
+          "reality": 0.8,
+          "knowledge": 0.6,
+          "memory": 0.4,
+          "generation": 0.5,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.64
       },
       {
         "id": "D-001",
@@ -4986,7 +5407,16 @@
         "properties": {
           "qid": "Q-001",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-002",
@@ -4995,7 +5425,16 @@
         "properties": {
           "qid": "Q-004",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-003",
@@ -5004,7 +5443,16 @@
         "properties": {
           "qid": "Q-005",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-004",
@@ -5013,7 +5461,16 @@
         "properties": {
           "qid": "Q-006",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-005",
@@ -5022,7 +5479,16 @@
         "properties": {
           "qid": "Q-007",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-006",
@@ -5031,7 +5497,16 @@
         "properties": {
           "qid": "Q-008",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-007",
@@ -5040,7 +5515,16 @@
         "properties": {
           "qid": "Q-003",
           "outcome": "rejected"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-008",
@@ -5049,7 +5533,16 @@
         "properties": {
           "qid": "Q-002",
           "outcome": "rejected"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "D-009",
@@ -5058,7 +5551,70 @@
         "properties": {
           "qid": "Q-009",
           "outcome": "approved"
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-010",
+        "type": "decision",
+        "label": "批准使用现有的 Java/EventBus 框架，并进行相应的集成与测试。",
+        "properties": {
+          "qid": "Q-010",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-011",
+        "type": "decision",
+        "label": "执行 Scouting 队的提议，具体行动包括分析最近一次修改内容与之前版本对比变化，进行模拟环境测试评估这些修改对系统",
+        "properties": {
+          "qid": "Q-011",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-012",
+        "type": "decision",
+        "label": "执行 Scout 提出的方案，优先识别并验证未追踪文件的内容及其与已知系统问题的相关性，并根据评估结果制定相应的处理策略",
+        "properties": {
+          "qid": "Q-012",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
       },
       {
         "id": "CAP:vision",
@@ -5067,7 +5623,16 @@
         "properties": {
           "desc": "图像/视觉理解",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:chinese",
@@ -5076,7 +5641,16 @@
         "properties": {
           "desc": "中文优化",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:fast",
@@ -5085,7 +5659,16 @@
         "properties": {
           "desc": "低延迟响应",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:long_context",
@@ -5094,7 +5677,16 @@
         "properties": {
           "desc": "长上下文",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:summarize",
@@ -5103,7 +5695,16 @@
         "properties": {
           "desc": "摘要生成",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:reasoning",
@@ -5112,7 +5713,16 @@
         "properties": {
           "desc": "逻辑推理",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:coding",
@@ -5121,7 +5731,16 @@
         "properties": {
           "desc": "代码生成",
           "requires": []
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:debate",
@@ -5132,7 +5751,16 @@
           "requires": [
             "reasoning"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:archaeology",
@@ -5144,7 +5772,16 @@
             "summarize",
             "reasoning"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:code_review",
@@ -5156,7 +5793,16 @@
             "coding",
             "reasoning"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:research",
@@ -5169,7 +5815,16 @@
             "reasoning",
             "long_context"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:planning",
@@ -5181,7 +5836,16 @@
             "reasoning",
             "summarize"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "CAP:execution",
@@ -5193,7 +5857,16 @@
             "coding",
             "reasoning"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.4,
+          "generation": 0.6,
+          "execution": 0.8,
+          "experience": 0.5
+        },
+        "civilization_score": 0.57
       },
       {
         "id": "PROV:ollama-qwen-vl",
@@ -5202,7 +5875,16 @@
         "properties": {
           "provider": "ollama",
           "priority": 1
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:apiyi-gpt4omini",
@@ -5211,7 +5893,16 @@
         "properties": {
           "provider": "apiyi",
           "priority": 2
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:apiyi-deepseek-v3",
@@ -5220,7 +5911,16 @@
         "properties": {
           "provider": "apiyi",
           "priority": 2
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:hf-gpt-oss-120b",
@@ -5229,7 +5929,16 @@
         "properties": {
           "provider": "hf",
           "priority": 2
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:hf-deepseek-v3",
@@ -5238,7 +5947,16 @@
         "properties": {
           "provider": "hf",
           "priority": 3
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:hf-qwen-7b",
@@ -5247,7 +5965,16 @@
         "properties": {
           "provider": "hf",
           "priority": 3
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:hf-llama-70b",
@@ -5256,7 +5983,16 @@
         "properties": {
           "provider": "hf",
           "priority": 4
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:github-gpt4omini",
@@ -5265,7 +6001,16 @@
         "properties": {
           "provider": "github",
           "priority": 5
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:glm-flash",
@@ -5274,7 +6019,16 @@
         "properties": {
           "provider": "zhipu",
           "priority": 6
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:sixfinger-claude",
@@ -5283,7 +6037,16 @@
         "properties": {
           "provider": "sixfinger",
           "priority": 6
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "PROV:openrouter-llama",
@@ -5292,7 +6055,16 @@
         "properties": {
           "provider": "openrouter",
           "priority": 7
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.5,
+          "memory": 0.2,
+          "generation": 0.9,
+          "execution": 0.7,
+          "experience": 0.4
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "C-001",
@@ -5302,7 +6074,16 @@
           "severity": "must",
           "source": "R1 RFC-008 反过拟合框架",
           "file_ref": "06_RUNTIME/constraint_proposer.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-002",
@@ -5312,7 +6093,16 @@
           "severity": "must",
           "source": "R1 RFC-008 反过拟合框架",
           "file_ref": "06_RUNTIME/constraint_proposer.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-003",
@@ -5322,7 +6112,16 @@
           "severity": "should",
           "source": "R1 RFC-008 反过拟合框架",
           "file_ref": "06_RUNTIME/constraint_proposer.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-004",
@@ -5332,7 +6131,16 @@
           "severity": "must",
           "source": "R1 反永久化规则",
           "file_ref": "06_RUNTIME/constraint_proposer.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-005",
@@ -5342,7 +6150,16 @@
           "severity": "must",
           "source": "R1 ExperienceEngine",
           "file_ref": "02_MEMORY/experience_engine.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-006",
@@ -5352,7 +6169,16 @@
           "severity": "must",
           "source": "R1 ExperienceEngine._extract_meanings",
           "file_ref": "02_MEMORY/experience_engine.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-007",
@@ -5362,7 +6188,16 @@
           "severity": "should",
           "source": "R1 ExperienceEngine.compress_with_decay",
           "file_ref": "02_MEMORY/experience_engine.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-008",
@@ -5372,7 +6207,16 @@
           "severity": "should",
           "source": "R1 ExperienceEngine.detect_innovation_patterns",
           "file_ref": "02_MEMORY/experience_engine.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-009",
@@ -5382,7 +6226,16 @@
           "severity": "should",
           "source": "R1 ExperienceEngine.retrieve_by_layer",
           "file_ref": "02_MEMORY/experience_engine.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-010",
@@ -5392,7 +6245,16 @@
           "severity": "must",
           "source": "R1 sync_constraints.py",
           "file_ref": "06_RUNTIME/sync_constraints.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-011",
@@ -5402,7 +6264,16 @@
           "severity": "must",
           "source": "R2 EVO-001",
           "file_ref": "04_PROTOCOLS/self_evolution.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-012",
@@ -5412,7 +6283,16 @@
           "severity": "must",
           "source": "R2 宪法",
           "file_ref": "AGENTS.md"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-013",
@@ -5422,7 +6302,16 @@
           "severity": "must",
           "source": "R2 根因分析 20260711 — 反模式二嵌套考古导致 445 重复文件",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-014",
@@ -5432,7 +6321,16 @@
           "severity": "must",
           "source": "R2 根因分析 20260711 — 反模式三 situation_*.json 累积 50+ 份",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-015",
@@ -5442,7 +6340,16 @@
           "severity": "must",
           "source": "R2 根因分析 20260711 — 反模式六 ops_001/002/003 CLI 工具被误判",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-016",
@@ -5452,7 +6359,16 @@
           "severity": "must",
           "source": "R2 根因分析 20260711 — 反模式五 C-011/C-012 字面匹配误报",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-017",
@@ -5462,7 +6378,16 @@
           "severity": "must",
           "source": "R2 根因分析 20260711 — 反模式四归档嵌套导致新重复源",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "C-018",
@@ -5472,7 +6397,16 @@
           "severity": "should",
           "source": "R2 根因分析 20260711 — 反模式一无 canonical path 管理",
           "file_ref": "04_PROTOCOLS/civilization_auditor.py"
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.9,
+          "memory": 0.8,
+          "generation": 0.2,
+          "execution": 0.6,
+          "experience": 0.9
+        },
+        "civilization_score": 0.605
       },
       {
         "id": "PROTO:awaken",
@@ -5480,7 +6414,16 @@
         "label": "awaken",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:awareness_loop",
@@ -5491,7 +6434,16 @@
           "implements": [
             "C-007"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:bootstrap",
@@ -5499,7 +6451,33 @@
         "label": "bootstrap",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
+      },
+      {
+        "id": "PROTO:capability_router",
+        "type": "protocol",
+        "label": "capability_router",
+        "properties": {
+          "type": "runtime"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:civilization_auditor",
@@ -5515,7 +6493,16 @@
             "C-017",
             "C-018"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:civilization_map",
@@ -5523,7 +6510,16 @@
         "label": "civilization_map",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:compare_integrate",
@@ -5531,7 +6527,16 @@
         "label": "compare_integrate",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:environment_first",
@@ -5542,7 +6547,16 @@
           "implements": [
             "C-001"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:environment_sensor",
@@ -5550,7 +6564,16 @@
         "label": "environment_sensor",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:explorer_v2",
@@ -5558,7 +6581,16 @@
         "label": "explorer_v2",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:governor",
@@ -5566,7 +6598,16 @@
         "label": "governor",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:heartbeat",
@@ -5574,7 +6615,16 @@
         "label": "heartbeat",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:lab_bus",
@@ -5582,7 +6632,16 @@
         "label": "lab_bus",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:lab_comm",
@@ -5590,7 +6649,16 @@
         "label": "lab_comm",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:lab_ntfy",
@@ -5598,7 +6666,16 @@
         "label": "lab_ntfy",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:local_miner",
@@ -5612,7 +6689,16 @@
             "C-004",
             "C-008"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:multi_agent_debate",
@@ -5623,7 +6709,16 @@
           "implements": [
             "C-010"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_000_asset_first",
@@ -5631,7 +6726,16 @@
         "label": "ops_000_asset_first",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_001_aba",
@@ -5639,7 +6743,16 @@
         "label": "ops_001_aba",
         "properties": {
           "type": "dev_tool"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_002_find_first",
@@ -5647,7 +6760,16 @@
         "label": "ops_002_find_first",
         "properties": {
           "type": "dev_tool"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_003_worker_pool",
@@ -5655,7 +6777,16 @@
         "label": "ops_003_worker_pool",
         "properties": {
           "type": "dev_tool"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_004_recovery_first",
@@ -5663,7 +6794,16 @@
         "label": "ops_004_recovery_first",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_005_self_loop",
@@ -5671,7 +6811,16 @@
         "label": "ops_005_self_loop",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:ops_cycle",
@@ -5679,7 +6828,16 @@
         "label": "ops_cycle",
         "properties": {
           "type": "dev_tool"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:organize_recovery",
@@ -5687,7 +6845,16 @@
         "label": "organize_recovery",
         "properties": {
           "type": "dev_tool"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:question_center",
@@ -5699,7 +6866,16 @@
             "C-009",
             "C-012"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:question_engine",
@@ -5707,7 +6883,16 @@
         "label": "question_engine",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:recovery_engine",
@@ -5715,7 +6900,16 @@
         "label": "recovery_engine",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:recovery_protocol",
@@ -5723,7 +6917,16 @@
         "label": "recovery_protocol",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:recovery_scanner",
@@ -5731,7 +6934,16 @@
         "label": "recovery_scanner",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:roundtable",
@@ -5739,7 +6951,16 @@
         "label": "roundtable",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:self_evolution",
@@ -5750,7 +6971,16 @@
           "implements": [
             "C-011"
           ]
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:shared_api",
@@ -5758,7 +6988,16 @@
         "label": "shared_api",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "PROTO:state_generator",
@@ -5766,7 +7005,16 @@
         "label": "state_generator",
         "properties": {
           "type": "runtime"
-        }
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.6,
+          "memory": 0.5,
+          "generation": 0.3,
+          "execution": 0.9,
+          "experience": 0.7
+        },
+        "civilization_score": 0.59
       },
       {
         "id": "CONCEPT:叙事生态",
@@ -5775,7 +7023,16 @@
         "properties": {
           "relevance_sum": 38620,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:text",
@@ -5784,7 +7041,16 @@
         "properties": {
           "relevance_sum": 14945,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:expansions",
@@ -5793,7 +7059,16 @@
         "properties": {
           "relevance_sum": 13720,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:slice_index",
@@ -5802,7 +7077,16 @@
         "properties": {
           "relevance_sum": 12480,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:created_at",
@@ -5811,7 +7095,16 @@
         "properties": {
           "relevance_sum": 10015,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:re",
@@ -5820,7 +7113,16 @@
         "properties": {
           "relevance_sum": 9835,
           "category": "核心概念"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:Documents",
@@ -5829,7 +7131,16 @@
         "properties": {
           "relevance_sum": 8920,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:as",
@@ -5838,7 +7149,16 @@
         "properties": {
           "relevance_sum": 8495,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:file_type",
@@ -5847,7 +7167,16 @@
         "properties": {
           "relevance_sum": 8300,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:to",
@@ -5856,7 +7185,16 @@
         "properties": {
           "relevance_sum": 6965,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:nt",
@@ -5865,7 +7203,16 @@
         "properties": {
           "relevance_sum": 6680,
           "category": "核心概念"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:in",
@@ -5874,7 +7221,16 @@
         "properties": {
           "relevance_sum": 6110,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:str",
@@ -5883,7 +7239,16 @@
         "properties": {
           "relevance_sum": 5465,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:knowledge_base",
@@ -5892,7 +7257,16 @@
         "properties": {
           "relevance_sum": 4735,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:知乎",
@@ -5901,7 +7275,16 @@
         "properties": {
           "relevance_sum": 4705,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:key",
@@ -5910,7 +7293,16 @@
         "properties": {
           "relevance_sum": 4595,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:en",
@@ -5919,7 +7311,16 @@
         "properties": {
           "relevance_sum": 4535,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:AC",
@@ -5928,7 +7329,16 @@
         "properties": {
           "relevance_sum": 4245,
           "category": "治理原则"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:结构",
@@ -5937,7 +7347,16 @@
         "properties": {
           "relevance_sum": 4190,
           "category": "核心原则"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:偷偷跟你说",
@@ -5946,7 +7365,16 @@
         "properties": {
           "relevance_sum": 3775,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:tags",
@@ -5955,7 +7383,16 @@
         "properties": {
           "relevance_sum": 3620,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:type",
@@ -5964,7 +7401,16 @@
         "properties": {
           "relevance_sum": 3390,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:ID",
@@ -5973,7 +7419,16 @@
         "properties": {
           "relevance_sum": 3375,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:nz",
@@ -5982,7 +7437,16 @@
         "properties": {
           "relevance_sum": 3360,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:ACE",
@@ -5991,7 +7455,16 @@
         "properties": {
           "relevance_sum": 3065,
           "category": "系统定义"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:那你说说看",
@@ -6000,7 +7473,16 @@
         "properties": {
           "relevance_sum": 3060,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:灵魂",
@@ -6009,7 +7491,16 @@
         "properties": {
           "relevance_sum": 3015,
           "category": "元概念"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:你怎么想的",
@@ -6018,7 +7509,16 @@
         "properties": {
           "relevance_sum": 2930,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:你这语气我听着心里痒痒的",
@@ -6027,7 +7527,16 @@
         "properties": {
           "relevance_sum": 2745,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:nr",
@@ -6036,7 +7545,16 @@
         "properties": {
           "relevance_sum": 2740,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:讲个心里话",
@@ -6045,7 +7563,16 @@
         "properties": {
           "relevance_sum": 2730,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:我实话说",
@@ -6054,7 +7581,16 @@
         "properties": {
           "relevance_sum": 2520,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:ns",
@@ -6063,7 +7599,16 @@
         "properties": {
           "relevance_sum": 2430,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:身体",
@@ -6072,7 +7617,16 @@
         "properties": {
           "relevance_sum": 2420,
           "category": "元概念"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:id",
@@ -6081,7 +7635,16 @@
         "properties": {
           "relevance_sum": 2410,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:希望",
@@ -6090,7 +7653,16 @@
         "properties": {
           "relevance_sum": 2240,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:行为生态",
@@ -6099,7 +7671,16 @@
         "properties": {
           "relevance_sum": 2110,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:hash",
@@ -6108,7 +7689,16 @@
         "properties": {
           "relevance_sum": 2110,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:relevance_score",
@@ -6117,7 +7707,16 @@
         "properties": {
           "relevance_sum": 2100,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:交易生态",
@@ -6126,7 +7725,16 @@
         "properties": {
           "relevance_sum": 2090,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:AD",
@@ -6135,7 +7743,16 @@
         "properties": {
           "relevance_sum": 2020,
           "category": "方法论"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:结构生态",
@@ -6144,7 +7761,16 @@
         "properties": {
           "relevance_sum": 2000,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:for",
@@ -6153,7 +7779,16 @@
         "properties": {
           "relevance_sum": 1995,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:芯片",
@@ -6162,7 +7797,16 @@
         "properties": {
           "relevance_sum": 1885,
           "category": "架构分层"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:考古",
@@ -6171,7 +7815,16 @@
         "properties": {
           "relevance_sum": 1855,
           "category": "方法论"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:你别生气啊",
@@ -6180,7 +7833,16 @@
         "properties": {
           "relevance_sum": 1705,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:反正我现在挺在意你的",
@@ -6189,7 +7851,16 @@
         "properties": {
           "relevance_sum": 1650,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:a_layer",
@@ -6198,7 +7869,16 @@
         "properties": {
           "relevance_sum": 1585,
           "category": "架构分层"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:or",
@@ -6207,7 +7887,16 @@
         "properties": {
           "relevance_sum": 1560,
           "category": "待分类"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "CONCEPT:一声",
@@ -6216,7 +7905,16 @@
         "properties": {
           "relevance_sum": 1540,
           "category": "灵魂资产"
-        }
+        },
+        "coords": {
+          "reality": 0.3,
+          "knowledge": 0.9,
+          "memory": 0.9,
+          "generation": 0.4,
+          "execution": 0.2,
+          "experience": 0.5
+        },
+        "civilization_score": 0.53
       },
       {
         "id": "MEMORY_INDEX",
@@ -6225,7 +7923,16 @@
         "properties": {
           "total_entries": 2996,
           "index_file": "02_MEMORY\\memory_index_latest.json"
-        }
+        },
+        "coords": {
+          "reality": 0.2,
+          "knowledge": 0.6,
+          "memory": 1.0,
+          "generation": 0.3,
+          "execution": 0.1,
+          "experience": 0.7
+        },
+        "civilization_score": 0.47
       },
       {
         "id": "EXP_POOL",
@@ -6234,7 +7941,408 @@
         "properties": {
           "count": 5,
           "dir_exists": true
-        }
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.7,
+          "memory": 0.8,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 1.0
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:Heartbeat",
+        "type": "worker",
+        "label": "Heartbeat",
+        "properties": {
+          "capabilities": [
+            "monitoring",
+            "scheduling"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 1
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:AwarenessLoop",
+        "type": "worker",
+        "label": "AwarenessLoop",
+        "properties": {
+          "capabilities": [
+            "observation",
+            "pattern_detection"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:QuestionEngine",
+        "type": "worker",
+        "label": "QuestionEngine",
+        "properties": {
+          "capabilities": [
+            "question_generation",
+            "abduction"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:QuestionCenter",
+        "type": "worker",
+        "label": "QuestionCenter",
+        "properties": {
+          "capabilities": [
+            "knowledge_management",
+            "reasoning"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:MultiAgentDebate",
+        "type": "worker",
+        "label": "MultiAgentDebate",
+        "properties": {
+          "capabilities": [
+            "debate",
+            "decision_making"
+          ],
+          "status": "running",
+          "cost": "high",
+          "priority": 3
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:ExplorerV2",
+        "type": "worker",
+        "label": "ExplorerV2",
+        "properties": {
+          "capabilities": [
+            "exploration",
+            "discovery",
+            "research"
+          ],
+          "status": "running",
+          "cost": "high",
+          "priority": 3
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:SelfEvolution",
+        "type": "worker",
+        "label": "SelfEvolution",
+        "properties": {
+          "capabilities": [
+            "code_change",
+            "adaptation"
+          ],
+          "status": "running",
+          "cost": "high",
+          "priority": 4
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:RoundTable",
+        "type": "worker",
+        "label": "RoundTable",
+        "properties": {
+          "capabilities": [
+            "audit",
+            "review"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 4
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:ProviderHealth",
+        "type": "worker",
+        "label": "ProviderHealth",
+        "properties": {
+          "capabilities": [
+            "health_check",
+            "monitoring"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:EnvironmentSensor",
+        "type": "worker",
+        "label": "EnvironmentSensor",
+        "properties": {
+          "capabilities": [
+            "observation",
+            "sensing"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 1
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:LocalMiner",
+        "type": "worker",
+        "label": "LocalMiner",
+        "properties": {
+          "capabilities": [
+            "code_analysis",
+            "capability_graph"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:CivilizationAuditor",
+        "type": "worker",
+        "label": "CivilizationAuditor",
+        "properties": {
+          "capabilities": [
+            "audit",
+            "graph_building"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 3
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:StateGenerator",
+        "type": "worker",
+        "label": "StateGenerator",
+        "properties": {
+          "capabilities": [
+            "state_reporting",
+            "dashboard"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:TGPush",
+        "type": "worker",
+        "label": "TGPush",
+        "properties": {
+          "capabilities": [
+            "notification",
+            "messaging"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:RecoveryScanner",
+        "type": "worker",
+        "label": "RecoveryScanner",
+        "properties": {
+          "capabilities": [
+            "recovery",
+            "backup"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:Archivist",
+        "type": "worker",
+        "label": "Archivist",
+        "properties": {
+          "capabilities": [
+            "memory_management",
+            "preservation"
+          ],
+          "status": "running",
+          "cost": "low",
+          "priority": 2
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
+      },
+      {
+        "id": "WORKER:ExperienceEngine",
+        "type": "worker",
+        "label": "ExperienceEngine",
+        "properties": {
+          "capabilities": [
+            "experience_extraction",
+            "learning"
+          ],
+          "status": "running",
+          "cost": "medium",
+          "priority": 3
+        },
+        "coords": {
+          "reality": 0.7,
+          "knowledge": 0.5,
+          "memory": 0.4,
+          "generation": 0.4,
+          "execution": 0.9,
+          "experience": 0.6
+        },
+        "civilization_score": 0.585
       }
     ],
     "edges": [
@@ -6307,6 +8415,24 @@
       {
         "source": "Q-009",
         "target": "D-009",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
+        "source": "Q-010",
+        "target": "D-010",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
+        "source": "Q-011",
+        "target": "D-011",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
+        "source": "Q-012",
+        "target": "D-012",
         "type": "has_decision",
         "properties": {}
       },
@@ -6813,37 +8939,57 @@
         "target": "C-011",
         "type": "implements",
         "properties": {}
+      },
+      {
+        "source": "WORKER:QuestionCenter",
+        "target": "CAP:reasoning",
+        "type": "depends_on",
+        "properties": {}
+      },
+      {
+        "source": "WORKER:MultiAgentDebate",
+        "target": "CAP:debate",
+        "type": "depends_on",
+        "properties": {}
+      },
+      {
+        "source": "WORKER:ExplorerV2",
+        "target": "CAP:research",
+        "type": "depends_on",
+        "properties": {}
       }
     ],
     "stats": {
-      "total_nodes": 149,
-      "total_edges": 96,
-      "density_pct": 0.435,
+      "total_nodes": 174,
+      "total_edges": 102,
+      "density_pct": 0.339,
       "node_types": {
-        "question": 9,
+        "question": 13,
         "hypothesis": 3,
         "experiment": 1,
-        "decision": 9,
+        "decision": 12,
         "capability": 13,
         "provider": 11,
         "constraint": 18,
-        "protocol": 33,
+        "protocol": 34,
         "concept": 50,
         "memory": 1,
-        "experience": 1
+        "experience": 1,
+        "worker": 17
       },
       "edge_types": {
         "has_hypothesis": 3,
-        "has_decision": 9,
+        "has_decision": 12,
         "has_experiment": 1,
         "requires": 12,
         "provides": 55,
-        "implements": 16
+        "implements": 16,
+        "depends_on": 3
       },
       "top_connected": [
         {
           "id": "CAP:reasoning",
-          "degree": 16,
+          "degree": 17,
           "type": "capability"
         },
         {
@@ -6857,13 +9003,13 @@
           "type": "capability"
         },
         {
-          "id": "CAP:long_context",
+          "id": "CAP:debate",
           "degree": 8,
           "type": "capability"
         },
         {
-          "id": "CAP:debate",
-          "degree": 7,
+          "id": "CAP:long_context",
+          "degree": 8,
           "type": "capability"
         },
         {
@@ -6890,6 +9036,85 @@
           "id": "PROTO:civilization_auditor",
           "degree": 6,
           "type": "protocol"
+        }
+      ],
+      "dimension_weights": {
+        "reality": 0.25,
+        "knowledge": 0.15,
+        "memory": 0.2,
+        "generation": 0.15,
+        "execution": 0.15,
+        "experience": 0.1
+      },
+      "avg_dimension_scores": {
+        "reality": 0.464,
+        "knowledge": 0.733,
+        "memory": 0.636,
+        "generation": 0.421,
+        "execution": 0.576,
+        "experience": 0.606
+      },
+      "avg_civilization_score": 0.563,
+      "top_score_nodes": [
+        {
+          "id": "EXP-001",
+          "score": 0.64,
+          "type": "experiment",
+          "label": "权限设置错误验证"
+        },
+        {
+          "id": "D-001",
+          "score": 0.61,
+          "type": "decision",
+          "label": "与 Scout 合作进一步验证认证信息和配置设置是否正确，然后查看最近的 API 请求日志以找出问题所在。"
+        },
+        {
+          "id": "D-002",
+          "score": 0.61,
+          "type": "decision",
+          "label": "开始开发并实施新的安全模块，同时逐步整合现有技能管理工具。"
+        },
+        {
+          "id": "D-003",
+          "score": 0.61,
+          "type": "decision",
+          "label": "开始对比最新版本以确定具体修改内容，并验证这些修改是否对当前系统产生影响。如果有风险发现，将提出相应的解决方案并实施。"
+        },
+        {
+          "id": "D-004",
+          "score": 0.61,
+          "type": "decision",
+          "label": "执行方案1、2 或 3 来集中查询文件内容与历史记录，并验证是否已合并到主分支，同时使用现有工具确保一致性。"
+        },
+        {
+          "id": "D-005",
+          "score": 0.61,
+          "type": "decision",
+          "label": "执行 P-001 操作计划：使用 pip 安装 akshare 并验证其功能是否正常。"
+        },
+        {
+          "id": "D-006",
+          "score": 0.61,
+          "type": "decision",
+          "label": "根据 Scout 提议，对这些修改记录进行详细追踪并对比不同目录下的相同文件内容；同时检查配置错误或工具缺失是否是导致不"
+        },
+        {
+          "id": "D-007",
+          "score": 0.61,
+          "type": "decision",
+          "label": "根据 decision 执行或补充证据"
+        },
+        {
+          "id": "D-008",
+          "score": 0.61,
+          "type": "decision",
+          "label": "根据 decision 执行或补充证据"
+        },
+        {
+          "id": "D-009",
+          "score": 0.61,
+          "type": "decision",
+          "label": "检查 r1-open-source-seed 文件当前版本状态，并确认文件修改记录系统是否有异常或错误配置导致记录缺失。"
         }
       ]
     }

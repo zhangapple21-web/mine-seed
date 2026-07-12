@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-009 C-012
 """
 QC-001: Question Center — 问题中心
 ====================================

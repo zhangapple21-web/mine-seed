@@ -102,6 +102,86 @@
       "severity": "must",
       "source": "R2 宪法",
       "file_ref": "AGENTS.md"
+    },
+    {
+      "id": "C-013",
+      "name": "Single Canonical Path",
+      "description": "每个资产只能有一个 canonical path。考古/迁移时复制后必须删除源头或用 symlink。同一 base_name 出现在多个顶级目录（02_MEMORY/03_DATA/04_PROTOCOLS/05_TOOLS/06_RUNTIME）视为违规。新建文件必须在 asset_registry.json 登记 canonical path。",
+      "severity": "must",
+      "source": "R2 根因分析 20260711 — 反模式二嵌套考古导致 445 重复文件",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "canonical_top_dirs": ["02_MEMORY", "03_DATA", "04_PROTOCOLS", "05_TOOLS", "06_RUNTIME"],
+        "violation": "same_base_name_in_multiple_top_dirs",
+        "exception": ["symlink", "_SUPERSEDED_", "extracted/", "raw_sources/"]
+      }
+    },
+    {
+      "id": "C-014",
+      "name": "Time-Series Rotation",
+      "description": "时间戳命名的文件（situation_*.json, thought_seed_*.json, loop_*T*.json 等）必须配置 retention。默认保留 latest + 最近 N 份。生成器在创建新文件时必须清理超期文件。时间序列数据不应被审计为僵尸。",
+      "severity": "must",
+      "source": "R2 根因分析 20260711 — 反模式三 situation_*.json 累积 50+ 份",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "patterns": ["situation_*T*.json", "thought_seed_*_*.json", "loop_*T*.json", "exp_*T*.json"],
+        "keep_latest_n": 7,
+        "keep_latest_file": true,
+        "auto_clean_on_generate": true
+      }
+    },
+    {
+      "id": "C-015",
+      "name": "Protocol Wiring Contract",
+      "description": "04_PROTOCOLS/ 下每个 .py 文件必须在文件头声明 '# TYPE: runtime' 或 '# TYPE: dev_tool'。runtime 协议必须被 Heartbeat 或其他 runtime 协议调用。dev_tool（CLI 工具、一次性脚本）不强制接线，但 auditor 不应将其判为孤儿。",
+      "severity": "must",
+      "source": "R2 根因分析 20260711 — 反模式六 ops_001/002/003 CLI 工具被误判",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "type_marker": "# TYPE: runtime | dev_tool",
+        "default_type": "runtime",
+        "runtime_must_wire": true,
+        "dev_tool_no_wire_required": true
+      }
+    },
+    {
+      "id": "C-016",
+      "name": "Constraint Traceability",
+      "description": "每个约束 ID 必须在对应实现文件中显式标注 '# Implements: C-XXX'。纯字面匹配不算追溯。约束定义时必须同步指定 file_ref，file_ref 指向的文件必须包含该标记。避免约束定义与实现脱节。",
+      "severity": "must",
+      "source": "R2 根因分析 20260711 — 反模式五 C-011/C-012 字面匹配误报",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "marker_pattern": "# Implements: C-XXX",
+        "scan_all_code_files": true,
+        "block_on_missing": true
+      }
+    },
+    {
+      "id": "C-017",
+      "name": "Archive Convergence",
+      "description": "superseded_archive/ 必须扁平化命名（不按原路径嵌套）。归档前检查目标是否已存在，存在则跳过。归档目录本身不能成为新的重复源。superseded_archive 中的文件不应被审计为僵尸。",
+      "severity": "must",
+      "source": "R2 根因分析 20260711 — 反模式四归档嵌套导致新重复源",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "archive_dir": "03_DATA/superseded_archive/",
+        "flat_naming": true,
+        "dedupe_before_archive": true,
+        "exclude_from_zombie_scan": true
+      }
+    },
+    {
+      "id": "C-018",
+      "name": "Asset Creation Gate",
+      "description": "新建任何 .py/.json/.md 文件前，必须运行 Civilization Auditor 检查是否会导致重复或僵尸。这是 OPS-002 (Find Before Build) 的具体落地。如果新建会导致 same_base_name 违规，必须先合并或清理。",
+      "severity": "should",
+      "source": "R2 根因分析 20260711 — 反模式一无 canonical path 管理",
+      "file_ref": "04_PROTOCOLS/civilization_auditor.py",
+      "rule": {
+        "check_before_create": true,
+        "block_on": ["duplicate_base_name", "zombie_candidate"]
+      }
     }
   ]
 }

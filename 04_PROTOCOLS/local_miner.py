@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-002 C-003 C-004 C-008
 """
 Local Miner v2 - 多源模型调用，不依赖 TRAE
 ================================================

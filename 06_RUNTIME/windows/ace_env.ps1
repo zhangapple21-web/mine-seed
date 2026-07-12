@@ -9,7 +9,7 @@ $env:TG_BOT_TOKEN_2 = "8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI"
 # To get your chat_id: send any message to @Sck01Bot, then run:
 #   python 06_RUNTIME\connectors\tg_pusher.py --token $env:TG_BOT_TOKEN_2 --test
 #   or visit: https://api.telegram.org/bot8446702999:AAHw51HYX_EwZhnzmJpQFUy734SnaZpzsCI/getUpdates
-$env:TG_CHAT_ID = ""
+$env:TG_CHAT_ID = "5016609451"
 
 # ntfy.sh topic for fallback notifications
 $env:NTPY_TOPIC = "ace-cloud-worker"

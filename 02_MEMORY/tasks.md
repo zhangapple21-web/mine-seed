@@ -157,6 +157,6 @@
 | # | Priority | Capability | Question | Status | Timestamp |
 |---|---|---|---|---|---|
 | 1 | P2 | research | 发现 205 untracked files — 这些新文件是否需要纳入治理？是否包含未蒸馏的原始数据？ | pending | 2026-07-11T14:12:30 |
-| 2 | P2 | reasoning | 文件变更 8 files modified — 是否符合演化约束？是否破坏不变量？ | pending | 2026-07-11T15:58:43 |
+| 2 | P2 | reasoning | 文件变更 4 files modified — 是否符合演化约束？是否破坏不变量？ | pending | 2026-07-11T15:58:43 |
 
 <!-- AWARENESS_LOOP_PENDING_END -->

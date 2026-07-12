@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-007
 """
 ENV-002: Environment Awareness Loop — 环境感知闭环
 ====================================================

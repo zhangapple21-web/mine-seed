@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-010
 """
 DEB-001: Multi-Agent Debate — 多智能体辩论
 ============================================

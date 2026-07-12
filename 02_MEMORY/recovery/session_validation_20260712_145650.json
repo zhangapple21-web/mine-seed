@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-07-12T14:56:50.083762",
+  "validations": [
+    {
+      "session": "tg_collections",
+      "path": "C:\\Users\\User\\tg_collections.session",
+      "timestamp": "2026-07-12T14:56:49.434740",
+      "status": "not_authorized",
+      "need_login": true
+    },
+    {
+      "session": "tg_collections",
+      "path": "C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections.session",
+      "timestamp": "2026-07-12T14:56:49.721760",
+      "status": "alive",
+      "need_login": false,
+      "need_2fa": false,
+      "can_push": true,
+      "user": {
+        "id": 5016609451,
+        "username": "huione9527_Boss",
+        "phone": "85592538691",
+        "first_name": "张宁景_（不会主动收款）",
+        "last_name": null,
+        "is_bot": false
+      }
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "alive": 1,
+    "need_login": 1
+  }
+}

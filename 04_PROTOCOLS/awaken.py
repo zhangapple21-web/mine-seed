@@ -30,6 +30,7 @@ Awaken - 唤醒协议
 import os
 import sys
 import json
+import asyncio
 import subprocess
 from pathlib import Path
 from datetime import datetime
@@ -75,6 +76,21 @@ def run_rp(root: Path, dry_run: bool = False, json_mode: bool = True) -> dict:
         return {}
 
 
+def run_recovery_engine(skip_validation: bool = False) -> dict:
+    """Run Recovery Engine (REC-002) — Scan + Validate sessions.
+
+    OPS-004: Recovery First — check for usable sessions before requiring login.
+    """
+    try:
+        from recovery_engine import RecoveryEngine
+        engine = RecoveryEngine()
+        report = asyncio.run(engine.run(skip_validation=skip_validation))
+        return report
+    except Exception as e:
+        print(f"Recovery Engine error: {e}", file=sys.stderr)
+        return {"overall_status": "error", "error": str(e)}
+
+
 def write_root_state(root: Path, efp_result: dict, rp_result: dict, host: str = "unknown"):
     """Append awakening record to 00_ROOT/ROOT_STATE.md if exists."""
     state_file = root / "00_ROOT" / "ROOT_STATE.md"
@@ -109,7 +125,7 @@ def main():
     print(f"=== AWAKEN: {host} @ {root} ===")
 
     # Step 1: EFP - scan environment
-    print("[1/3] Running Environment First Protocol...")
+    print("[1/4] Running Environment First Protocol...")
     efp = run_efp(root, json_mode=True)
     idx = efp.get("index", {})
     recovery = efp.get("recovery", {})
@@ -123,19 +139,30 @@ def main():
         # In dry-run: also dry-run RP so caller sees the recovery plan
         rp = run_rp(root, dry_run=dry_run, json_mode=True)
         if not dry_run:
-            print(f"[2/3] Recovery Protocol executed: {rp.get('jobs_executed', 0)} jobs, "
+            print(f"[2/4] Recovery Protocol executed: {rp.get('jobs_executed', 0)} jobs, "
                   f"{rp.get('total_extracted', 0)} files extracted")
         else:
-            print(f"[2/3] Recovery Protocol (dry-run) planned: {rp.get('jobs_planned', 0)} jobs")
+            print(f"[2/4] Recovery Protocol (dry-run) planned: {rp.get('jobs_planned', 0)} jobs")
     else:
-        print(f"[2/3] No recovery needed.")
+        print(f"[2/4] No file recovery needed.")
 
-    # Step 3: Record awakening
+    # Step 3: Recovery Engine — Scan + Validate sessions
+    print(f"[3/4] Running Recovery Engine (session validation)...")
+    # In dry-run, skip validation (scan only); otherwise validate sessions
+    recovery_report = run_recovery_engine(skip_validation=dry_run)
+
+    rec_status = recovery_report.get("overall_status", "unknown") if recovery_report else "skipped"
+    rec_summary = recovery_report.get("validation_summary", {}) if recovery_report else {}
+    print(f"      Recovery Engine: {rec_status} "
+          f"(alive_user={rec_summary.get('alive_user', 0)}, "
+          f"alive_bot={rec_summary.get('alive_bot', 0)})")
+
+    # Step 4: Record awakening
     if not dry_run:
-        print(f"[3/3] Recording awakening state...")
+        print(f"[4/4] Recording awakening state...")
         write_root_state(root, efp, rp, host=host)
     else:
-        print(f"[3/3] Dry-run, skipping state write.")
+        print(f"[4/4] Dry-run, skipping state write.")
 
     # Final report
     final = {
@@ -154,15 +181,22 @@ def main():
             "files_extracted": rp.get("total_extracted", 0),
             "files_skipped": rp.get("total_skipped", 0),
         },
+        "recovery_engine": {
+            "overall_status": rec_status,
+            "alive_user_sessions": rec_summary.get("alive_user", 0),
+            "alive_bot_sessions": rec_summary.get("alive_bot", 0),
+            "need_login": recovery_report.get("need_login", True) if recovery_report else True,
+        },
         "status": "RECOVERED" if rp.get("total_extracted", 0) > 0 else "READY",
     }
     if json_mode:
         print(json.dumps(final, ensure_ascii=False, indent=2))
     else:
         print("=" * 50)
-        print(f"  Status: {final['status']}")
+        print(f"  Status:    {final['status']}")
         print(f"  Environment: {final['efp']}")
-        print(f"  Recovery:    {final['rp']}")
+        print(f"  Recovery:  {final['rp']}")
+        print(f"  Sessions:  {final['recovery_engine']}")
         print("=" * 50)
 
 

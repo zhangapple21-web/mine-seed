@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# TYPE: runtime
+# Implements: C-001
 """
 Environment First Protocol (EFP) - 环境优先协议
 ================================================

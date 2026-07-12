@@ -198,12 +198,40 @@ def beat(log):
     try:
         qc = QuestionCenter()
         open_qs = qc.get_open_questions()
-        if open_qs:
-            log.info(f"DebateRoom: debating {len(open_qs)} open questions")
+        # 过滤：跳过冷却中的问题（deferred 后 4 小时内不再辩论）
+        # 过滤：辩论次数 >= 5 次的问题自动关闭（避免无限循环）
+        now = datetime.now()
+        eligible = []
+        for q in open_qs:
+            debate_count = q.get("debate_count", 0)
+            last_debated = q.get("last_debated_at")
+            if debate_count >= 5:
+                # 辩论次数过多，自动关闭
+                q["status"] = "closed"
+                q["close_reason"] = "debate_limit_exceeded"
+                log.warning(f"DebateRoom: {q['qid']} closed after {debate_count} debates")
+                continue
+            if last_debated:
+                hours_since = (now - datetime.fromisoformat(last_debated)).total_seconds() / 3600
+                if hours_since < 4:
+                    continue  # 冷却中
+            eligible.append(q)
+
+        if eligible:
+            log.info(f"DebateRoom: debating {len(eligible)} open questions ({len(open_qs)} total)")
             room = DebateRoom()
             # 每次心跳最多辩论 3 个问题，控制成本
-            debate_results = room.debate_batch(open_qs[:3])
+            debate_results = room.debate_batch(eligible[:3])
             approved = [r for r in debate_results if r.get("decision") == "approved"]
+            # 更新辩论计数和时间
+            for result in debate_results:
+                qid = result.get("qid", "")
+                for q in qc.questions:
+                    if q["qid"] == qid:
+                        q["debate_count"] = q.get("debate_count", 0) + 1
+                        q["last_debated_at"] = now.isoformat()
+                        break
+            qc._save_all()
             report["steps"]["multi_agent_debate"] = {
                 "debated": len(debate_results),
                 "approved": len(approved),
@@ -212,8 +240,8 @@ def beat(log):
             }
             log.info(f"DebateRoom: {len(approved)} approved, {len(debate_results) - len(approved)} not approved")
         else:
-            report["steps"]["multi_agent_debate"] = {"status": "skipped", "reason": "no open questions"}
-            log.info("DebateRoom: skipped (no open questions)")
+            report["steps"]["multi_agent_debate"] = {"status": "skipped", "reason": "no eligible questions (all in cooldown or closed)"}
+            log.info("DebateRoom: skipped (no eligible questions)")
     except Exception as e:
         report["steps"]["multi_agent_debate"] = {"error": str(e)}
         log.error(f"DebateRoom error: {e}")
@@ -339,6 +367,16 @@ def beat(log):
         report["steps"]["civilization_audit"] = {"status": "error", "error": str(e)}
         log.error(f"Civilization audit error: {e}")
 
+    # Civilization Diary — 每日生成 Yesterday Report
+    try:
+        diary = _generate_yesterday_report(log)
+        report["steps"]["civilization_diary"] = diary
+        if diary.get("status") == "generated":
+            log.info(f"Civilization Diary: {diary['date']}, {diary.get('discoveries', 0)} discoveries")
+    except Exception as e:
+        report["steps"]["civilization_diary"] = {"status": "error", "error": str(e)}
+        log.error(f"Civilization Diary error: {e}")
+
     # Save
     mm.save_memory("heartbeat", f"beat_{beat_id}", report)
     log.info("Heartbeat saved")
@@ -346,7 +384,18 @@ def beat(log):
 
 
 def _push_heartbeat_summary(report: dict, log) -> dict:
-    """Push heartbeat summary + stock advisor to TG via Bot."""
+    """Push heartbeat summary + stock advisor to TG via Bot.
+
+    静默原则：只有重要事情才推送，普通心跳不打扰。
+    推送条件（满足任一）：
+      - 有告警/错误
+      - 有新问题生成（question_engine 创建了新问题）
+      - 自我演化处理了决策（processed > 0）
+      - 多智能体辩论有结果（debated > 0）
+      - Explorer 有新探索发现
+      - 新的 Awareness Loop 经验沉淀
+      - 每周一的 Civilization Audit
+    """
     from pathlib import Path
     from datetime import datetime
 
@@ -369,29 +418,86 @@ def _push_heartbeat_summary(report: dict, log) -> dict:
         if not chat_id:
             return {"status": "skipped", "reason": "no chat_id"}
 
-    # Import TGPusher (archaeology: use existing implementation)
+    # Import TGPusher
     sys.path.insert(0, str(Path(__file__).parent.parent / "06_RUNTIME" / "connectors"))
     from tg_pusher import TGPusher
 
     pusher = TGPusher(token=token, chat_id=chat_id)
     results = []
 
-    # 1. Push Heartbeat summary (中文)
-    summary_html = _build_heartbeat_html(report)
-    msg_result = pusher.send_message(summary_html, parse_mode="HTML")
-    if msg_result.get("ok"):
-        results.append({"type": "heartbeat", "status": "sent"})
-        log.info(f"TG heartbeat sent")
-    else:
-        results.append({"type": "heartbeat", "status": "failed", "error": msg_result.get("description")})
-        log.error(f"TG heartbeat failed: {msg_result.get('description')}")
+    # 判断：这次心跳是否值得推送
+    steps = report.get("steps", {})
+    should_push = _should_push_heartbeat(steps)
 
-    # 2. Push today's stock advisor report (if exists and not pushed today)
+    if should_push:
+        summary_html = _build_heartbeat_html(report)
+        msg_result = pusher.send_message(summary_html, parse_mode="HTML")
+        if msg_result.get("ok"):
+            results.append({"type": "heartbeat", "status": "sent"})
+            log.info(f"TG heartbeat sent (important)")
+        else:
+            results.append({"type": "heartbeat", "status": "failed", "error": msg_result.get("description")})
+            log.error(f"TG heartbeat failed: {msg_result.get('description')}")
+    else:
+        results.append({"type": "heartbeat", "status": "silent", "reason": "nothing important to report"})
+        log.info(f"TG heartbeat: silent (nothing important)")
+
+    # Push today's stock advisor report (if exists and not pushed today)
     advisor_result = _push_today_advisor(pusher, log)
     if advisor_result:
         results.append(advisor_result)
 
     return {"status": "completed", "results": results, "chat_id": chat_id}
+
+
+def _should_push_heartbeat(steps: dict) -> bool:
+    """判断这次心跳是否值得推送。
+
+    推送条件（满足任一即推）：
+      1. 有错误/告警
+      2. 生成了新问题
+      3. 多智能体辩论有结果
+      4. 自我演化处理了决策
+      5. Explorer 有新探索
+      6. Awareness Loop 沉淀了新经验
+      7. Civilization Audit 完成了
+    """
+    # 1. 错误
+    for name, step in steps.items():
+        if isinstance(step, dict) and step.get("error"):
+            return True
+
+    # 2. 新问题
+    qe = steps.get("question_engine", {})
+    if isinstance(qe, dict) and qe.get("created", 0) > 0:
+        return True
+
+    # 3. 辩论有结果
+    debate = steps.get("multi_agent_debate", {})
+    if isinstance(debate, dict) and debate.get("debated", 0) > 0:
+        return True
+
+    # 4. 自我演化处理了决策
+    se = steps.get("self_evolution", {})
+    if isinstance(se, dict) and se.get("processed", 0) > 0:
+        return True
+
+    # 5. Explorer 有新探索
+    ex = steps.get("explorer_v2", {})
+    if isinstance(ex, dict) and ex.get("status") not in ("skipped", None):
+        return True
+
+    # 6. Awareness Loop 有新经验
+    al = steps.get("awareness_loop", {})
+    if isinstance(al, dict) and al.get("reports_saved", 0) > 0:
+        return True
+
+    # 7. Civilization Audit
+    ca = steps.get("civilization_audit", {})
+    if isinstance(ca, dict) and ca.get("status") == "completed":
+        return True
+
+    return False
 
 
 def _get_chat_id(token: str) -> Optional[str]:
@@ -591,6 +697,125 @@ def loop(interval_min=15, log=None):
     while True:
         beat(log)
         time.sleep(interval_min * 60)
+
+
+def _generate_yesterday_report(log) -> dict:
+    """生成文明日志（Yesterday Report）
+
+    内容：
+      - 昨天系统发现了什么？
+      - 系统学到了什么？
+      - 哪些东西一直重复发生？
+      - 哪些东西值得今天继续研究？
+
+    数据源：
+      - Heartbeat 记录（昨天的心跳）
+      - Question Center（新问题/决策）
+      - Experience（新经验）
+      - Explorer（新发现）
+    """
+    from datetime import datetime, timedelta
+    from pathlib import Path
+    import json
+
+    today = datetime.now()
+    yesterday = today - timedelta(days=1)
+    date_str = yesterday.strftime("%Y-%m-%d")
+
+    beat_dir = WORKSPACE / "02_MEMORY" / "heartbeat"
+    yesterday_beats = []
+    for bf in sorted(beat_dir.glob("beat_*.json")):
+        try:
+            beat_time = datetime.strptime(bf.stem.replace("beat_", ""), "%Y%m%dT%H%M%S")
+            if yesterday.date() == beat_time.date():
+                data = json.loads(bf.read_text(encoding="utf-8"))
+                yesterday_beats.append(data)
+        except Exception:
+            pass
+
+    if not yesterday_beats:
+        return {"status": "skipped", "reason": "no heartbeat data for yesterday", "date": date_str}
+
+    discoveries = []
+    learnings = []
+    repetitions = []
+    follow_ups = []
+
+    for beat in yesterday_beats:
+        steps = beat.get("steps", {})
+
+        qe = steps.get("question_engine", {})
+        if isinstance(qe, dict) and qe.get("created", 0) > 0:
+            discoveries.append(f"生成了 {qe['created']} 个新问题")
+
+        debate = steps.get("multi_agent_debate", {})
+        if isinstance(debate, dict):
+            debated = debate.get("debated", 0)
+            approved = debate.get("approved", 0)
+            if debated > 0:
+                learnings.append(f"辩论了 {debated} 个问题，{approved} 个通过")
+
+        se = steps.get("self_evolution", {})
+        if isinstance(se, dict):
+            evolved = se.get("evolved", 0)
+            deferred = se.get("deferred", 0)
+            if evolved > 0:
+                learnings.append(f"自我演化了 {evolved} 个决策")
+            if deferred > 0:
+                follow_ups.append(f"{deferred} 个决策需要人工干预")
+
+        ex = steps.get("explorer_v2", {})
+        if isinstance(ex, dict) and ex.get("status") not in ("skipped", None):
+            discoveries.append(f"Explorer 探索了新领域")
+
+        al = steps.get("awareness_loop", {})
+        if isinstance(al, dict) and al.get("reports_saved", 0) > 0:
+            learnings.append(f"沉淀了 {al['reports_saved']} 条新经验")
+
+        for name, step in steps.items():
+            if isinstance(step, dict) and step.get("error"):
+                repetitions.append(f"{name} 出错: {step['error'][:30]}")
+
+    qc_dir = WORKSPACE / "02_MEMORY" / "question_center"
+    new_questions = []
+    try:
+        if (qc_dir / "questions.json").exists():
+            questions = json.loads((qc_dir / "questions.json").read_text(encoding="utf-8"))
+            for q in questions:
+                if q.get("created_at"):
+                    try:
+                        ct = datetime.fromisoformat(q["created_at"].replace("Z", "+00:00"))
+                        if ct.date() == yesterday.date():
+                            new_questions.append(q["question"][:50])
+                    except Exception:
+                        pass
+    except Exception:
+        pass
+
+    if new_questions:
+        discoveries.extend(new_questions)
+
+    diary = {
+        "status": "generated",
+        "date": date_str,
+        "discoveries": len(discoveries),
+        "learnings": len(learnings),
+        "repetitions": len(repetitions),
+        "follow_ups": len(follow_ups),
+        "items": {
+            "discoveries": discoveries[:10],
+            "learnings": learnings[:10],
+            "repetitions": repetitions[:5],
+            "follow_ups": follow_ups[:5],
+        },
+    }
+
+    diary_path = WORKSPACE / "02_MEMORY" / "diary"
+    diary_path.mkdir(exist_ok=True)
+    diary_file = diary_path / f"diary_{date_str}.json"
+    diary_file.write_text(json.dumps(diary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    return diary
 
 
 def main():

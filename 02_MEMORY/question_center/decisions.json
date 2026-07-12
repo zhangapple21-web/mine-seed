@@ -54,5 +54,45 @@
     "outcome": "rejected",
     "rationale": "平均置信度 17，Validator 置信度 0。LLM 决策失败，使用规则回退。",
     "created_at": "2026-07-11T18:56:45.981348"
+  },
+  {
+    "did": "D-008",
+    "qid": "Q-002",
+    "decision": "根据 decision 执行或补充证据",
+    "outcome": "rejected",
+    "rationale": "平均置信度 22，Validator 置信度 0。LLM 决策失败，使用规则回退。",
+    "created_at": "2026-07-11T19:07:39.774516"
+  },
+  {
+    "did": "D-009",
+    "qid": "Q-009",
+    "decision": "检查 r1-open-source-seed 文件当前版本状态，并确认文件修改记录系统是否有异常或错误配置导致记录缺失。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的提案均显示其信心度达到至少70%，且没有重大担忧。执行 Scout 提案中的前两个步骤将有助于确认 r1-open-source-seed 文件的改动记录情况。",
+    "created_at": "2026-07-11T19:11:06.054733"
+  },
+  {
+    "did": "D-010",
+    "qid": "Q-010",
+    "decision": "批准使用现有的 Java/EventBus 框架，并进行相应的集成与测试。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的结论一致，认为采用现有的 Java/EventBus 框架更为现实且有效。虽然自行实现可能更符合特定需求，但考虑到维护和兼容性问题，现有框架是一个更好的选择。",
+    "created_at": "2026-07-12T00:23:01.926460"
+  },
+  {
+    "did": "D-011",
+    "qid": "Q-011",
+    "decision": "执行 Scouting 队的提议，具体行动包括分析最近一次修改内容与之前版本对比变化，进行模拟环境测试评估这些修改对系统性能的具体影响。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的信心均达到70%，且未发现重大担忧。我们已经具备足够的证据来分析频繁文件修改对系统性能的影响，并通过模拟测试验证假设。",
+    "created_at": "2026-07-12T14:38:49.305106"
+  },
+  {
+    "did": "D-012",
+    "qid": "Q-012",
+    "decision": "执行 Scout 提出的方案，优先识别并验证未追踪文件的内容及其与已知系统问题的相关性，并根据评估结果制定相应的处理策略。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的信心均达到70%，且未发现重大 concerns。这表明通过分析文件内容和验证问题相关性可以有效地识别潜在风险并制定修复策略，从而确保文明系统的健康。",
+    "created_at": "2026-07-12T14:42:00.336401"
   }
 ]

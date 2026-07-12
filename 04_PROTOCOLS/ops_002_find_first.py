@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# TYPE: dev_tool
 """
 OPS-002: Find Before Build (笨者生存) - 建造前先找
 ==================================================

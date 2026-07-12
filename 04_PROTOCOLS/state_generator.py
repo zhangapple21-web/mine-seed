@@ -48,6 +48,32 @@ try:
 except:
     lm_health = None
 
+
+def _get_tg_push_status():
+    """检测 TG Push 状态"""
+    env_file = WORKSPACE / "05_TOOLS" / "miner" / "miner_env.sh"
+    token = None
+    chat_id = None
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            if "export TG_BOT_TOKEN_2=" in line:
+                token = line.split("=", 1)[1].strip().strip('"').strip("'")
+            elif "export TG_CHAT_ID=" in line:
+                chat_id = line.split("=", 1)[1].strip().strip('"').strip("'")
+    # 也检查 Windows 环境配置
+    win_env = WORKSPACE / "06_RUNTIME" / "windows" / "ace_env.ps1"
+    if not chat_id and win_env.exists():
+        for line in win_env.read_text(encoding="utf-8").splitlines():
+            if "TG_CHAT_ID" in line and "=" in line:
+                val = line.split("=", 1)[1].strip().strip('"').strip("'")
+                if val:
+                    chat_id = val
+    if not token:
+        return {"status": "Not Configured", "reason": "no TG_BOT_TOKEN_2"}
+    if not chat_id:
+        return {"status": "Ready", "reason": "Bot @Sck01Bot alive, awaiting chat_id"}
+    return {"status": "Running", "reason": f"Bot @Sck01Bot, chat_id={chat_id}"}
+
 try:
     civ_mod = __import__("civilization_map", fromlist=["fetch_repos", "analyze_repos"])
     civ_fetch = civ_mod.fetch_repos
@@ -97,7 +123,7 @@ class StateGenerator:
             {"name": "RoundTable", "status": "Running", "reason": "Audits evolution patches"},
             {"name": "ProviderHealth", "status": "Running" if lm_health else "Not Installed"},
             {"name": "RecoveryEngine", "status": recovery_status, "reason": recovery_reason},
-            {"name": "TGPush", "status": "Ready", "reason": "Bot @Sck01Bot alive, awaiting chat_id"},
+            {"name": "TGPush", "status": _get_tg_push_status()["status"], "reason": _get_tg_push_status()["reason"]},
             {"name": "Environment", "status": "Healthy", "reason": "No critical observations"},
             {"name": "Governor", "status": "Running"},
         ]

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# TYPE: dev_tool
 """
 OPS-001: Asset Before Action (ABA) - 行动前资产检查
 ==================================================

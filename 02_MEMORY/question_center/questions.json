@@ -45,12 +45,14 @@
     "source": "environment",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-11T14:28:01.411729",
     "last_seen": "2026-07-11T14:28:01.411729",
     "hypotheses": [],
     "experiments": [],
-    "decisions": [],
+    "decisions": [
+      "D-008"
+    ],
     "evidence": [
       {
         "type": "debate",
@@ -317,6 +319,25 @@
           }
         ],
         "added_at": "2026-07-11T18:54:02.178630"
+      },
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=rejected. Rationale: 平均置信度 22，Validator 置信度 0。LLM 决策失败，使用规则回退。. Action: 根据 decision 执行或补充证据",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 65
+          },
+          {
+            "role": "researcher",
+            "confidence": 0
+          },
+          {
+            "role": "validator",
+            "confidence": 0
+          }
+        ],
+        "added_at": "2026-07-11T19:07:39.770872"
       }
     ]
   },
@@ -942,5 +963,309 @@
       "capability_ref": "workspace",
       "timestamp": "2026-07-11T15:58:43.546114"
     }
+  },
+  {
+    "qid": "Q-009",
+    "question": "为什么文件修改记录中没有提到 r1-open-source-seed 文件的改动？",
+    "source": "question_engine",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-11T19:04:20.081324",
+    "last_seen": "2026-07-11T19:04:20.081324",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-009"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的提案均显示其信心度达到至少70%，且没有重大担忧。执行 Scout 提案中的前两个步骤将有助于确认 r1-open-source-seed 文件的改动记录情况。. Action: 检查 r1-open-source-seed 文件当前版本状态，并确认文件修改记录系统是否有异常或错误配置导致记录缺失。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 85
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 45
+          }
+        ],
+        "added_at": "2026-07-11T19:11:06.051633"
+      }
+    ],
+    "motivation": "如果没有关于 r1-open-source-seed 的改动记录，可能会错过这个可能包含系统重要配置或更新的关键信息。不研究会错过重要的版本控制数据，可能导致系统参数配置无法追溯和验证。",
+    "approach": "首先检查最新的文件修改日志，确认是否有 r1-open-source-seed 文件的改动记录。如果发现有改动但未记录，应进一步调查原因；如果没有改动而没有记录，则可能是记录系统的问题，需要检查并修复相关功能。",
+    "expected_value": "回答这个问题后，系统能获得关于 r1-open-source-seed 文件的相关版本控制信息和配置细节，有助于理解其状态及后续处理。",
+    "source_fingerprint": "f5b4733f5db6",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "4 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 04_PROTOCOLS/awaken.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-11T19:03:47.195477"
+    }
+  },
+  {
+    "qid": "Q-010",
+    "question": "是否应该在 ACE 中自行实现一个跨语言、跨进程的统一事件总线，而不是直接采用现有的 Java/EventBus 框架？",
+    "source": "explorer:T-002",
+    "priority": "P2",
+    "capability": "archaeology",
+    "status": "answered",
+    "created_at": "2026-07-12T00:06:23.258532",
+    "last_seen": "2026-07-12T00:06:23.258532",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-010"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的结论一致，认为采用现有的 Java/EventBus 框架更为现实且有效。虽然自行实现可能更符合特定需求，但考虑到维护和兼容性问题，现有框架是一个更好的选择。. Action: 批准使用现有的 Java/EventBus 框架，并进行相应的集成与测试。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 85
+          },
+          {
+            "role": "researcher",
+            "confidence": 70
+          },
+          {
+            "role": "validator",
+            "confidence": 80
+          }
+        ],
+        "added_at": "2026-07-12T00:23:01.922323"
+      }
+    ],
+    "exploration_topic": {
+      "id": "T-002",
+      "name": "Event Bus / Message Queue",
+      "keywords": [
+        "event bus",
+        "message queue",
+        "pub sub",
+        "event driven"
+      ],
+      "capability_ref": "event_bus",
+      "why_for_ace": "ACE 需要把传感器、问题引擎、辩论室、执行器连接起来，Event Bus 是核心基础设施"
+    },
+    "exploration_projects": [
+      {
+        "full_name": "greenrobot/EventBus",
+        "html_url": "https://github.com/greenrobot/EventBus",
+        "stars": 24718,
+        "description": "Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.",
+        "updated_at": "2026-07-09T02:27:58Z",
+        "language": "Java",
+        "score": 60
+      },
+      {
+        "full_name": "square/otto",
+        "html_url": "https://github.com/square/otto",
+        "stars": 5120,
+        "description": "An enhanced Guava-based event bus with emphasis on Android support.",
+        "updated_at": "2026-07-05T14:09:46Z",
+        "language": "Java",
+        "score": 60
+      },
+      {
+        "full_name": "JeremyLiao/LiveEventBus",
+        "html_url": "https://github.com/JeremyLiao/LiveEventBus",
+        "stars": 3990,
+        "description": ":mailbox_with_mail:EventBus for Android，消息总线，基于LiveData，具有生命周期感知能力，支持Sticky，支持AndroidX，支持跨进程，支持跨APP",
+        "updated_at": "2026-07-08T02:46:16Z",
+        "language": "Java",
+        "score": 60
+      },
+      {
+        "full_name": "paolosalvatori/ServiceBusExplorer",
+        "html_url": "https://github.com/paolosalvatori/ServiceBusExplorer",
+        "stars": 2202,
+        "description": "The Service Bus Explorer allows users to connect to a Service Bus namespace and administer messaging entities in an easy manner. The tool provides advanced features like import/export functionality or",
+        "updated_at": "2026-07-07T18:32:57Z",
+        "language": "C#",
+        "score": 60
+      },
+      {
+        "full_name": "AndroidKnife/RxBus",
+        "html_url": "https://github.com/AndroidKnife/RxBus",
+        "stars": 2132,
+        "description": "Event Bus By RxJava.",
+        "updated_at": "2026-07-09T02:26:12Z",
+        "language": "Java",
+        "score": 60
+      }
+    ],
+    "exploration_report_file": "02_MEMORY/exploration/exploration_20260712.md"
+  },
+  {
+    "qid": "Q-011",
+    "question": "这些频繁的文件修改对系统性能有何影响？",
+    "source": "question_engine",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T14:33:43.678604",
+    "last_seen": "2026-07-12T14:33:43.678604",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-011"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的信心均达到70%，且未发现重大担忧。我们已经具备足够的证据来分析频繁文件修改对系统性能的影响，并通过模拟测试验证假设。. Action: 执行 Scouting 队的提议，具体行动包括分析最近一次修改内容与之前版本对比变化，进行模拟环境测试评估这些修改对系统性能的具体影响。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 70
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-12T14:38:49.302477"
+      }
+    ],
+    "motivation": "频繁的文件修改可能会影响系统的运行效率和稳定性。如果不了解这些修改带来的实际影响，可能会导致资源浪费或潜在问题积累。",
+    "approach": "分析最近一次修改的内容，与之前的版本对比变化，并通过模拟环境测试评估修改对系统性能的影响。",
+    "expected_value": "识别出哪些文件的频繁修改是必要的以及那些可能造成性能下降的部分。这有助于优化系统的运行效率和稳定性。",
+    "source_fingerprint": "62bcb58f1251",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "32 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/advisor_tracker/tracker.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.md",
+          "M 02_MEMORY/civilization_audit/audit_20260711.json",
+          "M 02_MEMORY/civilization_audit/audit_20260711.md",
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/pending_tasks.json",
+          "M 02_MEMORY/question_center/decisions.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T14:32:23.498739"
+    }
+  },
+  {
+    "qid": "Q-012",
+    "question": "为什么新发现的未追踪文件会影响文明系统健康？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "reasoning",
+    "status": "answered",
+    "created_at": "2026-07-12T14:33:43.683783",
+    "last_seen": "2026-07-12T14:33:43.683783",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-012"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的信心均达到70%，且未发现重大 concerns。这表明通过分析文件内容和验证问题相关性可以有效地识别潜在风险并制定修复策略，从而确保文明系统的健康。. Action: 执行 Scout 提出的方案，优先识别并验证未追踪文件的内容及其与已知系统问题的相关性，并根据评估结果制定相应的处理策略。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 70
+          },
+          {
+            "role": "researcher",
+            "confidence": 0
+          },
+          {
+            "role": "validator",
+            "confidence": 70
+          }
+        ],
+        "added_at": "2026-07-12T14:42:00.332760"
+      }
+    ],
+    "motivation": "不研究会无法识别可能隐藏在这些文件中的重要信息或错误，影响系统的整体健康。",
+    "approach": "首先分析这些新文件的内容和来源，确定它们是数据、配置还是其他类型的信息。然后验证这些文件是否与已知问题相关联，并评估其对系统性能的影响。最后，制定策略来处理这些问题以恢复系统的完整状态。",
+    "expected_value": "通过识别并解决未追踪文件的问题，可以确保文明系统的健康和效率，避免潜在的数据丢失或错误配置。",
+    "source_fingerprint": "1278e08befce",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "9 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/civilization_audit/audit_20260712.json",
+          "?? 02_MEMORY/civilization_audit/audit_20260712.md",
+          "?? 02_MEMORY/civilization_graph.json",
+          "?? 02_MEMORY/experience/exp_innovation_ollama_20260711T190940.json",
+          "?? 02_MEMORY/experience/exp_provider_ollama_20260711T190940.json",
+          "?? 02_MEMORY/exploration/exploration_20260712.json",
+          "?? 02_MEMORY/exploration/exploration_20260712.md",
+          "?? 02_MEMORY/recovery/advisor_pushed_20260711.flag",
+          "?? 04_PROTOCOLS/capability_router.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T14:32:23.498739"
+    }
+  },
+  {
+    "qid": "Q-013",
+    "question": "为什么我们需要立即关注 akshare 的安装问题？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-12T14:33:43.689594",
+    "last_seen": "2026-07-12T14:33:43.689594",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "如果不解决 akshare 不安装的问题，可能导致系统在需要使用股票数据时无法获取数据，从而影响系统的正常运行。",
+    "approach": "检查是否有其他依赖项未安装或配置错误；查询 akshare 的官方文档和社区支持以确认问题的根源并提出解决方案。",
+    "expected_value": "回答这个问题后，系统能够及时修复 akshare 不安装的问题，确保在需要时能正确获取股票数据，保证系统的运行稳定性。",
+    "source_fingerprint": "01a704d0a32d",
+    "source_observation": {
+      "source": "provider",
+      "category": "provider_missing",
+      "severity": "critical",
+      "title": "akshare not installed",
+      "detail": {},
+      "capability_ref": "stock_data",
+      "timestamp": "2026-07-12T14:32:23.892080"
+    },
+    "debate_count": 1,
+    "last_debated_at": "2026-07-12T14:51:07.950960"
   }
 ]
