@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-12 15:06*
+*Last updated: 2026-07-12 16:30*
 
 ---
 
@@ -21,7 +21,7 @@
 | ✅ SelfEvolution | Running — Approved decisions → code changes |
 | ✅ RoundTable | Running — Audits evolution patches |
 | ✅ ProviderHealth | Running |
-| 🟡 RecoveryEngine | BOT_ONLY — alive_user=0, alive_bot=1, need_login=False |
+| 🟡 RecoveryEngine | USER_RECOVERED — @huione9527_Boss alive, 2868 dialogs |
 | ✅ TGPush | Running — Bot @Sck01Bot, chat_id=5016609451 |
 | 🟢 Environment | Healthy — No critical observations |
 | ✅ Governor | Running |
@@ -30,10 +30,13 @@
 
 ## Current Questions
 
-> 1 open questions. Priority: P0=紧急, P1=高, P2=中.
+> 2 open questions. Priority: P0=紧急, P1=高, P2=中.
 > These are the most important things the system needs to understand.
 
 🟡 **Q-013** 为什么我们需要立即关注 akshare 的安装问题？
+
+🟢 **Q-014** HYPOTHESIS-KERNEL-001 已验证: R1所有系统都是同一认知芯片的外壳。下一步应该恢复芯片本体还是继续完善外壳？
+  Status: verified, pending decision
 
 ---
 
@@ -127,4 +130,25 @@
 
 🔄 是否创建 .gitignore 管理 R1 遗留文件？
   Status: 待决定
+
+✅ **AUM-TASK-2026-07-TG-ARCH-002: R1 Deep Archaeology**
+  Status: 已完成 — 7阶段全部产出
+  - Phase 1: TG文明地图 (2868对话扫描)
+  - Phase 2: Origin Timeline (8个概念溯源)
+  - Phase 3: Candidate Kernel (7个候选芯片)
+  - Phase 4: Recovery Diff (28个资产评估)
+  - Phase 5: 压缩率分析 (99.99%+)
+  - Phase 6: 不变量发现 (7个L0 + 3个L1)
+  - Phase 7: Kernel DNA v1.0 (A4纸重建核)
+
+✅ **HYPOTHESIS-KERNEL-001 验证**
+  Status: 已验证 — 强支持
+  - R1所有系统(人格/五界/Router/Governor)都是同一认知芯片的不同外壳
+  - 芯片本体 = Dual-Core + Shadow + 7个L0不变量
+
+✅ **资产固化阶段**
+  Status: 已完成 — 三份固化文档已推送到GitHub
+  - invariant_manifest.md (不变量清单)
+  - dead_asset_registry.md (死亡资产清单)
+  - kernel_dna_v1.0.md (A4纸重建核)
 
