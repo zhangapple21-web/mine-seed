@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """
-A股信号发现引擎 v2 — 0 依赖，free_llm 驱动
+Signal Discovery Pipeline v2 — 0 依赖，free_llm 驱动
 
 功能：
-- 每日自动发现 A 股市场的量化信号
-- 信号类型：动量突破、均值回归、量价背离、资金流异动
-- 数据源：adata（多源融合）→ 降级到 free_llm 直接分析
+- 每日自动发现市场量化信号（当前默认 A 股市场）
+- 信号类型：动量突破、均值回归、量价背离、资金流异动、业绩超预期
+- 数据源：adata 多源融合 → 降级到 free_llm 直接分析
 - 输出：Markdown 信号报告 + JSON 信号卡片
+
+可复用 Blueprint：
+- 信号类型定义（5 种）与具体数据源解耦
+- 多源数据 → 信号 → 排序 → 输出的 Pipeline 架构
+- LLM 驱动的信号发现 + 结构化 JSON 提取模式
 
 用法：
   python3 signal_discovery_a.py          # 生成今日信号
@@ -33,13 +38,17 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-logger = logging.getLogger("signal_discovery_a")
+logger = logging.getLogger("signal_discovery")
 
 # 加载 free_llm
 sys.path.insert(0, str(Path(__file__).parent / ".." / "miner"))
 from free_llm import call
 
-# 信号类型定义
+# ============================================================
+# 信号类型定义 — Blueprint 层，与具体市场解耦
+# ============================================================
+# 当前默认 A 股市场，但信号类型本身是通用的
+# 如需适配其他市场，只需更换数据源层（_get_market_overview / _get_hot_sectors）
 SIGNAL_TYPES = {
     "momentum_breakout": {
         "name": "动量突破",
@@ -69,8 +78,12 @@ SIGNAL_TYPES = {
 }
 
 
-class AShareSignalDiscovery:
-    """A股信号发现引擎"""
+class SignalDiscoveryEngine:
+    """信号发现引擎 — Blueprint 实现
+    
+    当前默认 A 股市场，但架构可复用到任何有数据源的市场。
+    只需替换 _get_market_overview() 和 _get_hot_sectors() 方法。
+    """
 
     def __init__(self):
         self.adata = None
@@ -132,7 +145,11 @@ class AShareSignalDiscovery:
         return ""
 
     def discover_signals(self) -> List[Dict[str, Any]]:
-        """发现市场信号 — LLM 驱动"""
+        """发现市场信号 — LLM 驱动
+        
+        Blueprint 核心逻辑：多源数据输入 → LLM 信号发现 → 结构化 JSON 输出
+        当前数据源默认 A 股市场，但 prompt 模板本身是通用的。
+        """
         logger.info("[discover] 开始信号发现...")
 
         # 收集市场数据
@@ -156,7 +173,7 @@ class AShareSignalDiscovery:
         prompt = f"""今天是 {self.today}。
 
 {data_section}
-请作为A股量化分析师，基于当前市场环境，从以下信号类型中发现最有价值的2-3个交易信号：
+请作为量化分析师，基于当前市场环境，从以下信号类型中发现最有价值的2-3个交易信号：
 
 {chr(10).join(signal_descriptions)}
 
@@ -166,7 +183,7 @@ class AShareSignalDiscovery:
 3. 置信度（0-100）
 4. 相关板块/概念
 5. 触发理由（50字以内）
-6. 建议关注标的（2-3只相关股票，格式：代码 名称）
+6. 建议关注标的（2-3只，格式：代码 名称）
 
 输出格式必须是合法的JSON数组：
 ```json
@@ -187,7 +204,7 @@ class AShareSignalDiscovery:
         try:
             result = call(
                 prompt,
-                system="你是专业的A股量化信号分析师。只输出JSON，不要解释。",
+                system="你是专业的量化信号分析师。只输出JSON，不要解释。",
                 max_tokens=2000,
                 temperature=0.3,
                 prefer='glm'
@@ -248,7 +265,7 @@ class AShareSignalDiscovery:
     def generate_report(self, signals: List[Dict]) -> str:
         """生成 Markdown 报告"""
         lines = [
-            f"# A股信号发现 — {self.today}",
+            f"# Signal Discovery — {self.today}",
             "",
             f"> 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
             f"> 信号数量: {len(signals)}",
@@ -340,7 +357,7 @@ class AShareSignalDiscovery:
     def run(self):
         """完整运行流程"""
         logger.info("=" * 50)
-        logger.info("A股信号发现引擎启动")
+        logger.info("Signal Discovery Engine 启动")
         logger.info("=" * 50)
 
         t0 = time.time()
@@ -349,7 +366,7 @@ class AShareSignalDiscovery:
 
         if not signals:
             logger.warning("[run] 未发现信号，生成空报告")
-            report_md = f"# A股信号发现 — {self.today}\n\n今日未发现明显信号。\n"
+            report_md = f"# Signal Discovery — {self.today}\n\n今日未发现明显信号。\n"
         else:
             report_md = self.generate_report(signals)
 
@@ -368,7 +385,7 @@ class AShareSignalDiscovery:
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="A股信号发现引擎")
+    parser = argparse.ArgumentParser(description="Signal Discovery Engine")
     parser.add_argument("--list", action="store_true", help="列出支持的信号类型")
     args = parser.parse_args()
 
@@ -378,7 +395,7 @@ def main():
             print(f"  {key}: {info['name']} — {info['desc']}")
         return
 
-    discovery = AShareSignalDiscovery()
+    discovery = SignalDiscoveryEngine()
     result = discovery.run()
     print(f"\n信号发现完成: {len(result['signals'])} 个信号")
     print(f"报告: {result['md_file']}")

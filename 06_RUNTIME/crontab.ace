@@ -27,3 +27,6 @@ HOME=/root
 
 # === 档案官归档（每天20:04，无API）===
 4 20 * * * bash /workspace/fengzi-repos/mine-seed/05_TOOLS/miner/run_free_task.sh archivist >> /tmp/mine_output/cron_archivist.log 2>&1
+
+# === 文明日报（每天04:00，free_llm）===
+0 4 * * * cd /workspace/fengzi-repos/mine-seed/05_TOOLS/miner && source free_api.env && python3 civilization_daily.py >> /tmp/mine_output/cron_civilizer.log 2>&1

@@ -1,0 +1,199 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-13",
+  "governor": "zhang",
+  "categories": {
+    "kernel": {
+      "count": 2,
+      "assets": [
+        {
+          "id": "K-001",
+          "name": "free_llm",
+          "desc": "0 依赖 LLM 统一访问层，4 渠道自动 fallback",
+          "source": "05_TOOLS/miner/free_llm.py",
+          "added": "2026-07-11",
+          "status": "active"
+        },
+        {
+          "id": "K-002",
+          "name": "stock_query",
+          "desc": "统一股票数据访问层（腾讯 API + adata 多源融合）",
+          "source": "05_TOOLS/advisor/stock_query.py",
+          "added": "2026-07-10",
+          "status": "active"
+        }
+      ]
+    },
+    "blueprint": {
+      "count": 3,
+      "assets": [
+        {
+          "id": "B-001",
+          "name": "CCO Selection Trace",
+          "desc": "四层筛选架构：因子筛选 → 技术确认 → 基本面确认 → 价值匹配",
+          "source": "05_TOOLS/advisor/stock_advisor.py",
+          "added": "2026-07-10",
+          "status": "active"
+        },
+        {
+          "id": "B-002",
+          "name": "Triple Fallback",
+          "desc": "三级降级策略：主方案 → 备选方案 → 终极降级",
+          "source": "05_TOOLS/miner/run_free_task.sh",
+          "added": "2026-07-11",
+          "status": "active"
+        },
+        {
+          "id": "B-003",
+          "name": "Signal Discovery Pipeline",
+          "desc": "多源数据 → 信号发现 → 排序 → 输出（Markdown + JSON）。当前默认 A 股市场，但与具体市场解耦。",
+          "source": "05_TOOLS/signals/signal_discovery_a.py",
+          "added": "2026-07-13",
+          "status": "active"
+        }
+      ]
+    },
+    "protocol": {
+      "count": 3,
+      "assets": [
+        {
+          "id": "P-001",
+          "name": "Recovery Protocol",
+          "desc": "AI 恢复协议 L1-L4：热启动 → 温启动 → 冷启动 → 灾难恢复",
+          "source": "04_PROTOCOLS/recovery_protocol.md",
+          "added": "2026-07-10",
+          "status": "active"
+        },
+        {
+          "id": "P-002",
+          "name": "Deployment Protocol",
+          "desc": "无 Docker / 无 Redis / 无 MQ / 无数据库依赖的部署规范",
+          "source": "06_RUNTIME/crontab.ace",
+          "added": "2026-07-11",
+          "status": "active"
+        },
+        {
+          "id": "P-003",
+          "name": "Civilization Categories",
+          "desc": "文明资产 6 类分类标准及准入审查流程",
+          "source": "00_ROOT/CIVILIZATION_CATEGORIES.md",
+          "added": "2026-07-13",
+          "status": "active"
+        }
+      ]
+    },
+    "constraint": {
+      "count": 3,
+      "assets": [
+        {
+          "id": "C-001",
+          "name": "RC-001: AVOID gh_r1",
+          "desc": "所有任务避免使用 gh_r1 worker",
+          "source": "05_TOOLS/miner/miner_24h.py",
+          "added": "2026-06-20",
+          "status": "active"
+        },
+        {
+          "id": "C-002",
+          "name": "RC-002: AVOID nim_ultra_550b",
+          "desc": "所有任务避免使用 nim_ultra_550b",
+          "source": "05_TOOLS/miner/miner_24h.py",
+          "added": "2026-06-20",
+          "status": "active"
+        },
+        {
+          "id": "C-003",
+          "name": "RC-Mission: Mission 不得直接进入 Repository",
+          "desc": "Mission 完成后必须先经过 Distillation 和 Admission Review",
+          "source": "00_ROOT/CIVILIZATION_CATEGORIES.md",
+          "added": "2026-07-13",
+          "status": "active"
+        }
+      ]
+    },
+    "experience": {
+      "count": 5,
+      "assets": [
+        {
+          "id": "E-001",
+          "name": "sandbox_reset_kills_cron",
+          "desc": "sandbox 环境重置会杀死 cron 和 Gateway 进程，需在 recovery 中加入 L1 自动修复",
+          "source": "多次验证",
+          "added": "2026-07-11",
+          "status": "active"
+        },
+        {
+          "id": "E-002",
+          "name": "glm_direct_nim_proxy",
+          "desc": "GLM 国内 API 直连更快，NIM/GitHub 等海外 API 需走代理",
+          "source": "05_TOOLS/miner/free_llm.py",
+          "added": "2026-07-13",
+          "status": "active"
+        },
+        {
+          "id": "E-003",
+          "name": "adata_eastmoney_blocked",
+          "desc": "adata 的 EastMoney 源在云端 sandbox 被墙，但腾讯源自动 fallback 可用",
+          "source": "多次验证",
+          "added": "2026-07-13",
+          "status": "active"
+        },
+        {
+          "id": "E-004",
+          "name": "ntfy_heredoc_encoding",
+          "desc": "bash heredoc 在中文 header 中会导致编码错误，应使用独立 Python 脚本",
+          "source": "05_TOOLS/miner/ntfy_send.py",
+          "added": "2026-07-11",
+          "status": "active"
+        },
+        {
+          "id": "E-005",
+          "name": "github_pat_lacks_repo_scope",
+          "desc": "GitHub PAT 若无 repo 写权限，git push 会 403，需使用正确 scope 的 PAT",
+          "source": "多次验证",
+          "added": "2026-07-13",
+          "status": "active"
+        }
+      ]
+    },
+    "identity": {
+      "count": 2,
+      "assets": [
+        {
+          "id": "I-001",
+          "name": "PRINCIPLES",
+          "desc": "R2 文明核心原则",
+          "source": "00_ROOT/PRINCIPLES.md",
+          "added": "2026-06-16",
+          "status": "active"
+        },
+        {
+          "id": "I-002",
+          "name": "ARCHITECTURE",
+          "desc": "系统架构定义",
+          "source": "00_ROOT/ARCHITECTURE.md",
+          "added": "2026-06-16",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "score": {
+    "kernel": 10,
+    "blueprint": 9,
+    "protocol": 9,
+    "constraint": 6,
+    "experience": 10,
+    "identity": 8,
+    "total": 52
+  },
+  "missions": {
+    "active": [],
+    "completed": [
+      "M-001: 0 依赖自动化迁移",
+      "M-002: adata 增强荐股引擎",
+      "M-003: A股信号发现引擎"
+    ],
+    "archived": []
+  }
+}

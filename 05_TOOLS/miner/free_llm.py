@@ -25,6 +25,37 @@ CHANNELS = ["glm", "nim", "github", "ollama"]
 # NIM key 轮询状态
 _nim_key_index = 0
 
+# 代理设置：GLM是国内API不需要代理，其他海外API需要
+_PROXY = os.environ.get("HTTPS_PROXY", os.environ.get("https_proxy", ""))
+_NO_PROXY = os.environ.get("NO_PROXY", os.environ.get("no_proxy", ""))
+
+
+def _needs_proxy(host: str) -> bool:
+    """判断是否需要代理"""
+    no_proxy_hosts = [h.strip() for h in _NO_PROXY.split(",") if h.strip()]
+    for h in no_proxy_hosts:
+        if h in host:
+            return False
+    # GLM 是国内 API，直连
+    if "bigmodel.cn" in host:
+        return False
+    # 其他海外 API 需要代理
+    return True
+
+
+def _urlopen(req, timeout: int = 60):
+    """智能 urlopen：国内直连，海外走代理"""
+    url = req.full_url if hasattr(req, 'full_url') else str(req.selector)
+    if _PROXY and _needs_proxy(url):
+        handler = urllib.request.ProxyHandler({
+            'http': _PROXY,
+            'https': _PROXY,
+        })
+        opener = urllib.request.build_opener(handler)
+        return opener.open(req, timeout=timeout)
+    else:
+        return urllib.request.urlopen(req, timeout=timeout)
+
 
 def _get_nim_key() -> str:
     """轮询获取 NIM key"""
@@ -64,7 +95,7 @@ def _call_glm(messages: list, max_tokens: int, temperature: float) -> Optional[d
             },
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with _urlopen(req, timeout=60) as resp:
             result = json.loads(resp.read())
             content = result["choices"][0]["message"]["content"]
             return {"content": content, "model": model, "channel": "GLM", "raw": result}
@@ -99,7 +130,7 @@ def _call_nim(messages: list, max_tokens: int, temperature: float) -> Optional[d
             },
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with _urlopen(req, timeout=60) as resp:
             result = json.loads(resp.read())
             content = result["choices"][0]["message"]["content"]
             return {"content": content, "model": model, "channel": "NIM", "raw": result}
@@ -134,7 +165,7 @@ def _call_github(messages: list, max_tokens: int, temperature: float) -> Optiona
             },
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with _urlopen(req, timeout=60) as resp:
             result = json.loads(resp.read())
             content = result["choices"][0]["message"]["content"]
             return {"content": content, "model": model, "channel": "GitHub", "raw": result}
@@ -165,7 +196,7 @@ def _call_ollama(messages: list, max_tokens: int, temperature: float) -> Optiona
             headers={"Content-Type": "application/json"},
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with _urlopen(req, timeout=120) as resp:
             result = json.loads(resp.read())
             content = result.get("message", {}).get("content", "")
             return {"content": content, "model": model, "channel": "Ollama", "raw": result}
