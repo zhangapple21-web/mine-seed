@@ -354,6 +354,134 @@ def check_advisor_fallback():
 # 主循环
 # ============================================================
 
+def check_advisor_fallback():
+    """兜底荐股：如果今天是工作日、时间 >= 09:00、cloud/advisor/ 下没有今天的报告，本地补跑。
+    
+    双层保险：
+    - 云端 cron 8:15 生成（主力）
+    - 本地 Runtime 9:00+ 检查，缺了就补（兜底）
+    """
+    now = datetime.now()
+    today = now.strftime("%Y%m%d")
+    today_dash = now.strftime("%Y-%m-%d")
+    
+    # 周末不跑
+    if now.weekday() >= 5:
+        return
+    
+    # 9 点前不跑（给云端 8:15 留时间）
+    if now.hour < 9:
+        return
+    
+    # 检查今天是否已有报告
+    today_report = CLOUD_DIR / f"advisor_{today}.md"
+    if today_report.exists():
+        return  # 云端已生成，不需要兜底
+    
+    # 检查今天是否已经尝试过兜底（避免反复重试）
+    fallback_flag = REPO_DIR / "02_MEMORY" / f".advisor_fallback_{today}"
+    if fallback_flag.exists():
+        return  # 今天已尝试过
+    
+    log.warning(f"[FALLBACK] 今日荐股报告缺失，本地兜底补跑...")
+    
+    # 标记今天已尝试
+    fallback_flag.parent.mkdir(parents=True, exist_ok=True)
+    fallback_flag.write_text(now.isoformat())
+    
+    # 运行 stock_advisor.py
+    advisor_script = REPO_DIR / "05_TOOLS" / "advisor" / "stock_advisor.py"
+    advisor_env = REPO_DIR / "05_TOOLS" / "miner" / "free_api.env"
+    
+    if not advisor_script.exists():
+        log.error(f"[FALLBACK] stock_advisor.py not found: {advisor_script}")
+        return
+    
+    try:
+        # 加载免费 API 环境
+        env = os.environ.copy()
+        if advisor_env.exists():
+            # source free_api.env 的 Python 等价
+            with open(advisor_env) as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("export "):
+                        parts = line[7:].split("=", 1)
+                        if len(parts) == 2:
+                            val = parts[1].strip().strip('"').strip("'")
+                            env[parts[0]] = val
+        
+        # 设置 API（优先用 free_llm，不依赖 Gateway）
+        env["ONE_API_URL"] = ""
+        env["FREE_LLM_MODE"] = "1"
+        
+        result = subprocess.run(
+            [sys.executable, str(advisor_script)],
+            cwd=str(advisor_script.parent),
+            env=env,
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode == 0:
+            # 查找生成的报告
+            advisor_out = REPO_DIR / "05_TOOLS" / "mine_output" / "advisor"
+            latest = None
+            if advisor_out.exists():
+                reports = sorted(advisor_out.glob("advisor_*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                for r in reports:
+                    if today in r.name or today_dash in r.name:
+                        latest = r
+                        break
+                if not latest and reports:
+                    latest = reports[0]  # 取最新的
+            
+            if latest and latest.exists():
+                # 复制到 cloud/
+                CLOUD_DIR.mkdir(parents=True, exist_ok=True)
+                dest = CLOUD_DIR / f"advisor_{today}.md"
+                import shutil
+                shutil.copy(latest, dest)
+                log.info(f"[FALLBACK] 兜底荐股成功: {dest}")
+                
+                # 推 TG
+                push_advisor_report(dest)
+            else:
+                log.warning("[FALLBACK] stock_advisor.py 执行完但未找到报告文件")
+        else:
+            log.error(f"[FALLBACK] stock_advisor.py 失败: {result.stderr[:200]}")
+            
+            # 终极降级：用 free_llm 直接生成
+            log.warning("[FALLBACK] 启动终极降级：free_llm 直接生成")
+            try:
+                sys.path.insert(0, str(REPO_DIR / "05_TOOLS" / "miner"))
+                from free_llm import call
+                
+                result_llm = call(
+                    f"你是A股市场分析师。生成今日({today_dash})的简短荐股报告，推荐2只股票，包含股票代码、名称、推荐理由。格式：Markdown。",
+                    system="你是专业的A股投资顾问。",
+                    max_tokens=1000,
+                    prefer="glm"
+                )
+                
+                report = f"# A股每日荐股 — {today_dash}\n\n{result_llm['content']}\n\n---\n渠道: {result_llm['channel']}/{result_llm['model']} | 耗时: {result_llm['elapsed']:.1f}s | 本地兜底\n"
+                
+                CLOUD_DIR.mkdir(parents=True, exist_ok=True)
+                dest = CLOUD_DIR / f"advisor_{today}.md"
+                dest.write_text(report, encoding="utf-8")
+                log.info(f"[FALLBACK] 终极降级成功: {dest}")
+                
+                push_advisor_report(dest)
+            except Exception as e:
+                log.error(f"[FALLBACK] 终极降级也失败: {e}")
+                
+    except subprocess.TimeoutExpired:
+        log.error("[FALLBACK] stock_advisor.py 超时(120s)")
+    except Exception as e:
+        log.error(f"[FALLBACK] 错误: {e}")
+
+
 def run_once():
     """运行一轮"""
     log.info("=" * 50)

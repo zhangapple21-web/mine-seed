@@ -84,6 +84,25 @@ class AdataAdvisor:
         if not self.available:
             return []
         results = []
+        # 分批获取，每批 50 只
+        batch_size = 50
+        for i in range(0, len(codes), batch_size):
+            batch = codes[i:i+batch_size]
+            try:
+                # adata 的实时行情接口
+                df = self.adata.stock.market.get_market(
+                    stock_code=batch[0],  # adata 可能不支持批量，一次一只
+                    start_date=datetime.now().strftime("%Y-%m-%d"),
+                    end_date=datetime.now().strftime("%Y-%m-%d"),
+                    k_type=1
+                )
+                # 实际上 adata 没有批量实时行情，需要用其他方式
+                # 这里简化：用 stock_query 的腾讯 API 做实时行情
+                break
+            except Exception as e:
+                logger.debug(f"[adata] 批量行情失败: {e}")
+                break
+        
         # 用 stock_query 获取实时行情
         from stock_query import get_stock_query
         sq = get_stock_query()

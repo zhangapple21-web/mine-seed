@@ -1,9 +1,11 @@
 # ACE Runtime — 0 依赖 crontab v2.0
 # 全部使用免费 API 直连，不依赖 TRAE 额度
 # 用法: crontab /workspace/fengzi-repos/mine-seed/06_RUNTIME/crontab.ace
+# 时区: Asia/Shanghai (UTC+8)
 
 SHELL=/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+HOME=/root
 
 # === 存活自检（每小时）===
 0 * * * * bash /workspace/fengzi-repos/mine-seed/05_TOOLS/miner/run_free_task.sh liveness >> /tmp/mine_output/cron_liveness.log 2>&1

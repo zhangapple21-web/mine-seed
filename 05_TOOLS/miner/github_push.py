@@ -28,6 +28,13 @@ API_BASE = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}"
 
 def get_file_sha(path: str) -> str:
     """获取文件的当前 SHA（如果存在）"""
+    url = f"{API_BASE}/contents/{path}?ref={GH_BRANCH}"
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"token {GH_TOKEN}",
+        "Accept": "application/vnd.github.v3+json",
+    })
+    
+    # 不走代理
     import subprocess
     try:
         result = subprocess.run(
@@ -59,6 +66,7 @@ def push_file(file_path: str, repo_path: str, commit_msg: str = "") -> bool:
     if not commit_msg:
         commit_msg = f"cloud: {Path(file_path).name} ({datetime.now().strftime('%Y-%m-%d %H:%M')})"
     
+    # 获取现有 SHA
     sha = get_file_sha(repo_path)
     
     data = {
