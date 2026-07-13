@@ -1,0 +1,40 @@
+{
+  "mid": "AUM-MISSION-ARCH-006",
+  "name": "深矿开采 — r1-continuity-backup 38 治理协议蒸馏",
+  "type": "Architecture",
+  "priority": "P1",
+  "status": "COMPLETED",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "## Mission\n\n开采 r1-continuity-backup 深矿，将 38 份治理协议蒸馏为文明资产。\n目前只读取了 2 份（capability_registry_v2 + agent_roles），还有 36 份待开采。\n这是一座价值极高的深矿 — R1 时代的治理智慧都在这里。",
+  "scope": "## Scope\n\n### 高优先级（核心引擎级）\n- experience_engine.md — 经验引擎\n- judgment_engine.md — 判断引擎\n- continuity_engine.md — 连续性引擎\n- ontology.md — 本体论\n- multi_agent_protocol.md — 多 Agent 协议\n- recovery_protocol.md — 恢复协议（对比 mine-seed 版本）\n\n### 中优先级（治理协议级）\n- lifecycle_policy.md — 生命周期策略\n- risk_internalization.md — 风险内化\n- reflection_contract.md — 反思契约\n- decision_model.md — 决策模型\n- evolution_protocol.md — 演化协议\n\n### 低优先级（参考级）\n- 其余 ~28 份协议，扫读并分类",
+  "deliverables": "## Deliverables\n\n1. 6~10 个新的文明资产（加入 civilization_assets/）\n2. 更新 ASSET_INDEX.md\n3. 更新 civilization_mines.md 开采进度（30% → 50%）\n4. 剩余协议分类清单（高/中/低价值）",
+  "acceptance": "## Acceptance\n\n- [ ] 至少 6 个核心协议已蒸馏为资产\n- [ ] 每个资产回答三问：Why exist? What problem? Can rebuild?\n- [ ] ASSET_INDEX.md 已更新\n- [ ] civilization_mines.md 开采进度已更新\n- [ ] 剩余协议已分类（高/中/低价值清单）",
+  "forbidden": "## Forbidden\n\n❌ 复制代码（只蒸馏思想）\n❌ 修改 Runtime 代码\n❌ 把所有 38 份都做成资产（只蒸馏高价值的）\n❌ 与现有资产重复（重复的不入库）",
+  "distillation": "## Distillation\n\n- **Kernel**: R1 治理智慧蒸馏\n- **Blueprint**: 多引擎治理架构\n- **Protocol**: 经验/判断/连续性引擎抽象\n- **Constraint**: 重复资产不入库\n- **Experience**: 深矿开采经验（如何从大量文档中蒸馏高价值资产）\n- **Identity**: Deep Mine Explorer 能力",
+  "admission": "## Admission\n\n新资产必须通过准入审查：\n- 去重检查：不与现有 19 个资产重复\n- 更优版本检查：是否比现有版本更好\n- 永久保存价值：值得保存吗\n- 文明污染：引入有害概念吗\n\n通过后进入 02_MEMORY/civilization_assets/",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T11:23:18.066509",
+  "updated_at": "2026-07-13T11:31:19.918737",
+  "completed_at": "2026-07-13T11:31:19.918737",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [],
+  "distillation_artifacts": {
+    "kernel": [],
+    "blueprint": [],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": []
+}

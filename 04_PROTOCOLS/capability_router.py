@@ -1,3 +1,21 @@
+"""---
+id: PROTO-008
+type: protocol
+title: "Capability Router — 能力路由器"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.85
+evidence: [E-041, E-042]
+lineage:
+  - OPS-003
+related: [PROTO-001, PROTO-003]
+tags: [router, capability, worker]
+archaeology:
+  state: evolved
+  sources: 2
+---
+"""
 """Capability Router — 能力路由引擎
 
 根据 Civilization Graph 实现：
@@ -73,6 +91,29 @@ class CapabilityRouter:
                 self._index_capabilities()
             except Exception as e:
                 print(f"CapabilityRouter: failed to load graph: {e}")
+
+        # 同时从 Worker Registry 加载 workers
+        try:
+            from worker_registry import WorkerRegistry
+            registry = WorkerRegistry()
+            for w in registry.list_active():
+                wid = f"WORKER:{w['id']}"
+                if wid not in self.workers:
+                    self.workers[wid] = {
+                        "id": wid,
+                        "type": "worker",
+                        "name": w["name"],
+                        "chinese": w.get("chinese", ""),
+                        "properties": {
+                            "capabilities": w.get("capabilities", []),
+                            "cost": w.get("cost", 1),
+                            "priority": w.get("priority", 2),
+                            "health": w.get("health", 1.0),
+                            "description": w.get("description", ""),
+                        },
+                    }
+        except Exception as e:
+            pass
 
     def _index_workers(self):
         self.workers = {}

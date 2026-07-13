@@ -17,6 +17,7 @@ import random
 import logging
 import traceback
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass, field
 
@@ -195,8 +196,8 @@ class AkshareAPI:
             '300408', '300496', '300529', '300595', '300750', '300760', '300896',
         ]
         
-        # 去重
-        hot_stocks = list(set(hot_stocks))
+        # 去重后排序，确保每次运行顺序一致
+        hot_stocks = sorted(list(set(hot_stocks)))
         
         # 分批获取
         batch_size = 30
@@ -280,16 +281,73 @@ class AkshareAPI:
 class StockAdvisor:
     """A股荐股引擎"""
     
-    def __init__(self, max_stocks: int = 100):
+    def __init__(self, max_stocks: int = 500, use_cache: bool = True):
         self.max_stocks = max_stocks
+        self.use_cache = use_cache
         self.api = AkshareAPI()
         self.start_time = time.time()
         self.timeout = 600  # 10分钟超时
+        
+        # 缓存目录
+        self.cache_dir = Path(__file__).parent.parent / 'mine_output' / 'advisor' / 'cache'
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
         
         # 因子参数
         self.momentum_threshold = 2.0  # 动量阈值
         self.volatility_p70 = None  # 动态计算
         
+        # ========== 学习进化系统 ==========
+        # 表现跟踪器
+        from performance_tracker import PerformanceTracker
+        self.tracker = PerformanceTracker()
+        
+        # 自适应评分器
+        from adaptive_scorer import AdaptiveScorer
+        self.scorer = AdaptiveScorer()
+        
+        # 矿工助手（用于失败诊断）
+        from miner_assistant import MinerAssistant
+        self.miner = MinerAssistant()
+        
+        # 推票后审计员
+        from post_recommendation_auditor import PostRecommendationAuditor
+        self.auditor = PostRecommendationAuditor()
+        
+        # 时间感知：记录启动时间和今日日期
+        self.today_str = datetime.now().strftime('%Y%m%d')
+        self.today_datetime = datetime.now()
+        logger.info(f"【时间感知】启动时间: {self.today_datetime}, 今日日期: {self.today_str}")
+    
+    def _get_cache_path(self, name: str) -> Path:
+        """获取缓存文件路径"""
+        today = datetime.now().strftime('%Y%m%d')
+        return self.cache_dir / f'{name}_{today}.json'
+    
+    def _load_cache(self, name: str) -> Optional[Any]:
+        """加载日级缓存"""
+        if not self.use_cache:
+            return None
+        cache_path = self._get_cache_path(name)
+        if cache_path.exists():
+            try:
+                data = json.loads(cache_path.read_text(encoding='utf-8'))
+                logger.info(f"缓存命中: {name}")
+                return data
+            except Exception:
+                pass
+        return None
+    
+    def _save_cache(self, name: str, data: Any):
+        """保存日级缓存"""
+        if not self.use_cache:
+            return
+        cache_path = self._get_cache_path(name)
+        try:
+            cache_path.write_text(json.dumps(data, ensure_ascii=False, default=str), encoding='utf-8')
+            logger.info(f"缓存已保存: {name}")
+        except Exception as e:
+            logger.warning(f"缓存保存失败 {name}: {e}")
+    
     def _check_timeout(self) -> bool:
         """检查超时"""
         return time.time() - self.start_time > self.timeout
@@ -408,7 +466,9 @@ class StockAdvisor:
         logger.info(f"第1层实时初筛：从 {len(all_stocks)} 只股票中筛选")
         
         stock_data_list = []
-        for raw in all_stocks[:self.max_stocks]:
+        # 先按股票代码排序，确保每次运行结果一致
+        sorted_stocks = sorted(all_stocks, key=lambda x: str(x.get('代码', x.get('code', ''))))
+        for raw in sorted_stocks[:self.max_stocks]:
             sd = self._parse_stock_data(raw)
             if sd and sd.price > 0:
                 stock_data_list.append(sd)
@@ -494,7 +554,7 @@ class StockAdvisor:
             sd.layer1_passed = True
         
         # 按得分排序
-        passed = sorted(passed, key=lambda x: x.score, reverse=True)
+        passed = sorted(passed, key=lambda x: (-x.score, x.code))
         
         logger.info(f"第1层筛选通过: {len(passed)} 只")
         for sd in passed[:10]:
@@ -521,9 +581,14 @@ class StockAdvisor:
                 break
             
             try:
-                # 获取真实K线数据（60天以计算更准确的因子）
-                kline = self.api.get_hist_data(sd.code, days=60)
-                sd.kline_data = kline
+                # 获取真实K线数据（60天以计算更准确的因子），先查缓存
+                cache_key = f'kline_{sd.code}_60'
+                kline = self._load_cache(cache_key)
+                if not kline:
+                    kline = self.api.get_hist_data(sd.code, days=60)
+                    if kline:
+                        self._save_cache(cache_key, kline)
+                sd.kline_data = kline if kline else []
                 
                 signals = []
                 has_kline_data = len(kline) >= 20
@@ -657,8 +722,8 @@ class StockAdvisor:
                 logger.warning(f"技术分析失败 {sd.code}: {e}")
                 continue
         
-        # 取TOP5，按重新计算的分数排序
-        top5 = sorted(confirmed, key=lambda x: x.score, reverse=True)[:5]
+        # 取TOP5，按重新计算的分数排序（分数降序，代码升序确保稳定）
+        top5 = sorted(confirmed, key=lambda x: (-x.score, x.code))[:5]
         
         logger.info(f"技术确认后 TOP5: {[s.name for s in top5]}")
         
@@ -722,8 +787,13 @@ class StockAdvisor:
                 break
             
             try:
-                # 资金流向
-                flow_data = self.api.get_fund_flow(sd.code)
+                # 资金流向（带缓存）
+                cache_key = f'flow_{sd.code}'
+                flow_data = self._load_cache(cache_key)
+                if not flow_data:
+                    flow_data = self.api.get_fund_flow(sd.code)
+                    if flow_data:
+                        self._save_cache(cache_key, flow_data)
                 sd.main_inflow_days = flow_data.get('main_inflow_days', 0)
                 sd.total_main_inflow = flow_data.get('total_main_inflow', 0)
                 
@@ -786,8 +856,8 @@ class StockAdvisor:
                 logger.warning(f"基本面分析失败 {sd.code}: {e}")
                 continue
         
-        # 取TOP3
-        top3 = sorted(confirmed, key=lambda x: x.score, reverse=True)[:3]
+        # 取TOP3（分数降序，代码升序确保稳定）
+        top3 = sorted(confirmed, key=lambda x: (-x.score, x.code))[:3]
         
         logger.info(f"基本面确认后 TOP3: {[s.name for s in top3]}")
         
@@ -830,7 +900,7 @@ class StockAdvisor:
             rules_str = ', '.join(trace["matched_rules"]) if trace["matched_rules"] else "无匹配"
             logger.info(f"  ✓ {sd.name}({sd.code}): value_score={trace['value_score']} [{rules_str}]")
         
-        return sorted(stocks, key=lambda x: x.score, reverse=True)
+        return sorted(stocks, key=lambda x: (-x.score, x.code))
     
     def _generate_lineage(self, top_stocks, source_info):
         """生成数据溯源元数据 (MVP: 5字段)"""
@@ -952,6 +1022,173 @@ class StockAdvisor:
         
         return trace_json
     
+    def _get_recent_recommendations(self, days: int = 7) -> Dict[str, int]:
+        """读取最近N天的推荐记录，返回 {股票代码: 最近推荐天数前}"""
+        recent = {}
+        output_dir = Path(__file__).parent.parent / 'mine_output' / 'advisor'
+        if not output_dir.exists():
+            return recent
+        
+        today = datetime.now().date()
+        for i in range(1, days + 1):
+            check_date = today - timedelta(days=i)
+            date_str = check_date.strftime('%Y%m%d')
+            report_file = output_dir / f'advisor_{date_str}.md'
+            if not report_file.exists():
+                continue
+            try:
+                content = report_file.read_text(encoding='utf-8')
+                import re
+                # 匹配股票代码：推荐1：xxx（600000）
+                pattern = r'推荐\d+：[^（]+（(\d{6})）'
+                for match in re.finditer(pattern, content):
+                    code = match.group(1)
+                    if code not in recent:
+                        recent[code] = i  # i 天前推荐过
+            except Exception:
+                continue
+        return recent
+
+    def _get_stock_industry(self, code: str) -> str:
+        """粗略获取股票所属行业（基于代码前缀）"""
+        if code.startswith('688'):
+            return '科创板'
+        elif code.startswith('300'):
+            return '创业板'
+        elif code.startswith('60') or code.startswith('000'):
+            # 主板粗略按代码分段
+            if code.startswith('6005') or code.startswith('6008'):
+                return '消费'
+            elif code.startswith('6000') or code.startswith('6013') or code.startswith('6019'):
+                return '金融'
+            elif code.startswith('6002') or code.startswith('6004'):
+                return '医药'
+            elif code.startswith('6016') or code.startswith('6011'):
+                return '能源'
+            elif code.startswith('002'):
+                return '中小板'
+            else:
+                return '主板'
+        elif code.startswith('002'):
+            return '中小板'
+        else:
+            return '其他'
+
+    def _apply_recent_dedup_and_diversity(self, stocks: List) -> List:
+        """近期推荐去重 + 行业多样性
+
+        规则：
+        1. 近3天推荐过的股票：直接降权30分（基本不会再选中）
+        2. 近7天推荐过的股票：降权15分
+        3. 尽量从不同行业中选择，避免两只都来自同一行业
+        """
+        if not stocks:
+            return stocks
+
+        recent = self._get_recent_recommendations(7)
+        logger.info(f"近期推荐记录: {len(recent)} 只股票在近7天内被推荐过")
+
+        # 给每只股票计算惩罚分
+        for sd in stocks:
+            days_ago = recent.get(sd.code)
+            if days_ago is not None:
+                if days_ago <= 3:
+                    penalty = 30
+                    logger.info(f"  ⬇️ {sd.name}({sd.code}): {days_ago}天前刚推荐过，-{penalty}分")
+                else:
+                    penalty = 15
+                    logger.info(f"  ⬇️ {sd.name}({sd.code}): {days_ago}天前推荐过，-{penalty}分")
+                sd.score = max(0, sd.score - penalty)
+                sd.layer1_reasons.append(f"recent_dedup_penalty -{penalty}")
+
+        # 重新排序（分数降序，股票代码升序确保稳定）
+        stocks = sorted(stocks, key=lambda x: (-x.score, x.code))
+
+        # 行业多样性：确保前2名来自不同行业
+        if len(stocks) >= 2:
+            first_industry = self._get_stock_industry(stocks[0].code)
+            # 从第2名开始找，找一个不同行业的
+            for i in range(1, len(stocks)):
+                if self._get_stock_industry(stocks[i].code) != first_industry:
+                    if i > 1:
+                        # 把这只移到第2位
+                        stocks[1], stocks[i] = stocks[i], stocks[1]
+                        logger.info(f"  🔄 行业多样性调整: {stocks[1].name}({stocks[1].code}) 替换为第2推荐")
+                    break
+
+        return stocks
+
+    def _get_yesterday_check(self) -> str:
+        """获取昨日推荐股票的今日表现回检"""
+        yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+        lines = []
+        
+        # 从 performance_db 查找昨日推荐
+        yesterday_recs = [r for r in self.tracker.records.values() 
+                         if r.recommend_date == yesterday]
+        
+        if not yesterday_recs:
+            return ""
+        
+        lines.append("\n## 昨日推荐回检\n")
+        lines.append("| 股票 | 推荐价 | T+1收益 | 状态 |")
+        lines.append("|------|--------|---------|------|")
+        
+        for rec in yesterday_recs:
+            ret = rec.return_t1
+            if ret is not None:
+                status = "✅ 盈利" if ret > 0 else "❌ 亏损"
+                lines.append(f"| {rec.name}({rec.code}) | ¥{rec.recommend_price:.2f} | {ret:+.2f}% | {status} |")
+            else:
+                lines.append(f"| {rec.name}({rec.code}) | ¥{rec.recommend_price:.2f} | 待更新 | ⏳ |")
+        
+        lines.append("")
+        return "\n".join(lines)
+
+    def _get_health_section(self) -> str:
+        """获取系统健康度和历史胜率"""
+        health = self.scorer.get_health_score(self.tracker)
+        summary = health.get('summary', {})
+        
+        lines = []
+        lines.append("\n## 系统健康度\n")
+        
+        score = health.get('score', 50)
+        status = health.get('status', 'unknown')
+        status_emoji = {"healthy": "🟢", "warning": "🟡", "critical": "🔴", "unknown": "⚪"}.get(status, "⚪")
+        
+        lines.append(f"**健康度评分**: {status_emoji} {score}/100 ({status})")
+        lines.append("")
+        
+        # 历史胜率
+        win_rates = summary.get('win_rates', {})
+        avg_returns = summary.get('avg_returns', {})
+        total = summary.get('total_recommendations', 0)
+        
+        if total > 0:
+            lines.append(f"**最近30天统计**: 共推荐 {total} 次")
+            lines.append("")
+            lines.append("| 周期 | 胜率 | 平均收益 |")
+            lines.append("|------|------|----------|")
+            for period in ['T+1', 'T+3', 'T+5']:
+                wr = win_rates.get(period)
+                ret = avg_returns.get(period)
+                if wr is not None and ret is not None:
+                    lines.append(f"| {period} | {wr}% | {ret:+.2f}% |")
+            lines.append("")
+        else:
+            lines.append("*暂无足够历史数据，运行几天后可见统计*")
+            lines.append("")
+        
+        # 因子调整记录
+        if self.scorer.adjustment_history:
+            lines.append("**最近权重调整**:")
+            for adj in self.scorer.adjustment_history[-3:]:
+                lines.append(f"- {adj['factor']}: {adj['old_weight']:.1f} → {adj['new_weight']:.1f} ({adj['reason']})")
+            lines.append("")
+        
+        return "\n".join(lines)
+
     def layer4_output(self, stocks: List[StockData], all_candidates: List[StockData] = None, host_profile: Dict = None) -> str:
         """第4层：输出报告"""
         today = datetime.now().strftime('%Y-%m-%d')
@@ -967,26 +1204,44 @@ class StockAdvisor:
 
 > 🤖 AI量化选股 · 四层筛选 · 仅供参考
 
----
-
+"""
+        # 数据新鲜度提示
+        trading_info = self._is_trading_time()
+        if trading_info["status"] != "trading":
+            report += f"> ⚠️ **数据提示**：{trading_info['note']}\n>\n"
+        
+        report += """---
 """
         
         for i, sd in enumerate(top2, 1):
             # 生成核心逻辑
             logics = []
             
-            if sd.momentum_5d > 5:
+            if sd.momentum_5d and sd.momentum_5d > 5:
                 logics.append(f"动量强劲：近5日累计涨幅 {sd.momentum_5d:.1f}%，资金持续介入")
-            elif sd.momentum_5d > 2:
+            elif sd.momentum_5d and sd.momentum_5d > 2:
                 logics.append(f"温和上涨：近期走势稳健，{sd.momentum_5d:.1f}%涨幅显示多头力量")
+            elif sd.momentum_5d and sd.momentum_5d > 0:
+                logics.append(f"小幅上涨：{sd.momentum_5d:.1f}%温和爬升，趋势逐步确立")
             
-            if sd.return_60d < -5:
+            if sd.return_60d and sd.return_60d < -5:
                 logics.append(f"均值回归：前期回调充分（60日跌{abs(sd.return_60d):.1f}%），安全边际较高")
+            elif sd.return_60d and sd.return_60d > 5:
+                logics.append(f"中期强势：60日累计涨幅 {sd.return_60d:.1f}%，趋势向上")
             
-            if sd.main_inflow_days >= 4:
+            if sd.main_inflow_days and sd.main_inflow_days >= 4:
                 logics.append(f"资金青睐：近{sd.main_inflow_days}日主力净流入，机构建仓信号")
-            elif sd.main_inflow_days >= 3:
+            elif sd.main_inflow_days and sd.main_inflow_days >= 3:
                 logics.append(f"资金入场：连续{sd.main_inflow_days}日主力净流入，筹码沉淀中")
+            
+            # 保底逻辑：确保至少有1条核心逻辑
+            if not logics:
+                if sd.tech_signals and len(sd.tech_signals) >= 2:
+                    logics.append(f"技术面共振：{len(sd.tech_signals)}个技术信号同时触发")
+                elif sd.pe and sd.pe > 0:
+                    logics.append(f"估值合理：PE {sd.pe:.1f}倍，处于行业合理区间")
+                else:
+                    logics.append("形态向好：技术面呈现多头格局")
             
             # 技术面要点
             tech_points = []
@@ -1029,6 +1284,14 @@ class StockAdvisor:
 ---
 
 """
+        
+        # 昨日推荐回检
+        yesterday_check = self._get_yesterday_check()
+        if yesterday_check:
+            report += yesterday_check
+        
+        # 系统健康度和历史胜率
+        report += self._get_health_section()
         
         # 操作建议
         report += """## 操作建议
@@ -1129,6 +1392,94 @@ class StockAdvisor:
                 "prefer_story": False
             }
     
+    def _is_trading_time(self) -> Dict[str, Any]:
+        """判断当前是否为交易时段"""
+        now = datetime.now()
+        weekday = now.weekday()  # 0=周一, 6=周日
+        hour = now.hour
+        minute = now.minute
+        current_min = hour * 60 + minute
+
+        # 周末非交易日
+        is_trading_day = weekday < 5
+        # 交易时段：9:30-11:30, 13:00-15:00
+        morning_start = 9 * 60 + 30  # 570
+        morning_end = 11 * 60 + 30   # 690
+        afternoon_start = 13 * 60    # 780
+        afternoon_end = 15 * 60      # 900
+
+        in_morning = morning_start <= current_min <= morning_end
+        in_afternoon = afternoon_start <= current_min <= afternoon_end
+        is_trading_time = is_trading_day and (in_morning or in_afternoon)
+
+        # 距离开盘还有多久
+        if is_trading_day and current_min < morning_start:
+            minutes_to_open = morning_start - current_min
+            status = "pre_market"
+            note = f"距开盘还有 {minutes_to_open} 分钟，当前为盘前数据（上一交易日收盘价）"
+        elif is_trading_day and morning_end < current_min < afternoon_start:
+            status = "midday_break"
+            note = "午间休市，数据为上午收盘数据"
+        elif not is_trading_day:
+            status = "non_trading_day"
+            note = "非交易日，数据为最近一个交易日数据"
+        elif is_trading_time:
+            status = "trading"
+            note = "交易时段，数据为实时行情"
+        else:
+            status = "post_market"
+            note = "已收盘，数据为今日收盘数据"
+
+        return {
+            "is_trading_day": is_trading_day,
+            "is_trading_time": is_trading_time,
+            "status": status,
+            "note": note,
+            "current_time": now.strftime("%H:%M"),
+        }
+
+    def _update_current_state(self):
+        """更新 CURRENT_STATE.md 中的推荐健康度"""
+        try:
+            health = self.scorer.get_health_score(self.tracker)
+            workspace = Path(__file__).parent.parent.parent  # mine-seed/
+            state_file = workspace / 'CURRENT_STATE.md'
+            
+            # 构建健康度片段
+            today = datetime.now().strftime('%Y-%m-%d %H:%M')
+            health_section = f"""## 荐股系统健康度
+
+> 更新时间: {today}
+
+- **健康度评分**: {health.get('score', 50)}/100 ({health.get('status', 'unknown')})
+- **最近30天推荐次数**: {health.get('summary', {}).get('total_recommendations', 0)}
+- **T+5胜率**: {health.get('summary', {}).get('win_rates', {}).get('T+5', 'N/A')}%
+- **T+5平均收益**: {health.get('summary', {}).get('avg_returns', {}).get('T+5', 'N/A')}%
+
+"""
+            
+            if state_file.exists():
+                content = state_file.read_text(encoding='utf-8')
+                # 替换或追加
+                if '## 荐股系统健康度' in content:
+                    # 替换现有部分
+                    import re
+                    pattern = r'## 荐股系统健康度\n.*?\n(?=## |\Z)'
+                    replacement = health_section
+                    content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+                else:
+                    # 追加到末尾
+                    content = content.rstrip() + '\n\n' + health_section
+                
+                state_file.write_text(content, encoding='utf-8')
+            else:
+                # 创建新文件
+                state_file.write_text(f"# CURRENT_STATE\n\n{health_section}", encoding='utf-8')
+            
+            logger.info(f"CURRENT_STATE.md 已更新，健康度: {health.get('score', 50)}")
+        except Exception as e:
+            logger.warning(f"更新 CURRENT_STATE 失败: {e}")
+
     def run(self) -> Tuple[bool, str]:
         """运行荐股引擎"""
         logger.info("=" * 60)
@@ -1142,7 +1493,13 @@ class StockAdvisor:
         try:
             # 第1层：因子筛选
             logger.info("【第1层】获取全市场行情数据...")
-            all_stocks = self.api.get_stock_spot_em()
+            
+            # 先查日级缓存
+            all_stocks = self._load_cache('spot_market')
+            if not all_stocks:
+                all_stocks = self.api.get_stock_spot_em()
+                if all_stocks and len(all_stocks) >= 50:
+                    self._save_cache('spot_market', all_stocks)
             
             if not all_stocks or len(all_stocks) < 50:
                 logger.warning("市场数据不足，使用备用方案...")
@@ -1174,6 +1531,9 @@ class StockAdvisor:
             # ========== CCO₄: 读取 host_profile 并应用价值匹配 ==========
             host_profile = self._load_host_profile()
             layer4_result = self.apply_value_trace(layer3_result, host_profile)
+            
+            # ========== CCO₅: 近期推荐去重 + 行业多样性 ==========
+            layer4_result = self._apply_recent_dedup_and_diversity(layer4_result)
             
             # 合并所有候选用于trace
             all_candidates = all_layer1_candidates + all_layer2_candidates + layer3_result
@@ -1225,6 +1585,88 @@ class StockAdvisor:
             with open(lineage_file, 'w', encoding='utf-8') as f:
                 json.dump(lineage, f, ensure_ascii=False, indent=2)
             logger.info(f"Lineage JSON已保存至: {lineage_file}")
+            
+            # ========== 推票后审计系统 ==========
+            logger.info("【审计系统】执行推票后审计...")
+            
+            audit_results = []
+            for sd in layer4_result[:2]:
+                try:
+                    signals = sd.tech_signals if hasattr(sd, 'tech_signals') else []
+                    audit_result = self.auditor.audit(
+                        code=sd.code,
+                        name=sd.name,
+                        price=sd.price,
+                        signals=signals,
+                        recommend_date=date_str
+                    )
+                    audit_results.append({
+                        'code': sd.code,
+                        'name': sd.name,
+                        'overall_score': audit_result.overall_score,
+                        'overall_rating': audit_result.overall_rating,
+                    })
+                    logger.info(f"【审计结果】{sd.name}({sd.code}): {audit_result.overall_score}/100 [{audit_result.overall_rating}]")
+                except Exception as e:
+                    logger.warning(f"【审计】{sd.name}({sd.code}) 审计失败: {e}")
+            
+            # ========== 学习进化系统：注册推荐 + 更新表现 + 自适应调整 ==========
+            logger.info("【学习系统】注册推荐并更新表现数据...")
+            
+            # 1. 注册本次推荐到 PerformanceTracker
+            for sd in layer4_result[:2]:
+                self.tracker.register_recommendation(
+                    code=sd.code,
+                    name=sd.name,
+                    price=sd.price,
+                    date_str=date_str
+                )
+            
+            # 2. 更新所有 pending 记录的表现（获取历史价格）
+            try:
+                self.tracker.update_all()
+            except Exception as e:
+                logger.warning(f"表现更新失败: {e}")
+            
+            # 3. 自适应评分：分析历史并调整权重
+            try:
+                adjusted, adjustments = self.scorer.analyze_and_adjust(self.tracker)
+                if adjusted:
+                    logger.info(f"【自适应】权重已调整: {len(adjustments)} 个因子")
+                    for adj in adjustments:
+                        logger.info(f"  {adj['factor']}: {adj['old_weight']:.1f} -> {adj['new_weight']:.1f}")
+                else:
+                    logger.info("【自适应】权重无需调整")
+            except Exception as e:
+                logger.warning(f"自适应评分失败: {e}")
+            
+            # 4. 触发优化检查
+            try:
+                if self.scorer.should_trigger_optimization(self.tracker, consecutive_losses_threshold=3):
+                    logger.warning("【学习系统】触发因子优化任务，调用矿工分析...")
+                    opt_task = self.scorer.generate_optimization_task(self.tracker)
+                    
+                    # 保存优化任务
+                    opt_file = os.path.join(output_dir, f'optimization_task_{date_str}.json')
+                    with open(opt_file, 'w', encoding='utf-8') as f:
+                        json.dump(opt_task, f, ensure_ascii=False, indent=2)
+                    
+                    # 调用矿工分析（异步，不阻塞）
+                    try:
+                        miner_result = self.miner.analyze_failures(self.tracker)
+                        logger.info(f"【矿工】分析报告已生成 ({miner_result['source']}): {miner_result['saved_to']}")
+                    except Exception as me:
+                        logger.warning(f"【矿工】分析失败: {me}")
+                else:
+                    logger.info("【学习系统】当前表现正常，无需优化")
+            except Exception as e:
+                logger.warning(f"优化检查失败: {e}")
+            
+            # 5. 更新 CURRENT_STATE.md 健康度
+            try:
+                self._update_current_state()
+            except Exception as e:
+                logger.warning(f"更新 CURRENT_STATE 失败: {e}")
             
             elapsed = time.time() - self.start_time
             logger.info(f"荐股引擎执行完成，耗时 {elapsed:.1f} 秒")

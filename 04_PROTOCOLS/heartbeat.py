@@ -1,3 +1,20 @@
+"""---
+id: PROTO-001
+type: protocol
+title: "Heartbeat — 文明心跳循环"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.95
+lineage:
+  - OPS-005
+  - OPS-004
+related: [PROTO-002, PROTO-004, PROTO-005]
+tags: [heartbeat, loop, core, runtime]
+archaeology:
+  state: original
+---
+"""
 #!/usr/bin/env python3
 """
 ACE Heartbeat - Silent background heartbeat
@@ -283,8 +300,10 @@ def beat(log):
             evo = SelfEvolution()
             evo_results = evo.process_approved_decisions(recent_decisions)
             evolved = [r for r in evo_results if r.get("status") == "evolved"]
+            skipped = [r for r in evo_results if r.get("status") == "skipped"]
             report["steps"]["self_evolution"] = {
                 "processed": len(evo_results),
+                "skipped": len(skipped),
                 "evolved": len(evolved),
                 "deferred": len([r for r in evo_results if r.get("status") == "deferred_to_human"]),
                 "failed": len([r for r in evo_results if r.get("status") in ["failed", "error"]]),
@@ -297,28 +316,215 @@ def beat(log):
         report["steps"]["self_evolution"] = {"error": str(e)}
         log.error(f"SelfEvolution error: {e}")
 
-    # CIV-001: Civilization Map Monitor
+    # GOV-001: RoundTable Debate — 红蓝对抗辩论
     try:
-        civ_map_mod = import_module(WORKSPACE / "04_PROTOCOLS" / "civilization_map.py")
-        repos = civ_map_mod.fetch_repos()
-        if repos:
-            civ_report = civ_map_mod.analyze_repos(repos)
-            for repo in civ_report["repos"]:
-                if repo["days_stale"] > repo["max_stale_days"]:
-                    civ_map_mod.sediment_stale_experience(repo["name"], repo)
-            civ_map_mod.update_current_state(civ_report)
-            report["steps"]["civilization_map"] = {
-                "total_repos": civ_report["total_repos"],
-                "stale_count": civ_report["stale_count"],
-                "critical_stale": civ_report["critical_stale"],
+        from roundtable import debate_open_questions
+        debate_result = debate_open_questions(priority="P1", max_debates=5)
+        if "error" not in debate_result:
+            total = debate_result.get("total_debated", 0)
+            approved = sum(1 for r in debate_result.get("results", []) if r.get("verdict") == "approved")
+            rejected = sum(1 for r in debate_result.get("results", []) if r.get("verdict") == "rejected")
+            pending = sum(1 for r in debate_result.get("results", []) if r.get("verdict") == "pending")
+            report["steps"]["debate"] = {
+                "total_debated": total,
+                "approved": approved,
+                "rejected": rejected,
+                "pending": pending,
+                "priority_threshold": debate_result.get("priority_threshold", "P1"),
             }
-            if civ_report["stale_count"] > 0:
-                log.warning(f"CivMap: {civ_report['stale_count']} stale repos")
-            else:
-                log.info(f"CivMap: {civ_report['total_repos']} repos, all fresh")
+            log.info(f"Debate: {total} debated ({approved} approved, {rejected} rejected, {pending} pending)")
+        else:
+            report["steps"]["debate"] = {"error": debate_result["error"]}
     except Exception as e:
-        report["steps"]["civilization_map"] = {"error": str(e)}
-        log.error(f"CivMap error: {e}")
+        report["steps"]["debate"] = {"error": str(e)}
+        log.error(f"Debate error: {e}")
+
+    # SLE-001: Self-Learning Engine — 从经验中自动学习
+    try:
+        from self_learning_engine import SelfLearningEngine
+        sle = SelfLearningEngine()
+        learn_result = sle.run_learning_cycle()
+        m = learn_result["metrics"]
+        report["steps"]["self_learning"] = {
+            "experiences": m["total_experiences"],
+            "seeded": learn_result.get("seed_results", {}).get("total_seeded", 0),
+            "failure_patterns": learn_result["patterns"]["failure_patterns_detected"],
+            "success_patterns": learn_result["patterns"]["success_patterns_detected"],
+            "hypotheses": learn_result["hypotheses"]["total_generated"],
+            "questions_pushed": learn_result["hypotheses"].get("pushed_to_question_center", 0),
+            "experiments_recommended": learn_result["experiments"]["recommended"],
+            "experiments_auto_executed": learn_result["experiments"]["auto_executed"],
+        }
+        seeded = learn_result.get("seed_results", {}).get("total_seeded", 0)
+        log.info(f"SelfLearning: {m['total_experiences']} exps (+{seeded}), {learn_result['hypotheses']['total_generated']} hypotheses, {learn_result['hypotheses'].get('pushed_to_question_center', 0)} pushed")
+    except Exception as e:
+        report["steps"]["self_learning"] = {"error": str(e)}
+        log.error(f"SelfLearning error: {e}")
+
+    # MISSION-001: Mission Protocol — 文明任务监控
+    try:
+        from mission_protocol import protocol
+        summary = protocol.get_summary()
+        active_missions = protocol.list_active()
+        report["steps"]["missions"] = {
+            "total": summary["total"],
+            "active": summary["active"],
+            "by_status": summary["by_status"],
+            "active_list": [
+                {"mid": m.mid, "name": m.name, "priority": m.priority, "status": m.status}
+                for m in active_missions
+            ],
+        }
+        log.info(f"Missions: {summary['active']} active / {summary['total']} total")
+    except Exception as e:
+        report["steps"]["missions"] = {"error": str(e)}
+        log.error(f"Missions error: {e}")
+
+    # DFP-001: Drawer First Protocol — 抽屉扫描检查
+    try:
+        from mission_protocol import protocol
+        all_missions = protocol.list_all()
+        missing_drawer = [m.mid for m in all_missions if m.status == "ACTIVE" and not m.drawer_scan_done]
+        report["steps"]["drawer_scan"] = {
+            "active_missions": len(all_missions),
+            "missing_drawer_scan": len(missing_drawer),
+            "drawer_scan_required": missing_drawer,
+        }
+        if missing_drawer:
+            log.warning(f"DFP: {len(missing_drawer)} active missions missing drawer scan: {missing_drawer}")
+        else:
+            log.info("DFP: All active missions have completed drawer scan")
+    except Exception as e:
+        report["steps"]["drawer_scan"] = {"error": str(e)}
+        log.error(f"DrawerScan error: {e}")
+
+    # REPO-001: Civilization Repository — 文明仓库监控
+    try:
+        from repository import Repository
+        from repository_store import RepositoryStore
+        repo = Repository()
+        store = RepositoryStore(repo)
+        store.load()
+        stats = repo.stats()
+        report["steps"]["civ_repo"] = {
+            "total_assets": stats["total"],
+            "by_type": stats["by_type"],
+            "active": stats["active"],
+        }
+        log.info(f"CivRepo: {stats['total']} assets total")
+    except Exception as e:
+        report["steps"]["civ_repo"] = {"error": str(e)}
+        log.error(f"CivRepo error: {e}")
+
+    # IDENT-001: Identity Core check
+    try:
+        from identity_core import identity
+        ident = identity.get_full_identity()
+        report["steps"]["identity"] = {
+            "name": ident["civilizational"]["name"],
+            "version": ident["operational"]["version"],
+            "personas": len(ident["personas"]),
+            "capabilities": len(ident["operational"]["capabilities"]),
+        }
+    except Exception as e:
+        report["steps"]["identity"] = {"error": str(e)}
+        log.error(f"Identity error: {e}")
+
+    # CONTINUITY-001: Continuity Engine — 统一连续性检查
+    # (ARCH-012: 将分散在 heartbeat 中的连续性检查整合为独立模块)
+    try:
+        from continuity_engine import ContinuityEngine
+        ce = ContinuityEngine()
+        continuity_report = ce.run_all_checks()
+
+        # 将各检查结果映射到 report["steps"]
+        for check_id, check_result in continuity_report["checks"].items():
+            report["steps"][check_id] = check_result
+
+            # 日志输出
+            status = check_result.get("status", "unknown")
+            name = check_result.get("name", check_id)
+            if status in ("error", "alert"):
+                log.warning(f"Continuity[{name}]: {status}")
+            else:
+                log.info(f"Continuity[{name}]: {status}")
+
+        report["steps"]["continuity_summary"] = {
+            "total": continuity_report["total_checks"],
+            "ok": continuity_report["ok"],
+            "errors": continuity_report["errors"],
+        }
+    except Exception as e:
+        report["steps"]["continuity"] = {"error": str(e)}
+        log.error(f"ContinuityEngine error: {e}")
+
+    # CONSTRAINT-001: Three Unloseable Constraints Validation
+    # (ARCH-013: Automated validation of Continuity/L∞/Admission constraints)
+    try:
+        from constraint_validator import ConstraintValidator
+        cv = ConstraintValidator()
+        constraint_report = cv.validate_all()
+
+        # 将各约束结果映射到 report["steps"]
+        for constraint_id, constraint_result in constraint_report["constraints"].items():
+            report["steps"][f"constraint_{constraint_id}"] = constraint_result
+
+            # 日志输出
+            status = constraint_result.get("status", "unknown")
+            severity = constraint_result.get("severity", "unknown")
+            name = constraint_result.get("name", constraint_id)
+            if severity in ("critical", "high"):
+                log.critical(f"Constraint[{name}]: {status} — {constraint_result.get('message', '')}")
+            elif severity == "medium":
+                log.warning(f"Constraint[{name}]: {status}")
+            else:
+                log.info(f"Constraint[{name}]: {status}")
+
+        report["steps"]["constraint_summary"] = {
+            "overall_status": constraint_report["overall_status"],
+            "overall_severity": constraint_report["overall_severity"],
+            "total": constraint_report["total_constraints"],
+            "satisfied": constraint_report["satisfied"],
+            "violated": constraint_report["violated"],
+            "errors": constraint_report["errors"],
+        }
+    except Exception as e:
+        report["steps"]["constraints"] = {"error": str(e)}
+        log.error(f"ConstraintValidator error: {e}")
+
+    # AUTO-001: Autophagy — 良性自噬（轻度，每次心跳）
+    # NOTE: autophagy_engine.py 当前不存在，保留错误处理作为模块缺失记录
+    try:
+        from autophagy_engine import AutophagyEngine
+        auto = AutophagyEngine()
+        light_result = auto.run_light()
+        report["steps"]["autophagy"] = {
+            "items_cleaned": light_result["items_cleaned"],
+            "kb_saved": light_result["kb_saved"],
+            "level": "light",
+        }
+        log.info(f"Autophagy: {light_result['items_cleaned']} items, {light_result['kb_saved']} KB saved")
+    except Exception as e:
+        report["steps"]["autophagy"] = {"error": str(e)}
+        log.error(f"Autophagy error: {e}")
+
+    # Worker Health Check
+    try:
+        from worker_registry import WorkerRegistry
+        registry = WorkerRegistry()
+        ws = registry.summary()
+        unhealthy = [w for w in registry.list_all() if w.get("health", 1.0) < 0.7]
+        report["steps"]["worker_health"] = {
+            "total": ws["total"],
+            "active": ws["active"],
+            "avg_health": round(ws["avg_health"], 2),
+            "capabilities": ws["total_capabilities"],
+            "unhealthy": len(unhealthy),
+        }
+        log.info(f"Worker Health: {ws['active']}/{ws['total']} active, avg_health={ws['avg_health']:.2f}")
+    except Exception as e:
+        report["steps"]["worker_health"] = {"error": str(e)}
+        log.error(f"WorkerHealth error: {e}")
 
     # STATE-001: Update Current State Dashboard
     try:
@@ -540,10 +746,110 @@ def _build_heartbeat_html(report: dict) -> str:
         parts.append(f"问题生成: {qe.get('generated', 0)} 个")
     if "debate" in steps:
         db = steps["debate"]
-        parts.append(f"多智能体辩论: 通过 {db.get('approved', 0)} 个, 暂缓 {db.get('deferred', 0)} 个")
+        if "error" not in db:
+            total = db.get("total_debated", 0)
+            approved = db.get("approved", 0)
+            rejected = db.get("rejected", 0)
+            pending = db.get("pending", 0)
+            if total > 0:
+                parts.append(f"红蓝辩论: {total}场 (✅{approved} ❌{rejected} ⏳{pending})")
+        else:
+            parts.append(f"红蓝辩论: 异常 ({db.get('error', '')[:20]})")
     if "self_evolution" in steps:
         se = steps["self_evolution"]
-        parts.append(f"自我演化: 处理 {se.get('processed', 0)} 个决策")
+        if se.get("status") == "skipped":
+            parts.append(f"自我演化: 跳过 ({se.get('reason', '')})")
+        else:
+            processed = se.get("processed", 0)
+            skipped = se.get("skipped", 0)
+            new_processed = processed - skipped
+            if new_processed > 0:
+                parts.append(f"自我演化: 新处理 {new_processed} 个, 跳过 {skipped} 个")
+            else:
+                parts.append(f"自我演化: 跳过 {skipped} 个 (已处理)")
+    if "self_learning" in steps:
+        sl = steps["self_learning"]
+        if "error" not in sl:
+            exps = sl.get("experiences", 0)
+            seeded = sl.get("seeded", 0)
+            hypos = sl.get("hypotheses", 0)
+            pushed = sl.get("questions_pushed", 0)
+            patterns = sl.get("failure_patterns", 0) + sl.get("success_patterns", 0)
+            seed_str = f" (+{seeded})" if seeded > 0 else ""
+            push_str = f", 推送{pushed}问" if pushed > 0 else ""
+            parts.append(f"自学习: {exps}{seed_str} 经验, {patterns} 模式, {hypos} 假设{push_str}")
+        else:
+            parts.append(f"自学习: 异常 ({sl.get('error', '')[:30]})")
+    if "missions" in steps:
+        ms = steps["missions"]
+        if "error" not in ms:
+            active = ms.get("active", 0)
+            total = ms.get("total", 0)
+            active_list = ms.get("active_list", [])
+            if active > 0:
+                top = active_list[0] if active_list else None
+                top_str = f" → {top['mid']}" if top else ""
+                parts.append(f"任务: {active}/{total} 进行中{top_str}")
+            else:
+                parts.append(f"任务: {total} 个, 无活跃")
+        else:
+            parts.append(f"任务: 异常 ({ms.get('error', '')[:20]})")
+    if "civ_repo" in steps:
+        cr = steps["civ_repo"]
+        if "error" not in cr:
+            total = cr.get("total_assets", 0)
+            by_type = cr.get("by_type", {})
+            # 只显示有资产的类型
+            has_types = [k for k, v in by_type.items() if v > 0]
+            if has_types:
+                type_str = ", ".join(f"{k[:3]}_{v}" for k, v in by_type.items() if v > 0)
+                parts.append(f"文明: {total} 资产 ({type_str})")
+            else:
+                parts.append(f"文明: 空仓库")
+        else:
+            parts.append(f"文明: 异常 ({cr.get('error', '')[:20]})")
+    if "autophagy" in steps:
+        au = steps["autophagy"]
+        if "error" not in au:
+            items = au.get("items_cleaned", 0)
+            kb = au.get("kb_saved", 0)
+            if items > 0:
+                parts.append(f"自噬: 清{items}项, 省{kb:.0f}KB")
+        else:
+            parts.append(f"自噬: 异常 ({au.get('error', '')[:20]})")
+    if "nature_reserve" in steps:
+        nr = steps["nature_reserve"]
+        if "error" not in nr:
+            status = nr.get("status", "?")
+            if status == "alert":
+                parts.append(f"保留区: ⚠️ 篡改{nr.get('tampered', 0)} 缺失{nr.get('missing', 0)}")
+            elif status == "clean":
+                parts.append(f"保留区: {nr.get('intact', 0)}/{nr.get('total', 0)} 完整")
+        else:
+            parts.append(f"保留区: 异常 ({nr.get('error', '')[:20]})")
+    if "gene_network" in steps:
+        gn = steps["gene_network"]
+        if "error" not in gn:
+            parts.append(f"基因网络: {gn.get('total_genes', 0)}基因, {gn.get('total_dependencies', 0)}依赖")
+    if "energy_budget" in steps:
+        eb = steps["energy_budget"]
+        if "error" not in eb:
+            level = eb.get("level", "?")
+            level_emoji = {"green": "🟢", "yellow": "🟡", "orange": "🟠", "red": "🔴"}
+            parts.append(f"能量: {level_emoji.get(level, '?')}{level}")
+    if "seed_archive" in steps:
+        sa = steps["seed_archive"]
+        if "error" not in sa:
+            action = sa.get("action", "")
+            if action == "created":
+                parts.append(f"基因备份: {sa.get('seed_id', '?')} ({sa.get('size_kb', 0)}KB)")
+    if "worker_health" in steps:
+        wh = steps["worker_health"]
+        if "error" not in wh:
+            parts.append(
+                f"Worker健康: {wh.get('active', 0)}/{wh.get('total', 0)} 活跃, "
+                f"健康度 {wh.get('avg_health', 0):.2f}"
+            )
     if "explorer_v2" in steps:
         ex = steps["explorer_v2"]
         if ex.get("status") != "skipped":

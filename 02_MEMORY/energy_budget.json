@@ -1,0 +1,25 @@
+{
+  "daily": {
+    "api_calls": 0,
+    "token_usage": 0,
+    "disk_write_mb": 0,
+    "network_requests": 0
+  },
+  "hourly": {
+    "api_calls": 0,
+    "token_usage": 0,
+    "disk_write_mb": 0,
+    "network_requests": 0
+  },
+  "per_beat": {
+    "api_calls": 0,
+    "token_usage": 0,
+    "disk_write_mb": 0,
+    "network_requests": 0
+  },
+  "last_reset": {
+    "daily": "20260713",
+    "hourly": "2026071320"
+  },
+  "history": []
+}

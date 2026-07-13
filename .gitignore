@@ -110,3 +110,20 @@ _tmp/
 06_RUNTIME/index.json
 06_RUNTIME/index.md
 06_RUNTIME/styles.css
+
+# === ARCH-013 子任务4: 经验中间态数据（可清理，不上传） ===
+# 压缩结果 experience.json 是正式产出，保留
+# 原始中间态文件由 clean_old_data() 管理，不进 GitHub
+02_MEMORY/experience/exp_debate_*.json
+02_MEMORY/experience/exp_seeded_*.json
+02_MEMORY/experience/learn_cycle_*.json
+
+# === Cache directories ===
+05_TOOLS/mine_output/advisor/cache/
+05_TOOLS/miner/05_TOOLS/
+
+# === Smelter Gate runtime logs (中间态，不上传) ===
+02_MEMORY/smelter_gate/
+
+# === Temporary check scripts ===
+_chip_check.py

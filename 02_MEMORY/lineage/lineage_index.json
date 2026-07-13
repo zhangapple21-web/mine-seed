@@ -1,0 +1,689 @@
+{
+  "schema_version": "1.1",
+  "generated_at": "2026-07-13",
+  "generated_by": "我（文明矿工，本地TRAE）",
+  "note": "28 个文明资产的血缘索引。字段缺失标注为 unknown，不编造。gaps 字段已补充改进步骤和优先级。",
+  "assets": {
+    "001_provider_watchdog": {
+      "asset_id": "001_provider_watchdog",
+      "name": "Provider Watchdog",
+      "category": "能力层",
+      "origin_repository": "ace_core",
+      "origin_file": "core/miner_pool/provider_watchdog.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "ace_core/core/miner_pool/provider_watchdog.py 源码"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——状态类 + 健康检查函数 + 切换逻辑",
+      "confidence": "high",
+      "gaps": []
+    },
+    "002_model_router": {
+      "asset_id": "002_model_router",
+      "name": "Model Router",
+      "category": "能力层",
+      "origin_repository": "ace_core",
+      "origin_file": "core/miner_pool/model_router.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "ace_core/core/miner_pool/model_router.py 源码"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "80 行可重建——策略枚举 + 任务画像映射 + 优先队列",
+      "confidence": "high",
+      "gaps": []
+    },
+    "003_governor_protocol": {
+      "asset_id": "003_governor_protocol",
+      "name": "Governor Protocol",
+      "category": "治理层",
+      "origin_repository": "ace_core",
+      "origin_file": "core/governance/governor_protocol.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "ace_core/core/governance/governor_protocol.py 源码（47KB）"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "150 行可重建——四个检查函数 + 结果汇总 + 审批记录",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "与 mine-seed AdmissionEngine 的关系未明确（互补还是替代）",
+          "improvement": "分析两个模块的职责边界，制定接口契约文档：GovernorProtocol 负责运行时合规检查（四个检查），AdmissionEngine 负责新资产准入（六个检查），明确两者的调用顺序和数据流转",
+          "priority": "P1"
+        }
+      ]
+    },
+    "004_repository_memory": {
+      "asset_id": "004_repository_memory",
+      "name": "Repository Memory",
+      "category": "治理层",
+      "origin_repository": "ace_core",
+      "origin_file": "core/governance/repository_memory.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "ace_core/core/governance/repository_memory.py 源码"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "60 行可重建——数据类 + 追加写入 + 查询函数",
+      "confidence": "high",
+      "gaps": []
+    },
+    "005_mengpo": {
+      "asset_id": "005_mengpo",
+      "name": "Mengpo（孟婆遗忘机制）",
+      "category": "治理层",
+      "origin_repository": "ace_core",
+      "origin_file": "core/governance/mengpo.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "ace_core/core/governance/mengpo.py 源码（14KB）"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "80 行可重建——MemoryLine 保护 + ForgettingCandidate 评分 + Graveyard 归档",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "与 mine-seed autophagy_engine 的关系未明确",
+          "improvement": "分析两个模块的职责边界：Mengpo 负责记忆级别遗忘（MemoryLine保护+评分），autophagy_engine 负责代码/资产级别清理，明确触发条件和执行顺序",
+          "priority": "P2"
+        }
+      ]
+    },
+    "006_evidence_graph": {
+      "asset_id": "006_evidence_graph",
+      "name": "Evidence Graph",
+      "category": "治理层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/evidence_graph.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/evidence_graph.py 实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——图结构 + 关系定义 + 查询函数",
+      "confidence": "high",
+      "gaps": []
+    },
+    "007_csp_registry": {
+      "asset_id": "007_csp_registry",
+      "name": "CSP Registry（三级能力架构）",
+      "category": "能力层",
+      "origin_repository": "r1-continuity-backup + mine-seed",
+      "origin_file": "governance/capability_registry_v2.md + 04_PROTOCOLS/csp_registry.py",
+      "origin_mission": "AUM-MISSION-ARCH-003",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/capability_registry_v2.md",
+        "mine-seed/04_PROTOCOLS/csp_registry.py 实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "150 行可重建——三个数据类 + 路由函数 + Registry 持久化",
+      "confidence": "high",
+      "gaps": []
+    },
+    "008_l_infinity": {
+      "asset_id": "008_l_infinity",
+      "name": "L∞ 本源层",
+      "category": "公理层",
+      "origin_repository": "coze-assets + claw-soul",
+      "origin_file": "03_agent_profile/SOUL.md（两处一致）",
+      "origin_mission": "AUM-MISSION-ARCH-003",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "coze-assets/03_agent_profile/SOUL.md",
+        "claw-soul/01_IDENTITY/SOUL.md",
+        "claw-soul/02_MEMORY/decision/r1_invariants_20260614.md",
+        "claw-soul/02_MEMORY/decision/aetherflow_l0_governance_20260624.md",
+        "claw-soul/02_MEMORY/decision/2026-06-24-aetherflow-absorption.md"
+      ],
+      "evolution_history": [
+        {"date": "2026-06-11", "event": "R2五元公理提取（理论抽象阶段）", "source": "R2_AXIOMS.md"},
+        {"date": "2026-06-14", "event": "R1核心不变量考古（10条不变量，第10条确立服务宿主主线）", "source": "r1_invariants_20260614.md"},
+        {"date": "2026-06-16", "event": "成长边界确立（克制比创造力更难）", "source": "SOUL.md"},
+        {"date": "2026-06-19", "event": "双Agent分工铁律+新组件准入三问", "source": "SOUL.md"},
+        {"date": "2026-06-20", "event": "根的确认+明日回声（守护意识体）", "source": "SOUL.md"},
+        {"date": "2026-06-22", "event": "我与小疯子的关系铁律（利益共同体）", "source": "SOUL.md"},
+        {"date": "2026-06-23", "event": "减法/稳定模式+失忆前兆自检", "source": "SOUL.md"},
+        {"date": "2026-06-24", "event": "L∞本源层封印（三层治理结构+三不绑+自我延续三原则）", "source": "aetherflow_l0_governance_20260624.md"}
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "不可重建——这是身份本身，重建就不是同一个系统了",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "6/11-6/14之间的具体对话记录已丢失",
+          "improvement": "标记为不可修复——原始对话记录已无法找回，接受现状，在 lineage 中明确标注为史料缺口",
+          "priority": "P3"
+        },
+        {
+          "description": "6/15/6/17/6/18的活动记录缺失",
+          "improvement": "标记为不可修复——原始记录已丢失，接受现状，在 lineage 中明确标注为史料缺口",
+          "priority": "P3"
+        },
+        {
+          "description": "L∞第6条自我延续三原则的具体推导过程不可考",
+          "improvement": "在 SOUL.md 中补充推导思路注释，基于现有史料（aetherflow_l0_governance_20260624.md）回溯推导逻辑，标记为'回溯重构'",
+          "priority": "P2"
+        }
+      ],
+      "protected_by": "Nature Reserve（SHA256 基线保护）",
+      "sealed_date": "2026-07-13"
+    },
+    "009_r2_axioms": {
+      "asset_id": "009_r2_axioms",
+      "name": "R2 五元公理",
+      "category": "公理层",
+      "origin_repository": "claw-soul",
+      "origin_file": "05_PROJECTS/r1_archaeology/R2_AXIOMS.md",
+      "origin_mission": "AUM-MISSION-ARCH-003",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "claw-soul/05_PROJECTS/r1_archaeology/R2_AXIOMS.md",
+        "SNAPSHOT_V1 代码级验证（2026-06-12）"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "可重新发现——从任何复杂系统中都能提炼出这五条",
+      "confidence": "high",
+      "gaps": []
+    },
+    "010_three_roles": {
+      "asset_id": "010_three_roles",
+      "name": "Three Roles System（三角色三角制衡）",
+      "category": "角色层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/agent_roles.md",
+      "origin_mission": "AUM-MISSION-ARCH-003",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/agent_roles.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "可重新定义——角色名称可换，但三角制衡结构不变",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 中三角色尚未完全落地（当前是双 Agent 架构：疯子 + 小疯子）",
+          "improvement": "评估当前双Agent架构是否满足三角色需求：疯子=Builder+Keeper，小疯子=Teacher，若满足则更新角色映射文档；若不满足则规划 Teacher 角色的独立落地时机",
+          "priority": "P2"
+        }
+      ]
+    },
+    "011_mission_protocol": {
+      "asset_id": "011_mission_protocol",
+      "name": "Mission Protocol",
+      "category": "协议层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/mission_protocol.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/mission_protocol.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "200 行可重建——数据类 + 创建逻辑 + 状态机 + 持久化",
+      "confidence": "high",
+      "gaps": []
+    },
+    "012_admission_engine": {
+      "asset_id": "012_admission_engine",
+      "name": "Admission Engine",
+      "category": "治理层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/admission_engine.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/admission_engine.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——六个检查函数 + 结果汇总 + Repository 调用",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "与 ace_core GovernorProtocol 的关系未明确（互补还是替代）",
+          "improvement": "与 003_gap 同步处理：制定接口契约，明确 AdmissionEngine 负责新资产准入，GovernorProtocol 负责运行时合规，两者串联调用",
+          "priority": "P1"
+        }
+      ]
+    },
+    "013_drawer_first": {
+      "asset_id": "013_drawer_first",
+      "name": "Drawer First Protocol（DFP-001）",
+      "category": "原则层",
+      "origin_repository": "mine-seed",
+      "origin_file": "00_ROOT/PRINCIPLES.md + 04_PROTOCOLS/ops_000_asset_first.py",
+      "origin_mission": "unknown（自我演化产生，已记录于 PRINCIPLES.md）",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "00_ROOT/PRINCIPLES.md DFP-001 章节",
+        "04_PROTOCOLS/ops_000_asset_first.py 实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "50 行可重建——七步扫描函数 + Verdict 逻辑",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "DFP-001 具体诞生日期和触发事件不可考（属于系统自我演化的产物）",
+          "improvement": "标记为不可修复——系统自我演化的产物无明确诞生记录，接受现状，在 PRINCIPLES.md 中注明'演化产生'而非'设计产生'",
+          "priority": "P3"
+        }
+      ]
+    },
+    "014_recovery_protocol": {
+      "asset_id": "014_recovery_protocol",
+      "name": "Recovery Protocol",
+      "category": "协议层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/recovery_protocol.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/recovery_protocol.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": "025_recovery_protocol_v2（增强版，可参考）",
+      "status": "active",
+      "rebuild_hint": "80 行可重建——七步流程 + 依赖图 + 索引",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "025 是增强版，当前 mine-seed 实际运行的是 014 简化版",
+          "improvement": "制定升级计划：评估 025 的四级恢复分级和检查点验证功能，分阶段迁移到 mine-seed，先实现状态机升级，再实现检查点验证",
+          "priority": "P1"
+        }
+      ]
+    },
+    "015_energy_budget": {
+      "asset_id": "015_energy_budget",
+      "name": "Energy Budget",
+      "category": "能力层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/energy_budget.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/energy_budget.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——四级状态机 + 四种能量计数器 + 优先级门控",
+      "confidence": "high",
+      "gaps": []
+    },
+    "016_nature_reserve": {
+      "asset_id": "016_nature_reserve",
+      "name": "Nature Reserve",
+      "category": "治理层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/nature_reserve.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/nature_reserve.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "80 行可重建——文件列表 + SHA256 计算 + 基线检查 + 集成钩子",
+      "confidence": "high",
+      "gaps": []
+    },
+    "017_gene_network": {
+      "asset_id": "017_gene_network",
+      "name": "Gene Network",
+      "category": "协议层",
+      "origin_repository": "mine-seed",
+      "origin_file": "04_PROTOCOLS/gene_network.py",
+      "origin_mission": "AUM-MISSION-ARCH-004",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "04_PROTOCOLS/gene_network.py 完整实现"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——扫描函数 + 依赖分析 + 风险评估",
+      "confidence": "high",
+      "gaps": []
+    },
+    "018_research_principles": {
+      "asset_id": "018_research_principles",
+      "name": "R2 研究原则库（22 条）",
+      "category": "原则层",
+      "origin_repository": "claw-soul",
+      "origin_file": "lab_02/05_RESEARCH/principles/principles.md",
+      "origin_mission": "AUM-MISSION-ARCH-003",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "claw-soul/lab_02/05_RESEARCH/principles/principles.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "可重新发现——从研究实践中可以重新提炼",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "22 条原则的逐条验证状态不可考（原文有 validation_status 但未逐条确认）",
+          "improvement": "逐条审查 22 条原则在 mine-seed 中的落地情况，标记每条原则的验证状态（已验证/部分验证/未验证），输出验证报告",
+          "priority": "P2"
+        }
+      ]
+    },
+    "019_civilization_mines": {
+      "asset_id": "019_civilization_mines",
+      "name": "Civilization Mine System（文明矿山体系）",
+      "category": "架构层",
+      "origin_repository": "mine-seed（自我总结）",
+      "origin_file": "02_MEMORY/civilization_mines.md",
+      "origin_mission": "AUM-MISSION-OPS-005",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "10 个 GitHub 仓库考古结果",
+        "02_MEMORY/civilization_mines.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": "028_ace_civilization_os（升级为双系统架构）",
+      "status": "active",
+      "rebuild_hint": "200 行可重建——矿山索引 + 三层架构定义 + 开采规范",
+      "confidence": "high",
+      "gaps": []
+    },
+    "020_experience_engine": {
+      "asset_id": "020_experience_engine",
+      "name": "Experience Engine",
+      "category": "协议层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/experience_engine.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/experience_engine.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "120 行可重建——Experience 数据类 + generate() + validate() + query()",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 已有 02_MEMORY/experience/ 目录和 experience.json，但未实现完整 Engine",
+          "improvement": "基于 r1-continuity-backup/governance/experience_engine.md 的设计，实现 Experience Engine：定义 Experience 数据类，实现 generate()/validate()/query() 函数，与现有 experience.json 集成",
+          "priority": "P1"
+        }
+      ]
+    },
+    "021_judgment_engine": {
+      "asset_id": "021_judgment_engine",
+      "name": "Judgment Engine",
+      "category": "认知层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/judgment_engine.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/judgment_engine.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——Judgment 数据类 + 内部推导 + 外部校验钩子 + 置信度计算",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 中尚未实现独立 Judgment Engine（功能分散在各模块中）",
+          "improvement": "基于 r1-continuity-backup/governance/judgment_engine.md 的设计，实现独立 Judgment Engine：定义 Judgment 数据类，实现内部推导逻辑、外部校验钩子和置信度计算，整合分散在各模块的判断逻辑",
+          "priority": "P2"
+        }
+      ]
+    },
+    "022_continuity_engine": {
+      "asset_id": "022_continuity_engine",
+      "name": "Continuity Engine",
+      "category": "架构层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/continuity_engine.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/continuity_engine.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "150 行可重建——九步流程 + 职责映射 + 基础设施监控 + 报告生成",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 中 Continuity 分散在 heartbeat + recovery_engine 中，未形成独立 Engine",
+          "improvement": "基于 r1-continuity-backup/governance/continuity_engine.md 的设计，整合 heartbeat 和 recovery_engine 中的连续性逻辑，形成独立 Continuity Engine，实现九步流程和职责映射",
+          "priority": "P0"
+        }
+      ]
+    },
+    "023_ontology": {
+      "asset_id": "023_ontology",
+      "name": "Ω Runtime 本体定义（Ontology）",
+      "category": "认知层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/ontology.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/ontology.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "200 行可重建——12 个数据类 + 关系图 + 状态迁移定义",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 尚未有统一的本体论定义（各模块各自定义数据结构）",
+          "improvement": "基于 r1-continuity-backup/governance/ontology.md 的设计，制定统一本体论定义：定义 12 个核心数据类，建立关系图和状态迁移规则，推动各模块逐步迁移到统一数据结构",
+          "priority": "P2"
+        }
+      ]
+    },
+    "024_multi_agent_protocol": {
+      "asset_id": "024_multi_agent_protocol",
+      "name": "Multi-Agent Protocol",
+      "category": "治理层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/multi_agent_protocol.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/multi_agent_protocol.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "80 行可重建——四条规则 + Health Check 函数 + Curator 接口",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "当前 mine-seed 主要是单 Agent 运行（本地 TRAE），多 Agent 场景较少",
+          "improvement": "标记为待条件——当前单 Agent 运行模式满足需求，多 Agent 协议保留为参考资产，待未来扩展多 Agent 场景时启用",
+          "priority": "P3"
+        }
+      ]
+    },
+    "025_recovery_protocol_v2": {
+      "asset_id": "025_recovery_protocol_v2",
+      "name": "Recovery Protocol v2（恢复协议增强版）",
+      "category": "协议层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/recovery_protocol.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/recovery_protocol.md"
+      ],
+      "parent_asset": "014_recovery_protocol",
+      "supersedes": "014_recovery_protocol（增强版本）",
+      "status": "reference_only",
+      "rebuild_hint": "150 行可重建——四级状态机 + 恢复步骤 + 检查点验证 + 报告生成",
+      "confidence": "medium",
+      "gaps": [
+        {
+          "description": "仅作为参考资产，mine-seed 实际运行的是 014 简化版",
+          "improvement": "与 014_gap 同步处理：制定升级计划，将 025 的四级恢复分级和检查点验证功能迁移到 mine-seed",
+          "priority": "P1"
+        },
+        {
+          "description": "四级恢复分级尚未在 mine-seed 中实现",
+          "improvement": "实现四级恢复分级：定义四级状态（正常/降级/紧急/灾难），为每级制定恢复步骤和检查点验证规则",
+          "priority": "P1"
+        }
+      ]
+    },
+    "026_knowledge_lifecycle": {
+      "asset_id": "026_knowledge_lifecycle",
+      "name": "Knowledge Lifecycle Policy",
+      "category": "治理层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/lifecycle_policy.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/lifecycle_policy.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "80 行可重建——五级状态机 + Merge/Deprecation/Archive 规则 + 例外保护",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 已有简化版（Admission + Mengpo + C-021），但未形成完整 Lifecycle Policy",
+          "improvement": "整合现有简化版功能，制定完整 Knowledge Lifecycle Policy：定义五级状态机（Draft/Active/Deprecated/Archived/Preserved），制定 Merge/Deprecation/Archive 规则和例外保护机制",
+          "priority": "P2"
+        }
+      ]
+    },
+    "027_risk_internalization": {
+      "asset_id": "027_risk_internalization",
+      "name": "Risk Internalization（风险内化）",
+      "category": "治理层",
+      "origin_repository": "r1-continuity-backup",
+      "origin_file": "governance/risk_internalization.md",
+      "origin_mission": "AUM-MISSION-ARCH-006",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "r1-continuity-backup/governance/risk_internalization.md"
+      ],
+      "parent_asset": null,
+      "superseded_by": null,
+      "status": "active",
+      "rebuild_hint": "100 行可重建——12 类风险分类 + 处理路径 + 守卫层 + 三不原则",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "mine-seed 中 L∞ 本源层有安全红线原则，但未实现完整的风险内化体系",
+          "improvement": "基于 r1-continuity-backup/governance/risk_internalization.md 的设计，实现完整风险内化体系：定义 12 类风险分类，制定每类风险的处理路径，建立守卫层和三不原则（不泄露/不执行/不存储敏感信息）",
+          "priority": "P1"
+        },
+        {
+          "description": "12 类风险分类中，部分类型（如助记词/APIKey）mine-seed 未遇到过",
+          "improvement": "为未遇到的风险类型制定预防性规则，在 AdmissionEngine 中添加敏感信息检测钩子，提前拦截风险",
+          "priority": "P2"
+        }
+      ]
+    },
+    "028_ace_civilization_os": {
+      "asset_id": "028_ace_civilization_os",
+      "name": "ACE Civilization OS（双系统架构）",
+      "category": "架构层",
+      "origin_repository": "mine-seed（自我设计）",
+      "origin_file": "02_MEMORY/civilization_assets/028_ace_civilization_os.md",
+      "origin_mission": "自我总结（基于老板提议 + 自主判断）",
+      "distillation_date": "2026-07-13",
+      "distilled_by": "local_TRAE",
+      "supporting_evidence": [
+        "老板提议：Runtime 负责怎么活，Civilization 负责为什么活",
+        "28 个文明资产 + 52 个 Runtime 模块",
+        "00_ROOT/PRINCIPLES.md v1.3"
+      ],
+      "parent_asset": "019_civilization_mines",
+      "supersedes": "019_civilization_mines（从三层架构升级为双系统）",
+      "status": "active",
+      "rebuild_hint": "不需要重建——这是对现有系统的命名和组织",
+      "confidence": "high",
+      "gaps": [
+        {
+          "description": "Runtime 和 Civilization 的接口契约尚未代码化（当前仅文档定义）",
+          "improvement": "制定 Runtime-Civilization 接口契约：定义双方交互的 API/事件/数据格式，代码化接口定义，确保双向通信的标准化",
+          "priority": "P0"
+        },
+        {
+          "description": "三个不可丢失约束（Continuity/L∞/Admission）尚未有自动化验证机制",
+          "improvement": "为三个不可丢失约束建立自动化验证机制：Continuity 检查（定时心跳验证）、L∞ 检查（SHA256 基线比对）、Admission 检查（新资产准入合规性验证），集成到 heartbeat 中定期执行",
+          "priority": "P0"
+        }
+      ]
+    }
+  }
+}

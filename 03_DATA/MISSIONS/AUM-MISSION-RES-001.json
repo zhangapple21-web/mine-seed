@@ -1,0 +1,80 @@
+{
+  "mid": "AUM-MISSION-RES-001",
+  "name": "ACE Data Kernel 考古与升级",
+  "type": "Research",
+  "priority": "P1",
+  "status": "ADMITTED",
+  "mission": "考古当前金融数据层，并设计下一代 Data Kernel。\n\n目标不是寻找新的股票接口，\n而是寻找\"统一数据内核（Data Kernel）\"的最佳实践。\n\nRecovery First\nArchitecture First\nEvidence First",
+  "scope": "至少调研以下方向：\n\n### ① OpenBB ODP\n重点：\n- Provider 架构\n- Data Router\n- MCP 支持\n- Plugin 机制\n- Local Deployment\n\n输出：\nOpenBB 为什么值得借鉴？\n哪些可以直接移植到 ACE？\n\n### ② QuestDB\n重点：\n- Time Series\n- Snapshot\n- Cache\n- Historical Replay\n- SQL Engine\n\n回答：\n是否适合作为 ACE Data Lake？\n\n### ③ AkShare\n重新审计：\n不要评价数据。\n重点分析：\n- Provider 层\n- Limit\n- Retry\n- Cache\n- 可替换性\n\n回答：\nAkShare 应该位于 Data Kernel 哪一层？\n\n### ④ FinWorld\n重点：\n不是模型。\n而是：\nExperiment Pipeline\nResearch Workflow\nBenchmark\nEvaluation\n\n哪些思想值得迁移？\n\n### ⑤ GitHub 搜索\n寻找：\nStock Runtime\nQuant Platform\nFinancial Data Platform\nMarket Data Gateway\nMarket Cache\nFeature Store\n\n不要限制语言。",
+  "deliverables": "生成：\n03_RESEARCH/\n    DATA_KERNEL_REPORT.md\n内容包括：\n① 架构图\n② 优缺点\n③ 可迁移能力\n④ 是否适合 ACE\n⑤ 推荐等级 ★★★★★\n\n生成：\n04_PROTOCOLS/\n    provider_kernel_v1.md\n设计：\nACE Data Kernel v1\n包括：\nProvider Layer\nCollector\nValidator\nCache\nSnapshot\nFeature\nRouter\nBusiness",
+  "acceptance": "至少：\n✓ 调研 10 个项目\n✓ 对比 5 套架构\n✓ 输出统一架构图\n✓ 给出最终推荐\n\n不得只介绍项目。\n必须抽取：\nArchitecture\nPattern\nProtocol",
+  "forbidden": "禁止：\n❌ 直接复制代码\n❌ 只做项目介绍\n❌ 停留在 API 层\n\n必须抽象：\n为什么这样设计。",
+  "distillation": "不要只回答：\n有什么。\n\n必须回答：\n为什么。\n还能压缩成什么。\n\n最终输出：\n\nKernel（芯片）：可迁移的 Data Kernel 核心单元\nBlueprint（蓝图）：ACE 统一数据内核架构图\nProtocol（协议）：数据接入/路由/缓存标准流程\nConstraint（约束）：数据质量/安全/性能边界\nExperience（经验）：本次调研中学到的架构教训\n\n如果不能压缩成以上五种资产，\n说明这次调研没有完成。",
+  "admission": "蒸馏不是终点。\n所有资产必须通过文明准入审查才能进入文明仓库。\n\n准入六问：\n1. 值得永久保存吗？\n2. 以后还会用吗？\n3. 会不会污染文明？\n4. 有没有重复？\n5. 有没有更好的版本？\n6. 是否违反 Constraint？\n\n只有通过全部审查的资产，\n才能最终进入 Civilization Repository。",
+  "civ_impact": {
+    "capability": true,
+    "protocol": true,
+    "runtime": true,
+    "memory": true,
+    "knowledge": true,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T09:48:44.885690",
+  "updated_at": "2026-07-13T10:06:58.510327",
+  "completed_at": "",
+  "admitted_at": "2026-07-13T10:04:49.908255",
+  "metadata": {},
+  "artifacts": [
+    "模式发现: 2 个新模式",
+    "假设生成: 2 个新假设"
+  ],
+  "distillation_artifacts": {
+    "kernel": [
+      "假设生成: 2 个新假设"
+    ],
+    "blueprint": [
+      "模式发现: 2 个新模式"
+    ],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": [
+    {
+      "asset_type": "kernel",
+      "asset_name": "假设生成: 2 个新假设",
+      "asset_path": "假设生成: 2 个新假设",
+      "status": "admitted",
+      "reviewer": "governor_auto",
+      "checks": {
+        "worth": true,
+        "reuse": true,
+        "purity": true,
+        "novelty": true,
+        "quality": true,
+        "compliance": true
+      },
+      "decision_reason": "通过全部六门审查，准予进入文明仓库",
+      "decided_at": "2026-07-13T10:04:49.907248"
+    },
+    {
+      "asset_type": "blueprint",
+      "asset_name": "模式发现: 2 个新模式",
+      "asset_path": "模式发现: 2 个新模式",
+      "status": "admitted",
+      "reviewer": "governor_auto",
+      "checks": {
+        "worth": true,
+        "reuse": true,
+        "purity": true,
+        "novelty": true,
+        "quality": true,
+        "compliance": true
+      },
+      "decision_reason": "通过全部六门审查，准予进入文明仓库",
+      "decided_at": "2026-07-13T10:04:49.909254"
+    }
+  ]
+}

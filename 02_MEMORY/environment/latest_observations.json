@@ -9,15 +9,17 @@
       "latency_ms": 0
     },
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-12T15:06:06.077577"
+    "timestamp": "2026-07-13T20:06:26.795495"
   },
   {
     "source": "provider",
-    "category": "provider_missing",
-    "severity": "critical",
-    "title": "akshare not installed",
-    "detail": {},
+    "category": "provider_ok",
+    "severity": "info",
+    "title": "akshare v1.18.64 available",
+    "detail": {
+      "version": "1.18.64"
+    },
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-12T15:06:06.078574"
+    "timestamp": "2026-07-13T20:06:30.193717"
   }
 ]

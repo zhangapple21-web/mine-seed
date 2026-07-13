@@ -1,28 +1,38 @@
 #!/usr/bin/env python3
 """
-OPS-000: Asset First Protocol - 资产优先协议
-=============================================
+DFP-001: Drawer First Protocol - 抽屉优先协议
+==============================================
 
-工作哲学 (不是功能):
-  收到目标 → 7 步资产盘点 → 确认不存在才动手
+**公理根基**: #002 / #010 / #018 / #021
 
-  ① 看 GitHub (文明地图)
-  ② 看本地 Workspace
-  ③ 看 Archive
-  ④ 看 TG 收藏夹
-  ⑤ 看历史 PR
-  ⑥ 看以前失败记录
-  ⑦ 看免费矿工能力
+**核心**: 任何设计、实现、重构、派单之前，必须先扫描现有文明资产。
 
-公理根基:
-  #002 考古不是搬家是炼金
-  #011 记忆是推断的不是存储的
-  #018 拆壳不拆骨, 核心不变量不可删
+**约束编号**: C-00X
+
+**角色**: 文明 Runtime 的第一层入口
+
+七步扫描流程:
+  ① Scan Existing Modules    — 扫描现有模块
+  ② Check RFC                — 检查 RFC
+  ③ Check Protocol           — 检查协议
+  ④ Check Experience         — 检查经验
+  ⑤ Check Constraint         — 检查约束
+  ⑥ Check Blueprint          — 检查蓝图
+  ⑦ Decision                 — 决策（Reuse / Extend / New）
+
+决策规则:
+  - 存在完整实现 → Reuse（复用）
+  - 存在但不完整 → Extend（扩展）
+  - 不存在或不满足 → New（新建）
+
+禁止重复发明已经存在的文明资产。
 
 用法:
   python ops_000_asset_first.py "实现信号路由"     # 检查目标是否已有
-  python ops_000_asset_first.py --list             # 列出所有已有资产
-  python ops_000_asset_first.py --json             # JSON 输出
+  python ops_000_asset_first.py --scan            # 完整抽屉扫描
+  python ops_000_asset_first.py --list            # 列出所有已有资产
+  python ops_000_asset_first.py --json            # JSON 输出
+  python ops_000_asset_first.py --mission <mid>   # 为 Mission 做抽屉扫描
 """
 import os
 import sys
@@ -37,220 +47,406 @@ from collections import defaultdict
 WORKSPACE = Path(__file__).parent.parent
 GITHUB_PAT = os.environ.get("GITHUB_PAT", "")
 
-ASSET_KEYWORDS = {
-    "miner": ["miner", "矿工", "mining", "routing", "路由"],
-    "signal": ["signal", "信号", "discovery", "发现"],
-    "archivist": ["archivist", "档案", "archive"],
-    "governance": ["governance", "治理", "roundtable", "圆桌", "governor"],
-    "constraint": ["constraint", "约束", "RFC", "EGP"],
-    "bootstrap": ["bootstrap", "ABP", "启动"],
-    "recovery": ["recovery", "恢复", "RP", "recover"],
-    "heartbeat": ["heartbeat", "心跳"],
-    "evolution": ["evolution", "演化", "seed"],
-    "memory": ["memory", "记忆", "memory_index"],
-    "model": ["model", "模型", "router", "nim", "glm"],
-    "watcher": ["watcher", "observer", "观察", "monitoring"],
+# 资产类型定义
+ASSET_TYPES = {
+    "module": {"label": "模块", "dir": "04_PROTOCOLS", "pattern": "*.py"},
+    "rfc": {"label": "RFC", "dir": "r1_archaeology/rfc", "pattern": "*.md"},
+    "protocol": {"label": "协议", "dir": "04_PROTOCOLS", "pattern": "*.py"},
+    "experience": {"label": "经验", "dir": "02_MEMORY/experience", "pattern": "*.json"},
+    "constraint": {"label": "约束", "dir": "03_DATA/CONSTRAINTS", "pattern": "*.md"},
+    "blueprint": {"label": "蓝图", "dir": "03_DATA/raw_sources/docs", "pattern": "*.md"},
+    "repository": {"label": "仓库", "dir": "03_DATA/CIV_REPOSITORY", "pattern": "*.json"},
+}
+
+# 模块分类映射
+MODULE_CATEGORIES = {
+    "recovery": ["recovery", "restore", "awaken", "environment"],
+    "governance": ["governor", "roundtable", "debate", "constraint"],
+    "memory": ["memory", "experience", "journal", "archive", "seed"],
+    "routing": ["router", "worker", "pool", "dispatch"],
+    "mission": ["mission", "question", "task"],
+    "repository": ["repository", "store", "manager"],
+    "admission": ["admission", "curator"],
+    "evolution": ["evolution", "learning", "self"],
+    "heartbeat": ["heartbeat", "monitor", "health"],
 }
 
 
-def search_local(target):
-    print("[②] Local Workspace...")
+def scan_modules(target):
+    """扫描现有模块"""
+    print("[①] Scanning Modules...")
     matches = []
     target_low = target.lower()
-    for search_dir in ["r1_archaeology", "04_PROTOCOLS", "00_ROOT", "05_TOOLS"]:
-        d = WORKSPACE / search_dir
-        if not d.exists():
-            continue
-        for f in d.rglob("*"):
-            if not f.is_file():
-                continue
-            try:
-                content = f.read_text(encoding="utf-8", errors="ignore")
-                if target_low in content.lower():
-                    rel = str(f.relative_to(WORKSPACE))
-                    matches.append({"path": rel, "size": f.stat().st_size, "category": search_dir})
-                    if len(matches) >= 5:
-                        break
-            except:
-                pass
-        if len(matches) >= 5:
-            break
-    print(f"    {len(matches)} matches")
-    return {"source": "local_workspace", "matches": matches}
+    proto_dir = WORKSPACE / "04_PROTOCOLS"
+    if not proto_dir.exists():
+        return {"source": "modules", "matches": []}
 
-
-def search_github(target):
-    print("[①] GitHub...")
-    if not GITHUB_PAT:
-        return {"source": "github", "matches": [], "error": "no_token"}
-    matches = []
-    try:
-        url = "https://api.github.com/search/code"
-        params = f"q={urllib.parse.quote(target)}+org:zhangapple21-web"
-        req = urllib.request.Request(f"{url}?{params}", headers={"Authorization": f"Bearer {GITHUB_PAT}", "Accept": "application/vnd.github+json"})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            data = json.loads(r.read().decode())
-            for item in data.get("items", [])[:5]:
-                matches.append({"repo": item.get("repository", {}).get("full_name"), "path": item.get("path"), "url": item.get("html_url")})
-    except Exception as e:
-        return {"source": "github", "matches": [], "error": str(e)[:50]}
-    print(f"    {len(matches)} matches")
-    return {"source": "github", "matches": matches}
-
-
-def search_archive(target):
-    print("[③] Archive...")
-    matches = []
-    target_low = target.lower()
-    for archive_dir in ["02_MEMORY", "r1_archaeology"]:
-        d = WORKSPACE / archive_dir
-        if not d.exists():
-            continue
-        for sub in d.rglob("*"):
-            if sub.is_dir() and target_low in sub.name.lower():
-                matches.append({"path": str(sub.relative_to(WORKSPACE)), "type": "directory"})
-    print(f"    {len(matches)} matches")
-    return {"source": "archive", "matches": matches}
-
-
-def search_tg_collections(target):
-    print("[④] TG 收藏夹...")
-    matches = []
-    target_low = target.lower()
-    tg_cache_dirs = [WORKSPACE / "03_DATA" / "tg_collections", Path.home() / "Downloads" / "Telegram Desktop"]
-    for d in tg_cache_dirs:
-        if not d.exists():
-            continue
-        for f in d.rglob("*.json"):
-            try:
-                content = f.read_text(encoding="utf-8", errors="ignore")
-                if target_low in content.lower():
-                    matches.append({"path": str(f.relative_to(d))})
-                    if len(matches) >= 5:
-                        break
-            except:
-                pass
-        if len(matches) >= 5:
-            break
-    print(f"    {len(matches)} matches")
-    return {"source": "tg_collections", "matches": matches}
-
-
-def search_zip_snapshots(target):
-    print("[⑤] ZIP / Snapshot...")
-    matches = []
-    target_low = target.lower()
-    for d in [WORKSPACE / "99_RECOVERY_TEMP", Path.home() / "Downloads"]:
-        if not d.exists():
-            continue
-        for f in d.iterdir():
-            if f.suffix.lower() in {".zip", ".7z", ".tar", ".gz"} and target_low in f.name.lower():
-                matches.append({"path": str(f), "size": f.stat().st_size})
-    print(f"    {len(matches)} matches")
-    return {"source": "zip_snapshot", "matches": matches}
-
-
-def search_pr_history(target):
-    print("[⑥] PR History...")
-    matches = []
-    target_low = target.lower()
-    git_dir = WORKSPACE / ".git"
-    if git_dir.exists():
+    for f in proto_dir.glob("*.py"):
         try:
-            import subprocess
-            r = subprocess.run(["git", "log", "--all", "--oneline", f"--grep={target_low}"], cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10)
-            if r.returncode == 0:
-                for line in r.stdout.strip().split("\n")[:5]:
-                    if line:
-                        matches.append({"commit": line})
-        except:
+            content = f.read_text(encoding="utf-8", errors="ignore")[:5000]
+            if target_low in content.lower() or target_low in f.name.lower():
+                # 判断模块类别
+                category = "other"
+                for cat_key, cat_terms in MODULE_CATEGORIES.items():
+                    if any(term in f.name.lower() for term in cat_terms):
+                        category = cat_key
+                        break
+
+                matches.append({
+                    "path": str(f.relative_to(WORKSPACE)),
+                    "name": f.stem,
+                    "category": category,
+                    "description": _extract_description(content),
+                })
+        except Exception:
             pass
     print(f"    {len(matches)} matches")
-    return {"source": "pr_history", "matches": matches}
+    return {"source": "modules", "matches": matches}
 
 
-def search_rfc_protocol(target):
-    print("[⑦] RFC / Protocol...")
+def scan_rfc(target):
+    """检查 RFC"""
+    print("[②] Checking RFC...")
     matches = []
     target_low = target.lower()
-    for d in [WORKSPACE / "r1_archaeology" / "rfc", WORKSPACE / "04_PROTOCOLS"]:
-        if not d.exists():
-            continue
-        for f in d.rglob("*.md"):
-            try:
-                content = f.read_text(encoding="utf-8", errors="ignore")[:5000]
-                if target_low in content.lower():
-                    matches.append({"path": str(f.relative_to(WORKSPACE)), "is_protocol": "PROTOCOL" in content.upper() or "RFC" in f.name.upper()})
-                    if len(matches) >= 5:
-                        break
-            except:
-                pass
-        if len(matches) >= 5:
-            break
+    rfc_dir = WORKSPACE / "r1_archaeology" / "rfc"
+    if not rfc_dir.exists():
+        return {"source": "rfc", "matches": []}
+
+    for f in rfc_dir.glob("*.md"):
+        try:
+            content = f.read_text(encoding="utf-8", errors="ignore")[:3000]
+            if target_low in content.lower():
+                matches.append({
+                    "path": str(f.relative_to(WORKSPACE)),
+                    "name": f.stem,
+                    "is_protocol": "PROTOCOL" in content.upper(),
+                })
+        except Exception:
+            pass
     print(f"    {len(matches)} matches")
-    return {"source": "rfc_protocol", "matches": matches}
+    return {"source": "rfc", "matches": matches}
 
 
-def search_free_miners(target):
-    print("[⑧] Free Miners...")
-    capabilities = {
-        "github_models": {"available": bool(GITHUB_PAT), "models": ["gpt-4o-mini", "Phi-3", "Llama-3.2"], "best_for": ["code_review", "quick_inference"]},
-        "zhipu_glm": {"available": bool(os.environ.get("ZHIPU_KEY")), "models": ["glm-4-flash"], "best_for": ["report_generation"]},
-        "nim_keys": {"available": any(os.environ.get(f"NIM_KEY_{i}") for i in range(1, 17)), "count": sum(1 for i in range(1, 17) if os.environ.get(f"NIM_KEY_{i}"))},
-        "openrouter": {"available": bool(os.environ.get("OPENROUTER_KEY"))},
+def scan_protocols(target):
+    """检查协议"""
+    print("[③] Checking Protocols...")
+    matches = []
+    target_low = target.lower()
+    proto_dir = WORKSPACE / "04_PROTOCOLS"
+    if not proto_dir.exists():
+        return {"source": "protocols", "matches": []}
+
+    for f in proto_dir.glob("*.py"):
+        try:
+            content = f.read_text(encoding="utf-8", errors="ignore")[:3000]
+            if '"""' in content:
+                doc_start = content.index('"""') + 3
+                doc_end = content.index('"""', doc_start)
+                doc = content[doc_start:doc_end]
+                if target_low in doc.lower():
+                    matches.append({
+                        "path": str(f.relative_to(WORKSPACE)),
+                        "name": f.stem,
+                        "doc": doc[:100],
+                    })
+        except Exception:
+            pass
+    print(f"    {len(matches)} matches")
+    return {"source": "protocols", "matches": matches}
+
+
+def scan_experience(target):
+    """检查经验"""
+    print("[④] Checking Experience...")
+    matches = []
+    target_low = target.lower()
+    exp_dir = WORKSPACE / "02_MEMORY" / "experience"
+    if not exp_dir.exists():
+        return {"source": "experience", "matches": []}
+
+    for f in exp_dir.glob("*.json"):
+        try:
+            data = json.loads(f.read_text(encoding="utf-8", errors="ignore"))
+            if target_low in str(data).lower():
+                matches.append({
+                    "path": str(f.relative_to(WORKSPACE)),
+                    "type": data.get("type", "unknown"),
+                    "timestamp": data.get("timestamp", ""),
+                })
+        except Exception:
+            pass
+    print(f"    {len(matches)} matches")
+    return {"source": "experience", "matches": matches}
+
+
+def scan_constraints(target):
+    """检查约束"""
+    print("[⑤] Checking Constraints...")
+    matches = []
+    target_low = target.lower()
+    const_dir = WORKSPACE / "03_DATA" / "CONSTRAINTS"
+    if not const_dir.exists():
+        return {"source": "constraints", "matches": []}
+
+    for f in const_dir.glob("*.md"):
+        try:
+            content = f.read_text(encoding="utf-8", errors="ignore")[:3000]
+            if target_low in content.lower():
+                matches.append({
+                    "path": str(f.relative_to(WORKSPACE)),
+                    "name": f.stem,
+                })
+        except Exception:
+            pass
+    print(f"    {len(matches)} matches")
+    return {"source": "constraints", "matches": matches}
+
+
+def scan_blueprints(target):
+    """检查蓝图"""
+    print("[⑥] Checking Blueprints...")
+    matches = []
+    target_low = target.lower()
+    bp_dir = WORKSPACE / "03_DATA" / "raw_sources" / "docs"
+    if not bp_dir.exists():
+        bp_dir = WORKSPACE / "03_DATA"
+    if not bp_dir.exists():
+        return {"source": "blueprints", "matches": []}
+
+    for f in bp_dir.rglob("*.md"):
+        try:
+            content = f.read_text(encoding="utf-8", errors="ignore")[:3000]
+            if target_low in content.lower():
+                matches.append({
+                    "path": str(f.relative_to(WORKSPACE)),
+                    "name": f.stem,
+                })
+        except Exception:
+            pass
+    print(f"    {len(matches)} matches")
+    return {"source": "blueprints", "matches": matches}
+
+
+def _extract_description(content):
+    """提取文件描述"""
+    try:
+        if '"""' in content:
+            doc_start = content.index('"""') + 3
+            doc_end = content.index('"""', doc_start)
+            doc = content[doc_start:doc_end].strip()
+            lines = doc.split("\n")
+            for line in lines:
+                if line.strip() and not line.startswith("#") and not line.startswith("="):
+                    return line.strip()[:80]
+        return ""
+    except Exception:
+        return ""
+
+
+def make_decision(steps):
+    """根据扫描结果做出决策"""
+    total_matches = sum(len(s.get("matches", [])) for s in steps.values())
+
+    # 检查是否有完整实现
+    has_module = len(steps.get("modules", {}).get("matches", [])) > 0
+    has_protocol = len(steps.get("protocols", {}).get("matches", [])) > 0
+    has_blueprint = len(steps.get("blueprints", {}).get("matches", [])) > 0
+
+    if has_module and has_protocol:
+        verdict = "REUSE"
+        recommendation = "已存在完整实现，建议复用现有模块"
+    elif has_module or has_protocol:
+        verdict = "EXTEND"
+        recommendation = "存在部分实现，建议扩展现有模块"
+    elif total_matches > 0:
+        verdict = "EXTEND"
+        recommendation = "存在相关资产，建议基于现有资产扩展"
+    else:
+        verdict = "NEW"
+        recommendation = "确认不存在，可新建"
+
+    return {
+        "verdict": verdict,
+        "recommendation": recommendation,
+        "total_matches": total_matches,
     }
-    return {"source": "free_miners", "capabilities": capabilities}
 
 
-def asset_first(target):
-    print(f"\n{'='*60}\nOPS-000 Asset First: {target}\n{'='*60}\n")
-    report = {"target": target, "time": datetime.now().isoformat(), "steps": {}, "total_matches": 0, "verdict": "unknown"}
-    steps = [("① GitHub", search_github), ("② Local", search_local), ("③ Archive", search_archive), ("④ TG", search_tg_collections), ("⑤ ZIP", search_zip_snapshots), ("⑥ PR", search_pr_history), ("⑦ RFC", search_rfc_protocol), ("⑧ Miners", search_free_miners)]
+def draw_scan(target):
+    """完整抽屉扫描"""
+    print(f"\n{'='*70}")
+    print(f"DFP-001: Drawer First Protocol — {target}")
+    print(f"{'='*70}\n")
+
+    report = {
+        "target": target,
+        "time": datetime.now().isoformat(),
+        "steps": {},
+        "decision": {},
+    }
+
+    # 七步扫描
+    steps = [
+        ("① Modules", scan_modules),
+        ("② RFC", scan_rfc),
+        ("③ Protocols", scan_protocols),
+        ("④ Experience", scan_experience),
+        ("⑤ Constraints", scan_constraints),
+        ("⑥ Blueprints", scan_blueprints),
+    ]
+
     for label, fn in steps:
         result = fn(target)
         report["steps"][label] = result
-        if "matches" in result:
-            report["total_matches"] += len(result["matches"])
-    if report["total_matches"] > 0:
-        report["verdict"] = "EXISTS_MAYBE_REUSE"
-        report["recommendation"] = "已有相关资产,建议先考古再决定是否新建"
-    else:
-        report["verdict"] = "NOT_FOUND_CAN_CREATE"
-        report["recommendation"] = "确认不存在,可以新建"
+
+    # ⑦ Decision
+    report["decision"] = make_decision(report["steps"])
+
+    print(f"\n{'='*70}")
+    print(f"Verdict: {report['decision']['verdict']}")
+    print(f"Recommendation: {report['decision']['recommendation']}")
+    print(f"Total matches: {report['decision']['total_matches']}")
+    print(f"{'='*70}")
+
     return report
 
 
 def list_all_assets():
-    print(f"\n{'='*60}\nAsset Map - 文明资产总览\n{'='*60}\n")
+    """列出所有文明资产"""
+    print(f"\n{'='*70}")
+    print("Civilization Asset Map — 文明资产总览")
+    print(f"{'='*70}\n")
+
     asset_map = {}
+
+    # 模块
     proto_dir = WORKSPACE / "04_PROTOCOLS"
     if proto_dir.exists():
         asset_map["protocols"] = [f.name for f in proto_dir.glob("*.py")]
+
+    # RFC
+    rfc_dir = WORKSPACE / "r1_archaeology" / "rfc"
+    if rfc_dir.exists():
+        asset_map["rfcs"] = [f.name for f in rfc_dir.glob("*.md")]
+
+    # 经验
+    exp_dir = WORKSPACE / "02_MEMORY" / "experience"
+    if exp_dir.exists():
+        asset_map["experiences"] = [f.name for f in exp_dir.glob("*.json")]
+
+    # 约束
+    const_dir = WORKSPACE / "03_DATA" / "CONSTRAINTS"
+    if const_dir.exists():
+        asset_map["constraints"] = [f.name for f in const_dir.glob("*.md")]
+
+    # 文明仓库
+    repo_dir = WORKSPACE / "03_DATA" / "CIV_REPOSITORY"
+    if repo_dir.exists():
+        try:
+            index_file = repo_dir / "index.json"
+            if index_file.exists():
+                data = json.loads(index_file.read_text(encoding="utf-8"))
+                asset_map["repository"] = {
+                    "version": data.get("version", "unknown"),
+                    "total_assets": data.get("total_assets", 0),
+                    "by_type": data.get("by_type", {}),
+                }
+        except Exception:
+            pass
+
+    # 公理
     principles = WORKSPACE / "00_ROOT" / "PRINCIPLES.md"
     if principles.exists():
-        asset_map["axioms"] = principles.read_text(encoding="utf-8").count("#")
-    r1_dir = WORKSPACE / "r1_archaeology"
-    if r1_dir.exists():
-        rfcs = list((r1_dir / "rfc").rglob("*.md")) if (r1_dir / "rfc").exists() else []
-        dailies = list((r1_dir / "daily").rglob("*.md")) if (r1_dir / "daily").exists() else []
-        asset_map["r1_archaeology"] = {"rfcs": len(rfcs), "dailies": len(dailies)}
+        content = principles.read_text(encoding="utf-8")
+        axiom_count = content.count("#0")
+        asset_map["axioms"] = f"{axiom_count} 条"
+
     return asset_map
 
 
+def scan_for_mission(mid):
+    """为 Mission 做抽屉扫描"""
+    try:
+        from mission_protocol import protocol
+        mission = protocol.get(mid)
+        if not mission:
+            return {"error": f"Mission {mid} not found"}
+
+        target = mission.name
+        print(f"\n{'='*70}")
+        print(f"DFP-001: Drawer Scan for Mission — {mid}")
+        print(f"{'='*70}\n")
+
+        report = draw_scan(target)
+
+        # 更新 Mission 的 scope 添加抽屉扫描报告
+        if mission.scope:
+            mission.scope += "\n\n"
+        mission.scope += f"""## Phase 0: Drawer Scan Report
+
+**Target**: {target}
+**Time**: {report['time']}
+**Verdict**: {report['decision']['verdict']}
+**Recommendation**: {report['decision']['recommendation']}
+**Total matches**: {report['decision']['total_matches']}
+
+### Scan Results
+
+"""
+        for step_name, step_data in report["steps"].items():
+            matches = step_data.get("matches", [])
+            mission.scope += f"#### {step_name}\n"
+            if matches:
+                for m in matches[:5]:
+                    mission.scope += f"- {m.get('name', m.get('path', ''))}\n"
+            else:
+                mission.scope += "- (无匹配)\n"
+            mission.scope += "\n"
+
+        protocol._save(mission)
+        print(f"\nDrawer Report saved to Mission {mid}")
+
+        return report
+    except Exception as e:
+        return {"error": str(e)}
+
+
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("target", nargs="?")
-    parser.add_argument("--list", action="store_true")
-    parser.add_argument("--json", action="store_true")
+    parser = argparse.ArgumentParser(description="DFP-001: Drawer First Protocol")
+    parser.add_argument("target", nargs="?", help="目标关键词")
+    parser.add_argument("--scan", action="store_true", help="完整抽屉扫描")
+    parser.add_argument("--list", action="store_true", help="列出所有已有资产")
+    parser.add_argument("--json", action="store_true", help="JSON 输出")
+    parser.add_argument("--mission", type=str, help="为指定 Mission 做抽屉扫描")
     args = parser.parse_args()
+
     if args.list:
-        print(json.dumps(list_all_assets(), ensure_ascii=False, indent=2))
-    elif args.target:
-        result = asset_first(args.target)
+        asset_map = list_all_assets()
         if args.json:
-            print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            print(json.dumps(asset_map, ensure_ascii=False, indent=2))
         else:
-            print(f"Total: {result['total_matches']}, Verdict: {result['verdict']}")
+            for category, items in asset_map.items():
+                print(f"\n{category}:")
+                if isinstance(items, list):
+                    for item in items[:10]:
+                        print(f"  - {item}")
+                    if len(items) > 10:
+                        print(f"  ... ({len(items) - 10} more)")
+                else:
+                    print(f"  {items}")
+
+    elif args.mission:
+        result = scan_for_mission(args.mission)
+        if args.json:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+
+    elif args.target or args.scan:
+        target = args.target or "full_scan"
+        result = draw_scan(target)
+        if args.json:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+
     else:
         parser.print_help()
 

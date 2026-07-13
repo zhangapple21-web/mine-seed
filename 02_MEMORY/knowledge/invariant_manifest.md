@@ -1,3 +1,22 @@
+---
+id: INV-MANIFEST-001
+type: axiom
+title: "Invariant Manifest — 不变量清单"
+status: active
+source: "R1 Deep Archaeology (AUM-TASK-2026-07-TG-ARCH-002)"
+created: 2026-07-12
+lineage:
+  - TG-Saved/R1_RUIN_SKELETON.zip
+  - PRINCIPLES.md
+related: [KERNEL-DNA-V1, CHIP-LINEAGE-001, INV-L0-001]
+tags: [invariant, kernel, axiom, l0, l1]
+confidence: 0.92
+evidence: [E-001, E-003, E-004, E-036, E-038]
+archaeology:
+  state: recovered
+  sources: 5
+---
+
 # Invariant Manifest
 # 不变量清单 v1.0
 

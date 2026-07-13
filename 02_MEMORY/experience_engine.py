@@ -12,14 +12,32 @@
   Raw Observation → 经验压缩 → 路由知识
   (原始数据)        (模式提取)   (可执行规则)
 """
-import json, os, time
+import json, os, time, platform
+from pathlib import Path
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-EXPERIENCE_FILE = "/home/coze/mine_output/experience.json"
-OBSERVATION_FILE = "/home/coze/mine_output/observation_log.json"
-FEEDBACK_FILE = "/home/coze/mine_output/user_feedback.jsonl"
-REGISTRY_FILE = "/home/coze/worker_registry.json"
+# ============================================================
+# 跨平台路径适配（ARCH-013 子任务2）
+# 复用 lineage_review.py 的跨平台方案
+# ============================================================
+if platform.system() == "Windows":
+    _WORKSPACE = Path(__file__).parent.parent
+    _OUTPUT_DIR = _WORKSPACE / "05_TOOLS" / "mine_output"
+    _DATA_DIR = _WORKSPACE / "03_DATA"
+else:
+    _OUTPUT_DIR = Path("/home/coze/mine_output")
+    _DATA_DIR = Path("/home/coze")
+
+_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+EXPERIENCE_FILE = str(_OUTPUT_DIR / "experience.json")
+OBSERVATION_FILE = str(_OUTPUT_DIR / "observation_log.json")
+FEEDBACK_FILE = str(_OUTPUT_DIR / "user_feedback.jsonl")
+REGISTRY_FILE = str(_DATA_DIR / "worker_registry.json")
+AUDIT_RESULTS_FILE = str(_WORKSPACE / "05_TOOLS" / "mine_output" / "advisor" / "audit_results.json") if platform.system() == "Windows" else "/home/coze/mine_output/advisor/audit_results.json"
+SIGNAL_TAXONOMY_FILE = str(_DATA_DIR / "signal_taxonomy.json") if platform.system() == "Windows" else "/home/coze/signal_taxonomy.json"
+FITNESS_LOG_FILE = str(_OUTPUT_DIR / "fitness_log.jsonl")
 
 class ExperienceEngine:
     def __init__(self):
@@ -244,14 +262,14 @@ class ExperienceEngine:
         # 如果某个category（complex/simple）的失败率系统性高于另一个
         try:
             import json as _j
-            with open("/home/coze/signal_taxonomy.json") as _f:
+            with open(SIGNAL_TAXONOMY_FILE) as _f:
                 taxonomy = _j.load(_f)
             
             simple_types = taxonomy.get("categories", {}).get("simple_signal", {}).get("types", [])
             complex_types = taxonomy.get("categories", {}).get("complex_signal", {}).get("types", [])
             
             # 统计fitness_log
-            fitness_log = "/home/coze/mine_output/fitness_log.jsonl"
+            fitness_log = FITNESS_LOG_FILE
             if os.path.exists(fitness_log):
                 from collections import defaultdict as _dd
                 cat_stats = _dd(lambda: {"success": 0, "fail": 0})
@@ -622,7 +640,7 @@ class ExperienceEngine:
                             "historical_sr": hist_sr,
                             "recent_samples": w.get("recent_samples", 0),
                             "ts": datetime.now().isoformat(),
-                            "note": f"({w["worker"]})在({task})上表现发生{'+' if delta > 0 else ''}{delta:.0%}变化，需要关注"
+                            "note": f"({w['worker']})在({task})上表现发生{'+' if delta > 0 else ''}{delta:.0%}变化，需要关注"
                         })
         
         if innovations:
@@ -843,14 +861,244 @@ class ExperienceEngine:
         
         return obs
 
+    # ============================================================
+    # ARCH-013 子任务1: 审计结果压缩
+    # 审计评分/反馈在被用于影响真实推荐决策之前，必须先进入压缩流程
+    # ============================================================
+
+    def compress_audit_results(self) -> dict:
+        """压缩审计结果，提取可复用的推荐质量模式
+
+        Compression Gate（ARCH-013 子任务1）:
+          审计输出必须经压缩才能生效。
+          未经过此方法的审计结果，禁止直接用于策略调整。
+
+        输入: audit_results.json (由 post_recommendation_auditor.py 产出)
+        输出:
+          - 信号×评分 分布模式
+          - 低分推荐的特征模式
+          - 审计反馈中反复出现的问题
+          - 可执行的策略调整建议
+        """
+        if not os.path.exists(AUDIT_RESULTS_FILE):
+            return {"error": "No audit results yet", "audit_processed": 0}
+
+        try:
+            with open(AUDIT_RESULTS_FILE, encoding="utf-8") as f:
+                audit_data = json.load(f)
+        except (json.JSONDecodeError, ValueError) as e:
+            return {"error": f"Audit results corrupted: {e}", "audit_processed": 0}
+
+        if not audit_data:
+            return {"error": "Empty audit results", "audit_processed": 0}
+
+        # === 1. 信号×评分 分布 ===
+        signal_scores = defaultdict(list)
+        for key, result in audit_data.items():
+            if not isinstance(result, dict):
+                continue
+            score = result.get("overall_score", 0)
+            signals = result.get("evidence", {}).get("miner_evaluation", {}).get("signals", [])
+            if not signals:
+                # 尝试从顶层获取
+                signals = result.get("signals", [])
+            for sig in signals:
+                signal_scores[sig].append(score)
+
+        signal_patterns = {}
+        for sig, scores in signal_scores.items():
+            if len(scores) >= 1:
+                avg = sum(scores) / len(scores)
+                signal_patterns[sig] = {
+                    "avg_score": round(avg, 1),
+                    "count": len(scores),
+                    "trend": "high" if avg >= 75 else "medium" if avg >= 60 else "low",
+                }
+
+        # === 2. 低分推荐特征模式 ===
+        low_score_patterns = []
+        for key, result in audit_data.items():
+            if not isinstance(result, dict):
+                continue
+            score = result.get("overall_score", 100)
+            if score < 65:
+                low_score_patterns.append({
+                    "code": result.get("code", key),
+                    "name": result.get("name", ""),
+                    "score": score,
+                    "rating": result.get("overall_rating", ""),
+                    "signals": result.get("evidence", {}).get("miner_evaluation", {}).get("signals", []),
+                    "feedback": result.get("evidence", {}).get("miner_evaluation", {}).get("feedback", ""),
+                })
+
+        # === 3. 反复出现的问题 ===
+        feedback_keywords = defaultdict(int)
+        for result in audit_data.values():
+            if not isinstance(result, dict):
+                continue
+            feedback = result.get("evidence", {}).get("miner_evaluation", {}).get("feedback", "")
+            if not feedback:
+                continue
+            # 简单关键词提取
+            for keyword in ["成交量", "趋势", "回调", "风险", "波动", "止损", "仓位", "基本面", "技术面"]:
+                if keyword in feedback:
+                    feedback_keywords[keyword] += 1
+
+        recurring_issues = [
+            {"keyword": k, "count": v}
+            for k, v in sorted(feedback_keywords.items(), key=lambda x: -x[1])
+            if v >= 2
+        ]
+
+        # === 4. 策略调整建议 ===
+        strategy_adjustments = []
+        for sig, pattern in signal_patterns.items():
+            if pattern["trend"] == "low" and pattern["count"] >= 2:
+                strategy_adjustments.append({
+                    "type": "signal_downgrade",
+                    "signal": sig,
+                    "reason": f"信号{sig}在{pattern['count']}次审计中平均分仅{pattern['avg_score']}",
+                    "suggestion": f"降低{sig}信号在推荐评分中的权重",
+                })
+
+        if low_score_patterns:
+            strategy_adjustments.append({
+                "type": "low_score_cluster",
+                "count": len(low_score_patterns),
+                "reason": f"发现{len(low_score_patterns)}个低分推荐(<65)",
+                "suggestion": "检查这些推荐的共同特征，考虑增加过滤条件",
+            })
+
+        # === 保存压缩结果 ===
+        audit_compression = {
+            "signal_patterns": signal_patterns,
+            "low_score_patterns": low_score_patterns,
+            "recurring_issues": recurring_issues,
+            "strategy_adjustments": strategy_adjustments,
+            "total_audits_processed": len(audit_data),
+            "compressed_at": datetime.now().isoformat(),
+        }
+
+        self.data.setdefault("audit_compression", []).append(audit_compression)
+        if len(self.data["audit_compression"]) > 30:
+            self.data["audit_compression"] = self.data["audit_compression"][-30:]
+
+        # 记录压缩日志
+        self.data["compression_log"].append({
+            "ts": datetime.now().isoformat(),
+            "source": "audit_results",
+            "audits_processed": len(audit_data),
+            "signal_patterns_found": len(signal_patterns),
+            "low_score_count": len(low_score_patterns),
+            "strategy_adjustments": len(strategy_adjustments),
+        })
+        if len(self.data["compression_log"]) > 50:
+            self.data["compression_log"] = self.data["compression_log"][-50:]
+        self._save()
+
+        return {
+            "audits_processed": len(audit_data),
+            "signal_patterns": len(signal_patterns),
+            "low_score_patterns": len(low_score_patterns),
+            "strategy_adjustments": len(strategy_adjustments),
+        }
+
+    def get_audit_compression_latest(self) -> dict:
+        """获取最近一次审计压缩结果
+
+        策略调整必须引用此方法的返回值，不能直接读 audit_results.json。
+        这是 Compression Gate 的读取端。
+        """
+        audit_compressions = self.data.get("audit_compression", [])
+        if not audit_compressions:
+            return {"error": "No audit compression yet", "strategy_adjustments": []}
+        return audit_compressions[-1]
+
+    # ============================================================
+    # ARCH-013 子任务4: 经验数据清理机制
+    # ============================================================
+
+    def clean_old_data(self, days: int = 7) -> dict:
+        """清理指定天数前的中间态数据
+
+        清理规则：
+          - 可清：learn_cycle_*.json, exp_debate_*.json, exp_seeded_*.json
+            （这些是压缩前的中间态，已被 compress() 提炼过）
+          - 不可清：experience.json, observation_log.json, audit_results.json
+            （这些是压缩结果或原始数据源）
+
+        Args:
+            days: 清理 N 天前的文件
+
+        Returns:
+            {"cleaned": N, "kept": N, "details": [...]}
+        """
+        if platform.system() == "Windows":
+            exp_dir = _WORKSPACE / "02_MEMORY" / "experience"
+            self_learn_dir = _WORKSPACE / "02_MEMORY" / "self_learning"
+        else:
+            exp_dir = Path("/home/coze/mine_output/experience")
+            self_learn_dir = Path("/home/coze/mine_output/self_learning")
+
+        cutoff = datetime.now() - timedelta(days=days)
+        cleaned = []
+        kept = []
+
+        # 可清理的文件模式（中间态数据）
+        cleanable_patterns = [
+            "learn_cycle_*.json",
+            "exp_debate_*.json",
+            "exp_seeded_*.json",
+        ]
+
+        for dir_path in [exp_dir, self_learn_dir]:
+            if not dir_path.exists():
+                continue
+            for pattern in cleanable_patterns:
+                for f in dir_path.glob(pattern):
+                    try:
+                        mtime = datetime.fromtimestamp(f.stat().st_mtime)
+                        if mtime < cutoff:
+                            f.unlink()
+                            cleaned.append(str(f.name))
+                        else:
+                            kept.append(str(f.name))
+                    except Exception:
+                        pass
+
+        return {
+            "cleaned": len(cleaned),
+            "kept": len(kept),
+            "cleaned_files": cleaned[:20],
+            "cutoff_date": cutoff.isoformat(),
+        }
+
 
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Experience Engine")
+    parser.add_argument("--compress", action="store_true", help="压缩 observation_log")
+    parser.add_argument("--compress-audit", action="store_true", help="压缩 audit_results (ARCH-013)")
+    parser.add_argument("--clean", type=int, metavar="N", help="清理 N 天前的中间态数据 (ARCH-013)")
+    parser.add_argument("--report", action="store_true", help="输出经验报告")
+    args = parser.parse_args()
+
     engine = ExperienceEngine()
-    result = engine.compress()
-    print(f"压缩结果: {result}")
-    
-    if result.get("rules", 0) > 0:
-        changes = engine.apply_routing_rules()
-        print(f"路由更新: {changes}")
-    
-    print(engine.report())
+
+    if args.compress:
+        result = engine.compress()
+        print(f"压缩结果: {result}")
+        if result.get("rules", 0) > 0:
+            changes = engine.apply_routing_rules()
+            print(f"路由更新: {changes}")
+    elif args.compress_audit:
+        result = engine.compress_audit_results()
+        print(f"审计压缩结果: {result}")
+    elif args.clean:
+        result = engine.clean_old_data(days=args.clean)
+        print(f"清理结果: 清理{result['cleaned']}个文件, 保留{result['kept']}个文件")
+        print(f"截止日期: {result['cutoff_date']}")
+    elif args.report:
+        print(engine.report())
+    else:
+        parser.print_help()

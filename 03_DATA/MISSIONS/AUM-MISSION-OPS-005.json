@@ -1,0 +1,40 @@
+{
+  "mid": "AUM-MISSION-OPS-005",
+  "name": "文明矿山体系 — 10 仓正式定位为矿山，Runtime 只依赖资产库",
+  "type": "Operation",
+  "priority": "P0",
+  "status": "COMPLETED",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "## Mission\n\n把 10 个仓库从 \"运行时依赖\" 重新定位为 \"文明矿山\"。\nRuntime 不直接依赖仓库代码，只依赖蒸馏后的 Civilization Asset Library。\n\n核心转变：\n- 以前：10 仓 = 我的资产（混乱、重复、不知道有什么）\n- 现在：10 仓 = 矿山（原材料）→ 资产库 = 钢材（蒸馏后）→ Runtime = 建筑（用钢材建）",
+  "scope": "## Scope\n\n### A. 三层架构定义\n- Mine Layer（矿山层）：10 个仓库，只读，考古用\n- Asset Layer（资产层）：Civilization Asset Library，蒸馏后，可复用\n- Runtime Layer（运行层）：实际运行的代码，只依赖资产层\n\n### B. 矿山索引\n- 10 个矿山的价值评级、开采进度、已蒸馏资产清单\n- 矿山分类：富矿/贫矿/废矿/深矿（待开采）\n\n### C. 开采规范\n- DFP-001 抽屉扫描 → 考古 → 对比 → 蒸馏 → 准入 → 资产库\n- 开采原则：不搬代码，只搬思想；先理解，再蒸馏\n",
+  "deliverables": "## Deliverables\n\n1. **02_MEMORY/civilization_mines.md** — 矿山索引\n2. **02_MEMORY/civilization_map.md** — 更新，加入矿山层\n3. **02_MEMORY/civilization_assets/019_civilization_mines.md** — 矿山体系 Blueprint 资产\n4. **开采规范** — 如何从矿山蒸馏资产的标准流程",
+  "acceptance": "## Acceptance\n\n- [ ] 三层架构（矿山→资产→Runtime）已明确定义\n- [ ] 10 个矿山都已分类和评级\n- [ ] 每个矿山都有开采进度和已蒸馏资产清单\n- [ ] 开采规范已建立（DFP-001 适配版）\n- [ ] civilization_map 已更新\n- [ ] 矿山体系已作为 Blueprint 资产进入资产库\n- [ ] 每个资产必须回答三问：Why exist? What problem? Can rebuild?",
+  "forbidden": "## Forbidden\n\n❌ 从矿山直接复制代码到 Runtime\n❌ Runtime 直接 import 矿山中的模块\n❌ 修改矿山中的任何文件（只读）\n❌ 跳过蒸馏直接使用矿山代码\n❌ 把矿山当成资产库",
+  "distillation": "## Distillation\n\n- **Kernel**: 三层架构抽象（矿山→资产→Runtime）\n- **Blueprint**: 文明矿山体系架构\n- **Protocol**: 矿山开采规范\n- **Constraint**: Runtime 不得直接依赖矿山代码\n- **Experience**: 从 10 仓考古到资产库建立的完整经验\n- **Identity**: Civilization Miner（文明矿工）能力",
+  "admission": "## Admission\n\n矿山体系 Blueprint 必须经过准入审查：\n- 去重检查：不与现有架构资产重复\n- 更优版本检查：是否已有更好的架构定义\n- 永久保存价值：是核心架构，值得保存\n- 文明污染：不引入有害概念\n\n通过后进入 02_MEMORY/civilization_assets/",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T11:12:31.406724",
+  "updated_at": "2026-07-13T11:21:41.823893",
+  "completed_at": "2026-07-13T11:21:41.823893",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [],
+  "distillation_artifacts": {
+    "kernel": [],
+    "blueprint": [],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": []
+}

@@ -1,3 +1,19 @@
+"""---
+id: PROTO-010
+type: protocol
+title: "Governor — 治理者"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.85
+lineage:
+  - OPS-005
+related: [PROTO-005, PROTO-001]
+tags: [governor, governance, decision]
+archaeology:
+  state: original
+---
+"""
 #!/usr/bin/env python3
 """
 GOV-002: Governor Protocol - 治理者协议

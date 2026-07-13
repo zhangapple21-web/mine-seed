@@ -13,7 +13,14 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-10T19:01:40",
-      "reviews": {}
+      "reviews": {
+        "T+1": {
+          "close_price": 233.76,
+          "return_pct": 0.0,
+          "reviewed_at": "2026-07-13T00:12:09.668542",
+          "target_date": "2026-07-13"
+        }
+      }
     },
     "sa_20260710_002": {
       "recommendation_id": "sa_20260710_002",
@@ -27,7 +34,14 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-10T19:01:40",
-      "reviews": {}
+      "reviews": {
+        "T+1": {
+          "close_price": 10.03,
+          "return_pct": 0.0,
+          "reviewed_at": "2026-07-13T00:12:09.983963",
+          "target_date": "2026-07-13"
+        }
+      }
     },
     "sa_20260711_001": {
       "recommendation_id": "sa_20260711_001",
@@ -42,7 +56,14 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-11T06:15:01",
-      "reviews": {}
+      "reviews": {
+        "T+1": {
+          "close_price": 233.76,
+          "return_pct": 0.0,
+          "reviewed_at": "2026-07-13T00:12:10.304194",
+          "target_date": "2026-07-13"
+        }
+      }
     },
     "sa_20260711_002": {
       "recommendation_id": "sa_20260711_002",
@@ -54,8 +75,42 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-11T06:15:01",
+      "reviews": {
+        "T+1": {
+          "close_price": 42.89,
+          "return_pct": 0.0,
+          "reviewed_at": "2026-07-13T00:12:10.591975",
+          "target_date": "2026-07-13"
+        }
+      }
+    },
+    "sa_20260713_001": {
+      "recommendation_id": "sa_20260713_001",
+      "date": "20260713",
+      "ticker": "688111",
+      "recommend_price": 233.76,
+      "signal_combo": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "snapshot_time": "2026-07-13T09:13:55",
+      "reviews": {}
+    },
+    "sa_20260713_002": {
+      "recommendation_id": "sa_20260713_002",
+      "date": "20260713",
+      "ticker": "600362",
+      "recommend_price": 42.89,
+      "signal_combo": [
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "snapshot_time": "2026-07-13T09:13:55",
       "reviews": {}
     }
   },
-  "last_updated": "2026-07-12T15:06:08.022059"
+  "last_updated": "2026-07-13T20:11:07.367625"
 }

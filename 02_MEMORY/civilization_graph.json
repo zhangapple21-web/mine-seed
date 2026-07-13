@@ -245,10 +245,670 @@
       "type": "question",
       "label": "为什么我们需要立即关注 akshare 的安装问题？",
       "properties": {
-        "status": "open",
+        "status": "closed",
         "priority": "P1",
         "source": "question_engine",
         "created_at": "2026-07-12T14:33:43.689594"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-014",
+      "type": "question",
+      "label": "为什么我们应该立即调查这些文件的修改内容？",
+      "properties": {
+        "status": "closed",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T18:49:58.329474"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-015",
+      "type": "question",
+      "label": "为什么我们需要立即关注未跟踪文件的增加？",
+      "properties": {
+        "status": "closed",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T18:49:58.336331"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-016",
+      "type": "question",
+      "label": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "answered",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:34:54.573520"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-017",
+      "type": "question",
+      "label": "[自学习] 检测到 11 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "answered",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:34:54.583323"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-018",
+      "type": "question",
+      "label": "为什么我们应该立即关注这些修改文件的内容？",
+      "properties": {
+        "status": "closed",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T19:42:17.718334"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-019",
+      "type": "question",
+      "label": "为什么我们应该立即关注未跟踪文件的增加？",
+      "properties": {
+        "status": "closed",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T19:42:17.725317"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-020",
+      "type": "question",
+      "label": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:45:02.113688"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-021",
+      "type": "question",
+      "label": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:45:02.119859"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-022",
+      "type": "question",
+      "label": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:57:41.282198"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-023",
+      "type": "question",
+      "label": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T19:57:41.290489"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-024",
+      "type": "question",
+      "label": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T20:12:06.031752"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-025",
+      "type": "question",
+      "label": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "closed",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T20:12:06.038860"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-026",
+      "type": "question",
+      "label": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "answered",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T20:25:52.086681"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-027",
+      "type": "question",
+      "label": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "answered",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-12T20:25:52.095207"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-028",
+      "type": "question",
+      "label": "为什么我们应该立即关注这些修改文件的内容？",
+      "properties": {
+        "status": "answered",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T21:29:31.737623"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-029",
+      "type": "question",
+      "label": "为什么我们需要立即关注未跟踪文件的增加？",
+      "properties": {
+        "status": "answered",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-12T21:29:31.744346"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-030",
+      "type": "question",
+      "label": "[自学习] 检测到 13 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T10:50:49.778462"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-031",
+      "type": "question",
+      "label": "[自学习] 检测到 14 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T11:07:51.719512"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-032",
+      "type": "question",
+      "label": "[自学习] 检测到 15 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T11:27:48.873316"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-033",
+      "type": "question",
+      "label": "[自学习] 检测到 16 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T11:37:23.642763"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-034",
+      "type": "question",
+      "label": "[自学习] 检测到 17 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T11:53:38.300880"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-035",
+      "type": "question",
+      "label": "[自学习] 检测到 18 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T12:08:01.731352"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-036",
+      "type": "question",
+      "label": "[自学习] 检测到 19 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T12:22:59.798910"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-037",
+      "type": "question",
+      "label": "[自学习] 检测到 20 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T12:43:15.342227"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-038",
+      "type": "question",
+      "label": "[自学习] 检测到 21 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T12:57:18.825381"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-039",
+      "type": "question",
+      "label": "[自学习] 检测到 22 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:12:16.563236"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-040",
+      "type": "question",
+      "label": "[自学习] 检测到 1 次「Provider 认证失败」模式，建议采取改进措施",
+      "properties": {
+        "status": "open",
+        "priority": "P1",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:12:16.572297"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-041",
+      "type": "question",
+      "label": "[自学习] 检测到 23 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:26:38.018095"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-042",
+      "type": "question",
+      "label": "[自学习] 检测到 2 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:40:56.908876"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-043",
+      "type": "question",
+      "label": "[自学习] 检测到 24 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:40:56.916430"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-044",
+      "type": "question",
+      "label": "[自学习] 检测到 25 次「新发现」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T13:55:32.349017"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-045",
+      "type": "question",
+      "label": "为什么我们应该立即关注文件 'M 00_ROOT/PRINCIPLES.md' 的修改？",
+      "properties": {
+        "status": "open",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-13T14:14:16.386544"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-046",
+      "type": "question",
+      "label": "为什么我们应该立即关注这些未跟踪文件的增加？",
+      "properties": {
+        "status": "open",
+        "priority": "P1",
+        "source": "question_engine",
+        "created_at": "2026-07-13T14:14:16.398592"
       },
       "coords": {
         "reality": 0.6,
@@ -305,6 +965,481 @@
       "properties": {
         "qid": "Q-001",
         "confidence": 30,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-004",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-016",
+        "confidence": 0.8,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-005",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-017",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-006",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-020",
+        "confidence": 0.8,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-007",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-021",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-008",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-022",
+        "confidence": 0.8,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-009",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-023",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-010",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-024",
+        "confidence": 0.8,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-011",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-025",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-012",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-026",
+        "confidence": 0.8,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-013",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-027",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-014",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-030",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-015",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-031",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-016",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-032",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-017",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-033",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-018",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-034",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-019",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-035",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-020",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-036",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-021",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-037",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-022",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-038",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-023",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-039",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-024",
+      "type": "hypothesis",
+      "label": "检查 API Key 配置; 切换备用凭证",
+      "properties": {
+        "qid": "Q-040",
+        "confidence": 0.6,
+        "status": "debated_rejected"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-025",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-041",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-026",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-042",
+        "confidence": 0.7,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-027",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-043",
+        "confidence": 0.9,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
+      "id": "H-028",
+      "type": "hypothesis",
+      "label": "沉淀为知识; 关联到相关概念",
+      "properties": {
+        "qid": "Q-044",
+        "confidence": 0.9,
         "status": "proposed"
       },
       "coords": {
@@ -540,6 +1675,114 @@
       "label": "执行 Scout 提出的方案，优先识别并验证未追踪文件的内容及其与已知系统问题的相关性，并根据评估结果制定相应的处理策略",
       "properties": {
         "qid": "Q-012",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-013",
+      "type": "decision",
+      "label": "启动专项研究工作小组，收集系统运行数据、历史维护记录及监控报告等信息，深入分析降级链路生效成功模式的具体原因，并据此提出",
+      "properties": {
+        "qid": "Q-016",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-014",
+      "type": "decision",
+      "label": "批准并执行强化新发现模式的检测机制、实施小规模实验和与专家小组讨论。",
+      "properties": {
+        "qid": "Q-017",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-015",
+      "type": "decision",
+      "label": "立即实施强化链路健康监测方案，增加检测频率和深度以及时发现并解决降级链路问题。",
+      "properties": {
+        "qid": "Q-026",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-016",
+      "type": "decision",
+      "label": "启动算法改进和数据扩充项目，包括引入新的机器学习模型如CNN或RNN，并在虚拟环境中测试强化学习策略的有效性。",
+      "properties": {
+        "qid": "Q-027",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-017",
+      "type": "decision",
+      "label": "安排团队立即审查这些修改文件的内容，并进行详细对比分析，确认系统行为的变化点和新改动的影响。",
+      "properties": {
+        "qid": "Q-028",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-018",
+      "type": "decision",
+      "label": "立即分析新增的32个未跟踪文件的内容和重要性，并评估它们对当前系统的潜在影响。确认是否需进一步研究并制定相应应对措施。",
+      "properties": {
+        "qid": "Q-029",
         "outcome": "approved"
       },
       "coords": {
@@ -1345,6 +2588,43 @@
       "civilization_score": 0.605
     },
     {
+      "id": "PROTO:admission_engine",
+      "type": "protocol",
+      "label": "admission_engine",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:autophagy_engine",
+      "type": "protocol",
+      "label": "autophagy_engine",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-017"
+        ]
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:awaken",
       "type": "protocol",
       "label": "awaken",
@@ -1441,6 +2721,40 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:civilization_contract",
+      "type": "protocol",
+      "label": "civilization_contract",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:civilization_entry_dna",
+      "type": "protocol",
+      "label": "civilization_entry_dna",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:civilization_map",
       "type": "protocol",
       "label": "civilization_map",
@@ -1463,6 +2777,77 @@
       "label": "compare_integrate",
       "properties": {
         "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:constraint_validator",
+      "type": "protocol",
+      "label": "constraint_validator",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:continuity_engine",
+      "type": "protocol",
+      "label": "continuity_engine",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:csp_registry",
+      "type": "protocol",
+      "label": "csp_registry",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:energy_budget",
+      "type": "protocol",
+      "label": "energy_budget",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-017"
+        ]
       },
       "coords": {
         "reality": 0.6,
@@ -1512,11 +2897,48 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:evidence_graph",
+      "type": "protocol",
+      "label": "evidence_graph",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:explorer_v2",
       "type": "protocol",
       "label": "explorer_v2",
       "properties": {
         "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:gene_network",
+      "type": "protocol",
+      "label": "gene_network",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-001"
+        ]
       },
       "coords": {
         "reality": 0.6,
@@ -1551,6 +2973,26 @@
       "label": "heartbeat",
       "properties": {
         "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:identity_core",
+      "type": "protocol",
+      "label": "identity_core",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-001"
+        ]
       },
       "coords": {
         "reality": 0.6,
@@ -1614,6 +3056,23 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:lineage_engine",
+      "type": "protocol",
+      "label": "lineage_engine",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:local_miner",
       "type": "protocol",
       "label": "local_miner",
@@ -1637,6 +3096,23 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:mission_protocol",
+      "type": "protocol",
+      "label": "mission_protocol",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:multi_agent_debate",
       "type": "protocol",
       "label": "multi_agent_debate",
@@ -1644,6 +3120,26 @@
         "type": "runtime",
         "implements": [
           "C-010"
+        ]
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:nature_reserve",
+      "type": "protocol",
+      "label": "nature_reserve",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-001"
         ]
       },
       "coords": {
@@ -1793,6 +3289,23 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:quality_checker",
+      "type": "protocol",
+      "label": "quality_checker",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:question_center",
       "type": "protocol",
       "label": "question_center",
@@ -1882,11 +3395,85 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:repository",
+      "type": "protocol",
+      "label": "repository",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:repository_manager",
+      "type": "protocol",
+      "label": "repository_manager",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:repository_store",
+      "type": "protocol",
+      "label": "repository_store",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:roundtable",
       "type": "protocol",
       "label": "roundtable",
       "properties": {
-        "type": "runtime"
+        "type": "runtime",
+        "implements": [
+          "C-007"
+        ]
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:seed_archive",
+      "type": "protocol",
+      "label": "seed_archive",
+      "properties": {
+        "type": "runtime",
+        "implements": [
+          "C-017"
+        ]
       },
       "coords": {
         "reality": 0.6,
@@ -1919,6 +3506,23 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:self_learning_engine",
+      "type": "protocol",
+      "label": "self_learning_engine",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:shared_api",
       "type": "protocol",
       "label": "shared_api",
@@ -1936,9 +3540,60 @@
       "civilization_score": 0.59
     },
     {
+      "id": "PROTO:smelter_gate",
+      "type": "protocol",
+      "label": "smelter_gate",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
       "id": "PROTO:state_generator",
       "type": "protocol",
       "label": "state_generator",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:test_smelter_gate",
+      "type": "protocol",
+      "label": "test_smelter_gate",
+      "properties": {
+        "type": "runtime"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.6,
+        "memory": 0.5,
+        "generation": 0.3,
+        "execution": 0.9,
+        "experience": 0.7
+      },
+      "civilization_score": 0.59
+    },
+    {
+      "id": "PROTO:worker_registry",
+      "type": "protocol",
+      "label": "worker_registry",
       "properties": {
         "type": "runtime"
       },
@@ -2873,9 +4528,9 @@
     {
       "id": "EXP_POOL",
       "type": "experience",
-      "label": "Experience Pool (5 entries)",
+      "label": "Experience Pool (130 entries)",
       "properties": {
-        "count": 5,
+        "count": 130,
         "dir_exists": true
       },
       "coords": {
@@ -3373,6 +5028,192 @@
       "properties": {}
     },
     {
+      "source": "Q-016",
+      "target": "H-004",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-016",
+      "target": "D-013",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-017",
+      "target": "H-005",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-017",
+      "target": "D-014",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-020",
+      "target": "H-006",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-021",
+      "target": "H-007",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-022",
+      "target": "H-008",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-023",
+      "target": "H-009",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-024",
+      "target": "H-010",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-025",
+      "target": "H-011",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-026",
+      "target": "H-012",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-026",
+      "target": "D-015",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-027",
+      "target": "H-013",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-027",
+      "target": "D-016",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-028",
+      "target": "D-017",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-029",
+      "target": "D-018",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-030",
+      "target": "H-014",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-031",
+      "target": "H-015",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-032",
+      "target": "H-016",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-033",
+      "target": "H-017",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-034",
+      "target": "H-018",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-035",
+      "target": "H-019",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-036",
+      "target": "H-020",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-037",
+      "target": "H-021",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-038",
+      "target": "H-022",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-039",
+      "target": "H-023",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-040",
+      "target": "H-024",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-041",
+      "target": "H-025",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-042",
+      "target": "H-026",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-043",
+      "target": "H-027",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-044",
+      "target": "H-028",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
       "source": "H-001",
       "target": "EXP-001",
       "type": "has_experiment",
@@ -3781,6 +5622,12 @@
       "properties": {}
     },
     {
+      "source": "PROTO:autophagy_engine",
+      "target": "C-017",
+      "type": "implements",
+      "properties": {}
+    },
+    {
       "source": "PROTO:awareness_loop",
       "target": "C-007",
       "type": "implements",
@@ -3823,7 +5670,25 @@
       "properties": {}
     },
     {
+      "source": "PROTO:energy_budget",
+      "target": "C-017",
+      "type": "implements",
+      "properties": {}
+    },
+    {
       "source": "PROTO:environment_first",
+      "target": "C-001",
+      "type": "implements",
+      "properties": {}
+    },
+    {
+      "source": "PROTO:gene_network",
+      "target": "C-001",
+      "type": "implements",
+      "properties": {}
+    },
+    {
+      "source": "PROTO:identity_core",
       "target": "C-001",
       "type": "implements",
       "properties": {}
@@ -3859,6 +5724,12 @@
       "properties": {}
     },
     {
+      "source": "PROTO:nature_reserve",
+      "target": "C-001",
+      "type": "implements",
+      "properties": {}
+    },
+    {
       "source": "PROTO:question_center",
       "target": "C-009",
       "type": "implements",
@@ -3867,6 +5738,18 @@
     {
       "source": "PROTO:question_center",
       "target": "C-012",
+      "type": "implements",
+      "properties": {}
+    },
+    {
+      "source": "PROTO:roundtable",
+      "target": "C-007",
+      "type": "implements",
+      "properties": {}
+    },
+    {
+      "source": "PROTO:seed_archive",
+      "target": "C-017",
       "type": "implements",
       "properties": {}
     },
@@ -3896,30 +5779,30 @@
     }
   ],
   "stats": {
-    "total_nodes": 174,
-    "total_edges": 102,
-    "density_pct": 0.339,
+    "total_nodes": 261,
+    "total_edges": 140,
+    "density_pct": 0.206,
     "node_types": {
-      "question": 13,
-      "hypothesis": 3,
+      "question": 46,
+      "hypothesis": 28,
       "experiment": 1,
-      "decision": 12,
+      "decision": 18,
       "capability": 13,
       "provider": 11,
       "constraint": 18,
-      "protocol": 34,
+      "protocol": 57,
       "concept": 50,
       "memory": 1,
       "experience": 1,
       "worker": 17
     },
     "edge_types": {
-      "has_hypothesis": 3,
-      "has_decision": 12,
+      "has_hypothesis": 28,
+      "has_decision": 18,
       "has_experiment": 1,
       "requires": 12,
       "provides": 55,
-      "implements": 16,
+      "implements": 23,
       "depends_on": 3
     },
     "top_connected": [
@@ -3983,14 +5866,14 @@
       "experience": 0.1
     },
     "avg_dimension_scores": {
-      "reality": 0.464,
-      "knowledge": 0.733,
-      "memory": 0.636,
-      "generation": 0.421,
-      "execution": 0.576,
-      "experience": 0.606
+      "reality": 0.488,
+      "knowledge": 0.726,
+      "memory": 0.618,
+      "generation": 0.456,
+      "execution": 0.539,
+      "experience": 0.576
     },
-    "avg_civilization_score": 0.563,
+    "avg_civilization_score": 0.561,
     "top_score_nodes": [
       {
         "id": "EXP-001",

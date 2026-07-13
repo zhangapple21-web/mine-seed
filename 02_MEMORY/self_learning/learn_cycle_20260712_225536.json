@@ -1,0 +1,162 @@
+{
+  "cycle_id": "learn_cycle_20260712_225536",
+  "started_at": "2026-07-12T22:55:36.860785",
+  "completed_at": "2026-07-12T22:55:36.908239",
+  "duration_seconds": 0.047454,
+  "seed_results": {
+    "from_heartbeats": 0,
+    "from_explorations": 0,
+    "from_audits": 0,
+    "from_provider_health": 0,
+    "total_seeded": 0
+  },
+  "metrics": {
+    "total_experiences": 31,
+    "failure_count": 1,
+    "success_count": 4,
+    "unknown_count": 26,
+    "success_ratio": 0.129,
+    "failure_ratio": 0.032,
+    "daily_distribution": {
+      "2026-07-10": 1,
+      "2026-07-11": 4,
+      "2026-07-12": 26
+    },
+    "learning_days": 3
+  },
+  "patterns": {
+    "failure_patterns_detected": 0,
+    "success_patterns_detected": 2,
+    "failure_patterns": [],
+    "success_patterns": [
+      {
+        "pattern_id": "new_discovery",
+        "name": "新发现",
+        "value": "medium",
+        "occurrences": 12,
+        "recent_examples": [
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T194502_0.json",
+            "hit_keywords": 1,
+            "title": "心跳错误: 2026-07-12 19:43:35 [ERROR] StateGenerator error: can't multiply sequence by non"
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T193454_10.json",
+            "hit_keywords": 2,
+            "title": "探索发现: ## Recommendation"
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T193454_9.json",
+            "hit_keywords": 1,
+            "title": "心跳错误: 2026-07-10 18:46:05 [INFO] Archivist: error"
+          }
+        ],
+        "reinforce": [
+          "沉淀为知识",
+          "关联到相关概念"
+        ]
+      },
+      {
+        "pattern_id": "fallback_chain_works",
+        "name": "降级链路生效",
+        "value": "high",
+        "occurrences": 3,
+        "recent_examples": [
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_ollama_20260711T190940.json",
+            "hit_keywords": 2,
+            "title": ""
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_github_20260711T155631.json",
+            "hit_keywords": 2,
+            "title": ""
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_20260711T230000_archaeology_distillation.json",
+            "hit_keywords": 1,
+            "title": "R1 ExperienceEngine + Constraint Proposer 考古蒸馏"
+          }
+        ],
+        "reinforce": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ]
+      }
+    ]
+  },
+  "hypotheses": {
+    "total_generated": 2,
+    "from_failures": 0,
+    "from_successes": 2,
+    "ranked": [
+      {
+        "id": "hypo_reinforce_fallback_chain_works_20260712225536",
+        "source": "success_pattern",
+        "pattern": "fallback_chain_works",
+        "title": "强化：降级链路生效",
+        "description": "检测到 3 次「降级链路生效」成功模式，建议强化",
+        "value": "high",
+        "confidence": 0.8,
+        "reinforce_actions": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ],
+        "risk_level": "low",
+        "experiment_type": "reinforcement",
+        "created_at": "2026-07-12T22:55:36.906735",
+        "status": "proposed",
+        "priority": 1
+      },
+      {
+        "id": "hypo_reinforce_new_discovery_20260712225536",
+        "source": "success_pattern",
+        "pattern": "new_discovery",
+        "title": "强化：新发现",
+        "description": "检测到 12 次「新发现」成功模式，建议强化",
+        "value": "medium",
+        "confidence": 0.9,
+        "reinforce_actions": [
+          "沉淀为知识",
+          "关联到相关概念"
+        ],
+        "risk_level": "low",
+        "experiment_type": "reinforcement",
+        "created_at": "2026-07-12T22:55:36.906735",
+        "status": "proposed",
+        "priority": 2
+      }
+    ],
+    "pushed_to_question_center": 0
+  },
+  "experiments": {
+    "auto_executed": 0,
+    "recommended": 2,
+    "details": [
+      {
+        "hypothesis_id": "hypo_reinforce_fallback_chain_works_20260712225536",
+        "title": "强化：降级链路生效",
+        "auto_executed": false,
+        "reason": "safe_mode: 当前为安全模式，只生成建议不自动执行",
+        "actions_proposed": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ],
+        "timestamp": "2026-07-12T22:55:36.906735",
+        "status": "recommended"
+      },
+      {
+        "hypothesis_id": "hypo_reinforce_new_discovery_20260712225536",
+        "title": "强化：新发现",
+        "auto_executed": false,
+        "reason": "safe_mode: 当前为安全模式，只生成建议不自动执行",
+        "actions_proposed": [
+          "沉淀为知识",
+          "关联到相关概念"
+        ],
+        "timestamp": "2026-07-12T22:55:36.906735",
+        "status": "recommended"
+      }
+    ]
+  }
+}

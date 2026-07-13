@@ -1,3 +1,24 @@
+---
+id: KERNEL-DNA-V1
+type: axiom
+title: "Kernel DNA v1.0 — A4纸重建核"
+status: active
+source: "R1 Deep Archaeology + HYPOTHESIS-KERNEL-001"
+created: 2026-07-12
+lineage:
+  - TG-Saved/R1_RUIN_SKELETON.zip
+  - chip_v1_root.json
+  - chip_v2_manifest.json
+  - chip_v3_core.json
+related: [INV-MANIFEST-001, CHIP-LINEAGE-001, C-015]
+tags: [kernel, dna, compression, a4, chip]
+confidence: 0.85
+evidence: [E-036, E-038, E-039, E-041, E-044]
+archaeology:
+  state: inferred
+  sources: 3
+---
+
 # Kernel DNA v1.0
 # A4纸重建核 — 最简可迁移认知芯片
 

@@ -126,11 +126,10 @@ class AdvisorTracker:
         return new_count
 
     def get_price(self, ticker: str) -> Optional[float]:
-        """获取最新价格"""
+        """获取最新价格（使用多数据源）"""
         try:
-            sys.path.insert(0, str(ADVISOR_DIR))
-            from stock_query import get_stock_query
-            sq = get_stock_query()
+            from multi_data_source import DataSourceManager
+            dsm = DataSourceManager()
 
             if ticker.startswith('6') or ticker.startswith('68'):
                 full_code = f"sh{ticker}"
@@ -139,9 +138,9 @@ class AdvisorTracker:
             else:
                 full_code = f"sz{ticker}"
 
-            quote = sq.get_quote([full_code])
-            if quote and len(quote) > 0:
-                return float(quote[0].get("price", 0))
+            quotes = dsm.get_quotes([full_code])
+            if quotes and len(quotes) > 0:
+                return float(quotes[0].get("price", 0))
         except Exception:
             pass
         return None

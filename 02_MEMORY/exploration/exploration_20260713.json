@@ -1,0 +1,20 @@
+{
+  "topic": {
+    "id": "T-001",
+    "name": "Provider Router / Model Routing",
+    "keywords": [
+      "llm router",
+      "model routing",
+      "fallback chain",
+      "provider health"
+    ],
+    "capability_ref": "llm_inference",
+    "why_for_ace": "ACE 已经实现了 Provider Civilization，可以借鉴外部路由框架的健康检查策略"
+  },
+  "projects": [],
+  "findings": "GitHub search failed: GitHub API rate limited",
+  "question_for_ace": "是否应该重新设计 Provider Router / Model Routing 的探索策略？",
+  "absorb_recommendation": "defer",
+  "rationale": "外部搜索失败，需要备用方案",
+  "timestamp": "2026-07-13T00:12:07.390468"
+}

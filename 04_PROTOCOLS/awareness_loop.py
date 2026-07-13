@@ -41,7 +41,6 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from environment_sensor import EnvironmentSensor, SituationBuilder, Observation
 from local_miner import call_model, health, list_capabilities, CAPABILITY_GRAPH
-from roundtable import roundtable
 
 WORKSPACE = Path(__file__).parent.parent
 EXPERIENCE_DIR = WORKSPACE / "02_MEMORY" / "experience"

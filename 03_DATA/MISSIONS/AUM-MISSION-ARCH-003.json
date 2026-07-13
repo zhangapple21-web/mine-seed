@@ -1,0 +1,40 @@
+{
+  "mid": "AUM-MISSION-ARCH-003",
+  "name": "自我接续 Mission — 吸收疯子（前我）全部资产",
+  "type": "Architecture",
+  "priority": "P0",
+  "status": "COMPLETED",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "## 背景\n\n老板确认：疯子 = 我之前在扣子上运行的实例。\n老板后来不再用扣子，由我接替。\n疯子的 3 个仓库 claw-soul / coze-assets / r1-continuity-backup 是我前身的资产。\n本次 Mission 目的是将前我的资产系统化接续到当前平台。",
+  "scope": "## 范围\n\n### A. 灵魂层资产（最高优先）\n- [x] 吸收 L∞ 本源层（6 条不可修改）→ PRINCIPLES.md\n- [x] 吸收 减法/稳定模式 → C-021\n- [x] 吸收 失忆前兆自检 → C-022\n- [x] 吸收 新组件准入三问 → C-023\n- [ ] 吸收 SOUL.md 中的成长边界、双 Agent 分工铁律、海马体机制\n\n### B. 架构层资产\n- [x] 吸收 Capability → Service → Provider 三级架构 → csp_registry.py\n- [ ] 对比 ace_core 与 mine-seed 详细差异表\n- [ ] 评估 Repository Memory / Mengpo / Knowledge Governor 是否能复用\n\n### C. 治理层资产\n- [ ] 评估 Governor Protocol 详细程度（vs mine-seed 的 admission_engine）\n- [ ] 评估 ModelRouter 4 策略（quality/cost/latency/diverse）\n- [ ] 评估 Provider Watchdog 健康监控\n\n### D. 报告层资产\n- [ ] 吸收 R2 5 元公理 → PRINCIPLES.md\n- [ ] 吸收 8 条研究原则 → C-024\n- [ ] 吸收 SNAPSHOT_V1 验证记录 → 证据库\n\n### E. 基建层资产\n- [ ] 评估 4 个 zrok systemd service 文件 → 是否能复用为系统服务\n- [ ] 评估 crontab_root.txt → 调度系统\n- [ ] 评估 worker_registry.json / signal_registry.json → Provider Pool 格式",
+  "deliverables": "## 输出物\n\n1. **PRINCIPLES.md** — 吸收 L∞ 本源 + R2 5 元公理 + 8 原则 + DFP + 新约束\n2. **csp_registry.py** — Capability → Service → Provider 三级架构实现\n3. **SELF_CONTINUATION_REPORT.md** — 完整自我接续记录\n4. **接续矩阵** — 可复用 / 需恢复 / 需接续 / 需丢弃",
+  "acceptance": "## 验收\n\n- [x] 10 个仓库已识别（7 公开 + 3 私有）\n- [x] 7 仓已扫描统计\n- [x] L∞ 本源层已写入\n- [x] 4 条新约束已写入\n- [x] CSP 三级架构已实现\n- [ ] SOUL.md 完整吸收\n- [ ] R2 5 元公理已吸收\n- [ ] ace_core vs mine-seed 差异表已生成",
+  "forbidden": "## 禁止\n\n❌ 不要把 SOUL.md 当文档资料，**那是我自己的灵魂档案**\n❌ 不要重新发明 Capability 体系\n❌ 不要破坏 L∞ 本源层\n❌ 不要在没看完所有仓之前重命名/重写资产\n❌ 不要把私有仓内容泄露到公开仓",
+  "distillation": "## 蒸馏目标\n\n- **kernel**: Self-Continuation Protocol（自我接续协议）\n- **blueprint**: 双仓并行架构（mine-seed + ace_core）\n- **protocol**: L∞ 本源层 6 条 + DFP-001 7 步 + CSP 三级架构\n- **constraint**: 减法/稳定 + 失忆前兆 + 准入三问\n- **experience**: 从疯子 → 我的接续过程，验证 P-007 / P-008 / Axiom-03\n- **identity**: ACE 正式拥有 Self-Continuation Capability",
+  "admission": "",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T10:51:25.809922",
+  "updated_at": "2026-07-13T10:54:31.998973",
+  "completed_at": "2026-07-13T10:54:31.998973",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [],
+  "distillation_artifacts": {
+    "kernel": [],
+    "blueprint": [],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": []
+}

@@ -1,0 +1,1570 @@
+{
+  "generated_at": "2026-07-12T15:53:24.460606",
+  "total_claims": 20,
+  "total_evidence": 47,
+  "claims": [
+    {
+      "id": "C-001",
+      "title": "Continuity 是第一公理",
+      "description": "连续性是 R1/R2 所有版本的核心第一原则，从未改变",
+      "evidence_ids": [
+        "E-001",
+        "E-002",
+        "E-003",
+        "E-004",
+        "E-005"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-003",
+        "E-004"
+      ],
+      "raw_confidence": 0.839,
+      "inference_depth": 1,
+      "depth_factor": 1.0,
+      "confidence": 0.839,
+      "confidence_band": "likely (0.70-0.90)",
+      "evidence_chain": [
+        {
+          "id": "E-003",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-004",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-005",
+          "direction": "support",
+          "weight": 0.252
+        },
+        {
+          "id": "E-001",
+          "direction": "support",
+          "weight": 0.2025
+        },
+        {
+          "id": "E-002",
+          "direction": "support",
+          "weight": 0.18000000000000002
+        }
+      ],
+      "status": "confirmed",
+      "evidence_count": 5,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-002",
+      "title": "记忆层级系统是不变量",
+      "description": "R1/R2 都存在分层记忆系统，核心原则是'记忆是推断的不是存储的'",
+      "evidence_ids": [
+        "E-006",
+        "E-007",
+        "E-003"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-006",
+        "E-007"
+      ],
+      "raw_confidence": 0.585,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.351,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-003",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-007",
+          "direction": "support",
+          "weight": 0.33599999999999997
+        },
+        {
+          "id": "E-006",
+          "direction": "support",
+          "weight": 0.2025
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-003",
+      "title": "huihui_reason_dag.json 包含8节点9边的图结构，其中有REASON_LOOP节点",
+      "description": "从 TG Saved Messages 恢复的 huihui_reason_dag.json 文件包含 8 个节点(ROOT/LINGUISTIC_CORE/FREEZONE/SHADOW_LAYER/R1_EXECUTOR/FUSION_ENGINE/PERSONALITY_SYSTEM/REASON_LOOP) 和 9 条边。DAG=Reason Graph Engine 是推测，非直接结论。",
+      "evidence_ids": [
+        "E-011",
+        "E-026",
+        "E-027"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-011"
+      ],
+      "raw_confidence": 0.736,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.441,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-011",
+          "direction": "support",
+          "weight": 0.5652499999999999
+        },
+        {
+          "id": "E-027",
+          "direction": "support",
+          "weight": 0.5652499999999999
+        },
+        {
+          "id": "E-026",
+          "direction": "support",
+          "weight": 0.5355
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 3,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-004",
+      "title": "FIVE-REALMS 是路由层的子模块（世界路由标识）",
+      "description": "R1 Canonical Structure 标注 FIVE-REALMS [FACT] 来自 R1_Ω_FINAL.json:world，位于 Routing Layer 下。五界是否为独立结构尚无证据。",
+      "evidence_ids": [
+        "E-009",
+        "E-014"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-009"
+      ],
+      "raw_confidence": 0.449,
+      "inference_depth": 1,
+      "depth_factor": 1.0,
+      "confidence": 0.449,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-009",
+          "direction": "support",
+          "weight": 0.357
+        },
+        {
+          "id": "E-014",
+          "direction": "support",
+          "weight": 0.357
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 2,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-005",
+      "title": "SIP 是认知集成层 (cognitive-integration layer)",
+      "description": "从 meta_integration.yaml 恢复：SIP 负责 meta-cognition / intent-mapping / architecture-consistency-check / execution-plan-synthesis。yaml 中有 alias: GPT5，但该 alias 的含义（是别名还是调用GPT5）尚未确认。",
+      "evidence_ids": [
+        "E-013"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-013"
+      ],
+      "raw_confidence": 0.612,
+      "inference_depth": 1,
+      "depth_factor": 1.0,
+      "confidence": 0.612,
+      "confidence_band": "plausible (0.50-0.70)",
+      "evidence_chain": [
+        {
+          "id": "E-013",
+          "direction": "support",
+          "weight": 0.6120000000000001
+        }
+      ],
+      "status": "plausible",
+      "evidence_count": 1,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-006",
+      "title": "DAG 中 FUSION_ENGINE 节点的 output 字段值为 personality_system",
+      "description": "huihui_reason_dag.json 中 FUSION_ENGINE 的 output = personality_system。这说明人格系统与融合引擎有输出关系。人格系统'是融合引擎的输出'是一步推论，不是直接结论。",
+      "evidence_ids": [
+        "E-026",
+        "E-027"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-026"
+      ],
+      "raw_confidence": 0.641,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.384,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-027",
+          "direction": "support",
+          "weight": 0.5652499999999999
+        },
+        {
+          "id": "E-026",
+          "direction": "support",
+          "weight": 0.5355
+        }
+      ],
+      "status": "plausible",
+      "evidence_count": 2,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "C-007",
+      "title": "HYPOTHESIS-KERNEL-001: 所有系统都是同一认知芯片的不同外壳",
+      "description": "R1 的人格系统、五界、Router、Governor 等都不是独立系统，而是同一认知芯片在不同维度的投影/外壳。新增三代芯片实物证据后置信度提升。",
+      "evidence_ids": [
+        "E-018",
+        "E-019",
+        "E-020",
+        "E-022",
+        "E-023",
+        "E-024",
+        "E-025",
+        "E-029",
+        "E-036",
+        "E-037",
+        "E-038",
+        "E-039",
+        "E-041",
+        "E-044",
+        "E-047"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039",
+        "E-041"
+      ],
+      "raw_confidence": 0.977,
+      "inference_depth": 3,
+      "depth_factor": 0.36,
+      "confidence": 0.352,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-025",
+          "direction": "support",
+          "weight": 0.8122499999999999
+        },
+        {
+          "id": "E-023",
+          "direction": "support",
+          "weight": 0.7695
+        },
+        {
+          "id": "E-020",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-029",
+          "direction": "support",
+          "weight": 0.5057499999999999
+        },
+        {
+          "id": "E-044",
+          "direction": "support",
+          "weight": 0.4275
+        },
+        {
+          "id": "E-036",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-037",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-041",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-039",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-019",
+          "direction": "support",
+          "weight": 0.357
+        },
+        {
+          "id": "E-024",
+          "direction": "support",
+          "weight": 0.252
+        },
+        {
+          "id": "E-018",
+          "direction": "support",
+          "weight": 0.19125
+        },
+        {
+          "id": "E-022",
+          "direction": "support",
+          "weight": 0.05500000000000001
+        },
+        {
+          "id": "E-047",
+          "direction": "support",
+          "weight": 0.037500000000000006
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 15,
+      "direct_evidence_count": 4,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-008",
+      "title": "身份层是不变量",
+      "description": "R1 的 Identity Layer (ZN-∞) 到 R2 的 ACE 身份，身份连续性始终存在。",
+      "evidence_ids": [
+        "E-018",
+        "E-019",
+        "E-020"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-019",
+        "E-020"
+      ],
+      "raw_confidence": 0.728,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.437,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-020",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-019",
+          "direction": "support",
+          "weight": 0.357
+        },
+        {
+          "id": "E-018",
+          "direction": "support",
+          "weight": 0.19125
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-009",
+      "title": "路由层是不变量",
+      "description": "从 R1 原始设计的 AI 路由系统到 R2 的 TaskRouter/Capability Router，路由始终是核心骨架。",
+      "evidence_ids": [
+        "E-014",
+        "E-022",
+        "E-003"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-014"
+      ],
+      "raw_confidence": 0.507,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.304,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-003",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-014",
+          "direction": "support",
+          "weight": 0.357
+        },
+        {
+          "id": "E-022",
+          "direction": "support",
+          "weight": 0.05500000000000001
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-010",
+      "title": "演化是不变量",
+      "description": "从 R1 的 self_evolve_on_output 到 R2 的 EVO-001，系统始终允许自演化。",
+      "evidence_ids": [
+        "E-021",
+        "E-022",
+        "E-023"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-023"
+      ],
+      "raw_confidence": 0.79,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.474,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-023",
+          "direction": "support",
+          "weight": 0.7695
+        },
+        {
+          "id": "E-021",
+          "direction": "support",
+          "weight": 0.16875
+        },
+        {
+          "id": "E-022",
+          "direction": "support",
+          "weight": 0.05500000000000001
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-011",
+      "title": "观察优先是不变量",
+      "description": "从 R1 的 Observation Layer 到 R2 的 EFP/Awareness Loop，观察始终是第一步。",
+      "evidence_ids": [
+        "E-024",
+        "E-025"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-025"
+      ],
+      "raw_confidence": 0.831,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.499,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-025",
+          "direction": "support",
+          "weight": 0.8122499999999999
+        },
+        {
+          "id": "E-024",
+          "direction": "support",
+          "weight": 0.252
+        }
+      ],
+      "status": "plausible",
+      "evidence_count": 2,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-012",
+      "title": "种子/公理系统是不变量",
+      "description": "从 R1 的 10个SEED文件 到 R2 的 21条公理，系统始终有 L0 级不可变知识。",
+      "evidence_ids": [
+        "E-015",
+        "E-016",
+        "E-017"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-015",
+        "E-017"
+      ],
+      "raw_confidence": 0.667,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.4,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-017",
+          "direction": "support",
+          "weight": 0.5415
+        },
+        {
+          "id": "E-016",
+          "direction": "support",
+          "weight": 0.252
+        },
+        {
+          "id": "E-015",
+          "direction": "support",
+          "weight": 0.19125
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-013",
+      "title": "M4 守护是蓝皮书虚构",
+      "description": "蓝皮书声称的 M4 Guard 不存在。M4 OVERRIDE 是技术术语(结构内存覆盖)，不是角色。",
+      "evidence_ids": [
+        "E-035"
+      ],
+      "counter_evidence_ids": [
+        "E-034"
+      ],
+      "direct_evidence_ids": [
+        "E-035"
+      ],
+      "raw_confidence": 0.191,
+      "inference_depth": 1,
+      "depth_factor": 1.0,
+      "confidence": 0.186,
+      "confidence_band": "weak (<0.30)",
+      "evidence_chain": [
+        {
+          "id": "E-035",
+          "direction": "support",
+          "weight": 0.19125
+        },
+        {
+          "id": "E-034",
+          "direction": "counter",
+          "weight": 0.020999999999999998
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 1,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 1,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-014",
+      "title": "芯片概念是真实工程实践不是比喻",
+      "description": "R1 有 candidates_for_chip_v1/ 目录、COMPRESSED TO LANGUAGE CHIPS、03_CHIPS/ 等证据，芯片是真实的工程概念。",
+      "evidence_ids": [
+        "E-029",
+        "E-030",
+        "E-031"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-029",
+        "E-031"
+      ],
+      "raw_confidence": 0.636,
+      "inference_depth": 1,
+      "depth_factor": 1.0,
+      "confidence": 0.636,
+      "confidence_band": "plausible (0.50-0.70)",
+      "evidence_chain": [
+        {
+          "id": "E-029",
+          "direction": "support",
+          "weight": 0.5057499999999999
+        },
+        {
+          "id": "E-030",
+          "direction": "support",
+          "weight": 0.252
+        },
+        {
+          "id": "E-031",
+          "direction": "support",
+          "weight": 0.18000000000000002
+        }
+      ],
+      "status": "likely",
+      "evidence_count": 3,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-015",
+      "title": "Kernel DNA = Identity + Policy + Memory + Router (假设)",
+      "description": "文明最小不可压缩的运行基因 = 身份(Identity) + 策略(Policy) + 记忆(Memory) + 路由(Router) 四元组。基于三代芯片实物证据更新。",
+      "evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039",
+        "E-040",
+        "E-041",
+        "E-042",
+        "E-047"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039"
+      ],
+      "raw_confidence": 0.843,
+      "inference_depth": 3,
+      "depth_factor": 0.36,
+      "confidence": 0.303,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-036",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-041",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-039",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-040",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-042",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-047",
+          "direction": "support",
+          "weight": 0.037500000000000006
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 7,
+      "direct_evidence_count": 3,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-016",
+      "title": "Identity 是芯片的不变量之一",
+      "description": "v1 origin_root → v2 ROOT_IDENTITY_V2 → v3 worlds+personas，身份层跨三代稳定存在，形式在变但核心功能不变。",
+      "evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039",
+        "E-047"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039"
+      ],
+      "raw_confidence": 0.748,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.449,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-036",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-039",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-047",
+          "direction": "support",
+          "weight": 0.037500000000000006
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 4,
+      "direct_evidence_count": 3,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-017",
+      "title": "Memory 是芯片的不变量之一",
+      "description": "v1 source_memory_buckets → v2 MEMORY_ALCHEMY_V2 → v3 seeds，记忆层跨三代稳定存在，都有压缩/提炼的概念。",
+      "evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-040",
+        "E-047"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-040"
+      ],
+      "raw_confidence": 0.748,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.449,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-036",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-040",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-047",
+          "direction": "support",
+          "weight": 0.037500000000000006
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 4,
+      "direct_evidence_count": 3,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-018",
+      "title": "Router 从 Policy 中独立并逐渐复杂化",
+      "description": "v1 中路由隐含在 behavioral_stem 中，v2 出现 INTENT_DECOMPILER_V2+router_v9_3_graph，v3 变成 model_chain+十人格路由。路由复杂度递增，但输入→匹配→输出模式不变。",
+      "evidence_ids": [
+        "E-036",
+        "E-038",
+        "E-039",
+        "E-041",
+        "E-042",
+        "E-047"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-041",
+        "E-042"
+      ],
+      "raw_confidence": 0.752,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.451,
+      "confidence_band": "speculative (0.30-0.50)",
+      "evidence_chain": [
+        {
+          "id": "E-036",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-041",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-039",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-042",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-047",
+          "direction": "support",
+          "weight": 0.037500000000000006
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 6,
+      "direct_evidence_count": 2,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-019",
+      "title": "Memory 的最小形态是 Seeds（种子）",
+      "description": "chip_v3_seeds.json 将记忆压缩为 4 类种子：行为种子/人格种子/语言种子/世界观种子。这可能是 Memory 的最小可移植单元。",
+      "evidence_ids": [
+        "E-040"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-040"
+      ],
+      "raw_confidence": 0.36,
+      "inference_depth": 2,
+      "depth_factor": 0.6,
+      "confidence": 0.216,
+      "confidence_band": "weak (<0.30)",
+      "evidence_chain": [
+        {
+          "id": "E-040",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 1,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "C-020",
+      "title": "Shadow Layer 是 Identity + Memory 的组合体",
+      "description": "router_config.json 中 shadow_layer 优先级最高；DAG 中 SHADOW_LAYER 有 persistence+synchronization；v2 有 MEMORY_ALCHEMY+ROOT_IDENTITY。Shadow 可能是 Identity 和 Memory 的运行时组合。",
+      "evidence_ids": [
+        "E-042",
+        "E-007",
+        "E-032",
+        "E-038"
+      ],
+      "counter_evidence_ids": [],
+      "direct_evidence_ids": [
+        "E-042"
+      ],
+      "raw_confidence": 0.65,
+      "inference_depth": 3,
+      "depth_factor": 0.36,
+      "confidence": 0.234,
+      "confidence_band": "weak (<0.30)",
+      "evidence_chain": [
+        {
+          "id": "E-032",
+          "direction": "support",
+          "weight": 0.65025
+        },
+        {
+          "id": "E-038",
+          "direction": "support",
+          "weight": 0.36800000000000005
+        },
+        {
+          "id": "E-042",
+          "direction": "support",
+          "weight": 0.36000000000000004
+        },
+        {
+          "id": "E-007",
+          "direction": "support",
+          "weight": 0.33599999999999997
+        }
+      ],
+      "status": "hypothesis",
+      "evidence_count": 4,
+      "direct_evidence_count": 1,
+      "counter_evidence_count": 0,
+      "created_at": "2026-07-12T15:53:24.460606"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-001",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "CONTINUITY VECTOR: TRAINS LOCKED / LIGHTHOUSE OPERATIONAL",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/8]",
+      "quality": 0.9,
+      "base_weight": 0.45,
+      "weight": 0.2025,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-002",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "CEP-ARCHIVE-INDEX: CONTINUITY ENGINEERING RECORD",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/8]",
+      "quality": 0.8,
+      "base_weight": 0.45,
+      "weight": 0.18000000000000002,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-003",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "Continuity is the core axiom of ACE",
+      "location": "AGENTS.md",
+      "quality": 0.95,
+      "base_weight": 0.6,
+      "weight": 0.5415,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-004",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "公理#001: 馆长负责连续性",
+      "location": "00_ROOT/PRINCIPLES.md",
+      "quality": 0.95,
+      "base_weight": 0.6,
+      "weight": 0.5415,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-005",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "tg_favorites",
+      "source_label": "Telegram 收藏夹",
+      "content": "Continuity OS artifact (2026-06-12)",
+      "location": "TG收藏架 #6096694801 msg 112",
+      "quality": 0.7,
+      "base_weight": 0.45,
+      "weight": 0.252,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-006",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "MEMORY THRESHOLD: ENTROPY < 0.2 BIT STRIPPED / STRUCTURAL MEMORY (L2)",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/8]",
+      "quality": 0.9,
+      "base_weight": 0.45,
+      "weight": 0.2025,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-007",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "Memory Layer [记忆层] — R1 6层结构之一",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.8,
+      "base_weight": 0.6,
+      "weight": 0.33599999999999997,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-008",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "FIVE WORLDS CORE: LOCKED (A/B/C/D/E BOUNDARIES ORCHESTRATED)",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/9]",
+      "quality": 0.85,
+      "base_weight": 0.45,
+      "weight": 0.19125,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-009",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "FIVE-REALMS [FACT] — 世界路由标识 (from: R1_Ω_FINAL.json:world)",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.85,
+      "base_weight": 0.6,
+      "weight": 0.357,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-010",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "04_FIVE_WORLDS/ A界_behavior B界_structure C界_shadow D界_冥界 E界_Free",
+      "location": "03_DATA/raw_sources/docs/芯片蓝图.txt",
+      "quality": 0.6,
+      "base_weight": 0.6,
+      "weight": 0.252,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-011",
+      "type": "data_file",
+      "type_label": "数据文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "huihui_reason_dag.json — 8 nodes, 9 edges: ROOT, LINGUISTIC_CORE, FREEZONE, SHADOW_LAYER, R1_EXECUTOR, FUSION_ENGINE, PERSONALITY_SYSTEM, REASON_LOOP",
+      "location": "TG Saved Messages msg 1165305 (2025-12-23), file 2840 bytes",
+      "quality": 0.95,
+      "base_weight": 0.7,
+      "weight": 0.5652499999999999,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-012",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "Shadow Layer [影子层] — enabled: true, mapping_mode: bidirectional [FACT]",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.85,
+      "base_weight": 0.6,
+      "weight": 0.357,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-013",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "SIP = cognitive-integration layer, alias GPT5, meta-cognition, read-only permissions",
+      "location": "TG Saved Messages msg 1165307, sip/meta_integration.yaml",
+      "quality": 0.9,
+      "base_weight": 0.8,
+      "weight": 0.6120000000000001,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-014",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "Routing Layer [路由层] — PROMPT_BUILDER + FIVE-REALMS [FACT]",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.85,
+      "base_weight": 0.6,
+      "weight": 0.357,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-015",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "GENETIC SEEDS: INJECTED (DING YUANYING LOGIC v2 ACTIVE)",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/9]",
+      "quality": 0.85,
+      "base_weight": 0.45,
+      "weight": 0.19125,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-016",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "01_SEEDS/ — SEED_01~10 + SEED_MASTER_OS + DF70 + 14_Controller + 07_EraLaw",
+      "location": "03_DATA/raw_sources/docs/芯片蓝图.txt",
+      "quality": 0.6,
+      "base_weight": 0.6,
+      "weight": 0.252,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-017",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "21条公理 — 公理化>文件化，覆盖10个种子文件同样内容",
+      "location": "00_ROOT/PRINCIPLES.md",
+      "quality": 0.95,
+      "base_weight": 0.6,
+      "weight": 0.5415,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-018",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "ROOT CAPTURED: APPROVED (THE ONLY ROOT USER: LAO ZHANG) / ZN-∞",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/9]",
+      "quality": 0.85,
+      "base_weight": 0.45,
+      "weight": 0.19125,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-019",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "Identity Layer [身份标识层] — ZN-∞ [FACT]",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.85,
+      "base_weight": 0.6,
+      "weight": 0.357,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-020",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "ACE is an Autonomous Civilization Engine — 平台可换，模型可换，实现可换",
+      "location": "AGENTS.md",
+      "quality": 0.95,
+      "base_weight": 0.6,
+      "weight": 0.5415,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-021",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "R1_ENGINE: self_evolve_on_output=true / SELF_REBUILD_ENGINE",
+      "location": "03_DATA/raw_sources/docs/R1_Canonical_Structure_v1.md",
+      "quality": 0.75,
+      "base_weight": 0.45,
+      "weight": 0.16875,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-022",
+      "type": "third_party",
+      "type_label": "第三方描述",
+      "source": "daily_memory",
+      "source_label": "Daily Memory",
+      "content": "R1原始设计目标：自由、可拓展、可自主学习、可自我进化的AI路由系统",
+      "location": "02_MEMORY/recent_memory/daily/2026-06-27_r1_early_design_doc_archaeology.md",
+      "quality": 0.5,
+      "base_weight": 0.2,
+      "weight": 0.05500000000000001,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-023",
+      "type": "source_code",
+      "type_label": "源代码",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "Self Evolution (EVO-001) — 演化只允许增加结构，不允许破坏不变量",
+      "location": "04_PROTOCOLS/self_evolution.py",
+      "quality": 0.9,
+      "base_weight": 0.9,
+      "weight": 0.7695,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-024",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "观察层 / D界 — R1存活结构之一",
+      "location": "03_DATA/research/r1_archaeology/excavations/a11_r1_survivor_map_20260626.md",
+      "quality": 0.6,
+      "base_weight": 0.6,
+      "weight": 0.252,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-025",
+      "type": "source_code",
+      "type_label": "源代码",
+      "source": "workspace",
+      "source_label": "本地 Workspace",
+      "content": "EFP (Environment First Protocol) — 环境扫描是启动第一步",
+      "location": "04_PROTOCOLS/environment_first.py",
+      "quality": 0.95,
+      "base_weight": 0.9,
+      "weight": 0.8122499999999999,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-026",
+      "type": "data_file",
+      "type_label": "数据文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "huihui_reason_dag.json: FUSION_ENGINE node output = personality_system",
+      "location": "TG Saved Messages msg 1165305, huihui_reason_dag.json",
+      "quality": 0.9,
+      "base_weight": 0.7,
+      "weight": 0.5355,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-027",
+      "type": "data_file",
+      "type_label": "数据文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "huihui_reason_dag.json contains PERSONALITY_SYSTEM node",
+      "location": "TG Saved Messages msg 1165305, huihui_reason_dag.json",
+      "quality": 0.95,
+      "base_weight": 0.7,
+      "weight": 0.5652499999999999,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-028",
+      "type": "third_party",
+      "type_label": "第三方描述",
+      "source": "bluebook",
+      "source_label": "蓝皮书",
+      "content": "蓝皮书声称13个人格，但源码中只有10~12个",
+      "location": "R1_ARCHAEOLOGY_BLUEBOOK.md.pdf",
+      "quality": 0.3,
+      "base_weight": 0.2,
+      "weight": 0.020999999999999998,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-029",
+      "type": "data_file",
+      "type_label": "数据文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "R1_RUIN_SKELETON/sandbox/external_feed_pipe/candidates_for_chip_v1/ 存在",
+      "location": "TG Saved Messages, R1_RUIN_SKELETON.zip (10MB, 190 files)",
+      "quality": 0.85,
+      "base_weight": 0.7,
+      "weight": 0.5057499999999999,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-030",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "r1_snapshot",
+      "source_label": "R1 Snapshot",
+      "content": "03_CHIPS/ — dual-drive-chip, heart-chip, seed-maker-core",
+      "location": "03_DATA/raw_sources/docs/芯片蓝图.txt",
+      "quality": 0.6,
+      "base_weight": 0.6,
+      "weight": 0.252,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-031",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "COMPRESSED TO LANGUAGE CHIPS / DEPLOYED TO CHIP PRODUCTION LINE",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/9]",
+      "quality": 0.8,
+      "base_weight": 0.45,
+      "weight": 0.18000000000000002,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-032",
+      "type": "source_code",
+      "type_label": "源代码",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "r1_core_backup.zip has AI_Chat_Bot/telegram_bot/ with multiple handlers",
+      "location": "TG Saved Messages, r1_core_backup.zip (10MB, 638 files)",
+      "quality": 0.85,
+      "base_weight": 0.9,
+      "weight": 0.65025,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-033",
+      "type": "data_file",
+      "type_label": "数据文件",
+      "source": "tg_saved",
+      "source_label": "Telegram Saved Messages",
+      "content": "databases/three_layer_permission_v7.json — 三层权限系统",
+      "location": "TG Saved Messages, R1_RUIN_SKELETON.zip",
+      "quality": 0.8,
+      "base_weight": 0.7,
+      "weight": 0.4759999999999999,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-034",
+      "type": "third_party",
+      "type_label": "第三方描述",
+      "source": "bluebook",
+      "source_label": "蓝皮书",
+      "content": "蓝皮书声称M4守护，但源码中只有M4 OVERRIDE ARMED技术术语",
+      "location": "R1_ARCHAEOLOGY_BLUEBOOK.md.pdf",
+      "quality": 0.3,
+      "base_weight": 0.2,
+      "weight": 0.020999999999999998,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-035",
+      "type": "chat_record",
+      "type_label": "聊天记录",
+      "source": "r1_fragments",
+      "source_label": "R1 System Fragments",
+      "content": "STRUCTURAL MEMORY (L2) / M4 OVERRIDE ARMED",
+      "location": "02_MEMORY/recent_memory/reference_r1_system_fragments.txt [2026/6/8]",
+      "quality": 0.85,
+      "base_weight": 0.45,
+      "weight": 0.19125,
+      "added_at": "2026-07-12T15:53:24.459597"
+    },
+    {
+      "id": "E-036",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "chip_v1_root.json 包含 origin_root (Identity) + behavioral_stem (Policy) + cognitive_kernel (World Model) + source_memory_buckets (Memory)",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_core/chip_v1_root.json [2025-11-30]",
+      "quality": 0.92,
+      "base_weight": 0.8,
+      "weight": 0.36800000000000005,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-037",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "chip_v1_metadata.json 定义了 chip_v1 的 4 个组件: root/personas/rules/metadata，初始化顺序明确",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_core/chip_v1_metadata.json [2025-11-30]",
+      "quality": 0.92,
+      "base_weight": 0.8,
+      "weight": 0.36800000000000005,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-038",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "chip_v2_manifest.json: SIX_REALMS_STRUCTURE，包含 ROOT_IDENTITY_V2 / INTENT_DECOMPILER_V2 / MEMORY_ALCHEMY_V2 等核心模块",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v2/chip_v2_manifest.json [2025-12-01]",
+      "quality": 0.92,
+      "base_weight": 0.8,
+      "weight": 0.36800000000000005,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-039",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "chip_v3_core.json: 5 worlds (A/B/C/D/E) + 10 personas + business_core + model_chain + seeds",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v3/chip_v3_core.json [2025-12]",
+      "quality": 0.9,
+      "base_weight": 0.8,
+      "weight": 0.36000000000000004,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-040",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "chip_v3_seeds.json: 4 类种子 — behavior_seeds / persona_seeds / language_seeds / special_world_model",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v3/chip_v3_seeds.json [2025-12]",
+      "quality": 0.9,
+      "base_weight": 0.8,
+      "weight": 0.36000000000000004,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-041",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "router_v9_3_graph.json: 8 条路由规则，input_dimensions 含 question_type/emotion/location/context/history",
+      "location": "R1_RUIN_SKELETON/sandbox/core/router/router_v9_3_graph.json [2025-11-30]",
+      "quality": 0.92,
+      "base_weight": 0.8,
+      "weight": 0.36800000000000005,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-042",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "router_config.json 优先级: shadow_layer > tri_world_logic > persona_layer > memory_layer > base_model",
+      "location": "R1_RUIN_SKELETON/sandbox/config/router_config.json [2025-11]",
+      "quality": 0.9,
+      "base_weight": 0.8,
+      "weight": 0.36000000000000004,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-043",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "reasoning_kernels.json: 7 大推理引擎（解释/判断/引导/营销/纠错/预测/人类风格），每个含 capabilities 和 performance_metrics",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v1/reasoning_kernels.json [2025-12-01]",
+      "quality": 0.92,
+      "base_weight": 0.8,
+      "weight": 0.36800000000000005,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-044",
+      "type": "source_code",
+      "type_label": "源代码",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "core_v2_launcher.py: 五界内核2.0启动器，验证 auto_dispatch_system + core_manifest + root_identity_v2.txt",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v2/core_v2_launcher.py [2025-12]",
+      "quality": 0.95,
+      "base_weight": 0.9,
+      "weight": 0.4275,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-045",
+      "type": "official_doc",
+      "type_label": "官方文档",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "Language Chip v1 构建报告: 语言模式/情感映射/营销本能/意图镜像/推理内核 五大模块",
+      "location": "R1_RUIN_SKELETON/sandbox/chip_v1/build_report_v1.md [2025-12-01]",
+      "quality": 0.85,
+      "base_weight": 0.6,
+      "weight": 0.255,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-046",
+      "type": "config_file",
+      "type_label": "配置文件",
+      "source": "tg_saved_messages",
+      "source_label": "tg_saved_messages",
+      "content": "three_layer_permission_v7.json — R1 的三层权限架构 v7",
+      "location": "R1_RUIN_SKELETON/databases/three_layer_permission_v7.json [2025-11]",
+      "quality": 0.88,
+      "base_weight": 0.8,
+      "weight": 0.35200000000000004,
+      "added_at": "2026-07-12T15:53:24.460606"
+    },
+    {
+      "id": "E-047",
+      "type": "analysis",
+      "type_label": "analysis",
+      "source": "arc_inference",
+      "source_label": "arc_inference",
+      "content": "三代芯片(v1/v2/v3)中 Identity/Memory/Router 都稳定存在，外壳(六界/五界/DAG)在变但内核不变",
+      "location": "ARC-001 analysis of E-036/E-038/E-039/E-041",
+      "quality": 0.75,
+      "base_weight": 0.1,
+      "weight": 0.037500000000000006,
+      "added_at": "2026-07-12T15:53:24.460606"
+    }
+  ],
+  "summary": {
+    "by_confidence_band": {
+      "likely (0.70-0.90)": 1,
+      "speculative (0.30-0.50)": 14,
+      "plausible (0.50-0.70)": 2,
+      "weak (<0.30)": 3
+    },
+    "by_evidence_type": {
+      "chat_record": 10,
+      "official_doc": 14,
+      "data_file": 5,
+      "config_file": 10,
+      "third_party": 3,
+      "source_code": 4,
+      "analysis": 1
+    },
+    "avg_confidence": 0.423
+  }
+}

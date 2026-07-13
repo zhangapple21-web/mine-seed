@@ -1,3 +1,22 @@
+"""---
+id: PROTO-002
+type: protocol
+title: "Recovery Scanner — 7层文明恢复扫描器"
+status: active
+source: "R2 Development + R1 Archaeology"
+created: 2026-07-12
+confidence: 0.92
+evidence: [E-036, E-038]
+lineage:
+  - OPS-004
+  - TG-ARCH-002
+related: [PROTO-001, INV-L0-001]
+tags: [recovery, scanner, telegram, archaeology]
+archaeology:
+  state: evolved
+  sources: 5
+---
+"""
 #!/usr/bin/env python3
 """
 REC-001: Recovery Scanner — 恢复扫描器
@@ -528,23 +547,142 @@ class RecoveryScanner:
         self._log(f"[L6] Done: {found_count} Windows session files found")
         return found_count
 
+    # ---- L7: Telegram Layer ----
+    def scan_telegram(self):
+        """L7: Scan Telegram civilization layer (OPS-006 Layer3)
+        Scans: local TG output files, TG sessions, and if session is alive,
+        fetches Saved Messages file list.
+        """
+        self._log("[L7] Scanning Telegram civilization layer...")
+        found_count = 0
+
+        # 7.1 Scan local TG output directory (archaeology results)
+        tg_output_dirs = [
+            WORKSPACE / "05_TOOLS" / "miner" / "tg_output",
+            WORKSPACE / "02_MEMORY" / "tg_sessions",
+        ]
+
+        for tg_dir in tg_output_dirs:
+            if not tg_dir.exists():
+                continue
+            self._log(f"  Scanning local TG dir: {tg_dir}")
+            for root, dirs, files in os.walk(tg_dir):
+                for fname in files:
+                    fpath = Path(root) / fname
+                    try:
+                        stat = fpath.stat()
+                        # Classify by file type
+                        if fname.endswith(".json") and "civilization_map" in fname:
+                            ftype = "TGCivilizationMap"
+                            rec_prob = 5
+                        elif fname.endswith(".session"):
+                            ftype = "TGSession"
+                            rec_prob = 5
+                        elif fname.endswith(".zip"):
+                            ftype = "TGArchive"
+                            rec_prob = 4
+                        elif fname.endswith((".md", ".txt")):
+                            ftype = "TGDocument"
+                            rec_prob = 3
+                        else:
+                            continue
+                        self._add_finding(
+                            path=str(fpath),
+                            ftype=ftype,
+                            source="Telegram-Local",
+                            size=stat.st_size,
+                            modified=datetime.fromtimestamp(stat.st_mtime).isoformat(),
+                            recovery_prob=rec_prob,
+                        )
+                        found_count += 1
+                    except Exception:
+                        pass
+
+        # 7.2 Try to connect to TG and list Saved Messages files (if session exists)
+        tg_session_dir = WORKSPACE / "02_MEMORY" / "tg_sessions"
+        session_files = list(tg_session_dir.glob("user*.session")) if tg_session_dir.exists() else []
+        if not session_files:
+            # Also check miner dir
+            miner_session = WORKSPACE / "05_TOOLS" / "miner" / "tg_collections.session"
+            if miner_session.exists():
+                session_files = [miner_session]
+
+        if session_files:
+            self._log(f"  Found {len(session_files)} user session file(s), attempting connection...")
+            try:
+                from telethon import TelegramClient
+
+                API_ID = 38398440
+                API_HASH = "3460f304c16a186c2300debc673b2ed0"
+                session_path = str(session_files[0].with_suffix(""))  # remove .session
+
+                async def _tg_list_saved_files():
+                    client = TelegramClient(session_path, API_ID, API_HASH)
+                    await client.connect()
+                    if not await client.is_user_authorized():
+                        self._log("  Session not authorized, skipping live TG scan")
+                        await client.disconnect()
+                        return 0
+
+                    me = await client.get_me()
+                    self._log(f"  Connected as @{me.username} (id={me.id})")
+                    count = 0
+                    file_count = 0
+                    async for msg in client.iter_messages("me", limit=500):
+                        count += 1
+                        if msg.media and hasattr(msg.media, "document") and msg.media.document:
+                            file_count += 1
+                            fname = "unknown"
+                            fsize = 0
+                            for attr in (msg.media.document.attributes or []):
+                                if hasattr(attr, "file_name"):
+                                    fname = attr.file_name
+                                if hasattr(msg.media.document, "size"):
+                                    fsize = msg.media.document.size
+                            self._add_finding(
+                                path=f"tg://saved/{msg.id}/{fname}",
+                                ftype="TGSavedFile",
+                                source="Telegram-SavedMessages",
+                                size=fsize,
+                                modified=msg.date.isoformat() if msg.date else None,
+                                recovery_prob=5,
+                                extra={"msg_id": msg.id, "file_name": fname},
+                            )
+                    await client.disconnect()
+                    self._log(f"  TG Saved Messages: {count} messages, {file_count} files")
+                    return file_count
+
+                import asyncio
+                tg_found = asyncio.run(_tg_list_saved_files())
+                found_count += tg_found
+            except ImportError:
+                self._log("  Telethon not available, skipping live TG scan")
+            except Exception as e:
+                self._log(f"  TG connection failed: {e}")
+        else:
+            self._log("  No user session file found, skipping live TG scan")
+
+        self._log(f"[L7] Done: {found_count} TG civilization assets found")
+        return found_count
+
     # ---- Run All Scans ----
     def scan_all(self):
-        """Run all 6 layers of scanning"""
+        """Run all 7 layers of scanning (OPS-006 order: L1 Workspace → L7 Telegram)"""
         print("=" * 60)
         print("REC-001: Recovery Scanner — OPS-004 Recovery First")
         print("=" * 60)
 
         total = 0
-        total += self.scan_workspace()
-        total += self.scan_configs()
-        total += self.scan_archives()
-        total += self.scan_r1_snapshots()
-        total += self.scan_github()
-        total += self.scan_windows()
+        total += self.scan_workspace()      # L1
+        total += self.scan_configs()        # L2
+        total += self.scan_archives()       # L3
+        total += self.scan_r1_snapshots()   # L4
+        total += self.scan_github()         # L5
+        total += self.scan_windows()        # L6
+        total += self.scan_telegram()       # L7 (new: Telegram civilization layer)
 
         print(f"\n{'=' * 60}")
-        print(f"Scan Complete: {total} findings across 6 layers")
+        print(f"Scan Complete: {total} findings across 7 layers")
         print(f"{'=' * 60}")
 
         return self.findings
@@ -693,8 +831,8 @@ class RecoveryScanner:
 
 def main():
     parser = argparse.ArgumentParser(description="REC-001 Recovery Scanner")
-    parser.add_argument("--layer", type=int, choices=[1, 2, 3, 4, 5, 6],
-                        help="Scan only a specific layer")
+    parser.add_argument("--layer", type=int, choices=[1, 2, 3, 4, 5, 6, 7],
+                        help="Scan only a specific layer (7=Telegram)")
     parser.add_argument("--json", action="store_true", help="Output JSON report")
     args = parser.parse_args()
 
@@ -708,6 +846,7 @@ def main():
             4: scanner.scan_r1_snapshots,
             5: scanner.scan_github,
             6: scanner.scan_windows,
+            7: scanner.scan_telegram,
         }
         method = layer_methods.get(args.layer)
         if method:

@@ -230,6 +230,40 @@ class StateGenerator:
                 decisions.append({"decision": d["decision"], "status": d["outcome"]})
         return decisions
 
+    def generate_learning_progress(self):
+        """Self-Learning Progress — 自学习进度"""
+        try:
+            import json
+            from pathlib import Path
+            learning_dir = Path(__file__).parent.parent / "02_MEMORY" / "self_learning"
+            if not learning_dir.exists():
+                return None
+
+            # Find latest cycle
+            cycles = sorted(learning_dir.glob("*.json"), reverse=True)
+            if not cycles:
+                return None
+
+            with open(cycles[0], "r", encoding="utf-8") as f:
+                latest = json.load(f)
+
+            m = latest.get("metrics", {})
+            sr = latest.get("seed_results", {})
+            return {
+                "cycle_id": latest.get("cycle_id", "?"),
+                "total_experiences": m.get("total_experiences", 0),
+                "seeded_this_cycle": sr.get("total_seeded", 0),
+                "failure_patterns": latest.get("patterns", {}).get("failure_patterns_detected", 0),
+                "success_patterns": latest.get("patterns", {}).get("success_patterns_detected", 0),
+                "hypotheses": latest.get("hypotheses", {}).get("total_generated", 0),
+                "questions_pushed": latest.get("hypotheses", {}).get("pushed_to_question_center", 0),
+                "success_ratio": m.get("success_ratio", 0),
+                "learning_days": m.get("learning_days", 0),
+                "top_hypotheses": latest.get("hypotheses", {}).get("ranked", [])[:3],
+            }
+        except Exception:
+            return None
+
     def generate_full_markdown(self):
         """生成完整的 CURRENT_STATE.md"""
         now = datetime.now()
@@ -287,7 +321,8 @@ class StateGenerator:
         md += f"> {len(hypotheses)} active hypotheses.\n\n"
         if hypotheses:
             for h in hypotheses:
-                conf_bar = "█" * (h["confidence"] // 10) + "░" * (10 - h["confidence"] // 10)
+                conf_val = int(h["confidence"])
+                conf_bar = "█" * (conf_val // 10) + "░" * (10 - conf_val // 10)
                 md += f"**{h['hid']}** {h['hypothesis']}\n"
                 md += f"  Confidence: {conf_bar} {h['confidence']}%\n"
                 md += f"  Status: {h['status']}\n\n"
@@ -340,6 +375,30 @@ class StateGenerator:
                 md += f"  Status: {d['status']}\n\n"
         else:
             md += "No pending decisions.\n\n"
+
+        md += "---\n\n"
+
+        # Self-Learning Progress
+        learning = self.generate_learning_progress()
+        md += "## Self-Learning Progress\n\n"
+        md += "> System learns from experience automatically. No human input needed.\n\n"
+        if learning:
+            md += f"| Metric | Value |\n"
+            md += f"|---|---|\n"
+            md += f"| Experiences | {learning['total_experiences']} (+{learning['seeded_this_cycle']} this cycle) |\n"
+            md += f"| Learning Days | {learning['learning_days']} |\n"
+            md += f"| Success Ratio | {learning['success_ratio']:.1%} |\n"
+            md += f"| Patterns Detected | {learning['failure_patterns']} failure + {learning['success_patterns']} success |\n"
+            md += f"| Hypotheses Generated | {learning['hypotheses']} |\n"
+            md += f"| Questions Pushed | {learning['questions_pushed']} |\n\n"
+            if learning.get("top_hypotheses"):
+                md += "**Top Hypotheses:**\n\n"
+                for h in learning["top_hypotheses"]:
+                    risk = h.get("risk_level", "?")
+                    md += f"- [{risk}] {h['title']}\n"
+                md += "\n"
+        else:
+            md += "No learning data yet. Run a heartbeat to start.\n\n"
 
         return md
 

@@ -1,15 +1,73 @@
 {
-  "generated_at": "2026-07-12T15:06:08.022568",
-  "total_records": 4,
+  "generated_at": "2026-07-13T20:11:07.367625",
+  "total_records": 6,
   "periods": {
     "T+1": {
-      "total": 0,
+      "total": 4,
       "wins": 0,
-      "losses": 0,
-      "win_rate": 0,
-      "avg_return": 0,
-      "best_return": 0,
-      "worst_return": 0
+      "losses": 4,
+      "win_rate": 0.0,
+      "avg_return": 0.0,
+      "best_return": 0.0,
+      "worst_return": 0.0,
+      "details": [
+        {
+          "rec_id": "sa_20260710_001",
+          "ticker": "688111",
+          "date": "20260710",
+          "recommend_price": 233.76,
+          "close_price": 233.76,
+          "return_pct": 0.0,
+          "signal_combo": [
+            "MA多头排列",
+            "站稳中轨",
+            "RSI健康区间",
+            "量能放大",
+            "短期动量正向"
+          ]
+        },
+        {
+          "rec_id": "sa_20260710_002",
+          "ticker": "601939",
+          "date": "20260710",
+          "recommend_price": 10.03,
+          "close_price": 10.03,
+          "return_pct": 0.0,
+          "signal_combo": [
+            "站稳中轨",
+            "RSI健康区间",
+            "量能放大",
+            "短期动量正向"
+          ]
+        },
+        {
+          "rec_id": "sa_20260711_001",
+          "ticker": "688111",
+          "date": "20260711",
+          "recommend_price": 233.76,
+          "close_price": 233.76,
+          "return_pct": 0.0,
+          "signal_combo": [
+            "MA多头排列",
+            "站稳中轨",
+            "RSI健康区间",
+            "量能放大",
+            "短期动量正向"
+          ]
+        },
+        {
+          "rec_id": "sa_20260711_002",
+          "ticker": "600362",
+          "date": "20260711",
+          "recommend_price": 42.89,
+          "close_price": 42.89,
+          "return_pct": 0.0,
+          "signal_combo": [
+            "RSI健康区间",
+            "短期动量正向"
+          ]
+        }
+      ]
     },
     "T+7": {
       "total": 0,

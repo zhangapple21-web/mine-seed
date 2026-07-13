@@ -92,10 +92,21 @@ def run_recovery_engine(skip_validation: bool = False) -> dict:
 
 
 def write_root_state(root: Path, efp_result: dict, rp_result: dict, host: str = "unknown"):
-    """Append awakening record to 00_ROOT/ROOT_STATE.md if exists."""
-    state_file = root / "00_ROOT" / "ROOT_STATE.md"
+    """Append awakening record to 06_RUNTIME/state/runtime_state.md.
+
+    AUM-MISSION-ARCH-013 子任务3:
+      原 00_ROOT/ROOT_STATE.md 已拆分, 公理/原则保留在 Tier 1,
+      运行状态(Awakening 记录)写入 Tier 3 的 06_RUNTIME/state/runtime_state.md.
+      若新位置不存在则回退写入原位置(向后兼容).
+    """
+    # Preferred: Tier 3 runtime state (post-split)
+    state_file = root / "06_RUNTIME" / "state" / "runtime_state.md"
     if not state_file.exists():
-        return
+        # Fallback: legacy Tier 1 location (pre-split)
+        legacy = root / "00_ROOT" / "ROOT_STATE.md"
+        if not legacy.exists():
+            return
+        state_file = legacy
     ts = datetime.now().isoformat()
     recovery_count = len(rp_result.get("job_results", []))
     files_recovered = rp_result.get("total_extracted", 0)

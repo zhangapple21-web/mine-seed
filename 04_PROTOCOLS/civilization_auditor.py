@@ -1,3 +1,19 @@
+"""---
+id: PROTO-007
+type: protocol
+title: "Civilization Auditor — 文明审计器"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.88
+lineage:
+  - OPS-004
+related: [PROTO-001, PROTO-002]
+tags: [audit, civilization, graph]
+archaeology:
+  state: original
+---
+"""
 #!/usr/bin/env python3
 """
 AUD-001: Civilization Auditor — 文明审计器
@@ -1559,6 +1575,9 @@ class CivilizationAuditor:
         # Civilization Graph
         graph = getattr(self, "graph", {})
 
+        # DNA Compliance
+        dna_compliance = self._scan_dna_compliance()
+
         # 健康分数（0-100）
         # 重复越多扣分，僵尸越多扣分，断链越多扣分，canonical 违规扣分，retention 违规扣分
         health_score = 100
@@ -1597,6 +1616,7 @@ class CivilizationAuditor:
             "memory_health": memory_health,
             "coverage": coverage,
             "graph": graph,
+            "dna_compliance": dna_compliance,
         }
 
         # 保存 JSON
@@ -1613,6 +1633,17 @@ class CivilizationAuditor:
         self._generate_markdown(report, date_str)
 
         return report
+
+    def _scan_dna_compliance(self) -> Dict[str, Any]:
+        """扫描 DNA 合规性（Civilization Entry DNA）"""
+        try:
+            sys.path.insert(0, str(WORKSPACE / "04_PROTOCOLS"))
+            from civilization_entry_dna import scan_dna_compliance
+            result = scan_dna_compliance(str(WORKSPACE / "02_MEMORY"))
+            result["protocols"] = scan_dna_compliance(str(WORKSPACE / "04_PROTOCOLS"))
+            return result
+        except Exception as e:
+            return {"error": str(e)}
 
     def _generate_markdown(self, report: Dict[str, Any], date_str: str):
         """生成 Markdown 报告"""
@@ -1754,6 +1785,30 @@ class CivilizationAuditor:
                 for n in top_conn[:10]:
                     lines.append(f"| {n['id']} | {n['type']} | {n['degree']} |")
                 lines.append("")
+
+        # DNA Compliance
+        dna = report.get("dna_compliance", {})
+        if dna and not dna.get("error"):
+            lines.append("## DNA 合规 (Civilization Entry DNA)")
+            lines.append("")
+            mem_total = dna.get("total", 0)
+            mem_has = dna.get("has_dna", 0)
+            mem_pct = (mem_has / mem_total * 100) if mem_total > 0 else 0
+            lines.append(f"- 02_MEMORY: {mem_has}/{mem_total} ({mem_pct:.0f}%)")
+            proto = dna.get("protocols", {})
+            if proto:
+                p_total = proto.get("total", 0)
+                p_has = proto.get("has_dna", 0)
+                p_pct = (p_has / p_total * 100) if p_total > 0 else 0
+                lines.append(f"- 04_PROTOCOLS: {p_has}/{p_total} ({p_pct:.0f}%)")
+            by_type = dna.get("by_type", {})
+            if by_type:
+                lines.append("")
+                lines.append("### 已标记类型分布")
+                lines.append("")
+                for t, cnt in sorted(by_type.items(), key=lambda x: x[1], reverse=True):
+                    lines.append(f"- {t}: {cnt}")
+            lines.append("")
 
         # 重复文件
         if report["duplicates"]:

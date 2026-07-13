@@ -1,0 +1,54 @@
+{
+  "mid": "AUM-MISSION-RES-002",
+  "name": "Question衍生任务: 如何构建稳定的多源股票数据联邦？",
+  "type": "Research",
+  "priority": "P2",
+  "status": "ACTIVE",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "回答并研究问题：如何构建稳定的多源股票数据联邦？\n\n不仅要找到答案，更要蒸馏出可复用的文明资产。",
+  "scope": "围绕问题 Q-030 展开研究，探寻根因、结构、模式。",
+  "deliverables": "1. 问题答案\n2. 相关知识沉淀\n3. 可复用的方法论",
+  "acceptance": "✓ 问题得到回答\n✓ 至少蒸馏出2种文明资产",
+  "forbidden": "❌ 只给答案不沉淀\n❌ 不验证直接下结论\n❌ 停留在表面不深挖",
+  "distillation": "不要只回答问题。\n\n必须蒸馏出：\n\n- Kernel（芯片）：这个问题背后可复用的核心模式\n- Blueprint（蓝图）：这类问题的解决框架\n- Protocol（协议）：下次遇到类似问题的处理流程\n- Constraint（约束）：解决过程中发现的边界和禁区\n- Experience（经验）：这次探索中学到的教训\n\n如果不能压缩成以上五种资产，\n说明这次研究没有完成。",
+  "admission": "",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T09:53:42.643246",
+  "updated_at": "2026-07-13T20:11:00.473049",
+  "completed_at": "",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [
+    "模式发现: 2 个新模式",
+    "假设生成: 2 个新假设",
+    "02_MEMORY/experience/ (本次+1)",
+    "模式发现: 3 个新模式",
+    "假设生成: 3 个新假设"
+  ],
+  "distillation_artifacts": {
+    "kernel": [
+      "假设生成: 2 个新假设",
+      "假设生成: 3 个新假设"
+    ],
+    "blueprint": [
+      "模式发现: 2 个新模式",
+      "模式发现: 3 个新模式"
+    ],
+    "protocol": [],
+    "constraint": [],
+    "experience": [
+      "02_MEMORY/experience/ (本次+1)"
+    ],
+    "identity": []
+  },
+  "admission_records": []
+}

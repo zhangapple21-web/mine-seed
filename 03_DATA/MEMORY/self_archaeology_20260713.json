@@ -1,0 +1,171 @@
+{
+  "scan_time": "2026-07-13T10:45:53.018455",
+  "scanner": "DFP-001 Self-Continuation",
+  "operator": "我（接续疯子的 Agent）",
+  "total_repos": 10,
+  "accessible_repos": 7,
+  "private_repos_locked": 3,
+  "results": [
+    {
+      "name": "1.claw-soul (私有-已下载)",
+      "path": "C:\\tmp\\claw-soul",
+      "exists": true,
+      "py_files": 33,
+      "md_files": 269,
+      "json_files": 23,
+      "py_loc": 11853,
+      "max_depth": 5,
+      "has_README": true,
+      "has_PRINCIPLES": true,
+      "has_AXIOMS": true,
+      "has_RFC": true,
+      "categories": {
+        "protocols": 4,
+        "governance": 1,
+        "routing": 3,
+        "repository": 0,
+        "admission": 0,
+        "evolution": 0,
+        "mission": 0
+      }
+    },
+    {
+      "name": "2.R1 (公开)",
+      "path": "C:\\tmp\\R1",
+      "exists": true,
+      "py_files": 0,
+      "md_files": 1,
+      "json_files": 0,
+      "py_loc": 0,
+      "max_depth": 5,
+      "has_README": true,
+      "has_PRINCIPLES": false,
+      "has_AXIOMS": false,
+      "has_RFC": false,
+      "categories": {
+        "protocols": 0,
+        "governance": 0,
+        "routing": 0,
+        "repository": 0,
+        "admission": 0,
+        "evolution": 0,
+        "mission": 0
+      }
+    },
+    {
+      "name": "3.ace_core (公开)",
+      "path": "C:\\tmp\\ace_core",
+      "exists": true,
+      "py_files": 158,
+      "md_files": 91,
+      "json_files": 32,
+      "py_loc": 54293,
+      "max_depth": 5,
+      "has_README": true,
+      "has_PRINCIPLES": true,
+      "has_AXIOMS": false,
+      "has_RFC": false,
+      "categories": {
+        "protocols": 17,
+        "governance": 10,
+        "routing": 1,
+        "repository": 2,
+        "admission": 4,
+        "evolution": 2,
+        "mission": 0
+      }
+    },
+    {
+      "name": "4.r1-archaeology (公开)",
+      "path": "C:\\tmp\\r1-archaeology",
+      "exists": true,
+      "py_files": 0,
+      "md_files": 70,
+      "json_files": 0,
+      "py_loc": 0,
+      "max_depth": 5,
+      "has_README": true,
+      "has_PRINCIPLES": false,
+      "has_AXIOMS": true,
+      "has_RFC": false,
+      "categories": {
+        "protocols": 0,
+        "governance": 0,
+        "routing": 0,
+        "repository": 0,
+        "admission": 0,
+        "evolution": 0,
+        "mission": 0
+      }
+    },
+    {
+      "name": "5.r1-open-source-seed (公开)",
+      "path": "C:\\tmp\\r1-open-source-seed",
+      "exists": true,
+      "py_files": 0,
+      "md_files": 4,
+      "json_files": 0,
+      "py_loc": 0,
+      "max_depth": 5,
+      "has_README": false,
+      "has_PRINCIPLES": false,
+      "has_AXIOMS": false,
+      "has_RFC": false,
+      "categories": {
+        "protocols": 0,
+        "governance": 0,
+        "routing": 0,
+        "repository": 0,
+        "admission": 0,
+        "evolution": 0,
+        "mission": 0
+      }
+    },
+    {
+      "name": "6.- (公开-无名)",
+      "path": "C:\\tmp\\gh_-",
+      "exists": true,
+      "py_files": 0,
+      "md_files": 1,
+      "json_files": 0,
+      "py_loc": 0,
+      "max_depth": 1,
+      "has_README": false,
+      "has_PRINCIPLES": false,
+      "has_AXIOMS": false,
+      "has_RFC": false,
+      "categories": {
+        "protocols": 0,
+        "governance": 0,
+        "routing": 0,
+        "repository": 0,
+        "admission": 0,
+        "evolution": 0,
+        "mission": 0
+      }
+    },
+    {
+      "name": "7.mine-seed (当前)",
+      "path": "c:\\Users\\User\\ace_workspace\\mine-seed",
+      "exists": true,
+      "py_files": 157,
+      "md_files": 884,
+      "json_files": 961,
+      "py_loc": 51633,
+      "max_depth": 7,
+      "has_README": false,
+      "has_PRINCIPLES": true,
+      "has_AXIOMS": true,
+      "has_RFC": true,
+      "categories": {
+        "protocols": 56,
+        "governance": 22,
+        "routing": 8,
+        "repository": 3,
+        "admission": 7,
+        "evolution": 2,
+        "mission": 2
+      }
+    }
+  ]
+}

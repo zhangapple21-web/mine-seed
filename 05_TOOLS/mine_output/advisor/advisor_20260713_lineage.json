@@ -4,9 +4,32 @@
   "recommendations": [
     {
       "recommendation_id": "sa_20260713_001",
-      "ticker": "601939",
-      "signal_count": 4,
+      "ticker": "000063",
+      "signal_count": 5,
       "signal_combo": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "动量过热警示"
+      ],
+      "source": {
+        "provider": "tencent",
+        "endpoint": "qt.gtimg.cn/q"
+      },
+      "snapshot_time": "2026-07-13T15:49:51",
+      "recommend_time": "2026-07-13T15:49:51",
+      "recommend_price": 41.92,
+      "close_price": null,
+      "return_pct": null,
+      "review_status": "pending"
+    },
+    {
+      "recommendation_id": "sa_20260713_002",
+      "ticker": "600267",
+      "signal_count": 5,
+      "signal_combo": [
+        "MA多头排列",
         "站稳中轨",
         "RSI健康区间",
         "量能放大",
@@ -16,29 +39,9 @@
         "provider": "tencent",
         "endpoint": "qt.gtimg.cn/q"
       },
-      "snapshot_time": "2026-07-13T01:23:08",
-      "recommend_time": "2026-07-13T01:23:08",
-      "recommend_price": 9.85,
-      "close_price": null,
-      "return_pct": null,
-      "review_status": "pending"
-    },
-    {
-      "recommendation_id": "sa_20260713_002",
-      "ticker": "601698",
-      "signal_count": 3,
-      "signal_combo": [
-        "站稳中轨",
-        "RSI健康区间",
-        "短期动量正向"
-      ],
-      "source": {
-        "provider": "tencent",
-        "endpoint": "qt.gtimg.cn/q"
-      },
-      "snapshot_time": "2026-07-13T01:23:08",
-      "recommend_time": "2026-07-13T01:23:08",
-      "recommend_price": 35.0,
+      "snapshot_time": "2026-07-13T15:49:51",
+      "recommend_time": "2026-07-13T15:49:51",
+      "recommend_price": 11.42,
       "close_price": null,
       "return_pct": null,
       "review_status": "pending"

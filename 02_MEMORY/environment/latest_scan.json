@@ -1,23 +1,23 @@
 {
-  "scan_time": "2026-07-12T15:19:28.880734",
+  "scan_time": "2026-07-13T20:04:30.459933",
   "root": "C:\\Users\\User\\ace_workspace\\mine-seed",
-  "files_total": 1464,
-  "files_indexed": 1464,
+  "files_total": 2155,
+  "files_indexed": 2155,
   "by_extension": {
     ".gitignore": 1,
-    ".md": 688,
-    ".json": 541,
+    ".md": 740,
+    ".json": 1134,
     ".ps1": 12,
-    ".py": 119,
-    ".log": 6,
+    ".py": 156,
+    ".log": 14,
     ".txt": 25,
-    ".flag": 1,
+    ".flag": 2,
+    ".jsonl": 1,
     ".session": 13,
-    ".pyc": 3,
+    ".zip": 22,
     ".pdf": 1,
     ".png": 1,
     ".docx": 1,
-    ".zip": 20,
     ".gz": 1,
     ".gitignore__superseded_20260710_143025": 1,
     ".sh": 20,
@@ -29,7 +29,7 @@
     ".vbs": 1
   },
   "by_priority": {
-    "MEDIUM": 28,
+    "MEDIUM": 27,
     "HIGH": 3
   },
   "readme_files": [
@@ -229,6 +229,402 @@
       "size_bytes": 1888
     },
     {
+      "name": "kernel_dna_recovery_v0.1.md",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\archaeology\\kernel_dna_recovery_v0.1.md",
+      "size_bytes": 12244
+    },
+    {
+      "name": "014_recovery_protocol.md",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\civilization_assets\\014_recovery_protocol.md",
+      "size_bytes": 1328
+    },
+    {
+      "name": "025_recovery_protocol_v2.md",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "recovery"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\civilization_assets\\025_recovery_protocol_v2.md",
+      "size_bytes": 1866
+    },
+    {
+      "name": "backup_20260713_135238_test_contract_asset.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "backup"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\evolution\\backup_20260713_135238_test_contract_asset.json",
+      "size_bytes": 17
+    },
+    {
+      "name": "backup_20260713_135238_test_temp.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "backup"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\evolution\\backup_20260713_135238_test_temp.json",
+      "size_bytes": 17
+    },
+    {
+      "name": "backup_20260713_185824_test_temp.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "backup"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\evolution\\backup_20260713_185824_test_temp.json",
+      "size_bytes": 17
+    },
+    {
+      "name": "backup_20260713_185954_test_safety.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "backup"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\evolution\\backup_20260713_185954_test_safety.json",
+      "size_bytes": 17
+    },
+    {
+      "name": "exp_seeded_20260712T193454_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_0.json",
+      "size_bytes": 321
+    },
+    {
+      "name": "exp_seeded_20260712T193454_1.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_1.json",
+      "size_bytes": 330
+    },
+    {
+      "name": "exp_seeded_20260712T193454_10.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_10.json",
+      "size_bytes": 251
+    },
+    {
+      "name": "exp_seeded_20260712T193454_2.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_2.json",
+      "size_bytes": 321
+    },
+    {
+      "name": "exp_seeded_20260712T193454_3.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_3.json",
+      "size_bytes": 330
+    },
+    {
+      "name": "exp_seeded_20260712T193454_4.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_4.json",
+      "size_bytes": 321
+    },
+    {
+      "name": "exp_seeded_20260712T193454_5.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_5.json",
+      "size_bytes": 330
+    },
+    {
+      "name": "exp_seeded_20260712T193454_6.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_6.json",
+      "size_bytes": 321
+    },
+    {
+      "name": "exp_seeded_20260712T193454_7.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_7.json",
+      "size_bytes": 330
+    },
+    {
+      "name": "exp_seeded_20260712T193454_8.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_8.json",
+      "size_bytes": 321
+    },
+    {
+      "name": "exp_seeded_20260712T193454_9.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_9.json",
+      "size_bytes": 330
+    },
+    {
+      "name": "exp_seeded_20260712T194502_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T194502_0.json",
+      "size_bytes": 481
+    },
+    {
+      "name": "exp_seeded_20260713T105049_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T105049_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T110751_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T110751_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T112748_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T112748_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T113723_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T113723_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T115338_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T115338_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T120801_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T120801_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T122259_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T122259_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T124315_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T124315_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T125718_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T125718_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T131216_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T131216_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T132637_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T132637_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T134056_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T134056_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T135531_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T135531_0.json",
+      "size_bytes": 477
+    },
+    {
+      "name": "exp_seeded_20260713T142729_0.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T142729_0.json",
+      "size_bytes": 477
+    },
+    {
       "name": "2026-06-27_mine_seed_cross_agent_survey.md",
       "priority": "NORMAL",
       "type": "data",
@@ -313,6 +709,30 @@
       "size_bytes": 18766
     },
     {
+      "name": "gene_seed_20260712.zip",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "03_ARCHIVE\\gene_seed\\gene_seed_20260712.zip",
+      "size_bytes": 79026
+    },
+    {
+      "name": "gene_seed_20260713.zip",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "03_ARCHIVE\\gene_seed\\gene_seed_20260713.zip",
+      "size_bytes": 80689
+    },
+    {
       "name": "lexicon_20260626.json",
       "priority": "MEDIUM",
       "type": "knowledge_pool",
@@ -349,18 +769,6 @@
       "size_bytes": 283378
     },
     {
-      "name": "lexicon_categories.cpython-311.pyc",
-      "priority": "MEDIUM",
-      "type": "knowledge_pool",
-      "description": "词库",
-      "recovery_triggers": [
-        "lexicon"
-      ],
-      "triggers_recovery": true,
-      "path": "03_DATA\\lexicon_categories.cpython-311.pyc",
-      "size_bytes": 25067
-    },
-    {
       "name": "lexicon_categories.py",
       "priority": "MEDIUM",
       "type": "knowledge_pool",
@@ -383,6 +791,18 @@
       "triggers_recovery": true,
       "path": "03_DATA\\lexicon_latest.json",
       "size_bytes": 283378
+    },
+    {
+      "name": "test_backup.json",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "backup"
+      ],
+      "triggers_recovery": true,
+      "path": "03_DATA\\CIV_REPOSITORY\\backups\\test_backup.json",
+      "size_bytes": 1911
     },
     {
       "name": "eco_layer.json",
@@ -429,8 +849,8 @@
       "description": "",
       "recovery_triggers": [
         "backup",
-        "readme",
-        "recovery"
+        "recovery",
+        "readme"
       ],
       "triggers_recovery": true,
       "path": "03_DATA\\raw_sources\\docs\\ACE_BACKUP_RECOVERY_README.md",
@@ -890,7 +1310,32 @@
       ],
       "triggers_recovery": true,
       "path": "04_PROTOCOLS\\recovery_scanner.py",
-      "size_bytes": 31971
+      "size_bytes": 39008
+    },
+    {
+      "name": "seed_archive.py",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "archive",
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "04_PROTOCOLS\\seed_archive.py",
+      "size_bytes": 19196
+    },
+    {
+      "name": "seed_history.py",
+      "priority": "NORMAL",
+      "type": "data",
+      "description": "",
+      "recovery_triggers": [
+        "seed"
+      ],
+      "triggers_recovery": true,
+      "path": "05_TOOLS\\advisor\\seed_history.py",
+      "size_bytes": 2516
     },
     {
       "name": "README.md",
@@ -950,7 +1395,7 @@
       ],
       "triggers_recovery": true,
       "path": "07_GUARDIAN\\README.md",
-      "size_bytes": 621
+      "size_bytes": 722
     },
     {
       "name": "README.md",
@@ -1747,18 +2192,6 @@
       "size_bytes": 283378
     },
     {
-      "name": "lexicon_categories.cpython-311.pyc",
-      "priority": "MEDIUM",
-      "type": "knowledge_pool",
-      "description": "词库",
-      "recovery_triggers": [
-        "lexicon"
-      ],
-      "triggers_recovery": true,
-      "path": "03_DATA\\lexicon_categories.cpython-311.pyc",
-      "size_bytes": 25067
-    },
-    {
       "name": "lexicon_categories.py",
       "priority": "MEDIUM",
       "type": "knowledge_pool",
@@ -2157,10 +2590,6 @@
       "02_MEMORY\\experience.json",
       "03_DATA\\experience.json"
     ],
-    "e380fecf7e953466b4f8244e6c4074dc": [
-      "02_MEMORY\\experience_engine.py",
-      "memory\\experience_engine.py"
-    ],
     "c86e28d37ee3e454797595c7eadfff0b": [
       "02_MEMORY\\knowledge_night_20260619.md",
       "02_MEMORY\\knowledge\\knowledge_night_20260619.md",
@@ -2304,9 +2733,15 @@
       "principles\\validation_report.md",
       "recent_memory\\principles\\validation_report.md"
     ],
-    "e4047694bc14f5d5d0ee5da944864812": [
+    "c6ae198aee2360dac73bd909e9e47aee": [
       "02_MEMORY\\environment\\latest_situation.json",
-      "02_MEMORY\\environment\\situation_20260712T150606.json"
+      "02_MEMORY\\environment\\situation_20260713T195110.json"
+    ],
+    "1926c8d6aa1900172a0fb95cb4696330": [
+      "02_MEMORY\\evolution\\backup_20260713_135238_test_contract_asset.json",
+      "02_MEMORY\\evolution\\backup_20260713_135238_test_temp.json",
+      "02_MEMORY\\evolution\\backup_20260713_185824_test_temp.json",
+      "02_MEMORY\\evolution\\backup_20260713_185954_test_safety.json"
     ],
     "298bbf180d0d77c3cd58ad1e5969361b": [
       "02_MEMORY\\knowledge\\r1_axiom_001_security_exclusion_first_20260617.md",
@@ -2670,6 +3105,10 @@
       "recent_memory\\research\\v6_architecture_research.md",
       "research\\v6_architecture_research.md"
     ],
+    "befdb61f29fafe2fa668659fc8058f54": [
+      "02_MEMORY\\recovery\\advisor_pushed_20260711.flag",
+      "02_MEMORY\\recovery\\advisor_pushed_20260713.flag"
+    ],
     "5ec9f02b06123a1865188eecbcbae80a": [
       "02_MEMORY\\tg_sessions\\bot_Sck01Bot.session",
       "05_TOOLS\\miner\\tg_bot_Bot2_Sck01Bot.session"
@@ -2751,14 +3190,8 @@
       "03_DATA\\CONSTRAINTS\\signal_taxonomy.json",
       "CONSTRAINTS\\signal_taxonomy.json"
     ],
-    "d2da218e3ee3d7db71679170615bd683": [
-      "03_DATA\\worker_registry.json",
-      "03_DATA\\WORKERS\\worker_registry.json",
-      "WORKERS\\worker_registry.json"
-    ],
     "7205c9588a54b7e322109fb0560c3ca3": [
       "03_DATA\\CONSTRAINTS\\CONSTRAINT_LEDGER.md",
-      "06_RUNTIME\\CONSTRAINT_LEDGER.md",
       "CONSTRAINTS\\CONSTRAINT_LEDGER.md"
     ],
     "8217a9e20ef854ca0cf56c2e705d44a6": [
@@ -2872,6 +3305,10 @@
       "r1_archaeology\\excavations\\archaeology_report_20260703.md",
       "research\\r1_archaeology\\excavations\\archaeology_report_20260703.md"
     ],
+    "d2da218e3ee3d7db71679170615bd683": [
+      "03_DATA\\WORKERS\\worker_registry.json",
+      "WORKERS\\worker_registry.json"
+    ],
     "fc51d5ab3a09e5819b909bef7273a5be": [
       "05_TOOLS\\CRONTAB.md",
       "06_RUNTIME\\CRONTAB.md"
@@ -2883,18 +3320,6 @@
     "22720f352f934049bdab40a55d1000c8": [
       "05_TOOLS\\advisor\\advisor_cron.sh",
       "advisor\\advisor_cron.sh"
-    ],
-    "9dac95187c279a9466722183c08488d4": [
-      "05_TOOLS\\advisor\\lineage_review.py",
-      "advisor\\lineage_review.py"
-    ],
-    "5ff862d40a66d4ad4359380ca52baad4": [
-      "05_TOOLS\\advisor\\stock_advisor.py",
-      "advisor\\stock_advisor.py"
-    ],
-    "1c3bc3f3deac32c77f66c560b88c25be": [
-      "05_TOOLS\\advisor\\stock_query.py",
-      "advisor\\stock_query.py"
     ],
     "52a521a40f80662b0e194a05623911f2": [
       "05_TOOLS\\aether_capsule\\capsule.sh",
@@ -3381,7 +3806,7 @@
     },
     {
       "path": "CURRENT_STATE.md",
-      "size": 4010,
+      "size": 8990,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3404,6 +3829,13 @@
       "path": "run_heartbeat.ps1",
       "size": 621,
       "ext": ".ps1",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "_chip_check.py",
+      "size": 1122,
+      "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -3458,7 +3890,7 @@
     },
     {
       "path": "00_ROOT\\PRINCIPLES.md",
-      "size": 29704,
+      "size": 43620,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3472,7 +3904,7 @@
     },
     {
       "path": "00_ROOT\\ROOT_STATE.md",
-      "size": 2594,
+      "size": 2024,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3633,8 +4065,22 @@
     },
     {
       "path": "02_MEMORY\\civilization_graph.json",
-      "size": 98241,
+      "size": 145686,
       "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_map.md",
+      "size": 11917,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_mines.md",
+      "size": 10198,
+      "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -3653,6 +4099,13 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\energy_budget.json",
+      "size": 452,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\experience.json",
       "size": 1744,
       "ext": ".json",
@@ -3661,7 +4114,7 @@
     },
     {
       "path": "02_MEMORY\\experience_engine.py",
-      "size": 38280,
+      "size": 49220,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -3892,21 +4345,273 @@
     },
     {
       "path": "02_MEMORY\\advisor_tracker\\tracker.json",
-      "size": 1595,
+      "size": 3113,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\advisor_tracker\\win_rate_report.json",
-      "size": 798,
+      "size": 2407,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\advisor_tracker\\win_rate_report.md",
-      "size": 472,
+      "size": 1061,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\archaeology\\chip_evolution_lineage.md",
+      "size": 12809,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\archaeology\\evidence_graph_r1_kernel.json",
+      "size": 49654,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\archaeology\\evidence_graph_r1_kernel.md",
+      "size": 31551,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\archaeology\\kernel_dna_recovery_v0.1.md",
+      "size": 12244,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\001_provider_watchdog.md",
+      "size": 1510,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\002_model_router.md",
+      "size": 1487,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\003_governor_protocol.md",
+      "size": 1389,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\004_repository_memory.md",
+      "size": 1359,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\005_mengpo.md",
+      "size": 1396,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\006_evidence_graph.md",
+      "size": 1320,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\007_csp_registry.md",
+      "size": 1540,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\008_l_infinity.md",
+      "size": 1787,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\009_r2_axioms.md",
+      "size": 1766,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\010_three_roles.md",
+      "size": 1607,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\011_mission_protocol.md",
+      "size": 1523,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\012_admission_engine.md",
+      "size": 1519,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\013_drawer_first.md",
+      "size": 1325,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\014_recovery_protocol.md",
+      "size": 1328,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\015_energy_budget.md",
+      "size": 1408,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\016_nature_reserve.md",
+      "size": 1343,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\017_gene_network.md",
+      "size": 1363,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\018_research_principles.md",
+      "size": 1904,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\019_civilization_mines.md",
+      "size": 2114,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\020_experience_engine.md",
+      "size": 1780,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\021_judgment_engine.md",
+      "size": 1683,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\022_continuity_engine.md",
+      "size": 1846,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\023_ontology.md",
+      "size": 1782,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\024_multi_agent_protocol.md",
+      "size": 1793,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\025_recovery_protocol_v2.md",
+      "size": 1866,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\026_knowledge_lifecycle.md",
+      "size": 2020,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\027_risk_internalization.md",
+      "size": 2306,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\028_ace_civilization_os.md",
+      "size": 6456,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\031_governance_map_v1.md",
+      "size": 12265,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_assets\\ASSET_INDEX.md",
+      "size": 12173,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_audit\\arch013_distillation_20260713.md",
+      "size": 8620,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_audit\\arch014_distillation_20260713.md",
+      "size": 10673,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -3940,6 +4645,27 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\civilization_audit\\audit_20260713.json",
+      "size": 502107,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_audit\\audit_20260713.md",
+      "size": 10420,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\civilization_audit\\divergence_log.md",
+      "size": 1670,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\cloud_reports\\advisor_20260710.md",
       "size": 2538,
       "ext": ".md",
@@ -3954,15 +4680,29 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\diary\\diary_2026-07-12.json",
+      "size": 1731,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\discovery_queue\\daily_discovery_20260713.md",
+      "size": 5449,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\environment\\latest_observations.json",
-      "size": 543,
+      "size": 573,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\environment\\latest_scan.json",
-      "size": 375289,
+      "size": 511767,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4836,6 +5576,853 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\environment\\situation_20260712T152033.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T153559.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T155046.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T160608.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T162031.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T163604.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T165051.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T170536.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T172014.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T173554.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T175106.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T180602.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T182044.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T183544.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T184851.json",
+      "size": 4191,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T184852.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T190532.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T192020.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T193614.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T194019.json",
+      "size": 4727,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T194020.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T195016.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T200515.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T202052.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T212832.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T213702.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T215031.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T220559.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T222053.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T223557.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T225035.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T230535.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T232057.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T233527.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260712T235045.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T000551.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T002036.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T003556.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T005108.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T010547.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T012025.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T013530.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T015057.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T020551.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T022025.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T023523.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T025014.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T030539.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T032134.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T033528.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T035040.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T040548.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T042051.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T043559.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T045027.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T050529.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T052042.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T053550.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T055058.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T060542.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T062024.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T063526.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T065200.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T070526.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T072040.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T073514.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T075025.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T080523.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T082106.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T083553.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T085028.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T090536.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T092042.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T093615.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T095104.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T100548.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T102044.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T103549.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T105049.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T110612.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T112040.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T113552.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T115043.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T120533.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T122043.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T123623.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T125031.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T130526.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T132048.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T133642.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T135037.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T140607.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T141209.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T141635.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T142043.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T143603.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T145029.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T150528.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T152029.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T153536.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T155100.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T160539.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T162106.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T163602.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T165050.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T170527.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T172030.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T173531.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T175038.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T180554.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T182043.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T183608.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T185124.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T190700.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T192113.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T193613.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\environment\\situation_20260713T195110.json",
+      "size": 282,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\evolution\\backup_20260713_135238_test_contract_asset.json",
+      "size": 17,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\evolution\\backup_20260713_135238_test_temp.json",
+      "size": 17,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\evolution\\backup_20260713_185824_test_temp.json",
+      "size": 17,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\evolution\\backup_20260713_185954_test_safety.json",
+      "size": 17,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\experience\\exp_20260710T200009.json",
       "size": 822,
       "ext": ".json",
@@ -4845,6 +6432,692 @@
     {
       "path": "02_MEMORY\\experience\\exp_20260711T230000_archaeology_distillation.json",
       "size": 4440,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T202432.json",
+      "size": 825,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T202654.json",
+      "size": 773,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T202932.json",
+      "size": 773,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T203419.json",
+      "size": 851,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T203634.json",
+      "size": 827,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T204137.json",
+      "size": 920,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T204147.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T213854.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T214253.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T215031.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T220559.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T222053.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T223557.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T225536.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T230832.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T232057.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T233527.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260712T235800.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T001207.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T002036.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T004026.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T005108.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T010547.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T012025.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T013530.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T015555.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T020551.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T022025.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T023523.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T025014.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T031231.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T032134.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T033528.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T035040.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T041323.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T042633.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T044041.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T045027.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T050530.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T052042.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T053550.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T055514.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T060542.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T062024.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T063526.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T065200.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T070526.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T072745.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T073514.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T075025.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T080523.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T082713.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T084229.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T085538.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T090536.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T092042.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T093615.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T095600.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T100548.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T102044.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T103549.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T105049.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T110751.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T112748.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T113723.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T115338.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T120801.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T122259.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T124315.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T125718.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T131216.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T132637.json",
+      "size": 812,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T134056.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T135529.json",
+      "size": 926,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T135530.json",
+      "size": 923,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T142729.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T143603.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T145029.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T150528.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T152213.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T153714.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T155526.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T160821.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T162311.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T163602.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T165050.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T170703.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T172030.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T174105.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T175745.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T180731.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T182824.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T183608.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T185124.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T190701.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T192341.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T193942.json",
+      "size": 929,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_debate_debate_20260713T195804.json",
+      "size": 929,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4866,6 +7139,188 @@
     {
       "path": "02_MEMORY\\experience\\exp_provider_ollama_20260711T190940.json",
       "size": 395,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_0.json",
+      "size": 321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_1.json",
+      "size": 330,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_10.json",
+      "size": 251,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_2.json",
+      "size": 321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_3.json",
+      "size": 330,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_4.json",
+      "size": 321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_5.json",
+      "size": 330,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_6.json",
+      "size": 321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_7.json",
+      "size": 330,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_8.json",
+      "size": 321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T193454_9.json",
+      "size": 330,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260712T194502_0.json",
+      "size": 481,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T105049_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T110751_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T112748_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T113723_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T115338_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T120801_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T122259_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T124315_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T125718_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T131216_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T132637_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T134056_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T135531_0.json",
+      "size": 477,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\experience\\exp_seeded_20260713T142729_0.json",
+      "size": 477,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -4894,6 +7349,20 @@
     {
       "path": "02_MEMORY\\exploration\\exploration_20260712.md",
       "size": 2318,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\exploration\\exploration_20260713.json",
+      "size": 698,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\exploration\\exploration_20260713.md",
+      "size": 566,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -5718,6 +8187,783 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T151928.json",
+      "size": 3643,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T153428.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T154928.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T160429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T161928.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T163429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T164928.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T170429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T171929.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T173429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T174929.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T180429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T181929.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T183429.json",
+      "size": 3641,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T184714.json",
+      "size": 3703,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T190429.json",
+      "size": 3393,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T191929.json",
+      "size": 3552,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T193429.json",
+      "size": 4062,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T194929.json",
+      "size": 4192,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T200429.json",
+      "size": 4192,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T201929.json",
+      "size": 4188,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T212702.json",
+      "size": 4602,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T213429.json",
+      "size": 4550,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T214929.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T220429.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T221929.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T223429.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T224929.json",
+      "size": 5098,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T230429.json",
+      "size": 5098,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T231929.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T233429.json",
+      "size": 5109,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260712T234929.json",
+      "size": 5098,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T000429.json",
+      "size": 5392,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T001929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T003429.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T004929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T010429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T011929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T013429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T014929.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T020429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T021929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T023429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T024929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T030429.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T031929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T033429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T034929.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T040429.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T041928.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T043428.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T044928.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T050429.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T051928.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T053428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T054928.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T060428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T061928.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T063428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T064928.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T070428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T071928.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T073428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T074928.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T080428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T081928.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T083428.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T084928.json",
+      "size": 5316,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T090428.json",
+      "size": 5327,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T091928.json",
+      "size": 5284,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T093428.json",
+      "size": 5341,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T094928.json",
+      "size": 5321,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T100428.json",
+      "size": 5893,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T101928.json",
+      "size": 6040,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T103428.json",
+      "size": 6141,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T104928.json",
+      "size": 6141,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T110428.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T111928.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T113428.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T114929.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T120429.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T121928.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T123428.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T124928.json",
+      "size": 6130,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T130429.json",
+      "size": 6131,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T131928.json",
+      "size": 6132,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T133428.json",
+      "size": 6132,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T134928.json",
+      "size": 6132,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T141928.json",
+      "size": 6769,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T143428.json",
+      "size": 6780,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T144928.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T150428.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T151928.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T153428.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T154928.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T160428.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T161928.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T163428.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T164928.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T170429.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T171929.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T173428.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T174928.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T180429.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T181929.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T183429.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T184928.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T190428.json",
+      "size": 8156,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T191931.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T193428.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\beat_20260713T194928.json",
+      "size": 8145,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json",
       "size": 1121,
       "ext": ".json",
@@ -6537,6 +9783,818 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T153428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T154928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T160429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T161928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T163429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T164928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T170429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T171929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T173429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T174929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T180429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T181929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T183429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T184714.json",
+      "size": 1163,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T190429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T191929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T193429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T193843.json",
+      "size": 1163,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T194929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T200429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T201929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T212702.json",
+      "size": 1163,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T213429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T214929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T220429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T221929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T223429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T224929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T230429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T231929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T233429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260712T234929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T000429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T001929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T003429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T004929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T010429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T011929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T013429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T014929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T020429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T021929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T023429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T024929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T030429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T031929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T033429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T034929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T040429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T041928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T043428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T044928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T050429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T051928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T053428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T054928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T060428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T061928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T063428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T064928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T070428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T071928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T073428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T074928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T080428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T081928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T083428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T084928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T090428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T091928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T093428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T094928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T100428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T101928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T103428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T104928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T110428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T111928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T113428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T114929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T120429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T121928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T123428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T124928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T130429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T131928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T133428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T134928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T140428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T141013.json",
+      "size": 1162,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T141527.json",
+      "size": 1162,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T141928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T143428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T144928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T150428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T151928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T153428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T154928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T160428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T161928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T163428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T164928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T170429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T171929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T173428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T174928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T180429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T181929.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T183429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T184928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T190428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T191931.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T193428.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T194928.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\heartbeat\\ops_004_20260713T200429.json",
+      "size": 1069,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\knowledge\\civilization_genome_mapping.md",
+      "size": 2153,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\knowledge\\dead_asset_registry.md",
       "size": 18065,
       "ext": ".md",
@@ -6559,14 +10617,14 @@
     },
     {
       "path": "02_MEMORY\\knowledge\\invariant_manifest.md",
-      "size": 11572,
+      "size": 12023,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\knowledge\\kernel_dna_v1.0.md",
-      "size": 22603,
+      "size": 23091,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -6628,6 +10686,41 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\lineage\\asset_quality_standard.md",
+      "size": 6993,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\lineage\\continuity_self_check.md",
+      "size": 6622,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\lineage\\lineage_index.json",
+      "size": 29952,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\lineage\\lineage_schema.md",
+      "size": 4387,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\lineage\\L∞_lineage.md",
+      "size": 9741,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\logs\\heartbeat_20260710.log",
       "size": 1661,
       "ext": ".log",
@@ -6643,7 +10736,14 @@
     },
     {
       "path": "02_MEMORY\\logs\\heartbeat_20260712.log",
-      "size": 65864,
+      "size": 110903,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\logs\\heartbeat_20260713.log",
+      "size": 165157,
       "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
@@ -6664,7 +10764,7 @@
     },
     {
       "path": "02_MEMORY\\question_center\\decisions.json",
-      "size": 5957,
+      "size": 11656,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -6678,14 +10778,14 @@
     },
     {
       "path": "02_MEMORY\\question_center\\hypotheses.json",
-      "size": 798,
+      "size": 6791,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "02_MEMORY\\question_center\\questions.json",
-      "size": 54935,
+      "size": 90341,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -7160,6 +11260,13 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\recovery\\advisor_pushed_20260713.flag",
+      "size": 6,
+      "ext": ".flag",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\recovery\\recovery_engine_20260711.json",
       "size": 180855,
       "ext": ".json",
@@ -7202,6 +11309,699 @@
       "type": "data"
     },
     {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_192840.json",
+      "size": 3047,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_193454.json",
+      "size": 5412,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_194335.json",
+      "size": 5410,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_194502.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_195741.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_201205.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_202552.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_202811.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_213854.json",
+      "size": 5449,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_214253.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_215031.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_220559.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_222053.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_223557.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_225536.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_230832.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_232057.json",
+      "size": 5450,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_233527.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_235800.json",
+      "size": 5451,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_001207.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_002036.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_004026.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_005108.json",
+      "size": 5474,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_010547.json",
+      "size": 5473,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_012025.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_013530.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_015555.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_020551.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_022025.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_023523.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_025014.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_031231.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_032134.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_033528.json",
+      "size": 5474,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_035040.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_041323.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_042633.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_044041.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_045027.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_050530.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_052042.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_053550.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_055514.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_060542.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_062024.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_063526.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_065200.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_070526.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_072745.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_073514.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_075025.json",
+      "size": 5474,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_080523.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_082713.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_084229.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_085538.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_090536.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_092042.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_093615.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_095600.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_095613.json",
+      "size": 5475,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_100548.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_102044.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_103549.json",
+      "size": 5476,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_105049.json",
+      "size": 5512,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_110751.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_112748.json",
+      "size": 5574,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_113723.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_115338.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_120801.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_122259.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_124315.json",
+      "size": 5575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_125718.json",
+      "size": 5574,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_131216.json",
+      "size": 6864,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_132637.json",
+      "size": 6865,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_134056.json",
+      "size": 6560,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_135530.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_142729.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_143603.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_145029.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_150528.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_152213.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_153714.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_155526.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_160821.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_162311.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_163602.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_165050.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_170703.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_172030.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_174105.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_175745.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_180731.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_182824.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_183608.json",
+      "size": 4617,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_185124.json",
+      "size": 4616,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_190701.json",
+      "size": 4616,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_192341.json",
+      "size": 4616,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_193942.json",
+      "size": 4616,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_195804.json",
+      "size": 4616,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "02_MEMORY\\self_loop\\loop_20260710T155648.json",
       "size": 1527,
       "ext": ".json",
@@ -7219,6 +12019,13 @@
       "path": "02_MEMORY\\self_loop\\loop_20260710T161934.json",
       "size": 1454,
       "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "02_MEMORY\\smelter_gate\\gate_log.jsonl",
+      "size": 487,
+      "ext": ".jsonl",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -7268,6 +12075,20 @@
       "path": "02_modules\\lexicon\\__init__.py",
       "size": 720,
       "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_ARCHIVE\\gene_seed\\gene_seed_20260712.zip",
+      "size": 79026,
+      "ext": ".zip",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_ARCHIVE\\gene_seed\\gene_seed_20260713.zip",
+      "size": 80689,
+      "ext": ".zip",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -7331,13 +12152,6 @@
       "path": "03_DATA\\lexicon_20260628.json",
       "size": 283378,
       "ext": ".json",
-      "priority": "MEDIUM",
-      "type": "knowledge_pool"
-    },
-    {
-      "path": "03_DATA\\lexicon_categories.cpython-311.pyc",
-      "size": 25067,
-      "ext": ".pyc",
       "priority": "MEDIUM",
       "type": "knowledge_pool"
     },
@@ -7426,6 +12240,13 @@
       "type": "data"
     },
     {
+      "path": "03_DATA\\reserve_baseline.json",
+      "size": 3799,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "03_DATA\\routing_constraints.json",
       "size": 11841,
       "ext": ".json",
@@ -7448,7 +12269,21 @@
     },
     {
       "path": "03_DATA\\worker_registry.json",
-      "size": 20748,
+      "size": 4575,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\CIV_REPOSITORY\\index.json",
+      "size": 1485,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\CIV_REPOSITORY\\backups\\test_backup.json",
+      "size": 1911,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -7477,6 +12312,62 @@
     {
       "path": "03_DATA\\CONSTRAINTS\\signal_taxonomy.json",
       "size": 1180,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MEMORY\\self_archaeology_20260713.json",
+      "size": 4094,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MEMORY\\SELF_CONTINUATION_REPORT.md",
+      "size": 16628,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-ARCH-003.json",
+      "size": 3810,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-ARCH-004.json",
+      "size": 2899,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-ARCH-006.json",
+      "size": 3203,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-OPS-005.json",
+      "size": 3589,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-RES-001.json",
+      "size": 4765,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "03_DATA\\MISSIONS\\AUM-MISSION-RES-002.json",
+      "size": 2225,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -8238,15 +13129,29 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\admission_engine.py",
+      "size": 12512,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\autophagy_engine.py",
+      "size": 14296,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\awaken.py",
-      "size": 8140,
+      "size": 8664,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\awareness_loop.py",
-      "size": 14738,
+      "size": 14703,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8260,14 +13165,28 @@
     },
     {
       "path": "04_PROTOCOLS\\capability_router.py",
-      "size": 8479,
+      "size": 10029,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\civilization_auditor.py",
-      "size": 86561,
+      "size": 90569,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\civilization_contract.py",
+      "size": 14002,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\civilization_entry_dna.py",
+      "size": 17174,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8287,6 +13206,41 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\constraint_validator.py",
+      "size": 14058,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\continuity_engine.py",
+      "size": 12407,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\CONTRACT.md",
+      "size": 6601,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\csp_registry.py",
+      "size": 11658,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\energy_budget.py",
+      "size": 10467,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\environment_first.py",
       "size": 11960,
       "ext": ".py",
@@ -8296,6 +13250,13 @@
     {
       "path": "04_PROTOCOLS\\environment_sensor.py",
       "size": 18428,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\evidence_graph.py",
+      "size": 42862,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8315,15 +13276,29 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\gene_network.py",
+      "size": 15788,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\governor.py",
-      "size": 6858,
+      "size": 7343,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\heartbeat.py",
-      "size": 35260,
+      "size": 49149,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\identity_core.py",
+      "size": 9335,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8350,6 +13325,13 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\lineage_engine.py",
+      "size": 5938,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\local_miner.py",
       "size": 31500,
       "ext": ".py",
@@ -8357,15 +13339,29 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\mission_protocol.py",
+      "size": 22507,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\multi_agent_debate.py",
-      "size": 15048,
+      "size": 15784,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\nature_reserve.py",
+      "size": 10182,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\ops_000_asset_first.py",
-      "size": 10199,
+      "size": 15280,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8420,8 +13416,15 @@
       "type": "data"
     },
     {
+      "path": "04_PROTOCOLS\\quality_checker.py",
+      "size": 7405,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "04_PROTOCOLS\\question_center.py",
-      "size": 25358,
+      "size": 27523,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8463,21 +13466,56 @@
     },
     {
       "path": "04_PROTOCOLS\\recovery_scanner.py",
-      "size": 31971,
+      "size": 39008,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\repository.py",
+      "size": 8386,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\repository_manager.py",
+      "size": 6386,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\repository_store.py",
+      "size": 4236,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\roundtable.py",
-      "size": 8093,
+      "size": 35812,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\seed_archive.py",
+      "size": 19196,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "04_PROTOCOLS\\self_evolution.py",
-      "size": 16894,
+      "size": 22935,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\self_learning_engine.py",
+      "size": 31068,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8490,16 +13528,30 @@
       "type": "data"
     },
     {
-      "path": "04_PROTOCOLS\\state_generator.py",
-      "size": 16364,
+      "path": "04_PROTOCOLS\\smelter_gate.py",
+      "size": 7178,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
-      "path": "05_TOOLS\\asset_curator.cpython-311.pyc",
-      "size": 34774,
-      "ext": ".pyc",
+      "path": "04_PROTOCOLS\\state_generator.py",
+      "size": 19265,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\test_smelter_gate.py",
+      "size": 4493,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "04_PROTOCOLS\\worker_registry.py",
+      "size": 10259,
+      "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -8561,7 +13613,14 @@
     },
     {
       "path": "05_TOOLS\\worker_stock_advisor.py",
-      "size": 3858,
+      "size": 5541,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\adaptive_scorer.py",
+      "size": 17454,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8574,8 +13633,36 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\advisor\\advisor_diagnostic.py",
+      "size": 6126,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\advisor\\advisor_tracker.py",
-      "size": 16289,
+      "size": 16281,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\daily_event_logger.py",
+      "size": 8856,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\daily_runner.py",
+      "size": 15037,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\health_check.py",
+      "size": 2556,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8589,21 +13676,63 @@
     },
     {
       "path": "05_TOOLS\\advisor\\lineage_review.py",
-      "size": 2986,
+      "size": 5176,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\miner_assistant.py",
+      "size": 20779,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\multi_data_source.py",
+      "size": 16450,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\performance_tracker.py",
+      "size": 17622,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\policy_manager.py",
+      "size": 17883,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\post_recommendation_auditor.py",
+      "size": 15035,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\advisor\\seed_history.py",
+      "size": 2516,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\advisor\\stock_advisor.py",
-      "size": 54974,
+      "size": 75091,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
     },
     {
       "path": "05_TOOLS\\advisor\\stock_query.py",
-      "size": 10901,
+      "size": 16431,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8626,13 +13755,6 @@
       "path": "05_TOOLS\\aether_capsule\\README.md",
       "size": 1908,
       "ext": ".md",
-      "priority": "NORMAL",
-      "type": "data"
-    },
-    {
-      "path": "05_TOOLS\\assets\\__init__.cpython-311.pyc",
-      "size": 864,
-      "ext": ".pyc",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -8728,6 +13850,13 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\miner\\civilization_fingerprint.py",
+      "size": 37546,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\miner\\free_api.env.tpl",
       "size": 1324,
       "ext": ".tpl",
@@ -8785,7 +13914,7 @@
     },
     {
       "path": "05_TOOLS\\miner\\miner_env.sh",
-      "size": 3758,
+      "size": 3790,
       "ext": ".sh",
       "priority": "NORMAL",
       "type": "data"
@@ -8869,7 +13998,7 @@
     },
     {
       "path": "05_TOOLS\\miner\\tg_collections.session",
-      "size": 249856,
+      "size": 376832,
       "ext": ".session",
       "priority": "NORMAL",
       "type": "data"
@@ -8877,6 +14006,13 @@
     {
       "path": "05_TOOLS\\miner\\tg_collections_miner.py",
       "size": 11189,
+      "ext": ".py",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\miner\\tg_download_r1_files.py",
+      "size": 2089,
       "ext": ".py",
       "priority": "NORMAL",
       "type": "data"
@@ -8967,7 +14103,7 @@
     },
     {
       "path": "05_TOOLS\\miner\\tg_output\\tg_civilization_map_20260712_150850.json",
-      "size": 3147802,
+      "size": 3147533,
       "ext": ".json",
       "priority": "NORMAL",
       "type": "data"
@@ -8976,6 +14112,20 @@
       "path": "05_TOOLS\\miner\\tg_output\\tg_civilization_map_20260712_150850.md",
       "size": 414910,
       "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\experience.json",
+      "size": 852,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\adaptive.log",
+      "size": 0,
+      "ext": ".log",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -9022,9 +14172,107 @@
       "type": "data"
     },
     {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260713.md",
+      "size": 2679,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260713_lineage.json",
+      "size": 1287,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\advisor_20260713_trace.json",
+      "size": 25002,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "05_TOOLS\\mine_output\\advisor\\advisor_cron.log",
-      "size": 48123,
+      "size": 220457,
       "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\auditor.log",
+      "size": 0,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\audit_results.json",
+      "size": 6642,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\current_policy.json",
+      "size": 883,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\daily_events.json",
+      "size": 199,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\data_source.log",
+      "size": 3333,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\event.log",
+      "size": 67,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\miner.log",
+      "size": 0,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\performance.log",
+      "size": 9414,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\performance_db.json",
+      "size": 2990,
+      "ext": ".json",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\policy.log",
+      "size": 122,
+      "ext": ".log",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
+      "path": "05_TOOLS\\mine_output\\advisor\\SYSTEM_STATUS_20260713.md",
+      "size": 2896,
+      "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
     },
@@ -9078,6 +14326,13 @@
       "type": "data"
     },
     {
+      "path": "06_RUNTIME\\ACE_RUNTIME_TOPOLOGY.md",
+      "size": 29480,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "06_RUNTIME\\CALL_CHAIN.md",
       "size": 4803,
       "ext": ".md",
@@ -9093,7 +14348,7 @@
     },
     {
       "path": "06_RUNTIME\\CONSTRAINT_LEDGER.md",
-      "size": 3002,
+      "size": 5047,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"
@@ -9260,6 +14515,13 @@
       "type": "data"
     },
     {
+      "path": "06_RUNTIME\\state\\runtime_state.md",
+      "size": 1293,
+      "ext": ".md",
+      "priority": "NORMAL",
+      "type": "data"
+    },
+    {
       "path": "06_RUNTIME\\windows\\ace_env.ps1",
       "size": 914,
       "ext": ".ps1",
@@ -9415,7 +14677,7 @@
     },
     {
       "path": "07_GUARDIAN\\README.md",
-      "size": 621,
+      "size": 722,
       "ext": ".md",
       "priority": "NORMAL",
       "type": "data"

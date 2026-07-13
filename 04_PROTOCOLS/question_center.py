@@ -1,3 +1,19 @@
+"""---
+id: PROTO-003
+type: protocol
+title: "Question Center — 问题中心"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.90
+lineage:
+  - OPS-005
+related: [PROTO-001, PROTO-005, PROTO-006]
+tags: [question, decision, memory]
+archaeology:
+  state: original
+---
+"""
 #!/usr/bin/env python3
 # TYPE: runtime
 # Implements: C-009 C-012
@@ -521,6 +537,28 @@ class QuestionCenter:
                 break
         self._save_all()
 
+    def promote_to_mission(self, qid):
+        """将 Question 升级为 Mission
+
+        这是 Question → Mission 的标准升级路径。
+        不仅仅是回答问题，而是要蒸馏出文明资产。
+        """
+        q = self.get_question_by_id(qid)
+        if not q:
+            return None
+        try:
+            from mission_protocol import protocol
+            m = protocol.from_question(qid, q["question"])
+            protocol.update_status(m.mid, "ACTIVE")
+            q["status"] = "researching"
+            q["mission_id"] = m.mid
+            q["last_seen"] = datetime.now().isoformat()
+            self._save_all()
+            return m.mid
+        except Exception as e:
+            print(f"Promote to mission failed: {e}")
+            return None
+
     def get_question_by_id(self, qid):
         """根据ID获取问题"""
         return next((q for q in self.questions if q["qid"] == qid), None)
@@ -572,6 +610,9 @@ def main():
     p_close = subparsers.add_parser("close", help="Close question")
     p_close.add_argument("--qid", required=True, help="Question ID")
     p_close.add_argument("--reason", help="Close reason")
+
+    p_promote = subparsers.add_parser("promote", help="Promote question to Mission")
+    p_promote.add_argument("--qid", required=True, help="Question ID to promote")
 
     args = parser.parse_args()
     qc = QuestionCenter()
@@ -648,6 +689,13 @@ def main():
     elif args.action == "close":
         qc.close_question(args.qid, args.reason)
         print(f"Question {args.qid} closed.")
+
+    elif args.action == "promote":
+        mid = qc.promote_to_mission(args.qid)
+        if mid:
+            print(f"Promoted {args.qid} to Mission: {mid}")
+        else:
+            print(f"Failed to promote {args.qid}")
 
     else:
         parser.print_help()

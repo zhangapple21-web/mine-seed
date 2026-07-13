@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "updated_at": "2026-07-13T10:17:43.873564",
+  "total_assets": 2,
+  "by_type": {
+    "kernel": 1,
+    "blueprint": 1
+  },
+  "assets": [
+    {
+      "id": "ASSET-KER-0001",
+      "type": "kernel",
+      "title": "AUM-MISSION-RES-001-kernel",
+      "source_mission": "AUM-MISSION-RES-001",
+      "created": "2026-07-13T10:04:49.907248",
+      "updated": "2026-07-13T10:04:49.907248",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "假设生成: 2 个新假设",
+      "content_hash": "e9f32f94e380724e",
+      "lineage": [],
+      "metadata": {},
+      "tags": [],
+      "gates": {
+        "worth": true,
+        "reuse": true,
+        "purity": true,
+        "novelty": true,
+        "quality": true,
+        "compliance": true
+      }
+    },
+    {
+      "id": "ASSET-BLU-0002",
+      "type": "blueprint",
+      "title": "AUM-MISSION-RES-001-blueprint",
+      "source_mission": "AUM-MISSION-RES-001",
+      "created": "2026-07-13T10:04:49.909254",
+      "updated": "2026-07-13T10:04:49.909254",
+      "version": "1.0.0",
+      "status": "active",
+      "content": "模式发现: 2 个新模式",
+      "content_hash": "071434a89d1fa8f2",
+      "lineage": [],
+      "metadata": {},
+      "tags": [],
+      "gates": {
+        "worth": true,
+        "reuse": true,
+        "purity": true,
+        "novelty": true,
+        "quality": true,
+        "compliance": true
+      }
+    }
+  ]
+}

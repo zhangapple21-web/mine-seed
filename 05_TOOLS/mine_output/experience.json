@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "patterns": {},
+  "routing_rules": [],
+  "compression_log": [
+    {
+      "ts": "2026-07-13T19:26:15.331347",
+      "source": "audit_results",
+      "audits_processed": 3,
+      "signal_patterns_found": 0,
+      "low_score_count": 0,
+      "strategy_adjustments": 0
+    }
+  ],
+  "reasoning_chains": [],
+  "user_feedback": [],
+  "innovation_patterns": [],
+  "self_improve_tips": [],
+  "audit_compression": [
+    {
+      "signal_patterns": {},
+      "low_score_patterns": [],
+      "recurring_issues": [
+        {
+          "keyword": "风险",
+          "count": 3
+        },
+        {
+          "keyword": "技术面",
+          "count": 3
+        }
+      ],
+      "strategy_adjustments": [],
+      "total_audits_processed": 3,
+      "compressed_at": "2026-07-13T19:26:15.331347"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "mid": "AUM-MISSION-ARCH-004",
+  "name": "文明资产蒸馏 — 将 10 仓升级为 Civilization Asset Library",
+  "type": "Architecture",
+  "priority": "P0",
+  "status": "COMPLETED",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "## Mission\n\n不要继续开发 Runtime。\n不要新增 Protocol。\n不要新增 Governor。\n把已经发现的文明资产正式沉淀下来。\n\n## Goal\n\n将目前已扫描的 10 个 Repository，\n从 Repository Collection\n升级为\nCivilization Asset Library。",
+  "scope": "## Scope\n\n重点分析：\n- ace_core\n- mine-seed\n- claw-soul\n- r1-continuity-backup\n\n不是分析代码。\n而是分析：\n**有哪些真正值得永久保存的文明资产。**",
+  "deliverables": "## Deliverables\n\n建立：\n`02_MEMORY/civilization_assets/`\n\n每个资产一份 Markdown，统一模板。\n\n至少完成 10~20 个文明资产，并生成 ASSET_INDEX.md。\n\n同时生成：\n`02_MEMORY/civilization_map.md` — 十仓文明地图",
+  "acceptance": "## Acceptance\n\n- [ ] 至少 10 个文明资产已蒸馏\n- [ ] 每个资产含完整模板（Name/Origin/Purpose/Problem/CoreStructure/\n      Constraint/Evidence/CanRebuild/CanReplace/CanDelete/Distillation）\n- [ ] **每个资产必须回答三问：**\n      - Why does it exist?\n      - What problem does it solve?\n      - Can it be rebuilt?\n- [ ] ASSET_INDEX.md 已生成\n- [ ] 资产分类清晰，Importance/ReuseScore/DistillationScore 已评估\n- [ ] civilization_map.md 已生成",
+  "forbidden": "## Forbidden\n\n❌ Copy 代码\n❌ Merge Repository\n❌ 新建 Runtime\n❌ 修改现有实现\n❌ 引入大型 Framework",
+  "distillation": "## Distillation\n\n- **Kernel**: 可复用文明资产抽象\n- **Blueprint**: Civilization Asset Library 架构\n- **Protocol**: 资产蒸馏标准模板\n- **Constraint**: 资产准入原则、命名规范、评分标准\n- **Experience**: 十仓考古经验与复用经验\n- **Identity**: Civilization Asset Curator 能力",
+  "admission": "## Admission\n\n完成后不要直接进入 Repository。\n\n所有资产必须经过：\n- 去重检查\n- 是否已有更优版本\n- 是否值得永久保存\n- 是否污染文明\n\n通过后才能进入：\n`02_MEMORY/civilization_assets/`",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-13T11:01:48.087414",
+  "updated_at": "2026-07-13T11:08:05.026897",
+  "completed_at": "2026-07-13T11:08:05.026897",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [],
+  "distillation_artifacts": {
+    "kernel": [],
+    "blueprint": [],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": []
+}

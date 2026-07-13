@@ -1,3 +1,19 @@
+"""---
+id: PROTO-005
+type: protocol
+title: "Multi-Agent Debate — 多智能体辩论"
+status: active
+source: "R2 Development"
+created: 2026-07-12
+confidence: 0.88
+lineage:
+  - OPS-005
+related: [PROTO-001, PROTO-003, PROTO-007]
+tags: [debate, multi-agent, governance]
+archaeology:
+  state: original
+---
+"""
 #!/usr/bin/env python3
 # TYPE: runtime
 # Implements: C-010

@@ -1245,7 +1245,7 @@
     "source": "question_engine",
     "priority": "P1",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-12T14:33:43.689594",
     "last_seen": "2026-07-12T14:33:43.689594",
     "hypotheses": [],
@@ -1265,7 +1265,922 @@
       "capability_ref": "stock_data",
       "timestamp": "2026-07-12T14:32:23.892080"
     },
-    "debate_count": 1,
-    "last_debated_at": "2026-07-12T14:51:07.950960"
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T07:20:40.611554",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-014",
+    "question": "为什么我们应该立即调查这些文件的修改内容？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T18:49:58.329474",
+    "last_seen": "2026-07-12T18:49:58.329474",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "当前系统状态显示有多个重要文件被修改，如果这些修改内容没有得到及时了解和分析，可能会对系统的运行产生未知影响。例如，修改了知识库中的核心DNA文件可能会影响系统的决策能力；修改了心跳协议的文件可能导致系统同步问题或通信中断。",
+    "approach": "首先应详细检查每个被修改的文件以确定具体更改内容，并评估这些改变是否会影响系统功能和效率。可以考虑将这些修改与已有的理论模型进行对比，验证是否存在逻辑不一致或性能瓶颈。最后，需要通过实验验证系统在这些修改下的表现是否符合预期。",
+    "expected_value": "回答这个问题后，系统能更好地理解当前环境状态及其对系统决策的影响，并据此采取更合适的应对措施，避免潜在的运行中断或效率下降等问题。",
+    "source_fingerprint": "52fb0cff8bcd",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "13 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/advisor_tracker/tracker.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.md",
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/knowledge/invariant_manifest.md",
+          "M 02_MEMORY/knowledge/kernel_dna_v1.0.md",
+          "M 02_MEMORY/question_center/decisions.json",
+          "M 04_PROTOCOLS/heartbeat.py"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T18:48:52.030076"
+    },
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T11:20:40.844513",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-015",
+    "question": "为什么我们需要立即关注未跟踪文件的增加？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T18:49:58.336331",
+    "last_seen": "2026-07-12T18:49:58.336331",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "我们目前注意到有四个新的未跟踪文件被添加到工作空间中。这些文件可能包含重要的信息或代码，如果未能及时处理这些问题可能会导致数据丢失或者功能缺失。",
+    "approach": "首先需要确定这些新文件的具体内容和用途；其次可以检查它们是否与当前项目相关联，并分析是否存在潜在的错误或问题；最后，建议将这四个新文件纳入下一个版本的更新计划中。",
+    "expected_value": "通过及时处理未跟踪文件的问题，我们可以确保所有数据都能被正确管理和利用，减少可能存在的漏洞和风险。此外，这也是维护系统健康、提升工作效率的有效手段之一。",
+    "source_fingerprint": "a3339337bcad",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "4 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/archaeology/",
+          "?? 04_PROTOCOLS/civilization_entry_dna.py",
+          "?? 04_PROTOCOLS/evidence_graph.py",
+          "?? 05_TOOLS/miner/05_TOOLS/"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T18:48:52.030076"
+    },
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T11:20:40.844513",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-016",
+    "question": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T19:34:54.573520",
+    "last_seen": "2026-07-12T19:34:54.573520",
+    "hypotheses": [
+      "H-004"
+    ],
+    "experiments": [],
+    "decisions": [
+      "D-013"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的提案均建议开展专项研究来分析降级链路生效成功模式的具体原因，并且两者的信心度都达到了85和90以上，符合至少两方confidence>=70的决策标准。因此，选择开展专项研究作为优先执行方案。. Action: 启动专项研究工作小组，收集系统运行数据、历史维护记录及监控报告等信息，深入分析降级链路生效成功模式的具体原因，并据此提出优化建议。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 85
+          },
+          {
+            "role": "researcher",
+            "confidence": 70
+          },
+          {
+            "role": "validator",
+            "confidence": 0
+          }
+        ],
+        "added_at": "2026-07-12T19:40:09.891834"
+      }
+    ]
+  },
+  {
+    "qid": "Q-017",
+    "question": "[自学习] 检测到 11 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T19:34:54.583323",
+    "last_seen": "2026-07-12T19:34:54.583323",
+    "hypotheses": [
+      "H-005"
+    ],
+    "experiments": [],
+    "decisions": [
+      "D-014"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Researcher 的信心均超过70%，且没有重大 concerns。Validator 提议实施三项措施，并指出需要了解每个成功模式的详细情况，这表明现有证据支持强化新发现模式的检测机制。. Action: 批准并执行强化新发现模式的检测机制、实施小规模实验和与专家小组讨论。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 60
+          },
+          {
+            "role": "researcher",
+            "confidence": 70
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-12T19:44:39.955147"
+      }
+    ]
+  },
+  {
+    "qid": "Q-018",
+    "question": "为什么我们应该立即关注这些修改文件的内容？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:42:17.718334",
+    "last_seen": "2026-07-12T19:42:17.718334",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "这些修改可能会影响系统当前的运行状态和功能。如果不及时了解并分析这些修改内容，可能会导致未知的问题出现，影响系统的稳定性和性能。",
+    "approach": "首先，需要详细阅读每个修改文件的内容，识别出可能引起变化的关键代码片段。然后，比较这些修改前后的版本，验证是否引入了新的问题或优化了现有功能。最后，进行必要的系统测试以确保所有更改都能正常工作。",
+    "expected_value": "通过分析这些修改内容和效果，我们可以更好地理解系统的内部运作机制，并在必要时调整配置或修复潜在的bug。这将有助于提升系统的健壮性和效率。",
+    "source_fingerprint": "82cb458b6af0",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "22 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/advisor_tracker/tracker.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.md",
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/knowledge/invariant_manifest.md",
+          "M 02_MEMORY/knowledge/kernel_dna_v1.0.md",
+          "M 02_MEMORY/question_center/decisions.json",
+          "M 02_MEMORY/question_center/hypotheses.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T19:40:20.022404"
+    },
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:36:23.172919",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-019",
+    "question": "为什么我们应该立即关注未跟踪文件的增加？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:42:17.725317",
+    "last_seen": "2026-07-12T19:42:17.725317",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "未跟踪文件的增加可能表明系统在某些方面有遗漏或错误配置。如果不及时处理这些新增文件，可能会导致数据不一致或者资源浪费。",
+    "approach": "检查新添加的文件内容及其与现有系统的关联；比较旧版本与新版本的差异；验证这些文件是否有必要纳入当前的工作流程。",
+    "expected_value": "回答这个问题后，系统可以更好地管理其工作流和数据一致性。这将有助于提升系统的性能和可靠性，并减少由于未跟踪文件引起的错误或资源浪费。",
+    "source_fingerprint": "db711a619fc9",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "22 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/archaeology/",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_0.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_1.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_10.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_2.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_3.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_4.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_5.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_6.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_7.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T19:40:20.022404"
+    },
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:36:23.172919",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-020",
+    "question": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:45:02.113688",
+    "last_seen": "2026-07-12T19:45:02.113688",
+    "hypotheses": [
+      "H-006"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:36:23.172919",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-021",
+    "question": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:45:02.119859",
+    "last_seen": "2026-07-12T19:45:02.119859",
+    "hypotheses": [
+      "H-007"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:50:31.925912",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-022",
+    "question": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:57:41.282198",
+    "last_seen": "2026-07-12T19:57:41.282198",
+    "hypotheses": [
+      "H-008"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:50:31.925912",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-023",
+    "question": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T19:57:41.290489",
+    "last_seen": "2026-07-12T19:57:41.290489",
+    "hypotheses": [
+      "H-009"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T12:50:31.925912",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-024",
+    "question": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T20:12:06.031752",
+    "last_seen": "2026-07-12T20:12:06.031752",
+    "hypotheses": [
+      "H-010"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T13:05:26.703669",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-025",
+    "question": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "closed",
+    "created_at": "2026-07-12T20:12:06.038860",
+    "last_seen": "2026-07-12T20:12:06.038860",
+    "hypotheses": [
+      "H-011"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-13T13:05:26.703669",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-026",
+    "question": "[自学习] 检测到 3 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T20:25:52.086681",
+    "last_seen": "2026-07-12T20:25:52.086681",
+    "hypotheses": [
+      "H-012"
+    ],
+    "experiments": [],
+    "decisions": [
+      "D-015"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议均认为强化链路健康监测方案合理且信心值较高（70%），并不存在重大 concerns。因此综合各方意见后决定批准该方案。. Action: 立即实施强化链路健康监测方案，增加检测频率和深度以及时发现并解决降级链路问题。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 70
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 70
+          }
+        ],
+        "added_at": "2026-07-12T21:31:38.935883"
+      }
+    ]
+  },
+  {
+    "qid": "Q-027",
+    "question": "[自学习] 检测到 12 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T20:25:52.095207",
+    "last_seen": "2026-07-12T20:25:52.095207",
+    "hypotheses": [
+      "H-013"
+    ],
+    "experiments": [],
+    "decisions": [
+      "D-016"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 建议开发新算法以提高检测准确率，并增加数据样本。双方的信心均达到85%，且没有重大 Concerns。. Action: 启动算法改进和数据扩充项目，包括引入新的机器学习模型如CNN或RNN，并在虚拟环境中测试强化学习策略的有效性。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 0
+          },
+          {
+            "role": "researcher",
+            "confidence": 75
+          },
+          {
+            "role": "validator",
+            "confidence": 85
+          }
+        ],
+        "added_at": "2026-07-12T21:34:03.217036"
+      }
+    ]
+  },
+  {
+    "qid": "Q-028",
+    "question": "为什么我们应该立即关注这些修改文件的内容？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T21:29:31.737623",
+    "last_seen": "2026-07-12T21:29:31.737623",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-017"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Researcher 提出立即审查修改内容以确保识别关键更新并及时处理潜在问题。虽然有轻微风险，但 Scouting 和 Validating 的方案都得到了较好的支持。. Action: 安排团队立即审查这些修改文件的内容，并进行详细对比分析，确认系统行为的变化点和新改动的影响。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 90
+          },
+          {
+            "role": "researcher",
+            "confidence": 90
+          },
+          {
+            "role": "validator",
+            "confidence": 90
+          }
+        ],
+        "added_at": "2026-07-13T14:08:56.864691"
+      }
+    ],
+    "motivation": "这些修改可能包含了系统或应用程序的关键更新，如果不及时了解这些内容，可能会导致功能缺失、性能下降或其他重要问题。不研究这些问题可能会影响系统的正常运行和用户体验。",
+    "approach": "建议先检查并理解这些修改文件的具体变化，比对之前的版本以找出差异点，并验证新改动是否会导致系统行为的异常或预期之外的变化。",
+    "expected_value": "回答这个问题后，系统能够及时了解并应对这些修改带来的影响，确保系统的稳定性和效率。此外，对于后续开发和维护也有一定的指导意义。",
+    "source_fingerprint": "77ca123662bc",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "24 files modified",
+      "detail": {
+        "files": [
+          "M 02_MEMORY/advisor_tracker/tracker.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.md",
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/knowledge/invariant_manifest.md",
+          "M 02_MEMORY/knowledge/kernel_dna_v1.0.md",
+          "M 02_MEMORY/question_center/decisions.json",
+          "M 02_MEMORY/question_center/hypotheses.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T21:28:32.680827"
+    },
+    "debate_count": 4,
+    "last_debated_at": "2026-07-13T09:51:04.412350"
+  },
+  {
+    "qid": "Q-029",
+    "question": "为什么我们需要立即关注未跟踪文件的增加？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-12T21:29:31.744346",
+    "last_seen": "2026-07-12T21:29:31.744346",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [
+      "D-018"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议具有高信心（80% 和 60%），且未发现重大 concerns。这些新文件增加可能影响系统数据完整性，需要立即关注确保数据完整性和可靠性。. Action: 立即分析新增的32个未跟踪文件的内容和重要性，并评估它们对当前系统的潜在影响。确认是否需进一步研究并制定相应应对措施。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 80
+          },
+          {
+            "role": "researcher",
+            "confidence": 60
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-13T14:18:37.267642"
+      }
+    ],
+    "motivation": "未跟踪文件的增加可能导致系统数据不完整或丢失重要信息。如果不及时关注这些新增文件，可能会错过一些关键的数据点和研究机会。",
+    "approach": "首先，需要确认新出现的未跟踪文件是否包含有价值的信息。然后，分析这些文件对当前系统状态的影响，并决定是否进行进一步的研究。最后，确定是否需要修改现有流程以防止未来再次遗漏此类文件。",
+    "expected_value": "通过研究新增未跟踪文件，我们可以确保系统数据完整性，并可能发现新的研究方向或解决问题的方法。这将有助于提高系统的可靠性和决策制定能力。",
+    "source_fingerprint": "69673c7e47c1",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "32 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/archaeology/",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T202432.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T202654.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T202932.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T203419.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T203634.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T204137.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T204147.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_0.json",
+          "?? 02_MEMORY/experience/exp_seeded_20260712T193454_1.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-12T21:28:32.680827"
+    },
+    "debate_count": 4,
+    "last_debated_at": "2026-07-13T09:51:04.412350"
+  },
+  {
+    "qid": "Q-030",
+    "question": "[自学习] 检测到 13 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T10:50:49.778462",
+    "last_seen": "2026-07-13T10:50:49.778462",
+    "hypotheses": [
+      "H-014"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T19:21:13.076103"
+  },
+  {
+    "qid": "Q-031",
+    "question": "[自学习] 检测到 14 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T11:07:51.719512",
+    "last_seen": "2026-07-13T11:07:51.719512",
+    "hypotheses": [
+      "H-015"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T19:36:13.298522"
+  },
+  {
+    "qid": "Q-032",
+    "question": "[自学习] 检测到 15 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T11:27:48.873316",
+    "last_seen": "2026-07-13T11:27:48.873316",
+    "hypotheses": [
+      "H-016"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T19:51:10.666311"
+  },
+  {
+    "qid": "Q-033",
+    "question": "[自学习] 检测到 16 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T11:37:23.642763",
+    "last_seen": "2026-07-13T11:37:23.642763",
+    "hypotheses": [
+      "H-017"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T19:51:10.666311"
+  },
+  {
+    "qid": "Q-034",
+    "question": "[自学习] 检测到 17 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T11:53:38.300880",
+    "last_seen": "2026-07-13T11:53:38.300880",
+    "hypotheses": [
+      "H-018"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T20:06:30.207968"
+  },
+  {
+    "qid": "Q-035",
+    "question": "[自学习] 检测到 18 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T12:08:01.731352",
+    "last_seen": "2026-07-13T12:08:01.731352",
+    "hypotheses": [
+      "H-019"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T16:21:06.851215"
+  },
+  {
+    "qid": "Q-036",
+    "question": "[自学习] 检测到 19 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T12:22:59.798910",
+    "last_seen": "2026-07-13T12:22:59.798910",
+    "hypotheses": [
+      "H-020"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:05:27.975487"
+  },
+  {
+    "qid": "Q-037",
+    "question": "[自学习] 检测到 20 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T12:43:15.342227",
+    "last_seen": "2026-07-13T12:43:15.342227",
+    "hypotheses": [
+      "H-021"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:35:31.620057"
+  },
+  {
+    "qid": "Q-038",
+    "question": "[自学习] 检测到 21 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T12:57:18.825381",
+    "last_seen": "2026-07-13T12:57:18.825381",
+    "hypotheses": [
+      "H-022"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:35:31.620057"
+  },
+  {
+    "qid": "Q-039",
+    "question": "[自学习] 检测到 22 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:12:16.563236",
+    "last_seen": "2026-07-13T13:12:16.563236",
+    "hypotheses": [
+      "H-023"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:35:31.620057"
+  },
+  {
+    "qid": "Q-040",
+    "question": "[自学习] 检测到 1 次「Provider 认证失败」模式，建议采取改进措施",
+    "source": "self_learning",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:12:16.572297",
+    "last_seen": "2026-07-13T13:12:16.572297",
+    "hypotheses": [
+      "H-024"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:50:38.094212"
+  },
+  {
+    "qid": "Q-041",
+    "question": "[自学习] 检测到 23 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:26:38.018095",
+    "last_seen": "2026-07-13T13:26:38.018095",
+    "hypotheses": [
+      "H-025"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:50:38.094212"
+  },
+  {
+    "qid": "Q-042",
+    "question": "[自学习] 检测到 2 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:40:56.908876",
+    "last_seen": "2026-07-13T13:40:56.908876",
+    "hypotheses": [
+      "H-026"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T17:50:38.094212"
+  },
+  {
+    "qid": "Q-043",
+    "question": "[自学习] 检测到 24 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:40:56.916430",
+    "last_seen": "2026-07-13T13:40:56.916430",
+    "hypotheses": [
+      "H-027"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T18:05:54.261666"
+  },
+  {
+    "qid": "Q-044",
+    "question": "[自学习] 检测到 25 次「新发现」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T13:55:32.349017",
+    "last_seen": "2026-07-13T13:55:32.349017",
+    "hypotheses": [
+      "H-028"
+    ],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T18:20:43.601317"
+  },
+  {
+    "qid": "Q-045",
+    "question": "为什么我们应该立即关注文件 'M 00_ROOT/PRINCIPLES.md' 的修改？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T14:14:16.386544",
+    "last_seen": "2026-07-13T14:14:16.386544",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "由于这是系统的核心文档之一，其内容的更新可能会影响系统的长期策略和决策。不及时了解这些变化可能导致关键信息丢失或错误理解，从而影响整个系统的运行。",
+    "approach": "首先，检查 'M 00_ROOT/PRINCIPLES.md' 的具体修改内容；其次，评估这些修改对系统当前状态的影响；最后，确定是否需要立即调整系统配置或执行特定的验证程序来确保一致性。",
+    "expected_value": "回答这个问题后，系统能了解到文件 修改的内容及其潜在影响，并根据这些信息采取相应的措施。这有助于保持系统的准确性和高效性。",
+    "source_fingerprint": "fe8c6cbae761",
+    "source_observation": {
+      "source": "local",
+      "category": "file_change",
+      "severity": "info",
+      "title": "29 files modified",
+      "detail": {
+        "files": [
+          "M 00_ROOT/PRINCIPLES.md",
+          "M 02_MEMORY/advisor_tracker/tracker.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.json",
+          "M 02_MEMORY/advisor_tracker/win_rate_report.md",
+          "M 02_MEMORY/civilization_graph.json",
+          "M 02_MEMORY/diary/diary_2026-07-12.json",
+          "M 02_MEMORY/environment/latest_observations.json",
+          "M 02_MEMORY/environment/latest_scan.json",
+          "M 02_MEMORY/environment/latest_situation.json",
+          "M 02_MEMORY/knowledge/invariant_manifest.md"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-13T14:12:09.205984"
+    },
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T18:20:43.601317"
+  },
+  {
+    "qid": "Q-046",
+    "question": "为什么我们应该立即关注这些未跟踪文件的增加？",
+    "source": "question_engine",
+    "priority": "P1",
+    "capability": "research",
+    "status": "open",
+    "created_at": "2026-07-13T14:14:16.398592",
+    "last_seen": "2026-07-13T14:14:16.398592",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "motivation": "未跟踪文件的增加可能表示系统中存在新的重要信息或结构变化。如果不及时关注和处理，这些新内容可能会被忽略，影响系统的全面理解和决策能力。",
+    "approach": "检查新增文件的内容、历史记录及与其他已有数据的关系；比较这些新文件与已知模式、特征的相似性和差异性；验证这些新文件是否涉及新的系统特性或功能。",
+    "expected_value": "通过研究这些未跟踪文件，系统能够更好地理解当前环境状态，识别潜在问题并做出相应调整。这将有助于提升系统的准确性和决策质量。",
+    "source_fingerprint": "73d3d0d5d239",
+    "source_observation": {
+      "source": "local",
+      "category": "new_files",
+      "severity": "info",
+      "title": "146 untracked files",
+      "detail": {
+        "files": [
+          "?? 02_MEMORY/archaeology/",
+          "?? 02_MEMORY/civilization_assets/",
+          "?? 02_MEMORY/civilization_audit/audit_20260713.json",
+          "?? 02_MEMORY/civilization_audit/audit_20260713.md",
+          "?? 02_MEMORY/civilization_map.md",
+          "?? 02_MEMORY/civilization_mines.md",
+          "?? 02_MEMORY/energy_budget.json",
+          "?? 02_MEMORY/evolution/",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T202432.json",
+          "?? 02_MEMORY/experience/exp_debate_debate_20260712T202654.json"
+        ]
+      },
+      "capability_ref": "workspace",
+      "timestamp": "2026-07-13T14:12:09.205984"
+    },
+    "debate_count": 2,
+    "last_debated_at": "2026-07-13T18:20:43.601317"
   }
 ]

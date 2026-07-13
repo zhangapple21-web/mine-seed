@@ -1,0 +1,175 @@
+{
+  "20260713_600519": {
+    "audit_id": "20260713_600519",
+    "recommend_date": "20260713",
+    "code": "600519",
+    "name": "贵州茅台",
+    "recommend_price": 1210.99,
+    "audit_time": "2026-07-13T15:43:41.042177",
+    "miner_score": 60,
+    "miner_feedback": "技术面偏多（2个多头信号，0个空头信号）；当前价格 ¥1210.99；今日涨跌幅: +1210.99%；⚠️ 涨幅较大，注意追高风险",
+    "rule_engine_score": 90,
+    "rule_engine_feedback": "高价股，波动风险较高; 成交量偏低 (4,198,257)",
+    "cross_validation_score": 65,
+    "overall_score": 72,
+    "overall_rating": "B",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 60,
+        "feedback": "技术面偏多（2个多头信号，0个空头信号）；当前价格 ¥1210.99；今日涨跌幅: +1210.99%；⚠️ 涨幅较大，注意追高风险",
+        "source": "local"
+      },
+      "rule_engine_validation": {
+        "score": 90,
+        "rating": "优秀",
+        "issues": [
+          "高价股，波动风险较高",
+          "成交量偏低 (4,198,257)"
+        ],
+        "feedback": "高价股，波动风险较高; 成交量偏低 (4,198,257)",
+        "signals": [
+          "MA多头排列",
+          "MACD金叉"
+        ]
+      },
+      "cross_validation_score": 65,
+      "signals": [
+        "MA多头排列",
+        "MACD金叉"
+      ],
+      "recommend_price": 1210.99,
+      "audit_time": "2026-07-13T15:43:41.042177"
+    }
+  },
+  "20260713_000063": {
+    "audit_id": "20260713_000063",
+    "recommend_date": "20260713",
+    "code": "000063",
+    "name": "中兴通讯",
+    "recommend_price": 41.92,
+    "audit_time": "2026-07-13T15:49:52.421933",
+    "miner_score": 60,
+    "miner_feedback": "技术面偏多（1个多头信号，0个空头信号）；当前价格 ¥41.92；今日涨跌幅: +40.04%；⚠️ 涨幅较大，注意追高风险",
+    "rule_engine_score": 95,
+    "rule_engine_feedback": "近期波动较大 (13.2%)",
+    "cross_validation_score": 58,
+    "overall_score": 71,
+    "overall_rating": "B",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 60,
+        "feedback": "技术面偏多（1个多头信号，0个空头信号）；当前价格 ¥41.92；今日涨跌幅: +40.04%；⚠️ 涨幅较大，注意追高风险",
+        "source": "local"
+      },
+      "rule_engine_validation": {
+        "score": 95,
+        "rating": "优秀",
+        "issues": [
+          "近期波动较大 (13.2%)"
+        ],
+        "feedback": "近期波动较大 (13.2%)",
+        "signals": [
+          "MA多头排列",
+          "站稳中轨",
+          "RSI健康区间",
+          "量能放大",
+          "动量过热警示"
+        ]
+      },
+      "cross_validation_score": 58,
+      "signals": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "动量过热警示"
+      ],
+      "recommend_price": 41.92,
+      "audit_time": "2026-07-13T15:49:52.421933"
+    }
+  },
+  "20260713_600267": {
+    "audit_id": "20260713_600267",
+    "recommend_date": "20260713",
+    "code": "600267",
+    "name": "海正药业",
+    "recommend_price": 11.42,
+    "audit_time": "2026-07-13T15:49:53.028924",
+    "miner_score": 60,
+    "miner_feedback": "技术面偏多（1个多头信号，0个空头信号）；当前价格 ¥11.42；今日涨跌幅: +11.32%；⚠️ 涨幅较大，注意追高风险",
+    "rule_engine_score": 100,
+    "rule_engine_feedback": "通过所有规则检查",
+    "cross_validation_score": 60,
+    "overall_score": 73,
+    "overall_rating": "B",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 60,
+        "feedback": "技术面偏多（1个多头信号，0个空头信号）；当前价格 ¥11.42；今日涨跌幅: +11.32%；⚠️ 涨幅较大，注意追高风险",
+        "source": "local"
+      },
+      "rule_engine_validation": {
+        "score": 100,
+        "rating": "优秀",
+        "issues": [],
+        "feedback": "通过所有规则检查",
+        "signals": [
+          "MA多头排列",
+          "站稳中轨",
+          "RSI健康区间",
+          "量能放大",
+          "短期动量正向"
+        ]
+      },
+      "cross_validation_score": 60,
+      "signals": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "量能放大",
+        "短期动量正向"
+      ],
+      "recommend_price": 11.42,
+      "audit_time": "2026-07-13T15:49:53.028924"
+    }
+  },
+  "20260713_600036": {
+    "audit_id": "20260713_600036",
+    "recommend_date": "20260713",
+    "code": "600036",
+    "name": "招商银行",
+    "recommend_price": 35.5,
+    "audit_time": "2026-07-13T19:54:05.808081",
+    "miner_score": 4,
+    "miner_feedback": "招商银行的股价目前处于相对较高的位置，虽然技术信号显示MA多头排列和MACD金叉可能意味着短期内有上涨的可能性，但考虑到当前市场的整体环境以及招商银行的历史表现，这只股票可能并不适合所有投资者。此外，市场情绪、宏观经济状况等其他因素也会影响其未来走势。因此，在没有更多详细信息的情况下，对这只股票的推荐质量评价为中等偏下。",
+    "rule_engine_score": 100,
+    "rule_engine_feedback": "通过所有规则检查",
+    "cross_validation_score": 32,
+    "overall_score": 45,
+    "overall_rating": "C",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 4,
+        "feedback": "招商银行的股价目前处于相对较高的位置，虽然技术信号显示MA多头排列和MACD金叉可能意味着短期内有上涨的可能性，但考虑到当前市场的整体环境以及招商银行的历史表现，这只股票可能并不适合所有投资者。此外，市场情绪、宏观经济状况等其他因素也会影响其未来走势。因此，在没有更多详细信息的情况下，对这只股票的推荐质量评价为中等偏下。",
+        "source": "ollama_heavy"
+      },
+      "rule_engine_validation": {
+        "score": 100,
+        "rating": "优秀",
+        "issues": [],
+        "feedback": "通过所有规则检查",
+        "signals": [
+          "MA多头排列",
+          "MACD金叉"
+        ]
+      },
+      "cross_validation_score": 32,
+      "signals": [
+        "MA多头排列",
+        "MACD金叉"
+      ],
+      "recommend_price": 35.5,
+      "audit_time": "2026-07-13T19:54:05.808081"
+    }
+  }
+}

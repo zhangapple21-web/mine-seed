@@ -80,11 +80,53 @@ def notify_ntfy(message):
         pass
 
 
+def notify_tg(report_file: Path):
+    """推送荐股报告到 Telegram"""
+    try:
+        tg_push_path = WORKSPACE / "05_TOOLS" / "miner" / "tg_push.py"
+        if not tg_push_path.exists():
+            print("[TG] tg_push.py not found")
+            return False
+
+        tg_mod = import_module(tg_push_path)
+
+        # 读取报告内容
+        if not report_file.exists():
+            return False
+
+        report_text = report_file.read_text(encoding="utf-8")
+
+        # 提取摘要（前2000字符，TG限制4096）
+        summary = report_text[:3000]
+        if len(report_text) > 3000:
+            summary += "\n\n... (报告过长，完整内容请查看文件)"
+
+        # 发送消息
+        chat_id = tg_mod.DEFAULT_CHAT_ID
+        if not chat_id:
+            # 尝试从 updates 获取
+            chat_id = tg_mod.get_updates()
+
+        if chat_id:
+            result = tg_mod.send_message(chat_id, summary)
+            if result and result.get("ok"):
+                print(f"[TG] Report sent to {chat_id}")
+                return True
+            else:
+                print(f"[TG] Send failed: {result}")
+        else:
+            print("[TG] No chat_id available")
+    except Exception as e:
+        print(f"[TG] Error: {e}")
+    return False
+
+
 def main():
     parser = argparse.ArgumentParser(description="Stock Advisor Worker")
     parser.add_argument("--date", help="Date (YYYYMMDD)")
     parser.add_argument("--push", action="store_true", help="Push to Git")
     parser.add_argument("--notify", action="store_true", help="ntfy.sh notification")
+    parser.add_argument("--tg", action="store_true", help="Telegram push")
     parser.add_argument("--force", action="store_true", help="Overwrite existing report")
     args = parser.parse_args()
 
@@ -105,6 +147,12 @@ def main():
 
     if args.notify:
         notify_ntfy(f"Stock Advisor: {result.get('status')} {result.get('output', '')}")
+
+    if args.tg and result.get("status") in ("ok", "warning"):
+        # 优先使用 cloud 目录的报告，否则使用 mine_output
+        if not output_file.exists():
+            output_file = WORKSPACE / "mine_output" / "advisor" / f"advisor_{date_str}.md"
+        notify_tg(output_file)
 
 
 if __name__ == "__main__":

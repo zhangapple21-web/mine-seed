@@ -25,5 +25,230 @@
     "status": "proposed",
     "created_at": "2026-07-11T14:28:37.163418",
     "evidence": []
+  },
+  {
+    "hid": "H-004",
+    "qid": "Q-016",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.8,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:34:54.580325",
+    "evidence": []
+  },
+  {
+    "hid": "H-005",
+    "qid": "Q-017",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:34:54.585842",
+    "evidence": []
+  },
+  {
+    "hid": "H-006",
+    "qid": "Q-020",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.8,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:45:02.117860",
+    "evidence": []
+  },
+  {
+    "hid": "H-007",
+    "qid": "Q-021",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:45:02.122928",
+    "evidence": []
+  },
+  {
+    "hid": "H-008",
+    "qid": "Q-022",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.8,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:57:41.287473",
+    "evidence": []
+  },
+  {
+    "hid": "H-009",
+    "qid": "Q-023",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-12T19:57:41.293492",
+    "evidence": []
+  },
+  {
+    "hid": "H-010",
+    "qid": "Q-024",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.8,
+    "status": "proposed",
+    "created_at": "2026-07-12T20:12:06.035260",
+    "evidence": []
+  },
+  {
+    "hid": "H-011",
+    "qid": "Q-025",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-12T20:12:06.042376",
+    "evidence": []
+  },
+  {
+    "hid": "H-012",
+    "qid": "Q-026",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.8,
+    "status": "proposed",
+    "created_at": "2026-07-12T20:25:52.090576",
+    "evidence": []
+  },
+  {
+    "hid": "H-013",
+    "qid": "Q-027",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-12T20:25:52.098466",
+    "evidence": []
+  },
+  {
+    "hid": "H-014",
+    "qid": "Q-030",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T10:50:49.789508",
+    "evidence": []
+  },
+  {
+    "hid": "H-015",
+    "qid": "Q-031",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T11:07:51.721510",
+    "evidence": []
+  },
+  {
+    "hid": "H-016",
+    "qid": "Q-032",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T11:27:48.876765",
+    "evidence": []
+  },
+  {
+    "hid": "H-017",
+    "qid": "Q-033",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T11:37:23.645206",
+    "evidence": []
+  },
+  {
+    "hid": "H-018",
+    "qid": "Q-034",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T11:53:38.305433",
+    "evidence": []
+  },
+  {
+    "hid": "H-019",
+    "qid": "Q-035",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T12:08:01.734453",
+    "evidence": []
+  },
+  {
+    "hid": "H-020",
+    "qid": "Q-036",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T12:22:59.801916",
+    "evidence": []
+  },
+  {
+    "hid": "H-021",
+    "qid": "Q-037",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T12:43:15.345242",
+    "evidence": []
+  },
+  {
+    "hid": "H-022",
+    "qid": "Q-038",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T12:57:18.829364",
+    "evidence": []
+  },
+  {
+    "hid": "H-023",
+    "qid": "Q-039",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T13:12:16.567792",
+    "evidence": []
+  },
+  {
+    "hid": "H-024",
+    "qid": "Q-040",
+    "hypothesis": "检查 API Key 配置; 切换备用凭证",
+    "confidence": 0.6,
+    "status": "debated_rejected",
+    "created_at": "2026-07-13T13:12:16.576835",
+    "evidence": []
+  },
+  {
+    "hid": "H-025",
+    "qid": "Q-041",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T13:26:38.022623",
+    "evidence": []
+  },
+  {
+    "hid": "H-026",
+    "qid": "Q-042",
+    "hypothesis": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+    "confidence": 0.7,
+    "status": "proposed",
+    "created_at": "2026-07-13T13:40:56.913385",
+    "evidence": []
+  },
+  {
+    "hid": "H-027",
+    "qid": "Q-043",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T13:40:56.922072",
+    "evidence": []
+  },
+  {
+    "hid": "H-028",
+    "qid": "Q-044",
+    "hypothesis": "沉淀为知识; 关联到相关概念",
+    "confidence": 0.9,
+    "status": "proposed",
+    "created_at": "2026-07-13T13:55:32.354624",
+    "evidence": []
   }
 ]

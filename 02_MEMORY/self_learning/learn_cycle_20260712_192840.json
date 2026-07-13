@@ -1,0 +1,96 @@
+{
+  "cycle_id": "learn_cycle_20260712_192840",
+  "started_at": "2026-07-12T19:28:40.787213",
+  "completed_at": "2026-07-12T19:28:40.790483",
+  "duration_seconds": 0.00327,
+  "metrics": {
+    "total_experiences": 5,
+    "failure_count": 1,
+    "success_count": 4,
+    "unknown_count": 0,
+    "success_ratio": 0.8,
+    "failure_ratio": 0.2,
+    "daily_distribution": {
+      "2026-07-10": 1,
+      "2026-07-11": 4
+    },
+    "learning_days": 2
+  },
+  "patterns": {
+    "failure_patterns_detected": 0,
+    "success_patterns_detected": 1,
+    "failure_patterns": [],
+    "success_patterns": [
+      {
+        "pattern_id": "fallback_chain_works",
+        "name": "降级链路生效",
+        "value": "high",
+        "occurrences": 3,
+        "recent_examples": [
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_ollama_20260711T190940.json",
+            "hit_keywords": 2,
+            "title": ""
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_github_20260711T155631.json",
+            "hit_keywords": 2,
+            "title": ""
+          },
+          {
+            "exp_id": "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_20260711T230000_archaeology_distillation.json",
+            "hit_keywords": 1,
+            "title": "R1 ExperienceEngine + Constraint Proposer 考古蒸馏"
+          }
+        ],
+        "reinforce": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ]
+      }
+    ]
+  },
+  "hypotheses": {
+    "total_generated": 1,
+    "from_failures": 0,
+    "from_successes": 1,
+    "ranked": [
+      {
+        "id": "hypo_reinforce_fallback_chain_works_20260712192840",
+        "source": "success_pattern",
+        "pattern": "fallback_chain_works",
+        "title": "强化：降级链路生效",
+        "description": "检测到 3 次「降级链路生效」成功模式，建议强化",
+        "value": "high",
+        "confidence": 0.8,
+        "reinforce_actions": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ],
+        "risk_level": "low",
+        "experiment_type": "reinforcement",
+        "created_at": "2026-07-12T19:28:40.790483",
+        "status": "proposed",
+        "priority": 1
+      }
+    ]
+  },
+  "experiments": {
+    "auto_executed": 0,
+    "recommended": 1,
+    "details": [
+      {
+        "hypothesis_id": "hypo_reinforce_fallback_chain_works_20260712192840",
+        "title": "强化：降级链路生效",
+        "auto_executed": false,
+        "reason": "safe_mode: 当前为安全模式，只生成建议不自动执行",
+        "actions_proposed": [
+          "保持降级链路配置",
+          "扩展更多 Provider 的 fallback"
+        ],
+        "timestamp": "2026-07-12T19:28:40.790483",
+        "status": "recommended"
+      }
+    ]
+  }
+}
