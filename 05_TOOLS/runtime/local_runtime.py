@@ -7,7 +7,7 @@ ACE Runtime — 本地 Living OS
   2. 从 GitHub 拉取云端 Worker 产出
   3. 推送到 Telegram Bot
   4. 归档到本地记忆
-  5. 监听用户消息（可选）
+  5. 兜底荐股（工作日9点后，如果云端没生成报告就本地补跑）
 
 运行环境：Windows 本地（或任何能连 TG API 的环境）
 
@@ -31,19 +31,16 @@ from pathlib import Path
 # 配置
 # ============================================================
 
-# GitHub 仓库（本地 clone 路径）
 REPO_DIR = Path(os.environ.get("MINE_SEED", Path.home() / "mine-seed"))
 CLOUD_DIR = REPO_DIR / "cloud" / "advisor"
 PUSHED_LOG = REPO_DIR / "02_MEMORY" / "runtime_pushed.json"
 
-# Telegram Bot
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8384310757:AAEhfTTMaYrV_n9hXFjBUMh2LdeeWkB-Czo")
+# Telegram Bot — 从环境变量读取，不硬编码
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 TG_CHAT_ID = os.environ.get("TG_CHAT_ID", "")
 
-# 心跳间隔（秒）
 HEARTBEAT = int(os.environ.get("RUNTIME_HEARTBEAT", "60"))
 
-# 日志
 LOG_DIR = REPO_DIR / "02_MEMORY" / "runtime_logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -75,7 +72,6 @@ signal.signal(signal.SIGINT, signal_handler)
 # ============================================================
 
 def git_pull() -> bool:
-    """从 GitHub 拉取最新代码"""
     try:
         result = subprocess.run(
             ["git", "pull", "origin", "main"],
@@ -102,7 +98,6 @@ def git_pull() -> bool:
 # ============================================================
 
 def load_pushed() -> set:
-    """加载已推送的文件列表"""
     if PUSHED_LOG.exists():
         try:
             with open(PUSHED_LOG) as f:
@@ -114,16 +109,16 @@ def load_pushed() -> set:
 
 
 def save_pushed(pushed: set):
-    """保存已推送的文件列表"""
     PUSHED_LOG.parent.mkdir(parents=True, exist_ok=True)
     with open(PUSHED_LOG, "w") as f:
         json.dump({"advisor": sorted(pushed)}, f, ensure_ascii=False, indent=2)
 
 
 def send_tg_message(text: str) -> bool:
-    """发送 TG 文本消息"""
     import urllib.request
-    
+    if not TG_BOT_TOKEN:
+        log.error("[TG] TG_BOT_TOKEN not set")
+        return False
     url = f"https://api.telegram.org/bot{TG_BOT_TOKEN}/sendMessage"
     data = {
         "chat_id": TG_CHAT_ID,
@@ -131,7 +126,6 @@ def send_tg_message(text: str) -> bool:
         "parse_mode": "Markdown",
         "disable_web_page_preview": True,
     }
-    
     try:
         req = urllib.request.Request(
             url,
@@ -153,39 +147,34 @@ def send_tg_message(text: str) -> bool:
 
 
 def send_tg_file(file_path: Path, caption: str = "") -> bool:
-    """发送 TG 文件"""
     import urllib.request
-    
+    if not TG_BOT_TOKEN:
+        log.error("[TG] TG_BOT_TOKEN not set")
+        return False
     url = f"https://api.telegram.org/bot{TG_BOT_TOKEN}/sendDocument"
     boundary = "----WebKitFormBoundary"
-    
     try:
         body = []
         body.append(f"--{boundary}\r\n".encode())
         body.append(f'Content-Disposition: form-data; name="chat_id"\r\n\r\n'.encode())
         body.append(f"{TG_CHAT_ID}\r\n".encode())
-        
         if caption:
             body.append(f"--{boundary}\r\n".encode())
             body.append(f'Content-Disposition: form-data; name="caption"\r\n\r\n'.encode())
             body.append(f"{caption}\r\n".encode())
-        
         with open(file_path, "rb") as f:
             file_data = f.read()
-        
         body.append(f"--{boundary}\r\n".encode())
         body.append(f'Content-Disposition: form-data; name="document"; filename="{file_path.name}"\r\n'.encode())
         body.append(b"Content-Type: text/markdown\r\n\r\n")
         body.append(file_data)
         body.append(f"\r\n--{boundary}--\r\n".encode())
-        
         req = urllib.request.Request(
             url,
             data=b"".join(body),
             headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
             method="POST"
         )
-        
         with urllib.request.urlopen(req, timeout=30) as resp:
             result = json.loads(resp.read())
             if result.get("ok"):
@@ -200,48 +189,33 @@ def send_tg_file(file_path: Path, caption: str = "") -> bool:
 
 
 def push_advisor_report(report_path: Path) -> bool:
-    """推送 Stock Advisor 报告到 TG"""
     if not report_path.exists():
         log.warning(f"[PUSH] Report not found: {report_path}")
         return False
-    
     if not TG_CHAT_ID:
         log.error("[PUSH] TG_CHAT_ID not set")
         return False
-    
     with open(report_path, "r", encoding="utf-8") as f:
         report = f.read()
-    
     today = datetime.now().strftime("%Y-%m-%d")
-    
-    # 提取 TOP2
     top_lines = []
     for line in report.split("\n"):
         if any(k in line for k in ["TOP", "推荐", "🎯", "⭐", "**"]):
             top_lines.append(line.strip())
-    
-    # 构造摘要消息
     summary = f"📊 *A股每日荐股* — {today}\n\n"
     if top_lines:
         summary += "🎯 *今日推荐:*\n"
         for line in top_lines[:3]:
-            # 转义 Markdown
             line = line.replace("*", "").replace("_", "")
             summary += f"  {line}\n"
     else:
         summary += report[:400] + "...\n"
-    
     summary += f"\n📄 完整报告见附件"
-    
-    # 发送摘要
     if not send_tg_message(summary):
         return False
-    
-    # 发送文件
     time.sleep(1)
     if not send_tg_file(report_path, caption=f"Stock Advisor Report - {today}"):
         return False
-    
     log.info(f"[PUSH] Report pushed: {report_path.name}")
     return True
 
@@ -251,16 +225,129 @@ def push_advisor_report(report_path: Path) -> bool:
 # ============================================================
 
 def check_new_advisor_reports(pushed: set) -> list:
-    """检查 cloud/advisor/ 目录是否有新报告"""
     if not CLOUD_DIR.exists():
         return []
-    
     new_reports = []
     for f in sorted(CLOUD_DIR.glob("advisor_*.md")):
         if f.name not in pushed:
             new_reports.append(f)
-    
     return new_reports
+
+
+# ============================================================
+# 兜底荐股
+# ============================================================
+
+def check_advisor_fallback():
+    """兜底荐股：工作日9点后，如果云端没生成报告就本地补跑。
+    
+    双层保险：
+    - 云端 cron 8:15 生成（主力）
+    - 本地 Runtime 9:00+ 检查，缺了就补（兜底）
+    """
+    now = datetime.now()
+    today = now.strftime("%Y%m%d")
+    today_dash = now.strftime("%Y-%m-%d")
+    
+    if now.weekday() >= 5:
+        return
+    if now.hour < 9:
+        return
+    
+    today_report = CLOUD_DIR / f"advisor_{today}.md"
+    if today_report.exists():
+        return
+    
+    fallback_flag = REPO_DIR / "02_MEMORY" / f".advisor_fallback_{today}"
+    if fallback_flag.exists():
+        return
+    
+    log.warning(f"[FALLBACK] 今日荐股报告缺失，本地兜底补跑...")
+    
+    fallback_flag.parent.mkdir(parents=True, exist_ok=True)
+    fallback_flag.write_text(now.isoformat())
+    
+    advisor_script = REPO_DIR / "05_TOOLS" / "advisor" / "stock_advisor.py"
+    advisor_env = REPO_DIR / "05_TOOLS" / "miner" / "free_api.env"
+    
+    if not advisor_script.exists():
+        log.error(f"[FALLBACK] stock_advisor.py not found: {advisor_script}")
+        return
+    
+    try:
+        env = os.environ.copy()
+        if advisor_env.exists():
+            with open(advisor_env) as f:
+                for line in f:
+                    line = line.strip()
+                    if line.startswith("export "):
+                        parts = line[7:].split("=", 1)
+                        if len(parts) == 2:
+                            val = parts[1].strip().strip('"').strip("'")
+                            env[parts[0]] = val
+        
+        env["ONE_API_URL"] = ""
+        env["FREE_LLM_MODE"] = "1"
+        
+        result = subprocess.run(
+            [sys.executable, str(advisor_script)],
+            cwd=str(advisor_script.parent),
+            env=env,
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode == 0:
+            advisor_out = REPO_DIR / "05_TOOLS" / "mine_output" / "advisor"
+            latest = None
+            if advisor_out.exists():
+                reports = sorted(advisor_out.glob("advisor_*.md"), key=lambda f: f.stat().st_mtime, reverse=True)
+                for r in reports:
+                    if today in r.name or today_dash in r.name:
+                        latest = r
+                        break
+                if not latest and reports:
+                    latest = reports[0]
+            
+            if latest and latest.exists():
+                CLOUD_DIR.mkdir(parents=True, exist_ok=True)
+                dest = CLOUD_DIR / f"advisor_{today}.md"
+                import shutil
+                shutil.copy(latest, dest)
+                log.info(f"[FALLBACK] 兜底荐股成功: {dest}")
+                push_advisor_report(dest)
+            else:
+                log.warning("[FALLBACK] stock_advisor.py 执行完但未找到报告文件")
+        else:
+            log.error(f"[FALLBACK] stock_advisor.py 失败: {result.stderr[:200]}")
+            
+            log.warning("[FALLBACK] 启动终极降级：free_llm 直接生成")
+            try:
+                sys.path.insert(0, str(REPO_DIR / "05_TOOLS" / "miner"))
+                from free_llm import call
+                
+                result_llm = call(
+                    f"你是A股市场分析师。生成今日({today_dash})的简短荐股报告，推荐2只股票，包含股票代码、名称、推荐理由。格式：Markdown。",
+                    system="你是专业的A股投资顾问。",
+                    max_tokens=1000,
+                    prefer="glm"
+                )
+                
+                report = f"# A股每日荐股 — {today_dash}\n\n{result_llm['content']}\n\n---\n渠道: {result_llm['channel']}/{result_llm['model']} | 耗时: {result_llm['elapsed']:.1f}s | 本地兜底\n"
+                
+                CLOUD_DIR.mkdir(parents=True, exist_ok=True)
+                dest = CLOUD_DIR / f"advisor_{today}.md"
+                dest.write_text(report, encoding="utf-8")
+                log.info(f"[FALLBACK] 终极降级成功: {dest}")
+                push_advisor_report(dest)
+            except Exception as e:
+                log.error(f"[FALLBACK] 终极降级也失败: {e}")
+                
+    except subprocess.TimeoutExpired:
+        log.error("[FALLBACK] stock_advisor.py 超时(120s)")
+    except Exception as e:
+        log.error(f"[FALLBACK] 错误: {e}")
 
 
 # ============================================================
@@ -272,6 +359,9 @@ def run_once():
     log.info("=" * 50)
     log.info("[LOOP] ACE Runtime — Local Living OS")
     log.info("=" * 50)
+    
+    # 0. 兜底荐股检查（工作日 9 点后，如果云端没生成报告就补跑）
+    check_advisor_fallback()
     
     # 1. 拉取 GitHub
     changed = git_pull()
@@ -290,21 +380,19 @@ def run_once():
                 log.info(f"[LOOP] Pushed: {report.name}")
             else:
                 log.error(f"[LOOP] Push failed: {report.name}")
-                break  # 失败就停一轮，下次重试
+                break
     else:
         if changed:
             log.info("[LOOP] Repository changed, no new advisor reports")
         else:
             log.info("[LOOP] No changes")
     
-    # 3. 归档日志
     log.info("[LOOP] Cycle complete")
 
 
 def test_tg():
     """测试 TG 连接"""
     log.info("[TEST] Testing Telegram Bot connection...")
-    
     if not TG_CHAT_ID:
         log.error("[TEST] TG_CHAT_ID not set. Please set it first.")
         log.info("[TEST] How to get chat_id:")
@@ -312,8 +400,6 @@ def test_tg():
         log.info("  2. Visit: https://api.telegram.org/bot<TOKEN>/getUpdates")
         log.info("  3. Find 'chat' -> 'id'")
         return False
-    
-    # 发送测试消息
     test_msg = "🤖 ACE Runtime — Local Living OS 已连接\n\n推票系统就绪。"
     if send_tg_message(test_msg):
         log.info("[TEST] TG connection OK")
@@ -338,16 +424,12 @@ def run_loop():
             log.error(f"[LOOP] Error: {e}")
             import traceback
             traceback.print_exc()
-        
         if not _alive:
             break
-        
-        # 分段睡眠
         for _ in range(HEARTBEAT):
             if not _alive:
                 break
             time.sleep(1)
-    
     log.info("[LOOP] ACE Runtime stopped.")
 
 
