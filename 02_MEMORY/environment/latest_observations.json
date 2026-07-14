@@ -9,7 +9,7 @@
       "latency_ms": 0
     },
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-13T20:06:26.795495"
+    "timestamp": "2026-07-14T11:20:54.586234"
   },
   {
     "source": "provider",
@@ -20,6 +20,6 @@
       "version": "1.18.64"
     },
     "capability_ref": "stock_data",
-    "timestamp": "2026-07-13T20:06:30.193717"
+    "timestamp": "2026-07-14T11:20:57.335389"
   }
 ]

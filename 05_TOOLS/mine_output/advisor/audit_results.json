@@ -171,5 +171,92 @@
       "recommend_price": 35.5,
       "audit_time": "2026-07-13T19:54:05.808081"
     }
+  },
+  "20260714_601857": {
+    "audit_id": "20260714_601857",
+    "recommend_date": "20260714",
+    "code": "601857",
+    "name": "中国石油",
+    "recommend_price": 9.8,
+    "audit_time": "2026-07-14T09:31:24.995964",
+    "miner_score": 3,
+    "miner_feedback": "根据提供的技术信号分析，中国石油的MA多头排列和站稳中轨表明短期内有上升趋势。同时，短期动量为正向也支持这一观点。然而，仅凭这些技术指标并不能全面评估一只股票的质量，还需要考虑其他因素如公司的基本面、行业前景等。因此，给这只A股推荐一个中等的评分。",
+    "rule_engine_score": 100,
+    "rule_engine_feedback": "通过所有规则检查",
+    "cross_validation_score": 32,
+    "overall_score": 45,
+    "overall_rating": "C",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 3,
+        "feedback": "根据提供的技术信号分析，中国石油的MA多头排列和站稳中轨表明短期内有上升趋势。同时，短期动量为正向也支持这一观点。然而，仅凭这些技术指标并不能全面评估一只股票的质量，还需要考虑其他因素如公司的基本面、行业前景等。因此，给这只A股推荐一个中等的评分。",
+        "source": "ollama_heavy"
+      },
+      "rule_engine_validation": {
+        "score": 100,
+        "rating": "优秀",
+        "issues": [],
+        "feedback": "通过所有规则检查",
+        "signals": [
+          "MA多头排列",
+          "站稳中轨",
+          "短期动量正向"
+        ]
+      },
+      "cross_validation_score": 32,
+      "signals": [
+        "MA多头排列",
+        "站稳中轨",
+        "短期动量正向"
+      ],
+      "recommend_price": 9.8,
+      "audit_time": "2026-07-14T09:31:24.995964"
+    }
+  },
+  "20260714_688981": {
+    "audit_id": "20260714_688981",
+    "recommend_date": "20260714",
+    "code": "688981",
+    "name": "中芯国际",
+    "recommend_price": 165.66,
+    "audit_time": "2026-07-14T09:34:02.846850",
+    "miner_score": 8,
+    "miner_feedback": "根据提供的技术信号分析，中芯国际的股价目前处于多头排列状态，并且站稳了中轨，RSI指标也位于健康区间内。此外，短期动量指标显示为正向，这些都表明该股票当前的技术面表现良好。然而，仅凭这些技术信号无法全面评估一只股票的投资价值，还需要结合公司的基本面、行业环境以及市场预期等因素进行综合考量。因此，给出8/10的评分，表示这是一个值得进一步研究和考虑的投资机会。",
+    "rule_engine_score": 90,
+    "rule_engine_feedback": "成交量偏低 (8,753,092); 近期波动较大 (13.7%)",
+    "cross_validation_score": 29,
+    "overall_score": 42,
+    "overall_rating": "C",
+    "evidence": {
+      "miner_evaluation": {
+        "score": 8,
+        "feedback": "根据提供的技术信号分析，中芯国际的股价目前处于多头排列状态，并且站稳了中轨，RSI指标也位于健康区间内。此外，短期动量指标显示为正向，这些都表明该股票当前的技术面表现良好。然而，仅凭这些技术信号无法全面评估一只股票的投资价值，还需要结合公司的基本面、行业环境以及市场预期等因素进行综合考量。因此，给出8/10的评分，表示这是一个值得进一步研究和考虑的投资机会。",
+        "source": "ollama_heavy"
+      },
+      "rule_engine_validation": {
+        "score": 90,
+        "rating": "优秀",
+        "issues": [
+          "成交量偏低 (8,753,092)",
+          "近期波动较大 (13.7%)"
+        ],
+        "feedback": "成交量偏低 (8,753,092); 近期波动较大 (13.7%)",
+        "signals": [
+          "MA多头排列",
+          "站稳中轨",
+          "RSI健康区间",
+          "短期动量正向"
+        ]
+      },
+      "cross_validation_score": 29,
+      "signals": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "recommend_price": 165.66,
+      "audit_time": "2026-07-14T09:34:02.846850"
+    }
   }
 }

@@ -552,6 +552,16 @@ def beat(log):
         report["steps"]["advisor_review"] = {"status": "error", "error": str(e)}
         log.error(f"Advisor review error: {e}")
 
+    # Auto Trigger Stock Advisor — 开机后自动触发荐股（9:20-11:30 之间且今日未运行）
+    try:
+        trigger_result = _auto_trigger_stock_advisor(log)
+        report["steps"]["auto_trigger_advisor"] = trigger_result
+        if trigger_result.get("status") == "triggered":
+            log.info(f"Auto-triggered stock advisor: {trigger_result}")
+    except Exception as e:
+        report["steps"]["auto_trigger_advisor"] = {"status": "error", "error": str(e)}
+        log.error(f"Auto-trigger advisor error: {e}")
+
     # Civilization Audit — 每周一次（周一运行）
     try:
         today = datetime.now()
@@ -959,6 +969,72 @@ def _run_advisor_review(log) -> dict:
         }
     except Exception as e:
         log.error(f"Advisor review error: {e}")
+        return {"status": "error", "error": str(e)}
+
+
+def _auto_trigger_stock_advisor(log) -> dict:
+    """自动触发荐股引擎（开机后补偿调度）
+
+    基于状态的补偿调度：维护"当日是否已运行"的标记，
+    在交易时间窗口内（9:20-11:30）检查是否需要补执行。
+
+    解决问题：用户9:00才开机，定时任务8:15已错过。
+    替代方案：heartbeat每15分钟检查一次，9:20-11:30之间如果今日未运行则自动触发。
+    """
+    from pathlib import Path
+    import subprocess
+
+    now = datetime.now()
+    today_str = now.strftime("%Y%m%d")
+
+    # 检查是否在交易时间窗口（9:20-11:30）
+    hour = now.hour
+    minute = now.minute
+    if not (9 <= hour <= 11):
+        return {"status": "skipped", "reason": "outside trading window (9:20-11:30)"}
+    if hour == 9 and minute < 20:
+        return {"status": "skipped", "reason": "before 9:20"}
+    if hour == 11 and minute > 30:
+        return {"status": "skipped", "reason": "after 11:30"}
+
+    # 检查是否是交易日（周一到周五）
+    if now.weekday() >= 5:
+        return {"status": "skipped", "reason": "weekend"}
+
+    # 检查今日是否已运行
+    advisor_dir = WORKSPACE / "05_TOOLS" / "mine_output" / "advisor"
+    report_path = advisor_dir / f"advisor_{today_str}.md"
+    if report_path.exists():
+        return {"status": "skipped", "reason": "already ran today"}
+
+    # 检查 runner_status 是否标记今日已运行
+    status_file = advisor_dir / "runner_status.json"
+    if status_file.exists():
+        try:
+            status = json.loads(status_file.read_text(encoding="utf-8"))
+            last_run = status.get("last_run_time", "")
+            if last_run.startswith(today_str[:8]):
+                return {"status": "skipped", "reason": "runner status shows today's run"}
+        except Exception:
+            pass
+
+    # 触发荐股引擎
+    log.info(f"Auto-triggering stock advisor at {now.strftime('%H:%M')}...")
+    daily_runner = WORKSPACE / "05_TOOLS" / "advisor" / "daily_runner.py"
+
+    try:
+        result = subprocess.run(
+            [sys.executable, str(daily_runner)],
+            capture_output=True, text=True, timeout=300
+        )
+        if result.returncode == 0:
+            log.info("Stock advisor auto-trigger succeeded")
+            return {"status": "triggered", "exit_code": 0}
+        else:
+            log.error(f"Stock advisor auto-trigger failed: {result.stderr[:200]}")
+            return {"status": "failed", "exit_code": result.returncode, "error": result.stderr[:200]}
+    except Exception as e:
+        log.error(f"Stock advisor auto-trigger exception: {e}")
         return {"status": "error", "error": str(e)}
 
 

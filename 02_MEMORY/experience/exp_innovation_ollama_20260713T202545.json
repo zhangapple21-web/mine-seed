@@ -1,0 +1,12 @@
+{
+  "type": "innovation_pattern",
+  "provider": "ollama",
+  "capability": "reasoning",
+  "prev_rate": 1.0,
+  "new_rate": 0.667,
+  "delta": -0.333,
+  "direction": "degradation",
+  "total_calls": 3,
+  "timestamp": "2026-07-13T20:25:45.529115",
+  "analysis": "Provider 'ollama' 成功率从 100% 突变到 67%（degradation）。这可能意味着模型升级、数据源变化或 API 配额调整。建议：生成 Question 调查原因。"
+}

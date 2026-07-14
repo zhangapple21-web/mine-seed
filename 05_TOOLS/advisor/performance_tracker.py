@@ -372,17 +372,30 @@ class PerformanceTracker:
             for r in sorted_records
         ]
     
-    def get_factor_effectiveness(self) -> Dict[str, Any]:
+    def get_factor_effectiveness(self, period: str = "T+5") -> Dict[str, Any]:
         """
         分析各因子的有效性（需要配合 trace 数据）
         返回各信号的成功率统计
+        
+        Args:
+            period: 统计周期，支持 "T+1" / "T+5"
+        
+        Returns:
+            Dict[factor, {count, win_rate, avg_return}]
+        
+        P0 修复：支持 T+1 数据，打破"没有T+5→没有调整→没有T+5"的死循环
         """
+        # 确定使用哪个收益字段
+        return_field = "return_t1" if period == "T+1" else "return_t5"
+        
         # 读取 trace 文件，关联表现数据
         trace_dir = LOG_DIR
         factor_stats = {}
         
         for key, rec in self.records.items():
-            if rec.return_t5 is None:
+            # 使用指定的收益字段
+            ret_value = getattr(rec, return_field, None)
+            if ret_value is None:
                 continue
             
             trace_file = trace_dir / f"advisor_{rec.recommend_date}_trace.json"
@@ -399,16 +412,17 @@ class PerformanceTracker:
                             if factor not in factor_stats:
                                 factor_stats[factor] = {"count": 0, "wins": 0, "total_return": 0}
                             factor_stats[factor]["count"] += 1
-                            if rec.return_t5 > 0:
+                            if ret_value > 0:
                                 factor_stats[factor]["wins"] += 1
-                            factor_stats[factor]["total_return"] += rec.return_t5
+                            factor_stats[factor]["total_return"] += ret_value
             except Exception:
                 continue
         
-        # 计算成功率
+        # 计算成功率（降低样本阈值到2，让调整更早启动）
         result = {}
+        min_samples = 2 if period == "T+1" else 3  # T+1 样本更容易获得，阈值降低
         for factor, stats in factor_stats.items():
-            if stats["count"] >= 3:  # 至少3个样本
+            if stats["count"] >= min_samples:
                 result[factor] = {
                     "count": stats["count"],
                     "win_rate": round(stats["wins"] / stats["count"] * 100, 1),

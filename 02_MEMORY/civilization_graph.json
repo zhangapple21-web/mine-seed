@@ -725,7 +725,7 @@
       "type": "question",
       "label": "[自学习] 检测到 20 次「新发现」成功模式，建议强化",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P2",
         "source": "self_learning",
         "created_at": "2026-07-13T12:43:15.342227"
@@ -745,7 +745,7 @@
       "type": "question",
       "label": "[自学习] 检测到 21 次「新发现」成功模式，建议强化",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P2",
         "source": "self_learning",
         "created_at": "2026-07-13T12:57:18.825381"
@@ -765,7 +765,7 @@
       "type": "question",
       "label": "[自学习] 检测到 22 次「新发现」成功模式，建议强化",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P2",
         "source": "self_learning",
         "created_at": "2026-07-13T13:12:16.563236"
@@ -785,7 +785,7 @@
       "type": "question",
       "label": "[自学习] 检测到 1 次「Provider 认证失败」模式，建议采取改进措施",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P1",
         "source": "self_learning",
         "created_at": "2026-07-13T13:12:16.572297"
@@ -865,7 +865,7 @@
       "type": "question",
       "label": "[自学习] 检测到 25 次「新发现」成功模式，建议强化",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P2",
         "source": "self_learning",
         "created_at": "2026-07-13T13:55:32.349017"
@@ -885,7 +885,7 @@
       "type": "question",
       "label": "为什么我们应该立即关注文件 'M 00_ROOT/PRINCIPLES.md' 的修改？",
       "properties": {
-        "status": "open",
+        "status": "answered",
         "priority": "P1",
         "source": "question_engine",
         "created_at": "2026-07-13T14:14:16.386544"
@@ -909,6 +909,26 @@
         "priority": "P1",
         "source": "question_engine",
         "created_at": "2026-07-13T14:14:16.398592"
+      },
+      "coords": {
+        "reality": 0.6,
+        "knowledge": 0.8,
+        "memory": 0.7,
+        "generation": 0.5,
+        "execution": 0.3,
+        "experience": 0.5
+      },
+      "civilization_score": 0.58
+    },
+    {
+      "id": "Q-047",
+      "type": "question",
+      "label": "[自学习] 检测到 1 次「降级链路生效」成功模式，建议强化",
+      "properties": {
+        "status": "open",
+        "priority": "P2",
+        "source": "self_learning",
+        "created_at": "2026-07-13T20:25:55.161677"
       },
       "coords": {
         "reality": 0.6,
@@ -1453,6 +1473,25 @@
       "civilization_score": 0.485
     },
     {
+      "id": "H-029",
+      "type": "hypothesis",
+      "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+      "properties": {
+        "qid": "Q-047",
+        "confidence": 0.6,
+        "status": "proposed"
+      },
+      "coords": {
+        "reality": 0.4,
+        "knowledge": 0.7,
+        "memory": 0.5,
+        "generation": 0.8,
+        "execution": 0.2,
+        "experience": 0.3
+      },
+      "civilization_score": 0.485
+    },
+    {
       "id": "EXP-001",
       "type": "experiment",
       "label": "权限设置错误验证",
@@ -1783,6 +1822,114 @@
       "label": "立即分析新增的32个未跟踪文件的内容和重要性，并评估它们对当前系统的潜在影响。确认是否需进一步研究并制定相应应对措施。",
       "properties": {
         "qid": "Q-029",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-019",
+      "type": "decision",
+      "label": "加强新发现模式的监控与分析，并开展专项培训。同时收集更多相关数据以优化强化策略。",
+      "properties": {
+        "qid": "Q-037",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-020",
+      "type": "decision",
+      "label": "根据 Scout 和 Researcher 的建议，开始强化新发现模式的训练、设立专项奖励机制和加强与其他部门的合作。同",
+      "properties": {
+        "qid": "Q-038",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-021",
+      "type": "decision",
+      "label": "增加资源投入并组建专家团队来增强新发现模式的识别与分析能力；加强对现有系统的监控；收集用户反馈和建议。在系统性能优化完成",
+      "properties": {
+        "qid": "Q-039",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-022",
+      "type": "decision",
+      "label": "立即执行优化认证算法并增加故障检测频率的改进措施",
+      "properties": {
+        "qid": "Q-040",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-023",
+      "type": "decision",
+      "label": "执行相关分析、组织内部研讨会及小规模试点项目。",
+      "properties": {
+        "qid": "Q-044",
+        "outcome": "approved"
+      },
+      "coords": {
+        "reality": 0.5,
+        "knowledge": 0.7,
+        "memory": 0.6,
+        "generation": 0.4,
+        "execution": 0.8,
+        "experience": 0.8
+      },
+      "civilization_score": 0.61
+    },
+    {
+      "id": "D-024",
+      "type": "decision",
+      "label": "执行 Scout 提出的具体行动项：立即检查 'M 00_ROOT/PRINCIPLES.md' 的修改内容，并评估其对",
+      "properties": {
+        "qid": "Q-045",
         "outcome": "approved"
       },
       "coords": {
@@ -4528,9 +4675,9 @@
     {
       "id": "EXP_POOL",
       "type": "experience",
-      "label": "Experience Pool (130 entries)",
+      "label": "Experience Pool (146 entries)",
       "properties": {
-        "count": 130,
+        "count": 146,
         "dir_exists": true
       },
       "coords": {
@@ -5172,9 +5319,21 @@
       "properties": {}
     },
     {
+      "source": "Q-037",
+      "target": "D-019",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
       "source": "Q-038",
       "target": "H-022",
       "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-038",
+      "target": "D-020",
+      "type": "has_decision",
       "properties": {}
     },
     {
@@ -5184,9 +5343,21 @@
       "properties": {}
     },
     {
+      "source": "Q-039",
+      "target": "D-021",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
       "source": "Q-040",
       "target": "H-024",
       "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-040",
+      "target": "D-022",
+      "type": "has_decision",
       "properties": {}
     },
     {
@@ -5210,6 +5381,24 @@
     {
       "source": "Q-044",
       "target": "H-028",
+      "type": "has_hypothesis",
+      "properties": {}
+    },
+    {
+      "source": "Q-044",
+      "target": "D-023",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-045",
+      "target": "D-024",
+      "type": "has_decision",
+      "properties": {}
+    },
+    {
+      "source": "Q-047",
+      "target": "H-029",
       "type": "has_hypothesis",
       "properties": {}
     },
@@ -5779,14 +5968,14 @@
     }
   ],
   "stats": {
-    "total_nodes": 261,
-    "total_edges": 140,
-    "density_pct": 0.206,
+    "total_nodes": 269,
+    "total_edges": 147,
+    "density_pct": 0.204,
     "node_types": {
-      "question": 46,
-      "hypothesis": 28,
+      "question": 47,
+      "hypothesis": 29,
       "experiment": 1,
-      "decision": 18,
+      "decision": 24,
       "capability": 13,
       "provider": 11,
       "constraint": 18,
@@ -5797,8 +5986,8 @@
       "worker": 17
     },
     "edge_types": {
-      "has_hypothesis": 28,
-      "has_decision": 18,
+      "has_hypothesis": 29,
+      "has_decision": 24,
       "has_experiment": 1,
       "requires": 12,
       "provides": 55,
@@ -5867,13 +6056,13 @@
     },
     "avg_dimension_scores": {
       "reality": 0.488,
-      "knowledge": 0.726,
-      "memory": 0.618,
-      "generation": 0.456,
-      "execution": 0.539,
-      "experience": 0.576
+      "knowledge": 0.725,
+      "memory": 0.617,
+      "generation": 0.457,
+      "execution": 0.542,
+      "experience": 0.58
     },
-    "avg_civilization_score": 0.561,
+    "avg_civilization_score": 0.562,
     "top_score_nodes": [
       {
         "id": "EXP-001",

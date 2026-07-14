@@ -1,0 +1,132 @@
+{
+  "task_type": "factor_optimization",
+  "created_at": "2026-07-14T09:38:31.114704",
+  "trigger_reason": "consecutive_losses_or_low_winrate",
+  "current_performance": {
+    "period_days": 20,
+    "total_recommendations": 10,
+    "complete_records": 0,
+    "avg_returns": {
+      "T+1": -2.93,
+      "T+3": -0.79,
+      "T+5": null,
+      "T+10": null,
+      "T+20": null
+    },
+    "win_rates": {
+      "T+1": 12.5,
+      "T+3": 50.0,
+      "T+5": null,
+      "T+10": null,
+      "T+20": null
+    },
+    "best_performers": [
+      {
+        "date": "20260710",
+        "code": "601939",
+        "name": "建设银行",
+        "recommend_price": 10.03,
+        "return_t1": 1.5,
+        "return_t3": 1.5,
+        "return_t5": null
+      },
+      {
+        "date": "20260713",
+        "code": "600267",
+        "name": "海正药业",
+        "recommend_price": 11.42,
+        "return_t1": -0.7,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260713",
+        "code": "000063",
+        "name": "中兴通讯",
+        "recommend_price": 41.92,
+        "return_t1": -2.19,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260711",
+        "code": "688111",
+        "name": "金山办公",
+        "recommend_price": 233.76,
+        "return_t1": -3.08,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260710",
+        "code": "688111",
+        "name": "金山办公",
+        "recommend_price": 233.76,
+        "return_t1": -3.08,
+        "return_t3": -3.08,
+        "return_t5": null
+      }
+    ],
+    "worst_performers": [
+      {
+        "date": "20260711",
+        "code": "600362",
+        "name": "江西铜业",
+        "recommend_price": 42.89,
+        "return_t1": -6.74,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260713",
+        "code": "688126",
+        "name": "沪硅产业",
+        "recommend_price": 37.48,
+        "return_t1": -5.18,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260713",
+        "code": "000938",
+        "name": "紫光股份",
+        "recommend_price": 40.0,
+        "return_t1": -4.0,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260711",
+        "code": "688111",
+        "name": "金山办公",
+        "recommend_price": 233.76,
+        "return_t1": -3.08,
+        "return_t3": null,
+        "return_t5": null
+      },
+      {
+        "date": "20260710",
+        "code": "688111",
+        "name": "金山办公",
+        "recommend_price": 233.76,
+        "return_t1": -3.08,
+        "return_t3": -3.08,
+        "return_t5": null
+      }
+    ]
+  },
+  "factor_effectiveness": {},
+  "current_weights": {
+    "price_range": 15,
+    "change_moderate": 25,
+    "change_small": 10,
+    "turnover_healthy": 20,
+    "turnover_low_penalty": -5,
+    "cap_mid_large": 15,
+    "cap_small_penalty": -5,
+    "pe_reasonable": 15,
+    "pe_high_penalty": -5,
+    "liquidity_ok": 10
+  },
+  "suggested_actions": []
+}

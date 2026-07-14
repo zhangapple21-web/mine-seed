@@ -6,5 +6,27 @@
     "type": "RECOMMEND",
     "message": "测试推荐2只股票",
     "details": {}
+  },
+  {
+    "timestamp": "2026-07-14T09:34:02.968921",
+    "date": "20260714",
+    "time": "09:34:02",
+    "type": "RECOMMEND",
+    "message": "荐股引擎执行完成: 中国石油(601857), 中芯国际(688981)",
+    "details": {
+      "success": true,
+      "count": 2
+    }
+  },
+  {
+    "timestamp": "2026-07-14T09:38:31.115259",
+    "date": "20260714",
+    "time": "09:38:31",
+    "type": "RECOMMEND",
+    "message": "荐股引擎执行完成: ",
+    "details": {
+      "success": false,
+      "count": 0
+    }
   }
 ]

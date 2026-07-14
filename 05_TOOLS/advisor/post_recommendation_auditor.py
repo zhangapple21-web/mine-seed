@@ -29,7 +29,7 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime, timedelta
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 from dataclasses import dataclass, asdict
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -62,14 +62,18 @@ class AuditResult:
     name: str
     recommend_price: float
     audit_time: str
-    miner_score: int
+    miner_score: Optional[int]
     miner_feedback: str
-    rule_engine_score: int
+    rule_engine_score: Optional[int]
     rule_engine_feedback: str
-    cross_validation_score: int
-    overall_score: int
-    overall_rating: str
+    cross_validation_score: Optional[int]
+    overall_score: Optional[int]
+    overall_rating: Optional[str]
     evidence: Dict[str, Any]
+    audit_status: str = "passed"  # passed / rejected / pending_review
+    reject_reason: str = ""
+    gate_record_id: str = ""
+    needs_review: bool = False
     
     def to_dict(self) -> Dict:
         return asdict(self)
@@ -201,7 +205,8 @@ class PostRecommendationAuditor:
         """
         执行推票后审计
         
-        返回审计结果，存入 Evidence
+        返回审计结果，存入 Evidence。
+        如果 Gate 拒绝，返回带 rejected 状态的审计结果（保留原始反馈，但评分无效）。
         """
         recommend_date = recommend_date or datetime.now().strftime('%Y%m%d')
         audit_id = f"{recommend_date}_{code}"
@@ -212,13 +217,52 @@ class PostRecommendationAuditor:
         
         logger.info(f"【审计】开始评估 {name}({code})")
         
-        # 1. 矿工评估推荐质量
-        miner_result = self._miner_evaluation(code, name, price, signals)
+        # 1. 矿工评估推荐质量（经 Gate 拦截）
+        miner_result, gate_result = self._miner_evaluation(code, name, price, signals)
         
-        # 2. 规则引擎交叉验证
+        # 2. 检查 Gate 是否拒绝
+        if not gate_result.get("passed"):
+            # Gate 拒绝：创建带 rejected 状态的审计结果
+            audit_status = "pending_review" if gate_result.get("needs_review") else "rejected"
+            
+            audit_result = AuditResult(
+                audit_id=audit_id,
+                recommend_date=recommend_date,
+                code=code,
+                name=name,
+                recommend_price=price,
+                audit_time=datetime.now().isoformat(),
+                miner_score=None,  # 无有效评分
+                miner_feedback=miner_result.get("feedback", ""),  # 保留原始反馈
+                rule_engine_score=None,
+                rule_engine_feedback="",
+                cross_validation_score=None,
+                overall_score=None,
+                overall_rating=None,
+                evidence={
+                    "miner_evaluation": miner_result,
+                    "gate_result": gate_result,
+                    "signals": signals,
+                    "recommend_price": price,
+                    "audit_time": datetime.now().isoformat(),
+                },
+                audit_status=audit_status,
+                reject_reason=gate_result.get("reject_reason", ""),
+                gate_record_id=gate_result.get("record_id", ""),
+                needs_review=gate_result.get("needs_review", False),
+            )
+            
+            self.audit_results[audit_id] = audit_result
+            self._save_audit_results()
+            
+            logger.warning(f"【审计异常】{name}({code}) — Gate 拒绝: {gate_result.get('reject_reason')}")
+            
+            return audit_result
+        
+        # 3. Gate 通过：正常进行审计流程
         rule_result = self.rule_engine.validate(code, name, price, signals)
         
-        # 3. 综合评分
+        # 4. 综合评分
         cross_score = self._cross_validate(miner_result, rule_result)
         overall_score = round((miner_result['score'] + rule_result['score'] + cross_score) / 3)
         
@@ -231,7 +275,7 @@ class PostRecommendationAuditor:
         else:
             overall_rating = "D"
         
-        # 4. 构建 Evidence
+        # 5. 构建 Evidence
         evidence = {
             "miner_evaluation": miner_result,
             "rule_engine_validation": rule_result,
@@ -239,6 +283,7 @@ class PostRecommendationAuditor:
             "signals": signals,
             "recommend_price": price,
             "audit_time": datetime.now().isoformat(),
+            "gate_result": gate_result,
         }
         
         audit_result = AuditResult(
@@ -256,6 +301,7 @@ class PostRecommendationAuditor:
             overall_score=overall_score,
             overall_rating=overall_rating,
             evidence=evidence,
+            audit_status="passed",
         )
         
         self.audit_results[audit_id] = audit_result
@@ -266,12 +312,17 @@ class PostRecommendationAuditor:
         return audit_result
     
     def _miner_evaluation(self, code: str, name: str, price: float, 
-                          signals: List[str]) -> Dict[str, Any]:
+                          signals: List[str]) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         """矿工评估推荐质量（优先使用本地 Ollama，24小时可用）
         
         ARCH-014 子任务2: FA模式产出必须经过 smelter_gate 拦截记录
         miner_assistant.audit_recommendation() 是 FA 模式推理（无内部审查），
         其产出在进入审计结果之前必须经过 smelter_gate。
+        
+        Returns:
+            Tuple[miner_result, gate_result]:
+                - miner_result: 矿工评估结果
+                - gate_result: Gate 处理结果（含 passed/reject_reason 等）
         """
         result = self.miner.audit_recommendation(code, name, price, signals)
         
@@ -290,9 +341,12 @@ class PostRecommendationAuditor:
             }
         )
         
-        logger.info(f"[SmelterGate] FA模式产出已拦截记录: record_id={gate_result['record_id']}, action={gate_result['gate_action']}")
+        if gate_result.get("passed"):
+            logger.info(f"[SmelterGate] FA模式产出已通过: record_id={gate_result['record_id']}, action={gate_result['gate_action']}")
+        else:
+            logger.warning(f"[SmelterGate] FA模式产出被拒绝: record_id={gate_result['record_id']}, reason={gate_result.get('reject_reason')}")
         
-        return result
+        return result, gate_result
     
     def _local_stock_analysis(self, code: str, name: str, price: float, 
                               signals: List[str]) -> str:

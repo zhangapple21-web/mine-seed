@@ -1,22 +1,330 @@
 #!/usr/bin/env python3
 """
-任务路由器 v2 - 从"谁分高谁上"到"任务画像匹配工人"
+任务路由器 v3 - ProviderAdapter 抽象 + 动态 Registry 生成
 核心设计：
-1. Task Classifier → 识别任务需求(requirements)
-2. Worker Match → 按需求匹配工人画像(strengths/weaknesses)
-3. Judge Layer → 裁判对比输出质量
-4. Observation Log → 持久化经验数据链
-5. Registry → 统一工人注册中心
-"""
-import json, time, os, threading, requests
-from datetime import datetime
+1. ProviderAdapter → 统一 Provider 抽象，解耦 Registry 与具体实现
+2. Task Classifier → 识别任务需求(requirements)
+3. Worker Match → 按需求匹配工人画像(strengths/weaknesses)
+4. Judge Layer → 裁判对比输出质量
+5. Observation Log → 持久化经验数据链
+6. Registry → 动态生成（扫描 Provider → Probe → 生成 → Cache）
 
-REGISTRY_FILE = os.environ.get("WORKER_REGISTRY", "/home/coze/worker_registry.json")
-OBSERVATION_FILE = os.environ.get("OBSERVATION_FILE", "/home/coze/mine_output/observation_log.json")
-JUDGE_FILE = os.environ.get("JUDGE_FILE", "/home/coze/mine_output/judge_history.json")
+AUM-MISSION-OPS-003:
+- ProviderAdapter 抽象层：OneAPI / LocalMiner / FreeLLM 均可适配
+- 动态 Registry：启动时扫描环境变量，Probe 可用 Provider，生成 worker 配置
+- OneAPI Down 自动 fallback 到 local_miner
+- Shadow Observer 无需修改
+"""
+import json, time, os, threading, requests, urllib.request
+from datetime import datetime
+from pathlib import Path
+
+# P1-保守适配：使用 Path 动态获取路径，支持 Windows/Linux
+_BASE_DIR = Path(__file__).parent
+_DATA_DIR = _BASE_DIR / "data"
+_DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+REGISTRY_FILE = os.environ.get("WORKER_REGISTRY", str(_BASE_DIR / "worker_registry.json"))
+OBSERVATION_FILE = os.environ.get("OBSERVATION_FILE", str(_BASE_DIR / "observation_log.json"))
+JUDGE_FILE = os.environ.get("JUDGE_FILE", str(_BASE_DIR / "judge_history.json"))
 
 API_BASE = os.environ.get("MINER_API_BASE", "http://localhost:3000/v1/chat/completions")
 API_KEY = os.environ.get("MINER_API_KEY", "{{ONE_API_KEY}}")
+
+
+# ==================== ProviderAdapter 抽象层 ====================
+# 统一 Provider 接口，TaskRouter 只认识 Adapter，不认识具体 Provider
+class ProviderAdapter:
+    """Provider 适配器基类 — 定义统一的调用接口"""
+    
+    def __init__(self, name: str):
+        self.name = name
+    
+    def is_available(self) -> bool:
+        """检查 Provider 是否可用"""
+        return False
+    
+    def probe(self) -> list:
+        """探测 Provider 下可用的模型/能力"""
+        return []
+    
+    def call(self, model: str, messages: list, max_tokens: int = 500, 
+             temperature: float = 0.7) -> dict:
+        """调用 Provider"""
+        return {"error": f"Provider {self.name} not available"}
+    
+    def get_models(self) -> dict:
+        """获取该 Provider 下所有模型的能力画像"""
+        return {}
+
+
+class OneAPIAdapter(ProviderAdapter):
+    """OneAPI Provider 适配器 — 原路径"""
+    
+    def __init__(self):
+        super().__init__("oneapi")
+    
+    def is_available(self) -> bool:
+        try:
+            resp = requests.get(f"{API_BASE.rstrip('/')}/v1/models", 
+                               headers={"Authorization": f"Bearer {API_KEY}"},
+                               timeout=5)
+            return resp.status_code == 200
+        except Exception:
+            return False
+    
+    def probe(self) -> list:
+        try:
+            resp = requests.get(f"{API_BASE.rstrip('/')}/v1/models", 
+                               headers={"Authorization": f"Bearer {API_KEY}"},
+                               timeout=5)
+            if resp.status_code == 200:
+                data = resp.json()
+                return [m.get("id", "") for m in data.get("data", [])]
+        except Exception:
+            pass
+        return []
+    
+    def call(self, model: str, messages: list, max_tokens: int = 500,
+             temperature: float = 0.7) -> dict:
+        try:
+            resp = requests.post(
+                API_BASE,
+                headers={"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"},
+                json={
+                    "model": model,
+                    "messages": messages,
+                    "max_tokens": max_tokens,
+                    "temperature": temperature,
+                },
+                timeout=60
+            )
+            if resp.status_code == 200:
+                data = resp.json()
+                if "choices" in data:
+                    return {
+                        "content": data["choices"][0]["message"]["content"],
+                        "model": model,
+                        "provider": "oneapi",
+                        "success": True,
+                    }
+            return {"error": f"OneAPI returned {resp.status_code}", "success": False}
+        except Exception as e:
+            return {"error": f"OneAPI error: {e}", "success": False}
+    
+    def get_models(self) -> dict:
+        # OneAPI 的模型能力需要从配置中获取，这里先返回常见模型的默认画像
+        return {
+            "glm-4-flash": {
+                "capabilities": ["technical_analysis", "risk_assessment", "structured_output", "fast", "chinese"],
+                "context_window": 128000,
+                "avg_latency": 5,
+                "success_rate": 0.95,
+            },
+            "gpt-4o-mini": {
+                "capabilities": ["technical_analysis", "risk_assessment", "structured_output", "fast", "reasoning"],
+                "context_window": 128000,
+                "avg_latency": 3,
+                "success_rate": 0.98,
+            },
+            "qwen2.5-7b": {
+                "capabilities": ["technical_analysis", "risk_assessment", "chinese", "fast"],
+                "context_window": 32000,
+                "avg_latency": 2,
+                "success_rate": 0.90,
+            },
+        }
+
+
+class LocalMinerAdapter(ProviderAdapter):
+    """LocalMiner Provider 适配器 — fallback 路径，复用 local_miner.py 的 Provider"""
+    
+    def __init__(self):
+        super().__init__("local_miner")
+        self._providers = {}
+        self._init_providers()
+    
+    def _init_providers(self):
+        """初始化 local_miner 的各个 Provider"""
+        # GitHub Models
+        if os.environ.get("GITHUB_PAT"):
+            self._providers["github"] = {
+                "call": self._call_github,
+                "models": {"gpt-4o-mini": {"capabilities": ["reasoning", "risk_assessment", "structured_output", "fast"]}},
+                "available": True,
+            }
+        
+        # Zhipu GLM
+        if os.environ.get("ZHIPU_KEY"):
+            self._providers["zhipu"] = {
+                "call": self._call_zhipu,
+                "models": {"glm-4-flash": {"capabilities": ["technical_analysis", "risk_assessment", "structured_output", "fast", "chinese"]}},
+                "available": True,
+            }
+        
+        # OpenRouter
+        if os.environ.get("OPENROUTER_KEY"):
+            self._providers["openrouter"] = {
+                "call": self._call_openrouter,
+                "models": {"meta-llama/llama-3.3-70b-instruct:free": {"capabilities": ["reasoning", "risk_assessment", "long_context"]}},
+                "available": True,
+            }
+        
+        # Ollama
+        if self._check_ollama():
+            self._providers["ollama"] = {
+                "call": self._call_ollama,
+                "models": {"qwen2.5-vl": {"capabilities": ["technical_analysis", "risk_assessment", "vision", "chinese"]}},
+                "available": True,
+            }
+    
+    def _check_ollama(self) -> bool:
+        try:
+            base = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
+            req = urllib.request.Request(f"{base}/api/tags")
+            with urllib.request.urlopen(req, timeout=3):
+                return True
+        except Exception:
+            return False
+    
+    def _call_github(self, model, messages, max_tokens=500, temperature=0.7):
+        pat = os.environ.get("GITHUB_PAT", "")
+        base = os.environ.get("GITHUB_BASE", "https://models.inference.ai.azure.com")
+        data = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
+        req = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=json.dumps(data).encode(),
+            headers={"Authorization": f"Bearer {pat}", "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                result = json.loads(r.read().decode())
+                if "choices" in result:
+                    return {
+                        "content": result["choices"][0]["message"]["content"],
+                        "model": model,
+                        "provider": "github",
+                        "success": True,
+                    }
+            return {"error": "No choices", "success": False}
+        except Exception as e:
+            return {"error": f"GitHub error: {e}", "success": False}
+    
+    def _call_zhipu(self, model, messages, max_tokens=500, temperature=0.7):
+        key = os.environ.get("ZHIPU_KEY", "")
+        base = os.environ.get("ZHIPU_BASE", "https://open.bigmodel.cn/api/paas/v4")
+        data = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
+        req = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=json.dumps(data).encode(),
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                result = json.loads(r.read().decode())
+                if "choices" in result:
+                    return {
+                        "content": result["choices"][0]["message"]["content"],
+                        "model": model,
+                        "provider": "zhipu",
+                        "success": True,
+                    }
+            return {"error": "No choices", "success": False}
+        except Exception as e:
+            return {"error": f"Zhipu error: {e}", "success": False}
+    
+    def _call_openrouter(self, model, messages, max_tokens=500, temperature=0.7):
+        key = os.environ.get("OPENROUTER_KEY", "")
+        base = os.environ.get("OPENROUTER_BASE", "https://openrouter.ai/api/v1")
+        data = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
+        headers = {
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://ace.local",
+            "X-Title": "ACE Miner",
+        }
+        req = urllib.request.Request(f"{base}/chat/completions", data=json.dumps(data).encode(), headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                result = json.loads(r.read().decode())
+                if "choices" in result:
+                    return {
+                        "content": result["choices"][0]["message"]["content"],
+                        "model": model,
+                        "provider": "openrouter",
+                        "success": True,
+                    }
+            return {"error": "No choices", "success": False}
+        except Exception as e:
+            return {"error": f"OpenRouter error: {e}", "success": False}
+    
+    def _call_ollama(self, model, messages, max_tokens=500, temperature=0.7):
+        base = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
+        ollama_model = os.environ.get("OLLAMA_MODEL", "huihui_ai/qwen2.5-vl-abliterated:7b")
+        data = {
+            "model": ollama_model,
+            "messages": messages,
+            "stream": False,
+            "options": {"num_predict": max_tokens, "temperature": temperature},
+        }
+        req = urllib.request.Request(f"{base}/api/chat", data=json.dumps(data).encode(), headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                result = json.loads(r.read().decode())
+                if "message" in result:
+                    return {
+                        "content": result["message"]["content"],
+                        "model": ollama_model,
+                        "provider": "ollama",
+                        "success": True,
+                    }
+            return {"error": "No message", "success": False}
+        except Exception as e:
+            return {"error": f"Ollama error: {e}", "success": False}
+    
+    def is_available(self) -> bool:
+        return len(self._providers) > 0
+    
+    def probe(self) -> list:
+        models = []
+        for provider_name, info in self._providers.items():
+            for model_name in info["models"]:
+                models.append(f"{provider_name}/{model_name}")
+        return models
+    
+    def call(self, model: str, messages: list, max_tokens: int = 500,
+             temperature: float = 0.7) -> dict:
+        # 解析 model 格式: provider/model
+        if "/" in model:
+            provider_name, model_name = model.split("/", 1)
+        else:
+            # 默认按优先级尝试
+            for provider_name in ["zhipu", "github", "ollama", "openrouter"]:
+                if provider_name in self._providers:
+                    info = self._providers[provider_name]
+                    model_name = list(info["models"].keys())[0]
+                    break
+            else:
+                return {"error": "No available provider", "success": False}
+        
+        if provider_name in self._providers:
+            return self._providers[provider_name]["call"](model_name, messages, max_tokens, temperature)
+        return {"error": f"Provider {provider_name} not available", "success": False}
+    
+    def get_models(self) -> dict:
+        result = {}
+        for provider_name, info in self._providers.items():
+            for model_name, model_info in info["models"].items():
+                full_name = f"{provider_name}/{model_name}"
+                result[full_name] = model_info
+        return result
+
+
+# ==================== Provider 注册表 ====================
+PROVIDER_ADAPTERS = {
+    "oneapi": OneAPIAdapter,
+    "local_miner": LocalMinerAdapter,
+}
 
 # ==================== 任务画像定义 ====================
 # 每种任务需要的capability → 匹配worker的strengths
@@ -70,22 +378,120 @@ TASK_PROFILES = {
         "min_context": 64000,
         "strategy": "quality",
     },
+    # P1-保守方案：矿工审计任务画像
+    # 矿工只做"裁判"，不做"教练"
+    # 输出仅作 Evidence 附加字段，不影响 Admission 决策
+    "audit_only": {
+        "requirements": ["technical_analysis", "risk_assessment", "structured_output"],
+        "avoid": ["latency"],  # 审计允许慢
+        "max_latency": 120,
+        "min_context": 16000,
+        "strategy": "quality",
+        "description": "P1-保守方案：推荐后矿工审计",
+        "affects_admission": False,  # 明确：不影响 Admission 决策
+        "output_as_evidence_only": True,  # 明确：仅作 Evidence 附加字段
+    },
 }
 
 
 class WorkerRegistry:
-    """P0: 工人注册中心 — 所有工人信息从这里来，不写死"""
+    """P0: 工人注册中心 — 动态生成，不是静态配置
+    
+    启动流程：
+    1. 扫描环境变量（API Key 是否存在）
+    2. 实例化 ProviderAdapter，Probe 可用模型
+    3. 根据模型能力画像生成 worker 配置
+    4. 写入 Cache（worker_registry.json）
+    
+    Registry = Capability Snapshot，不是死人名单
+    """
     def __init__(self):
         self.lock = threading.Lock()
         self.data = self._load()
+        # 如果 Registry 为空，动态生成
+        if not self.data["workers"]:
+            self._generate_from_providers()
+    
     def _load(self):
         if os.path.exists(REGISTRY_FILE):
-            with open(REGISTRY_FILE) as f:
-                return json.load(f)
+            try:
+                with open(REGISTRY_FILE) as f:
+                    return json.load(f)
+            except Exception:
+                pass
         return {"version": "1.0", "workers": {}}
+    
     def _save(self):
         with open(REGISTRY_FILE, "w") as f:
             json.dump(self.data, f, ensure_ascii=False, indent=2)
+    
+    def _generate_from_providers(self):
+        """从 ProviderAdapter 动态生成 worker 配置
+        
+        流程：扫描 → Probe → 生成 → Cache
+        """
+        print(f"  🧪 Registry 动态生成: 扫描 ProviderAdapter...")
+        
+        workers = {}
+        provider_order = ["oneapi", "local_miner"]  # 优先 OneAPI，其次 local_miner
+        
+        for provider_name in provider_order:
+            adapter_class = PROVIDER_ADAPTERS.get(provider_name)
+            if not adapter_class:
+                continue
+            
+            try:
+                adapter = adapter_class() if provider_name != "local_miner" else adapter_class()
+                if not adapter.is_available():
+                    print(f"  ⏭️ {provider_name}: 不可用，跳过")
+                    continue
+                
+                print(f"  ✅ {provider_name}: 可用，开始 Probe...")
+                models = adapter.get_models()
+                
+                for model_name, model_info in models.items():
+                    # 生成 worker ID
+                    worker_id = f"{provider_name}_{model_name.replace('/', '_')}"
+                    
+                    # 确定军团（corps）
+                    corps_map = {
+                        "oneapi": "OneAPI",
+                        "zhipu": "GLM",
+                        "github": "GitHub",
+                        "ollama": "Ollama",
+                        "openrouter": "OpenRouter",
+                    }
+                    corps = corps_map.get(provider_name, provider_name.capitalize())
+                    if "/" in model_name:
+                        provider_part = model_name.split("/")[0]
+                        corps = corps_map.get(provider_part, corps)
+                    
+                    workers[worker_id] = {
+                        "provider": provider_name,
+                        "model": model_name,
+                        "corps": corps,
+                        "status": "alive",
+                        "strengths": model_info.get("capabilities", []),
+                        "weaknesses": [],
+                        "context_window": model_info.get("context_window", 32000),
+                        "avg_latency": model_info.get("avg_latency", 10),
+                        "success_rate": model_info.get("success_rate", 0.9),
+                        "rpm": 0,
+                        "last_update": datetime.now().isoformat(),
+                    }
+                    print(f"    🔧 {worker_id}: strengths={model_info.get('capabilities', [])}")
+                
+            except Exception as e:
+                print(f"  ⚠️ {provider_name}: Probe 失败 - {e}")
+                continue
+        
+        if workers:
+            self.data["workers"] = workers
+            self._save()
+            print(f"  📦 Registry 生成完成: {len(workers)} 个 worker")
+        else:
+            print(f"  ⚠️ 无可用 Provider，Registry 保持空")
+    
     def get_alive(self, corps=None):
         """获取存活工人列表"""
         workers = []
@@ -96,8 +502,10 @@ class WorkerRegistry:
                 continue
             workers.append((wid, w))
         return workers
+    
     def get_worker(self, worker_id):
         return self.data["workers"].get(worker_id)
+    
     def update_status(self, worker_id, status, reason=""):
         """更新工人状态"""
         with self.lock:
@@ -107,31 +515,31 @@ class WorkerRegistry:
                     self.data["workers"][worker_id]["last_reason"] = reason
                 self.data["workers"][worker_id]["last_update"] = datetime.now().isoformat()
                 self._save()
+    
     def update_stats(self, worker_id, elapsed, success):
         """更新工人运行时统计"""
         with self.lock:
             w = self.data["workers"].get(worker_id)
             if not w:
                 return
-            # 指数移动平均更新延迟
             alpha = 0.3
             w["avg_latency"] = round(w.get("avg_latency", 10) * (1 - alpha) + elapsed * alpha, 1)
-            # 更新成功率
             sr = w.get("success_rate", 0.9)
             w["success_rate"] = round(sr * (1 - alpha) + (1.0 if success else 0.0) * alpha, 3)
             self._save()
+    
     def report(self):
         """输出Registry状态"""
         lines = ["📋 Worker Registry 状态报告", "=" * 50]
-        for corps in ["GLM", "NIM", "GitHub"]:
+        corps_set = set(w.get("corps", "") for w in self.data["workers"].values())
+        for corps in sorted(corps_set):
             workers = self.get_alive(corps=corps)
             alive = len(workers)
             total_rpm = sum(w.get("rpm", 0) for _, w in workers)
-            emoji = {"GLM": "🚀", "NIM": "🏆", "GitHub": "🆓"}.get(corps, "?")
+            emoji = {"GLM": "🚀", "GitHub": "🆓", "Ollama": "🏠", "OpenRouter": "🌐", "OneAPI": "🔗"}.get(corps, "?")
             lines.append(f"\n{emoji} {corps}军团: {alive}存活 | {total_rpm}RPM")
             for wid, w in workers:
                 lines.append(f"  {wid}: lat={w.get('avg_latency',0):.1f}s sr={w.get('success_rate',0):.2f} {w.get('strengths',[])}")
-        # 挂掉的
         dead = [(wid, w) for wid, w in self.data["workers"].items() if w.get("status") != "alive"]
         if dead:
             lines.append(f"\n💀 离线: {len(dead)}")
@@ -230,7 +638,7 @@ class ObservationLog:
 
 class TaskRouter:
     """P1: 任务路由器 — 按任务需求匹配工人画像 + O→E→C→R约束路由"""
-    CONSTRAINT_FILE = os.environ.get("ROUTING_CONSTRAINTS", "/home/coze/routing_constraints.json")
+    CONSTRAINT_FILE = os.environ.get("ROUTING_CONSTRAINTS", str(_BASE_DIR / "routing_constraints.json"))
 
     def __init__(self, registry=None, observation=None):
         self.registry = registry or WorkerRegistry()
@@ -355,6 +763,44 @@ class TaskRouter:
             print(f"  ⚠️ fallback_chain为空: {task_name} (所有worker被AVOID或无可用)")
             return []
         return [(wid, w["model"]) for wid, w, score in matched]
+    
+    def call_worker(self, worker_id: str, messages: list, max_tokens: int = 500,
+                    temperature: float = 0.7) -> dict:
+        """通过 ProviderAdapter 调用工人
+        
+        TaskRouter 不直接知道 OneAPI 还是 LocalMiner，
+        通过 ProviderAdapter 解耦，自动选择正确的 Adapter。
+        """
+        worker = self.registry.get_worker(worker_id)
+        if not worker:
+            return {"error": f"Worker {worker_id} not found", "success": False}
+        
+        provider_name = worker.get("provider", "local_miner")
+        model = worker.get("model", "")
+        
+        # 获取对应的 ProviderAdapter
+        adapter_class = PROVIDER_ADAPTERS.get(provider_name)
+        if not adapter_class:
+            return {"error": f"Provider {provider_name} not registered", "success": False}
+        
+        try:
+            adapter = adapter_class() if provider_name != "local_miner" else adapter_class()
+            if not adapter.is_available():
+                return {"error": f"Provider {provider_name} not available", "success": False}
+            
+            result = adapter.call(model, messages, max_tokens, temperature)
+            if result.get("success"):
+                return {
+                    "content": result.get("content", ""),
+                    "model": model,
+                    "provider": provider_name,
+                    "worker_id": worker_id,
+                    "success": True,
+                }
+            return {"error": result.get("error", "Unknown error"), "success": False}
+        
+        except Exception as e:
+            return {"error": f"Call failed: {e}", "success": False}
 
 
 class JudgeLayer:

@@ -4,28 +4,28 @@
     "code": "000938",
     "name": "紫光股份",
     "recommend_price": 40.0,
-    "return_t1": null,
+    "return_t1": -4.0,
     "return_t3": null,
     "return_t5": null,
     "return_t10": null,
     "return_t20": null,
     "max_return_t20": null,
     "status": "partial",
-    "updated_at": "2026-07-13T15:32:27.724335"
+    "updated_at": "2026-07-14T09:28:49.906857"
   },
   "20260713_688126": {
     "recommend_date": "20260713",
     "code": "688126",
     "name": "沪硅产业",
     "recommend_price": 37.48,
-    "return_t1": null,
+    "return_t1": -5.18,
     "return_t3": null,
     "return_t5": null,
     "return_t10": null,
     "return_t20": null,
     "max_return_t20": null,
     "status": "partial",
-    "updated_at": "2026-07-13T15:32:29.584428"
+    "updated_at": "2026-07-14T09:28:51.844500"
   },
   "20260711_688111": {
     "recommend_date": "20260711",
@@ -88,20 +88,34 @@
     "code": "000063",
     "name": "中兴通讯",
     "recommend_price": 41.92,
-    "return_t1": null,
+    "return_t1": -2.19,
     "return_t3": null,
     "return_t5": null,
     "return_t10": null,
     "return_t20": null,
     "max_return_t20": null,
-    "status": "pending",
-    "updated_at": "2026-07-13T15:49:53.029930"
+    "status": "partial",
+    "updated_at": "2026-07-14T09:28:53.708155"
   },
   "20260713_600267": {
     "recommend_date": "20260713",
     "code": "600267",
     "name": "海正药业",
     "recommend_price": 11.42,
+    "return_t1": -0.7,
+    "return_t3": null,
+    "return_t5": null,
+    "return_t10": null,
+    "return_t20": null,
+    "max_return_t20": null,
+    "status": "partial",
+    "updated_at": "2026-07-14T09:28:55.712389"
+  },
+  "20260714_601857": {
+    "recommend_date": "20260714",
+    "code": "601857",
+    "name": "中国石油",
+    "recommend_price": 9.8,
     "return_t1": null,
     "return_t3": null,
     "return_t5": null,
@@ -109,6 +123,20 @@
     "return_t20": null,
     "max_return_t20": null,
     "status": "pending",
-    "updated_at": "2026-07-13T15:49:53.031438"
+    "updated_at": "2026-07-14T09:34:02.876359"
+  },
+  "20260714_688981": {
+    "recommend_date": "20260714",
+    "code": "688981",
+    "name": "中芯国际",
+    "recommend_price": 165.66,
+    "return_t1": null,
+    "return_t3": null,
+    "return_t5": null,
+    "return_t10": null,
+    "return_t20": null,
+    "max_return_t20": null,
+    "status": "pending",
+    "updated_at": "2026-07-14T09:34:02.883083"
   }
 }

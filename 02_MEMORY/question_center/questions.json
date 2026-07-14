@@ -1835,7 +1835,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T10:50:49.778462",
     "last_seen": "2026-07-13T10:50:49.778462",
     "hypotheses": [
@@ -1844,8 +1844,9 @@
     "experiments": [],
     "decisions": [],
     "evidence": [],
-    "debate_count": 3,
-    "last_debated_at": "2026-07-13T19:21:13.076103"
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T03:36:35.913663",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-031",
@@ -1853,15 +1854,37 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T11:07:51.719512",
     "last_seen": "2026-07-13T11:07:51.719512",
     "hypotheses": [
       "H-015"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-025"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议均显示对新发现模式的研究有较高的信心（75% 和 65%），且 Scouter 没有提出重大担忧，因此决定批准强化这一模式的研究。. Action: 增加资源投入，分析并推广14次成功模式背后的原因和适用条件，并收集更多样本数据以验证其普遍有效性。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 75
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 65
+          }
+        ],
+        "added_at": "2026-07-13T23:54:30.167370"
+      }
+    ],
     "debate_count": 3,
     "last_debated_at": "2026-07-13T19:36:13.298522"
   },
@@ -1871,7 +1894,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T11:27:48.873316",
     "last_seen": "2026-07-13T11:27:48.873316",
     "hypotheses": [
@@ -1879,9 +1902,30 @@
     ],
     "experiments": [],
     "decisions": [],
-    "evidence": [],
-    "debate_count": 3,
-    "last_debated_at": "2026-07-13T19:51:10.666311"
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 尽管 Scout 和 Validator 提出的强化检测系统的建议得到了一定的支持，但目前证据不足以做出最终决策。需要更多的证据和评估来确认这些建议的有效性和风险。. Action: ",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 60
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 55
+          }
+        ],
+        "added_at": "2026-07-13T23:58:39.363748"
+      }
+    ],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T04:06:49.676531",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-033",
@@ -1889,7 +1933,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T11:37:23.642763",
     "last_seen": "2026-07-13T11:37:23.642763",
     "hypotheses": [
@@ -1898,8 +1942,9 @@
     "experiments": [],
     "decisions": [],
     "evidence": [],
-    "debate_count": 3,
-    "last_debated_at": "2026-07-13T19:51:10.666311"
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T04:06:49.676531",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-034",
@@ -1907,17 +1952,39 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T11:53:38.300880",
     "last_seen": "2026-07-13T11:53:38.300880",
     "hypotheses": [
       "H-018"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
-    "debate_count": 3,
-    "last_debated_at": "2026-07-13T20:06:30.207968"
+    "decisions": [
+      "D-028"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: 根据 Scout 和 Validator 提出的意见，自学习数据记录了17次「新发现」成功模式，并且团队已有共识。这表明该模式在实际应用中有较高成功率。尽管存在一些风险，但这些可以被管理和缓解。. Action: 批准建议并执行加强培训和推广、设立专项小组以及进行全面审核和优化现有记录的计划。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 0
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 75
+          }
+        ],
+        "added_at": "2026-07-14T04:40:31.869644"
+      }
+    ],
+    "debate_count": 4,
+    "last_debated_at": "2026-07-14T00:21:41.585451"
   },
   {
     "qid": "Q-035",
@@ -1925,7 +1992,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T12:08:01.731352",
     "last_seen": "2026-07-13T12:08:01.731352",
     "hypotheses": [
@@ -1933,9 +2000,30 @@
     ],
     "experiments": [],
     "decisions": [],
-    "evidence": [],
-    "debate_count": 2,
-    "last_debated_at": "2026-07-13T16:21:06.851215"
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 尽管检测到18次成功模式表明自学习机制有效性，但还需进一步收集和分析数据以评估强化的必要性及实际影响。目前证据不足以全面评估其效果。. Action: ",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 0
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 50
+          }
+        ],
+        "added_at": "2026-07-14T04:54:43.660448"
+      }
+    ],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T05:06:23.376565",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-036",
@@ -1943,7 +2031,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T12:22:59.798910",
     "last_seen": "2026-07-13T12:22:59.798910",
     "hypotheses": [
@@ -1952,8 +2040,9 @@
     "experiments": [],
     "decisions": [],
     "evidence": [],
-    "debate_count": 2,
-    "last_debated_at": "2026-07-13T17:05:27.975487"
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T05:21:41.543634",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-037",
@@ -1961,15 +2050,37 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T12:43:15.342227",
     "last_seen": "2026-07-13T12:43:15.342227",
     "hypotheses": [
       "H-021"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-019"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议基于成功检测到20次新发现模式和其高潜在价值。虽然存在一些复杂性和数据量较小的担忧，但这些风险对决策影响不大。. Action: 加强新发现模式的监控与分析，并开展专项培训。同时收集更多相关数据以优化强化策略。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 85
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 55
+          }
+        ],
+        "added_at": "2026-07-13T21:39:03.586124"
+      }
+    ],
     "debate_count": 2,
     "last_debated_at": "2026-07-13T17:35:31.620057"
   },
@@ -1979,15 +2090,37 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T12:57:18.825381",
     "last_seen": "2026-07-13T12:57:18.825381",
     "hypotheses": [
       "H-022"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-020"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Researcher 的建议有较高的信心（75和65），且 Validator 虽然信心较低（55）但没有重大担忧。鉴于已检测到21次成功的新发现模式，并且已有其他类似项目的成功案例作为参考，因此决定批准这些提议。. Action: 根据 Scout 和 Researcher 的建议，开始强化新发现模式的训练、设立专项奖励机制和加强与其他部门的合作。同时，进一步分析这些成功的模式以制定具体策略。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 65
+          },
+          {
+            "role": "researcher",
+            "confidence": 75
+          },
+          {
+            "role": "validator",
+            "confidence": 55
+          }
+        ],
+        "added_at": "2026-07-13T21:42:37.100121"
+      }
+    ],
     "debate_count": 2,
     "last_debated_at": "2026-07-13T17:35:31.620057"
   },
@@ -1997,15 +2130,37 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T13:12:16.563236",
     "last_seen": "2026-07-13T13:12:16.563236",
     "hypotheses": [
       "H-023"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-021"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 提出的建议均显示对新发现模式进行强化的需求。尽管研究员认为需要进一步分析这些模式的具体内容和出现频率以评估其对系统的影响，但是鉴于 Scout 和 Validator 的建议至少有方 confidence 达到70%，并且没有重大 concerns。. Action: 增加资源投入并组建专家团队来增强新发现模式的识别与分析能力；加强对现有系统的监控；收集用户反馈和建议。在系统性能优化完成后，进一步评估这些新模式对自学习系统的影响。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 75
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 70
+          }
+        ],
+        "added_at": "2026-07-13T21:55:04.659388"
+      }
+    ],
     "debate_count": 2,
     "last_debated_at": "2026-07-13T17:35:31.620057"
   },
@@ -2015,15 +2170,37 @@
     "source": "self_learning",
     "priority": "P1",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T13:12:16.572297",
     "last_seen": "2026-07-13T13:12:16.572297",
     "hypotheses": [
       "H-024"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-022"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议中均提到了优化认证算法和增加故障检测频率，并且两者的信心度均已超过70%，这些措施可以有效解决Provider认证失败的问题。虽然仍有需要进一步验证的风险，但目前提供的证据已经足够支持采取行动。. Action: 立即执行优化认证算法并增加故障检测频率的改进措施",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 90
+          },
+          {
+            "role": "researcher",
+            "confidence": 70
+          },
+          {
+            "role": "validator",
+            "confidence": 45
+          }
+        ],
+        "added_at": "2026-07-13T21:57:27.113403"
+      }
+    ],
     "debate_count": 2,
     "last_debated_at": "2026-07-13T17:50:38.094212"
   },
@@ -2033,7 +2210,7 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T13:26:38.018095",
     "last_seen": "2026-07-13T13:26:38.018095",
     "hypotheses": [
@@ -2041,9 +2218,49 @@
     ],
     "experiments": [],
     "decisions": [],
-    "evidence": [],
-    "debate_count": 2,
-    "last_debated_at": "2026-07-13T17:50:38.094212"
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 尽管 Scout 和 Researcher 提出了分析新发现成功模式特征的建议，并且信心度分别为0和50%，但 Validator 的信心度同样为50%，并提出了进一步研究以确认其普遍性和适用性的需求。因此，需要更多详细信息来判断这些模式是否可以推广。. Action: 等待 Researcher 提供关于新发现成功模式的具体特征、操作条件等更详细的信息后再审",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 0
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 50
+          }
+        ],
+        "added_at": "2026-07-14T02:25:38.488467"
+      },
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=deferred. Rationale: 尽管 Scout 和 Researcher 提出了分析新发现成功模式特征的建议，并且信心度分别为0和50%，但 Validator 的信心度同样为50%。还需更多详细信息来判断这些模式是否可以推广。. Action: 等待 Researcher 提供关于新发现成功模式的具体特征、操作条件等更详细的信息后再做决策。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": null
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 50
+          }
+        ],
+        "added_at": "2026-07-14T02:39:59.294434"
+      }
+    ],
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T06:51:22.358496",
+    "close_reason": "debate_limit_exceeded"
   },
   {
     "qid": "Q-042",
@@ -2051,17 +2268,39 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T13:40:56.908876",
     "last_seen": "2026-07-13T13:40:56.908876",
     "hypotheses": [
       "H-026"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
-    "debate_count": 2,
-    "last_debated_at": "2026-07-13T17:50:38.094212"
+    "decisions": [
+      "D-026"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的 Proposal 都建议加强链路检测和监控，并引用了历史数据支持。尽管存在一些风险，但当前系统中存在的问题表明这是必要的。. Action: 执行增强链路检测频率和引入故障诊断工具的措施。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 70
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-14T02:28:48.786652"
+      }
+    ],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T22:06:29.260172"
   },
   {
     "qid": "Q-043",
@@ -2069,17 +2308,39 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T13:40:56.916430",
     "last_seen": "2026-07-13T13:40:56.916430",
     "hypotheses": [
       "H-027"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
-    "debate_count": 2,
-    "last_debated_at": "2026-07-13T18:05:54.261666"
+    "decisions": [
+      "D-027"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的提案均建议强化新发现模式的检测和分析。尽管 Scout 提案的自信度为80%，但 Validator 指出此方案能显著提升系统效率，且现有资源和技术能够支持该工作。因此，决策批准了这一提议。. Action: 启动专项研究团队，进行深入分析并优化新发现模式的检测算法。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 80
+          },
+          {
+            "role": "researcher",
+            "confidence": 60
+          },
+          {
+            "role": "validator",
+            "confidence": 75
+          }
+        ],
+        "added_at": "2026-07-14T02:43:35.490517"
+      }
+    ],
+    "debate_count": 3,
+    "last_debated_at": "2026-07-13T22:06:29.260172"
   },
   {
     "qid": "Q-044",
@@ -2087,15 +2348,37 @@
     "source": "self_learning",
     "priority": "P2",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T13:55:32.349017",
     "last_seen": "2026-07-13T13:55:32.349017",
     "hypotheses": [
       "H-028"
     ],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-023"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 建议采取加强分析、研讨会和试点项目等措施，并且 Scout 的信心为80%，Validator 的信心为60%。虽然存在一些风险，但已有数据支持这一方案。. Action: 执行相关分析、组织内部研讨会及小规模试点项目。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 80
+          },
+          {
+            "role": "researcher",
+            "confidence": 55
+          },
+          {
+            "role": "validator",
+            "confidence": 60
+          }
+        ],
+        "added_at": "2026-07-13T22:24:24.775953"
+      }
+    ],
     "debate_count": 2,
     "last_debated_at": "2026-07-13T18:20:43.601317"
   },
@@ -2105,13 +2388,35 @@
     "source": "question_engine",
     "priority": "P1",
     "capability": "research",
-    "status": "open",
+    "status": "answered",
     "created_at": "2026-07-13T14:14:16.386544",
     "last_seen": "2026-07-13T14:14:16.386544",
     "hypotheses": [],
     "experiments": [],
-    "decisions": [],
-    "evidence": [],
+    "decisions": [
+      "D-024"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的建议一致且信心度均达95%，确认文件修改对系统有重要影响。当前的证据和分析表明应立即检查并评估这些修改内容，以确保系统的准确性和高效运行。. Action: 执行 Scout 提出的具体行动项：立即检查 'M 00_ROOT/PRINCIPLES.md' 的修改内容，并评估其对系统状态的影响；根据评估结果决定是否需要调整系统配置或执行特定验证程序。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": 95
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 95
+          }
+        ],
+        "added_at": "2026-07-13T22:28:05.665793"
+      }
+    ],
     "motivation": "由于这是系统的核心文档之一，其内容的更新可能会影响系统的长期策略和决策。不及时了解这些变化可能导致关键信息丢失或错误理解，从而影响整个系统的运行。",
     "approach": "首先，检查 'M 00_ROOT/PRINCIPLES.md' 的具体修改内容；其次，评估这些修改对系统当前状态的影响；最后，确定是否需要立即调整系统配置或执行特定的验证程序来确保一致性。",
     "expected_value": "回答这个问题后，系统能了解到文件 修改的内容及其潜在影响，并根据这些信息采取相应的措施。这有助于保持系统的准确性和高效性。",
@@ -2147,7 +2452,7 @@
     "source": "question_engine",
     "priority": "P1",
     "capability": "research",
-    "status": "open",
+    "status": "closed",
     "created_at": "2026-07-13T14:14:16.398592",
     "last_seen": "2026-07-13T14:14:16.398592",
     "hypotheses": [],
@@ -2180,7 +2485,124 @@
       "capability_ref": "workspace",
       "timestamp": "2026-07-13T14:12:09.205984"
     },
+    "debate_count": 5,
+    "last_debated_at": "2026-07-14T06:51:22.358496",
+    "close_reason": "debate_limit_exceeded"
+  },
+  {
+    "qid": "Q-047",
+    "question": "[自学习] 检测到 1 次「降级链路生效」成功模式，建议强化",
+    "source": "self_learning",
+    "priority": "P2",
+    "capability": "research",
+    "status": "answered",
+    "created_at": "2026-07-13T20:25:55.161677",
+    "last_seen": "2026-07-13T20:25:55.161677",
+    "hypotheses": [
+      "H-029"
+    ],
+    "experiments": [],
+    "decisions": [
+      "D-029"
+    ],
+    "evidence": [
+      {
+        "type": "debate",
+        "text": "Multi-Agent Debate: decision=approved. Rationale: Scout 和 Validator 的提案都涉及链路评估，且各自的信心分别为85%和75%，均超过70%，决策者可接受。此外，Validator 没有提出重大 concerns。. Action: 立即执行 Scout 提案中的第一项建议：立即进行链路评估以确定降级链路的具体状况和影响范围，并在确认问题后进一步制定优化方案。",
+        "opinions": [
+          {
+            "role": "scout",
+            "confidence": null
+          },
+          {
+            "role": "researcher",
+            "confidence": 50
+          },
+          {
+            "role": "validator",
+            "confidence": 75
+          }
+        ],
+        "added_at": "2026-07-14T04:58:10.570185"
+      }
+    ],
     "debate_count": 2,
-    "last_debated_at": "2026-07-13T18:20:43.601317"
+    "last_debated_at": "2026-07-14T00:36:32.761029"
+  },
+  {
+    "qid": "Q-048",
+    "question": "为什么要在 ACE 的本地模型优化路线中同时关注通用 C++ 实现和硬件专属加速（如 Intel ipex-llm），是否应该建立统一的抽象层以兼容多种加速后端？",
+    "source": "explorer:T-008",
+    "priority": "P2",
+    "capability": "archaeology",
+    "status": "open",
+    "created_at": "2026-07-14T00:11:39.542779",
+    "last_seen": "2026-07-14T00:11:39.542779",
+    "hypotheses": [],
+    "experiments": [],
+    "decisions": [],
+    "evidence": [],
+    "exploration_topic": {
+      "id": "T-008",
+      "name": "Local LLM Optimization / Quantization",
+      "keywords": [
+        "llama.cpp",
+        "gguf quantization",
+        "local llm inference",
+        "ollama"
+      ],
+      "capability_ref": "local_inference",
+      "why_for_ace": "Ollama 是 ACE Provider 之一，需要持续跟踪本地模型优化技术"
+    },
+    "exploration_projects": [
+      {
+        "full_name": "ggml-org/llama.cpp",
+        "html_url": "https://github.com/ggml-org/llama.cpp",
+        "stars": 120248,
+        "description": "LLM inference in C/C++",
+        "updated_at": "2026-07-13T16:09:34Z",
+        "language": "C++",
+        "score": 60
+      },
+      {
+        "full_name": "h2oai/h2ogpt",
+        "html_url": "https://github.com/h2oai/h2ogpt",
+        "stars": 11976,
+        "description": "Private chat with local GPT with document, images, video, etc. 100% private, Apache 2.0. Supports oLLaMa, Mixtral, llama.cpp, and more. Demo: https://gpt.h2o.ai/ https://gpt-docs.h2o.ai/",
+        "updated_at": "2026-07-12T12:36:11Z",
+        "language": "Python",
+        "score": 60
+      },
+      {
+        "full_name": "abetlen/llama-cpp-python",
+        "html_url": "https://github.com/abetlen/llama-cpp-python",
+        "stars": 10481,
+        "description": "Python bindings for llama.cpp",
+        "updated_at": "2026-07-13T14:49:31Z",
+        "language": "Python",
+        "score": 60
+      },
+      {
+        "full_name": "intel/ipex-llm",
+        "html_url": "https://github.com/intel/ipex-llm",
+        "stars": 8863,
+        "description": "Accelerate local LLM inference and finetuning (LLaMA, Mistral, ChatGLM, Qwen, DeepSeek, Mixtral, Gemma, Phi, MiniCPM, Qwen-VL, MiniCPM-V, etc.) on Intel XPU (e.g., local PC with iGPU and NPU, discrete",
+        "updated_at": "2026-07-13T15:52:26Z",
+        "language": "Python",
+        "score": 60
+      },
+      {
+        "full_name": "LearningCircuit/local-deep-research",
+        "html_url": "https://github.com/LearningCircuit/local-deep-research",
+        "stars": 8709,
+        "description": " ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encry",
+        "updated_at": "2026-07-13T15:26:44Z",
+        "language": "Python",
+        "score": 60
+      }
+    ],
+    "exploration_report_file": "02_MEMORY/exploration/exploration_20260714.md",
+    "debate_count": 3,
+    "last_debated_at": "2026-07-14T09:06:46.396263"
   }
 ]

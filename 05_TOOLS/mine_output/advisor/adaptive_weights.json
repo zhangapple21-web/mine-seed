@@ -1,0 +1,128 @@
+{
+  "version": 2,
+  "updated_at": "2026-07-14T10:26:11.872882",
+  "base_weights": {
+    "price_range": 15,
+    "change_moderate": 25,
+    "change_small": 10,
+    "turnover_healthy": 20,
+    "turnover_low_penalty": -5,
+    "cap_mid_large": 15,
+    "cap_small_penalty": -5,
+    "pe_reasonable": 15,
+    "pe_high_penalty": -5,
+    "liquidity_ok": 10
+  },
+  "adjusted_weights": {
+    "price_range": 13.8,
+    "change_moderate": 23.0,
+    "change_small": 10,
+    "turnover_healthy": 18.4,
+    "turnover_low_penalty": -5,
+    "cap_mid_large": 13.8,
+    "cap_small_penalty": -5,
+    "pe_reasonable": 13.9,
+    "pe_high_penalty": -5,
+    "liquidity_ok": 9.2
+  },
+  "factor_performance": {
+    "pe_reasonable": {
+      "count": 7,
+      "win_rate": 14.3,
+      "avg_return": -2.61
+    },
+    "price_range": {
+      "count": 8,
+      "win_rate": 12.5,
+      "avg_return": -2.93
+    },
+    "change_moderate": {
+      "count": 8,
+      "win_rate": 12.5,
+      "avg_return": -2.93
+    },
+    "turnover_healthy": {
+      "count": 8,
+      "win_rate": 12.5,
+      "avg_return": -2.93
+    },
+    "cap_mid_large": {
+      "count": 8,
+      "win_rate": 12.5,
+      "avg_return": -2.93
+    },
+    "liquidity_ok": {
+      "count": 8,
+      "win_rate": 12.5,
+      "avg_return": -2.93
+    }
+  },
+  "adjustment_history": [
+    {
+      "timestamp": "2026-07-14T10:26:11.871876",
+      "factor": "pe_reasonable",
+      "old_weight": 15,
+      "new_weight": 13.9,
+      "reason": "低胜率(14.3%)",
+      "win_rate": 14.3,
+      "avg_return": -2.61,
+      "sample_count": 7,
+      "period": "T+1"
+    },
+    {
+      "timestamp": "2026-07-14T10:26:11.871876",
+      "factor": "price_range",
+      "old_weight": 15,
+      "new_weight": 13.8,
+      "reason": "低胜率(12.5%)",
+      "win_rate": 12.5,
+      "avg_return": -2.93,
+      "sample_count": 8,
+      "period": "T+1"
+    },
+    {
+      "timestamp": "2026-07-14T10:26:11.871876",
+      "factor": "change_moderate",
+      "old_weight": 25,
+      "new_weight": 23.0,
+      "reason": "低胜率(12.5%)",
+      "win_rate": 12.5,
+      "avg_return": -2.93,
+      "sample_count": 8,
+      "period": "T+1"
+    },
+    {
+      "timestamp": "2026-07-14T10:26:11.871876",
+      "factor": "turnover_healthy",
+      "old_weight": 20,
+      "new_weight": 18.4,
+      "reason": "低胜率(12.5%)",
+      "win_rate": 12.5,
+      "avg_return": -2.93,
+      "sample_count": 8,
+      "period": "T+1"
+    },
+    {
+      "timestamp": "2026-07-14T10:26:11.871876",
+      "factor": "cap_mid_large",
+      "old_weight": 15,
+      "new_weight": 13.8,
+      "reason": "低胜率(12.5%)",
+      "win_rate": 12.5,
+      "avg_return": -2.93,
+      "sample_count": 8,
+      "period": "T+1"
+    },
+    {
+      "timestamp": "2026-07-14T10:26:11.872882",
+      "factor": "liquidity_ok",
+      "old_weight": 10,
+      "new_weight": 9.2,
+      "reason": "低胜率(12.5%)",
+      "win_rate": 12.5,
+      "avg_return": -2.93,
+      "sample_count": 8,
+      "period": "T+1"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "provider_failure",
+  "provider": "ollama",
+  "prev_status": "warming_up",
+  "new_status": "degraded",
+  "success_rate": 0.6666666666666666,
+  "total_calls": 3,
+  "timestamp": "2026-07-13T22:11:03.792883",
+  "analysis": "Provider 'ollama' 状态从 'warming_up' 降级到 'degraded'。成功率 2/3。建议：检查 API key/网络/配额，或切换到备用 Provider。"
+}

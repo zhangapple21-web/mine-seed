@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-13T20:11:07.367625",
-  "total_records": 6,
+  "generated_at": "2026-07-14T11:21:07.618938",
+  "total_records": 8,
   "periods": {
     "T+1": {
-      "total": 4,
+      "total": 6,
       "wins": 0,
-      "losses": 4,
+      "losses": 6,
       "win_rate": 0.0,
-      "avg_return": 0.0,
+      "avg_return": -1.64,
       "best_return": 0.0,
-      "worst_return": 0.0,
+      "worst_return": -6.74,
       "details": [
         {
           "rec_id": "sa_20260710_001",
@@ -62,6 +62,33 @@
           "recommend_price": 42.89,
           "close_price": 42.89,
           "return_pct": 0.0,
+          "signal_combo": [
+            "RSI健康区间",
+            "短期动量正向"
+          ]
+        },
+        {
+          "rec_id": "sa_20260713_001",
+          "ticker": "688111",
+          "date": "20260713",
+          "recommend_price": 233.76,
+          "close_price": 226.55,
+          "return_pct": -3.08,
+          "signal_combo": [
+            "MA多头排列",
+            "站稳中轨",
+            "RSI健康区间",
+            "量能放大",
+            "短期动量正向"
+          ]
+        },
+        {
+          "rec_id": "sa_20260713_002",
+          "ticker": "600362",
+          "date": "20260713",
+          "recommend_price": 42.89,
+          "close_price": 40.0,
+          "return_pct": -6.74,
           "signal_combo": [
             "RSI健康区间",
             "短期动量正向"

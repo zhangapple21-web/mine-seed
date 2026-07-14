@@ -1,7 +1,7 @@
 {
   "policy_id": "POLICY-001",
   "version": 1,
-  "status": "approved",
+  "status": "archived",
   "weights": {
     "price_range": 15,
     "change_moderate": 25,
@@ -30,5 +30,10 @@
   "approved_at": "2026-07-13T15:09:45.422445",
   "applied_at": "2026-07-13T15:09:45.422445",
   "approved_by": "system_init",
-  "history": []
+  "history": [
+    {
+      "event": "archived",
+      "timestamp": "2026-07-14T10:26:11.919210"
+    }
+  ]
 }

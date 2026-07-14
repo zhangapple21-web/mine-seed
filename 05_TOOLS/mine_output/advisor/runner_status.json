@@ -1,0 +1,14 @@
+{
+  "last_run_time": "2026-07-14T09:38:35.314490",
+  "last_run_success": false,
+  "steps": {
+    "performance_update": true,
+    "stock_advisor": false,
+    "telegram_push": true,
+    "optimization_check": false,
+    "state_update": true
+  },
+  "error_message": "",
+  "health_score": 45.0,
+  "recommendations": []
+}

@@ -1,0 +1,67 @@
+{
+  "topic": {
+    "id": "T-008",
+    "name": "Local LLM Optimization / Quantization",
+    "keywords": [
+      "llama.cpp",
+      "gguf quantization",
+      "local llm inference",
+      "ollama"
+    ],
+    "capability_ref": "local_inference",
+    "why_for_ace": "Ollama 是 ACE Provider 之一，需要持续跟踪本地模型优化技术"
+  },
+  "projects": [
+    {
+      "full_name": "ggml-org/llama.cpp",
+      "html_url": "https://github.com/ggml-org/llama.cpp",
+      "stars": 120248,
+      "description": "LLM inference in C/C++",
+      "updated_at": "2026-07-13T16:09:34Z",
+      "language": "C++",
+      "score": 60
+    },
+    {
+      "full_name": "h2oai/h2ogpt",
+      "html_url": "https://github.com/h2oai/h2ogpt",
+      "stars": 11976,
+      "description": "Private chat with local GPT with document, images, video, etc. 100% private, Apache 2.0. Supports oLLaMa, Mixtral, llama.cpp, and more. Demo: https://gpt.h2o.ai/ https://gpt-docs.h2o.ai/",
+      "updated_at": "2026-07-12T12:36:11Z",
+      "language": "Python",
+      "score": 60
+    },
+    {
+      "full_name": "abetlen/llama-cpp-python",
+      "html_url": "https://github.com/abetlen/llama-cpp-python",
+      "stars": 10481,
+      "description": "Python bindings for llama.cpp",
+      "updated_at": "2026-07-13T14:49:31Z",
+      "language": "Python",
+      "score": 60
+    },
+    {
+      "full_name": "intel/ipex-llm",
+      "html_url": "https://github.com/intel/ipex-llm",
+      "stars": 8863,
+      "description": "Accelerate local LLM inference and finetuning (LLaMA, Mistral, ChatGLM, Qwen, DeepSeek, Mixtral, Gemma, Phi, MiniCPM, Qwen-VL, MiniCPM-V, etc.) on Intel XPU (e.g., local PC with iGPU and NPU, discrete",
+      "updated_at": "2026-07-13T15:52:26Z",
+      "language": "Python",
+      "score": 60
+    },
+    {
+      "full_name": "LearningCircuit/local-deep-research",
+      "html_url": "https://github.com/LearningCircuit/local-deep-research",
+      "stars": 8709,
+      "description": " ~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local & Encry",
+      "updated_at": "2026-07-13T15:26:44Z",
+      "language": "Python",
+      "score": 60
+    }
+  ],
+  "findings": "这些项目围绕本地 LLM 推理与量化展开，核心是 C/C++ 高效实现（llama.cpp）及其语言绑定（llama‑cpp‑python），以及面向特定硬件的加速库（intel/ipex-llm）。h2ogpt 与 local-deep-research 展示了在私有化、跨模型、检索增强等上层应用的完整生态。整体来看，llama.cpp 为所有本地部署提供底层算子与量化支持，是 Ollama 依赖的关键组件；ipex-llm 则提供 Intel GPU/NPU 的专属加速，值得关注硬件多样化趋势。",
+  "most_relevant_project": "ggml-org/llama.cpp",
+  "question_for_ace": "为什么要在 ACE 的本地模型优化路线中同时关注通用 C++ 实现和硬件专属加速（如 Intel ipex-llm），是否应该建立统一的抽象层以兼容多种加速后端？",
+  "absorb_recommendation": "absorb",
+  "rationale": "llama.cpp 是 Ollama 的核心依赖，直接影响推理性能与量化方案；结合 ipex-llm 的硬件加速可以提升 ACE 在多平台部署的竞争力，值得纳入研究议程。",
+  "timestamp": "2026-07-14T00:11:39.540511"
+}

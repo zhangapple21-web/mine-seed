@@ -218,6 +218,108 @@ def check_and_optimize(logger: RunnerLogger) -> tuple[bool, int]:
         return False, 0
 
 
+def check_circuit_breaker(logger: RunnerLogger) -> bool:
+    """熔断检查：健康度低于阈值时暂停推荐
+    
+    熔断阈值策略：
+    - 健康度 >= 60: 正常推荐
+    - 40 <= 健康度 < 60: 警告状态，仍推荐但标记风险
+    - 健康度 < 40: 熔断触发，暂停推荐并强制优化
+    
+    额外条件：
+    - 连续5次T+1亏损也触发熔断
+    """
+    try:
+        from performance_tracker import PerformanceTracker
+        from adaptive_scorer import AdaptiveScorer
+        
+        tracker = PerformanceTracker()
+        scorer = AdaptiveScorer()
+        
+        health = scorer.get_health_score(tracker)
+        health_score = health.get('score', 0)
+        
+        # 检查推荐记录是否足够
+        summary = tracker.get_summary(10)
+        total_recs = summary.get('total_recommendations', 0)
+        
+        if total_recs < 5:
+            logger.log(f"  ✓ 推荐记录不足({total_recs}条)，跳过熔断检查")
+            return True
+        
+        # 条件1：健康度低于40
+        if health_score < 40:
+            logger.log(f"  ⚠ 熔断触发：健康度 {health_score}/100 < 40")
+            return False
+        
+        # 警告状态：健康度 40-60
+        if 40 <= health_score < 60:
+            logger.log(f"  ⚠ 警告：健康度 {health_score}/100，建议关注")
+        
+        # 条件2：连续5次T+1亏损
+        recent = sorted(tracker.records.values(), 
+                       key=lambda r: r.recommend_date, reverse=True)[:10]
+        consecutive_losses = 0
+        for rec in recent:
+            if rec.return_t1 is not None:
+                if rec.return_t1 < 0:
+                    consecutive_losses += 1
+                    if consecutive_losses >= 5:
+                        logger.log(f"  ⚠ 熔断触发：连续 {consecutive_losses} 次T+1亏损")
+                        return False
+                else:
+                    consecutive_losses = 0
+        
+        # 条件3：最近10次T+1胜率 < 20%
+        win_rate_t1 = summary.get('win_rates', {}).get('T+1')
+        if win_rate_t1 is not None and win_rate_t1 < 20:
+            logger.log(f"  ⚠ 熔断触发：最近10次T+1胜率仅 {win_rate_t1}% < 20%")
+            return False
+        
+        logger.log(f"  ✓ 熔断检查通过，健康度: {health_score}/100")
+        return True
+        
+    except Exception as e:
+        logger.log(f"  ⚠ 熔断检查异常: {e}", "WARNING")
+        return True
+
+
+def force_optimization(logger: RunnerLogger) -> bool:
+    """强制触发因子优化（熔断时调用）"""
+    logger.log("[F] 强制触发因子优化...")
+    
+    try:
+        from performance_tracker import PerformanceTracker
+        from adaptive_scorer import AdaptiveScorer
+        
+        tracker = PerformanceTracker()
+        scorer = AdaptiveScorer()
+        
+        # 执行自适应调整
+        adjusted, adjustments = scorer.analyze_and_adjust(tracker)
+        
+        if adjusted:
+            logger.log(f"  ✓ 权重调整完成: {len(adjustments)} 个因子")
+        else:
+            logger.log(f"  ⚠ 权重调整未触发，可能样本不足")
+        
+        # 生成优化任务
+        task = scorer.generate_optimization_task(tracker)
+        
+        # 保存优化任务
+        task_dir = ADVISOR_DIR.parent / "mine_output" / "advisor" / "optimization_tasks"
+        task_dir.mkdir(parents=True, exist_ok=True)
+        task_file = task_dir / f"task_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        task_file.write_text(json.dumps(task, ensure_ascii=False, indent=2), encoding='utf-8')
+        
+        logger.log(f"  ✓ 优化任务已保存: {task_file.name}")
+        return True
+        
+    except Exception as e:
+        logger.log(f"  ✗ 强制优化失败: {e}", "ERROR")
+        return False
+
+
 def update_current_state(logger: RunnerLogger) -> bool:
     """更新 CURRENT_STATE.md"""
     logger.log("[5/5] 更新系统状态...")
@@ -291,8 +393,21 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
         if evt_logger:
             evt_logger.log("PERF_UPDATE", "历史表现数据更新完成", {"success": step1_ok})
         
-        # 2. 运行荐股引擎（即使步骤1失败也继续）
-        step2_ok, recs = run_stock_advisor(logger)
+        # 熔断检查：健康度低于阈值时暂停推荐
+        health_ok = check_circuit_breaker(logger)
+        if not health_ok:
+            logger.log("  ⚠ 熔断触发：系统健康度过低，暂停今日推荐", "WARNING")
+            if evt_logger:
+                evt_logger.log("CIRCUIT_BREAKER", "健康度过低，暂停推荐", {"triggered": True})
+            
+            step2_ok = False
+            recs = []
+            
+            # 强制触发优化
+            force_optimization(logger)
+        else:
+            # 2. 运行荐股引擎（即使步骤1失败也继续）
+            step2_ok, recs = run_stock_advisor(logger)
         steps["stock_advisor"] = step2_ok
         recommendations = recs
         if evt_logger:
@@ -353,7 +468,7 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
 
 
 def schedule_task():
-    """注册 Windows 定时任务（工作日 8:15 执行）"""
+    """注册 Windows 定时任务（工作日 9:20 执行）"""
     print("注册 Windows 定时任务...")
     
     task_name = "ACE_StockAdvisor_Daily"
@@ -363,7 +478,7 @@ def schedule_task():
     cmd = (
         f'schtasks /create /tn "{task_name}" '
         f'/tr "\\"{python_path}\" \\"{script_path}\"" '
-        f'/sc weekly /d MON,TUE,WED,THU,FRI /st 08:15 '
+        f'/sc weekly /d MON,TUE,WED,THU,FRI /st 09:20 '
         f'/f /ru SYSTEM'
     )
     
@@ -373,7 +488,7 @@ def schedule_task():
     print("\n或者使用 Windows Task Scheduler GUI 创建任务:")
     print(f"  程序: {python_path}")
     print(f"  参数: {script_path}")
-    print(f"  触发器: 每周一~五 8:15")
+    print(f"  触发器: 每周一~五 9:20")
     print(f"  运行身份: SYSTEM（避免用户登录问题）")
 
 

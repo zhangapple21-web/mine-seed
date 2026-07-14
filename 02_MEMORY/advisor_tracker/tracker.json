@@ -97,7 +97,14 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-13T09:13:55",
-      "reviews": {}
+      "reviews": {
+        "T+1": {
+          "close_price": 226.55,
+          "return_pct": -3.08,
+          "reviewed_at": "2026-07-14T00:12:07.008257",
+          "target_date": "2026-07-14"
+        }
+      }
     },
     "sa_20260713_002": {
       "recommendation_id": "sa_20260713_002",
@@ -109,8 +116,42 @@
         "短期动量正向"
       ],
       "snapshot_time": "2026-07-13T09:13:55",
+      "reviews": {
+        "T+1": {
+          "close_price": 40.0,
+          "return_pct": -6.74,
+          "reviewed_at": "2026-07-14T00:12:08.057848",
+          "target_date": "2026-07-14"
+        }
+      }
+    },
+    "sa_20260714_001": {
+      "recommendation_id": "sa_20260714_001",
+      "date": "20260714",
+      "ticker": "601857",
+      "recommend_price": 9.8,
+      "signal_combo": [
+        "MA多头排列",
+        "站稳中轨",
+        "短期动量正向"
+      ],
+      "snapshot_time": "2026-07-14T09:34:07",
+      "reviews": {}
+    },
+    "sa_20260714_002": {
+      "recommendation_id": "sa_20260714_002",
+      "date": "20260714",
+      "ticker": "688981",
+      "recommend_price": 165.66,
+      "signal_combo": [
+        "MA多头排列",
+        "站稳中轨",
+        "RSI健康区间",
+        "短期动量正向"
+      ],
+      "snapshot_time": "2026-07-14T09:34:07",
       "reviews": {}
     }
   },
-  "last_updated": "2026-07-13T20:11:07.367625"
+  "last_updated": "2026-07-14T11:21:07.618431"
 }

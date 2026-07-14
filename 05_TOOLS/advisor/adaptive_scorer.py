@@ -136,29 +136,38 @@ class AdaptiveScorer:
         """获取所有权重"""
         return self.weights.copy()
     
-    def analyze_and_adjust(self, tracker: PerformanceTracker):
+    def analyze_and_adjust(self, tracker: PerformanceTracker, period: str = "T+1"):
         """
         分析历史表现并调整权重
+        
+        Args:
+            tracker: PerformanceTracker 实例
+            period: 统计周期，支持 "T+1" / "T+5"，默认 T+1
         
         返回:
           - 是否触发了权重调整
           - 调整详情
+        
+        P0 修复：默认使用 T+1 数据，打破"没有T+5→没有调整→没有T+5"的死循环
         """
-        # 获取因子有效性统计
-        factor_stats = tracker.get_factor_effectiveness()
+        # 获取因子有效性统计（使用指定周期）
+        factor_stats = tracker.get_factor_effectiveness(period)
         if not factor_stats:
-            logger.info("因子统计不足，跳过调整")
-            return False, " insufficient data"
+            logger.info(f"因子统计不足（{period}），跳过调整")
+            return False, "insufficient data"
         
         adjusted = False
         adjustments = []
+        
+        # 降低样本阈值，让调整更早启动
+        min_samples = 2 if period == "T+1" else 5
         
         for factor, stats in factor_stats.items():
             count = stats.get('count', 0)
             win_rate = stats.get('win_rate', 50)
             avg_return = stats.get('avg_return', 0)
             
-            if count < 5:
+            if count < min_samples:
                 continue  # 样本不足，不调整
             
             current_weight = self.weights.get(factor, self.DEFAULT_WEIGHTS.get(factor, 10))
@@ -205,6 +214,7 @@ class AdaptiveScorer:
                     "win_rate": win_rate,
                     "avg_return": avg_return,
                     "sample_count": count,
+                    "period": period,
                 }
                 self.adjustment_history.append(adj_record)
                 adjustments.append(adj_record)
@@ -276,7 +286,10 @@ class AdaptiveScorer:
     
     def _get_audit_evidence(self) -> Dict[str, Any]:
         """
-        获取推票后审计 Evidence
+        获取推票后审计 Evidence（经压缩门）
+        
+        C-019 约束：策略调整必须引用压缩后的审计数据，
+        不能直接读 audit_results.json。
         
         返回最近30天的审计统计，用于策略优化决策：
         - 平均审计评分
@@ -285,14 +298,21 @@ class AdaptiveScorer:
         - 规则引擎验证结果统计
         """
         try:
-            from post_recommendation_auditor import PostRecommendationAuditor
-            auditor = PostRecommendationAuditor()
-            summary = auditor.get_audit_summary(30)
+            # 通过 Compression Gate 获取审计数据
+            sys.path.insert(0, str(Path(__file__).parent.parent.parent / "02_MEMORY"))
+            from experience_engine import ExperienceEngine
+            ee = ExperienceEngine()
+            compressed = ee.get_audit_compression_latest()
+            
+            if "error" in compressed:
+                logger.debug(f"审计压缩数据不可用: {compressed.get('error')}")
+                return {"source": "unavailable", "error": compressed.get("error")}
             
             return {
-                "source": "post_recommendation_audit",
+                "source": "audit_compression_gate",
                 "period_days": 30,
-                "summary": summary,
+                "summary": compressed,
+                "strategy_adjustments": compressed.get("strategy_adjustments", []),
             }
         except Exception as e:
             logger.debug(f"获取审计证据失败: {e}")

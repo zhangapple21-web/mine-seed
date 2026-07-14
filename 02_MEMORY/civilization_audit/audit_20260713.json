@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-07-13T20:11:28.391233",
+  "timestamp": "2026-07-13T23:39:09.095858",
   "date": "20260713",
   "stats": {
-    "total_files": 2493,
+    "total_files": 2587,
     "duplicate_clusters": 135,
-    "duplicate_files": 573,
-    "zombie_files": 92,
+    "duplicate_files": 584,
+    "zombie_files": 94,
     "zombie_by_type": {
-      "unreferenced_module": 14,
-      "unreferenced_config": 78
+      "unreferenced_module": 15,
+      "unreferenced_config": 79
     },
     "missing_links": 4,
     "link_by_type": {
@@ -17,7 +17,7 @@
     "canonical_violations": 32,
     "retention_violations": 7,
     "memory_health": 18,
-    "civilization_coverage": 54.4,
+    "civilization_coverage": 54.3,
     "health_score": 4
   },
   "duplicates": [
@@ -186,8 +186,8 @@
         },
         {
           "path": "04_PROTOCOLS\\energy_budget.py",
-          "size": 10467,
-          "modified": "2026-07-12"
+          "size": 10765,
+          "modified": "2026-07-13"
         }
       ],
       "count": 2,
@@ -564,7 +564,7 @@
       "files": [
         {
           "path": "02_MEMORY\\civilization_audit\\audit_20260713.json",
-          "size": 502107,
+          "size": 521837,
           "modified": "2026-07-13"
         },
         {
@@ -732,97 +732,97 @@
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_192840.json",
           "size": 3047,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_193454.json",
           "size": 5412,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_194335.json",
           "size": 5410,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_194502.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_195741.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_201205.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_202552.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_202811.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_213854.json",
           "size": 5449,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_214253.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_215031.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_220559.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_222053.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_223557.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_225536.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_230832.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_232057.json",
           "size": 5450,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_233527.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260712_235800.json",
           "size": 5451,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         }
       ],
       "count": 19,
@@ -1235,10 +1235,65 @@
           "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_201100.json",
           "size": 4616,
           "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_202554.json",
+          "size": 6318,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_204001.json",
+          "size": 6295,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_205057.json",
+          "size": 6295,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_210957.json",
+          "size": 6295,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_212146.json",
+          "size": 6294,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_221148.json",
+          "size": 6512,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_224044.json",
+          "size": 6512,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_225119.json",
+          "size": 6512,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_230632.json",
+          "size": 6512,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_232106.json",
+          "size": 6512,
+          "modified": "2026-07-13"
+        },
+        {
+          "path": "02_MEMORY\\self_learning\\learn_cycle_20260713_233838.json",
+          "size": 6512,
+          "modified": "2026-07-13"
         }
       ],
-      "count": 81,
-      "recommendation": "保留 02_MEMORY\\self_learning\\learn_cycle_20260713_001207.json (最新), 考虑归档其他 80 个"
+      "count": 92,
+      "recommendation": "保留 02_MEMORY\\self_learning\\learn_cycle_20260713_001207.json (最新), 考虑归档其他 91 个"
     },
     {
       "base_name": "ace_config",
@@ -1571,12 +1626,12 @@
         {
           "path": "03_DATA\\worker_registry.json",
           "size": 4575,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "04_PROTOCOLS\\worker_registry.py",
-          "size": 10259,
-          "modified": "2026-07-12"
+          "size": 10582,
+          "modified": "2026-07-13"
         },
         {
           "path": "03_DATA\\WORKERS\\worker_registry.json",
@@ -1946,6 +2001,13 @@
     },
     {
       "type": "unreferenced_module",
+      "path": "05_TOOLS\\miner\\ntfy_send.py",
+      "reason": "模块 ntfy_send 未被任何文件 import",
+      "size": 805,
+      "modified": "2026-07-13"
+    },
+    {
+      "type": "unreferenced_module",
       "path": "05_TOOLS\\miner\\verify_sessions.py",
       "reason": "模块 verify_sessions 未被任何文件 import",
       "size": 2813,
@@ -1985,6 +2047,12 @@
       "reason": "模块 lexicon_categories 未被任何文件 import",
       "size": 18766,
       "modified": "2026-07-10"
+    },
+    {
+      "type": "unreferenced_config",
+      "path": "00_ROOT\\CIVILIZATION_INDEX.json",
+      "reason": "配置 CIVILIZATION_INDEX.json 未被代码引用",
+      "size": 6265
     },
     {
       "type": "unreferenced_config",
@@ -2050,7 +2118,7 @@
       "type": "unreferenced_config",
       "path": "02_MEMORY\\civilization_audit\\audit_20260713.json",
       "reason": "配置 audit_20260713.json 未被代码引用",
-      "size": 502107
+      "size": 521837
     },
     {
       "type": "unreferenced_config",
@@ -2624,8 +2692,8 @@
         {
           "path": "04_PROTOCOLS\\energy_budget.py",
           "top_dir": "04_PROTOCOLS",
-          "size": 10467,
-          "modified": "2026-07-12"
+          "size": 10765,
+          "modified": "2026-07-13"
         }
       ],
       "recommendation": "选择一个 canonical path（建议 02_MEMORY），删除其他 1 处副本"
@@ -3093,7 +3161,7 @@
           "path": "03_DATA\\worker_registry.json",
           "top_dir": "03_DATA",
           "size": 4575,
-          "modified": "2026-07-12"
+          "modified": "2026-07-13"
         },
         {
           "path": "03_DATA\\WORKERS\\worker_registry.json",
@@ -3104,8 +3172,8 @@
         {
           "path": "04_PROTOCOLS\\worker_registry.py",
           "top_dir": "04_PROTOCOLS",
-          "size": 10259,
-          "modified": "2026-07-12"
+          "size": 10582,
+          "modified": "2026-07-13"
         }
       ],
       "recommendation": "选择一个 canonical path（建议 03_DATA），删除其他 1 处副本"
@@ -3259,11 +3327,25 @@
     },
     {
       "base_pattern": "situation",
-      "total_files": 241,
+      "total_files": 255,
       "keep_latest_n": 7,
-      "excess": 234,
-      "latest": "02_MEMORY\\environment\\situation_20260713T200630.json",
+      "excess": 248,
+      "latest": "02_MEMORY\\environment\\situation_20260713T233541.json",
       "oldest_to_clean": [
+        "02_MEMORY\\environment\\situation_20260713T215141.json",
+        "02_MEMORY\\environment\\situation_20260713T213621.json",
+        "02_MEMORY\\environment\\situation_20260713T212146.json",
+        "02_MEMORY\\environment\\situation_20260713T210646.json",
+        "02_MEMORY\\environment\\situation_20260713T205057.json",
+        "02_MEMORY\\environment\\situation_20260713T203602.json",
+        "02_MEMORY\\environment\\situation_20260713T202148.json",
+        "02_MEMORY\\environment\\situation_20260713T200630.json",
+        "02_MEMORY\\environment\\situation_20260713T195110.json",
+        "02_MEMORY\\environment\\situation_20260713T193613.json",
+        "02_MEMORY\\environment\\situation_20260713T192113.json",
+        "02_MEMORY\\environment\\situation_20260713T190700.json",
+        "02_MEMORY\\environment\\situation_20260713T185124.json",
+        "02_MEMORY\\environment\\situation_20260713T183608.json",
         "02_MEMORY\\environment\\situation_20260713T182043.json",
         "02_MEMORY\\environment\\situation_20260713T180554.json",
         "02_MEMORY\\environment\\situation_20260713T175038.json",
@@ -3499,15 +3581,26 @@
         "02_MEMORY\\environment\\situation_20260710T195929.json",
         "02_MEMORY\\environment\\situation_20260710T194238.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 234 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 248 份超期文件"
     },
     {
       "base_pattern": "exp_debate_debate",
-      "total_files": 99,
+      "total_files": 110,
       "keep_latest_n": 7,
-      "excess": 92,
-      "latest": "02_MEMORY\\experience\\exp_debate_debate_20260713T201100.json",
+      "excess": 103,
+      "latest": "02_MEMORY\\experience\\exp_debate_debate_20260713T233838.json",
       "oldest_to_clean": [
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T210957.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T205057.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T204001.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T202554.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T201100.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T195804.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T193942.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T192341.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T190701.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T185124.json",
+        "02_MEMORY\\experience\\exp_debate_debate_20260713T183608.json",
         "02_MEMORY\\experience\\exp_debate_debate_20260713T182824.json",
         "02_MEMORY\\experience\\exp_debate_debate_20260713T180731.json",
         "02_MEMORY\\experience\\exp_debate_debate_20260713T175745.json",
@@ -3601,15 +3694,16 @@
         "02_MEMORY\\experience\\exp_debate_debate_20260712T202654.json",
         "02_MEMORY\\experience\\exp_debate_debate_20260712T202432.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 92 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 103 份超期文件"
     },
     {
       "base_pattern": "exp_seeded",
-      "total_files": 26,
+      "total_files": 27,
       "keep_latest_n": 7,
-      "excess": 19,
-      "latest": "02_MEMORY\\experience\\exp_seeded_20260713T142729_0.json",
+      "excess": 20,
+      "latest": "02_MEMORY\\experience\\exp_seeded_20260713T202555_0.json",
       "oldest_to_clean": [
+        "02_MEMORY\\experience\\exp_seeded_20260713T124315_0.json",
         "02_MEMORY\\experience\\exp_seeded_20260713T122259_0.json",
         "02_MEMORY\\experience\\exp_seeded_20260713T120801_0.json",
         "02_MEMORY\\experience\\exp_seeded_20260713T115338_0.json",
@@ -3630,15 +3724,26 @@
         "02_MEMORY\\experience\\exp_seeded_20260712T193454_8.json",
         "02_MEMORY\\experience\\exp_seeded_20260712T193454_9.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 19 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 20 份超期文件"
     },
     {
       "base_pattern": "beat",
-      "total_files": 228,
+      "total_files": 239,
       "keep_latest_n": 7,
-      "excess": 221,
-      "latest": "02_MEMORY\\heartbeat\\beat_20260713T194928.json",
+      "excess": 232,
+      "latest": "02_MEMORY\\heartbeat\\beat_20260713T231930.json",
       "oldest_to_clean": [
+        "02_MEMORY\\heartbeat\\beat_20260713T204930.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T203430.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T201929.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T200429.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T194928.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T193428.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T191931.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T190428.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T184928.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T183429.json",
+        "02_MEMORY\\heartbeat\\beat_20260713T181929.json",
         "02_MEMORY\\heartbeat\\beat_20260713T180429.json",
         "02_MEMORY\\heartbeat\\beat_20260713T174928.json",
         "02_MEMORY\\heartbeat\\beat_20260713T173428.json",
@@ -3861,15 +3966,29 @@
         "02_MEMORY\\heartbeat\\beat_20260710T155830.json",
         "02_MEMORY\\heartbeat\\beat_20260710T155841.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 221 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 232 份超期文件"
     },
     {
       "base_pattern": "ops_004",
-      "total_files": 232,
+      "total_files": 246,
       "keep_latest_n": 7,
-      "excess": 225,
-      "latest": "02_MEMORY\\heartbeat\\ops_004_20260713T200429.json",
+      "excess": 239,
+      "latest": "02_MEMORY\\heartbeat\\ops_004_20260713T233430.json",
       "oldest_to_clean": [
+        "02_MEMORY\\heartbeat\\ops_004_20260713T214932.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T213430.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T211930.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T210429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T204930.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T203430.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T201929.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T200429.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T194928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T193428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T191931.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T190428.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T184928.json",
+        "02_MEMORY\\heartbeat\\ops_004_20260713T183429.json",
         "02_MEMORY\\heartbeat\\ops_004_20260713T181929.json",
         "02_MEMORY\\heartbeat\\ops_004_20260713T180429.json",
         "02_MEMORY\\heartbeat\\ops_004_20260713T174928.json",
@@ -4096,110 +4215,121 @@
         "02_MEMORY\\heartbeat\\ops_004_20260710T165515.json",
         "02_MEMORY\\heartbeat\\ops_004_20260710T164118.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 225 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 239 份超期文件"
     },
     {
       "base_pattern": "learn_cycle",
-      "total_files": 100,
+      "total_files": 111,
       "keep_latest_n": 7,
-      "excess": 93,
-      "latest": "02_MEMORY\\self_learning\\learn_cycle_20260713_201100.json",
+      "excess": 104,
+      "latest": "02_MEMORY\\self_learning\\learn_cycle_20260713_233838.json",
       "oldest_to_clean": [
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_182824.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_180731.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_175745.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_174105.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_172030.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_170703.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_165050.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_163602.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_162311.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_160821.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_155526.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_153714.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_152213.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_150528.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_145029.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_143603.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_142729.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_135530.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_134056.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_132637.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_131216.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_125718.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_124315.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_122259.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_120801.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_115338.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_113723.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_112748.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_110751.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_105049.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_103549.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_102044.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_100548.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_095613.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_095600.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_093615.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_092042.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_090536.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_085538.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_084229.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_082713.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_080523.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_075025.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_073514.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_072745.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_070526.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_065200.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_063526.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_062024.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_060542.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_055514.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_053550.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_052042.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_050530.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_045027.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_044041.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_042633.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_041323.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_035040.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_033528.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_032134.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_031231.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_025014.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_023523.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_022025.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_020551.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_015555.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_013530.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_012025.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_010547.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_005108.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_004026.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_002036.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260713_001207.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_235800.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_233527.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_232057.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_230832.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_225536.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_223557.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_222053.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_220559.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_215031.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_214253.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_213854.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_202811.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_202552.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_201205.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_195741.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_194502.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_194335.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_210957.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_205057.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_204001.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_202554.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_192840.json",
         "02_MEMORY\\self_learning\\learn_cycle_20260712_193454.json",
-        "02_MEMORY\\self_learning\\learn_cycle_20260712_192840.json"
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_194335.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_194502.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_195741.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_201205.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_202552.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_202811.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_213854.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_214253.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_215031.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_220559.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_222053.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_223557.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_225536.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_230832.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_232057.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_233527.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260712_235800.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_001207.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_002036.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_004026.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_005108.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_010547.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_012025.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_013530.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_015555.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_020551.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_022025.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_023523.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_025014.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_031231.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_032134.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_033528.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_035040.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_041323.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_042633.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_044041.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_045027.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_050530.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_052042.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_053550.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_055514.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_060542.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_062024.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_063526.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_065200.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_070526.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_072745.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_073514.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_075025.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_080523.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_082713.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_084229.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_085538.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_090536.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_092042.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_093615.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_095600.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_095613.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_100548.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_102044.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_103549.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_105049.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_110751.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_112748.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_113723.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_115338.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_120801.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_122259.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_124315.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_125718.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_131216.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_132637.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_134056.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_135530.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_142729.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_143603.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_145029.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_150528.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_152213.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_153714.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_155526.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_160821.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_162311.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_163602.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_165050.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_170703.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_172030.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_174105.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_175745.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_180731.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_182824.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_183608.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_185124.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_190701.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_192341.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_193942.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_195804.json",
+        "02_MEMORY\\self_learning\\learn_cycle_20260713_201100.json"
       ],
-      "recommendation": "保留 latest + 最近 7 份，清理 93 份超期文件"
+      "recommendation": "保留 latest + 最近 7 份，清理 104 份超期文件"
     }
   ],
   "memory_health": {
@@ -6424,9 +6554,9 @@
   },
   "coverage": {
     "workspace_coverage": {
-      "score": 15.3,
+      "score": 15.1,
       "weight": 15,
-      "total_files": 1222,
+      "total_files": 1236,
       "referenced_files": 187
     },
     "memory_indexed": {
@@ -6554,7 +6684,7 @@
     "experience_indexed": {
       "score": 90,
       "weight": 10,
-      "experience_files": 131,
+      "experience_files": 147,
       "experience_dir_exists": true
     },
     "provider_health": {
@@ -6564,7 +6694,7 @@
       "alive_providers": 0
     },
     "_overall": {
-      "score": 54.4,
+      "score": 54.3,
       "total_weight": 100,
       "verdict": "部分接管 — 大量沉睡文明待唤醒"
     }
@@ -7296,7 +7426,7 @@
         "type": "question",
         "label": "[自学习] 检测到 20 次「新发现」成功模式，建议强化",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P2",
           "source": "self_learning",
           "created_at": "2026-07-13T12:43:15.342227"
@@ -7316,7 +7446,7 @@
         "type": "question",
         "label": "[自学习] 检测到 21 次「新发现」成功模式，建议强化",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P2",
           "source": "self_learning",
           "created_at": "2026-07-13T12:57:18.825381"
@@ -7336,7 +7466,7 @@
         "type": "question",
         "label": "[自学习] 检测到 22 次「新发现」成功模式，建议强化",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P2",
           "source": "self_learning",
           "created_at": "2026-07-13T13:12:16.563236"
@@ -7356,7 +7486,7 @@
         "type": "question",
         "label": "[自学习] 检测到 1 次「Provider 认证失败」模式，建议采取改进措施",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P1",
           "source": "self_learning",
           "created_at": "2026-07-13T13:12:16.572297"
@@ -7436,7 +7566,7 @@
         "type": "question",
         "label": "[自学习] 检测到 25 次「新发现」成功模式，建议强化",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P2",
           "source": "self_learning",
           "created_at": "2026-07-13T13:55:32.349017"
@@ -7456,7 +7586,7 @@
         "type": "question",
         "label": "为什么我们应该立即关注文件 'M 00_ROOT/PRINCIPLES.md' 的修改？",
         "properties": {
-          "status": "open",
+          "status": "answered",
           "priority": "P1",
           "source": "question_engine",
           "created_at": "2026-07-13T14:14:16.386544"
@@ -7480,6 +7610,26 @@
           "priority": "P1",
           "source": "question_engine",
           "created_at": "2026-07-13T14:14:16.398592"
+        },
+        "coords": {
+          "reality": 0.6,
+          "knowledge": 0.8,
+          "memory": 0.7,
+          "generation": 0.5,
+          "execution": 0.3,
+          "experience": 0.5
+        },
+        "civilization_score": 0.58
+      },
+      {
+        "id": "Q-047",
+        "type": "question",
+        "label": "[自学习] 检测到 1 次「降级链路生效」成功模式，建议强化",
+        "properties": {
+          "status": "open",
+          "priority": "P2",
+          "source": "self_learning",
+          "created_at": "2026-07-13T20:25:55.161677"
         },
         "coords": {
           "reality": 0.6,
@@ -8024,6 +8174,25 @@
         "civilization_score": 0.485
       },
       {
+        "id": "H-029",
+        "type": "hypothesis",
+        "label": "保持降级链路配置; 扩展更多 Provider 的 fallback",
+        "properties": {
+          "qid": "Q-047",
+          "confidence": 0.6,
+          "status": "proposed"
+        },
+        "coords": {
+          "reality": 0.4,
+          "knowledge": 0.7,
+          "memory": 0.5,
+          "generation": 0.8,
+          "execution": 0.2,
+          "experience": 0.3
+        },
+        "civilization_score": 0.485
+      },
+      {
         "id": "EXP-001",
         "type": "experiment",
         "label": "权限设置错误验证",
@@ -8354,6 +8523,114 @@
         "label": "立即分析新增的32个未跟踪文件的内容和重要性，并评估它们对当前系统的潜在影响。确认是否需进一步研究并制定相应应对措施。",
         "properties": {
           "qid": "Q-029",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-019",
+        "type": "decision",
+        "label": "加强新发现模式的监控与分析，并开展专项培训。同时收集更多相关数据以优化强化策略。",
+        "properties": {
+          "qid": "Q-037",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-020",
+        "type": "decision",
+        "label": "根据 Scout 和 Researcher 的建议，开始强化新发现模式的训练、设立专项奖励机制和加强与其他部门的合作。同",
+        "properties": {
+          "qid": "Q-038",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-021",
+        "type": "decision",
+        "label": "增加资源投入并组建专家团队来增强新发现模式的识别与分析能力；加强对现有系统的监控；收集用户反馈和建议。在系统性能优化完成",
+        "properties": {
+          "qid": "Q-039",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-022",
+        "type": "decision",
+        "label": "立即执行优化认证算法并增加故障检测频率的改进措施",
+        "properties": {
+          "qid": "Q-040",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-023",
+        "type": "decision",
+        "label": "执行相关分析、组织内部研讨会及小规模试点项目。",
+        "properties": {
+          "qid": "Q-044",
+          "outcome": "approved"
+        },
+        "coords": {
+          "reality": 0.5,
+          "knowledge": 0.7,
+          "memory": 0.6,
+          "generation": 0.4,
+          "execution": 0.8,
+          "experience": 0.8
+        },
+        "civilization_score": 0.61
+      },
+      {
+        "id": "D-024",
+        "type": "decision",
+        "label": "执行 Scout 提出的具体行动项：立即检查 'M 00_ROOT/PRINCIPLES.md' 的修改内容，并评估其对",
+        "properties": {
+          "qid": "Q-045",
           "outcome": "approved"
         },
         "coords": {
@@ -11099,9 +11376,9 @@
       {
         "id": "EXP_POOL",
         "type": "experience",
-        "label": "Experience Pool (130 entries)",
+        "label": "Experience Pool (146 entries)",
         "properties": {
-          "count": 130,
+          "count": 146,
           "dir_exists": true
         },
         "coords": {
@@ -11743,9 +12020,21 @@
         "properties": {}
       },
       {
+        "source": "Q-037",
+        "target": "D-019",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
         "source": "Q-038",
         "target": "H-022",
         "type": "has_hypothesis",
+        "properties": {}
+      },
+      {
+        "source": "Q-038",
+        "target": "D-020",
+        "type": "has_decision",
         "properties": {}
       },
       {
@@ -11755,9 +12044,21 @@
         "properties": {}
       },
       {
+        "source": "Q-039",
+        "target": "D-021",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
         "source": "Q-040",
         "target": "H-024",
         "type": "has_hypothesis",
+        "properties": {}
+      },
+      {
+        "source": "Q-040",
+        "target": "D-022",
+        "type": "has_decision",
         "properties": {}
       },
       {
@@ -11781,6 +12082,24 @@
       {
         "source": "Q-044",
         "target": "H-028",
+        "type": "has_hypothesis",
+        "properties": {}
+      },
+      {
+        "source": "Q-044",
+        "target": "D-023",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
+        "source": "Q-045",
+        "target": "D-024",
+        "type": "has_decision",
+        "properties": {}
+      },
+      {
+        "source": "Q-047",
+        "target": "H-029",
         "type": "has_hypothesis",
         "properties": {}
       },
@@ -12350,14 +12669,14 @@
       }
     ],
     "stats": {
-      "total_nodes": 261,
-      "total_edges": 140,
-      "density_pct": 0.206,
+      "total_nodes": 269,
+      "total_edges": 147,
+      "density_pct": 0.204,
       "node_types": {
-        "question": 46,
-        "hypothesis": 28,
+        "question": 47,
+        "hypothesis": 29,
         "experiment": 1,
-        "decision": 18,
+        "decision": 24,
         "capability": 13,
         "provider": 11,
         "constraint": 18,
@@ -12368,8 +12687,8 @@
         "worker": 17
       },
       "edge_types": {
-        "has_hypothesis": 28,
-        "has_decision": 18,
+        "has_hypothesis": 29,
+        "has_decision": 24,
         "has_experiment": 1,
         "requires": 12,
         "provides": 55,
@@ -12438,13 +12757,13 @@
       },
       "avg_dimension_scores": {
         "reality": 0.488,
-        "knowledge": 0.726,
-        "memory": 0.618,
-        "generation": 0.456,
-        "execution": 0.539,
-        "experience": 0.576
+        "knowledge": 0.725,
+        "memory": 0.617,
+        "generation": 0.457,
+        "execution": 0.542,
+        "experience": 0.58
       },
-      "avg_civilization_score": 0.561,
+      "avg_civilization_score": 0.562,
       "top_score_nodes": [
         {
           "id": "EXP-001",
@@ -12510,7 +12829,7 @@
     }
   },
   "dna_compliance": {
-    "total": 1138,
+    "total": 1206,
     "has_dna": 6,
     "missing_dna": [
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\advisor_tracker\\tracker.json",
@@ -12819,6 +13138,20 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T193613.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T195110.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T200630.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T202148.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T203602.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T205057.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T210646.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T212146.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T213621.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T215141.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T220629.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T222105.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T223649.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T225119.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T230632.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T232106.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\environment\\situation_20260713T233541.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\evolution\\backup_20260713_135238_test_contract_asset.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\evolution\\backup_20260713_135238_test_temp.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\evolution\\backup_20260713_185824_test_temp.json",
@@ -12924,9 +13257,24 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T193942.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T195804.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T201100.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T202554.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T204001.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T205057.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T210957.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T212146.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T221148.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T224044.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T225119.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T230632.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T232106.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_debate_debate_20260713T233838.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_innovation_ollama_20260711T190940.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_innovation_ollama_20260713T202545.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_innovation_ollama_20260713T221103.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_github_20260711T155631.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_ollama_20260711T190940.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_ollama_20260713T202545.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_provider_ollama_20260713T221103.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T193454_0.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T193454_1.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260712T193454_10.json",
@@ -12953,6 +13301,7 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260713T134056_0.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260713T135531_0.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260713T142729_0.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience\\exp_seeded_20260713T202555_0.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\experience_engine.py",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\exploration\\exploration_20260711.json",
@@ -13189,6 +13538,17 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T191931.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T193428.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T194928.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T200429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T201929.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T203430.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T204930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T210429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T211930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T220429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T223431.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T224930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T230429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\beat_20260713T231930.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260710T164118.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260710T165515.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260710T183139.json",
@@ -13421,6 +13781,20 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T193428.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T194928.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T200429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T201929.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T203430.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T204930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T210429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T211930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T213430.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T214932.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T220429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T221930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T223431.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T224930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T230429.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T231930.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\heartbeat\\ops_004_20260713T233430.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\knowledge\\dead_asset_registry.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\knowledge\\E2C_Closure_Principles_20260616.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\knowledge\\five_realms_kernel.md",
@@ -13494,6 +13868,8 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\daily\\2026-07-10-liveness.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\daily\\2026-07-10-tg-collections-index.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\daily\\2026-07-10-windows-observer.md",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\daily\\20260711-archivist.md",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\daily\\20260713-civilizer-report.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\drafts\\meyo_comment_dual_write.md",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\index.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\recent_memory\\memory_architecture.md",
@@ -13632,6 +14008,17 @@
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_193942.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_195804.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_201100.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_202554.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_204001.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_205057.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_210957.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_212146.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_221148.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_224044.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_225119.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_230632.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_232106.json",
+      "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_learning\\learn_cycle_20260713_233838.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_loop\\loop_20260710T155648.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_loop\\loop_20260710T160725.json",
       "C:\\Users\\User\\ace_workspace\\mine-seed\\02_MEMORY\\self_loop\\loop_20260710T161934.json",

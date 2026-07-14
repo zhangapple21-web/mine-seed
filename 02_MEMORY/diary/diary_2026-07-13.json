@@ -1,0 +1,46 @@
+{
+  "status": "generated",
+  "date": "2026-07-13",
+  "discoveries": 18,
+  "learnings": 46,
+  "repetitions": 14,
+  "follow_ups": 3,
+  "items": {
+    "discoveries": [
+      "[自学习] 检测到 13 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 14 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 15 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 16 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 17 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 18 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 19 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 20 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 21 次「新发现」成功模式，建议强化",
+      "[自学习] 检测到 22 次「新发现」成功模式，建议强化"
+    ],
+    "learnings": [
+      "辩论了 3 个问题，3 个通过",
+      "辩论了 2 个问题，1 个通过",
+      "辩论了 2 个问题，2 个通过",
+      "辩论了 3 个问题，2 个通过",
+      "辩论了 3 个问题，3 个通过",
+      "辩论了 3 个问题，3 个通过",
+      "辩论了 2 个问题，2 个通过",
+      "辩论了 2 个问题，2 个通过",
+      "辩论了 3 个问题，3 个通过",
+      "辩论了 3 个问题，2 个通过"
+    ],
+    "repetitions": [
+      "drawer_scan 出错: 'MissionProtocol' object has n",
+      "drawer_scan 出错: 'MissionProtocol' object has n",
+      "drawer_scan 出错: 'MissionProtocol' object has n",
+      "drawer_scan 出错: 'MissionProtocol' object has n",
+      "drawer_scan 出错: 'MissionProtocol' object has n"
+    ],
+    "follow_ups": [
+      "2 个决策需要人工干预",
+      "3 个决策需要人工干预",
+      "2 个决策需要人工干预"
+    ]
+  }
+}

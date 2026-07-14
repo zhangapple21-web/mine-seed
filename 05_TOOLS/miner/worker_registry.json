@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "workers": {
+    "local_miner_github_gpt-4o-mini": {
+      "provider": "local_miner",
+      "model": "github/gpt-4o-mini",
+      "corps": "GitHub",
+      "status": "alive",
+      "strengths": [
+        "reasoning",
+        "risk_assessment",
+        "structured_output",
+        "fast"
+      ],
+      "weaknesses": [],
+      "context_window": 32000,
+      "avg_latency": 10,
+      "success_rate": 0.9,
+      "rpm": 0,
+      "last_update": "2026-07-14T10:49:24.101762"
+    },
+    "local_miner_zhipu_glm-4-flash": {
+      "provider": "local_miner",
+      "model": "zhipu/glm-4-flash",
+      "corps": "GLM",
+      "status": "alive",
+      "strengths": [
+        "technical_analysis",
+        "risk_assessment",
+        "structured_output",
+        "fast",
+        "chinese"
+      ],
+      "weaknesses": [],
+      "context_window": 32000,
+      "avg_latency": 10,
+      "success_rate": 0.9,
+      "rpm": 0,
+      "last_update": "2026-07-14T10:49:24.101762"
+    },
+    "local_miner_openrouter_meta-llama_llama-3.3-70b-instruct:free": {
+      "provider": "local_miner",
+      "model": "openrouter/meta-llama/llama-3.3-70b-instruct:free",
+      "corps": "OpenRouter",
+      "status": "alive",
+      "strengths": [
+        "reasoning",
+        "risk_assessment",
+        "long_context"
+      ],
+      "weaknesses": [],
+      "context_window": 32000,
+      "avg_latency": 10,
+      "success_rate": 0.9,
+      "rpm": 0,
+      "last_update": "2026-07-14T10:49:24.101762"
+    },
+    "local_miner_ollama_qwen2.5-vl": {
+      "provider": "local_miner",
+      "model": "ollama/qwen2.5-vl",
+      "corps": "Ollama",
+      "status": "alive",
+      "strengths": [
+        "technical_analysis",
+        "risk_assessment",
+        "vision",
+        "chinese"
+      ],
+      "weaknesses": [],
+      "context_window": 32000,
+      "avg_latency": 10,
+      "success_rate": 0.9,
+      "rpm": 0,
+      "last_update": "2026-07-14T10:49:24.101762"
+    }
+  }
+}

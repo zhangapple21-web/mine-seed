@@ -190,5 +190,126 @@
     "evolved_status": "deferred_to_human",
     "evolved_at": "2026-07-13T14:27:29.680975",
     "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-019",
+    "qid": "Q-037",
+    "decision": "加强新发现模式的监控与分析，并开展专项培训。同时收集更多相关数据以优化强化策略。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的建议基于成功检测到20次新发现模式和其高潜在价值。虽然存在一些复杂性和数据量较小的担忧，但这些风险对决策影响不大。",
+    "created_at": "2026-07-13T21:39:03.599917",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-13T22:11:45.330252",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-020",
+    "qid": "Q-038",
+    "decision": "根据 Scout 和 Researcher 的建议，开始强化新发现模式的训练、设立专项奖励机制和加强与其他部门的合作。同时，进一步分析这些成功的模式以制定具体策略。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Researcher 的建议有较高的信心（75和65），且 Validator 虽然信心较低（55）但没有重大担忧。鉴于已检测到21次成功的新发现模式，并且已有其他类似项目的成功案例作为参考，因此决定批准这些提议。",
+    "created_at": "2026-07-13T21:42:37.134408",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-13T22:11:45.330252",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-021",
+    "qid": "Q-039",
+    "decision": "增加资源投入并组建专家团队来增强新发现模式的识别与分析能力；加强对现有系统的监控；收集用户反馈和建议。在系统性能优化完成后，进一步评估这些新模式对自学习系统的影响。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 提出的建议均显示对新发现模式进行强化的需求。尽管研究员认为需要进一步分析这些模式的具体内容和出现频率以评估其对系统的影响，但是鉴于 Scout 和 Validator 的建议至少有方 confidence 达到70%，并且没有重大 concerns。",
+    "created_at": "2026-07-13T21:55:04.694251",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-13T22:11:45.330252",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-022",
+    "qid": "Q-040",
+    "decision": "立即执行优化认证算法并增加故障检测频率的改进措施",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的建议中均提到了优化认证算法和增加故障检测频率，并且两者的信心度均已超过70%，这些措施可以有效解决Provider认证失败的问题。虽然仍有需要进一步验证的风险，但目前提供的证据已经足够支持采取行动。",
+    "created_at": "2026-07-13T21:57:27.119137",
+    "evolved_status": "failed",
+    "evolved_at": "2026-07-13T22:11:48.397442",
+    "evolved_reason": "Validation failed after apply"
+  },
+  {
+    "did": "D-023",
+    "qid": "Q-044",
+    "decision": "执行相关分析、组织内部研讨会及小规模试点项目。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 建议采取加强分析、研讨会和试点项目等措施，并且 Scout 的信心为80%，Validator 的信心为60%。虽然存在一些风险，但已有数据支持这一方案。",
+    "created_at": "2026-07-13T22:24:24.809287",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-13T22:40:44.085438",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-024",
+    "qid": "Q-045",
+    "decision": "执行 Scout 提出的具体行动项：立即检查 'M 00_ROOT/PRINCIPLES.md' 的修改内容，并评估其对系统状态的影响；根据评估结果决定是否需要调整系统配置或执行特定验证程序。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的建议一致且信心度均达95%，确认文件修改对系统有重要影响。当前的证据和分析表明应立即检查并评估这些修改内容，以确保系统的准确性和高效运行。",
+    "created_at": "2026-07-13T22:28:05.682358",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-13T22:40:44.085438",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-025",
+    "qid": "Q-031",
+    "decision": "增加资源投入，分析并推广14次成功模式背后的原因和适用条件，并收集更多样本数据以验证其普遍有效性。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的建议均显示对新发现模式的研究有较高的信心（75% 和 65%），且 Scouter 没有提出重大担忧，因此决定批准强化这一模式的研究。",
+    "created_at": "2026-07-13T23:54:30.178442",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-14T00:11:39.604524",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-026",
+    "qid": "Q-042",
+    "decision": "执行增强链路检测频率和引入故障诊断工具的措施。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的 Proposal 都建议加强链路检测和监控，并引用了历史数据支持。尽管存在一些风险，但当前系统中存在的问题表明这是必要的。",
+    "created_at": "2026-07-14T02:28:48.809523",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-14T02:58:40.440254",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-027",
+    "qid": "Q-043",
+    "decision": "启动专项研究团队，进行深入分析并优化新发现模式的检测算法。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的提案均建议强化新发现模式的检测和分析。尽管 Scout 提案的自信度为80%，但 Validator 指出此方案能显著提升系统效率，且现有资源和技术能够支持该工作。因此，决策批准了这一提议。",
+    "created_at": "2026-07-14T02:43:35.509435",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-14T02:58:40.440254",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-028",
+    "qid": "Q-034",
+    "decision": "批准建议并执行加强培训和推广、设立专项小组以及进行全面审核和优化现有记录的计划。",
+    "outcome": "approved",
+    "rationale": "根据 Scout 和 Validator 提出的意见，自学习数据记录了17次「新发现」成功模式，并且团队已有共识。这表明该模式在实际应用中有较高成功率。尽管存在一些风险，但这些可以被管理和缓解。",
+    "created_at": "2026-07-14T04:40:31.908020",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-14T05:12:44.605543",
+    "evolved_reason": "暂不支持自动演化此类型决策"
+  },
+  {
+    "did": "D-029",
+    "qid": "Q-047",
+    "decision": "立即执行 Scout 提案中的第一项建议：立即进行链路评估以确定降级链路的具体状况和影响范围，并在确认问题后进一步制定优化方案。",
+    "outcome": "approved",
+    "rationale": "Scout 和 Validator 的提案都涉及链路评估，且各自的信心分别为85%和75%，均超过70%，决策者可接受。此外，Validator 没有提出重大 concerns。",
+    "created_at": "2026-07-14T04:58:10.586224",
+    "evolved_status": "deferred_to_human",
+    "evolved_at": "2026-07-14T05:12:44.605543",
+    "evolved_reason": "暂不支持自动演化此类型决策"
   }
 ]
