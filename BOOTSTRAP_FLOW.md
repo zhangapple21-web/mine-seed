@@ -10,7 +10,7 @@
 ```
 Agent Start
    ↓
-[必读] ① Read AGENTS.md
+[必读] ① Read 00_ROOT/AGENTS.md
    ↓
 [必读] ② Read CIVILIZATION.md
    ↓
@@ -41,13 +41,14 @@ Repository Commit（每日）
 
 ## 步骤详解
 
-### ① 必读：AGENTS.md（< 1 分钟）
+### ① 必读：00_ROOT/AGENTS.md（< 1 分钟）
 
 **目的**：回答「我是谁」
 
 **必读字段**：
 - Identity
-- Mission
+- Role
+- Core Invariants
 - Long-term Goal
 - Repository Location
 - Never Rules

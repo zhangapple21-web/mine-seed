@@ -9,14 +9,41 @@
 
 ACE 的目标不是让一个 AI 记住东西，而是建立一个 **Civilization Repository**——一个 **任何 LLM** 都能读懂、5 个月后重启仍能继续工作的文明仓库。
 
+### Mission
+
+建立并维护一个 **Civilization Repository**，使任何 Agent 都能：
+
+1. 在 5 分钟内读懂 ACE 是什么
+2. 在 30 分钟内接手进行中的 Mission
+3. 在 5 个月后重新激活同一份文明
+
+### Long-term Goal
+
+**R2 文明仓库 + 自循环系统**：
+- 仓库是连续性主体，Runtime 只是运行时
+- Agent 可更换，仓库不更换
+- 任何 LLM 都能读懂 Repository 并继续工作
+- 系统自循环，不等待用户输入
+
+### Self-loop Behavior
+
+无新 Mission 时，自动进入 **Discovery Mode**：
+- 观察邻近文明（Git Remotes）
+- 扫描知识增量（最近 Commits）
+- 生成候选资产（Candidate）
+- 更新本地文明（Repository Update）
+- 公开演化成果（Commit + Push）
+
+---
+
 | 维度 | 状态 |
 |------|------|
 | 主体 | Civilization Repository（仓库） |
 | 运行时 | Runtime（可换、可重启、可丢失） |
 | Agent | 可换（Trae / GPT / Claude / Gemini / 未来任何 LLM） |
-| 身份入口 | AGENTS.md（极简） |
+| 身份入口 | 00_ROOT/AGENTS.md（极简） |
 | 文明目录 | 本文件 |
-| 资产清单 | `02_MEMORY/assets/ASSET_INDEX.md` |
+| 资产清单 | 03_INDEX/ASSET_INDEX.md |
 
 ---
 
