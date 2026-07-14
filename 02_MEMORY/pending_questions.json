@@ -43,5 +43,14 @@
     "capability": "discovery",
     "dedup_key": "tg_favorites_m4",
     "timestamp": "2026-07-14T19:30:00"
+  },
+  {
+    "question": "套壳逻辑(接口伪装+模型路由)是否可强化OPS-003的Router设计表述？现有_call_llm()统一接口+降级链已是此模式实现，需评估是否升级为正式架构描述",
+    "source": "GPT_Discussion",
+    "priority": "P3",
+    "status": "pending",
+    "capability": "architecture",
+    "dedup_key": "shell_routing_router_design",
+    "timestamp": "2026-07-14T19:45:00"
   }
 ]
