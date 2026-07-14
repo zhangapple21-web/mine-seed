@@ -40,16 +40,7 @@
 | **Evidence** | [AR-001](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/architecture/AR-001-four-layer-architecture.md#L32): "Identity 不得包含 Prompt"；第34行: "Runtime 不得包含 Principles/Protocols" |
 | **Reason** | 系统必须有不可逾越的边界。没有边界，系统会自我毁灭。这不是实现选择，而是存在前提。 |
 
-### INV-003: Identity
-
-| 字段 | 内容 |
-|------|------|
-| **Concept** | Identity（身份） |
-| **Layer** | Invariant |
-| **Evidence** | [AX-002](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/axiom/AX-002-repository-supremacy.md#L16): "Repository = 文明，LLM = 临时运载体" |
-| **Reason** | 系统的身份由 Repository 定义，不是由 Runtime 或 LLM 定义。更换 LLM 后，只要 Repository 不变，系统还是"它"。 |
-
-### INV-004: Observation
+### INV-003: Observation
 
 | 字段 | 内容 |
 |------|------|
@@ -309,14 +300,12 @@
 Goal
     │
     ▼
-Continuity
-    │
-    ▼
 Invariant
     │
+    ├── Continuity
     ├── Boundary
-    ├── Identity
-    └── Observation
+    ├── Observation
+    └── Risk Conversion
     │
     ▼
 Capability

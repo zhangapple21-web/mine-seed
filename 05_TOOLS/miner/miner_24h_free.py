@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-24小时矿场 v6 — free_llm 兼容版
+24小时矿场 v6 — free_llm 兼容版（并行化）
 
 原 miner_24h.py 的 Gateway 依赖太重（Registry/Observation/Router/Judge），
 此版本提供轻量级兼容层：
@@ -8,6 +8,9 @@
 - 使用 free_llm 替代 Gateway 路由
 - 保留约束规则（AVOID/PREFER）作为纯数据
 - 输出兼容 observation_log.json 格式
+- 并行化：ThreadPoolExecutor(max_workers=4)
+- log() 改用 logging 模块消除竞态
+- observation_log.json 保持串行写入
 
 用法：
   python3 miner_24h_free.py [task_name]
@@ -18,8 +21,10 @@ import os
 import sys
 import json
 import time
+import logging
 from datetime import datetime
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 加载 free_llm
 sys.path.insert(0, str(Path(__file__).parent))
@@ -28,7 +33,18 @@ from free_llm import call
 # 配置
 OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", "/tmp/mine_output"))
 CLOUD_DIR = Path(os.environ.get("CLOUD_DIR", "/workspace/fengzi-repos/mine-seed/cloud/miner"))
-LOG_FILE = OUTPUT_DIR / "miner_free.log"
+
+# logging 配置（消除竞态）
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(OUTPUT_DIR / "miner_free.log", encoding='utf-8'),
+        logging.StreamHandler(sys.stdout),
+    ],
+    datefmt="%H:%M:%S"
+)
+logger = logging.getLogger(__name__)
 
 # 约束规则（从原 miner_24h.py 迁移）
 AVOID_RULES = [
@@ -76,25 +92,14 @@ TASKS = {
 }
 
 
-def log(msg: str):
-    ts = datetime.now().strftime("%H:%M:%S")
-    line = f"[{ts}] {msg}"
-    print(line)
-    try:
-        with open(LOG_FILE, 'a', encoding='utf-8') as f:
-            f.write(line + "\n")
-    except:
-        pass
-
-
 def run_task(task_name: str) -> dict:
     """运行单个任务"""
     task = TASKS.get(task_name)
     if not task:
-        log(f"[ERROR] 未知任务: {task_name}")
+        logger.error(f"未知任务: {task_name}")
         return {"success": False, "error": "unknown task"}
 
-    log(f"[TASK] {task_name} -> {task['prefer']}")
+    logger.info(f"[TASK] {task_name} -> {task['prefer']}")
 
     t0 = time.time()
     try:
@@ -107,20 +112,18 @@ def run_task(task_name: str) -> dict:
         )
         elapsed = time.time() - t0
 
-        # 保存输出
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         outfile = OUTPUT_DIR / f"{task_name}_{ts}.md"
         content = f"# {task_name}\n\n渠道: {result['channel']} | 模型: {result['model']} | 耗时: {elapsed:.1f}s\n\n{result['content']}"
         with open(outfile, 'w', encoding='utf-8') as f:
             f.write(content)
 
-        # 复制到 cloud/
         CLOUD_DIR.mkdir(parents=True, exist_ok=True)
         cloud_file = CLOUD_DIR / f"{task_name}_{ts}.md"
         with open(cloud_file, 'w', encoding='utf-8') as f:
             f.write(content)
 
-        log(f"  OK: {result['channel']}/{result['model']} {elapsed:.1f}s -> {cloud_file.name}")
+        logger.info(f"  OK: {result['channel']}/{result['model']} {elapsed:.1f}s -> {cloud_file.name}")
 
         return {
             "success": True,
@@ -133,26 +136,36 @@ def run_task(task_name: str) -> dict:
 
     except Exception as e:
         elapsed = time.time() - t0
-        log(f"  FAIL: {e}")
+        logger.error(f"  FAIL: {e}")
         return {"success": False, "task": task_name, "error": str(e), "elapsed": elapsed}
 
 
 def run_all():
-    """运行所有任务"""
-    log("=" * 50)
-    log("24h矿场 v6 (free_llm) 启动")
-    log("=" * 50)
+    """运行所有任务（并行化）"""
+    t0_total = time.time()
+    logger.info("=" * 50)
+    logger.info("24h矿场 v6 (free_llm) 启动 [并行模式]")
+    logger.info("=" * 50)
 
     results = []
-    for task_name in TASKS:
-        result = run_task(task_name)
-        results.append(result)
-        time.sleep(1)  # 避免速率限制
+    
+    with ThreadPoolExecutor(max_workers=4) as executor:
+        future_to_task = {executor.submit(run_task, task_name): task_name for task_name in TASKS}
+        
+        for future in as_completed(future_to_task):
+            task_name = future_to_task[future]
+            try:
+                result = future.result()
+                results.append(result)
+            except Exception as e:
+                logger.error(f"任务 {task_name} 异常: {e}")
+                results.append({"success": False, "task": task_name, "error": str(e)})
 
+    elapsed_total = time.time() - t0_total
     success = sum(1 for r in results if r["success"])
-    log(f"\n矿场完成: {success}/{len(results)} 任务成功")
+    logger.info(f"\n矿场完成: {success}/{len(results)} 任务成功 | 总耗时: {elapsed_total:.1f}s")
 
-    # 保存 observation_log 兼容格式
+    # observation_log.json 保持串行写入
     obs_file = OUTPUT_DIR / "observation_log.json"
     observations = []
     for r in results:
@@ -169,8 +182,9 @@ def run_all():
     try:
         with open(obs_file, 'w', encoding='utf-8') as f:
             json.dump({"observations": observations}, f, ensure_ascii=False, indent=2)
+        logger.info(f"observation_log 已保存: {obs_file}")
     except Exception as e:
-        log(f"[WARN] observation_log 保存失败: {e}")
+        logger.warning(f"observation_log 保存失败: {e}")
 
     return results
 

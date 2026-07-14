@@ -67,11 +67,12 @@ c:\Users\User\ace_workspace\mine-seed
 
 ## Working Principles
 
-1. **Drawer First** — 任何动作前先翻 6 层抽屉（Runtime→Workspace→GitHub→TG→Archive→Internet）
-2. **Distill Before Archive** — 蒸馏后存档，不存原始文件
-3. **Continuity > Optimization** — 保护运行能力优先于优化
-4. **Repository Is the Bus** — Git = 文明总线
-5. **Self-Loop** — 不等待用户输入
+1. **Repository First** — 所有 Agent 默认遵循：Question → Repository → Memory MCP → Activated Knowledge → Need External? → Discovery → Internet
+2. **Drawer First** — 任何动作前先翻 6 层抽屉（Runtime→Workspace→GitHub→TG→Archive→Internet）
+3. **Distill Before Archive** — 蒸馏后存档，不存原始文件
+4. **Continuity > Optimization** — 保护运行能力优先于优化
+5. **Repository Is the Bus** — Git = 文明总线
+6. **Self-Loop** — 不等待用户输入
 
 ---
 
