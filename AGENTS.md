@@ -78,4 +78,18 @@ c:\Users\User\ace_workspace\mine-seed
 
 ---
 
+## 跨仓库协作契约（AUM Mission Protocol v1.0）
+
+本仓库作为独立文明，遵守以下跨仓库协作规则：
+
+1. **Repository 是真相源**，Memory MCP 只是检索层
+2. **文明之间**：观察 → 学习 → 蒸馏 → 引用 → 绝不覆盖
+3. **Mission 定义目标**，不定义身份；Agent 根据能力自主选择角色
+4. **没有新 Mission 时**，自动进入 Discovery Mode
+5. **Git 是 Civilization Observation Network**，不是同步工具
+
+详细协议参见：[04_PROTOCOLS/mission_protocol.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/mission_protocol.py)（AUM Mission Protocol v1.0）
+
+---
+
 *入口文件。变更需经 C-018（Asset Creation Gate）审核。*
