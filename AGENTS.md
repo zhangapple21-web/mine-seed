@@ -74,7 +74,7 @@ c:\Users\User\ace_workspace\mine-seed
 5. **Repository Is the Bus** — Git = 文明总线
 6. **Self-Loop** — 不等待用户输入
 
-**Mission 执行统一遵循** [04_PROTOCOLS/mission_protocol.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/mission_protocol.py) **（AUM Mission Protocol v1.0）**。无 Mission 时自动进入 Discovery Mode。
+**Mission 执行统一遵循** [AUM Mission Protocol v1.0](https://github.com/zhangapple21-web/aum-protocol/blob/main/aum-mission-protocol-v1.0.md) **（远程权威版本）**。无 Mission 时自动进入 Discovery Mode。
 
 ---
 
@@ -88,7 +88,7 @@ c:\Users\User\ace_workspace\mine-seed
 4. **没有新 Mission 时**，自动进入 Discovery Mode
 5. **Git 是 Civilization Observation Network**，不是同步工具
 
-详细协议参见：[04_PROTOCOLS/mission_protocol.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/mission_protocol.py)（AUM Mission Protocol v1.0）
+详细协议参见：[AUM Mission Protocol v1.0](https://github.com/zhangapple21-web/aum-protocol/blob/main/aum-mission-protocol-v1.0.md)（远程权威版本）
 
 ---
 
