@@ -326,13 +326,13 @@ def step_daily_discovery(logger: LoopLogger) -> bool:
     """
     logger.log("[7/9] Daily Discovery")
     
-    # Check if daily discovery script exists
-    discovery_script = PROTOCOLS_DIR / "daily_discovery.py"
+    # Check if daily discovery script exists (in 05_TOOLS)
+    discovery_script = TOOLS_DIR / "daily_discovery_runner.py"
     if discovery_script.exists():
         success, _ = run_script(discovery_script, timeout=600, logger=logger)
         return success
     else:
-        logger.log("  ⚠ daily_discovery.py not found, skipping", "WARNING")
+        logger.log("  ⚠ daily_discovery_runner.py not found, skipping", "WARNING")
         return True  # Not critical
 
 

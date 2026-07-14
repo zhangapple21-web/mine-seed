@@ -25,5 +25,23 @@
     "capability": "audit",
     "dedup_key": "gpt_archive_validation_flow",
     "timestamp": "2026-07-14T19:05:32.969735"
+  },
+  {
+    "question": "TG收藏夹中'无限制模式'相关内容是否包含对系统架构成长有价值的设计模式或约束？",
+    "source": "TG_Favorites",
+    "priority": "P2",
+    "status": "pending",
+    "capability": "discovery",
+    "dedup_key": "tg_favorites_unrestricted_mode",
+    "timestamp": "2026-07-14T19:30:00"
+  },
+  {
+    "question": "TG收藏夹中'M4'相关内容是否包含对系统模块设计有价值的参考架构或协议？",
+    "source": "TG_Favorites",
+    "priority": "P2",
+    "status": "pending",
+    "capability": "discovery",
+    "dedup_key": "tg_favorites_m4",
+    "timestamp": "2026-07-14T19:30:00"
   }
 ]
