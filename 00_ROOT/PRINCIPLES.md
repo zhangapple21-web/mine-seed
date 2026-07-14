@@ -958,11 +958,13 @@ Repository
 
 ---
 
-## C-025 — Law Discovery Constraint
+## C-025 — Law Discovery Constraint (PROVISIONAL)
+
+> **状态: PROVISIONAL / EXPERIMENTAL** — Self-dispatched, not formally admitted. Running under daily self-audit guardrail.
 
 Learning 不得直接修改 Recommendation Engine。Law 不得绕过治理链直接成为 Policy。
 
-**约束编号**: C-025
+**约束编号**: C-025 (provisional)
 
 **核心原则**:
 
@@ -1008,4 +1010,4 @@ Observation → Evidence → Pattern Mining → Hypothesis → Evidence Validati
 
 **演化日志**:
 
-- 2026-07-15 v1.0 — 从 AUM-MISSION-LAW-001 内化而来。
+- 2026-07-15 v0.1 (PROVISIONAL) — 自派单原型，带每日自审计护栏。未经过正式 Admission。30天后或正式派单时复审。

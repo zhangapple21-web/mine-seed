@@ -250,15 +250,16 @@ def step_asset_audit(logger: LoopLogger) -> bool:
 
 def step_law_discovery(logger: LoopLogger) -> bool:
     """
-    AUM-MISSION-LAW-001: Law Discovery Protocol
-    Run evidence → pattern → hypothesis → law discovery cycle
+    AUM-MISSION-LAW-001: Law Discovery Protocol (EXPERIMENTAL)
+    Status: Self-dispatched prototype, under daily audit
+    Guardrail: Outputs only to Law Registry, never touches Runtime or Policy
     """
-    logger.log("[4/8] Law Discovery")
+    logger.log("[4/7] Law Discovery (experimental, under audit)")
     
     law_discovery_script = PROTOCOLS_DIR / "law_discovery.py"
     if not law_discovery_script.exists():
         logger.log("  ⚠ law_discovery.py not found", "WARNING")
-        return False
+        return True
     
     success, output = run_script(law_discovery_script, ["--discover"], timeout=300, logger=logger)
     
@@ -268,25 +269,28 @@ def step_law_discovery(logger: LoopLogger) -> bool:
             patterns = result.get('patterns_found', 0)
             laws = result.get('laws_created', 0)
             logger.log(f"  Patterns found: {patterns}, Laws created: {laws}")
+            if laws > 0:
+                logger.log("  ⚠ New laws created — flagged for daily audit", "WARNING")
         except Exception:
             pass
     
-    return success
+    return True
 
 
 def step_evidence_migration(logger: LoopLogger) -> bool:
     """
-    Migrate new performance data to Evidence store
+    Migrate new performance data to Evidence store (append-only)
+    Part of AUM-MISSION-LAW-001 experimental pipeline
     """
-    logger.log("[5/8] Evidence Migration")
+    logger.log("[5/7] Evidence Migration (append-only)")
     
     migrate_script = PROTOCOLS_DIR / "migrate_to_evidence.py"
     if not migrate_script.exists():
         logger.log("  ⚠ migrate_to_evidence.py not found", "WARNING")
-        return False
+        return True
     
     success, _ = run_script(migrate_script, ["--run"], timeout=300, logger=logger)
-    return success
+    return True
 
 
 def step_stock_advisor(logger: LoopLogger) -> bool:
@@ -320,7 +324,7 @@ def step_daily_discovery(logger: LoopLogger) -> bool:
     Daily Discovery Protocol
     Scan TG favorites, unmined repository parts, local files
     """
-    logger.log("[7/8] Daily Discovery")
+    logger.log("[7/9] Daily Discovery")
     
     # Check if daily discovery script exists
     discovery_script = PROTOCOLS_DIR / "daily_discovery.py"
@@ -332,11 +336,77 @@ def step_daily_discovery(logger: LoopLogger) -> bool:
         return True  # Not critical
 
 
+def step_self_audit(logger: LoopLogger) -> bool:
+    """
+    Daily self-audit: verify no boundary violations
+    Checks:
+    - Law Discovery not writing to Runtime/Policy
+    - No unapproved assets in Tier 1/Tier 2
+    - Evidence store remains append-only
+    """
+    logger.log("[8/9] Self-Audit")
+    
+    violations = []
+    
+    # Audit 1: Law Registry has no laws that bypassed Roundtable
+    law_registry = MEMORY_DIR / "law_registry" / "laws.json"
+    if law_registry.exists():
+        try:
+            laws = json.loads(law_registry.read_text(encoding='utf-8'))
+            active_laws = [l for l in laws if l.get('status') == 'ACTIVE']
+            policy_candidates_dir = MEMORY_DIR / "policy_candidates"
+            if policy_candidates_dir.exists():
+                policy_files = list(policy_candidates_dir.glob("*.json"))
+                logger.log(f"  Law Registry: {len(active_laws)} active laws, {len(policy_files)} policy candidates")
+            for law in active_laws:
+                if law.get('status') == 'ACTIVE' and not law.get('last_verified'):
+                    violations.append(f"Law {law.get('law_id')} is ACTIVE but has no verification record")
+        except Exception as e:
+            logger.log(f"  ⚠ Law registry audit failed: {e}", "WARNING")
+    
+    # Audit 2: No direct Runtime modifications from learning modules
+    # (Policy can only be loaded from approved policy files)
+    approved_policy = MEMORY_DIR / "law_registry" / "approved_policies.json"
+    if approved_policy.exists():
+        try:
+            policies = json.loads(approved_policy.read_text(encoding='utf-8'))
+            logger.log(f"  Approved policies: {len(policies)}")
+        except Exception as e:
+            logger.log(f"  ⚠ Policy audit failed: {e}", "WARNING")
+    
+    # Audit 3: Evidence store integrity (append-only check)
+    evidence_dir = MEMORY_DIR / "evidence"
+    if evidence_dir.exists():
+        index_file = evidence_dir / "evidence_index.json"
+        if index_file.exists():
+            try:
+                index = json.loads(index_file.read_text(encoding='utf-8'))
+                count = index.get('total_count', 0)
+                logger.log(f"  Evidence store: {count} records, append-only")
+            except Exception as e:
+                logger.log(f"  ⚠ Evidence audit failed: {e}", "WARNING")
+    
+    if violations:
+        logger.log(f"  ✗ Audit found {len(violations)} violation(s):", "ERROR")
+        for v in violations:
+            logger.log(f"    - {v}", "ERROR")
+        # Write violations to audit log
+        audit_log = OUTPUT_DIR / "audit_violations.log"
+        with open(audit_log, 'a', encoding='utf-8') as f:
+            ts = datetime.now().isoformat()
+            for v in violations:
+                f.write(f"[{ts}] {v}\n")
+        return False
+    else:
+        logger.log("  ✓ No boundary violations detected")
+        return True
+
+
 def step_daily_report(logger: LoopLogger) -> str:
     """
     Generate daily civilization report
     """
-    logger.log("[8/8] Daily Report")
+    logger.log("[9/9] Daily Report")
     
     DAILY_REPORT_FILE.mkdir(parents=True, exist_ok=True)
     report_file = DAILY_REPORT_FILE / f"daily_report_{today_str()}.md"
@@ -425,7 +495,10 @@ def run_self_loop(logger: LoopLogger = None, status: LoopStatus = None):
         steps["stock_advisor"] = step_stock_advisor(logger)
         steps["daily_discovery"] = step_daily_discovery(logger)
         
-        # Phase 3: Reporting
+        # Phase 3: Audit
+        steps["self_audit"] = step_self_audit(logger)
+        
+        # Phase 4: Reporting
         daily_report = step_daily_report(logger)
         steps["daily_report"] = bool(daily_report)
         

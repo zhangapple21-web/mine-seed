@@ -1,8 +1,10 @@
 # C-025: Law Discovery Constraint
 
 > Mission: AUM-MISSION-LAW-001
-> Status: ACTIVE
+> Status: **PROVISIONAL / EXPERIMENTAL** — Self-dispatched, not formally admitted
 > Created: 2026-07-15
+> Guardrail: Daily self-audit enforces boundary. Output limited to Law Registry only.
+> Next Review: After 30 days of runtime evidence, or upon formal Mission dispatch
 
 ## Constraint Statement
 

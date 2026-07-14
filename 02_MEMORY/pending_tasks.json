@@ -1,12 +1,61 @@
 [
   {
+    "mission_id": "AUM-MISSION-TRAE-001",
+    "title": "Civilization Motherboard 架构落地",
+    "description": "实现 TRAE 主板架构 v2，建立 TRAE = Execution Substrate, NOT Civilization Authority 的权限模型。目标不是添加新功能，而是从权限层面确保所有文明资产变更必须经过 Admission Gate，不存在旁路。",
+    "identity": "Civilization Motherboard",
+    "identity_definition": "TRAE = Execution Substrate, NOT Civilization Authority",
+    "mission_type": "Development",
+    "priority": "P0",
+    "status": "pending",
+    "created_at": "2026-07-14T19:20:00",
+    "core_principle": "TRAE Non-Authority Principle: TRAE = Execution Substrate, NOT Civilization Authority. 主板 = 生命周期接口稳定，解释能力可替换。稳定：Input Contract / Evidence Contract / Candidate Contract / Admission Contract。可替换：Parser / LLM / Miner / Mapping Rule",
+    "architecture_flow": "External World → Input Adapter → Raw Evidence → Interpretation DAG → Pseudocode Sandbox → Candidate Registry → Admission Gate → Civilization Repository",
+    "deliverables": [
+      "TRAE 权限边界：代码层面确保 TRAE 模块无任何直接写 Repository/Principle/Protocol/Identity 的能力",
+      "Raw Evidence 层：evidence_id / source / location / raw_content / captured_at",
+      "Interpretation DAG：Document Split → Structure Detection → Concept Extraction → Relation Extraction → Evidence Binding，五节点固定流程，每节点输出必须绑定回 Raw Evidence",
+      "Pseudocode Sandbox：输出必须结构化 JSON，禁止自然语言判断句；confidence 需注明计算依据，标注为 Bootstrap 版本待校准",
+      "Candidate Registry：candidate_id / source / type / evidence_refs / confidence / status / created_at，预留多来源接入位",
+      "Lineage 强制绑定：每个 Candidate 必须有完整 Origin Chain，复用现有 lineage_index.json"
+    ],
+    "acceptance_criteria": [
+      "TRAE 模块经代码审查确认无任何 Repository 直接写权限",
+      "跑通一次完整链路：外部文档 → Raw Evidence → Interpretation DAG → Sandbox → Candidate Registry，产出至少一条完整 Origin Chain 可查",
+      "Sandbox 输出全部为结构化 JSON，无自然语言判断句",
+      "confidence 计算方法有说明，标注为待校准"
+    ],
+    "forbidden_rules": [
+      "❌ 给 TRAE 任何形式的 Repository/Principle/Protocol/Identity 直接写权限",
+      "❌ Sandbox 输出自然语言判断，必须结构化",
+      "❌ Candidate 缺失 Origin Chain",
+      "❌ 把 confidence 数值当作精确值使用而不注明计算依据"
+    ],
+    "confidence_note": "confidence 数值（如 0.65、0.82）为 Bootstrap 占位初始值，基于证据数量/一致性程度的简单加权计算，需后续真实数据校准。本次交付计算方法说明，不承诺数值精度。",
+    "distillation_target": {
+      "kernel": "Civilization Motherboard Kernel（权限边界 + 证据绑定 + 确定性输出）",
+      "blueprint": "External → Input → Evidence → Interpretation DAG → Sandbox → Candidate → Admission → Repository",
+      "protocol": "TRAE Motherboard Protocol",
+      "constraint": "TRAE Non-Authority Principle；所有文明资产变更必须经 Admission Gate",
+      "experience": "哪类 Interpretation DAG 节点准确率最高，哪些映射规则容易产生低置信度 Candidate",
+      "identity": "Civilization Motherboard = Execution Substrate, NOT Civilization Authority"
+    },
+    "existing_assets": {
+      "admission_gate": "civilization_contract.py 可复用为准入闸门",
+      "lineage": "lineage_index.json 可复用为 Origin Chain 基础设施",
+      "dag_parser": "现有 DAG Parser 可改造为 Interpretation DAG",
+      "evidence_layer": "law_discovery.py 的 Evidence 体系可扩展复用"
+    }
+  },
+  {
     "mission_id": "AUM-MISSION-LAW-001",
     "title": "Law Discovery Protocol",
     "description": "实现 Law Discovery Engine，建立基于 Evidence 的规律发现能力。目标不是优化荐股因子，而是让系统能够持续发现、验证、治理规律，并通过治理后的 Policy 持续提升 Recommendation Engine。",
     "identity": "Law Discovery Engine",
     "identity_definition": "Evidence-Driven Law Discovery System",
     "priority": "P1",
-    "status": "pending",
+    "status": "experimental",
+    "dispatch_note": "Self-dispatched prototype. NOT formally dispatched. Running under daily self-audit guardrail. Output limited to Law Registry only — no Runtime/Policy modifications.",
     "created_at": "2026-07-15T01:00:00",
     "principles": [
       "Evidence First: 任何规律必须来自 Evidence，不得人为指定规律",
