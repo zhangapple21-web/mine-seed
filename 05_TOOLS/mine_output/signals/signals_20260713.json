@@ -1,0 +1,44 @@
+[
+  {
+    "type": "momentum_breakout",
+    "direction": "看多",
+    "confidence": 82,
+    "sector": "信息技术",
+    "reason": "上证指数突破20日高点, 成交量大幅增加, MACD金叉",
+    "stocks": [
+      "601166 中国平安",
+      "601939 工商银行"
+    ],
+    "discover_date": "2026-07-13",
+    "source": "NIM/meta/llama-3.1-8b-instruct",
+    "discover_time": "02:31:07"
+  },
+  {
+    "type": "量价背离",
+    "direction": "看多",
+    "confidence": 90,
+    "sector": "金融",
+    "reason": "价格新高/成交量未新高, OBV背离, 筹码松动",
+    "stocks": [
+      "601166 中国平安",
+      "601939 工商银行"
+    ],
+    "discover_date": "2026-07-13",
+    "source": "NIM/meta/llama-3.1-8b-instruct",
+    "discover_time": "02:31:07"
+  },
+  {
+    "type": "均值回归",
+    "direction": "看多",
+    "confidence": 85,
+    "sector": "信息技术",
+    "reason": "股价偏离MA20 > -8%, RSI(14) < 30, 缩量下跌",
+    "stocks": [
+      "688012 中微公司",
+      "603986 兆易创新"
+    ],
+    "discover_date": "2026-07-13",
+    "source": "NIM/meta/llama-3.1-8b-instruct",
+    "discover_time": "02:31:07"
+  }
+]
