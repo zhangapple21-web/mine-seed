@@ -1,68 +1,113 @@
 """---
 id: PROTO-019
 type: protocol
-title: "AUM-001 Mission Protocol — 文明任务协议"
+title: "AUM Mission Protocol v1.0 — 长期协议"
 status: active
+version: 1.0
 source: "R2: 任务不是终点，蒸馏出文明资产才是"
 created: 2026-07-13
+upgraded: 2026-07-14
 confidence: 0.95
 lineage:
   - C-001 (Continuity Principle)
   - PROTO-017 (Gene Network)
   - PROTO-016 (Nature Reserve)
-tags: [mission, task, distillation, kernel, civilization]
+tags: [mission, task, distillation, kernel, civilization, long-term-protocol]
 ---
-"""
-#!/usr/bin/env python3
-# TYPE: runtime
-"""
-AUM-001: Mission Protocol — 文明任务协议
-==========================================
 
-R2 第一原则：
-  任务只是文明演化的触发器；
-  真正被保留下来的，不是任务本身，
-  而是那些通过准入审查、最终进入文明仓库的结构资产。
+AUM Mission Protocol v1.0 — 长期协议（Long-term Protocol）
+=========================================================
 
-Mission（文明任务） vs TODO（普通待办）：
-  TODO：告诉系统做什么
-  Mission：告诉系统为什么做、做到什么程度算成、不能做什么、最后要沉淀什么
+本文件是 Mission 协议的唯一实现。它既是引擎（Engine），也是协议（Protocol）。
+任何 Agent 在执行 Mission 时，必须遵守本文件定义的规则，不得创建独立的 Mission 协议定义。
 
-Mission 完整生命周期：
-  Question → Mission → **Drawer Scan** → Research → Experiment → Evidence
-  → Distillation → Admission → Repository → Evolution
+---
 
-**Drawer Scan 强制要求**:
-  - Phase 0: Drawer Scan — 任何 Mission 第一条必须是抽屉扫描
-  - Drawer Report — 输出扫描报告（Verdict: REUSE/EXTEND/NEW）
-  - 未完成 Drawer Scan，Mission 不允许进入 Research 阶段
+## 核心原则（12 条公理）
 
-Mission 八层结构：
-  1. Header（标识层）— ID、名称、类型、优先级、状态、Civ Impact
-  2. Mission（目标层）— 为什么存在，要达成什么
-  3. Scope（范围层）— 做什么，不做什么
-  4. Deliverables（输出层）— 要产出什么
-  5. Acceptance（验收层）— 做到什么程度算完成
-  6. Forbidden（禁止层）— 绝对不能做什么
-  7. Distillation（蒸馏层）— 蒸馏出什么候选资产
-  8. Admission（准入层）— 准入审查，进入文明仓库
+1. **Repository 永远是真相源**（Source of Truth）
+2. **Memory MCP 永远只是 Retrieval Layer**
+3. **Evidence First**
+4. **Mission 定义目标，不定义身份；Repository 定义文明，不定义任务**
+5. **Agent 不固定身份，根据能力自主选择角色**
+6. **任何长期知识必须进入 Repository**
+7. **任何 Architecture 修改必须经过 ADR**
+8. **Git 是 Civilization Observation Network，不是同步工具**
+9. **每一个 Repository 都是独立文明**，文明之间：观察 → 学习 → 蒸馏 → 绝不覆盖
+10. **不要创造工作，发现工作**
+11. **保持 Civilization Continuity 高于一切**
+12. **如果没有用户的新指令，不要等待**；按照 Discovery Budget 持续观察邻近文明、学习知识增量、生成 Candidate，并将自己的演化成果公开到 Git
 
-Distillation 六资产：
-  - Kernel（芯片）：可迁移的核心单元
-  - Blueprint（蓝图）：架构/结构/图纸
-  - Protocol（协议）：流程/规则/接口
-  - Constraint（约束）：边界/禁区/不变量
-  - Experience（经验）：教训/洞见/模式
-  - Identity（身份）：文明新增能力
+---
 
-Civilization Impact 七维度：
-  - Capability（文明能力）
-  - Protocol（协议）
-  - Runtime（运行时）
-  - Memory（记忆）
-  - Knowledge（知识）
-  - Identity（身份）
-  - Infrastructure（基础设施）
+## Mission 生命周期
+
+```
+1. 开始：必须完成 Drawer Scan（检查已有资产）
+        ↓
+2. 执行：Evidence → Analysis → Candidate → Decision
+        → Implementation → Validation → Repository Update
+        ↓
+3. 结束：Mission Summary + Repository Update
+        + Knowledge Gap + Architecture Gap
+        + Open Issues + Next Candidate
+        ↓
+4. 无新 Mission：自动进入 Discovery Mode
+```
+
+Evidence 不足：**立即停止**。禁止脑补。
+
+---
+
+## Mission 禁止行为
+
+- ❌ 重新发明 Repository 已有知识
+- ❌ 直接修改 Civilization
+- ❌ 把 Repository 写进 MCP
+- ❌ 把 MCP 当 Repository
+- ❌ 证据不足时继续执行
+- ❌ 无限执行
+
+---
+
+## Exit Criteria
+
+Mission 在以下任意条件结束：
+- Objective 完成
+- Evidence 不足
+- Budget 用尽
+- Blocked
+- Waiting Review
+
+---
+
+## Discovery Mode（无 Mission 默认行为）
+
+```
+Observation（观察邻近文明）
+    ↓
+Evidence（收集证据）
+    ↓
+Distillation（蒸馏知识）
+    ↓
+Candidate（生成候选）
+    ↓
+Repository Update（更新本地文明）
+    ↓
+Commit + Push（公开演化成果）
+    ↓
+持续循环
+```
+
+---
+
+## Core Axiom（最高公理）
+
+> **Mission 定义目标，不定义身份；Repository 保存文明，不保存任务；每一个 Repository 都是独立文明。文明之间通过 Git 构成 Civilization Observation Network，相互观察、学习、蒸馏，在各自文明中完成演化，而不是相互覆盖。Agent 根据能力、上下文和证据，自主选择角色，持续推进 Mission，并在没有新 Mission 时自动进入 Discovery Mode，使整个文明持续、自主地演化。**
+
+---
+
+（下方为原 AUM-001 协议实现，已被本 V1.0 长期协议覆盖）
 """
 import json
 import re
@@ -543,7 +588,7 @@ class MissionProtocol:
             scope=f"围绕问题 {qid} 展开研究，探寻根因、结构、模式。",
             deliverables=f"1. 问题答案\n2. 相关知识沉淀\n3. 可复用的方法论",
             acceptance=f"✓ 问题得到回答\n✓ 至少蒸馏出2种文明资产",
-            forbidden="❌ 只给答案不沉淀\n❌ 不验证直接下结论\n❌ 停留在表面不深挖",
+            forbidden="❌ 只给答案不沉淀\n❌ 不验证直接下结论❌ 停留在表面不深挖",
             distillation=f"""不要只回答问题。
 
 必须蒸馏出：
@@ -572,6 +617,154 @@ class MissionProtocol:
 才能最终进入 Civilization Repository。""",
         )
 
+    def has_active_mission(self) -> bool:
+        """判断是否有活跃 Mission"""
+        return len(self.list_active()) > 0
+
+    def discovery_mode(self) -> Dict[str, Any]:
+        """
+        Discovery Mode — 无 Mission 时的默认行为
+
+        流程：
+        1. observe_neighbor_repositories() — 观察邻近文明
+        2. scan_knowledge_delta() — 扫描知识增量
+        3. generate_candidates() — 生成候选资产
+        4. prepare_next_mission() — 准备下一个 Mission
+        5. commit_observation_results() — 提交观察结果
+
+        Returns:
+            Discovery 结果报告
+        """
+        result = {
+            "mode": "discovery",
+            "timestamp": datetime.now().isoformat(),
+            "neighbors_observed": [],
+            "knowledge_deltas": [],
+            "candidates_generated": [],
+            "next_mission_prepared": None,
+            "committed": False,
+        }
+
+        # Step 1: 观察邻近文明（占位实现，需结合 git_remote 配置）
+        neighbors = self._observe_neighbor_repositories()
+        result["neighbors_observed"] = neighbors
+
+        # Step 2: 扫描知识增量
+        deltas = self._scan_knowledge_delta()
+        result["knowledge_deltas"] = deltas
+
+        # Step 3: 生成候选资产
+        candidates = self._generate_candidates(deltas)
+        result["candidates_generated"] = candidates
+
+        # Step 4: 准备下一个 Mission（如果有候选）
+        if candidates:
+            next_mission = self._prepare_next_mission(candidates)
+            result["next_mission_prepared"] = next_mission
+
+        # Step 5: 提交观察结果
+        if deltas or candidates:
+            committed = self._commit_observation_results(result)
+            result["committed"] = committed
+
+        return result
+
+    def _observe_neighbor_repositories(self) -> List[str]:
+        """观察邻近文明（观察 Git Remotes）"""
+        try:
+            import subprocess
+            output = subprocess.run(
+                ["git", "remote", "-v"],
+                cwd=str(WORKSPACE),
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            if output.returncode == 0:
+                remotes = []
+                for line in output.stdout.strip().split("\n"):
+                    if line and "\t" in line:
+                        remotes.append(line.split("\t")[0])
+                return list(set(remotes))
+        except Exception:
+            pass
+        return []
+
+    def _scan_knowledge_delta(self) -> List[Dict[str, str]]:
+        """扫描知识增量（对比最近 commits）"""
+        try:
+            import subprocess
+            output = subprocess.run(
+                ["git", "log", "--oneline", "-10", "--all"],
+                cwd=str(WORKSPACE),
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+            if output.returncode == 0:
+                deltas = []
+                for line in output.stdout.strip().split("\n")[:5]:
+                    if line:
+                        parts = line.split(" ", 1)
+                        if len(parts) == 2:
+                            deltas.append({
+                                "commit": parts[0],
+                                "message": parts[1][:100],
+                            })
+                return deltas
+        except Exception:
+            pass
+        return []
+
+    def _generate_candidates(self, deltas: List[Dict]) -> List[Dict[str, str]]:
+        """从知识增量生成候选资产"""
+        candidates = []
+        for delta in deltas:
+            candidates.append({
+                "source": delta.get("commit", ""),
+                "type": "observation",
+                "status": "pending",
+            })
+        return candidates
+
+    def _prepare_next_mission(self, candidates: List[Dict]) -> Optional[str]:
+        """根据候选资产准备下一个 Mission"""
+        if not candidates:
+            return None
+        candidate = candidates[0]
+        mission = self.create(
+            name=f"Discovery: 验证候选 {candidate.get('source', 'unknown')[:30]}",
+            mission_type="Research",
+            priority="P3",
+            mission=f"验证并蒸馏候选资产：{candidate.get('source', '')}",
+            scope="分析候选资产，决定是否纳入 Repository",
+            deliverables="1. 候选资产评估\n2. 蒸馏决策",
+            acceptance="✓ 候选资产已评估\n✓ 已决定是否 Admission",
+            forbidden="❌ 不验证就纳入\n❌ 重复纳入",
+        )
+        return mission.mid
+
+    def _commit_observation_results(self, result: Dict) -> bool:
+        """提交观察结果到本地记录"""
+        obs_file = WORKSPACE / "02_MEMORY" / "experience" / "discovery_log.json"
+        obs_file.parent.mkdir(parents=True, exist_ok=True)
+
+        logs = []
+        if obs_file.exists():
+            try:
+                logs = json.loads(obs_file.read_text(encoding="utf-8"))
+            except Exception:
+                logs = []
+
+        logs.append(result)
+        logs = logs[-100:]
+
+        obs_file.write_text(
+            json.dumps(logs, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        return True
+
 
 # 模块级单例
 protocol = MissionProtocol()
@@ -579,7 +772,7 @@ protocol = MissionProtocol()
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="Mission Protocol — 文明任务协议")
+    parser = argparse.ArgumentParser(description="AUM Mission Protocol v1.0 — 文明任务协议")
     parser.add_argument("--list", action="store_true", help="列出所有任务")
     parser.add_argument("--active", action="store_true", help="列出活跃任务")
     parser.add_argument("--summary", action="store_true", help="任务摘要")
@@ -588,7 +781,13 @@ def main():
     parser.add_argument("--admit-check", type=str, help="检查准入状态")
     parser.add_argument("--set-impact", type=str, help="设置 Civ Impact 维度")
     parser.add_argument("--impact-dim", type=str, help="Impact 维度名")
+    parser.add_argument("--discovery", action="store_true", help="进入 Discovery Mode")
     args = parser.parse_args()
+
+    if args.discovery:
+        result = protocol.discovery_mode()
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return
 
     if args.summary:
         print(json.dumps(protocol.get_summary(), ensure_ascii=False, indent=2))

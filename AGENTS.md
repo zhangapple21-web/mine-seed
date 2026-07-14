@@ -74,6 +74,8 @@ c:\Users\User\ace_workspace\mine-seed
 5. **Repository Is the Bus** — Git = 文明总线
 6. **Self-Loop** — 不等待用户输入
 
+**Mission 执行统一遵循** [04_PROTOCOLS/mission_protocol.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/mission_protocol.py) **（AUM Mission Protocol v1.0）**。无 Mission 时自动进入 Discovery Mode。
+
 ---
 
 *入口文件。变更需经 C-018（Asset Creation Gate）审核。*
