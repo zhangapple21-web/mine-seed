@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-14 11:21*
+*Last updated: 2026-07-14 14:04*
 
 ---
 

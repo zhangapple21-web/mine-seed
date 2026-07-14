@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 
 # smelter_gate 在 04_PROTOCOLS 目录下
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "04_PROTOCOLS"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "04_PROTOCOLS"))
 
 from smelter_gate import SmelterGate
 

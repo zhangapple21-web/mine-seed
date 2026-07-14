@@ -14,17 +14,21 @@ Agent Start
    ↓
 [必读] ② Read CIVILIZATION.md
    ↓
-[必读] ③ Read ASSET_INDEX.md
+[可选] ③ Connect Memory MCP（语义检索层）
    ↓
-[必读] ④ Read RUNTIME_BOUNDARY.md
+[可选] ④ Load Knowledge Service（03_INDEX/ 或 Memory MCP）
    ↓
-[按需] ⑤ Load Runtime（06_RUNTIME/）
+[降级] ⑤ Read ASSET_INDEX.md（若 Knowledge Service / Memory MCP 不可用）
    ↓
-[按需] ⑥ Read Active Mission
+[必读] ⑥ Read RUNTIME_BOUNDARY.md
    ↓
-[按需] ⑦ Load Specific Assets（按 ID 读取）
+[按需] ⑦ Load Runtime（06_RUNTIME/）
    ↓
-[按需] ⑧ Read Recent Sessions（08_SESSIONS/）
+[按需] ⑧ Read Active Mission
+   ↓
+[按需] ⑨ Load Specific Assets（按 ID 读取）
+   ↓
+[按需] ⑩ Read Recent Sessions（08_SESSIONS/）
    ↓
 Work
    ↓
@@ -68,7 +72,65 @@ Repository Commit（每日）
 
 ---
 
-### ③ 必读：ASSET_INDEX.md（< 3 分钟）
+### ③ 可选：Connect Memory MCP（< 1 分钟）
+
+**目的**：连接语义检索层，加速资产检索。
+
+**定位**：Memory MCP 是 Civilization Retrieval Layer，不是 Source of Truth。
+
+**步骤**：
+1. 检查 MCP Server 状态（TRAE 设置 → MCP）
+2. 确认 Memory MCP 已启动（绿色开关）
+3. 验证工具可用：`search_nodes`, `read_graph`
+
+**降级路径**：
+```
+Memory MCP 不可用
+    │
+    ▼
+降级到 Knowledge Service（Python API）
+    │
+    ▼
+降级到 ASSET_INDEX.md（直接读取）
+    │
+    ▼
+降级到 Filesystem（直接扫描文件）
+```
+
+**关键规则**：
+- Memory MCP 只能读取 Repository，不能写入 Repository。
+- Memory MCP 只能检索已有 Asset，不能生成新 Asset。
+- 如果 Memory MCP 返回的结果与 Repository 文件不一致，以 Repository 文件为准。
+
+**跳过后果**：需要手动读取 `ASSET_INDEX.md` 或直接扫描文件。
+
+---
+
+### ④ 可选：Load Knowledge Service（< 2 分钟）
+
+**目的**：通过统一接口快速检索资产，而不是逐个扫描 Markdown。
+
+**方式**：
+- **方式 A — Python API**：
+  ```python
+  from knowledge import KnowledgeService
+  ks = KnowledgeService()
+  asset = ks.search_asset("Continuity")
+  graph = ks.get_graph("AX-001")
+  ```
+
+- **方式 B — Memory MCP**（若已配置）：
+  使用 `search_nodes` / `open_nodes` 工具
+
+**数据来源**：`03_INDEX/asset_index.db`（SQLite）
+
+**跳过后果**：需要手动读取 `ASSET_INDEX.md`
+
+---
+
+### ⑤ 降级：Read ASSET_INDEX.md（< 3 分钟）
+
+**时机**：Knowledge Service 不可用时
 
 **目的**：回答「有哪些资产可用 / 哪些最重要 / 依赖什么」
 
@@ -81,7 +143,7 @@ Repository Commit（每日）
 
 ---
 
-### ④ 必读：RUNTIME_BOUNDARY.md（< 1 分钟）
+### ⑥ 必读：RUNTIME_BOUNDARY.md（< 1 分钟）
 
 **目的**：回答「什么能写 / 什么不能写 / 写到哪里」
 
@@ -94,7 +156,7 @@ Repository Commit（每日）
 
 ---
 
-### ⑤ 按需：Load Runtime（06_RUNTIME/）
+### ⑥ 按需：Load Runtime（06_RUNTIME/）
 
 **时机**：Agent 需要继续某个 Mission 时
 
@@ -106,7 +168,7 @@ Repository Commit（每日）
 
 ---
 
-### ⑥ 按需：Read Active Mission
+### ⑧ 按需：Read Active Mission
 
 **时机**：Agent 要继续某个 Mission
 
@@ -120,7 +182,7 @@ Repository Commit（每日）
 
 ---
 
-### ⑦ 按需：Load Specific Assets
+### ⑨ 按需：Load Specific Assets
 
 **时机**：Agent 任务需要某个具体资产
 
@@ -133,7 +195,7 @@ Repository Commit（每日）
 
 ---
 
-### ⑧ 按需：Read Recent Sessions
+### ⑩ 按需：Read Recent Sessions
 
 **时机**：Agent 需要历史上下文
 
@@ -149,10 +211,13 @@ Repository Commit（每日）
 
 | 阶段 | 时间 | 用途 |
 |------|------|------|
-| ①-④ 必读 | 5-7 分钟 | 让 Agent 复活为 ACE |
-| ⑤-⑥ Runtime | 2-3 分钟 | 了解当前状态 |
-| ⑦ 按需资产 | 1-5 分钟 | 加载任务相关资产 |
-| ⑧ 按需历史 | 2-5 分钟 | 理解历史 |
+| ①-② 必读 | 2-3 分钟 | 确认身份和文明架构 |
+| ③ 可选 Memory MCP | 0-1 分钟 | 连接语义检索层 |
+| ④-⑤ 可选/降级 | 2-3 分钟 | 加载资产索引 |
+| ⑥ 必读边界 | 1 分钟 | 确认 Runtime 边界 |
+| ⑦-⑧ Runtime | 2-3 分钟 | 了解当前状态 |
+| ⑨ 按需资产 | 1-5 分钟 | 加载任务相关资产 |
+| ⑩ 按需历史 | 2-5 分钟 | 理解历史 |
 | **合计** | **5-20 分钟** | — |
 
 ---
@@ -179,16 +244,18 @@ Agent Exit
 
 | 步骤 | 必读 | 按需 |
 |------|------|------|
-| AGENTS.md | ✅ | |
-| CIVILIZATION.md | ✅ | |
-| ASSET_INDEX.md | ✅ | |
-| RUNTIME_BOUNDARY.md | ✅ | |
-| Load Runtime | | ✅ |
-| Read Active Mission | | ✅ |
-| Load Specific Assets | | ✅ |
-| Read Recent Sessions | | ✅ |
+| ① AGENTS.md | ✅ | |
+| ② CIVILIZATION.md | ✅ | |
+| ③ Connect Memory MCP | | ✅ |
+| ④ Load Knowledge Service | | ✅ |
+| ⑤ Read ASSET_INDEX.md | ✅ | |
+| ⑥ RUNTIME_BOUNDARY.md | ✅ | |
+| ⑦ Load Runtime | | ✅ |
+| ⑧ Read Active Mission | | ✅ |
+| ⑨ Load Specific Assets | | ✅ |
+| ⑩ Read Recent Sessions | | ✅ |
 
-**任何 Agent 启动，必须先完成前 4 步。**
+**任何 Agent 启动，必须先完成 ①②⑤⑥ 四步。**
 
 ---
 

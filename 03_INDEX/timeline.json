@@ -1,0 +1,150 @@
+{
+  "entries": [
+    {
+      "id": "RL-002",
+      "name": "RL-002 — Blue Team Defense",
+      "category": "role",
+      "mtime": "2026-07-14T11:29:49.256350"
+    },
+    {
+      "id": "RL-001",
+      "name": "RL-001 — Red Team Roles",
+      "category": "role",
+      "mtime": "2026-07-14T11:29:49.255345"
+    },
+    {
+      "id": "PT-002",
+      "name": "PT-002 — Dual-Trigger Mechanism",
+      "category": "protocol",
+      "mtime": "2026-07-14T11:29:49.254842"
+    },
+    {
+      "id": "PR-004",
+      "name": "PR-004 — Repository Is the Bus",
+      "category": "principle",
+      "mtime": "2026-07-14T11:29:49.253841"
+    },
+    {
+      "id": "PR-005",
+      "name": "PR-005 — Work Discovery",
+      "category": "principle",
+      "mtime": "2026-07-14T11:29:49.253841"
+    },
+    {
+      "id": "PT-001",
+      "name": "PT-001 — Heartbeat Protocol",
+      "category": "protocol",
+      "mtime": "2026-07-14T11:29:49.253841"
+    },
+    {
+      "id": "PR-001",
+      "name": "PR-001 — Drawer First Protocol",
+      "category": "principle",
+      "mtime": "2026-07-14T11:29:49.252841"
+    },
+    {
+      "id": "PR-002",
+      "name": "PR-002 — Self-Loop",
+      "category": "principle",
+      "mtime": "2026-07-14T11:29:49.252841"
+    },
+    {
+      "id": "PR-003",
+      "name": "PR-003 — Distill Before Archive",
+      "category": "principle",
+      "mtime": "2026-07-14T11:29:49.252841"
+    },
+    {
+      "id": "",
+      "name": "MEMORY_MCP_EVALUATION.md",
+      "category": "governance",
+      "mtime": "2026-07-14T11:29:49.251836"
+    },
+    {
+      "id": "GV-002",
+      "name": "GV-002 — Civilization Freeze",
+      "category": "governance",
+      "mtime": "2026-07-14T11:29:49.250790"
+    },
+    {
+      "id": "GV-003",
+      "name": "GV-003 — Red-Blue Round Table",
+      "category": "governance",
+      "mtime": "2026-07-14T11:29:49.250790"
+    },
+    {
+      "id": "GV-001",
+      "name": "GV-001 — Admission Engine",
+      "category": "governance",
+      "mtime": "2026-07-14T11:29:49.250278"
+    },
+    {
+      "id": "CP-005",
+      "name": "CP-005 — T+N Multi-Period Feedback",
+      "category": "capability",
+      "mtime": "2026-07-14T11:29:49.248775"
+    },
+    {
+      "id": "CG-001",
+      "name": "CG-001 — Question-First Cognition",
+      "category": "cognition",
+      "mtime": "2026-07-14T11:29:49.248775"
+    },
+    {
+      "id": "CG-002",
+      "name": "CG-002 — Environmental Awareness",
+      "category": "cognition",
+      "mtime": "2026-07-14T11:29:49.248775"
+    },
+    {
+      "id": "CP-003",
+      "name": "CP-003 — Shadow Observer",
+      "category": "capability",
+      "mtime": "2026-07-14T11:29:49.247776"
+    },
+    {
+      "id": "CP-004",
+      "name": "CP-004 — Smelter Gate",
+      "category": "capability",
+      "mtime": "2026-07-14T11:29:49.247776"
+    },
+    {
+      "id": "AX-002",
+      "name": "AX-002 — Repository Supremacy",
+      "category": "axiom",
+      "mtime": "2026-07-14T11:29:49.246775"
+    },
+    {
+      "id": "CP-001",
+      "name": "CP-001 — Provider Adapter Pattern",
+      "category": "capability",
+      "mtime": "2026-07-14T11:29:49.246775"
+    },
+    {
+      "id": "CP-002",
+      "name": "CP-002 — Worker Registry 动态生成",
+      "category": "capability",
+      "mtime": "2026-07-14T11:29:49.246775"
+    },
+    {
+      "id": "AR-001",
+      "name": "AR-001 — Four-Layer Architecture",
+      "category": "architecture",
+      "mtime": "2026-07-14T11:29:49.245775"
+    },
+    {
+      "id": "AR-002",
+      "name": "AR-002 Asset Template（资产模板）",
+      "category": "architecture",
+      "mtime": "2026-07-14T11:29:49.245775"
+    },
+    {
+      "id": "AX-001",
+      "name": "AX-001 — Continuity Principle",
+      "category": "axiom",
+      "mtime": "2026-07-14T11:29:49.245775"
+    }
+  ],
+  "generated_at": "2026-07-14T11:36:17.417539",
+  "count": 24
+}

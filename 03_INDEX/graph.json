@@ -1,0 +1,401 @@
+{
+  "nodes": [
+    {
+      "id": "AR-001",
+      "name": "AR-001 — Four-Layer Architecture",
+      "category": "architecture",
+      "importance": 3
+    },
+    {
+      "id": "AR-002",
+      "name": "AR-002 Asset Template（资产模板）",
+      "category": "architecture",
+      "importance": 3
+    },
+    {
+      "id": "AX-001",
+      "name": "AX-001 — Continuity Principle",
+      "category": "axiom",
+      "importance": 3
+    },
+    {
+      "id": "AX-002",
+      "name": "AX-002 — Repository Supremacy",
+      "category": "axiom",
+      "importance": 3
+    },
+    {
+      "id": "CP-001",
+      "name": "CP-001 — Provider Adapter Pattern",
+      "category": "capability",
+      "importance": 3
+    },
+    {
+      "id": "CP-002",
+      "name": "CP-002 — Worker Registry 动态生成",
+      "category": "capability",
+      "importance": 3
+    },
+    {
+      "id": "CP-003",
+      "name": "CP-003 — Shadow Observer",
+      "category": "capability",
+      "importance": 3
+    },
+    {
+      "id": "CP-004",
+      "name": "CP-004 — Smelter Gate",
+      "category": "capability",
+      "importance": 3
+    },
+    {
+      "id": "CP-005",
+      "name": "CP-005 — T+N Multi-Period Feedback",
+      "category": "capability",
+      "importance": 3
+    },
+    {
+      "id": "CG-001",
+      "name": "CG-001 — Question-First Cognition",
+      "category": "cognition",
+      "importance": 3
+    },
+    {
+      "id": "CG-002",
+      "name": "CG-002 — Environmental Awareness",
+      "category": "cognition",
+      "importance": 3
+    },
+    {
+      "id": "GV-001",
+      "name": "GV-001 — Admission Engine",
+      "category": "governance",
+      "importance": 3
+    },
+    {
+      "id": "GV-002",
+      "name": "GV-002 — Civilization Freeze",
+      "category": "governance",
+      "importance": 3
+    },
+    {
+      "id": "GV-003",
+      "name": "GV-003 — Red-Blue Round Table",
+      "category": "governance",
+      "importance": 3
+    },
+    {
+      "id": "",
+      "name": "MEMORY_MCP_EVALUATION.md",
+      "category": "governance",
+      "importance": 3
+    },
+    {
+      "id": "PR-001",
+      "name": "PR-001 — Drawer First Protocol",
+      "category": "principle",
+      "importance": 3
+    },
+    {
+      "id": "PR-002",
+      "name": "PR-002 — Self-Loop",
+      "category": "principle",
+      "importance": 3
+    },
+    {
+      "id": "PR-003",
+      "name": "PR-003 — Distill Before Archive",
+      "category": "principle",
+      "importance": 3
+    },
+    {
+      "id": "PR-004",
+      "name": "PR-004 — Repository Is the Bus",
+      "category": "principle",
+      "importance": 3
+    },
+    {
+      "id": "PR-005",
+      "name": "PR-005 — Work Discovery",
+      "category": "principle",
+      "importance": 3
+    },
+    {
+      "id": "PT-001",
+      "name": "PT-001 — Heartbeat Protocol",
+      "category": "protocol",
+      "importance": 3
+    },
+    {
+      "id": "PT-002",
+      "name": "PT-002 — Dual-Trigger Mechanism",
+      "category": "protocol",
+      "importance": 3
+    },
+    {
+      "id": "RL-001",
+      "name": "RL-001 — Red Team Roles",
+      "category": "role",
+      "importance": 3
+    },
+    {
+      "id": "RL-002",
+      "name": "RL-002 — Blue Team Defense",
+      "category": "role",
+      "importance": 3
+    }
+  ],
+  "edges": [
+    {
+      "source": "AR-001",
+      "target": "C-013"
+    },
+    {
+      "source": "AR-001",
+      "target": "C-014"
+    },
+    {
+      "source": "AR-001",
+      "target": "C-015"
+    },
+    {
+      "source": "AR-001",
+      "target": "AX-002"
+    },
+    {
+      "source": "AR-002",
+      "target": "GV-001"
+    },
+    {
+      "source": "AR-002",
+      "target": "PR-003"
+    },
+    {
+      "source": "AR-002",
+      "target": "AR-001"
+    },
+    {
+      "source": "AX-001",
+      "target": "AX-002"
+    },
+    {
+      "source": "AX-001",
+      "target": "PR-001"
+    },
+    {
+      "source": "AX-001",
+      "target": "PR-005"
+    },
+    {
+      "source": "AX-002",
+      "target": "AX-001"
+    },
+    {
+      "source": "AX-002",
+      "target": "PR-001"
+    },
+    {
+      "source": "AX-002",
+      "target": "AR-001"
+    },
+    {
+      "source": "CP-001",
+      "target": "AR-007"
+    },
+    {
+      "source": "CP-001",
+      "target": "PR-001"
+    },
+    {
+      "source": "CP-001",
+      "target": "CP-002"
+    },
+    {
+      "source": "CP-002",
+      "target": "CP-001"
+    },
+    {
+      "source": "CP-002",
+      "target": "GV-001"
+    },
+    {
+      "source": "CP-003",
+      "target": "CP-001"
+    },
+    {
+      "source": "CP-003",
+      "target": "AR-007"
+    },
+    {
+      "source": "CP-004",
+      "target": "C-019"
+    },
+    {
+      "source": "CP-004",
+      "target": "GV-001"
+    },
+    {
+      "source": "CP-005",
+      "target": "CP-006"
+    },
+    {
+      "source": "CP-005",
+      "target": "GV-001"
+    },
+    {
+      "source": "CG-001",
+      "target": "AX-001"
+    },
+    {
+      "source": "CG-001",
+      "target": "PR-005"
+    },
+    {
+      "source": "CG-001",
+      "target": "AR-008"
+    },
+    {
+      "source": "CG-002",
+      "target": "PT-001"
+    },
+    {
+      "source": "CG-002",
+      "target": "PR-001"
+    },
+    {
+      "source": "CG-002",
+      "target": "EFP-001"
+    },
+    {
+      "source": "GV-001",
+      "target": "C-013"
+    },
+    {
+      "source": "GV-001",
+      "target": "C-016"
+    },
+    {
+      "source": "GV-001",
+      "target": "PR-003"
+    },
+    {
+      "source": "GV-002",
+      "target": "AR-006"
+    },
+    {
+      "source": "GV-002",
+      "target": "PR-002"
+    },
+    {
+      "source": "GV-002",
+      "target": "C-018"
+    },
+    {
+      "source": "GV-003",
+      "target": "C-024"
+    },
+    {
+      "source": "GV-003",
+      "target": "AR-007"
+    },
+    {
+      "source": "PR-001",
+      "target": "PR-002"
+    },
+    {
+      "source": "PR-001",
+      "target": "PR-003"
+    },
+    {
+      "source": "PR-001",
+      "target": "PR-004"
+    },
+    {
+      "source": "PR-002",
+      "target": "PR-001"
+    },
+    {
+      "source": "PR-002",
+      "target": "PR-005"
+    },
+    {
+      "source": "PR-002",
+      "target": "PR-006"
+    },
+    {
+      "source": "PR-003",
+      "target": "PR-001"
+    },
+    {
+      "source": "PR-003",
+      "target": "AR-002"
+    },
+    {
+      "source": "PR-003",
+      "target": "GV-001"
+    },
+    {
+      "source": "PR-004",
+      "target": "AX-001"
+    },
+    {
+      "source": "PR-004",
+      "target": "PR-002"
+    },
+    {
+      "source": "PR-004",
+      "target": "AR-003"
+    },
+    {
+      "source": "PR-005",
+      "target": "PR-002"
+    },
+    {
+      "source": "PR-005",
+      "target": "AR-006"
+    },
+    {
+      "source": "PT-001",
+      "target": "PR-002"
+    },
+    {
+      "source": "PT-001",
+      "target": "PR-005"
+    },
+    {
+      "source": "PT-001",
+      "target": "AR-006"
+    },
+    {
+      "source": "PT-002",
+      "target": "PT-001"
+    },
+    {
+      "source": "PT-002",
+      "target": "CP-006"
+    },
+    {
+      "source": "RL-001",
+      "target": "RL-002"
+    },
+    {
+      "source": "RL-001",
+      "target": "GV-003"
+    },
+    {
+      "source": "RL-001",
+      "target": "AR-007"
+    },
+    {
+      "source": "RL-002",
+      "target": "RL-001"
+    },
+    {
+      "source": "RL-002",
+      "target": "GV-003"
+    }
+  ],
+  "generated_at": "2026-07-14T11:36:17.415338",
+  "node_count": 24,
+  "edge_count": 62
+}
