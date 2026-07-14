@@ -125,5 +125,39 @@ _tmp/
 # === Smelter Gate runtime logs (中间态，不上传) ===
 02_MEMORY/smelter_gate/
 
+# === Self-learning runtime cycles (intermediate state, rebuildable) ===
+02_MEMORY/self_learning/learn_cycle_*.json
+02_MEMORY/experience/discovery_log.json
+
+# === Mine output runtime artifacts (rebuildable from source) ===
+05_TOOLS/mine_output/advisor/advisor_*.md
+05_TOOLS/mine_output/advisor/advisor_*.json
+05_TOOLS/mine_output/advisor/runner_status.json
+05_TOOLS/mine_output/advisor/daily_events.json
+05_TOOLS/mine_output/advisor/adaptive_weights.json
+05_TOOLS/mine_output/advisor/optimization_tasks/
+05_TOOLS/mine_output/advisor/self_loop_status.json
+05_TOOLS/mine_output/advisor/daily_runner.log
+05_TOOLS/mine_output/audit/
+05_TOOLS/mine_output/discovery/
+
+# === Advisor tracker runtime reports (rebuildable from performance_db) ===
+02_MEMORY/advisor_tracker/tracker.json
+02_MEMORY/advisor_tracker/win_rate_report.json
+02_MEMORY/advisor_tracker/win_rate_report.md
+
+# === Environment observations (runtime state) ===
+02_MEMORY/environment/latest_*.json
+02_MEMORY/environment/latest_*.md
+
+# === Energy budget runtime state ===
+02_MEMORY/energy_budget.json
+
+# === Question center runtime state ===
+02_MEMORY/question_center/questions.json
+
+# === Daily discovery runtime output ===
+02_MEMORY/discovery_queue/daily_discovery_*.md
+
 # === Temporary check scripts ===
 _chip_check.py
