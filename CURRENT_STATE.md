@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-13 20:11*
+*Last updated: 2026-07-14 11:21*
 
 ---
 
@@ -30,48 +30,16 @@
 
 ## Current Questions
 
-> 17 open questions. Priority: P0=紧急, P1=高, P2=中.
+> 1 open questions. Priority: P0=紧急, P1=高, P2=中.
 > These are the most important things the system needs to understand.
 
-🟢 **Q-030** [自学习] 检测到 13 次「新发现」成功模式，建议强化
-
-🟢 **Q-031** [自学习] 检测到 14 次「新发现」成功模式，建议强化
-
-🟢 **Q-032** [自学习] 检测到 15 次「新发现」成功模式，建议强化
-
-🟢 **Q-033** [自学习] 检测到 16 次「新发现」成功模式，建议强化
-
-🟢 **Q-034** [自学习] 检测到 17 次「新发现」成功模式，建议强化
-
-🟢 **Q-035** [自学习] 检测到 18 次「新发现」成功模式，建议强化
-
-🟢 **Q-036** [自学习] 检测到 19 次「新发现」成功模式，建议强化
-
-🟢 **Q-037** [自学习] 检测到 20 次「新发现」成功模式，建议强化
-
-🟢 **Q-038** [自学习] 检测到 21 次「新发现」成功模式，建议强化
-
-🟢 **Q-039** [自学习] 检测到 22 次「新发现」成功模式，建议强化
-
-🟡 **Q-040** [自学习] 检测到 1 次「Provider 认证失败」模式，建议采取改进措施
-
-🟢 **Q-041** [自学习] 检测到 23 次「新发现」成功模式，建议强化
-
-🟢 **Q-042** [自学习] 检测到 2 次「降级链路生效」成功模式，建议强化
-
-🟢 **Q-043** [自学习] 检测到 24 次「新发现」成功模式，建议强化
-
-🟢 **Q-044** [自学习] 检测到 25 次「新发现」成功模式，建议强化
-
-🟡 **Q-045** 为什么我们应该立即关注文件 'M 00_ROOT/PRINCIPLES.md' 的修改？
-
-🟡 **Q-046** 为什么我们应该立即关注这些未跟踪文件的增加？
+🟢 **Q-048** 为什么要在 ACE 的本地模型优化路线中同时关注通用 C++ 实现和硬件专属加速（如 Intel ipex-llm），是否应该建立统一的抽象层以兼容多种加速后端？
 
 ---
 
 ## Current Hypothesis
 
-> 27 active hypotheses.
+> 28 active hypotheses.
 
 **H-001** GitHub Models API 的权限设置错误导致连续返回 401
   Confidence: ███░░░░░░░ 30%
@@ -181,6 +149,10 @@
   Confidence: ░░░░░░░░░░ 0.9%
   Status: proposed
 
+**H-029** 保持降级链路配置; 扩展更多 Provider 的 fallback
+  Confidence: ░░░░░░░░░░ 0.6%
+  Status: proposed
+
 ---
 
 ## Running Experiments
@@ -198,7 +170,7 @@
 
 | Provider | Status | Health Score |
 |---|---|---|
-| ✅ Ollama | Healthy | 1.0 |
+| ⚪ Ollama | Unknown | 0.5 |
 | ⚪ Apiyi | Unknown | 0.5 |
 | ⚪ Hf | Unknown | 0.5 |
 | ⚪ Github | Unknown | 0.5 |
@@ -218,7 +190,7 @@
   Explorer     ████████░░ 85%  v2 daily exploration active
   Curator      ████████░░ 88%  Manual sync
   Governor     ██████████ 100%  Invariant checks active
-  QuestionCenter █████████░ 90%  17 questions, 27 hypotheses, 1 experiments
+  QuestionCenter █████████░ 90%  1 questions, 28 hypotheses, 1 experiments
   MultiAgentDebate █████████░ 90%  4-role debate active
   SelfEvolution ████████░░ 80%  Auto-apply + rollback + audit
 
@@ -266,13 +238,14 @@
 |---|---|
 | Experiences | 100 (+0 this cycle) |
 | Learning Days | 2 |
-| Success Ratio | 0.0% |
-| Patterns Detected | 1 failure + 1 success |
-| Hypotheses Generated | 2 |
+| Success Ratio | 5.0% |
+| Patterns Detected | 1 failure + 2 success |
+| Hypotheses Generated | 3 |
 | Questions Pushed | 0 |
 
 **Top Hypotheses:**
 
+- [low] 强化：降级链路生效
 - [low] 强化：新发现
 - [medium] 改进：Provider 认证失败
 
