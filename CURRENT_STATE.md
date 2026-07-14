@@ -4,7 +4,7 @@
 > Read this first to know: Is the civilization alive? What's worth researching?
 > For permanent principles, see AGENTS.md.
 
-*Last updated: 2026-07-14 16:04*
+*Last updated: 2026-07-14 19:04*
 
 ---
 
@@ -236,9 +236,9 @@
 
 | Metric | Value |
 |---|---|
-| Experiences | 100 (+0 this cycle) |
+| Experiences | 99 (+0 this cycle) |
 | Learning Days | 2 |
-| Success Ratio | 5.0% |
+| Success Ratio | 5.1% |
 | Patterns Detected | 1 failure + 2 success |
 | Hypotheses Generated | 3 |
 | Questions Pushed | 0 |

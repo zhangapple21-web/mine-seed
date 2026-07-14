@@ -1,0 +1,36 @@
+[
+  {
+    "announcements": {
+      "oai/apps/hasSeenBigPasteCoachmark": "2026-06-11T12:30:43.862236+00:00",
+      "oai/apps/hasSeenMaverick": "2026-06-09T08:32:19.394210+00:00",
+      "oai/apps/hasSeenMaverickCapi": "2026-06-09T08:32:19.371775+00:00",
+      "oai/apps/hasSeenMoonshineNuxV2": "2026-06-11T12:04:58.522372+00:00",
+      "oai/apps/hasSeenOnboarding": "2026-06-09T07:31:34.203322+00:00",
+      "oai/apps/hasSeenOnboardingFlow": "2026-06-09T07:31:41.517315+00:00",
+      "oai/apps/hasSeenPioneer": "2026-06-09T08:32:19.126999+00:00",
+      "oai/apps/hasSeenSeeker": "2026-06-09T08:32:19.149190+00:00",
+      "oai/apps/hasSeenStratos": "2026-06-09T08:32:19.552172+00:00",
+      "oai/apps/hasSeenTrailBlazer": "2026-06-09T08:32:19.415039+00:00",
+      "oai/apps/hasSeenWayfinder": "2026-06-09T08:32:19.709930+00:00",
+      "oai/apps/hasSeenl1239dk1LaunchNux": "2026-07-10T05:48:44.482646+00:00"
+    },
+    "beta_settings": {},
+    "habitat_object_version": 34366726,
+    "settings": {
+      "chat_theme": "blue",
+      "connector_enforce_csp_in_dev_mode": true,
+      "connector_search_enabled": true,
+      "developer_mode": true,
+      "first_party_project_pins_unmigrated": true,
+      "lockdown_mode_enabled": false,
+      "moonshine": true,
+      "project_pins_backfilled": true,
+      "study_mode_project_pins_unmigrated": true,
+      "sunshine": true,
+      "training_allowed": false,
+      "video_training_allowed": false,
+      "voice_training_allowed": false
+    },
+    "user_id": "user-wNs2KsElCqSWisaEArEY3wzg"
+  }
+]

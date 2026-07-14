@@ -1,0 +1,7 @@
+[SEED] GPT_R1R2_ARCHAEOLOGY
+Source: ChatGPT archive export
+Themes: R1, R2, Kernel, Shadow, Mine, Seed, Router, Validation, Constraint, Protocol
+Status: UNMINED
+Priority: MEDIUM
+Distilled: 2026-07-14T19:05:32.969735
+Next Action: Per-theme deep archaeology when related Mission is active

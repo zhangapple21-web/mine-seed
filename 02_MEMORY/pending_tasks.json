@@ -1,5 +1,73 @@
 [
   {
+    "mission_id": "AUM-MISSION-LAW-001",
+    "title": "Law Discovery Protocol",
+    "description": "实现 Law Discovery Engine，建立基于 Evidence 的规律发现能力。目标不是优化荐股因子，而是让系统能够持续发现、验证、治理规律，并通过治理后的 Policy 持续提升 Recommendation Engine。",
+    "identity": "Law Discovery Engine",
+    "identity_definition": "Evidence-Driven Law Discovery System",
+    "priority": "P1",
+    "status": "pending",
+    "created_at": "2026-07-15T01:00:00",
+    "principles": [
+      "Evidence First: 任何规律必须来自 Evidence，不得人为指定规律",
+      "Pattern ≠ Law: Pattern 只是重复现象，Law 必须经过 Validation",
+      "Law ≠ Policy: 规律不是策略，一个 Law 可以生成多个 Policy",
+      "Learning Cannot Modify Recommendation: Learning 永远不能直接修改 Recommendation Engine",
+      "Admission Is The Only Gate: 任何 Policy 更新必须经过 Roundtable → Admission → Policy Update",
+      "Evidence Immutable: Evidence 不允许修改，只能追加",
+      "Law Evolves: Law 可以新增、强化、弱化、废弃，不能静态永久存在"
+    ],
+    "never_rules": [
+      "❌ 人工写死\"规律因子\"",
+      "❌ 丁元英评分",
+      "❌ 强势文化评分",
+      "❌ 情绪因子=20",
+      "❌ Miner 修改 Recommendation",
+      "❌ Law 直接进入 Runtime",
+      "❌ 未验证规律进入 Policy",
+      "❌ 修改历史 Evidence"
+    ],
+    "deliverables": [
+      "Law Discovery Engine (Evidence → Pattern → Hypothesis → Law → Policy Candidate)",
+      "Law Registry",
+      "Law Validator",
+      "Law Candidate",
+      "Policy Candidate"
+    ],
+    "definition_of_done": [
+      "能从历史 Evidence 自动发现重复 Pattern",
+      "能生成 Hypothesis",
+      "能完成 Evidence Validation",
+      "能生成 Law",
+      "Law 可以进入 Roundtable",
+      "Roundtable 输出 Policy Candidate",
+      "Admission 可以批准或拒绝 Policy",
+      "Runtime 只能加载 Approved Policy",
+      "Policy 支持版本、审计、回滚",
+      "Recommendation Engine 无任何直接修改入口"
+    ],
+    "distillation_target": {
+      "kernel": "Law Discovery Kernel（规律发现内核）",
+      "blueprint": "Evidence → Pattern → Hypothesis → Law → Policy 的演化蓝图",
+      "protocol": "Law Discovery Protocol",
+      "constraint": "Learning 不得直接修改 Recommendation Engine；Law 不得绕过治理链直接成为 Policy",
+      "experience": "哪类 Pattern 容易形成稳定 Law，哪些 Hypothesis 经常被证据否定",
+      "identity": "Law Discovery Engine = Evidence-Driven Law Discovery System"
+    },
+    "existing_assets": {
+      "performance_tracker": "已有推荐记录和收益跟踪，可作为 Evidence 数据源",
+      "publication_gate": "可复用为 Policy 准入闸门",
+      "roundtable": "red_blue_audit.py 可复用为评估机制",
+      "admission_engine": "civilization_contract.py 可扩展为策略准入"
+    },
+    "thresholds": {
+      "MIN_EVIDENCE_FOR_PATTERN": 30,
+      "MIN_SAMPLE_FOR_VALIDATION": 50,
+      "P_VALUE_THRESHOLD": 0.05,
+      "LAW_STATUS_MACHINE": "DRAFT → ACTIVE → WEAKENING → INVALID → ARCHIVED"
+    }
+  },
+  {
     "question": "发现 205 untracked files — 这些新文件是否需要纳入治理？是否包含未蒸馏的原始数据？",
     "capability": "research",
     "priority": "P2",

@@ -1,0 +1,29 @@
+[
+  {
+    "question": "ChatGPT archive 中 R1/R2 Kernel 讨论与当前 PRINCIPLES.md 约束是否有冲突或补充？",
+    "source": "EXP-GPT-ARCHIVE-001",
+    "priority": "P2",
+    "status": "pending",
+    "capability": "reasoning",
+    "dedup_key": "gpt_archive_r1_kernel",
+    "timestamp": "2026-07-14T19:05:32.969735"
+  },
+  {
+    "question": "ChatGPT archive 中 Shadow Layer 设计是否应映射到当前 Runtime/dev 分类或 Memory Layer？",
+    "source": "EXP-GPT-ARCHIVE-001",
+    "priority": "P2",
+    "status": "pending",
+    "capability": "architecture",
+    "dedup_key": "gpt_archive_shadow_layer",
+    "timestamp": "2026-07-14T19:05:32.969735"
+  },
+  {
+    "question": "ChatGPT archive 中验证机制与流程是否已被 red_blue_audit.py / Law Discovery Protocol 吸收？",
+    "source": "EXP-GPT-ARCHIVE-001",
+    "priority": "P2",
+    "status": "pending",
+    "capability": "audit",
+    "dedup_key": "gpt_archive_validation_flow",
+    "timestamp": "2026-07-14T19:05:32.969735"
+  }
+]

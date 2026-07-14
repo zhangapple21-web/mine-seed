@@ -955,3 +955,57 @@ Repository
 **演化日志**:
 
 - 2026-07-13 v1.0 — 从 skill-creator 的三个特质内化而来。
+
+---
+
+## C-025 — Law Discovery Constraint
+
+Learning 不得直接修改 Recommendation Engine。Law 不得绕过治理链直接成为 Policy。
+
+**约束编号**: C-025
+
+**核心原则**:
+
+1. **Evidence First**: 任何规律必须来自 Evidence，不得人为指定规律
+2. **Pattern ≠ Law**: Pattern 只是重复现象，Law 必须经过 Validation
+3. **Law ≠ Policy**: 规律不是策略，一个 Law 可以生成多个 Policy
+4. **Admission Is The Only Gate**: 任何 Policy 更新必须经过 Roundtable → Admission → Policy Update
+5. **Evidence Immutable**: Evidence 不允许修改，只能追加
+6. **Law Evolves**: Law 可以新增、强化、弱化、废弃，不能静态永久存在
+
+**阈值**:
+
+| 参数 | 值 | 说明 |
+|------|-----|------|
+| MIN_EVIDENCE_FOR_PATTERN | 30 | 形成 Pattern 的最小 Evidence 数量 |
+| MIN_SAMPLE_FOR_VALIDATION | 50 | 验证 Hypothesis 的最小样本量 |
+| P_VALUE_THRESHOLD | 0.05 | 统计显著性阈值 |
+
+**架构**:
+
+```
+Observation → Evidence → Pattern Mining → Hypothesis → Evidence Validation
+    → Law → Roundtable → Policy Candidate → Admission → Approved Policy → Runtime
+```
+
+**Never Rules**:
+
+- ❌ 人工写死"规律因子"
+- ❌ 丁元英评分
+- ❌ 强势文化评分
+- ❌ 情绪因子=20
+- ❌ Miner 修改 Recommendation
+- ❌ Law 直接进入 Runtime
+- ❌ 未验证规律进入 Policy
+- ❌ 修改历史 Evidence
+
+**实现**: `04_PROTOCOLS/law_discovery.py`
+
+**数据存储**:
+- Evidence: `02_MEMORY/evidence/` (append-only)
+- Law Registry: `02_MEMORY/law_registry/`
+- Policy Candidates: `02_MEMORY/policy_candidates/`
+
+**演化日志**:
+
+- 2026-07-15 v1.0 — 从 AUM-MISSION-LAW-001 内化而来。
