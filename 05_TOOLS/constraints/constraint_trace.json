@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2026-07-14T15:05:04.330217",
+    "constraint_id": "worker_001_scheduler_AVOID",
+    "constraint_type": "AVOID",
+    "target": "worker_001",
+    "scope": "scheduler",
+    "trigger_reason": "failures >= 3",
+    "observation_ids": [
+      "obs_003"
+    ],
+    "constraint_snapshot": {
+      "type": "AVOID",
+      "target": "worker_001",
+      "scope": "scheduler",
+      "reason": "3 failures, 0 success, fail_rate=100.0%",
+      "source_observation": "obs_003",
+      "cooling_until": "2026-07-15T15:05:04.330217",
+      "created_at": "2026-07-14T15:05:04.330217",
+      "status": "ACTIVE"
+    }
+  },
+  {
+    "timestamp": "2026-07-14T15:05:04.338522",
+    "constraint_id": "worker_001_scheduler_FORBID",
+    "constraint_type": "FORBID",
+    "target": "worker_001",
+    "scope": "scheduler",
+    "trigger_reason": "failures >= 3",
+    "observation_ids": [
+      "obs_004"
+    ],
+    "constraint_snapshot": {
+      "type": "FORBID",
+      "target": "worker_001",
+      "scope": "scheduler",
+      "reason": "5 failures, 0 success, fail_rate=100.0%",
+      "source_observation": "obs_004",
+      "cooling_until": null,
+      "created_at": "2026-07-14T15:05:04.337014",
+      "status": "ACTIVE"
+    }
+  }
+]

@@ -16,20 +16,22 @@
 
 ## Layer 0: Goal（目标层）
 
-### GO-001: Continuity
-
-| 字段 | 内容 |
-|------|------|
-| **Concept** | Continuity（连续性） |
-| **Layer** | Goal |
-| **Evidence** | [AX-001](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/axiom/AX-001-continuity-principle.md#L16): "Runtime 可以死，Repository 必须活" |
-| **Reason** | 这是系统存在的根本目的。没有连续性，系统就没有存在的理由。任何技术更替（LLM更换、Runtime重启）都不能改变这个Goal。 |
+> **待填充**：ARCH-009 中发现的"服务宿主主线"（L∞ 第10条，宪法级）是 Goal Layer 的候选。该填充不在 ARCH-024 范围内，待后续 Mission 正式列入。
 
 ---
 
 ## Layer 1: Invariant（不变量层）
 
-### INV-001: Boundary
+### INV-001: Continuity
+
+| 字段 | 内容 |
+|------|------|
+| **Concept** | Continuity（连续性） |
+| **Layer** | Invariant |
+| **Evidence** | [AX-001](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/axiom/AX-001-continuity-principle.md#L16): "Runtime 可以死，Repository 必须活" |
+| **Reason** | 系统的身份和状态不可漂移，运行不可中断。这不是"为什么存在"（Goal），而是"存在之后不可违背什么"——是行为边界，不是目的本身。 |
+
+### INV-002: Boundary
 
 | 字段 | 内容 |
 |------|------|
@@ -38,7 +40,7 @@
 | **Evidence** | [AR-001](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/architecture/AR-001-four-layer-architecture.md#L32): "Identity 不得包含 Prompt"；第34行: "Runtime 不得包含 Principles/Protocols" |
 | **Reason** | 系统必须有不可逾越的边界。没有边界，系统会自我毁灭。这不是实现选择，而是存在前提。 |
 
-### INV-002: Identity
+### INV-003: Identity
 
 | 字段 | 内容 |
 |------|------|
@@ -47,7 +49,7 @@
 | **Evidence** | [AX-002](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/axiom/AX-002-repository-supremacy.md#L16): "Repository = 文明，LLM = 临时运载体" |
 | **Reason** | 系统的身份由 Repository 定义，不是由 Runtime 或 LLM 定义。更换 LLM 后，只要 Repository 不变，系统还是"它"。 |
 
-### INV-003: Observation
+### INV-004: Observation
 
 | 字段 | 内容 |
 |------|------|
@@ -55,6 +57,15 @@
 | **Layer** | Invariant |
 | **Evidence** | [PR-002](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/assets/principle/PR-002-self-loop.md#L24): "Environment → Observe → Audit → Recovery" |
 | **Reason** | 系统必须能观察自己和世界。没有观察，系统不知道自己在做什么，会在细节中迷失。 |
+
+### INV-005: Risk Conversion
+
+| 字段 | 内容 |
+|------|------|
+| **Concept** | Risk Conversion（风险转换） |
+| **Layer** | Invariant |
+| **Evidence** | [ARCH-020](file:///c:/Users/User/ace_workspace/mine-seed/03_DATA/research/r1_capability_archaeology/red_team_review.md) Red Team Review: "5个Invariant之一" |
+| **Reason** | 风险必须在可控范围内转换，不允许累积。连续失败N次后必须有约束生成（E→C闭环）。ARCH-024 裁定1 补回。 |
 
 ---
 

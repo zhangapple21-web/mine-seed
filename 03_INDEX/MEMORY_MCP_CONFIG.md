@@ -15,7 +15,7 @@
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-memory"],
       "env": {
-        "MEMORY_FILE_PATH": "C:/Users/User/ace_workspace/mine-seed/03_INDEX/entity_map.json"
+        "MEMORY_FILE_PATH": "C:/Users/User/ace_workspace/mine-seed/03_INDEX/memory.jsonl"
       }
     }
   }

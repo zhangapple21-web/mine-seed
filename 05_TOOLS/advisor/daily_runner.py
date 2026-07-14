@@ -218,16 +218,19 @@ def check_and_optimize(logger: RunnerLogger) -> tuple[bool, int]:
         return False, 0
 
 
-def check_circuit_breaker(logger: RunnerLogger) -> bool:
-    """熔断检查：健康度低于阈值时暂停推荐
+def should_push_to_customer(logger: RunnerLogger) -> bool:
+    """质量闸门检查：判断是否应该对外推送推荐
     
-    熔断阈值策略：
-    - 健康度 >= 60: 正常推荐
-    - 40 <= 健康度 < 60: 警告状态，仍推荐但标记风险
-    - 健康度 < 40: 熔断触发，暂停推荐并强制优化
+    策略：内部生成照常执行（学习素材），只在推送环节设质量闸门
+    - 健康度 >= 60: 允许推送
+    - 40 <= 健康度 < 60: 不推送（内部留存学习）
+    - 健康度 < 40: 不推送（内部留存学习）
     
     额外条件：
-    - 连续5次T+1亏损也触发熔断
+    - 连续3次T+1亏损：不推送
+    - 最近10次T+1胜率 < 30%：不推送
+    
+    返回: True=允许推送, False=不推送（内部照常生成）
     """
     try:
         from performance_tracker import PerformanceTracker
@@ -239,24 +242,20 @@ def check_circuit_breaker(logger: RunnerLogger) -> bool:
         health = scorer.get_health_score(tracker)
         health_score = health.get('score', 0)
         
-        # 检查推荐记录是否足够
         summary = tracker.get_summary(10)
         total_recs = summary.get('total_recommendations', 0)
         
-        if total_recs < 5:
-            logger.log(f"  ✓ 推荐记录不足({total_recs}条)，跳过熔断检查")
+        if total_recs < 3:
+            logger.log(f"  ✓ 推荐记录不足({total_recs}条)，允许推送")
             return True
         
-        # 条件1：健康度低于40
-        if health_score < 40:
-            logger.log(f"  ⚠ 熔断触发：健康度 {health_score}/100 < 40")
+        if health_score < 60:
+            if health_score < 40:
+                logger.log(f"  ⚠ 质量闸门：健康度 {health_score}/100 < 40，不推送，内部留存学习")
+            else:
+                logger.log(f"  ⚠ 质量闸门：健康度 {health_score}/100 < 60，不推送，内部留存学习")
             return False
         
-        # 警告状态：健康度 40-60
-        if 40 <= health_score < 60:
-            logger.log(f"  ⚠ 警告：健康度 {health_score}/100，建议关注")
-        
-        # 条件2：连续5次T+1亏损
         recent = sorted(tracker.records.values(), 
                        key=lambda r: r.recommend_date, reverse=True)[:10]
         consecutive_losses = 0
@@ -264,23 +263,22 @@ def check_circuit_breaker(logger: RunnerLogger) -> bool:
             if rec.return_t1 is not None:
                 if rec.return_t1 < 0:
                     consecutive_losses += 1
-                    if consecutive_losses >= 5:
-                        logger.log(f"  ⚠ 熔断触发：连续 {consecutive_losses} 次T+1亏损")
+                    if consecutive_losses >= 3:
+                        logger.log(f"  ⚠ 质量闸门：连续 {consecutive_losses} 次T+1亏损，不推送")
                         return False
                 else:
                     consecutive_losses = 0
         
-        # 条件3：最近10次T+1胜率 < 20%
         win_rate_t1 = summary.get('win_rates', {}).get('T+1')
-        if win_rate_t1 is not None and win_rate_t1 < 20:
-            logger.log(f"  ⚠ 熔断触发：最近10次T+1胜率仅 {win_rate_t1}% < 20%")
+        if win_rate_t1 is not None and win_rate_t1 < 30:
+            logger.log(f"  ⚠ 质量闸门：最近10次T+1胜率仅 {win_rate_t1}% < 30%，不推送")
             return False
         
-        logger.log(f"  ✓ 熔断检查通过，健康度: {health_score}/100")
+        logger.log(f"  ✓ 质量闸门通过，健康度: {health_score}/100")
         return True
         
     except Exception as e:
-        logger.log(f"  ⚠ 熔断检查异常: {e}", "WARNING")
+        logger.log(f"  ⚠ 质量闸门检查异常: {e}", "WARNING")
         return True
 
 
@@ -393,32 +391,49 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
         if evt_logger:
             evt_logger.log("PERF_UPDATE", "历史表现数据更新完成", {"success": step1_ok})
         
-        # 熔断检查：健康度低于阈值时暂停推荐
-        health_ok = check_circuit_breaker(logger)
-        if not health_ok:
-            logger.log("  ⚠ 熔断触发：系统健康度过低，暂停今日推荐", "WARNING")
-            if evt_logger:
-                evt_logger.log("CIRCUIT_BREAKER", "健康度过低，暂停推荐", {"triggered": True})
-            
-            step2_ok = False
-            recs = []
-            
-            # 强制触发优化
-            force_optimization(logger)
-        else:
-            # 2. 运行荐股引擎（即使步骤1失败也继续）
-            step2_ok, recs = run_stock_advisor(logger)
+        # 2. 运行荐股引擎（照常执行，不因健康度低而停止，数据作为学习素材）
+        step2_ok, recs = run_stock_advisor(logger)
         steps["stock_advisor"] = step2_ok
         recommendations = recs
         if evt_logger:
             rec_str = ', '.join([f"{r['name']}({r['code']})" for r in recs])
             evt_logger.log("RECOMMEND", f"荐股引擎执行完成: {rec_str}", {"success": step2_ok, "count": len(recs)})
         
-        # 3. 推送 TG
-        step3_ok = push_to_telegram(logger)
+        # 3. Publication Gate：根据健康度决定发布路由
+        sys.path.insert(0, str(WORKSPACE / "04_PROTOCOLS"))
+        from publication_gate import PublicationGate
+        
+        gate = PublicationGate()
+        health_score_for_gate = health_score if health_score > 0 else 45
+        
+        gate_result = gate.route(health_score_for_gate, {
+            "recommendations": [r['code'] for r in recs],
+            "strategy": "POLICY-002",
+        })
+        
+        logger.log(f"  Publication Gate: {gate_result['route_name']} ({gate_result['route_level']})")
+        logger.log(f"  健康度: {health_score_for_gate}/100")
+        
+        if gate_result["allow_publication"]:
+            step3_ok = push_to_telegram(logger)
+            logger.log("  ✓ Publication Gate 通过，已推送客户")
+        else:
+            step3_ok = False
+            logger.log(f"  ⚠ Publication Gate 拦截：{gate_result['description']}")
+            if gate_result["allow_learning"]:
+                logger.log("  ✓ 推荐结果进入 Learning 流程")
+            else:
+                logger.log("  ✗ 推荐结果 Discard，不进入 Learning")
+            # 健康度不达标时触发优化
+            force_optimization(logger)
         steps["telegram_push"] = step3_ok
         if evt_logger:
-            evt_logger.log("TG_PUSH", "Telegram推送完成", {"success": step3_ok})
+            evt_logger.log("TG_PUSH", "Telegram推送完成", {
+                "success": step3_ok, 
+                "gate_level": gate_result["route_level"],
+                "allow_publication": gate_result["allow_publication"],
+                "allow_learning": gate_result["allow_learning"]
+            })
         
         # 4. 检查优化
         step4_ok, hs = check_and_optimize(logger)

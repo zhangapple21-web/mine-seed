@@ -1,0 +1,86 @@
+{"type": "entity", "name": "AR-001 — Four-Layer Architecture", "entityType": "architecture", "observations": ["ID: AR-001", "Category: architecture", "Importance: 3"]}
+{"type": "entity", "name": "AR-002 Asset Template（资产模板）", "entityType": "architecture", "observations": ["ID: AR-002", "Category: architecture", "Importance: 3"]}
+{"type": "entity", "name": "AX-001 — Continuity Principle", "entityType": "axiom", "observations": ["ID: AX-001", "Category: axiom", "Importance: 3"]}
+{"type": "entity", "name": "AX-002 — Repository Supremacy", "entityType": "axiom", "observations": ["ID: AX-002", "Category: axiom", "Importance: 3"]}
+{"type": "entity", "name": "CP-001 — Provider Adapter Pattern", "entityType": "capability", "observations": ["ID: CP-001", "Category: capability", "Importance: 3"]}
+{"type": "entity", "name": "CP-002 — Worker Registry 动态生成", "entityType": "capability", "observations": ["ID: CP-002", "Category: capability", "Importance: 3"]}
+{"type": "entity", "name": "CP-003 — Shadow Observer", "entityType": "capability", "observations": ["ID: CP-003", "Category: capability", "Importance: 3"]}
+{"type": "entity", "name": "CP-004 — Smelter Gate", "entityType": "capability", "observations": ["ID: CP-004", "Category: capability", "Importance: 3"]}
+{"type": "entity", "name": "CP-005 — T+N Multi-Period Feedback", "entityType": "capability", "observations": ["ID: CP-005", "Category: capability", "Importance: 3"]}
+{"type": "entity", "name": "CG-001 — Question-First Cognition", "entityType": "cognition", "observations": ["ID: CG-001", "Category: cognition", "Importance: 3"]}
+{"type": "entity", "name": "CG-002 — Environmental Awareness", "entityType": "cognition", "observations": ["ID: CG-002", "Category: cognition", "Importance: 3"]}
+{"type": "entity", "name": "GV-001 — Admission Engine", "entityType": "governance", "observations": ["ID: GV-001", "Category: governance", "Importance: 3"]}
+{"type": "entity", "name": "GV-002 — Civilization Freeze", "entityType": "governance", "observations": ["ID: GV-002", "Category: governance", "Importance: 3"]}
+{"type": "entity", "name": "GV-003 — Red-Blue Round Table", "entityType": "governance", "observations": ["ID: GV-003", "Category: governance", "Importance: 3"]}
+{"type": "entity", "name": "MEMORY_MCP_EVALUATION.md", "entityType": "governance", "observations": ["ID: ", "Category: governance", "Importance: 3"]}
+{"type": "entity", "name": "PR-001 — Drawer First Protocol", "entityType": "principle", "observations": ["ID: PR-001", "Category: principle", "Importance: 3"]}
+{"type": "entity", "name": "PR-002 — Self-Loop", "entityType": "principle", "observations": ["ID: PR-002", "Category: principle", "Importance: 3"]}
+{"type": "entity", "name": "PR-003 — Distill Before Archive", "entityType": "principle", "observations": ["ID: PR-003", "Category: principle", "Importance: 3"]}
+{"type": "entity", "name": "PR-004 — Repository Is the Bus", "entityType": "principle", "observations": ["ID: PR-004", "Category: principle", "Importance: 3"]}
+{"type": "entity", "name": "PR-005 — Work Discovery", "entityType": "principle", "observations": ["ID: PR-005", "Category: principle", "Importance: 3"]}
+{"type": "entity", "name": "PT-001 — Heartbeat Protocol", "entityType": "protocol", "observations": ["ID: PT-001", "Category: protocol", "Importance: 3"]}
+{"type": "entity", "name": "PT-002 — Dual-Trigger Mechanism", "entityType": "protocol", "observations": ["ID: PT-002", "Category: protocol", "Importance: 3"]}
+{"type": "entity", "name": "RL-001 — Red Team Roles", "entityType": "role", "observations": ["ID: RL-001", "Category: role", "Importance: 3"]}
+{"type": "entity", "name": "RL-002 — Blue Team Defense", "entityType": "role", "observations": ["ID: RL-002", "Category: role", "Importance: 3"]}
+{"type": "relation", "from": "AR-001 — Four-Layer Architecture", "to": "C-013", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-001 — Four-Layer Architecture", "to": "C-014", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-001 — Four-Layer Architecture", "to": "C-015", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-001 — Four-Layer Architecture", "to": "AX-002 — Repository Supremacy", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-002 Asset Template（资产模板）", "to": "GV-001 — Admission Engine", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-002 Asset Template（资产模板）", "to": "PR-003 — Distill Before Archive", "relationType": "depends_on"}
+{"type": "relation", "from": "AR-002 Asset Template（资产模板）", "to": "AR-001 — Four-Layer Architecture", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-001 — Continuity Principle", "to": "AX-002 — Repository Supremacy", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-001 — Continuity Principle", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-001 — Continuity Principle", "to": "PR-005 — Work Discovery", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-002 — Repository Supremacy", "to": "AX-001 — Continuity Principle", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-002 — Repository Supremacy", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "AX-002 — Repository Supremacy", "to": "AR-001 — Four-Layer Architecture", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-001 — Provider Adapter Pattern", "to": "AR-007", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-001 — Provider Adapter Pattern", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-001 — Provider Adapter Pattern", "to": "CP-002 — Worker Registry 动态生成", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-002 — Worker Registry 动态生成", "to": "CP-001 — Provider Adapter Pattern", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-002 — Worker Registry 动态生成", "to": "GV-001 — Admission Engine", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-003 — Shadow Observer", "to": "CP-001 — Provider Adapter Pattern", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-003 — Shadow Observer", "to": "AR-007", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-004 — Smelter Gate", "to": "C-019", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-004 — Smelter Gate", "to": "GV-001 — Admission Engine", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-005 — T+N Multi-Period Feedback", "to": "CP-006", "relationType": "depends_on"}
+{"type": "relation", "from": "CP-005 — T+N Multi-Period Feedback", "to": "GV-001 — Admission Engine", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-001 — Question-First Cognition", "to": "AX-001 — Continuity Principle", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-001 — Question-First Cognition", "to": "PR-005 — Work Discovery", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-001 — Question-First Cognition", "to": "AR-008", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-002 — Environmental Awareness", "to": "PT-001 — Heartbeat Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-002 — Environmental Awareness", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "CG-002 — Environmental Awareness", "to": "EFP-001", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-001 — Admission Engine", "to": "C-013", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-001 — Admission Engine", "to": "C-016", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-001 — Admission Engine", "to": "PR-003 — Distill Before Archive", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-002 — Civilization Freeze", "to": "AR-006", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-002 — Civilization Freeze", "to": "PR-002 — Self-Loop", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-002 — Civilization Freeze", "to": "C-018", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-003 — Red-Blue Round Table", "to": "C-024", "relationType": "depends_on"}
+{"type": "relation", "from": "GV-003 — Red-Blue Round Table", "to": "AR-007", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-001 — Drawer First Protocol", "to": "PR-002 — Self-Loop", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-001 — Drawer First Protocol", "to": "PR-003 — Distill Before Archive", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-001 — Drawer First Protocol", "to": "PR-004 — Repository Is the Bus", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-002 — Self-Loop", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-002 — Self-Loop", "to": "PR-005 — Work Discovery", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-002 — Self-Loop", "to": "PR-006", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-003 — Distill Before Archive", "to": "PR-001 — Drawer First Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-003 — Distill Before Archive", "to": "AR-002 Asset Template（资产模板）", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-003 — Distill Before Archive", "to": "GV-001 — Admission Engine", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-004 — Repository Is the Bus", "to": "AX-001 — Continuity Principle", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-004 — Repository Is the Bus", "to": "PR-002 — Self-Loop", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-004 — Repository Is the Bus", "to": "AR-003", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-005 — Work Discovery", "to": "PR-002 — Self-Loop", "relationType": "depends_on"}
+{"type": "relation", "from": "PR-005 — Work Discovery", "to": "AR-006", "relationType": "depends_on"}
+{"type": "relation", "from": "PT-001 — Heartbeat Protocol", "to": "PR-002 — Self-Loop", "relationType": "depends_on"}
+{"type": "relation", "from": "PT-001 — Heartbeat Protocol", "to": "PR-005 — Work Discovery", "relationType": "depends_on"}
+{"type": "relation", "from": "PT-001 — Heartbeat Protocol", "to": "AR-006", "relationType": "depends_on"}
+{"type": "relation", "from": "PT-002 — Dual-Trigger Mechanism", "to": "PT-001 — Heartbeat Protocol", "relationType": "depends_on"}
+{"type": "relation", "from": "PT-002 — Dual-Trigger Mechanism", "to": "CP-006", "relationType": "depends_on"}
+{"type": "relation", "from": "RL-001 — Red Team Roles", "to": "RL-002 — Blue Team Defense", "relationType": "depends_on"}
+{"type": "relation", "from": "RL-001 — Red Team Roles", "to": "GV-003 — Red-Blue Round Table", "relationType": "depends_on"}
+{"type": "relation", "from": "RL-001 — Red Team Roles", "to": "AR-007", "relationType": "depends_on"}
+{"type": "relation", "from": "RL-002 — Blue Team Defense", "to": "RL-001 — Red Team Roles", "relationType": "depends_on"}
+{"type": "relation", "from": "RL-002 — Blue Team Defense", "to": "GV-003 — Red-Blue Round Table", "relationType": "depends_on"}

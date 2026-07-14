@@ -1,0 +1,2 @@
+{"record_id": "pubgate_1784015366350", "timestamp": "2026-07-14T15:49:26.350967", "health_score": 45.0, "route_level": "RESEARCH", "route_name": "Research", "allow_publication": false, "allow_learning": true, "metadata": {}}
+{"record_id": "pubgate_1784015380269", "timestamp": "2026-07-14T15:49:40.269364", "health_score": 45, "route_level": "RESEARCH", "route_name": "Research", "allow_publication": false, "allow_learning": true, "metadata": {"recommendations": ["601857", "688981"], "strategy": "POLICY-002"}}

@@ -1,0 +1,270 @@
+{
+  "policy_id": "POLICY-007",
+  "version": 1,
+  "status": "candidate",
+  "weights": {
+    "price_range": 7.8,
+    "change_moderate": 13.0,
+    "change_small": 10,
+    "turnover_healthy": 10.4,
+    "turnover_low_penalty": -5,
+    "cap_mid_large": 7.8,
+    "cap_small_penalty": -5,
+    "pe_reasonable": 8.9,
+    "pe_high_penalty": -5,
+    "liquidity_ok": 5.2
+  },
+  "rules": {
+    "min_score_threshold": 40,
+    "max_stocks_per_day": 2,
+    "diversity_required": true,
+    "recent_dedup_days": 7,
+    "consecutive_loss_threshold": 3,
+    "win_rate_threshold": 50
+  },
+  "evidence": {
+    "performance_summary": {
+      "period_days": 20,
+      "total_recommendations": 10,
+      "complete_records": 0,
+      "avg_returns": {
+        "T+1": -2.93,
+        "T+3": -0.79,
+        "T+5": null,
+        "T+10": null,
+        "T+20": null
+      },
+      "win_rates": {
+        "T+1": 12.5,
+        "T+3": 50.0,
+        "T+5": null,
+        "T+10": null,
+        "T+20": null
+      },
+      "best_performers": [
+        {
+          "date": "20260710",
+          "code": "601939",
+          "name": "建设银行",
+          "recommend_price": 10.03,
+          "return_t1": 1.5,
+          "return_t3": 1.5,
+          "return_t5": null
+        },
+        {
+          "date": "20260713",
+          "code": "600267",
+          "name": "海正药业",
+          "recommend_price": 11.42,
+          "return_t1": -0.7,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260713",
+          "code": "000063",
+          "name": "中兴通讯",
+          "recommend_price": 41.92,
+          "return_t1": -2.19,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260711",
+          "code": "688111",
+          "name": "金山办公",
+          "recommend_price": 233.76,
+          "return_t1": -3.08,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260710",
+          "code": "688111",
+          "name": "金山办公",
+          "recommend_price": 233.76,
+          "return_t1": -3.08,
+          "return_t3": -3.08,
+          "return_t5": null
+        }
+      ],
+      "worst_performers": [
+        {
+          "date": "20260711",
+          "code": "600362",
+          "name": "江西铜业",
+          "recommend_price": 42.89,
+          "return_t1": -6.74,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260713",
+          "code": "688126",
+          "name": "沪硅产业",
+          "recommend_price": 37.48,
+          "return_t1": -5.18,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260713",
+          "code": "000938",
+          "name": "紫光股份",
+          "recommend_price": 40.0,
+          "return_t1": -4.0,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260711",
+          "code": "688111",
+          "name": "金山办公",
+          "recommend_price": 233.76,
+          "return_t1": -3.08,
+          "return_t3": null,
+          "return_t5": null
+        },
+        {
+          "date": "20260710",
+          "code": "688111",
+          "name": "金山办公",
+          "recommend_price": 233.76,
+          "return_t1": -3.08,
+          "return_t3": -3.08,
+          "return_t5": null
+        }
+      ]
+    },
+    "factor_effectiveness": {
+      "pe_reasonable": {
+        "count": 7,
+        "win_rate": 14.3,
+        "avg_return": -2.61
+      },
+      "price_range": {
+        "count": 8,
+        "win_rate": 12.5,
+        "avg_return": -2.93
+      },
+      "change_moderate": {
+        "count": 8,
+        "win_rate": 12.5,
+        "avg_return": -2.93
+      },
+      "turnover_healthy": {
+        "count": 8,
+        "win_rate": 12.5,
+        "avg_return": -2.93
+      },
+      "cap_mid_large": {
+        "count": 8,
+        "win_rate": 12.5,
+        "avg_return": -2.93
+      },
+      "liquidity_ok": {
+        "count": 8,
+        "win_rate": 12.5,
+        "avg_return": -2.93
+      }
+    },
+    "adjustments": [
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "pe_reasonable",
+        "old_weight": 9.9,
+        "new_weight": 8.9,
+        "reason": "低胜率(14.3%)",
+        "win_rate": 14.3,
+        "avg_return": -2.61,
+        "sample_count": 7,
+        "period": "T+1"
+      },
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "price_range",
+        "old_weight": 9.0,
+        "new_weight": 7.8,
+        "reason": "低胜率(12.5%)",
+        "win_rate": 12.5,
+        "avg_return": -2.93,
+        "sample_count": 8,
+        "period": "T+1"
+      },
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "change_moderate",
+        "old_weight": 15.0,
+        "new_weight": 13.0,
+        "reason": "低胜率(12.5%)",
+        "win_rate": 12.5,
+        "avg_return": -2.93,
+        "sample_count": 8,
+        "period": "T+1"
+      },
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "turnover_healthy",
+        "old_weight": 12.0,
+        "new_weight": 10.4,
+        "reason": "低胜率(12.5%)",
+        "win_rate": 12.5,
+        "avg_return": -2.93,
+        "sample_count": 8,
+        "period": "T+1"
+      },
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "cap_mid_large",
+        "old_weight": 9.0,
+        "new_weight": 7.8,
+        "reason": "低胜率(12.5%)",
+        "win_rate": 12.5,
+        "avg_return": -2.93,
+        "sample_count": 8,
+        "period": "T+1"
+      },
+      {
+        "timestamp": "2026-07-14T15:49:40.258978",
+        "factor": "liquidity_ok",
+        "old_weight": 6.0,
+        "new_weight": 5.2,
+        "reason": "低胜率(12.5%)",
+        "win_rate": 12.5,
+        "avg_return": -2.93,
+        "sample_count": 8,
+        "period": "T+1"
+      }
+    ],
+    "audit_evidence": {
+      "source": "audit_compression_gate",
+      "period_days": 30,
+      "summary": {
+        "signal_patterns": {},
+        "low_score_patterns": [],
+        "recurring_issues": [
+          {
+            "keyword": "风险",
+            "count": 3
+          },
+          {
+            "keyword": "技术面",
+            "count": 3
+          }
+        ],
+        "strategy_adjustments": [],
+        "total_audits_processed": 3,
+        "compressed_at": "2026-07-13T19:26:15.331347"
+      },
+      "strategy_adjustments": []
+    },
+    "reason": "自适应调整: 6 个因子权重变化",
+    "generated_by": "learning_system",
+    "generated_at": "2026-07-14T15:49:40.262393"
+  },
+  "created_at": "2026-07-14T15:49:40.262393",
+  "approved_at": null,
+  "applied_at": null,
+  "approved_by": null,
+  "history": []
+}

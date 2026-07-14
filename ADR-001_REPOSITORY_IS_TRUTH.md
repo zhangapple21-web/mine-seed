@@ -169,6 +169,26 @@ Runtime is replaceable.
 Repository is not.
 ```
 
+### 四层架构（ARCH-024 补入）
+
+Repository 中的文明资产按照以下四层架构组织：
+
+| 层级 | 名称 | 含义 | 示例 |
+|------|------|------|------|
+| **Goal Layer** | 目标层 | 系统存在的根本目的 | 服务宿主主线（ARCH-009 宪法级定义，待正式列入） |
+| **Invariant Layer** | 不变量层 | 系统不可违背的约束 | Continuity / Boundary / Observation / Risk Conversion |
+| **Capability Layer** | 能力层 | 系统能做什么 | Observe / Transform / Act |
+| **Implementation Layer** | 实现层 | 具体模块、脚本、工具 | e2c_closure.py, constraint_proposer.py |
+
+**关键定义**：
+- **Invariant（不变量）**：系统运行过程中不可违反的约束条件。它们不是"系统能做什么"（Capability），而是"系统不可违背什么"——是比 Goal 更底层的存在性前提。
+- **详见**：[INVARIANT_FINAL.md](file:///c:/Users/User/ace_workspace/mine-seed/INVARIANT_FINAL.md)
+
+**Invariant 在 Repository 中的位置**：
+- 存储在 `INVARIANT_FINAL.md` 中
+- 通过 `constraint_trace` 可追溯
+- 通过 E→C 闭环自动生成约束
+
 ### 单向数据流
 
 ```

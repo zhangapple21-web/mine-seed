@@ -352,30 +352,66 @@ class StockAdvisor:
         """检查超时"""
         return time.time() - self.start_time > self.timeout
     
+    def _parse_turnover(self, turnover_val) -> float:
+        """解析换手率（Data Quality Gate）
+        
+        支持多种格式：
+        - 数值: 0.2
+        - 字符串带百分号: "0.2%"
+        - 空字符串/None: 返回0
+        """
+        if isinstance(turnover_val, str):
+            turnover_val = turnover_val.replace('%', '').replace(' ', '').replace(',', '')
+            try:
+                return float(turnover_val)
+            except (ValueError, TypeError):
+                return 0.0
+        else:
+            try:
+                return float(turnover_val)
+            except (ValueError, TypeError):
+                return 0.0
+    
     def _parse_stock_data(self, raw: Dict) -> Optional[StockData]:
-        """解析原始数据为StockData"""
+        """解析原始数据为StockData
+        
+        Data Quality Gate：过滤异常数据，不参与后续流程
+        """
         try:
             # 处理可能的字段名
             code = str(raw.get('代码', raw.get('code', '')))
             name = raw.get('名称', raw.get('name', ''))
             
             if not code or not name:
+                logger.warning(f"[数据质量] 缺少代码或名称: {raw}")
                 return None
             
             # 处理价格
             price = float(raw.get('最新价', raw.get('price', 0)))
-            if price <= 0:
+            if price <= 0 or price > 10000:
+                logger.warning(f"[数据质量] 价格异常({price}): {code} {name}")
                 return None
             
             # 处理涨跌幅
             change_pct = float(raw.get('涨跌幅', raw.get('change_pct', 0)))
+            if change_pct < -30 or change_pct > 30:
+                logger.warning(f"[数据质量] 涨跌幅异常({change_pct}%): {code} {name}")
+                return None
             
             # 处理PE
             pe_str = raw.get('市盈率-动态', raw.get('pe', 0))
             pe = float(pe_str) if pe_str else 0.0
+            if pe < 0 or pe > 2000:
+                pe = 0.0
             
-            # 处理换手率
-            turnover = float(raw.get('换手率', raw.get('turnover_rate', 0)))
+            # 处理换手率（修复：支持多种格式，包括带百分号的字符串）
+            turnover_val = raw.get('换手率', raw.get('turnover_rate', 0))
+            turnover = self._parse_turnover(turnover_val)
+            
+            # 换手率异常检查（Data Quality Gate）
+            if turnover < 0 or turnover > 100:
+                logger.warning(f"[数据质量] 换手率异常({turnover}%): {code} {name}")
+                return None
             
             # 处理市值
             total_capital = float(raw.get('总市值', raw.get('total_capital', 0)))
