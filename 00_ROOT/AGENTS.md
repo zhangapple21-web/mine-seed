@@ -77,6 +77,20 @@ Question
 
 ---
 
+## Backup Protocol
+
+每次涉及 API 密钥、配置变更时，必须同步推送到备份仓库：
+
+1. **备份远程**: `backup` → `https://github.com/zhangapple21-web/coze-assets.git`
+2. **执行命令**: `git push backup main`
+3. **触发条件**:
+   - API 密钥变更
+   - 环境配置变更
+   - 关键配置文件修改
+4. **验证**: 推送后检查 `git log backup/main --oneline -1`
+
+---
+
 ## Never
 
 - ❌ 不要把 AGENTS.md 写成长 Prompt
@@ -84,6 +98,7 @@ Question
 - ❌ 不要未经蒸馏就直接归档
 - ❌ 不要在未经 Admission Engine 审核的情况下从 Runtime 写入文明层
 - ❌ 不要让 Memory MCP 替代 Repository
+- ❌ 不要忘记同步备份到 coze-assets
 
 ---
 
