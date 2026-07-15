@@ -27,6 +27,8 @@ This repository contains the evolving core architecture and seeds for evidence-b
 
 - **[trigger_engine.py](04_PROTOCOLS/trigger_engine.py)** — Event-driven dispatch kernel: `Event/Condition` → `Trigger Registry` → `Evidence Gate` → `Dispatch`. Supports STATE/EVENT/RESOURCE/TIME/DEPENDENCY/THRESHOLD/MANUAL triggers, CONFIRM activation mode, and Capability-based decoupling from document IDs.
 
+- **[distillation_factory.py](04_PROTOCOLS/distillation_factory.py)** — Active forgetting mechanism (孟婆): `Raw Experience` → `Wash` (Remove Noise) → `Distill` (Extract Pattern) → `Compress` (Compress Rules) → `Reborn` (New Seed). Implements pollution detection across 5 types (noise/drift/contamination/conflict/decay). Heritage from R1 Processing Civilization.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
