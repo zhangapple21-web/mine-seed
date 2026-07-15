@@ -1339,103 +1339,37 @@ Repository Asset 可以存储于 Git，但 Repository Asset ≠ Git。
 
 ---
 
-## C-029 — Admission Separation Principle (PROVISIONAL)
+## C-029 — Admission Separation Principle (CANDIDATE)
 
-> **状态: PROVISIONAL** — Admission Record 待补，Governor Decision Pending，30天后复审（2026-08-15前）
+> **状态: CANDIDATE** — 起草阶段，Admission Record Pending，待 Governor Decision
 > **公理根基**: #001 (Repository First) / C-026 (External Observation Principle) / C-027 (Governance as Governance Object)
-> **触发背景**: C-028 补 Admission Record 时发现"记录治理过程"与"完成治理"的边界模糊，需要明确区分治理证据与治理结果
+> **触发背景**: C-028 补 Admission Record 时发现"记录治理过程"与"完成治理"的边界模糊
 > **核心隐喻**: Evidence 记录过去，Governance 决定未来
+> **配套协议**: `04_PROTOCOLS/governance_state_machine.md`
 
 ### 核心原则
 
 **Admission Separation Principle**
 
-Admission Record 用于记录治理过程。
-
-Governor Decision 用于产生治理结果。
-
-记录治理过程，不得等同于完成治理。
+Admission Record 的创建或完成不构成 Admission。只有授权的 Governor Decision 才能赋予对象规范性准入状态。
 
 ### 约束条件
 
-**C-029-1**: 任何 Governance Evidence（Admission Record / Roundtable Record / Replay Record / Audit Record）都不能替代 Governor Decision
+**C-029-1**: Admission Record 是 Governance Evidence，不是 Governance Decision
 
-**C-029-2**: 只有 Governor Decision 可以改变 Civilization 状态（ADMITTED / REJECTED / REVISED）
+**C-029-2**: 只有经授权的 Governor Decision 可以改变治理对象的规范状态
 
-**C-029-3**: Governance Evidence 必须完整保留，不得修改或删除
+**C-029-3**: 已封存的 Governance Record 不得静默改写；更正、迁移、补充必须通过可追踪的追加记录完成
 
-**C-029-4**: 所有治理对象（Principle / ADR / Constraint / Protocol / Policy）共用同一状态机
-
-### 治理链
-
-```text
-Observation
-      │
-      ▼
-Evidence
-      │
-      ▼
-Candidate
-      │
-      ▼
-Governance Evidence（记录治理过程）
-      │
-      ▼
-Governor Decision（产生治理结果）
-      │
-      ▼
-ADMITTED（改变文明状态）
-      │
-      ▼
-Repository Truth
-```
-
-### Governance Evidence 类型
-
-| 类型 | 用途 |
-|------|------|
-| Admission Record | 记录准入审查过程 |
-| Roundtable Record | 记录圆桌讨论过程 |
-| Replay Record | 记录历史回放验证过程 |
-| Audit Record | 记录审计结果 |
-
-### Governor 状态机
-
-```yaml
-GovernorDecision:
-    Pending   # 等待决策
-    Pass      # 通过
-    Reject    # 拒绝
-    Revise    # 修订后重新提交
-```
-
-### 统一治理状态机
-
-```text
-Candidate
-      │
-      ▼
-Admission Pending
-      │
-      ├──────────────┐
-      ▼              ▼
-Pass             Reject
-      │              │
-      ▼              ▼
-ADMITTED      REJECTED
-      │
-      ▼
-Revise（如需修订）
-      │
-      ▼
-Candidate（重新进入）
-```
+**C-029-4**: 所有治理对象共用统一的 Object State Machine（见 Governance State Machine Protocol）
 
 ### 核心格言
 
 > **Evidence records the past. Governance decides the future.**
 > **Evidence 负责记录事实，Governance 负责决定文明。**
 
+*（解释性格言，非正式约束）*
+
 ### 演化日志
 
-- 2026-07-15 v0.1 (PROVISIONAL) — 用户提出。确立"治理证据 ≠ 治理结果"原则。
+- 2026-07-15 v0.1 (CANDIDATE) — 用户提出。确立"治理证据 ≠ 治理结果"原则。状态机等细节放入 Governance State Machine Protocol。
