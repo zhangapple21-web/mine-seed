@@ -4,6 +4,7 @@ Law Discovery Protocol - 规律发现协议
 
 Mission: AUM-MISSION-LAW-001
 Identity: Law Discovery Engine = Evidence-Driven Law Discovery System
+Version: v1.1 (2026-07-15) — Boundary checks hardened, low-QoS fallback hooks added
 
 Core Flow:
     Observation -> Evidence -> Pattern Mining -> Hypothesis -> Evidence Validation -> Law -> Roundtable -> Admission -> Policy Candidate

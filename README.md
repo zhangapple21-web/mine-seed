@@ -21,6 +21,10 @@ This repository contains the evolving core architecture and seeds for evidence-b
 05_TOOLS/         # Mining tools (stock advisor, diagnostics)
 ```
 
+### 🚀 Core Engines Ready
+
+- **[law_discovery.py](04_PROTOCOLS/law_discovery.py)** — Production-grade 800+ lines implementation of the full governance chain: `Observation` → `Evidence` → `Pattern` → `Hypothesis` → `Law` → `Roundtable` → `Admission` → `Policy`. Includes immutable evidence stores, statistical validation, and CLI interface.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
