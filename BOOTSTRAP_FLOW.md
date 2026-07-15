@@ -123,7 +123,7 @@ Memory MCP 不可用
 - **方式 B — Memory MCP**（若已配置）：
   使用 `search_nodes` / `open_nodes` 工具
 
-**数据来源**：`03_INDEX/asset_index.db`（SQLite）
+**数据来源**：`03_INDEX/asset_index.sqlite`（SQLite）
 
 **跳过后果**：需要手动读取 `ASSET_INDEX.md`
 

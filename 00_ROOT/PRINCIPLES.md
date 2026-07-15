@@ -1011,3 +1011,273 @@ Observation → Evidence → Pattern Mining → Hypothesis → Evidence Validati
 **演化日志**:
 
 - 2026-07-15 v0.1 (PROVISIONAL) — 自派单原型，带每日自审计护栏。未经过正式 Admission。30天后或正式派单时复审。
+
+---
+
+## C-026 — External Observation Principle (PROVISIONAL)
+
+> **状态: PROVISIONAL** — 30天后复审（2026-08-15前）
+> **修订日志**: v0.2 (2026-07-15) — 名称由"External Knowledge"改为"External Observation"，Knowledge 保留给已通过治理流程沉淀到 Repository 的内容
+> **公理根基**: #002 (考古非搬家) / #010 (演化增结构不破坏不变量) / #016 (示范学习)
+> **触发背景**: gate_topology.md 中 Kubernetes/Ray 类比未经 Evidence→Candidate→Admission 直接写入文明文档；第三方 API 矿池提议试图跳过验证直接变成系统能力。两起真实违规案例促成本原则。
+
+### 核心原则
+
+**1. External Observation Principle:**
+
+外部输入（论文/案例/文章/视频/专家意见/模型回复/其他文明产出）用于产生 Observation，不用于产生 Knowledge。
+External Observation 永远不能成为 Repository Knowledge，它只能产生 Observation→Evidence→Candidate 链路中的输入。
+
+> **术语边界（v0.2 新增）**:
+> - **External Observation**: 任何来自系统外部的输入，本身不是知识
+> - **External Review**: External Observation 中具有评审/建议性质的子类（如 LLM 评审、同行评议）
+> - **Knowledge**: 已通过 Admission 流程沉淀到 Repository 的内容（C-024 后的产物）
+
+```
+External Observation → Hypothesis → Candidate → Replay → Internal Evidence
+  → Roundtable → Admission → Knowledge
+```
+
+**2. Learning Before Replacement:**
+
+发现方案 → 学习为什么好 → 验证 → 比较是否真的更好 → 如果更好才升级。
+
+不是：发现更好的轮子 → 直接扔掉自己的轮子。
+
+**3. Replace 必须经 Admission:**
+
+Replace 是 Admission 的一种结果，而不是 Learning 的默认结果。
+任何替换（无论多权威）都需走 Observation → Evidence → Candidate → Admission 流程。
+
+### 追溯性案例引用
+
+| 案例 | 文件 | 违规方式 | 修正 |
+|------|------|----------|------|
+| Kubernetes/Ray 类比 | `05_REPORTS/gate_topology.md` L17-18 | 外部文章（NVIDIA架构文）未经验证直接写入文明文档，将"Windows定时任务≈Kubernetes"作为架构等价依据 | 降级标注为 `External Observation, Not Verified`，改为"外部案例参考" |
+| 第三方API矿池提议 | 历史对话记录 | 外部方案（OpenRouter免费模型）试图跳过验证直接变成系统能力 | 按OPS-003降级为"实验矿池"，经E→C闭环后才允许 |
+| GPT 一致性评审 | 2026-07-15 用户对话 | 外部模型评审被误标为 External Knowledge | 按 v0.2 改为 External Review，归档到 External Observation 证据库 |
+
+### Forbidden
+
+- ❌ 不允许因为 External Observation 来自权威来源（论文/大厂/知名交易员/LLM 评审等）而提高其 Admission 权限——**权重可以不同，流程不能不同**
+- ❌ 不允许 External Observation 跳过 Evidence → Candidate → Admission 链路
+- ❌ 不允许混淆 Knowledge 与 External Observation——Knowledge 必须经 Admission
+- ❌ 不允许现在就去改本文件之外的其他已冻结文档（gate_topology.md 除外，它需降级标注）
+
+### 与现有公理的关系
+
+- #002 (考古非搬家): 考古产出必须经蒸馏，External Observation 同理
+- #010 (只增不删): External Observation 增加的是 Candidate，不直接增加 Runtime 结构
+- #016 (示范学习): External Observation 是"老师示范"，不是"直接接管"
+- C-024 (Repository 不可篡改): Knowledge 入库前必须在 Repository 中已存在候选
+
+**演化日志**:
+
+- 2026-07-15 v0.1 (PROVISIONAL) — 板块0 Deliverable。30天后复审。
+- 2026-07-15 v0.2 (PROVISIONAL) — 名称修正：External Knowledge → External Observation；新增术语边界；新增 GPT 评审归档案例。
+
+---
+
+## Evidence Classification — 证据四分级 (C-026 配套)
+
+> **归属**: C-026 External Observation Principle 的实施框架
+> **修订日志**: v0.2 (2026-07-15) — Evidence 来源从"External Knowledge"改为"External Observation"，Knowledge 保留给已通过治理的产物
+> **硬约束**: **没有任何一种 Evidence 可以绕过 Admission，区别只在权重，不在准入资格。**
+
+### 四分级
+
+```
+Evidence
+├── Internal Evidence     — 可信度 High   — 仍需 Admission
+│   └── 来源：系统自身运行产生的观察/日志/回测结果
+├── Historical Replay     — 可信度 High   — 仍需 Admission
+│   └── 来源：历史数据回放验证（Replay.py 产出）
+├── Live Observation      — 可信度 Medium — 仍需 Admission
+│   └── 来源：实时 Shadow Evaluation 或生产环境观察
+└── External Observation  — 可信度 Low    — 仍需 Admission
+    ├── Paper / Case / Repository / Article
+    ├── Video / Expert Opinion / Benchmark
+    ├── LLM / AI Model Output
+    └── 来源：任何非本系统产出的输入
+```
+
+> **v0.2 重要修正**: Knowledge 不在此表。Knowledge 是 Evidence → Roundtable → Admission 之后才产生的最终产物，保留在 Repository 中。
+
+### Evidence Profile（按 Candidate 性质决定）
+
+> **v0.2 新增（采纳 GPT 修正）**: 取消"四类必须齐"的硬条件。Admission 应根据 Candidate 性质决定 Evidence Profile。
+
+| Candidate 类型 | 建议 Evidence Profile | 说明 |
+|---------------|---------------------|------|
+| 新治理原则 | External Review + Internal Discussion + Live Observation | 治理原则关注一致性与运行验证 |
+| 新交易策略 | Historical Replay + Live Observation + Shadow | 策略需历史+实时双重验证 |
+| Bug 修复 | Internal Evidence | 单一来源即可 |
+| 文档修订 | External Review | 同行评审足够 |
+| 性能优化 | Internal Evidence + Live Observation | 优化需自测+生产观察 |
+
+**禁止**: 固定模板硬套所有 Candidate。
+
+### 权重 vs 准入
+
+| Evidence 类型 | Admission 权重 | 是否可跳过 Admission | 在 Roundtable 中的角色 |
+|--------------|---------------|--------------------|--------------------|
+| Internal Evidence | 1.0 | **否** | 主证 |
+| Historical Replay | 0.9 | **否** | 强证 |
+| Live Observation | 0.6 | **否** | 佐证 |
+| External Observation | 0.3 | **否** | 参考假设 |
+
+### 标注规范
+
+所有引用 External Observation 的文档/代码必须标注：
+```
+Source: <出处>
+Validation: External Observation, Not Verified
+Admission Status: Pending
+```
+
+示例：
+- `Source: NVIDIA "From AI Computing to Application Architecture" / Validation: External Observation, Not Verified`
+- `Source: 游资接力经验规则 / Validation: External Observation, Not Verified`
+- `Source: GPT-4 一致性评审 / Validation: External Review, Not Verified`
+
+**演化日志**:
+
+- 2026-07-15 v0.1 — 板块0 Deliverable。与 C-026 配套发布。
+- 2026-07-15 v0.2 — 名称修正：External Knowledge → External Observation；新增 Evidence Profile 替代硬四类齐。
+
+---
+
+## Policy Lifecycle — 通用 Policy 生命周期
+
+> **归属**: C-026 / C-025 统一实施框架
+> **替代**: 替代板块A'局部定义的 Law Weakening 设计，统一适用于所有 Policy（Law / Signal Candidate / Constraint / Strategy）
+> **关键新增**: `Challenged` 状态——有新证据但不足以判定失效时暂停判断、等待更多 Evidence
+
+### 状态流转
+
+```
+Candidate → Active → Monitoring → Challenged → Weakening → Deprecated → Archived
+```
+
+| 状态 | 含义 | 进入条件 | 退出路径 |
+|------|------|----------|----------|
+| **Candidate** | 候选期，Replay/Shadow 验证中 | 新 Signal/Law/Policy 注册 | → Active (Admission通过) / → Deprecated (验证失败) |
+| **Active** | 已激活，影响 Runtime | Admission 通过 | → Monitoring (运行满观察期) |
+| **Monitoring** | 监控期，收集贡献度数据 | 运行满 N 天 | → Challenged (贡献下降但不确定) / → Active (贡献稳定) |
+| **Challenged** | 受质疑，新证据不足以判定失效 | 贡献度下降但可能是随机波动 | → Weakening (确认下降) / → Active (回升) / → Monitoring (证据不足再观察) |
+| **Weakening** | 衰减期，确认贡献持续下降 | 连续20天贡献下降 / 胜率跌破地板 | → Deprecated (衰减10天未恢复) / → Challenged (有回升证据) |
+| **Deprecated** | 已废弃，停止调度 | Weakening 10天未恢复 | → Archived (30天冷却后) |
+| **Archived** | 已归档，保留历史证据 | Deprecated 30天后 | 不可回滚（需新 Candidate ID） |
+
+### Challenged 状态的设计意图
+
+**问题**: Monitoring 中发现贡献度从 75% 降到 65%，说不清是市场变了还是随机波动。
+
+**旧做法**: 直接跳 Weakening → 可能误杀有效策略
+**新做法**: 进入 Challenged → 暂停判断 → 收集更多 Evidence → 再裁决
+
+**Challenged 停留时长**: 最长 10 天。超时未决则按"无罪推定"回 Active。
+
+### Roundtable 介入点
+
+| 转换 | 需要 Roundtable |
+|------|----------------|
+| Candidate → Active | ✅ 必须 |
+| Active → Monitoring | ❌ 自动 |
+| Monitoring → Challenged | ❌ 自动（数据触发） |
+| Challenged → Weakening | ✅ 必须 |
+| Challenged → Active | ⚠️ 可选（自动回升也可） |
+| Weakening → Deprecated | ✅ 必须 |
+| Deprecated → Archived | ❌ 自动 |
+
+### 完整闭环图
+
+```
+External Observation → Observation → Hypothesis → Candidate → Replay
+  → Internal Evidence → Roundtable → Admission → Policy
+  → Monitoring → Challenged → Weakening → Archived
+       ↑                                    │
+       └──── Experience ← Evidence ←───────┘
+```
+
+### 与已有实现的关系
+
+- `law_discovery.py::LawStatus`: DRAFT≈Candidate, ACTIVE≈Active, WEAKENING≈Weakening, INVALID≈Deprecated, ARCHIVED≈Archived
+- **需新增**: `CHALLENGED` 状态到 `LawStatus` 枚举
+- `e2c_closure.py::ConstraintEntry`: 独立于本生命周期（约束有冷却机制，不经过 Challenged）
+- `adaptive_scorer.py`: 评分调整不改变 Policy 生命周期状态
+
+**演化日志**:
+
+- 2026-07-15 v0.1 — 板块0 Deliverable。替代局部 Law Weakening 设计，统一全系统。
+- 2026-07-15 v0.2 — 闭环图修正：External Knowledge → External Observation。
+
+---
+
+## C-027 — Governance as Governance Object (PROVISIONAL)
+
+> **状态: PROVISIONAL** — 30天后复审（2026-08-15前）
+> **公理根基**: C-026 (External Observation Principle) / #001 (Repository First) / C-024 (Repository 不可篡改)
+> **触发背景**: 板块0 C-026 建立后，GPT 评审指出"治理规则必须首先治理自己"——任何治理级别变更（含 C-026/C-027 本身、未来的 v1.0）都需走同一套 Admission 流程，不存在"因为是治理规则所以可以直接生效"的例外
+> **重要性**: 本约束比"治理规范 v1.0"标签**更重要**——v1.0 是收敛动作，C-027 是收敛前提
+
+### 核心原则
+
+**Governance 不拥有豁免权。**
+
+任何治理规则（含 C-026 / C-027 / 未来的 v1.0）的提出、修改、废弃都必须走：
+
+```
+Governance Proposal
+  ↓
+Observation（与外部输入同等处理）
+  ↓
+Evidence
+  ↓
+Candidate
+  ↓
+Roundtable
+  ↓
+Admission
+  ↓
+Governance Policy
+```
+
+**禁止例外**：
+- ❌ 不允许"因为是治理规则所以可以直接生效"
+- ❌ 不允许治理层在自身修订时绕开 Roundtable
+- ❌ 不允许 C-027 修订 C-027（C-027 的修订需走 C-027 自身规定的流程）
+
+### 与 C-026 的关系
+
+| 维度 | C-026 | C-027 |
+|------|-------|-------|
+| 约束对象 | External Observation | Governance Proposal |
+| 关注点 | 外部输入如何进入系统 | 治理规则本身如何修订 |
+| 共同点 | 都不允许跳过 Evidence→Candidate→Admission 链路 | 同左 |
+| 共同点 | 都不因来源权威而提高权重 | 同左 |
+
+**C-026 约束外部输入，C-027 约束治理自身，两者互补形成完整治理闭环。**
+
+### 追溯性案例
+
+| 案例 | 行为 | C-027 视角的判断 |
+|------|------|-----------------|
+| C-026 板块0 提出 | 治理层单方面建立新约束，未走 Admission 流程 | **违规**——但作为板块0的首批治理规则，按 v0.1 PROVISIONAL 接受，30天后必须复审走 Admission |
+| C-027 自身提出 | 同上 | **自我违规**——但接受同上处理 |
+
+> **设计意图**: C-027 不能溯及既往（C-027 之前的所有约束均按"已存在但未走 Admission"处理），但 C-027 之后所有治理变更必须走流程。
+
+### Evidence Profile (按 C-026 配套)
+
+C-027 类治理变更的 Evidence Profile（采纳 v0.2 Evidence Profile 原则）：
+
+| Candidate 类型 | Evidence Profile |
+|---------------|-----------------|
+| 新治理原则 | External Review + Internal Discussion + Live Observation |
+| 治理原则修订 | 同上 + 旧版本运行时影响分析 |
+| 治理原则废弃 | Live Observation + Internal Discussion（验证替代机制已就绪） |
+
+### 演化日志
+
+- 2026-07-15 v0.1 (PROVISIONAL) — 板块0 之后由 GPT 第二次评审触发。明确"Governance 不拥有豁免权"。
