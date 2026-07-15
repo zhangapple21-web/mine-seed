@@ -2,7 +2,7 @@
 
 > 创建时间: 2026-07-15
 > Mission: AUM-MISSION-ADVISOR-001 第二阶段
-> 状态: DRAFT（待用户确认后定稿）
+> 状态: **DRAFT-Pending-Review**（待用户确认权重分配和目标定义后转正）
 
 ---
 
@@ -84,4 +84,9 @@
 - [x] Capability Mapping 明确四层边界
 - [x] 禁止事项明确
 
-**未达成**：本报告待用户/治理确认后才能锁定为定稿，下游 Deliverable 1-4 方可启动。
+**待确认项**：
+- [ ] 用户确认权重分配（WinRate 30% + AvgReturn 30% + MaxDrawdown 15% + Sharpe 10% + PublicationScore 10%）
+- [ ] 用户确认目标定义（Primary: T+3 期望收益最大化，T+3 胜率 ≥ 40%；Secondary: T+5 胜率 ≥ 50%）
+
+**当前状态**：本报告为 **DRAFT-Pending-Review**，待用户确认后锁定为定稿，下游 Deliverable 1-4 方可启动。
+**关键提醒**：当前 T+3 胜率已达标（50%），但 T+3 平均收益为负（-1.02%），按本报告定义的 Primary Goal（收益最大化），系统目前不达标。
