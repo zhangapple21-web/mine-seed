@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-15",
+  "capabilities": [
+    {
+      "id": "GovernanceKernelReady",
+      "description": "Governance Kernel v1 验证通过",
+      "check": {
+        "type": "state",
+        "expression": "kernel_version >= 1.0"
+      },
+      "mappings": ["C-028", "C-029"],
+      "status": "PENDING"
+    },
+    {
+      "id": "ProviderHealthOK",
+      "description": "数据源 Provider 健康状态正常",
+      "check": {
+        "type": "state",
+        "expression": "provider.health == HEALTHY"
+      },
+      "mappings": ["DATA-001"],
+      "status": "PENDING"
+    },
+    {
+      "id": "EvidenceStoreAvailable",
+      "description": "Evidence Store 可写入",
+      "check": {
+        "type": "state",
+        "expression": "evidence_store.status == ACTIVE"
+      },
+      "mappings": [],
+      "status": "ACTIVE"
+    },
+    {
+      "id": "AuditPassed",
+      "description": "审核已通过",
+      "check": {
+        "type": "state",
+        "expression": "audit.status == PASSED"
+      },
+      "mappings": [],
+      "status": "PENDING"
+    },
+    {
+      "id": "LawDiscoveryEngineReady",
+      "description": "规律发现引擎已就绪",
+      "check": {
+        "type": "state",
+        "expression": "law_discovery.version >= 1.1"
+      },
+      "mappings": ["AUM-MISSION-LAW-001"],
+      "status": "ACTIVE"
+    }
+  ],
+  "workers": [
+    {
+      "id": "signal_validator",
+      "worker": "M01",
+      "trigger_scope": "runtime",
+      "event_types": ["NewSignalCandidate"],
+      "activation": "AUTO"
+    },
+    {
+      "id": "failure_analyzer",
+      "worker": "M02",
+      "trigger_scope": "runtime",
+      "event_types": ["WorkerFailed"],
+      "activation": "AUTO"
+    },
+    {
+      "id": "worker_profiler",
+      "worker": "M03",
+      "trigger_scope": "runtime",
+      "event_types": ["WorkerRegistered"],
+      "activation": "AUTO"
+    },
+    {
+      "id": "constraint_proposer",
+      "worker": "M04",
+      "trigger_scope": "runtime",
+      "event_types": ["ConstraintNeeded"],
+      "activation": "AUTO"
+    },
+    {
+      "id": "isomorphism_detector",
+      "worker": "M05",
+      "trigger_scope": "runtime",
+      "event_types": ["AssetIngested"],
+      "activation": "AUTO"
+    },
+    {
+      "id": "r1_archaeologist",
+      "worker": "M06",
+      "trigger_scope": "runtime",
+      "event_types": ["NewFragmentFound"],
+      "activation": "AUTO"
+    }
+  ],
+  "missions": [
+    {
+      "id": "data_source_recovery",
+      "mission": "DATA-001",
+      "trigger_scope": "mission",
+      "triggers": ["STATE", "RESOURCE", "EVENT", "TIME", "MANUAL"],
+      "activation": "CONFIRM"
+    }
+  ]
+}

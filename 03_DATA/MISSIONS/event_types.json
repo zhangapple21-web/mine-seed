@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-15",
+  "event_types": [
+    {
+      "type": "NewSignalCandidate",
+      "description": "新信号候选入库",
+      "payload_schema": {
+        "signal_id": "string",
+        "symbol": "string",
+        "timestamp": "ISO8601",
+        "source": "string"
+      },
+      "target_workers": ["M01"],
+      "trigger_missions": []
+    },
+    {
+      "type": "WorkerFailed",
+      "description": "Worker 执行失败",
+      "payload_schema": {
+        "worker_id": "string",
+        "error_code": "string",
+        "error_message": "string",
+        "timestamp": "ISO8601",
+        "retry_count": "integer"
+      },
+      "target_workers": ["M02"],
+      "trigger_missions": []
+    },
+    {
+      "type": "WorkerRegistered",
+      "description": "Worker 注册或更新",
+      "payload_schema": {
+        "worker_id": "string",
+        "version": "string",
+        "capabilities": ["string"],
+        "timestamp": "ISO8601"
+      },
+      "target_workers": ["M03"],
+      "trigger_missions": []
+    },
+    {
+      "type": "ConstraintNeeded",
+      "description": "发现新约束需求",
+      "payload_schema": {
+        "constraint_type": "string",
+        "context": "object",
+        "evidence_id": "string",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": ["M04"],
+      "trigger_missions": []
+    },
+    {
+      "type": "AssetIngested",
+      "description": "新资产入库",
+      "payload_schema": {
+        "asset_id": "string",
+        "asset_type": "string",
+        "source": "string",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": ["M05"],
+      "trigger_missions": []
+    },
+    {
+      "type": "NewFragmentFound",
+      "description": "发现 R1 碎片",
+      "payload_schema": {
+        "fragment_id": "string",
+        "fragment_type": "string",
+        "content_hash": "string",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": ["M06"],
+      "trigger_missions": []
+    },
+    {
+      "type": "ProviderFailed",
+      "description": "Provider 完全失效",
+      "payload_schema": {
+        "provider_id": "string",
+        "error_type": "string",
+        "availability": "float",
+        "last_success": "ISO8601",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": [],
+      "trigger_missions": ["DATA-001"]
+    },
+    {
+      "type": "ReplayFinished",
+      "description": "回放验证完成",
+      "payload_schema": {
+        "replay_id": "string",
+        "signal_id": "string",
+        "result": "PASS|FAIL",
+        "metrics": "object",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": [],
+      "trigger_missions": []
+    },
+    {
+      "type": "GovernorDecisionMade",
+      "description": "Governor 做出决策",
+      "payload_schema": {
+        "decision_id": "string",
+        "target_id": "string",
+        "decision": "ADMITTED|REJECTED|PENDING",
+        "reason": "string",
+        "timestamp": "ISO8601"
+      },
+      "target_workers": [],
+      "trigger_missions": []
+    }
+  ]
+}
