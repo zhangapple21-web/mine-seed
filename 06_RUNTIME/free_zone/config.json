@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "created_at": "2026-07-15",
+  "description": "自由区 24h 持续学习守护进程配置",
+
+  "cycle_interval_seconds": 1800,
+  "heartbeat_interval_cycles": 16,
+
+  "output_dir": "02_MEMORY/free_zone",
+  "log_dir": "02_MEMORY/logs",
+
+  "tg_heartbeat": {
+    "enabled": true,
+    "chat_id": "5016609451",
+    "bot_token_env": "TG_BOT_TOKEN_2",
+    "topic": "free-zone-heartbeat"
+  },
+
+  "tasks": [
+    {
+      "id": "pattern_hypothesis",
+      "prompt": "你是一个认知发现引擎。请生成一个关于A股市场规律的假设。格式：\n假设：[描述]\n依据：[逻辑推理]\n可验证指标：[具体指标]\n置信度：[0-1]",
+      "system": "你是 ACE（自主文明引擎）的假设生成器。每次只生成一个假设，必须基于逻辑推理，不要随机猜测。",
+      "prefer": "glm",
+      "max_tokens": 500
+    },
+    {
+      "id": "constraint_discovery",
+      "prompt": "你是一个约束发现器。请分析当前系统可能需要的约束规则。格式：\n约束：[描述]\n触发条件：[何时生效]\n违反后果：[如果不遵守会怎样]",
+      "system": "你是 ACE 的约束发现器。寻找系统运行中可能缺失的约束规则。",
+      "prefer": "nim",
+      "max_tokens": 400
+    },
+    {
+      "id": "experience_distillation",
+      "prompt": "你是一个经验蒸馏器。请从以下场景中提炼可复用的规律：\n场景：A股日内交易，信号产生后 T+1 到 T+5 的收益跟踪\n请提炼：\n1. 哪些信号特征与高收益相关？\n2. 哪些情况信号会失效？\n3. 建议的最小验证样本量？",
+      "system": "你是 ACE 的经验蒸馏器。从具体经验中提炼抽象规律，忘掉细节，保留结构。",
+      "prefer": "glm",
+      "max_tokens": 500
+    },
+    {
+      "id": "market_observation",
+      "prompt": "你是一个市场观察者。请生成一条关于当前A股市场的 Observation。格式：\n观察：[客观描述]\n异常点：[与常态的偏差]\n潜在信号：[可能的市场含义]",
+      "system": "你是 ACE 的市场观察者。只记录客观事实，不做主观判断。",
+      "prefer": "github",
+      "max_tokens": 400
+    }
+  ]
+}

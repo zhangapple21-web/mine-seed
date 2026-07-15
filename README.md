@@ -31,6 +31,10 @@ This repository contains the evolving core architecture and seeds for evidence-b
 
 - **[smelter_gate.py](04_PROTOCOLS/smelter_gate.py)** — Failure recycling (废墟熔炼厂): `Failed Structure` → `Disassemble` → `Extract Threads` → `Smelt` → `New Seed`. Threads are indestructible memory cores (线). Requires MengPo filter before processing. Death is not end, but recycling.
 
+### 🔄 24h Free Zone (Continuous Learning)
+
+- **[daemon.py](06_RUNTIME/free_zone/daemon.py)** — 24h continuous learning daemon running in the Free Zone. Calls free LLM APIs (GLM/NIM/GitHub) every 30 minutes to generate observations, hypotheses, and constraint discoveries. All output flows through the Distillation Factory (孟婆) before storage. Zero-cost, fully autonomous.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
