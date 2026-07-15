@@ -52,5 +52,14 @@
     "capability": "architecture",
     "dedup_key": "shell_routing_router_design",
     "timestamp": "2026-07-14T19:45:00"
+  },
+  {
+    "question": "费曼法(认知校验澄清)是否应纳入为正式协议？现有系统有红蓝队辩论和考古发现，但缺少认知校验环节，可用于新约束引入前的逻辑澄清",
+    "source": "Roundtable_Template",
+    "priority": "P3",
+    "status": "pending",
+    "capability": "protocol",
+    "dedup_key": "feyman_verification_protocol",
+    "timestamp": "2026-07-14T20:00:00"
   }
 ]
