@@ -1,7 +1,8 @@
-# Mission Trigger Conditions — 条件触发机制 v2.0
+# Mission Trigger Conditions — 条件触发机制 v2.1
 
 > **原则**: 不说"以后做"，而是定义"什么条件下做"。
 > **来源**: M系列设计（E007）+ 按需激活架构 + GPT Review 2026-07-15
+> **参考**: Temporal Signal / AWS EventBridge / Dify 1.10 Event-Driven Workflows
 
 ---
 
@@ -27,9 +28,10 @@ Trigger Registry
  │
  ▼
 Evidence Gate
- ├── 验证触发条件
- ├── 生成 Trigger Evidence Record
- └── CONFIRM 等待（如需要）
+ ├── 1. 验证触发条件（防止误触发）
+ ├── 2. 生成 Trigger Evidence Record
+ ├── 3. 写入 Evidence Store
+ └── 4. 若 CONFIRM 模式，等待 Governor 确认
  │
  ▼
 Dispatch
@@ -91,19 +93,31 @@ M4类型: 边界与守卫
 
 ---
 
-## 触发类型（v2.0 新增 EVENT）
+## 触发类型（v2.1 完善检查调度）
 
 ### 类型对比
 
-| 类型 | 驱动方式 | 说明 | 示例 |
-|------|----------|------|------|
-| **EVENT** | 信号驱动 | 响应已发生的事实 | `NewEvidenceRecorded` |
-| STATE | 条件驱动 | 持续检查状态是否成立 | `C-028.status == ADMITTED` |
-| RESOURCE | 条件驱动 | 资源状态检查 | `data_source.availability < 0.5` |
-| TIME | 条件驱动 | 时间到达 | `audit_passed + 3 days` |
-| DEPENDENCY | 条件驱动 | 前置依赖完成 | `MISSION-001.status == COMPLETED` |
-| THRESHOLD | 条件驱动 | 阈值触发 | `error_rate > 0.3 for 3 days` |
-| MANUAL | 信号驱动 | 手动触发 | `user_request == true` |
+| 类型 | 驱动方式 | 说明 | 检查方式 |
+|------|----------|------|----------|
+| **EVENT** | 信号驱动 | 响应已发生的事实 | 实时（事件总线） |
+| STATE | 条件驱动 | 持续检查状态是否成立 | check_schedule（默认 daily） |
+| RESOURCE | 条件驱动 | 资源状态检查 | check_schedule（默认 daily） |
+| TIME | 条件驱动 | 时间到达 | check_schedule（默认 hourly） |
+| DEPENDENCY | 条件驱动 | 前置依赖完成 | 事件触发（DEPENDENCY_COMPLETED） |
+| THRESHOLD | 条件驱动 | 阈值触发 | 持续监控（告警系统） |
+| MANUAL | 信号驱动 | 手动触发 | 实时 |
+
+### check_schedule 字段（v2.1 新增）
+
+```yaml
+# STATE 触发器示例
+type: STATE
+capability: GovernanceKernelReady
+check_schedule:
+  frequency: daily          # daily / hourly / cron
+  time: "09:00"             # 每天固定时间（可选）
+  timezone: "Asia/Shanghai"
+```
 
 ### EVENT vs 条件驱动
 
@@ -116,7 +130,8 @@ event_type: ReplayFinished
 # STATE（条件驱动）- 需要持续检查
 type: STATE
 condition: GovernanceKernelReady == true
-poll_interval: 1h
+check_schedule:
+  frequency: hourly
 ```
 
 ---
@@ -130,46 +145,91 @@ poll_interval: 1h
 | 调度 | Scheduler 排期 | Worker Pool 立即执行 |
 | 示例 | DATA-001 数据源恢复 | M02 失效分析 |
 
-### 注册表分离
+### 注册表分离（v2.1 引用配置 ID）
 
 ```yaml
 MissionTriggerRegistry:
   - mission_id: DATA-001
-    triggers: [STATE, RESOURCE, TIME, MANUAL]
+    trigger_configs:
+      - cfg_id: TC-STATE-001
+        type: STATE
+        capability: GovernanceKernelReady
+      - cfg_id: TC-RESOURCE-001
+        type: RESOURCE
+        capability: ProviderHealthOK
+        condition: "!= HEALTHY"
+        duration_type: continuous  # continuous | cumulative
+        duration: 2 days
+      - cfg_id: TC-EVENT-001
+        type: EVENT
+        event_type: ProviderFailed
+      - cfg_id: TC-TIME-001
+        type: TIME
+        capability: AuditPassed
+        offset: 3 days
+    activation_mode: CONFIRM
+    confirmation_window: 24h
     
 RuntimeTriggerRegistry:
   - worker_id: M02
-    triggers: [EVENT]
-    event_types: [WorkerFailed]
+    trigger_configs:
+      - cfg_id: TC-EVENT-M02
+        type: EVENT
+        event_type: WorkerFailed
+    activation_mode: AUTO
 ```
 
 ---
 
-## Activation Mode（v2.0 新增 CONFIRM）
+## Activation Mode（v2.1 新增 ESCALATE）
 
 | 模式 | 说明 | 适用场景 |
 |------|------|----------|
 | AUTO | 自动执行 | 生产阻断、明确条件 |
 | **CONFIRM** | 系统请求，人类确认 | 重要但非紧急 |
+| **ESCALATE** | 超时未确认，升级处理 | 关键任务超时 |
 | MANUAL | 完全手动 | 实验性质 |
 
-### CONFIRM 模式配置
+### CONFIRM 模式配置（v2.1 完善）
 
 ```yaml
 activation:
   mode: CONFIRM
   confirmation_window: 24h
-  default_on_timeout: ABORT  # 或 EXECUTE / ESCALATE
+  default_on_timeout: ESCALATE  # ABORT / EXECUTE / ESCALATE
   
-TriggerEvidence:
-  trigger_id: TRG-20260715-001
-  confirmation_status: PENDING
-  confirmation_deadline: 2026-07-16T14:00:00Z
+  # ESCALATE 配置
+  escalation:
+    target: governor+1          # 升级到上一级
+    notify_channel: telegram    # 通知渠道
+    auto_execute_after: 48h     # 最终兜底自动执行
+```
+
+### ESCALATE 流程
+
+```
+CONFIRM 触发
+     │
+     ▼
+等待 Governor 确认（24h 窗口）
+     │
+     ├── 确认 → 执行
+     │
+     └── 超时 → ESCALATE
+                 │
+                 ▼
+         升级到 governor+1
+         通知到 Telegram
+         再等待 24h
+                 │
+                 ├── 确认 → 执行
+                 │
+                 └── 超时 → 自动执行（兜底）
 ```
 
 ---
 
-## Capability Dictionary（v2.0）
+## Capability Dictionary（v2.1）
 
 Trigger 面向 Capability，而非 Document。
 
@@ -191,7 +251,7 @@ capability: GovernanceKernelReady
 
 ---
 
-## Trigger Evidence（v2.0 新增）
+## Trigger Evidence（v2.1 新增 duration 字段）
 
 每个 Trigger 激活时，生成 Evidence Record：
 
@@ -211,7 +271,9 @@ capability: GovernanceKernelReady
   ],
   "confidence": 0.95,
   "activation_mode": "AUTO",
-  "dispatch_status": "QUEUED"
+  "dispatch_status": "QUEUED",
+  "trigger_evaluation_duration_ms": 23,
+  "duration_type": "continuous"
 }
 ```
 
@@ -245,36 +307,65 @@ Dispatch
 Mission: AUM-MISSION-DATA-001
 Status: CANDIDATE
 Trigger Conditions:
-  - type: STATE
+  - cfg_id: TC-STATE-001
+    type: STATE
     capability: GovernanceKernelReady
+    check_schedule:
+      frequency: daily
+      time: "09:00"
     note: C-028 或 C-029 通过
-  - type: RESOURCE
+    
+  - cfg_id: TC-RESOURCE-001
+    type: RESOURCE
     capability: ProviderHealthOK
     condition: provider.health != HEALTHY
+    duration_type: continuous
     duration: 2 days
+    check_schedule:
+      frequency: hourly
     note: 数据源连续 2 天不健康
-  - type: EVENT
+    
+  - cfg_id: TC-EVENT-001
+    type: EVENT
     event_type: ProviderFailed
     note: Provider 完全失效
-  - type: TIME
+    
+  - cfg_id: TC-TIME-001
+    type: TIME
     capability: AuditPassed
     offset: 3 days
+    check_schedule:
+      frequency: daily
+      time: "00:00"
     note: 审核通过后 3 天
-  - type: MANUAL
+    
+  - cfg_id: TC-MANUAL-001
+    type: MANUAL
     condition: user_request == true
+    
 Activation Mode: CONFIRM
 Confirmation Window: 24h
+Default on Timeout: ESCALATE
+Escalation Target: governor+1
 Priority After Activation: P0
 ```
 
+**duration_type 说明**：
+- `continuous`: 连续不健康（每天检查都失败）
+- `cumulative`: 累计不健康（总共 X 天失败）
+
 ---
 
-## 检查周期
+## 检查周期（v2.1 完善）
 
-- **EVENT**: 实时响应（事件总线）
-- **STATE/RESOURCE/TIME**: 每日检查（系统启动时）
-- **DEPENDENCY**: 任务完成时检查
-- **THRESHOLD**: 持续监控（告警系统）
+| 类型 | 检查方式 | 默认频率 | 可配置 |
+|------|----------|----------|--------|
+| EVENT | 实时响应 | 事件总线 | — |
+| STATE | 定时检查 | daily 09:00 | check_schedule |
+| RESOURCE | 定时检查 | daily 09:00 | check_schedule |
+| TIME | 定时检查 | hourly | check_schedule |
+| DEPENDENCY | 事件触发 | 任务完成时 | — |
+| THRESHOLD | 持续监控 | 告警系统 | — |
 
 ---
 
@@ -282,7 +373,7 @@ Priority After Activation: P0
 
 | Mission/Worker | 类型 | 触发条件 | Activation |
 |----------------|------|----------|------------|
-| DATA-001 | Mission | STATE/RESOURCE/EVENT/TIME/MANUAL | CONFIRM |
+| DATA-001 | Mission | STATE/RESOURCE/EVENT/TIME/MANUAL | CONFIRM+ESCALATE |
 | SSH 认证替代 PAT | Mission | TIME + MANUAL | CONFIRM |
 | Artifact Schema 统一 | Mission | STATE + DEPENDENCY | AUTO |
 | M01 信号验证 | Runtime | EVENT: NewSignalCandidate | AUTO |
@@ -295,20 +386,51 @@ Priority After Activation: P0
 
 ---
 
-## 事件类型定义（EVENT Types）
+## 事件类型定义（v2.1 新增 purpose）
 
-| Event Type | 触发场景 | 目标 Worker |
-|------------|----------|-------------|
-| `NewSignalCandidate` | 新信号候选入库 | M01 |
-| `WorkerFailed` | Worker 执行失败 | M02 |
-| `WorkerRegistered` | Worker 注册/更新 | M03 |
-| `ConstraintNeeded` | 发现新约束需求 | M04 |
-| `AssetIngested` | 新资产入库 | M05 |
-| `NewFragmentFound` | 发现 R1 碎片 | M06 |
-| `ProviderFailed` | Provider 完全失效 | DATA-001 |
-| `ReplayFinished` | 回放验证完成 | — |
-| `GovernorDecisionMade` | Governor 做出决策 | — |
+| Event Type | 触发场景 | 目标 Worker | Purpose |
+|------------|----------|-------------|---------|
+| `NewSignalCandidate` | 新信号候选入库 | M01 | 验证信号质量 |
+| `WorkerFailed` | Worker 执行失败 | M02 | 失效分析与重试 |
+| `WorkerRegistered` | Worker 注册/更新 | M03 | 画像更新 |
+| `ConstraintNeeded` | 发现新约束需求 | M04 | 约束提案 |
+| `AssetIngested` | 新资产入库 | M05 | 同构检测 |
+| `NewFragmentFound` | 发现 R1 碎片 | M06 | 考古整理 |
+| `ProviderFailed` | Provider 完全失效 | DATA-001 | 数据源恢复 |
+| `ReplayFinished` | 回放验证完成 | — | 作为 DEPENDENCY 触发条件 |
+| `GovernorDecisionMade` | Governor 做出决策 | — | 触发 STATUS 变更通知 |
+
+**Purpose 字段说明**：
+- 明确事件被谁引用、为什么存在
+- 避免后续维护时遗忘
 
 ---
 
-*Trigger v2.0。不再说"以后做"，而是说"当 Capability 就绪或 Event 发生时做"。M4 守护边界，其他 Workers 按需解放。*
+## 业界参考
+
+### Temporal（Event Sourcing + Signal）
+
+- **Signal**: 外部事件注入 Workflow
+- **Event Sourcing**: 所有状态变更记录为事件
+- **Workflow vs Activity**: 长期编排 vs 即时执行
+
+**借鉴**：Mission = Workflow，Worker = Activity
+
+### AWS EventBridge（Pattern Matching）
+
+- **Rule**: 事件模式匹配
+- **Target**: 目标服务
+- **enabled**: 规则开关
+
+**借鉴**：check_schedule.enabled、pattern matching
+
+### Dify 1.10（Event-Driven Workflows）
+
+- **Trigger**: 工作流启动条件
+- **Event**: 外部事件触发
+
+**借鉴**：EVENT 作为第一类 Trigger
+
+---
+
+*Trigger v2.1。参考 Temporal/AWS EventBridge/Dify 最佳实践。不说"以后做"，只说"什么条件下做"。M4 守护边界，其他 Workers 按需解放。*
