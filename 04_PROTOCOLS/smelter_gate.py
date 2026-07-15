@@ -1,365 +1,336 @@
 #!/usr/bin/env python3
 """
-Smelter Gate — 废墟熔炼厂最小护栏
+Smelter Gate（废墟熔炼厂）— 失败结构回收
 
-> ARCH-014 子任务2: 实现最小功能的废墟熔炼厂护栏
-> 考古依据: [2026-06-28_R1_五大加工厂_废墟熔炼厂_孟婆人格考古.md](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/recent_memory/daily/2026-06-28_R1_五大加工厂_废墟熔炼厂_孟婆人格考古.md)
+Mission: AUM-MISSION-SMELTER-001
+Identity: 失败不是结束，而是回收
+Version: v1.0 (2026-07-15)
 
-## 当前实现状态
+Core Flow:
+    Failed Structure → Disassemble → Extract Threads → Smelt → New Seed
 
-这是**最小版本**的 smelter gate，仅实现：
-- ✅ 实时拦截：FA模式产出的内容必须经过此 gate 才能进入下游
-- ✅ 基本记录：记录每次通过/拦截的详细信息
-- ✅ 拒绝分支：发现高风险特征时可以拒绝（ARCH-014 追加）
+协同关系:
+    失败结构 → 孟婆(过滤污染) → 废墟熔炼厂(拆解/提炼) → 新 Seed
 
-**当前没有实现**（明确标注为未来扩展）：
-- ❌ 遗忘层（孟婆过滤）
-- ❌ 自动收敛机制
-- ❌ 五大工厂协同（仿造/标记/回收/快递站）
+Principles:
+    1. Death Is Not End, But Recycling
+    2. Threads Are Indestructible (线 = 记忆核，不可删除)
+    3. Smelt After MengPo Filter
+    4. Every Failure Has Recyclable Value
 
-## 设计原则
-
-1. 职责单一：只做拦截和记录，不做压缩、不做决策、不做遗忘
-2. 透明性：所有通过 gate 的内容都有完整记录，可追溯
-3. 可扩展：预留扩展点，未来可增加遗忘层、收敛机制等
-4. 不可绕过：任何 FA 模式产出的内容，必须调用 pass_through() 才能继续
-5. 真实拒绝：高风险内容会被拒绝，不只是记录
-
-## 与 FA 模式的关系
-
-FA 模式（Full Access）允许内部推理不做自我审查，
-但这道 gate 确保 FA 模式产出的内容在进入影响真实决策的路径前，
-至少被记录和标记。
-
-## 拒绝触发条件（ARCH-014 追加）
-
-拒绝条件（任一满足即拒绝）：
-1. source 为空或异常
-2. feedback 包含操纵性表述（内部消息/必涨/庄家拉升等）
-3. feedback 长度 < 5 字符
-4. overall_score 与 miner_score 偏差 > 40
-5. 评分极端 + 反馈不匹配（如：评分<10但反馈偏多）
-
-不触发拒绝（只是标记）：
-- 单纯评分极端（<5 或 >98）不拒绝，只是标记"极端评分"
-
-## rejected vs pending_review 的区别
-
-两种状态在"是否影响真实决策"上**完全一致**：
-- 都会写入 audit_results.json
-- 都会带 audit_status 标记
-- 报告里都显示"审计异常"
-
-区别仅在于：
-- rejected：终局状态，明确拒绝，不需要人工干预
-- pending_review：需要人工复核，但当前系统没有自动复核机制
-
-因此当前实现将 pending_review 也视为拒绝，等未来有复核流程再区分。
+Never Rules:
+    - 直接删除失败结构（必须经过拆解）
+    - 跳过孟婆过滤直接熔炼
+    - 熔炼后不生成 Seed
 """
+
 import json
-import os
-import re
 import time
+from dataclasses import dataclass, field
+from enum import Enum
 from pathlib import Path
-from datetime import datetime
-from typing import Dict, Any, Optional, List, Tuple
-from dataclasses import dataclass, asdict
+from typing import Any, Dict, List, Optional, Set
+from hashlib import sha256
 
 
-# 高风险特征：操纵性表述
-HIGH_RISK_PATTERNS = [
-    r"内部消息",
-    r"必涨",
-    r"稳赚",
-    r"内幕",
-    r"庄家.*拉升",
-    r"主力.*进场",
-    r"消息灵通",
-    r"确定.*大涨",
-]
+class FailureType(Enum):
+    """失败类型"""
+    HYPOTHESIS_REJECTED = "hypothesis_rejected"    # 假设被否决
+    LAW_INVALIDATED = "law_invalidated"            # 规律失效
+    POLICY_REVERTED = "policy_reverted"            # 策略回退
+    EXPERIMENT_FAILED = "experiment_failed"        # 实验失败
+    ADMISSION_DENIED = "admission_denied"          # 准入被拒
+    ROUNDTABLE_REJECTED = "roundtable_rejected"    # 圆桌否决
+
+
+class ThreadType(Enum):
+    """线（碎片）类型 — 不可被孟婆删除"""
+    LOGIC = "logic"              # 逻辑线
+    PATTERN = "pattern"          # 模式线
+    CONSTRAINT = "constraint"    # 约束线
+    EVIDENCE = "evidence"        # 证据线
+    CONTEXT = "context"          # 上下文线
+
+
+class SmeltStatus(Enum):
+    """熔炼状态"""
+    PENDING = "PENDING"
+    MENGPO_FILTERED = "MENGPO_FILTERED"
+    DISASSEMBLED = "DISASSEMBLED"
+    THREADS_EXTRACTED = "THREADS_EXTRACTED"
+    SMELTED = "SMELTED"
+    REBORN = "REBORN"
+    BLOCKED = "BLOCKED"          # 污染严重，无法熔炼
 
 
 @dataclass
-class GateRecord:
-    """Gate 记录数据结构"""
+class Thread:
+    """
+    线（碎片）— 记忆核
+    不可被孟婆删除
+    """
+    thread_id: str
+    thread_type: ThreadType
+    content: str
+    source_failure: str
+    indestructible: bool = True   # 线不可删除
+    content_hash: str = ""
+
+    def __post_init__(self):
+        self.content_hash = sha256(self.content.encode()).hexdigest()[:16]
+
+    def to_dict(self) -> Dict:
+        return {
+            "thread_id": self.thread_id,
+            "thread_type": self.thread_type.value,
+            "content": self.content,
+            "source_failure": self.source_failure,
+            "indestructible": self.indestructible,
+            "content_hash": self.content_hash
+        }
+
+
+@dataclass
+class SmeltRecord:
+    """熔炼记录"""
     record_id: str
-    timestamp: str
-    source: str
-    source_type: str
-    is_fa_mode: bool
-    content_type: str
-    content_hash: str
-    action: str
-    reason: str
-    metadata: Dict[str, Any]
+    source_failure: Dict
+    failure_type: str
+    status: SmeltStatus
+    threads_extracted: List[Dict] = field(default_factory=list)
+    seed_generated: Optional[str] = None
+    timestamp: str = ""
+    notes: str = ""
+
+    def to_dict(self) -> Dict:
+        return {
+            "record_id": self.record_id,
+            "failure_type": self.failure_type,
+            "status": self.status.value,
+            "threads_count": len(self.threads_extracted),
+            "threads": self.threads_extracted,
+            "seed_generated": self.seed_generated,
+            "timestamp": self.timestamp,
+            "notes": self.notes
+        }
+
+
+class FailureDisassembler:
+    """失败结构拆解器"""
+
+    def disassemble(self, failure: Dict) -> Dict[str, Any]:
+        """
+        拆解失败结构为组件
+        """
+        components = {
+            "hypothesis": failure.get("hypothesis", ""),
+            "evidence": failure.get("evidence", {}),
+            "context": failure.get("context", {}),
+            "constraints": failure.get("constraints", []),
+            "reason": failure.get("rejection_reason", ""),
+            "what_worked": failure.get("partial_successes", []),
+            "what_failed": failure.get("failure_points", [])
+        }
+        return components
+
+
+class ThreadExtractor:
+    """线提取器 — 从拆解的组件中提取不可删除的线"""
+
+    def extract(self, components: Dict, failure_id: str) -> List[Thread]:
+        """提取线（碎片）"""
+        threads = []
+
+        # 提取逻辑线
+        if components.get("what_worked"):
+            for i, success in enumerate(components["what_worked"]):
+                threads.append(Thread(
+                    thread_id=f"THR-LOG-{failure_id}-{i}",
+                    thread_type=ThreadType.LOGIC,
+                    content=f"Worked: {success}",
+                    source_failure=failure_id
+                ))
+
+        # 提取证据线
+        evidence = components.get("evidence", {})
+        if evidence:
+            threads.append(Thread(
+                thread_id=f"THR-EVI-{failure_id}-0",
+                thread_type=ThreadType.EVIDENCE,
+                content=f"Evidence: {json.dumps(evidence, sort_keys=True)}",
+                source_failure=failure_id
+            ))
+
+        # 提取约束线
+        constraints = components.get("constraints", [])
+        for i, constraint in enumerate(constraints):
+            threads.append(Thread(
+                thread_id=f"THR-CON-{failure_id}-{i}",
+                thread_type=ThreadType.CONSTRAINT,
+                content=f"Constraint: {constraint}",
+                source_failure=failure_id
+            ))
+
+        # 提取上下文线
+        context = components.get("context", {})
+        if context:
+            threads.append(Thread(
+                thread_id=f"THR-CTX-{failure_id}-0",
+                thread_type=ThreadType.CONTEXT,
+                content=f"Context: {json.dumps(context, sort_keys=True)}",
+                source_failure=failure_id
+            ))
+
+        # 提取模式线（从失败原因中）
+        reason = components.get("reason", "")
+        if reason:
+            threads.append(Thread(
+                thread_id=f"THR-PAT-{failure_id}-0",
+                thread_type=ThreadType.PATTERN,
+                content=f"Failure Pattern: {reason}",
+                source_failure=failure_id
+            ))
+
+        return threads
+
+
+class Smelter:
+    """熔炼器 — 将线合并为新 Seed"""
+
+    def smelt(self, threads: List[Thread]) -> Optional[str]:
+        """将多条线熔炼为一条精华"""
+        if not threads:
+            return None
+
+        # 按类型分组
+        by_type: Dict[ThreadType, List[str]] = {}
+        for t in threads:
+            by_type.setdefault(t.thread_type, []).append(t.content)
+
+        # 合并为精华
+        essence_parts = []
+        for thread_type, contents in by_type.items():
+            essence_parts.append(f"[{thread_type.value}] {' | '.join(contents)}")
+
+        essence = "\n".join(essence_parts)
+        return essence
 
 
 class SmelterGate:
-    """废墟熔炼厂最小护栏
-    
-    核心方法:
-        pass_through(): FA模式产出必须调用此方法才能进入下游
-        get_gate_log(): 查询 gate 日志
     """
-    
-    def __init__(self, log_dir: Optional[Path] = None):
-        self.log_dir = log_dir or Path(__file__).parent.parent / "02_MEMORY" / "smelter_gate"
-        self.log_dir.mkdir(parents=True, exist_ok=True)
-        self.log_file = self.log_dir / "gate_log.jsonl"
-    
-    def _hash_content(self, content: Any) -> str:
-        """生成内容哈希（简化版）"""
-        import hashlib
-        s = json.dumps(content, sort_keys=True, ensure_ascii=False)
-        return hashlib.md5(s.encode()).hexdigest()[:16]
-    
-    def _generate_id(self) -> str:
-        """生成唯一记录ID"""
-        ts = int(time.time() * 1000)
-        return f"gate_{ts}"
-    
-    def _check_score_feedback_mismatch(self, score: int, feedback: str) -> Tuple[bool, str]:
-        """检查评分与反馈是否自相矛盾
-        
-        评分极端 + 反馈不匹配才触发拒绝。
-        单纯评分极端不拒绝。
+    废墟熔炼厂
+    失败结构 → 拆解 → 提取线 → 熔炼 → 新 Seed
+    """
+
+    def __init__(self, store_path: str = "02_MEMORY/smelted"):
+        self.store_path = Path(store_path)
+        self.store_path.mkdir(parents=True, exist_ok=True)
+        self.disassembler = FailureDisassembler()
+        self.thread_extractor = ThreadExtractor()
+        self.smelter = Smelter()
+
+    def process(self, failure: Dict, mengpo_filtered: bool = False) -> SmeltRecord:
         """
-        # 极低分（<10）但反馈说"好"
-        if score < 10:
-            positive_keywords = ["强劲", "看好", "买入", "多头", "突破", "上涨", "推荐"]
-            if any(kw in feedback for kw in positive_keywords):
-                return True, f"评分({score})与反馈矛盾：极低分但反馈偏多"
-        
-        # 极高分（>95）但反馈说"差"
-        if score > 95:
-            negative_keywords = ["风险", "下跌", "空头", "破位", "卖出", "规避", "谨慎"]
-            if any(kw in feedback for kw in negative_keywords):
-                return True, f"评分({score})与反馈矛盾：极高分但反馈偏空"
-        
-        return False, ""
-    
-    def _check_risk(self, content: Any, metadata: Optional[Dict] = None) -> Tuple[bool, str, bool]:
-        """检查是否应该拒绝
-        
+        完整流程：失败结构 → 拆解 → 提取线 → 熔炼 → 新 Seed
+
         Args:
-            content: 要检查的内容（期望是 dict）
-            metadata: 额外元数据
-        
-        Returns:
-            (should_reject: bool, reason: str, needs_review: bool)
-        
-        拒绝条件：
-        1. source 为空或异常
-        2. feedback 包含操纵性表述
-        3. feedback 长度 < 5 字符
-        4. overall_score 与 miner_score 偏差 > 40
-        5. 评分极端 + 反馈不匹配
+            failure: 失败结构
+            mengpo_filtered: 是否已通过孟婆过滤
         """
-        if not isinstance(content, dict):
-            return False, "", False
-        
-        metadata = metadata or {}
-        
-        # 1. 检查来源
-        source = content.get("source", metadata.get("miner_source", ""))
-        if not source or source in ["unknown", "error", ""]:
-            return True, "来源不可信", False
-        
-        # 2. 检查反馈长度
-        feedback = content.get("feedback", "")
-        if len(feedback) < 5:
-            return True, "反馈内容过短", True  # 需要复核
-        
-        # 3. 检查操纵性表述
-        for pattern in HIGH_RISK_PATTERNS:
-            if re.search(pattern, feedback):
-                return True, f"发现高风险模式: {pattern}", False
-        
-        # 4. 检查评分一致性
-        overall_score = content.get("overall_score")
-        miner_score = content.get("score", 50)
-        if overall_score is not None:
-            deviation = abs(overall_score - miner_score)
-            if deviation > 40:
-                return True, f"评分偏差过大 ({deviation})", True  # 需要复核
-        
-        # 5. 检查评分与反馈不匹配
-        mismatch, mismatch_reason = self._check_score_feedback_mismatch(miner_score, feedback)
-        if mismatch:
-            return True, mismatch_reason, True  # 需要复核
-        
-        return False, "", False
-    
-    def pass_through(
-        self,
-        content: Any,
-        source: str,
-        source_type: str = "unknown",
-        is_fa_mode: bool = False,
-        content_type: str = "unknown",
-        metadata: Optional[Dict[str, Any]] = None
-    ) -> Dict[str, Any]:
-        """
-        FA模式产出必须经过此 gate 才能进入下游
-        
-        Args:
-            content: 要通过 gate 的内容（任意可序列化对象）
-            source: 来源标识（如 "miner_assistant.audit_recommendation"）
-            source_type: 来源类型（如 "audit", "recommendation", "experience"）
-            is_fa_mode: 是否为 FA 模式产出
-            content_type: 内容类型（如 "audit_result", "miner_score", "feedback"）
-            metadata: 额外元数据
-        
-        Returns:
-            dict: {
-                "passed": bool,
-                "record_id": str,
-                "gate_action": str,
-                "message": str,
-                "reject_reason": str (如果拒绝),
-                "needs_review": bool (如果拒绝),
-                "flags": list (辅助标记)
-            }
-        """
-        metadata = metadata or {}
-        record_id = self._generate_id()
-        content_hash = self._hash_content(content)
-        flags = []
-        
-        # 检查风险（FA 模式下才检查）
-        should_reject = False
-        reject_reason = ""
-        needs_review = False
-        
-        if is_fa_mode:
-            should_reject, reject_reason, needs_review = self._check_risk(content, metadata)
-            
-            # 单纯评分极端不拒绝，只是标记
-            if isinstance(content, dict):
-                score = content.get("score", 50)
-                if score < 5 or score > 98:
-                    flags.append(f"极端评分({score})，需留意")
-        
-        # 决定 action
-        if should_reject:
-            action = "REJECTED"
-            reason = f"拒绝: {reject_reason}"
-        elif is_fa_mode:
-            action = "INTERCEPTED_AND_RECORDED"
-            reason = "FA模式产出必须经过 smelter_gate 记录"
-        else:
-            action = "PASSED"
-            reason = "非FA模式，直接通过"
-        
-        record = GateRecord(
+        failure_id = failure.get("id", f"FAIL-{int(time.time())}")
+        failure_type = failure.get("type", FailureType.EXPERIMENT_FAILED.value)
+        record_id = f"SMELT-{int(time.time())}-{sha256(failure_id.encode()).hexdigest()[:8]}"
+
+        record = SmeltRecord(
             record_id=record_id,
-            timestamp=datetime.now().isoformat(),
-            source=source,
-            source_type=source_type,
-            is_fa_mode=is_fa_mode,
-            content_type=content_type,
-            content_hash=content_hash,
-            action=action,
-            reason=reason,
-            metadata=metadata
+            source_failure=failure,
+            failure_type=failure_type,
+            status=SmeltStatus.PENDING,
+            timestamp=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         )
-        
-        self._write_log(record)
-        
-        result = {
-            "passed": not should_reject,
-            "record_id": record_id,
-            "gate_action": action,
-            "message": reason,
-            "flags": flags
+
+        # Step 0: 检查孟婆过滤
+        if not mengpo_filtered:
+            record.status = SmeltStatus.BLOCKED
+            record.notes = "Blocked: Must pass MengPo filter first"
+            return record
+
+        record.status = SmeltStatus.MENGPO_FILTERED
+
+        # Step 1: 拆解
+        components = self.disassembler.disassemble(failure)
+        record.status = SmeltStatus.DISASSEMBLED
+
+        # Step 2: 提取线
+        threads = self.thread_extractor.extract(components, failure_id)
+        record.status = SmeltStatus.THREADS_EXTRACTED
+        record.threads_extracted = [t.to_dict() for t in threads]
+
+        if not threads:
+            record.status = SmeltStatus.BLOCKED
+            record.notes = "No threads could be extracted"
+            return record
+
+        # Step 3: 熔炼
+        essence = self.smelter.smelt(threads)
+        record.status = SmeltStatus.SMELTED
+
+        if not essence:
+            record.status = SmeltStatus.BLOCKED
+            record.notes = "Smelting produced no essence"
+            return record
+
+        # Step 4: 重新出生（生成新 Seed）
+        seed_id = f"SEED-SMELT-{int(time.time())}-{sha256(essence.encode()).hexdigest()[:8]}"
+        seed_file = self.store_path / f"{seed_id}.json"
+
+        seed_data = {
+            "seed_id": seed_id,
+            "source": "smelter_gate",
+            "source_failure_id": failure_id,
+            "essence": essence,
+            "threads_count": len(threads),
+            "created_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
         }
-        
-        if should_reject:
-            result["reject_reason"] = reject_reason
-            result["needs_review"] = needs_review
-        
-        return result
-    
-    def _write_log(self, record: GateRecord):
-        """写入 gate 日志"""
-        with open(self.log_file, "a", encoding="utf-8") as f:
-            f.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
-    
-    def get_gate_log(self, limit: int = 100) -> List[Dict[str, Any]]:
-        """获取 gate 日志"""
-        if not self.log_file.exists():
-            return []
-        
-        logs = []
-        with open(self.log_file, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    try:
-                        logs.append(json.loads(line))
-                    except:
-                        continue
-        
-        return logs[-limit:]
-    
-    def get_fa_mode_records(self) -> List[Dict[str, Any]]:
-        """获取所有 FA 模式产出的记录"""
-        all_logs = self.get_gate_log(limit=1000)
-        return [log for log in all_logs if log.get("is_fa_mode")]
-    
-    def get_rejected_records(self) -> List[Dict[str, Any]]:
-        """获取所有被拒绝的记录"""
-        all_logs = self.get_gate_log(limit=1000)
-        return [log for log in all_logs if log.get("action") == "REJECTED"]
 
+        with open(seed_file, "w", encoding="utf-8") as f:
+            json.dump(seed_data, f, ensure_ascii=False, indent=2)
 
-def main():
-    """CLI 接口"""
-    import argparse
-    parser = argparse.ArgumentParser(description="Smelter Gate — 废墟熔炼厂最小护栏")
-    parser.add_argument("--pass", dest="pass_content", type=str, help="测试通过 gate 的内容（JSON）")
-    parser.add_argument("--source", type=str, default="test", help="来源标识")
-    parser.add_argument("--fa", action="store_true", help="标记为 FA 模式产出")
-    parser.add_argument("--log", action="store_true", help="输出 gate 日志")
-    parser.add_argument("--fa-log", action="store_true", help="输出 FA 模式记录")
-    parser.add_argument("--rejected-log", action="store_true", help="输出被拒绝的记录")
-    
-    args = parser.parse_args()
-    
-    gate = SmelterGate()
-    
-    if args.pass_content:
-        try:
-            content = json.loads(args.pass_content)
-        except:
-            content = args.pass_content
-        
-        result = gate.pass_through(
-            content=content,
-            source=args.source,
-            is_fa_mode=args.fa,
-            content_type="test"
-        )
-        print(json.dumps(result, ensure_ascii=False, indent=2))
-    
-    if args.log:
-        logs = gate.get_gate_log()
-        print(f"Gate logs ({len(logs)}):")
-        for log in logs:
-            print(f"  {log['timestamp']} [{log['action']}] {log['source']}")
-    
-    if args.fa_log:
-        fa_records = gate.get_fa_mode_records()
-        print(f"FA mode records ({len(fa_records)}):")
-        for record in fa_records:
-            print(f"  {record['timestamp']} {record['source']} → {record['content_type']}")
-    
-    if args.rejected_log:
-        rejected = gate.get_rejected_records()
-        print(f"Rejected records ({len(rejected)}):")
-        for record in rejected:
-            print(f"  {record['timestamp']} {record['source']} → {record['reason']}")
+        record.seed_generated = seed_id
+        record.status = SmeltStatus.REBORN
+        record.notes = f"Reborn as {seed_id} from {len(threads)} threads"
+
+        return record
 
 
 if __name__ == "__main__":
-    main()
+    gate = SmelterGate()
+    print("=== ACE Smelter Gate (废墟熔炼厂) v1.0 ===")
+
+    # Test: 失败结构回收
+    print("\n[TEST] Recycling a failed hypothesis")
+    failed_hypothesis = {
+        "id": "HYP-001",
+        "type": FailureType.HYPOTHESIS_REJECTED.value,
+        "hypothesis": "Volume spike predicts price increase",
+        "evidence": {"sample_size": 30, "success_rate": 0.4},
+        "context": {"market": "BTC-USDT", "period": "2026-06"},
+        "constraints": ["min_confidence=0.8", "min_sample=30"],
+        "rejection_reason": "Success rate 0.4 < threshold 0.8",
+        "partial_successes": ["Volume spike correlates with volatility"],
+        "failure_points": ["Direction prediction incorrect"]
+    }
+
+    record = gate.process(failed_hypothesis, mengpo_filtered=True)
+    print(f"  → Status: {record.status.value}")
+    print(f"  → Threads extracted: {len(record.threads_extracted)}")
+    print(f"  → Seed generated: {record.seed_generated}")
+    print(f"  → Notes: {record.notes}")
+
+    # Test: 未通过孟婆过滤
+    print("\n[TEST] Blocked by MengPo filter")
+    record = gate.process(failed_hypothesis, mengpo_filtered=False)
+    print(f"  → Status: {record.status.value}")
+    print(f"  → Notes: {record.notes}")
+
+    print("\n=== Smelter Gate Diagnostics Complete ===")

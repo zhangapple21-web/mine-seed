@@ -29,6 +29,8 @@ This repository contains the evolving core architecture and seeds for evidence-b
 
 - **[distillation_factory.py](04_PROTOCOLS/distillation_factory.py)** — Active forgetting mechanism (孟婆): `Raw Experience` → `Wash` (Remove Noise) → `Distill` (Extract Pattern) → `Compress` (Compress Rules) → `Reborn` (New Seed). Implements pollution detection across 5 types (noise/drift/contamination/conflict/decay). Heritage from R1 Processing Civilization.
 
+- **[smelter_gate.py](04_PROTOCOLS/smelter_gate.py)** — Failure recycling (废墟熔炼厂): `Failed Structure` → `Disassemble` → `Extract Threads` → `Smelt` → `New Seed`. Threads are indestructible memory cores (线). Requires MengPo filter before processing. Death is not end, but recycling.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
