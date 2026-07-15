@@ -25,6 +25,8 @@ This repository contains the evolving core architecture and seeds for evidence-b
 
 - **[law_discovery.py](04_PROTOCOLS/law_discovery.py)** — Production-grade 800+ lines implementation of the full governance chain: `Observation` → `Evidence` → `Pattern` → `Hypothesis` → `Law` → `Roundtable` → `Admission` → `Policy`. Includes immutable evidence stores, statistical validation, and CLI interface.
 
+- **[trigger_engine.py](04_PROTOCOLS/trigger_engine.py)** — Event-driven dispatch kernel: `Event/Condition` → `Trigger Registry` → `Evidence Gate` → `Dispatch`. Supports STATE/EVENT/RESOURCE/TIME/DEPENDENCY/THRESHOLD/MANUAL triggers, CONFIRM activation mode, and Capability-based decoupling from document IDs.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
