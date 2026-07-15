@@ -87,7 +87,14 @@ Question
    - API 密钥变更
    - 环境配置变更
    - 关键配置文件修改
-4. **验证**: 推送后检查 `git log backup/main --oneline -1`
+4. **认证方式**:
+   - 远程 URL 使用 `https://x-access-token:<PAT>@github.com/...` 格式
+   - 禁用本地凭据助手：`git config --local credential.helper ""`
+   - 禁止依赖 Windows 凭据管理器弹窗认证
+5. **Push Protection 处理**:
+   - 若推送被 GitHub Push Protection 拦截，按提示 URL 逐一允许历史提交中的 secret
+   - 或关闭仓库 Secret Scanning 中的 Push Protection
+6. **验证**: 推送后检查 `git log backup/main --oneline -1`
 
 ---
 
