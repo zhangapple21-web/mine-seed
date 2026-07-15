@@ -35,6 +35,10 @@ This repository contains the evolving core architecture and seeds for evidence-b
 
 - **[daemon.py](06_RUNTIME/free_zone/daemon.py)** — 24h continuous learning daemon running in the Free Zone. Calls free LLM APIs (GLM/NIM/GitHub) every 30 minutes to generate observations, hypotheses, and constraint discoveries. All output flows through the Distillation Factory (孟婆) before storage. Zero-cost, fully autonomous.
 
+### 🗺️ Civilization Map
+
+- **[civilization_map.md](02_MEMORY/civilization_map.md)** — Full system architecture with Mermaid visualizations: dual-system topology (Civilization + Runtime), 4 core engines, Processing Civilization pipeline (孟婆 → Seed → Lab → Admission → Repository → Smelter Gate → Seed), Trigger Engine v2.1 flow, M-series activation matrix, and mining layer value assessment.
+
 ## Documentation
 
 - [AGENTS.md](00_ROOT/AGENTS.md) — Identity entry point
