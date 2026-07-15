@@ -62,12 +62,21 @@ graph LR
     end
 ```
 
-| 引擎 | 文件 | 行数 | 功能 |
-|------|------|------|------|
-| **Law Discovery** | [law_discovery.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/law_discovery.py) | 800+ | Observation → Evidence → Pattern → Hypothesis → Law → Roundtable → Admission → Policy |
-| **Trigger Engine** | [trigger_engine.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/trigger_engine.py) | 300+ | Event/Condition → Trigger Registry → Evidence Gate → Dispatch |
-| **Distillation Factory** | [distillation_factory.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/distillation_factory.py) | 250+ | Wash → Distill → Compress → Reborn（孟婆：主动遗忘） |
-| **Smelter Gate** | [smelter_gate.py](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/smelter_gate.py) | 330+ | Disassemble → Extract Threads → Smelt → Reborn（废墟熔炼厂：失败回收） |
+| 引擎 | 文件 | 行数 |
+|------|------|------|
+| **admission_engine** | [admission_engine.py](04_PROTOCOLS\admission_engine.py) | 315+ |
+| **autophagy_engine** | [autophagy_engine.py](04_PROTOCOLS\autophagy_engine.py) | 372+ |
+| **continuity_engine** | [continuity_engine.py](04_PROTOCOLS\continuity_engine.py) | 384+ |
+| **Distillation Factory** | [distillation_factory.py](04_PROTOCOLS\distillation_factory.py) | 251+ |
+| **Law Discovery** | [law_discovery.py](04_PROTOCOLS\law_discovery.py) | 868+ |
+| **lineage_engine** | [lineage_engine.py](04_PROTOCOLS\lineage_engine.py) | 173+ |
+| **publication_gate** | [publication_gate.py](04_PROTOCOLS\publication_gate.py) | 251+ |
+| **question_engine** | [question_engine.py](04_PROTOCOLS\question_engine.py) | 289+ |
+| **recovery_engine** | [recovery_engine.py](04_PROTOCOLS\recovery_engine.py) | 381+ |
+| **self_learning_engine** | [self_learning_engine.py](04_PROTOCOLS\self_learning_engine.py) | 808+ |
+| **Smelter Gate** | [smelter_gate.py](04_PROTOCOLS\smelter_gate.py) | 336+ |
+| **test_smelter_gate** | [test_smelter_gate.py](04_PROTOCOLS\test_smelter_gate.py) | 126+ |
+| **Trigger Engine** | [trigger_engine.py](04_PROTOCOLS\trigger_engine.py) | 299+ |
 
 ---
 
@@ -218,7 +227,7 @@ graph TD
 | 层 | 定位 | 只读/可写 | 内容 |
 |----|------|-----------|------|
 | Mine Layer | 原材料、考古对象 | 只读 | 10 个 GitHub 仓库 |
-| Civilization | 蒸馏后、文明资产 | 准入后可写 | 28+ 资产 + 公理 + 原则 |
+| Civilization | 蒸馏后、文明资产 | 准入后可写 | 29+ 资产 + 公理 + 原则 |
 | Runtime | 实际运行、执行 | 可写 | 56+ Python 模块 |
 
 ### 矿山价值矩阵
@@ -334,12 +343,12 @@ graph LR
 | 触发配置 | [TRIGGER_CONDITIONS.md](file:///c:/Users/User/ace_workspace/mine-seed/04_PROTOCOLS/TRIGGER_CONDITIONS.md) | v2.1 种子化触发 |
 | **Civilization** | | |
 | 公理 | [PRINCIPLES.md](file:///c:/Users/User/ace_workspace/mine-seed/00_ROOT/PRINCIPLES.md) | 文明公理 |
-| 资产索引 | [civilization_assets/](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/civilization_assets/) | 28+ 资产 |
+| 资产索引 | [civilization_assets/](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/civilization_assets/) | 29+ 资产 |
 | 矿山索引 | [civilization_mines.md](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/civilization_mines.md) | 10 座矿山 |
 | 加工体系 | [processing_civilization.md](file:///c:/Users/User/ace_workspace/mine-seed/02_MEMORY/archaeology/processing_civilization.md) | R1 五大工厂考古 |
 
 ---
 
 *创建时间：2026-07-13*
-*更新时间：2026-07-15（v4 — 四大引擎 + 文明加工体系 + 自由区 + Mermaid 可视化）*
+*更新时间：2026-07-15 19:18（v4 — 四大引擎 + 文明加工体系 + 自由区 + Mermaid 可视化）*
 *Mission: AUM-MISSION-OPS-005 + AUM-MISSION-ARCH-006 + ACE Civilization OS*
