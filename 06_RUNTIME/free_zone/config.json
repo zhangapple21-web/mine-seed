@@ -1,7 +1,15 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "created_at": "2026-07-15",
-  "description": "自由区 24h 持续学习守护进程配置",
+  "updated_at": "2026-07-15",
+  "description": "自由区 24h 持续学习守护进程配置 - 种子化版本",
+
+  "seed_data_sources": ["baostock", "akshare", "mootdx"],
+  "seed_markets": ["A股"],
+  "focus": "全球多资产文明发现者",
+  "discovery_enabled": true,
+  "discovery_scope": ["crypto", "us_stocks", "macro", "code_engineering", "reverse_engineering", "system_architecture"],
+  "admission_required": true,
 
   "cycle_interval_seconds": 1800,
   "heartbeat_interval_cycles": 16,
@@ -16,34 +24,98 @@
     "topic": "free-zone-heartbeat"
   },
 
+  "llm_channels": ["glm", "nim", "github", "ollama"],
+
   "tasks": [
     {
-      "id": "pattern_hypothesis",
+      "id": "pattern_hypothesis_a_share",
+      "category": "market",
       "prompt": "你是一个认知发现引擎。请生成一个关于A股市场规律的假设。格式：\n假设：[描述]\n依据：[逻辑推理]\n可验证指标：[具体指标]\n置信度：[0-1]",
       "system": "你是 ACE（自主文明引擎）的假设生成器。每次只生成一个假设，必须基于逻辑推理，不要随机猜测。",
       "prefer": "glm",
-      "max_tokens": 500
+      "max_tokens": 500,
+      "seed_domain": true
     },
     {
       "id": "constraint_discovery",
-      "prompt": "你是一个约束发现器。请分析当前系统可能需要的约束规则。格式：\n约束：[描述]\n触发条件：[何时生效]\n违反后果：[如果不遵守会怎样]",
-      "system": "你是 ACE 的约束发现器。寻找系统运行中可能缺失的约束规则。",
+      "category": "governance",
+      "prompt": "你是一个约束发现器。请分析一个量化交易系统可能缺失的约束规则。格式：\n约束：[描述]\n触发条件：[何时生效]\n违反后果：[如果不遵守会怎样]\n当前状态：[系统是否已有此约束]",
+      "system": "你是 ACE 的约束发现器。寻找系统运行中可能缺失的约束规则，从系统架构和治理角度思考。",
       "prefer": "nim",
-      "max_tokens": 400
+      "max_tokens": 400,
+      "seed_domain": true
     },
     {
       "id": "experience_distillation",
-      "prompt": "你是一个经验蒸馏器。请从以下场景中提炼可复用的规律：\n场景：A股日内交易，信号产生后 T+1 到 T+5 的收益跟踪\n请提炼：\n1. 哪些信号特征与高收益相关？\n2. 哪些情况信号会失效？\n3. 建议的最小验证样本量？",
+      "category": "distillation",
+      "prompt": "你是一个经验蒸馏器。请从以下场景中提炼可复用的规律：\n场景：A股日内交易，信号产生后跟踪 T+1 到 T+5 的收益，不同信号类型胜率差异显著\n请提炼：\n1. 哪些信号特征与高收益相关？\n2. 哪些情况信号会失效？\n3. 最小验证样本量建议？\n4. 跨市场适用性如何？",
       "system": "你是 ACE 的经验蒸馏器。从具体经验中提炼抽象规律，忘掉细节，保留结构。",
       "prefer": "glm",
-      "max_tokens": 500
+      "max_tokens": 500,
+      "seed_domain": true
     },
     {
-      "id": "market_observation",
-      "prompt": "你是一个市场观察者。请生成一条关于当前A股市场的 Observation。格式：\n观察：[客观描述]\n异常点：[与常态的偏差]\n潜在信号：[可能的市场含义]",
-      "system": "你是 ACE 的市场观察者。只记录客观事实，不做主观判断。",
+      "id": "cross_asset_macro_hypothesis",
+      "category": "discovery",
+      "prompt": "你是一个全球宏观观察者。请生成一条关于【美债收益率-美元指数-黄金-比特币】之间关系的假设。寻找它们日内或周内的背离/联动现象。格式：\n假设：[描述两者或多者的关系]\n逻辑依据：[为什么会有这种关系]\n可观测指标：[具体数据点]\n失效条件：[什么情况下这个关系不成立]",
+      "system": "你是 ACE 自由区的跨资产探索者。只生成假设，不做交易建议。思考宏观资金流和风险偏好传导。",
       "prefer": "github",
-      "max_tokens": 400
+      "max_tokens": 500,
+      "discovery": true
+    },
+    {
+      "id": "crypto_pattern_hypothesis",
+      "category": "discovery",
+      "prompt": "你是一个加密市场观察者。请生成一条关于比特币或以太坊的市场规律假设。可以关注：波动率聚集、成交量-价格关系、周末效应、期权到期影响等。格式：\n假设：[描述规律]\n适用范围：[BTC/ETH/其他，什么时间周期]\n可验证方法：[如何证伪或证实]\n风险提示：[这条规律可能在哪里失效]",
+      "system": "你是 ACE 自由区的加密市场探索者。只生成研究假设，不做投资建议。",
+      "prefer": "nim",
+      "max_tokens": 500,
+      "discovery": true
+    },
+    {
+      "id": "code_architecture_learning",
+      "category": "knowledge",
+      "prompt": "你是一个软件架构学习者。请总结一种你认为对量化交易系统最有价值的架构模式或设计原则。可以从：事件驱动架构、CQRS、事件溯源、状态机、Actor模型、插件架构、微内核 等中选一个。格式：\n模式名称：\n核心思想：一句话\n为什么对量化系统重要：\n适用场景：\n潜在代价：",
+      "system": "你是 ACE 的架构知识探索者。学习业界最佳实践，思考如何应用到文明引擎系统中。",
+      "prefer": "github",
+      "max_tokens": 600,
+      "discovery": true
+    },
+    {
+      "id": "reverse_engineering_insight",
+      "category": "knowledge",
+      "prompt": "你是一个逆向工程学习者。请分享一个你认为有用的 API 逆向或协议分析技巧。可以涉及：流量分析、反编译、API 发现、认证机制绕过思路（仅用于合法安全研究）、协议推断等。格式：\n技巧名称：\n适用场景：\n操作步骤（概要）：\n所需工具：\n道德/法律边界：",
+      "system": "你是 ACE 自由区的逆向工程知识探索者。仅用于合法的安全研究和系统理解，不提供任何攻击或入侵方法。",
+      "prefer": "nim",
+      "max_tokens": 500,
+      "discovery": true
+    },
+    {
+      "id": "system_self_improvement",
+      "category": "introspection",
+      "prompt": "你是一个系统自省引擎。请思考：如果一个自主文明引擎想要持续进化 3-5 年，它最应该建立哪 3 种核心能力？这些能力为什么比具体功能更重要？格式：\n能力 1：[名称] - [为什么是核心]\n能力 2：[名称] - [为什么是核心]\n能力 3：[名称] - [为什么是核心]\n三者关系：它们如何相互支撑",
+      "system": "你是 ACE 的自我进化思考者。从长周期视角思考系统的核心能力建设，领先 3-5 年。",
+      "prefer": "glm",
+      "max_tokens": 500,
+      "discovery": true
+    },
+    {
+      "id": "data_source_exploration",
+      "category": "discovery",
+      "prompt": "你是一个数据源发现者。请思考：除了常见的股票/期货/加密数据源，还有哪些类型的数据可以辅助市场认知？例如：卫星图像、航运数据、供应链数据、社交媒体情绪、搜索引擎趋势、GitHub 活跃度、专利数据等。请选一种你认为最有潜力的。格式：\n数据源类型：\n为什么有价值：\n获取难度：[低/中/高]\n信号信噪比估计：\n可能的应用场景：",
+      "system": "你是 ACE 的数据源探索者。拓展系统的认知边界，发现非常规信息源。",
+      "prefer": "github",
+      "max_tokens": 500,
+      "discovery": true
+    },
+    {
+      "id": "failure_pattern_mining",
+      "category": "smelter",
+      "prompt": "你是一个失败模式挖掘器。请总结量化交易系统中一种常见的失败模式，以及如何从失败中提取可复用的价值。例如：过拟合、幸存者偏差、 regime change、参数漂移、流动性陷阱等。格式：\n失败模式：\n典型表现：\n根本原因：\n如何检测：\n可提炼的价值：[从这种失败中能学到什么通用规律]",
+      "system": "你是 ACE 废墟熔炼厂的失败分析师。死亡不是结束，而是回收。从失败中提炼线（thread）。",
+      "prefer": "nim",
+      "max_tokens": 500,
+      "smelter_prep": true
     }
   ]
 }

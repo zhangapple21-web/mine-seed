@@ -4,27 +4,36 @@ ACE Free Zone Daemon — 自由区 24h 持续学习守护进程
 
 Mission: AUM-MISSION-FREEZONE-001
 Identity: 自由区副本，24小时持续产出 Observation 和 Hypothesis
-Version: v1.0 (2026-07-15)
+Version: v2.0 (2026-07-15)
 
 Core Loop:
-    每 30 分钟 → 调用免费 LLM → 产出 Observation → 孟婆过滤 → 存储
+    每 30 分钟 → 从任务池随机选 4-6 个 → 调用免费 LLM → 产出 Observation → 孟婆过滤 → 存储
 
 设计原则:
-    1. 零成本：只用免费 API（GLM/NIM/GitHub）
+    1. 零成本：只用免费 API（GLM/NIM/GitHub/Ollama）
     2. 独立运行：不影响主系统，输出到 free_zone/ 目录
     3. 文明加工：产出经过 DistillationFactory 处理
     4. 心跳通知：每 8 小时 TG 心跳
+    5. 种子化配置：seed_ 前缀是起点，discovery 是允许范围
+    6. 系统自己发现：自由区生成 Hypothesis，主线通过 Admission 决定是否采纳
+
+扩展原则:
+    - 跨资产、代码知识、逆向工程、架构学习 → 全部在自由区
+    - 不直接修改主线配置
+    - 所有新发现必须走文明循环闭环
 
 Never Rules:
     - 修改生产资产（civilization_assets / constraint / world_models）
     - 跳过孟婆直接写入 Repository
     - 使用付费 API
+    - 强制系统采纳自由区的发现
 """
 
 import os
 import sys
 import json
 import time
+import random
 import logging
 import importlib.util
 import urllib.request
@@ -88,8 +97,8 @@ def generate_observation_id(content: str) -> str:
     return f"OBS-FZ-{ts}-{h}"
 
 
-def run_task(free_llm, task: dict) -> dict:
-    """运行单个学习任务"""
+def run_task(free_llm, distillation_factory, smelter_gate, task: dict) -> dict:
+    """运行单个学习任务 — 先过孟婆，再决定是否写盘"""
     task_id = task["id"]
     log.info(f"[TASK] {task_id} → prefer: {task.get('prefer', 'auto')}")
 
@@ -108,21 +117,69 @@ def run_task(free_llm, task: dict) -> dict:
         channel = result["channel"]
         model = result["model"]
 
-        # 生成 Observation
+        # Phase 1: 孟婆过滤（写盘前）
+        experience = {
+            "core_features": {
+                "task_id": task_id,
+                "channel": channel,
+                "content_summary": content[:200]
+            },
+            "metadata": {}
+        }
+
+        distill_record = distillation_factory.process(experience)
+        pollution = distill_record.pollution_detected if distill_record else []
+
+        # 检测到污染 → 送废墟熔炼厂回收，不写盘
+        if pollution and "contamination" in [p.value if hasattr(p, 'value') else p for p in pollution]:
+            log.info(f"[FILTER] {task_id}: Pollution detected → Smelter Gate")
+
+            # 送废墟熔炼厂
+            failed_structure = {
+                "id": f"FAIL-{task_id}-{int(time.time())}",
+                "type": "observation_rejected",
+                "hypothesis": content[:300],
+                "evidence": {"channel": channel, "model": model},
+                "context": {"task_category": task.get("category")},
+                "constraints": [f"pollution: {pollution}"],
+                "rejection_reason": f"MengPo filter rejected: {pollution}",
+                "partial_successes": [f"Generated via {channel}/{model}"],
+                "failure_points": ["pollution_detected"]
+            }
+            smelter_record = smelter_gate.process(failed_structure, mengpo_filtered=True)
+            if smelter_record and smelter_record.seed_generated:
+                log.info(f"[SMELTER] {task_id}: Recycled → {smelter_record.seed_generated}")
+
+            return {
+                "task_id": task_id,
+                "filtered": True,
+                "pollution": [p.value if hasattr(p, 'value') else p for p in pollution],
+                "recycled_seed": smelter_record.seed_generated if smelter_record else None,
+                "elapsed": round(elapsed, 1)
+            }
+
+        # 通过过滤 → 生成 Observation 写盘
         obs_id = generate_observation_id(content)
         observation = {
             "observation_id": obs_id,
             "task_id": task_id,
+            "task_category": task.get("category", "misc"),
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "channel": channel,
             "model": model,
             "content": content,
             "elapsed_seconds": round(elapsed, 1),
+            "distillation": {
+                "pollution_detected": [p.value if hasattr(p, 'value') else p for p in pollution],
+                "pattern_extracted": distill_record.pattern_extracted if distill_record else None,
+                "rule_compressed": distill_record.rule_compressed if distill_record else None,
+                "confidence": distill_record.confidence if distill_record else 1.0
+            },
             "metadata": {}
         }
 
         # 写入自由区输出
-        outfile = OUTPUT_DIR / f"{task_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        outfile = OUTPUT_DIR / f"{task.get('category', 'misc')}_{task_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(outfile, "w", encoding="utf-8") as f:
             json.dump(observation, f, ensure_ascii=False, indent=2)
 
@@ -135,31 +192,8 @@ def run_task(free_llm, task: dict) -> dict:
         return {"task_id": task_id, "error": str(e), "elapsed": elapsed}
 
 
-def distill_observation(distillation_factory, observation: dict) -> dict:
-    """通过孟婆处理 Observation"""
-    try:
-        # 转换为孟婆输入格式
-        experience = {
-            "core_features": {
-                "task_id": observation.get("task_id"),
-                "channel": observation.get("channel"),
-                "content_summary": observation["content"][:200]
-            },
-            "metadata": observation.get("metadata", {})
-        }
-
-        record = distillation_factory.process(experience)
-        if record:
-            log.info(f"[DISTILL] {observation['observation_id']} → pollution: {record.pollution_detected}, pattern: {'yes' if record.pattern_extracted else 'no'}")
-            return record.to_dict()
-        return {"skipped": True}
-    except Exception as e:
-        log.warning(f"[DISTILL] Error: {e}")
-        return {"error": str(e)}
-
-
 def send_heartbeat(config: dict, cycle_count: int, stats: dict):
-    """发送 TG 心跳"""
+    """发送 TG 心跳（带重试）"""
     tg_config = config.get("tg_heartbeat", {})
     if not tg_config.get("enabled"):
         return
@@ -177,55 +211,129 @@ def send_heartbeat(config: dict, cycle_count: int, stats: dict):
         f"Cycles: {stats['total_cycles']} ({uptime_hours:.1f}h)\n"
         f"Observations: {stats['total_observations']}\n"
         f"Distilled: {stats['total_distilled']}\n"
+        f"Filtered: {stats.get('total_filtered', 0)}\n"
+        f"Recycled: {stats.get('total_recycled', 0)}\n"
         f"Errors: {stats['total_errors']}\n"
         f"Last run: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
         f"Status: {'HEALTHY' if stats['total_errors'] < 5 else 'DEGRADED'}"
     )
 
-    try:
-        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-        data = json.dumps({
-            "chat_id": chat_id,
-            "text": message,
-            "parse_mode": "HTML"
-        }).encode("utf-8")
-        req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
-        urllib.request.urlopen(req, timeout=15)
-        log.info(f"[HEARTBEAT] Sent to {chat_id}")
-    except Exception as e:
-        log.warning(f"[HEARTBEAT] Failed: {e}")
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    data = json.dumps({
+        "chat_id": chat_id,
+        "text": message,
+        "parse_mode": "HTML"
+    }).encode("utf-8")
+
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
+            urllib.request.urlopen(req, timeout=15)
+            log.info(f"[HEARTBEAT] Sent to {chat_id}")
+            return
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                log.error(f"[HEARTBEAT] Invalid bot token (401), aborting")
+                return
+            if attempt < 2:
+                wait = 5 * (attempt + 1)
+                log.warning(f"[HEARTBEAT] HTTP {e.code}, retry in {wait}s...")
+                time.sleep(wait)
+            else:
+                log.warning(f"[HEARTBEAT] Failed after 3 attempts: HTTP {e.code}")
+        except Exception as e:
+            if attempt < 2:
+                wait = 5 * (attempt + 1)
+                log.warning(f"[HEARTBEAT] Failed: {e}, retry in {wait}s...")
+                time.sleep(wait)
+            else:
+                log.warning(f"[HEARTBEAT] Failed after 3 attempts: {e}")
 
 
-def run_cycle(free_llm, distillation_factory, config: dict) -> dict:
+def select_cycle_tasks(config: dict) -> list:
+    """
+    从任务池中随机选择本周期要执行的任务
+    保证分类多样性，避免每次都跑同样的
+    """
+    all_tasks = config.get("tasks", [])
+    if not all_tasks:
+        return []
+
+    # 按分类分组
+    by_category: dict = {}
+    for task in all_tasks:
+        cat = task.get("category", "misc")
+        by_category.setdefault(cat, []).append(task)
+
+    # 每个分类至少选 1 个，然后随机补足到 4-6 个
+    selected = []
+    categories = list(by_category.keys())
+    random.shuffle(categories)
+
+    # 每类先各取一个
+    for cat in categories:
+        if by_category[cat]:
+            selected.append(random.choice(by_category[cat]))
+
+    # 随机选到 5 个左右
+    target = random.randint(4, min(6, len(all_tasks)))
+    remaining = [t for t in all_tasks if t["id"] not in [s["id"] for s in selected]]
+    random.shuffle(remaining)
+
+    while len(selected) < target and remaining:
+        selected.append(remaining.pop())
+
+    random.shuffle(selected)
+    return selected
+
+
+def load_smelter_gate():
+    """加载废墟熔炼厂"""
+    return import_module(WORKSPACE / "04_PROTOCOLS" / "smelter_gate.py")
+
+
+def run_cycle(free_llm, distillation_factory, smelter_gate, config: dict) -> dict:
     """运行一个学习周期"""
     cycle_start = time.time()
     log.info(f"{'='*50}")
     log.info(f"Free Zone Cycle Started")
     log.info(f"{'='*50}")
 
+    # 从任务池中随机选择
+    cycle_tasks = select_cycle_tasks(config)
+    log.info(f"Selected {len(cycle_tasks)} tasks this cycle: {[t['id'] for t in cycle_tasks]}")
+
     observations = []
     distilled = 0
+    filtered = 0
+    recycled = 0
     errors = 0
 
-    for task in config.get("tasks", []):
-        obs = run_task(free_llm, task)
-        if "error" in obs:
+    for task in cycle_tasks:
+        result = run_task(free_llm, distillation_factory, smelter_gate, task)
+
+        if "error" in result:
             errors += 1
             continue
 
-        observations.append(obs)
+        if result.get("filtered"):
+            filtered += 1
+            if result.get("recycled_seed"):
+                recycled += 1
+            continue
 
-        # 孟婆处理
-        distill_result = distill_observation(distillation_factory, obs)
-        if distill_result and not distill_result.get("skipped"):
+        observations.append(result)
+        if result.get("distillation", {}).get("pattern_extracted"):
             distilled += 1
 
     elapsed = time.time() - cycle_start
-    log.info(f"Cycle complete: {len(observations)} observations, {distilled} distilled, {errors} errors, {elapsed:.1f}s")
+    log.info(f"Cycle complete: {len(observations)} obs, {distilled} distilled, {filtered} filtered, {recycled} recycled, {errors} errors, {elapsed:.1f}s")
 
     return {
         "observations": len(observations),
         "distilled": distilled,
+        "filtered": filtered,
+        "recycled": recycled,
         "errors": errors,
         "elapsed": round(elapsed, 1)
     }
@@ -245,20 +353,29 @@ def main():
         log.handlers = [fh]
 
     log.info("=" * 60)
-    log.info("ACE Free Zone Daemon v1.0 — 24h Continuous Learning")
+    log.info("ACE Free Zone Daemon v2.0 — 24h Continuous Learning")
     log.info("=" * 60)
 
     # 加载组件
     try:
         free_llm = load_free_llm()
-        distillation_factory = load_distillation_factory()
-        factory = distillation_factory.DistillationFactory(
+        dist_module = load_distillation_factory()
+        smelter_module = load_smelter_gate()
+
+        mengpo = dist_module.DistillationFactory(
             store_path=str(OUTPUT_DIR / "distilled")
         )
+        smelter = smelter_module.SmelterGate(
+            store_path=str(OUTPUT_DIR / "smelted")
+        )
+
         log.info("[INIT] free_llm loaded")
         log.info("[INIT] DistillationFactory (孟婆) loaded")
+        log.info("[INIT] SmelterGate (废墟熔炼厂) loaded")
     except Exception as e:
         log.error(f"[INIT] Failed to load components: {e}")
+        import traceback
+        log.error(traceback.format_exc())
         sys.exit(1)
 
     config = load_config()
@@ -269,15 +386,19 @@ def main():
         "total_cycles": 0,
         "total_observations": 0,
         "total_distilled": 0,
+        "total_filtered": 0,
+        "total_recycled": 0,
         "total_errors": 0
     }
 
     # 单次模式
     if args.once:
-        result = run_cycle(free_llm, factory, config)
+        result = run_cycle(free_llm, mengpo, smelter, config)
         stats["total_cycles"] = 1
         stats["total_observations"] = result["observations"]
         stats["total_distilled"] = result["distilled"]
+        stats["total_filtered"] = result["filtered"]
+        stats["total_recycled"] = result["recycled"]
         stats["total_errors"] = result["errors"]
         send_heartbeat(config, 1, stats)
         return
@@ -289,14 +410,17 @@ def main():
 
     log.info(f"[DAEMON] Cycle interval: {cycle_interval}s ({cycle_interval//60}min)")
     log.info(f"[DAEMON] Heartbeat: every {heartbeat_interval} cycles ({heartbeat_interval * cycle_interval // 3600}h)")
+    log.info(f"[DAEMON] Discovery scope: {config.get('discovery_scope', [])}")
 
     while True:
         try:
-            result = run_cycle(free_llm, factory, config)
+            result = run_cycle(free_llm, mengpo, smelter, config)
 
             stats["total_cycles"] += 1
             stats["total_observations"] += result["observations"]
             stats["total_distilled"] += result["distilled"]
+            stats["total_filtered"] += result["filtered"]
+            stats["total_recycled"] += result["recycled"]
             stats["total_errors"] += result["errors"]
 
             # 心跳
@@ -314,6 +438,8 @@ def main():
             break
         except Exception as e:
             log.error(f"[DAEMON] Cycle error: {e}")
+            import traceback
+            log.error(traceback.format_exc())
             time.sleep(60)  # 出错后等 1 分钟
 
 
