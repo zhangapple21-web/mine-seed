@@ -1373,3 +1373,156 @@ Admission Record 的创建或完成不构成 Admission。只有授权的 Governo
 ### 演化日志
 
 - 2026-07-15 v0.1 (CANDIDATE) — 用户提出。确立"治理证据 ≠ 治理结果"原则。状态机等细节放入 Governance State Machine Protocol。
+
+---
+
+## C-030 — Append-Only Governance History (CANDIDATE)
+
+> **状态: CANDIDATE** — 起草阶段，待 Governor Decision
+> **公理根基**: #001 (Repository First) / C-029 (Admission Separation)
+> **触发背景**: 治理记录的可追溯性是文明连续性的基础，静默改写会破坏信任链
+
+### 核心原则
+
+已接受的治理事实不得被静默覆盖、修改或删除。
+
+更正、撤回、取代和迁移必须通过追加记录的方式完成，原始记录永久保留。
+
+### 约束条件
+
+**C-030-1**: 已封存的 Governance Artifact 不得原地修改
+
+**C-030-2**: 更正错误必须通过追加 Amendment Record 完成
+
+**C-030-3**: 取代决定必须通过追加 Superseding Decision 完成，旧决定保留历史
+
+**C-030-4**: 表示方式迁移必须通过追加 Migration Record 完成，原文不得覆盖
+
+### 演化日志
+
+- 2026-07-15 v0.1 (CANDIDATE) — 确立"治理历史只追加不修改"原则。
+
+---
+
+## C-031 — Semantic Preservation (CANDIDATE)
+
+> **状态: CANDIDATE** — 起草阶段，待 Governor Decision
+> **公理根基**: #001 (Repository First) / C-028 (Persistence Independence) / C-030 (Append-Only)
+> **触发背景**: 格式迁移不能改变治理语义，否则迁移就等于篡改历史
+
+### 核心原则
+
+**Migration may change representation, but must not change governance semantics.**
+
+迁移只能改变治理对象的表示方式，不得改变其治理语义、规范效力、决策结果或历史事实。
+
+### 三种操作区分
+
+| 操作 | 允许改变表示 | 允许改变历史语义 | 处理方式 |
+|------|-------------|-----------------|----------|
+| Migration | 是 | 否 | 追加迁移记录 |
+| Amendment | 可以 | 不得覆盖原语义 | 追加更正记录 |
+| New Decision | 可以 | 可以改变未来效力 | 创建新 Decision Record |
+
+### 约束条件
+
+**C-031-1**: 表示迁移不得改变治理语义或规范效力
+
+**C-031-2**: 有歧义的旧字段不得由迁移程序自行解释，必须记录人工确认
+
+**C-031-3**: 语义变更必须通过新的 Governor Decision 实现，不能伪装成迁移
+
+### 演化日志
+
+- 2026-07-15 v0.1 (CANDIDATE) — 确立"迁移不改语义"原则。
+
+---
+
+## C-032 — Projection Independence (CANDIDATE)
+
+> **状态: CANDIDATE** — 起草阶段，待 Governor Decision
+> **公理根基**: #001 (Repository First) / C-028 (Persistence Independence)
+> **触发背景**: asset_index.db 事件暴露了"哪些是 Truth、哪些是派生"的边界模糊问题
+
+### 核心原则
+
+**No Projection is a unique source of governance truth.**
+
+任何 Projection 都不是唯一事实来源。
+
+每个权威 Projection 必须满足：可从不可变事实、声明规则和明确评估时间中重建。
+
+### Repository 结构
+
+```
+Repository
+    ├── Canonical Artifact（事实）
+    │   ├── Principle
+    │   ├── Protocol
+    │   ├── ADR
+    │   ├── Constraint
+    │   └── Evidence Record
+    │
+    └── Projection（派生）
+        ├── Index
+        ├── Current View
+        ├── Dashboard
+        ├── Summary
+        └── Health Report
+```
+
+### Projection 属性
+
+| 属性 | 要求 |
+|------|------|
+| 可删除性 | 可以随时删除，不影响 Truth |
+| 可重建性 | 删除后可从 Canonical Artifact 完整重建 |
+| 确定性 | 相同输入 + 相同版本 + 相同时间 = 完全相同输出 |
+| 可验证性 | 必须标注版本、来源和构建时间 |
+
+### 约束条件
+
+**C-032-1**: Projection 不得作为唯一事实来源
+
+**C-032-2**: 所有 Projection 必须允许删除后重建
+
+**C-032-3**: Projection 必须明确标注其派生性质和版本
+
+### 演化日志
+
+- 2026-07-15 v0.1 (CANDIDATE) — 确立"Projection 不是唯一 Truth"原则。Projection 升为 Repository 一级概念。
+
+---
+
+## C-033 — Prospective Rule Evolution (CANDIDATE)
+
+> **状态: CANDIDATE** — 起草阶段，待 Governor Decision
+> **公理根基**: #010 (演化增结构不破坏不变量) / C-030 (Append-Only)
+> **触发背景**: 新规则不能追溯改变历史，否则历史记录就失去了意义
+
+### 核心原则
+
+新治理规则默认仅前瞻适用（prospective），除非经授权的决定明确声明并论证追溯效力。
+
+**No retroactive reinterpretation by default.**
+
+### 约束条件
+
+**C-033-1**: 新规则默认仅影响其生效后的事件和决策
+
+**C-033-2**: 历史重放必须使用当时有效的规则版本，不能用新版规则重新解释旧事件
+
+**C-033-3**: 如需追溯适用，必须产生专门的、经授权的治理事件，明确声明追溯范围和理由
+
+**C-033-4**: 每个事件必须记录当时生效的 Kernel Version 和 Policy Set Digest
+
+### 两种 Projection
+
+| 类型 | 含义 | 用途 |
+|------|------|------|
+| Historical Projection | 按当时规则，当时的治理结果是什么 | 审计、历史验证 |
+| Contemporary Projection | 按当前规则，旧对象现在应如何展示 | 当前操作、界面展示 |
+
+### 演化日志
+
+- 2026-07-15 v0.1 (CANDIDATE) — 确立"新规则默认前瞻适用"原则。

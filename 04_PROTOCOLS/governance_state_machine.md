@@ -1,8 +1,11 @@
 # Governance State Machine Protocol
 
 > 创建时间: 2026-07-15
-> 状态: DRAFT-Pending-Review
+> 状态: **DEPRECATED** — 方向已转向 Event-Sourced Governance Kernel，本方案保留作为历史记录
+> 替代方向: Event-Sourced Governance Kernel（最小 Dry Run 进行中）
 > 对应原则: C-029 (CANDIDATE)
+
+> ⚠️ **DEPRECATED NOTICE**: 本方案作为早期探索保留，不作为正式规范。治理模型已转向基于事件溯源的方向，强调 Append-Only History、Projection Independence 和 Semantic Preservation。详见 PRINCIPLES.md 中 C-029 ~ C-033。
 
 ## 0. Core Principle
 
