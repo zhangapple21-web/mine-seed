@@ -57,13 +57,17 @@ POLICY_CANDIDATE_DIR = MEMORY_DIR / "policy_candidates"
 # ============================================================================
 
 class LawStatus(str, Enum):
-    """Law Status State Machine: DRAFT -> ACTIVE -> WEAKENING -> INVALID -> ARCHIVED"""
-    DRAFT = "DRAFT"
-    ACTIVE = "ACTIVE"
-    WEAKENING = "WEAKENING"
-    INVALID = "INVALID"
-    ARCHIVED = "ARCHIVED"
-    REJECTED = "REJECTED"  # Roundtable rejected
+    """Policy Lifecycle (C-026/C-025 unified):
+    Candidate(DRAFT) -> Active -> Monitoring -> Challenged -> Weakening -> Deprecated(INVALID) -> Archived
+    """
+    DRAFT = "DRAFT"            # Candidate: Replay/Shadow verification
+    ACTIVE = "ACTIVE"          # Activated: Admission passed
+    MONITORING = "MONITORING"  # Monitoring: collecting contribution data
+    CHALLENGED = "CHALLENGED"  # Challenged: new evidence insufficient to declare failure
+    WEAKENING = "WEAKENING"    # Weakening: confirmed declining contribution
+    INVALID = "INVALID"        # Deprecated: no longer scheduled
+    ARCHIVED = "ARCHIVED"      # Archived: historical evidence retained
+    REJECTED = "REJECTED"      # Roundtable rejected
 
 
 class PatternType(str, Enum):
@@ -254,40 +258,54 @@ class Hypothesis:
 @dataclass
 class Law:
     """Verified Law from Hypothesis validation
-    
+
     Law CANNOT directly affect Recommendation.
     Must go through Roundtable -> Admission -> Policy Update.
+
+    板块A' 扩展：作为 Signal Candidate Registry 复用
+    - bootstrap_threshold: 信号启用最低门槛（evidence_count / 胜率阈值）
+    - candidate_type: 'signal_candidate' 标识为信号候选（非传统 law）
+    - scope: 作用域（layer1-3 / scheduler / 两者）
     """
     law_id: str
     timestamp: str
     hypothesis_id: str
-    
+
     # Law definition
     statement: str
     conditions: Dict[str, Any] = field(default_factory=dict)
     expected_outcome: str = ""
-    
+
     # Evidence support
     evidence_count: int = 0
     confidence: float = 0.0  # 0-1
-    
+
     # Applicable scope
     scope: Dict[str, Any] = field(default_factory=dict)
-    
+
     # Status
     status: LawStatus = LawStatus.DRAFT
-    
+
     # Verification
     created_time: str = ""
     last_verified: str = ""
     verification_count: int = 0
-    
+
     # Policy candidates generated
     policy_candidates: List[str] = field(default_factory=list)
-    
+
+    # ========== 板块A' Signal Candidate 扩展字段 ==========
+    candidate_type: str = "law"            # law | signal_candidate
+    bootstrap_threshold: Dict[str, Any] = field(default_factory=dict)  # {min_evidence: 30, min_win_rate: 0.55}
+    replay_result: Optional[Dict] = None    # Offline Replay 结果
+    shadow_result: Optional[Dict] = None    # Shadow Evaluation 结果
+    weakening_trigger: Dict[str, Any] = field(default_factory=dict)  # 弱化触发条件
+    version: str = "v0.1-bootstrap"        # 版本号
+    evidence_source: str = ""              # C-026: External Knowledge 标注
+
     def to_dict(self) -> Dict:
         return asdict(self)
-    
+
     @classmethod
     def from_dict(cls, d: Dict) -> "Law":
         return cls(**d)

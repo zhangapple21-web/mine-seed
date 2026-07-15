@@ -55,20 +55,23 @@ ROUTE_LEVELS = {
         "description": "客户可见，可推送",
         "min_score": 70,  # Bootstrap Threshold: 需数据校准
         "allow_publication": True,
+        "allow_internal_push": True,
         "allow_learning": True,
     },
     "INTERNAL": {
         "name": "Internal",
-        "description": "内部观察，不推送",
+        "description": "内部观察，不推送客户",
         "min_score": 50,  # Bootstrap Threshold: 需数据校准
         "allow_publication": False,
+        "allow_internal_push": True,
         "allow_learning": True,
     },
     "RESEARCH": {
         "name": "Research",
-        "description": "研究样本，不推送",
+        "description": "研究样本，不推送客户",
         "min_score": 30,  # Bootstrap Threshold: 需数据校准
         "allow_publication": False,
+        "allow_internal_push": True,
         "allow_learning": True,
     },
     "DISCARD": {
@@ -76,6 +79,7 @@ ROUTE_LEVELS = {
         "description": "直接废弃，不进学习",
         "min_score": -1,  # Bootstrap Threshold: 需数据校准
         "allow_publication": False,
+        "allow_internal_push": False,
         "allow_learning": False,
     },
 }
@@ -162,6 +166,7 @@ class PublicationGate:
             "route_name": level_info["name"],
             "description": level_info["description"],
             "allow_publication": level_info["allow_publication"],
+            "allow_internal_push": level_info["allow_internal_push"],
             "allow_learning": level_info["allow_learning"],
             "record_id": record_id,
             "health_score": health_score,

@@ -30,7 +30,7 @@ from typing import Dict, List, Optional
 # Paths
 BASE_DIR = Path(__file__).parent.parent.parent
 INDEX_DIR = BASE_DIR / "03_INDEX"
-DB_PATH = INDEX_DIR / "asset_index.db"
+DB_PATH = INDEX_DIR / "asset_index.sqlite"
 GRAPH_PATH = INDEX_DIR / "graph.json"
 TIMELINE_PATH = INDEX_DIR / "timeline.json"
 ENTITY_MAP_PATH = INDEX_DIR / "entity_map.json"

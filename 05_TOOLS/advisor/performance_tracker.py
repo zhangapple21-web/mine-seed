@@ -52,6 +52,7 @@ class PerformanceRecord:
     
     # 各周期收益率 (%)
     return_t1: Optional[float] = None
+    return_t2: Optional[float] = None
     return_t3: Optional[float] = None
     return_t5: Optional[float] = None
     return_t10: Optional[float] = None
@@ -251,6 +252,7 @@ class PerformanceTracker:
             # 计算各周期收益率（使用交易日）
             periods = [
                 (1, 'return_t1'),
+                (2, 'return_t2'),
                 (3, 'return_t3'),
                 (5, 'return_t5'),
                 (10, 'return_t10'),
@@ -311,6 +313,7 @@ class PerformanceTracker:
             "complete_records": sum(1 for r in recent_records if r.status == "complete"),
             "avg_returns": {
                 "T+1": avg_returns('return_t1'),
+                "T+2": avg_returns('return_t2'),
                 "T+3": avg_returns('return_t3'),
                 "T+5": avg_returns('return_t5'),
                 "T+10": avg_returns('return_t10'),
@@ -318,6 +321,7 @@ class PerformanceTracker:
             },
             "win_rates": {
                 "T+1": win_rate('return_t1'),
+                "T+2": win_rate('return_t2'),
                 "T+3": win_rate('return_t3'),
                 "T+5": win_rate('return_t5'),
                 "T+10": win_rate('return_t10'),

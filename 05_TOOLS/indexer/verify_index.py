@@ -13,7 +13,7 @@ print("Index Verification")
 print("=" * 50)
 
 # Test SQLite
-db_path = INDEX_DIR / "asset_index.db"
+db_path = INDEX_DIR / "asset_index.sqlite"
 conn = sqlite3.connect(db_path)
 cursor = conn.cursor()
 

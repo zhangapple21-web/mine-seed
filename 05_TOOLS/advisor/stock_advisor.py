@@ -60,6 +60,12 @@ class StockData:
     volatility_20d: float = 0.0  # 20日波动率
     return_60d: float = 0.0  # 60日涨幅
     
+    # 情绪因子（雪球）
+    hot_rank: int = 0  # 热度排名
+    comment_count: int = 0  # 评论数
+    follower_count: int = 0  # 关注人数
+    heat_level: str = ''  # 热度等级
+    
     # K线数据
     kline_data: List[Dict] = field(default_factory=list)
     
@@ -295,6 +301,15 @@ class StockAdvisor:
         # 因子参数
         self.momentum_threshold = 2.0  # 动量阈值
         self.volatility_p70 = None  # 动态计算
+        
+        # 情绪数据源
+        try:
+            from multi_data_source import DataSourceManager
+            self.data_source_manager = DataSourceManager()
+            logger.info("多数据源管理器已加载")
+        except Exception as e:
+            self.data_source_manager = None
+            logger.warning(f"多数据源管理器加载失败: {e}")
         
         # ========== 学习进化系统 ==========
         # 表现跟踪器
@@ -818,6 +833,18 @@ class StockAdvisor:
         
         confirmed = []
         
+        # 批量获取情绪数据
+        sentiment_data = {}
+        if self.data_source_manager:
+            codes = [sd.code for sd in stocks]
+            try:
+                sentiment_results = self.data_source_manager.get_sentiment(codes)
+                for item in sentiment_results:
+                    sentiment_data[item['code']] = item
+                logger.info(f"获取情绪数据: {len(sentiment_data)} 条")
+            except Exception as e:
+                logger.warning(f"获取情绪数据失败: {e}")
+        
         for sd in stocks:
             if self._check_timeout():
                 break
@@ -832,6 +859,13 @@ class StockAdvisor:
                         self._save_cache(cache_key, flow_data)
                 sd.main_inflow_days = flow_data.get('main_inflow_days', 0)
                 sd.total_main_inflow = flow_data.get('total_main_inflow', 0)
+                
+                # 情绪因子（雪球）
+                sentiment = sentiment_data.get(sd.code, {})
+                sd.hot_rank = sentiment.get('hot_rank', 0)
+                sd.comment_count = sentiment.get('comment_count', 0)
+                sd.follower_count = sentiment.get('follower_count', 0)
+                sd.heat_level = sentiment.get('heat_level', '')
                 
                 # ========== CCO₃ Selection Trace ==========
                 bonus = 0
@@ -868,6 +902,27 @@ class StockAdvisor:
                     # 无资金流入但有其他条件满足也可以
                     bonus += 2
                     sd.layer3_bonus_detail["资金中性"] = 2
+                
+                # 情绪因子加分（雪球热度）
+                sentiment_score = 0
+                if sd.hot_rank > 0 and sd.hot_rank <= 100:
+                    sentiment_score = 10
+                    sd.layer3_bonus_detail["雪球热度TOP100"] = 10
+                elif sd.hot_rank > 100 and sd.hot_rank <= 500:
+                    sentiment_score = 5
+                    sd.layer3_bonus_detail["雪球热度TOP500"] = 5
+                elif sd.hot_rank > 500:
+                    sentiment_score = 2
+                    sd.layer3_bonus_detail["雪球有热度"] = 2
+                
+                if sd.comment_count > 100:
+                    sentiment_score += 3
+                    sd.layer3_bonus_detail["评论活跃"] = 3
+                elif sd.comment_count > 10:
+                    sentiment_score += 1
+                    sd.layer3_bonus_detail["少量评论"] = 1
+                
+                bonus += sentiment_score
                 
                 # 行业龙头（简化判断）
                 if sd.total_capital > 500 and sd.pe > 0:

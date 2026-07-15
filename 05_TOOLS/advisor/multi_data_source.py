@@ -52,6 +52,7 @@ class DataSourceManager:
             'sina': {'available': True, 'priority': 1, 'latency': 0},
             'eastmoney': {'available': True, 'priority': 2, 'latency': 0},
             'tencent': {'available': True, 'priority': 3, 'latency': 0},
+            'xueqiu': {'available': False, 'priority': 3, 'latency': 0},
             'baostock': {'available': False, 'priority': 4, 'latency': 0},
             'akshare': {'available': False, 'priority': 5, 'latency': 0},
         }
@@ -73,6 +74,13 @@ class DataSourceManager:
             logger.info("akshare 数据源可用")
         except ImportError:
             logger.debug("akshare 不可用")
+        
+        try:
+            import lxml
+            self.sources['xueqiu']['available'] = True
+            logger.info("雪球数据源可用")
+        except ImportError:
+            logger.debug("雪球数据源不可用(lxml未安装)")
     
     def _health_check(self):
         """健康检查，测试各数据源"""
@@ -268,6 +276,64 @@ class DataSourceManager:
             return results[-days:] if len(results) > days else results
         
         return []
+    
+    def _get_xueqiu_sentiment(self, codes: List[str]) -> List[Dict]:
+        """雪球情绪数据（讨论热度、评论数、用户情绪）"""
+        results = []
+        
+        for code in codes:
+            try:
+                market = 'SH' if code.startswith('6') else 'SZ'
+                ts_code = f"{market}{code}"
+                
+                url = f"https://xueqiu.com/stock/search.json?code={ts_code}"
+                
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Referer': 'https://xueqiu.com/',
+                    'Cookie': '',
+                }
+                
+                req = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    data = json.loads(resp.read().decode('utf-8'))
+                
+                if data.get('stocks'):
+                    stock = data['stocks'][0]
+                    results.append({
+                        'code': code,
+                        'name': stock.get('name', ''),
+                        'hot_rank': stock.get('hot_rank', 0),
+                        'comment_count': stock.get('comment_count', 0),
+                        'follower_count': stock.get('follower_count', 0),
+                        'heat_level': stock.get('heat_level', ''),
+                        'source': 'xueqiu',
+                    })
+            except Exception as e:
+                logger.warning(f"雪球获取 {code} 情绪数据失败: {e}")
+        
+        return results
+    
+    def get_sentiment(self, codes: List[str]) -> List[Dict]:
+        """获取股票情绪数据（雪球讨论热度）"""
+        if not self.sources['xueqiu']['available']:
+            return []
+        
+        normalized_codes = []
+        for c in codes:
+            c = c.strip().lower()
+            if c.startswith('sh'):
+                c = c.replace('sh', '')
+            elif c.startswith('sz'):
+                c = c.replace('sz', '')
+            normalized_codes.append(c)
+        
+        try:
+            return self._get_xueqiu_sentiment(normalized_codes)
+        except Exception as e:
+            logger.warning(f"雪球情绪数据获取失败: {e}")
+            self.sources['xueqiu']['available'] = False
+            return []
     
     def get_hist_kline(self, code: str, days: int = 30) -> List[Dict]:
         """获取历史K线（自动降级）"""

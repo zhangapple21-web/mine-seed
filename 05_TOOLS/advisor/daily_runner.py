@@ -226,9 +226,10 @@ def should_push_to_customer(logger: RunnerLogger) -> bool:
     - 40 <= 健康度 < 60: 不推送（内部留存学习）
     - 健康度 < 40: 不推送（内部留存学习）
     
-    额外条件：
-    - 连续3次T+1亏损：不推送
-    - 最近10次T+1胜率 < 30%：不推送
+    额外条件（使用 T+2/T+3 判定，避免单日亏损误判）：
+    - 连续3次T+2亏损：不推送
+    - 连续3次T+3亏损：不推送
+    - 最近10次T+2胜率 < 30%：不推送
     
     返回: True=允许推送, False=不推送（内部照常生成）
     """
@@ -258,20 +259,35 @@ def should_push_to_customer(logger: RunnerLogger) -> bool:
         
         recent = sorted(tracker.records.values(), 
                        key=lambda r: r.recommend_date, reverse=True)[:10]
-        consecutive_losses = 0
+        
+        # T+2 连续亏损检查
+        consecutive_t2_losses = 0
         for rec in recent:
-            if rec.return_t1 is not None:
-                if rec.return_t1 < 0:
-                    consecutive_losses += 1
-                    if consecutive_losses >= 3:
-                        logger.log(f"  ⚠ 质量闸门：连续 {consecutive_losses} 次T+1亏损，不推送")
+            if rec.return_t2 is not None:
+                if rec.return_t2 < 0:
+                    consecutive_t2_losses += 1
+                    if consecutive_t2_losses >= 3:
+                        logger.log(f"  ⚠ 质量闸门：连续 {consecutive_t2_losses} 次T+2亏损，不推送")
                         return False
                 else:
-                    consecutive_losses = 0
+                    consecutive_t2_losses = 0
         
-        win_rate_t1 = summary.get('win_rates', {}).get('T+1')
-        if win_rate_t1 is not None and win_rate_t1 < 30:
-            logger.log(f"  ⚠ 质量闸门：最近10次T+1胜率仅 {win_rate_t1}% < 30%，不推送")
+        # T+3 连续亏损检查
+        consecutive_t3_losses = 0
+        for rec in recent:
+            if rec.return_t3 is not None:
+                if rec.return_t3 < 0:
+                    consecutive_t3_losses += 1
+                    if consecutive_t3_losses >= 3:
+                        logger.log(f"  ⚠ 质量闸门：连续 {consecutive_t3_losses} 次T+3亏损，不推送")
+                        return False
+                else:
+                    consecutive_t3_losses = 0
+        
+        # T+2 胜率检查
+        win_rate_t2 = summary.get('win_rates', {}).get('T+2')
+        if win_rate_t2 is not None and win_rate_t2 < 30:
+            logger.log(f"  ⚠ 质量闸门：最近10次T+2胜率仅 {win_rate_t2}% < 30%，不推送")
             return False
         
         logger.log(f"  ✓ 质量闸门通过，健康度: {health_score}/100")
@@ -413,10 +429,15 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
         
         logger.log(f"  Publication Gate: {gate_result['route_name']} ({gate_result['route_level']})")
         logger.log(f"  健康度: {health_score_for_gate}/100")
+        logger.log(f"  allow_publication: {gate_result.get('allow_publication', False)}")
+        logger.log(f"  allow_internal_push: {gate_result.get('allow_internal_push', False)}")
         
-        if gate_result["allow_publication"]:
+        if gate_result.get("allow_publication", False):
             step3_ok = push_to_telegram(logger)
             logger.log("  ✓ Publication Gate 通过，已推送客户")
+        elif gate_result.get("allow_internal_push", False):
+            step3_ok = push_to_telegram(logger)
+            logger.log("  ✓ 内部推送允许，已推送至TG（内部验证）")
         else:
             step3_ok = False
             logger.log(f"  ⚠ Publication Gate 拦截：{gate_result['description']}")

@@ -326,42 +326,72 @@ class AdaptiveScorer:
         条件：
         - 最近 N 次推荐中，连续失败次数 >= threshold
         - 或最近 10 次推荐胜率 < 30%
+        
+        支持多周期数据降级：T+5 → T+3 → T+2 → T+1
+        防止"没有T+5→没有调整→没有T+5"的死循环
         """
         summary = tracker.get_summary(10)
         if summary.get('total_recommendations', 0) < 5:
             return False
         
-        # 检查最近10次胜率
-        win_rate_t5 = summary.get('win_rates', {}).get('T+5')
-        if win_rate_t5 is not None and win_rate_t5 < 30:
-            logger.warning(f"触发优化: 最近10次T+5胜率仅 {win_rate_t5}%")
-            return True
+        win_rates = summary.get('win_rates', {})
         
-        # 检查连续失败（通过读取最近记录）
+        # 按优先级检查各周期胜率
+        periods = ['T+5', 'T+3', 'T+2', 'T+1']
+        for period in periods:
+            win_rate = win_rates.get(period)
+            if win_rate is not None and win_rate < 30:
+                logger.warning(f"触发优化: 最近10次{period}胜率仅 {win_rate}%")
+                return True
+        
+        # 检查连续失败（通过读取最近记录，支持多周期降级）
         recent = sorted(tracker.records.values(), 
                        key=lambda r: r.recommend_date, reverse=True)[:10]
-        consecutive_losses = 0
-        for rec in recent:
-            if rec.return_t5 is not None:
-                if rec.return_t5 < 0:
-                    consecutive_losses += 1
-                    if consecutive_losses >= consecutive_losses_threshold:
-                        logger.warning(f"触发优化: 连续 {consecutive_losses} 次T+5亏损")
-                        return True
-                else:
-                    consecutive_losses = 0
+        
+        # 按优先级选择收益字段
+        return_fields = ['return_t5', 'return_t3', 'return_t2', 'return_t1']
+        for return_field in return_fields:
+            consecutive_losses = 0
+            for rec in recent:
+                ret_value = getattr(rec, return_field, None)
+                if ret_value is not None:
+                    if ret_value < 0:
+                        consecutive_losses += 1
+                        if consecutive_losses >= consecutive_losses_threshold:
+                            logger.warning(f"触发优化: 连续 {consecutive_losses} 次{return_field.replace('return_', '')}亏损")
+                            return True
+                    else:
+                        consecutive_losses = 0
         
         return False
     
     def generate_optimization_task(self, tracker: PerformanceTracker) -> Dict[str, Any]:
         """生成因子优化任务规格"""
         summary = tracker.get_summary(20)
-        factor_stats = tracker.get_factor_effectiveness()
+        
+        # 尝试获取有效周期的因子统计（支持 T+1/T+5）
+        factor_stats_t5 = tracker.get_factor_effectiveness("T+5")
+        factor_stats_t1 = tracker.get_factor_effectiveness("T+1")
+        factor_stats = factor_stats_t5 if factor_stats_t5 else factor_stats_t1
+        
+        # 确定有效周期
+        win_rates = summary.get('win_rates', {})
+        periods = ['T+5', 'T+3', 'T+2', 'T+1']
+        effective_period = None
+        effective_win_rate = None
+        
+        for period in periods:
+            wr = win_rates.get(period)
+            if wr is not None:
+                effective_period = period
+                effective_win_rate = wr
+                break
         
         task = {
             "task_type": "factor_optimization",
             "created_at": datetime.now().isoformat(),
             "trigger_reason": "consecutive_losses_or_low_winrate",
+            "effective_period": effective_period,
             "current_performance": summary,
             "factor_effectiveness": factor_stats,
             "current_weights": self.weights,
@@ -382,11 +412,10 @@ class AdaptiveScorer:
                     })
         
         # 如果整体胜率低，建议扩大样本或调整筛选标准
-        avg_win_rate = summary.get('win_rates', {}).get('T+5')
-        if avg_win_rate is not None and avg_win_rate < 40:
+        if effective_win_rate is not None and effective_win_rate < 40:
             task["suggested_actions"].append({
                 "action": "tighten_criteria",
-                "reason": f"整体T+5胜率仅 {avg_win_rate}%，建议收紧筛选条件",
+                "reason": f"整体{effective_period}胜率仅 {effective_win_rate}%，建议收紧筛选条件",
             })
         
         return task
@@ -396,28 +425,49 @@ class AdaptiveScorer:
         计算推荐系统健康度分数
         
         返回 0-100 的健康度分数和详细指标
+        
+        支持多周期数据降级：T+5 → T+3 → T+2 → T+1
+        防止"没有T+5→健康度虚高"的指标作弊问题
+        
+        Goal Validation Rule:
+        任何生产优化，必须证明优化目标与最终业务价值一致。
+        否则，禁止进入 Learning。
         """
         summary = tracker.get_summary(30)
         
         if summary.get('total_recommendations', 0) == 0:
             return {"score": 50, "status": "unknown", "reason": "暂无推荐记录"}
         
+        win_rates = summary.get('win_rates', {})
+        avg_returns = summary.get('avg_returns', {})
+        
+        # 按优先级选择可用的周期数据
+        periods = ['T+5', 'T+3', 'T+2', 'T+1']
+        effective_period = None
+        effective_win_rate = None
+        effective_avg_return = None
+        
+        for period in periods:
+            wr = win_rates.get(period)
+            ret = avg_returns.get(period)
+            if wr is not None and ret is not None:
+                effective_period = period
+                effective_win_rate = wr
+                effective_avg_return = ret
+                break
+        
+        # 如果完全没有数据，使用默认值
+        if effective_period is None:
+            return {"score": 50, "status": "unknown", "reason": "无可用收益数据"}
+        
         # 各维度分数（0-100）
         scores = {}
         
-        # 1. T+5 胜率分数（权重 40%）
-        wr_t5 = summary.get('win_rates', {}).get('T+5')
-        if wr_t5 is not None:
-            scores['win_rate_t5'] = min(100, wr_t5 * 1.5)  # 67% 胜率 = 100 分
-        else:
-            scores['win_rate_t5'] = 50
+        # 1. 胜率分数（权重 40%）
+        scores['win_rate'] = min(100, effective_win_rate * 1.5)
         
-        # 2. T+5 平均收益分数（权重 30%）
-        ret_t5 = summary.get('avg_returns', {}).get('T+5')
-        if ret_t5 is not None:
-            scores['avg_return_t5'] = min(100, max(0, 50 + ret_t5 * 10))  # 5% 收益 = 100 分
-        else:
-            scores['avg_return_t5'] = 50
+        # 2. 平均收益分数（权重 30%）
+        scores['avg_return'] = min(100, max(0, 50 + effective_avg_return * 10))
         
         # 3. 数据完整度分数（权重 20%）
         total = summary.get('total_recommendations', 0)
@@ -438,8 +488,8 @@ class AdaptiveScorer:
         
         # 加权总分
         total_score = (
-            scores['win_rate_t5'] * 0.4 +
-            scores['avg_return_t5'] * 0.3 +
+            scores['win_rate'] * 0.4 +
+            scores['avg_return'] * 0.3 +
             scores['data_completeness'] * 0.2 +
             scores['stability'] * 0.1
         )
@@ -455,6 +505,7 @@ class AdaptiveScorer:
         return {
             "score": round(total_score, 1),
             "status": status,
+            "effective_period": effective_period,
             "details": scores,
             "summary": summary,
         }
