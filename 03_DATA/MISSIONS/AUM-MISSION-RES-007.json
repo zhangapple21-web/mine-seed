@@ -1,0 +1,40 @@
+{
+  "mid": "AUM-MISSION-RES-007",
+  "name": "Discovery: 验证候选 a5787b6",
+  "type": "Research",
+  "priority": "P3",
+  "status": "PROPOSED",
+  "drawer_scan_done": false,
+  "drawer_scan_verdict": "",
+  "mission": "验证并蒸馏候选资产：a5787b6",
+  "scope": "分析候选资产，决定是否纳入 Repository",
+  "deliverables": "1. 候选资产评估\n2. 蒸馏决策",
+  "acceptance": "✓ 候选资产已评估\n✓ 已决定是否 Admission",
+  "forbidden": "❌ 不验证就纳入\n❌ 重复纳入",
+  "distillation": "",
+  "admission": "",
+  "civ_impact": {
+    "capability": false,
+    "protocol": false,
+    "runtime": false,
+    "memory": false,
+    "knowledge": false,
+    "identity": false,
+    "infrastructure": false
+  },
+  "created_at": "2026-07-14T16:35:19.656288",
+  "updated_at": "2026-07-14T16:35:19.656288",
+  "completed_at": "",
+  "admitted_at": "",
+  "metadata": {},
+  "artifacts": [],
+  "distillation_artifacts": {
+    "kernel": [],
+    "blueprint": [],
+    "protocol": [],
+    "constraint": [],
+    "experience": [],
+    "identity": []
+  },
+  "admission_records": []
+}

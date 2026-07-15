@@ -17,7 +17,11 @@
 | 云时代 | 基础设施抽象（Kubernetes） | 架构债（微服务边界） | Gate Pipeline 设计 |
 | **AI时代** | **分布式计算抽象（Ray）** | **数据质量债** | **Data Quality Gate** |
 
+> ⚠️ **External Observation 标注（C-026 v0.2）**: 上表时代分类参考自外部文章（NVIDIA "From AI Computing to Application Architecture"），Kubernetes/Ray 类比属于 **External Observation, Not Verified**。本项目的 Gate Pipeline 设计是 Internal Evidence 驱动的，不依赖 K8s/Ray 架构等价性假设。
+
 ### AI原生架构的三层结构
+
+> ⚠️ **External Observation 标注（C-026 v0.2）**: 以下三层结构分类参考自外部文章，属于 **External Observation, Not Verified**。本项目的实际分层由 Internal Evidence 驱动。
 
 ```
 资源编排层（Windows Task Scheduler）→ 定时任务管理
