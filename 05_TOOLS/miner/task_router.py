@@ -324,6 +324,7 @@ class LocalMinerAdapter(ProviderAdapter):
 PROVIDER_ADAPTERS = {
     "oneapi": OneAPIAdapter,
     "local_miner": LocalMinerAdapter,
+    "felo": lambda: __import__("felo_provider").FeloAdapter(),
 }
 
 # ==================== 任务画像定义 ====================
@@ -433,7 +434,7 @@ class WorkerRegistry:
         print(f"  🧪 Registry 动态生成: 扫描 ProviderAdapter...")
         
         workers = {}
-        provider_order = ["oneapi", "local_miner"]  # 优先 OneAPI，其次 local_miner
+        provider_order = ["oneapi", "local_miner", "felo"]  # OneAPI -> local_miner -> Felo
         
         for provider_name in provider_order:
             adapter_class = PROVIDER_ADAPTERS.get(provider_name)
@@ -460,6 +461,7 @@ class WorkerRegistry:
                         "github": "GitHub",
                         "ollama": "Ollama",
                         "openrouter": "OpenRouter",
+                        "felo": "Felo",
                     }
                     corps = corps_map.get(provider_name, provider_name.capitalize())
                     if "/" in model_name:

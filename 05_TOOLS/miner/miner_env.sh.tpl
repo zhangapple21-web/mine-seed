@@ -68,4 +68,8 @@ export NIM_KEY_14="nvapi-U1DvIxZ9zNDjXcGCRYSc2r35fMtpjYxWGpzqxNRobSsHQNUGFDCjExi
 # NIM_KEY_15: mistral-medium-3.5-128b专用 (2026-06-14)
 export NIM_KEY_15="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"
 # NIM_KEY_16: deepseek-v4-pro专用 (2026-06-14)
-export NIM_KEY_16="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"
+export NIM_KEY_16="{{NIM_KEY_16}}"
+
+# === Felo API (PROV-FELO-001, 跨语言证据补充通道) ===
+export FELO_API_KEY="{{FELO_API_KEY}}"
+export FELO_BASE_URL="https://api.felo.ai/v1"
