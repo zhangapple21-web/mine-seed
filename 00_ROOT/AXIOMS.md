@@ -19,7 +19,7 @@
 | 5 | **Agent 不固定身份** | 根据能力自主选择角色 |
 | 6 | **任何长期知识必须进入 Repository** | 不能停留在 Runtime |
 | 7 | **任何 Architecture 修改必须经过 ADR** | 决策有据可查 |
-| 8 | **Git 是 Civilization Observation Network** | 不是同步工具 |
+| 8 | **Git 是 Civilization Observation Network** | 不是同步工具，也不是文明本身（见 C-028） |
 | 9 | **每一个 Repository 都是独立文明** | 文明之间：观察 → 学习 → 蒸馏 → 绝不覆盖 |
 | 10 | **不要创造工作，发现工作** | 真实问题优先 |
 | 11 | **保持 Civilization Continuity 高于一切** | 连续性是核心 |
