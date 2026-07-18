@@ -215,6 +215,65 @@ def classify_file(f: Path, rel_path: str, content: str) -> Optional[str]:
     return None
 
 
+def _extract_desc(f: Path, content: str) -> str:
+    """从文件内容提取描述（优先 docstring，其次 markdown 标题）"""
+    if not content:
+        return ""
+
+    # Python 文件：提取 docstring
+    if f.suffix == ".py":
+        lines = content.strip().split('\n')
+        # 跳过 shebang 和 encoding
+        start = 0
+        for i, line in enumerate(lines):
+            stripped = line.strip()
+            if stripped.startswith('#!') or stripped.startswith('# -*-') or stripped.startswith('# coding'):
+                start = i + 1
+            elif stripped == '':
+                continue
+            else:
+                break
+
+        # 找 docstring（三引号或单引号）
+        for i in range(start, min(start + 5, len(lines))):
+            line = lines[i].strip()
+            if line.startswith('"""') or line.startswith("'''"):
+                quote = line[:3]
+                if len(line) > 3 and line.endswith(quote):
+                    # 单行 docstring
+                    return line[3:-3].strip()[:100]
+                else:
+                    # 多行 docstring — 取第一行
+                    first = line[3:].strip()
+                    if first:
+                        return first[:100]
+                    # docstring 开头空行，取下一行
+                    for j in range(i + 1, min(i + 4, len(lines))):
+                        next_line = lines[j].strip()
+                        if next_line == quote:
+                            break
+                        if next_line:
+                            return next_line[:100]
+                break
+
+    # Markdown 文件：取第一个标题
+    if f.suffix == ".md":
+        for line in content.strip().split('\n'):
+            line = line.strip()
+            if line.startswith('#'):
+                return line.lstrip('#').strip()[:100]
+            if line:
+                return line[:100]
+
+    # Shell / 其他：取第一个有意义的注释或标题
+    for line in content.strip().split('\n')[:5]:
+        line = line.strip()
+        if line.startswith('#') and not line.startswith('#!'):
+            return line.lstrip('#').strip()[:100]
+
+    return ""
+
+
 def scan_new_assets(index: dict) -> List[dict]:
     """扫描文件系统找新资产"""
     existing_sources = scan_existing_sources(index)
@@ -247,10 +306,7 @@ def scan_new_assets(index: dict) -> List[dict]:
 
                 cat = classify_file(f, rel_path, content)
                 if cat:
-                    desc_hint = ""
-                    first_line = content.strip().split('\n')[0] if content else ""
-                    if first_line.startswith('#'):
-                        desc_hint = first_line.lstrip('#').strip()[:80]
+                    desc_hint = _extract_desc(f, content)
 
                     found.append({
                         "name": f.stem,
@@ -348,10 +404,16 @@ def fix_index(index: dict, new_assets: List[dict], missing: List[dict]) -> dict:
         cat_data = index["categories"][cat]
         new_id = generate_next_id(index, cat)
 
+        # 如果 desc_hint 为空，不添加到索引（描述不明的文件不值得收录）
+        desc_hint = a.get("desc_hint", "").strip()
+        if not desc_hint:
+            logger.warning(f"[SKIP] 无描述，跳过: {a['source']}")
+            continue
+
         new_entry = {
             "id": new_id,
             "name": a["name"],
-            "desc": a.get("desc_hint", "") or f"自动发现的 {cat} 资产",
+            "desc": desc_hint,
             "source": a["source"],
             "added": datetime.now().strftime("%Y-%m-%d"),
             "status": "active",

@@ -25,7 +25,7 @@
         {
           "id": "K-003",
           "name": "task_router",
-          "desc": "!/usr/bin/env python3",
+          "desc": "任务路由器 v3 — ProviderAdapter 抽象 + 动态 Registry 生成",
           "source": "05_TOOLS/miner/task_router.py",
           "added": "2026-07-18",
           "status": "active"
@@ -33,7 +33,7 @@
         {
           "id": "K-004",
           "name": "model_router",
-          "desc": "!/usr/bin/env python3",
+          "desc": "智能路由器 v1 — 从'调用AI'到'管理AI劳动力'的质变",
           "source": "05_TOOLS/miner/model_router.py",
           "added": "2026-07-18",
           "status": "active"
@@ -41,7 +41,7 @@
       ]
     },
     "blueprint": {
-      "count": 18,
+      "count": 15,
       "assets": [
         {
           "id": "B-001",
@@ -70,7 +70,7 @@
         {
           "id": "B-004",
           "name": "tg_download_r1_files",
-          "desc": "!/usr/bin/env python3",
+          "desc": "TG R1 文件下载器 — 从 TG Saved Messages 下载 R1 时代文件",
           "source": "05_TOOLS/miner/tg_download_r1_files.py",
           "added": "2026-07-18",
           "status": "active"
@@ -78,7 +78,7 @@
         {
           "id": "B-005",
           "name": "discovery_scan",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Discovery Scanner — 每日发现协议扫描器",
           "source": "05_TOOLS/miner/discovery_scan.py",
           "added": "2026-07-18",
           "status": "active"
@@ -86,7 +86,7 @@
         {
           "id": "B-006",
           "name": "civilization_index_sync",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Civilization Index Sync — 文明索引同步校验器",
           "source": "05_TOOLS/miner/civilization_index_sync.py",
           "added": "2026-07-18",
           "status": "active"
@@ -94,7 +94,7 @@
         {
           "id": "B-007",
           "name": "tg_civilization_scanner",
-          "desc": "!/usr/bin/env python3",
+          "desc": "TG Civilization Scanner — Telegram 文明地图扫描器",
           "source": "05_TOOLS/miner/tg_civilization_scanner.py",
           "added": "2026-07-18",
           "status": "active"
@@ -102,7 +102,7 @@
         {
           "id": "B-008",
           "name": "civilization_daily",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Civilization Daily — 文明日报生成器（4步流程）",
           "source": "05_TOOLS/miner/civilization_daily.py",
           "added": "2026-07-18",
           "status": "active"
@@ -110,7 +110,7 @@
         {
           "id": "B-009",
           "name": "signal_discovery",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Signal Discovery Agent — 独立版 3-Agent 循环信号发现",
           "source": "05_TOOLS/signals/signal_discovery.py",
           "added": "2026-07-18",
           "status": "active"
@@ -132,17 +132,9 @@
           "status": "active"
         },
         {
-          "id": "B-012",
-          "name": "mission_protocol",
-          "desc": "自动发现的 blueprint 资产",
-          "source": "04_PROTOCOLS/mission_protocol.py",
-          "added": "2026-07-18",
-          "status": "active"
-        },
-        {
           "id": "B-013",
           "name": "environment_first",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Environment First Protocol (EFP) — 环境优先协议",
           "source": "04_PROTOCOLS/environment_first.py",
           "added": "2026-07-18",
           "status": "active"
@@ -150,24 +142,8 @@
         {
           "id": "B-014",
           "name": "ops_000_asset_first",
-          "desc": "!/usr/bin/env python3",
+          "desc": "DFP-001: Drawer First Protocol — 抽屉优先协议",
           "source": "04_PROTOCOLS/ops_000_asset_first.py",
-          "added": "2026-07-18",
-          "status": "active"
-        },
-        {
-          "id": "B-015",
-          "name": "repository",
-          "desc": "自动发现的 blueprint 资产",
-          "source": "04_PROTOCOLS/repository.py",
-          "added": "2026-07-18",
-          "status": "active"
-        },
-        {
-          "id": "B-016",
-          "name": "evidence_graph",
-          "desc": "自动发现的 blueprint 资产",
-          "source": "04_PROTOCOLS/evidence_graph.py",
           "added": "2026-07-18",
           "status": "active"
         },
@@ -182,7 +158,7 @@
         {
           "id": "B-018",
           "name": "tg_pusher",
-          "desc": "!/usr/bin/env python3",
+          "desc": "TG Pusher — Telegram Bot 连接器",
           "source": "06_RUNTIME/connectors/tg_pusher.py",
           "added": "2026-07-18",
           "status": "active"
@@ -190,7 +166,7 @@
       ]
     },
     "protocol": {
-      "count": 12,
+      "count": 15,
       "assets": [
         {
           "id": "P-001",
@@ -235,7 +211,7 @@
         {
           "id": "P-006",
           "name": "recovery_protocol",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Recovery Protocol (RP) — 恢复协议 Python 实现",
           "source": "04_PROTOCOLS/recovery_protocol.py",
           "added": "2026-07-18",
           "status": "active"
@@ -243,7 +219,7 @@
         {
           "id": "P-007",
           "name": "civilization_contract",
-          "desc": "自动发现的 protocol 资产",
+          "desc": "CONTRACT-001 Civilization Contract — 文明契约守护（PROTO-029）",
           "source": "04_PROTOCOLS/civilization_contract.py",
           "added": "2026-07-18",
           "status": "active"
@@ -287,6 +263,30 @@
           "source": "01_AGENTS/xiaofengzi/PROTOCOLS.md",
           "added": "2026-07-18",
           "status": "active"
+        },
+        {
+          "id": "P-013",
+          "name": "mission_protocol",
+          "desc": "AUM Mission Protocol v1.0 — 长期协议（PROTO-019）",
+          "source": "04_PROTOCOLS/mission_protocol.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-014",
+          "name": "repository",
+          "desc": "AUM-003 Civilization Repository — 文明仓库运行时（PROTO-021）",
+          "source": "04_PROTOCOLS/repository.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-015",
+          "name": "evidence_graph",
+          "desc": "Evidence Graph — 考古证据图系统（PROTO-006）",
+          "source": "04_PROTOCOLS/evidence_graph.py",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     },
@@ -320,7 +320,7 @@
         {
           "id": "C-004",
           "name": "fitness_tracker",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Fitness Tracker — Task→Worker 适配度记录器",
           "source": "05_TOOLS/signals/fitness_tracker.py",
           "added": "2026-07-18",
           "status": "active"
@@ -328,7 +328,7 @@
         {
           "id": "C-005",
           "name": "constraint_validator",
-          "desc": "自动发现的 constraint 资产",
+          "desc": "CONSTRAINT-001 — Three Unloseable Constraints Validator（PROTO-031）",
           "source": "04_PROTOCOLS/constraint_validator.py",
           "added": "2026-07-18",
           "status": "active"
@@ -344,7 +344,7 @@
         {
           "id": "C-007",
           "name": "constraint_proposer",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Constraint Proposer — 从观察数据自动提取约束提案（O→E→C→R 闭环）",
           "source": "06_RUNTIME/constraint_proposer.py",
           "added": "2026-07-18",
           "status": "active"
@@ -352,7 +352,7 @@
         {
           "id": "C-008",
           "name": "constraint_injector",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Constraint Injector — 给 miner_24h.py 注入 constraint 过滤逻辑",
           "source": "06_RUNTIME/constraint_injector.py",
           "added": "2026-07-18",
           "status": "active"
@@ -360,7 +360,7 @@
         {
           "id": "C-009",
           "name": "deploy_constraints",
-          "desc": "!/usr/bin/env python3",
+          "desc": "Deploy Constraints v5 — 约束代码化（Monkey Patch 版）",
           "source": "06_RUNTIME/deploy_constraints.py",
           "added": "2026-07-18",
           "status": "active"
@@ -368,7 +368,7 @@
         {
           "id": "C-010",
           "name": "sync_constraints",
-          "desc": "!/usr/bin/env python3",
+          "desc": "O→E→C Auto-Sync — 自动同步经验规则到 routing_constraints.json",
           "source": "06_RUNTIME/sync_constraints.py",
           "added": "2026-07-18",
           "status": "active"
@@ -445,7 +445,7 @@
         {
           "id": "E-006",
           "name": "task_router_v2",
-          "desc": "!/usr/bin/env python3",
+          "desc": "任务路由器 v2 — 从'谁分高谁上'到'任务画像匹配工人'",
           "source": "05_TOOLS/miner/task_router_v2.py",
           "added": "2026-07-18",
           "status": "active"
@@ -453,7 +453,7 @@
         {
           "id": "E-007",
           "name": "miner_cron",
-          "desc": "!/bin/bash",
+          "desc": "矿场 cron 运行器 v3 — v5 任务路由+裁判+经验层",
           "source": "05_TOOLS/miner/miner_cron.sh",
           "added": "2026-07-18",
           "status": "active"
@@ -461,7 +461,7 @@
         {
           "id": "E-008",
           "name": "experience_engine",
-          "desc": "!/usr/bin/env python3",
+          "desc": "经验引擎 — 矿场核心资产层",
           "source": "05_TOOLS/memory/experience_engine.py",
           "added": "2026-07-18",
           "status": "active"
@@ -469,7 +469,7 @@
         {
           "id": "E-009",
           "name": "civilization_map",
-          "desc": "!/usr/bin/env python3",
+          "desc": "CIV-001: Civilization Map Monitor — 文明地图监控",
           "source": "04_PROTOCOLS/civilization_map.py",
           "added": "2026-07-18",
           "status": "active"
@@ -522,7 +522,7 @@
         {
           "id": "I-004",
           "name": "SOUL",
-          "desc": "自动发现的 identity 资产",
+          "desc": "小疯子数据分析师（lab_02）Agent 人设定义",
           "source": "01_AGENTS/SOUL.md",
           "added": "2026-07-18",
           "status": "active"
@@ -530,7 +530,7 @@
         {
           "id": "I-005",
           "name": "SOUL",
-          "desc": "自动发现的 identity 资产",
+          "desc": "小疯子数据分析师（lab_02）Agent 人设定义（副本）",
           "source": "01_AGENTS/xiaofengzi/SOUL.md",
           "added": "2026-07-18",
           "status": "active"
@@ -546,7 +546,7 @@
         {
           "id": "I-007",
           "name": "SOUL",
-          "desc": "自动发现的 identity 资产",
+          "desc": "疯子 Agent 人设定义",
           "source": "01_AGENTS/fengzi/SOUL.md",
           "added": "2026-07-18",
           "status": "active"
@@ -556,12 +556,12 @@
   },
   "score": {
     "kernel": 20,
-    "blueprint": 72,
-    "protocol": 36,
+    "blueprint": 60,
+    "protocol": 45,
     "constraint": 26,
     "experience": 11,
     "identity": 56,
-    "total": 221
+    "total": 218
   },
   "missions": {
     "active": [],
