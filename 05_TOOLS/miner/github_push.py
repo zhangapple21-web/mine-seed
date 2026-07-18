@@ -29,24 +29,23 @@ API_BASE = f"https://api.github.com/repos/{GH_OWNER}/{GH_REPO}"
 def get_file_sha(path: str) -> str:
     """获取文件的当前 SHA（如果存在）"""
     url = f"{API_BASE}/contents/{path}?ref={GH_BRANCH}"
-    req = urllib.request.Request(url, headers={
-        "Authorization": f"token {GH_TOKEN}",
-        "Accept": "application/vnd.github.v3+json",
-    })
-    
-    # 不走代理
-    import subprocess
     try:
-        result = subprocess.run(
-            ["curl", "-s", "--connect-timeout", "10",
-             "-H", f"Authorization: token {GH_TOKEN}",
-             "-H", "Accept: application/vnd.github.v3+json",
-             f"{API_BASE}/contents/{path}?ref={GH_BRANCH}"],
-            capture_output=True, text=True, timeout=15
-        )
-        data = json.loads(result.stdout)
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"token {GH_TOKEN}",
+            "Accept": "application/vnd.github.v3+json",
+        })
+        # 走代理（GitHub API 在海外）
+        from free_llm import _PROXY, _needs_proxy
+        if _PROXY and _needs_proxy(url):
+            handler = urllib.request.ProxyHandler({'http': _PROXY, 'https': _PROXY})
+            opener = urllib.request.build_opener(handler)
+            with opener.open(req, timeout=15) as resp:
+                data = json.loads(resp.read())
+        else:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read())
         return data.get("sha", "")
-    except:
+    except Exception:
         return ""
 
 
@@ -90,7 +89,15 @@ def push_file(file_path: str, repo_path: str, commit_msg: str = "") -> bool:
             },
             method="PUT"
         )
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        # 走代理（GitHub API 在海外）
+        from free_llm import _PROXY, _needs_proxy
+        if _PROXY and _needs_proxy(url):
+            handler = urllib.request.ProxyHandler({'http': _PROXY, 'https': _PROXY})
+            opener = urllib.request.build_opener(handler)
+            resp = opener.open(req, timeout=30)
+        else:
+            resp = urllib.request.urlopen(req, timeout=30)
+        with resp:
             result = json.loads(resp.read())
             print(f"[GH] Pushed: {repo_path} (commit: {result['commit']['sha'][:7]})")
             return True

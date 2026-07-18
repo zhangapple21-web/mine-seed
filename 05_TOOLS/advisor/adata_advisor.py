@@ -26,6 +26,7 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 日志
 LOG_DIR = Path(__file__).parent / ".." / "mine_output" / "advisor"
@@ -80,32 +81,19 @@ class AdataAdvisor:
             return []
     
     def get_spot(self, codes: List[str]) -> List[Dict]:
-        """获取实时行情（涨幅、换手率、成交量）"""
+        """获取实时行情（stock_query 腾讯 API）"""
         if not self.available:
             return []
         results = []
-        # 分批获取，每批 50 只
-        batch_size = 50
-        for i in range(0, len(codes), batch_size):
-            batch = codes[i:i+batch_size]
-            try:
-                # adata 的实时行情接口
-                df = self.adata.stock.market.get_market(
-                    stock_code=batch[0],  # adata 可能不支持批量，一次一只
-                    start_date=datetime.now().strftime("%Y-%m-%d"),
-                    end_date=datetime.now().strftime("%Y-%m-%d"),
-                    k_type=1
-                )
-                # 实际上 adata 没有批量实时行情，需要用其他方式
-                # 这里简化：用 stock_query 的腾讯 API 做实时行情
-                break
-            except Exception as e:
-                logger.debug(f"[adata] 批量行情失败: {e}")
-                break
-        
+
         # 用 stock_query 获取实时行情
-        from stock_query import get_stock_query
-        sq = get_stock_query()
+        try:
+            from stock_query import get_stock_query
+            sq = get_stock_query()
+        except ImportError:
+            logger.error("[spot] stock_query 不可用")
+            return []
+
         # 构造代码格式
         formatted = []
         for c in codes:
@@ -113,7 +101,7 @@ class AdataAdvisor:
                 formatted.append(f'sh{c}')
             else:
                 formatted.append(f'sz{c}')
-        
+
         # 分批获取
         for i in range(0, len(formatted), 30):
             batch = formatted[i:i+30]
@@ -127,7 +115,7 @@ class AdataAdvisor:
                     turnover_rate = q.get('turnover_rate', 0)
                     volume = q.get('volume', 0)
                     pe = q.get('pe', 0)
-                    
+
                     # 排除条件
                     if price <= 0 or not name:
                         continue
@@ -137,7 +125,7 @@ class AdataAdvisor:
                         continue
                     if turnover_rate < 0.5:  # 排除成交量极低的
                         continue
-                    
+
                     results.append({
                         'code': code,
                         'name': name,
@@ -150,7 +138,7 @@ class AdataAdvisor:
                 time.sleep(0.1)
             except Exception as e:
                 logger.debug(f"[spot] 获取失败: {e}")
-        
+
         logger.info(f"[spot] 有效行情: {len(results)} 只")
         return results
     
@@ -234,6 +222,19 @@ class AdataAdvisor:
             logger.debug(f"[capital] {code} 资金流向失败: {e}")
             return {}
     
+    def _get_stock_factors(self, code: str) -> Dict:
+        """并行获取技术面+资金面"""
+        def _tech():
+            return self.get_kline_and_tech(code)
+        def _capital():
+            return self.get_capital(code)
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            ft = executor.submit(_tech)
+            fc = executor.submit(_capital)
+            tech = ft.result()
+            capital = fc.result()
+        return tech, capital
+
     def screen(self, top_n: int = 30) -> List[Dict]:
         """全市场筛选"""
         if not self.available:
@@ -255,16 +256,14 @@ class AdataAdvisor:
         candidates = [s for s in spot_data if 3 <= s['change_pct'] <= 8]
         logger.info(f"[screen] 涨幅 3-8%: {len(candidates)} 只")
         
-        # 4. 技术面 + 资金面筛选
+        # 4. 技术面 + 资金面筛选（并行获取）
         screened = []
         for stock in candidates[:100]:  # 只处理前100只，避免太慢
             code = stock['code']
-            
-            tech = self.get_kline_and_tech(code)
+
+            tech, capital = self._get_stock_factors(code)
             if not tech.get('kline_ok'):
                 continue
-            
-            capital = self.get_capital(code)
             
             # 技术确认
             tech_pass = (
@@ -412,13 +411,20 @@ def main():
     # ntfy 通知
     try:
         import requests
-        os.environ['http_proxy'] = 'http://127.0.0.1:18080'
-        os.environ['https_proxy'] = 'http://127.0.0.1:18080'
+        # 从环境变量读代理，不硬编码
+        proxies = {}
+        http_proxy = os.environ.get("http_proxy", os.environ.get("HTTP_PROXY", ""))
+        https_proxy = os.environ.get("https_proxy", os.environ.get("HTTPS_PROXY", ""))
+        if http_proxy:
+            proxies['http'] = http_proxy
+        if https_proxy:
+            proxies['https'] = https_proxy
         r = requests.post(
             'https://ntfy.sh/ace-stock-advisor',
             data=f'adata荐股完成: {today}'.encode('utf-8'),
             headers={'Title': 'A股荐股', 'Priority': 'high', 'Tags': 'chart_with_upwards_trend'},
-            timeout=10
+            timeout=10,
+            proxies=proxies or None
         )
         logger.info(f"ntfy: {r.status_code}")
     except Exception as e:

@@ -231,17 +231,33 @@ class RedBlueAuditor:
             "audit_time": datetime.now().isoformat(),
         }
 
-    def audit_stocks(self, stocks: list) -> list:
-        """审计多只股票"""
-        logger.info(f"[AUDIT] 开始审计 {len(stocks)} 只股票")
+    def audit_stocks(self, stocks: list, max_workers: int = 3) -> list:
+        """并行审计多只股票（控制并发数避免 API 限速）"""
+        logger.info(f"[AUDIT] 开始并行审计 {len(stocks)} 只股票 (workers={max_workers})")
         results = []
-        for stock in stocks:
-            code = stock.get("code", "")
-            name = stock.get("name", "")
-            if not code:
-                continue
-            result = self._debate(code, name)
-            results.append(result)
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_to_stock = {
+                executor.submit(self._debate, s.get("code", ""), s.get("name", "")): s
+                for s in stocks
+            }
+            for future in as_completed(future_to_stock):
+                stock = future_to_stock[future]
+                try:
+                    result = future.result()
+                    results.append(result)
+                    logger.info(f"[AUDIT] {stock.get('code')} {stock.get('name')} done (confidence={result['confidence']})")
+                except Exception as e:
+                    logger.error(f"[AUDIT] {stock.get('code')} exception: {e}")
+                    results.append({
+                        "stock_code": stock.get("code", ""),
+                        "stock_name": stock.get("name", ""),
+                        "error": str(e),
+                        "confidence": 0,
+                        "risk_mark": "UNKNOWN",
+                    })
+        # 按原始输入顺序排序
+        code_order = {s.get("code", ""): i for i, s in enumerate(stocks)}
+        results.sort(key=lambda r: code_order.get(r.get("stock_code", ""), 999))
         return results
 
     def generate_report(self, results: list) -> str:

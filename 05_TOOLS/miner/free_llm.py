@@ -13,6 +13,7 @@ ACE Runtime — 免费 LLM 直连库
 import os
 import json
 import time
+import threading
 import urllib.request
 import logging
 from typing import Optional
@@ -22,8 +23,9 @@ log = logging.getLogger("ACE.FreeLLM")
 # 渠道优先级：GLM(无限) > NIM(16key) > GitHub(限流) > Ollama(本地)
 CHANNELS = ["glm", "nim", "github", "ollama"]
 
-# NIM key 轮询状态
+# NIM key 轮询状态（线程安全）
 _nim_key_index = 0
+_nim_key_lock = threading.Lock()
 
 # 代理设置：GLM是国内API不需要代理，其他海外API需要
 _PROXY = os.environ.get("HTTPS_PROXY", os.environ.get("https_proxy", ""))
@@ -58,14 +60,15 @@ def _urlopen(req, timeout: int = 60):
 
 
 def _get_nim_key() -> str:
-    """轮询获取 NIM key"""
+    """轮询获取 NIM key（线程安全）"""
     global _nim_key_index
     keys = [os.environ.get(f"NIM_KEY_{i}", "") for i in range(1, 17)]
     keys = [k for k in keys if k]
     if not keys:
         return ""
-    key = keys[_nim_key_index % len(keys)]
-    _nim_key_index += 1
+    with _nim_key_lock:
+        key = keys[_nim_key_index % len(keys)]
+        _nim_key_index += 1
     return key
 
 

@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-18",
   "governor": "zhang",
   "categories": {
     "kernel": {
-      "count": 2,
+      "count": 4,
       "assets": [
         {
           "id": "K-001",
@@ -21,11 +21,27 @@
           "source": "05_TOOLS/advisor/stock_query.py",
           "added": "2026-07-10",
           "status": "active"
+        },
+        {
+          "id": "K-003",
+          "name": "task_router",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/task_router.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "K-004",
+          "name": "model_router",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/model_router.py",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     },
     "blueprint": {
-      "count": 3,
+      "count": 18,
       "assets": [
         {
           "id": "B-001",
@@ -50,11 +66,131 @@
           "source": "05_TOOLS/signals/signal_discovery_a.py",
           "added": "2026-07-13",
           "status": "active"
+        },
+        {
+          "id": "B-004",
+          "name": "tg_download_r1_files",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/tg_download_r1_files.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-005",
+          "name": "discovery_scan",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/discovery_scan.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-006",
+          "name": "civilization_index_sync",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/civilization_index_sync.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-007",
+          "name": "tg_civilization_scanner",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/tg_civilization_scanner.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-008",
+          "name": "civilization_daily",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/civilization_daily.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-009",
+          "name": "signal_discovery",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/signals/signal_discovery.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-010",
+          "name": "README",
+          "desc": "04_PROTOCOLS - 协议层",
+          "source": "04_PROTOCOLS/README.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-011",
+          "name": "first_day",
+          "desc": "First Day Protocol — 新 AI 第一天行动指南",
+          "source": "04_PROTOCOLS/first_day.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-012",
+          "name": "mission_protocol",
+          "desc": "自动发现的 blueprint 资产",
+          "source": "04_PROTOCOLS/mission_protocol.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-013",
+          "name": "environment_first",
+          "desc": "!/usr/bin/env python3",
+          "source": "04_PROTOCOLS/environment_first.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-014",
+          "name": "ops_000_asset_first",
+          "desc": "!/usr/bin/env python3",
+          "source": "04_PROTOCOLS/ops_000_asset_first.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-015",
+          "name": "repository",
+          "desc": "自动发现的 blueprint 资产",
+          "source": "04_PROTOCOLS/repository.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-016",
+          "name": "evidence_graph",
+          "desc": "自动发现的 blueprint 资产",
+          "source": "04_PROTOCOLS/evidence_graph.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-017",
+          "name": "RUNTIME_BOUNDARY",
+          "desc": "RUNTIME_BOUNDARY.md — Runtime 与 Civilization 职责边界",
+          "source": "06_RUNTIME/RUNTIME_BOUNDARY.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "B-018",
+          "name": "tg_pusher",
+          "desc": "!/usr/bin/env python3",
+          "source": "06_RUNTIME/connectors/tg_pusher.py",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     },
     "protocol": {
-      "count": 3,
+      "count": 12,
       "assets": [
         {
           "id": "P-001",
@@ -79,11 +215,83 @@
           "source": "00_ROOT/CIVILIZATION_CATEGORIES.md",
           "added": "2026-07-13",
           "status": "active"
+        },
+        {
+          "id": "P-004",
+          "name": "GOVERNANCE",
+          "desc": "Governance v1",
+          "source": "00_ROOT/GOVERNANCE.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-005",
+          "name": "CONTRACT",
+          "desc": "CONTRACT-001: Runtime-Civilization Interface Contract",
+          "source": "04_PROTOCOLS/CONTRACT.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-006",
+          "name": "recovery_protocol",
+          "desc": "!/usr/bin/env python3",
+          "source": "04_PROTOCOLS/recovery_protocol.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-007",
+          "name": "civilization_contract",
+          "desc": "自动发现的 protocol 资产",
+          "source": "04_PROTOCOLS/civilization_contract.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-008",
+          "name": "RECOVERY_CHECKLIST",
+          "desc": "恢复检查清单",
+          "source": "06_RUNTIME/RECOVERY_CHECKLIST.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-009",
+          "name": "CRONTAB",
+          "desc": "CRONTAB 配置说明",
+          "source": "06_RUNTIME/CRONTAB.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-010",
+          "name": "RECOVERY_PLAN",
+          "desc": "RECOVERY_PLAN.md — 恢复验证计划",
+          "source": "06_RUNTIME/RECOVERY_PLAN.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-011",
+          "name": "PROTOCOLS",
+          "desc": "双Agent协作协议",
+          "source": "01_AGENTS/PROTOCOLS.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "P-012",
+          "name": "PROTOCOLS",
+          "desc": "双Agent协作协议",
+          "source": "01_AGENTS/xiaofengzi/PROTOCOLS.md",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     },
     "constraint": {
-      "count": 3,
+      "count": 13,
       "assets": [
         {
           "id": "C-001",
@@ -108,11 +316,91 @@
           "source": "00_ROOT/CIVILIZATION_CATEGORIES.md",
           "added": "2026-07-13",
           "status": "active"
+        },
+        {
+          "id": "C-004",
+          "name": "fitness_tracker",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/signals/fitness_tracker.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-005",
+          "name": "constraint_validator",
+          "desc": "自动发现的 constraint 资产",
+          "source": "04_PROTOCOLS/constraint_validator.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-006",
+          "name": "CONSTRAINT_LEDGER",
+          "desc": "Constraint Ledger | 矿场v5 约束账本",
+          "source": "06_RUNTIME/CONSTRAINT_LEDGER.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-007",
+          "name": "constraint_proposer",
+          "desc": "!/usr/bin/env python3",
+          "source": "06_RUNTIME/constraint_proposer.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-008",
+          "name": "constraint_injector",
+          "desc": "!/usr/bin/env python3",
+          "source": "06_RUNTIME/constraint_injector.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-009",
+          "name": "deploy_constraints",
+          "desc": "!/usr/bin/env python3",
+          "source": "06_RUNTIME/deploy_constraints.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-010",
+          "name": "sync_constraints",
+          "desc": "!/usr/bin/env python3",
+          "source": "06_RUNTIME/sync_constraints.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-011",
+          "name": "USER",
+          "desc": "基本信息",
+          "source": "01_AGENTS/USER.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-012",
+          "name": "USER",
+          "desc": "基本信息",
+          "source": "01_AGENTS/xiaofengzi/USER.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "C-013",
+          "name": "tasks",
+          "desc": "研究域任务清单",
+          "source": "01_AGENTS/xiaofengzi/research/tasks.md",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     },
     "experience": {
-      "count": 5,
+      "count": 11,
       "assets": [
         {
           "id": "E-001",
@@ -120,7 +408,7 @@
           "desc": "sandbox 环境重置会杀死 cron 和 Gateway 进程，需在 recovery 中加入 L1 自动修复",
           "source": "多次验证",
           "added": "2026-07-11",
-          "status": "active"
+          "status": "missing"
         },
         {
           "id": "E-002",
@@ -136,7 +424,7 @@
           "desc": "adata 的 EastMoney 源在云端 sandbox 被墙，但腾讯源自动 fallback 可用",
           "source": "多次验证",
           "added": "2026-07-13",
-          "status": "active"
+          "status": "missing"
         },
         {
           "id": "E-004",
@@ -152,12 +440,60 @@
           "desc": "GitHub PAT 若无 repo 写权限，git push 会 403，需使用正确 scope 的 PAT",
           "source": "多次验证",
           "added": "2026-07-13",
+          "status": "missing"
+        },
+        {
+          "id": "E-006",
+          "name": "task_router_v2",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/miner/task_router_v2.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "E-007",
+          "name": "miner_cron",
+          "desc": "!/bin/bash",
+          "source": "05_TOOLS/miner/miner_cron.sh",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "E-008",
+          "name": "experience_engine",
+          "desc": "!/usr/bin/env python3",
+          "source": "05_TOOLS/memory/experience_engine.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "E-009",
+          "name": "civilization_map",
+          "desc": "!/usr/bin/env python3",
+          "source": "04_PROTOCOLS/civilization_map.py",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "E-010",
+          "name": "PROFILE",
+          "desc": "小疯子（研究域）",
+          "source": "01_AGENTS/PROFILE.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "E-011",
+          "name": "PROFILE",
+          "desc": "小疯子（研究域）",
+          "source": "01_AGENTS/xiaofengzi/PROFILE.md",
+          "added": "2026-07-18",
           "status": "active"
         }
       ]
     },
     "identity": {
-      "count": 2,
+      "count": 7,
       "assets": [
         {
           "id": "I-001",
@@ -174,18 +510,58 @@
           "source": "00_ROOT/ARCHITECTURE.md",
           "added": "2026-06-16",
           "status": "active"
+        },
+        {
+          "id": "I-003",
+          "name": "MANIFESTO",
+          "desc": "矿场宣言 — MANIFESTO.md",
+          "source": "00_ROOT/MANIFESTO.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "I-004",
+          "name": "SOUL",
+          "desc": "自动发现的 identity 资产",
+          "source": "01_AGENTS/SOUL.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "I-005",
+          "name": "SOUL",
+          "desc": "自动发现的 identity 资产",
+          "source": "01_AGENTS/xiaofengzi/SOUL.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "I-006",
+          "name": "principles",
+          "desc": "研究域原则库（Principles）",
+          "source": "01_AGENTS/xiaofengzi/research/principles.md",
+          "added": "2026-07-18",
+          "status": "active"
+        },
+        {
+          "id": "I-007",
+          "name": "SOUL",
+          "desc": "自动发现的 identity 资产",
+          "source": "01_AGENTS/fengzi/SOUL.md",
+          "added": "2026-07-18",
+          "status": "active"
         }
       ]
     }
   },
   "score": {
-    "kernel": 10,
-    "blueprint": 9,
-    "protocol": 9,
-    "constraint": 6,
-    "experience": 10,
-    "identity": 8,
-    "total": 52
+    "kernel": 20,
+    "blueprint": 72,
+    "protocol": 36,
+    "constraint": 26,
+    "experience": 11,
+    "identity": 56,
+    "total": 221
   },
   "missions": {
     "active": [],

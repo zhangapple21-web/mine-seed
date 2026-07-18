@@ -21,6 +21,7 @@ import logging
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # 日志
 LOG_DIR = Path(__file__).parent / ".." / "mine_output" / "civilizer"
@@ -72,28 +73,35 @@ class CivilizationDaily:
         return {"version": "1.0", "categories": {}, "score": {}}
 
     def step1_health_check(self) -> dict:
-        """① Runtime 健康检查"""
-        logger.info("[Step 1] Runtime Health Check")
+        """① Runtime 健康检查（并行化）"""
+        logger.info("[Step 1] Runtime Health Check (parallel)")
         health = {
             "timestamp": datetime.now().isoformat(),
             "checks": {}
         }
 
-        # 1.1 free_llm API 检查
+        # 1.1 free_llm API 检查（并行 ping 3 个渠道）
         sys.path.insert(0, str(MINE_SEED / "05_TOOLS" / "miner"))
         try:
             from free_llm import call
-            for ch in ["glm", "nim", "github"]:
+
+            def _ping_channel(ch):
                 try:
                     t0 = time.time()
                     r = call("ping", max_tokens=5, prefer=ch)
-                    health["checks"][ch] = {
+                    return ch, {
                         "status": "ALIVE",
                         "latency": round(time.time() - t0, 2),
                         "model": r.get("model", "unknown")
                     }
                 except Exception as e:
-                    health["checks"][ch] = {"status": "DEAD", "error": str(e)[:80]}
+                    return ch, {"status": "DEAD", "error": str(e)[:80]}
+
+            with ThreadPoolExecutor(max_workers=3) as executor:
+                futures = {executor.submit(_ping_channel, ch): ch for ch in ["glm", "nim", "github"]}
+                for future in as_completed(futures):
+                    ch, result = future.result()
+                    health["checks"][ch] = result
         except Exception as e:
             health["checks"]["free_llm"] = {"status": "ERROR", "error": str(e)[:80]}
 
