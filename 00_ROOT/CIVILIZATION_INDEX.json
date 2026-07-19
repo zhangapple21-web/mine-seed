@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-18",
+  "last_updated": "2026-07-19",
   "governor": "zhang",
   "categories": {
     "kernel": {
@@ -41,7 +41,7 @@
       ]
     },
     "blueprint": {
-      "count": 15,
+      "count": 18,
       "assets": [
         {
           "id": "B-001",
@@ -162,11 +162,35 @@
           "source": "06_RUNTIME/connectors/tg_pusher.py",
           "added": "2026-07-18",
           "status": "active"
+        },
+        {
+          "id": "B-019",
+          "name": "test_signal_candidate_pipeline",
+          "desc": "板块A' 单元测试 — 验证 Replay+Shadow 独立运行、门控、状态转换",
+          "source": "04_PROTOCOLS/test_signal_candidate_pipeline.py",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "B-020",
+          "name": "PUBLICATION_PRINCIPLE",
+          "desc": "Publication Principle",
+          "source": "04_PROTOCOLS/PUBLICATION_PRINCIPLE.md",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "B-021",
+          "name": "MISSION_ADVISOR_SUMMARY",
+          "desc": "AUM-MISSION-ADVISOR-001 — 板块A' 产出汇总",
+          "source": "04_PROTOCOLS/MISSION_ADVISOR_SUMMARY.md",
+          "added": "2026-07-19",
+          "status": "active"
         }
       ]
     },
     "protocol": {
-      "count": 15,
+      "count": 17,
       "assets": [
         {
           "id": "P-001",
@@ -287,11 +311,27 @@
           "source": "04_PROTOCOLS/evidence_graph.py",
           "added": "2026-07-18",
           "status": "active"
+        },
+        {
+          "id": "P-016",
+          "name": "governance_dry_run",
+          "desc": "Event-Sourced Governance — Minimal Dry Run",
+          "source": "04_PROTOCOLS/governance_dry_run.md",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "P-017",
+          "name": "governance_state_machine",
+          "desc": "Governance State Machine Protocol",
+          "source": "04_PROTOCOLS/governance_state_machine.md",
+          "added": "2026-07-19",
+          "status": "active"
         }
       ]
     },
     "constraint": {
-      "count": 13,
+      "count": 16,
       "assets": [
         {
           "id": "C-001",
@@ -396,11 +436,35 @@
           "source": "01_AGENTS/xiaofengzi/research/tasks.md",
           "added": "2026-07-18",
           "status": "active"
+        },
+        {
+          "id": "C-014",
+          "name": "law_discovery",
+          "desc": "Law Discovery Protocol - 规律发现协议",
+          "source": "04_PROTOCOLS/law_discovery.py",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "C-015",
+          "name": "E2C_BOUNDARY_VERIFICATION",
+          "desc": "E→C Boundary Verification — 板块四' 验证",
+          "source": "04_PROTOCOLS/E2C_BOUNDARY_VERIFICATION.md",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "C-016",
+          "name": "GOAL_VALIDATION",
+          "desc": "Goal Validation Report — 荐股系统优化目标",
+          "source": "04_PROTOCOLS/GOAL_VALIDATION.md",
+          "added": "2026-07-19",
+          "status": "active"
         }
       ]
     },
     "experience": {
-      "count": 11,
+      "count": 13,
       "assets": [
         {
           "id": "E-001",
@@ -489,6 +553,22 @@
           "source": "01_AGENTS/xiaofengzi/PROFILE.md",
           "added": "2026-07-18",
           "status": "active"
+        },
+        {
+          "id": "E-012",
+          "name": "distillation_factory",
+          "desc": "Distillation Factory（孟婆）— 主动遗忘机制",
+          "source": "04_PROTOCOLS/distillation_factory.py",
+          "added": "2026-07-19",
+          "status": "active"
+        },
+        {
+          "id": "E-013",
+          "name": "e2c_closure",
+          "desc": "E→C Closure Protocol — 经验到约束的闭环",
+          "source": "04_PROTOCOLS/e2c_closure.py",
+          "added": "2026-07-19",
+          "status": "active"
         }
       ]
     },
@@ -556,12 +636,12 @@
   },
   "score": {
     "kernel": 20,
-    "blueprint": 60,
-    "protocol": 45,
-    "constraint": 26,
-    "experience": 11,
+    "blueprint": 72,
+    "protocol": 51,
+    "constraint": 32,
+    "experience": 13,
     "identity": 56,
-    "total": 218
+    "total": 244
   },
   "missions": {
     "active": [],

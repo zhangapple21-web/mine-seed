@@ -1,0 +1,30 @@
+[
+  {
+    "type": "momentum_breakout",
+    "direction": "看多",
+    "confidence": 85,
+    "sector": "半导体",
+    "reason": "价格突破20日高点，成交量放大1.5倍，MACD金叉",
+    "stocks": [
+      "603986 兆易创新",
+      "688012 中微公司"
+    ],
+    "discover_date": "2026-07-19",
+    "source": "GLM/glm-4-flash",
+    "discover_time": "10:38:26"
+  },
+  {
+    "type": "mean_reversion",
+    "direction": "看多",
+    "confidence": 75,
+    "sector": "消费电子",
+    "reason": "股价超跌，偏离MA20 > -8%，RSI < 30，缩量下跌",
+    "stocks": [
+      "002241 歌尔股份",
+      "300024 机器人"
+    ],
+    "discover_date": "2026-07-19",
+    "source": "GLM/glm-4-flash",
+    "discover_time": "10:38:26"
+  }
+]
