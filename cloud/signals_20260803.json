@@ -1,0 +1,30 @@
+[
+  {
+    "type": "momentum_breakout",
+    "direction": "看多",
+    "confidence": 85,
+    "sector": "科技",
+    "reason": "价格突破20日高点，成交量放大1.5倍，MACD金叉",
+    "stocks": [
+      "300059 东方财富",
+      "688981 中微半导体"
+    ],
+    "discover_date": "2026-08-03",
+    "source": "GLM/glm-4-flash",
+    "discover_time": "01:21:56"
+  },
+  {
+    "type": "mean_reversion",
+    "direction": "看多",
+    "confidence": 72,
+    "sector": "金融",
+    "reason": "股价偏离MA20 > -8%，RSI(14) < 30，缩量下跌",
+    "stocks": [
+      "601939 建设银行",
+      "600016 民生银行"
+    ],
+    "discover_date": "2026-08-03",
+    "source": "GLM/glm-4-flash",
+    "discover_time": "01:21:56"
+  }
+]
