@@ -164,3 +164,9 @@ _chip_check.py
 
 # === Raw chat archive (contains sensitive data, should be distilled) ===
 03_DATA/raw_sources/gpt_chat_archive/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
