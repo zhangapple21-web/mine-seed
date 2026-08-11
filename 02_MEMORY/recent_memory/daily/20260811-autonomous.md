@@ -103,7 +103,7 @@
 3. **claw-soul 仓库缺失**: `/workspace/fengzi-repos/claw-soul/` 不存在，发现扫描仅覆盖 mine-seed。
 4. **adata 未安装**: 金融数据包在本地环境，云端不可用。
 5. **3 个缺失资产**: 索引同步发现 3 个 source 文件不存在，与 0810 一致，无新增缺失。
-6. **146 个潜在新资产**: 因 `git clone` 操作导致所有文件 mtime 为今日，被文明日报误判为“今日修改”。实际为已有文件，非真正新资产。较 0810 增加 1 个（本次巡检新增的 signals_20260811 文件）。
+6. **146 个潜在新资产**: 因 `git clone` 操作导致所有文件 mtime 为今日，被文明日报误判为"今日修改"。实际为已有文件，非真正新资产。较 0810 增加 1 个（本次巡检新增的 signals_20260811 文件）。
 7. **462 个未索引项**: 与 0810 完全一致，无变化。
 
 ---
@@ -144,14 +144,14 @@
 
 | 文件 | 类型 | 状态 |
 |------|------|------|
-| `02_MEMORY/discovery_queue/discovery_20260811.json` | 发现扫描 | ✅ 已推送 |
-| `02_MEMORY/discovery_queue/discovery_20260811.md` | 发现扫描 | ✅ 已推送 |
+| `02_MEMORY/discovery_queue/discovery_20260811.json` | 发现扫描 | 待推送 |
+| `02_MEMORY/discovery_queue/discovery_20260811.md` | 发现扫描 | 待推送 |
 | `02_MEMORY/recent_memory/admission/admission_20260811.md` | 准入审查 | 待推送 |
 | `02_MEMORY/recent_memory/daily/civilization_daily_20260811.md` | 文明日报 | 待推送 |
-| `02_MEMORY/recent_memory/daily/index_sync_20260811.md` | 索引同步报告 | ✅ 已推送 |
-| `02_MEMORY/recent_memory/daily/20260811-autonomous.md` | 巡检日报 | ✅ 已推送 |
-| `05_TOOLS/mine_output/signals/signals_20260811.json` | 信号(空) | ✅ 已推送 |
-| `05_TOOLS/mine_output/signals/signals_20260811.md` | 信号(空) | ✅ 已推送 |
+| `02_MEMORY/recent_memory/daily/index_sync_20260811.md` | 索引同步报告 | 待推送 |
+| `02_MEMORY/recent_memory/daily/20260811-autonomous.md` | 巡检日报 | 待推送 |
+| `05_TOOLS/mine_output/signals/signals_20260811.json` | 信号(空) | 待推送 |
+| `05_TOOLS/mine_output/signals/signals_20260811.md` | 信号(空) | 待推送 |
 | `cloud/signals_20260811.json` | 信号(空) | gitignored |
 | `cloud/signals_20260811.md` | 信号(空) | gitignored |
 | `05_TOOLS/miner/free_api.env` | 环境配置 | gitignored |
