@@ -1,0 +1,43 @@
+{
+  "scan_date": "2026-08-16T01:08:06.842825",
+  "mission_id": "AUM-MISSION-DAILY-001",
+  "stop_condition": "只记录不实现，不超出已知边界",
+  "findings": [
+    {
+      "repo": "mine-seed",
+      "path": "/workspace/fengzi-repos/mine-seed",
+      "unindexed_dirs": [
+        "ace", "evidence", "03_INDEX", "02_ARCHITECTURE", "knowledge", "miner", "governance", "insights", "基础设定", "lexicon", "CONSTRAINTS", "principles", "failure_analysis", "05_REPORTS", "xiaofengzi", "router", "memory_index", "memory", "recent_memory", "signal_validation", "assets", "reality_governance_v1", "fragments", "03_agent_profile", "eco_layer", "world_models", "models", "references", "simlab", "04_zrok", "seeds", "worker_profiling", "slices", "02_miner_config", "05_system", "project", "research", "fengzi", "outbound", "drafts", "signals", "01_credentials", "isomorphism_detection", "modules", "protocols", "evolution_engine", "excavations", "r1_archaeology"
+      ],
+      "unindexed_files": [
+        ".gitignore", "register_task.ps1", "CAPABILITY_FINAL.md", "BOOTSTRAP_FLOW.md", "ADR-001_REPOSITORY_IS_TRUTH.md", "FAILURE_INJECTION_REPORT.md", "MCP_VALIDATION_REPORT.md", "BOOTSTRAP_VERIFICATION.md", "SETUP_GUIDE.md", "INVARIANT_FINAL.md", "start_memory_mcp.sh", "DECISION_RECORD_evolution_property.md", "MEMORY_MCP_INTEGRATION.md", "ANALYSIS_continuity_upgrade.md", "LAYER_MAP.md", "run_heartbeat.ps1", "REPOSITORY_SYNC_RULE.md", "start_memory_mcp.ps1"
+      ],
+      "orphan_files": []
+    },
+    {
+      "repo": "claw-soul",
+      "path": "/workspace/fengzi-repos/claw-soul",
+      "unindexed_dirs": [],
+      "unindexed_files": [],
+      "orphan_files": [],
+      "error": "路径不存在"
+    }
+  ],
+  "next_actions": [
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "ace", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "evidence", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "03_INDEX", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "02_ARCHITECTURE", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "knowledge", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "miner", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "governance", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "insights", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "基础设定", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_dir", "repo": "mine-seed", "path": "lexicon", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_file", "repo": "mine-seed", "path": ".gitignore", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_file", "repo": "mine-seed", "path": "register_task.ps1", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_file", "repo": "mine-seed", "path": "CAPABILITY_FINAL.md", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_file", "repo": "mine-seed", "path": "BOOTSTRAP_FLOW.md", "reason": "未被文明索引覆盖"},
+    {"type": "investigate_file", "repo": "mine-seed", "path": "ADR-001_REPOSITORY_IS_TRUTH.md", "reason": "未被文明索引覆盖"}
+  ]
+}
