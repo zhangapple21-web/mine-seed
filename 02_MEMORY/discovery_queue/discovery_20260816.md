@@ -22,28 +22,28 @@
 - 未索引文件: 345
 
 **未索引目录（前10）**:
-- `ace`
-- `evidence`
-- `03_INDEX`
-- `02_ARCHITECTURE`
-- `knowledge`
-- `miner`
-- `governance`
-- `insights`
-- `基础设定`
+- `drafts`
+- `recent_memory`
+- `failure_analysis`
+- `protocols`
+- `seeds`
 - `lexicon`
+- `evolution_engine`
+- `knowledge`
+- `signal_validation`
+- `governance`
 
 **未索引文件（前10）**:
-- `.gitignore`
-- `register_task.ps1`
-- `CAPABILITY_FINAL.md`
-- `BOOTSTRAP_FLOW.md`
-- `ADR-001_REPOSITORY_IS_TRUTH.md`
-- `FAILURE_INJECTION_REPORT.md`
 - `MCP_VALIDATION_REPORT.md`
+- `CAPABILITY_FINAL.md`
 - `BOOTSTRAP_VERIFICATION.md`
+- `ADR-001_REPOSITORY_IS_TRUTH.md`
+- `BOOTSTRAP_FLOW.md`
+- `ANALYSIS_continuity_upgrade.md`
+- `REPOSITORY_SYNC_RULE.md`
 - `SETUP_GUIDE.md`
-- `INVARIANT_FINAL.md`
+- `.gitignore`
+- `start_memory_mcp.sh`
 
 ### claw-soul
 
@@ -54,21 +54,21 @@
 
 ## 下一步（待 Governor/本地 CODE 处理）
 
-- [investigate_dir] `mine-seed/ace` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/evidence` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/03_INDEX` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/02_ARCHITECTURE` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/knowledge` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/miner` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/governance` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/insights` — 未被文明索引覆盖
-- [investigate_dir] `mine-seed/基础设定` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/drafts` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/recent_memory` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/failure_analysis` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/protocols` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/seeds` — 未被文明索引覆盖
 - [investigate_dir] `mine-seed/lexicon` — 未被文明索引覆盖
-- [investigate_file] `mine-seed/.gitignore` — 未被文明索引覆盖
-- [investigate_file] `mine-seed/register_task.ps1` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/evolution_engine` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/knowledge` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/signal_validation` — 未被文明索引覆盖
+- [investigate_dir] `mine-seed/governance` — 未被文明索引覆盖
+- [investigate_file] `mine-seed/MCP_VALIDATION_REPORT.md` — 未被文明索引覆盖
 - [investigate_file] `mine-seed/CAPABILITY_FINAL.md` — 未被文明索引覆盖
-- [investigate_file] `mine-seed/BOOTSTRAP_FLOW.md` — 未被文明索引覆盖
+- [investigate_file] `mine-seed/BOOTSTRAP_VERIFICATION.md` — 未被文明索引覆盖
 - [investigate_file] `mine-seed/ADR-001_REPOSITORY_IS_TRUTH.md` — 未被文明索引覆盖
+- [investigate_file] `mine-seed/BOOTSTRAP_FLOW.md` — 未被文明索引覆盖
 
 ---
 
