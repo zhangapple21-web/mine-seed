@@ -645,8 +645,14 @@ def _push_heartbeat_summary(report: dict, log) -> dict:
             results.append({"type": "heartbeat", "status": "sent"})
             log.info(f"TG heartbeat sent (important)")
         else:
-            results.append({"type": "heartbeat", "status": "failed", "error": msg_result.get("description")})
-            log.error(f"TG heartbeat failed: {msg_result.get('description')}")
+            plain_result = pusher.send_message(_strip_telegram_html(summary_html), parse_mode=None)
+            if plain_result.get("ok"):
+                results.append({"type": "heartbeat", "status": "sent", "format": "plain_fallback"})
+                log.info("TG heartbeat sent with plain-text fallback")
+            else:
+                error = plain_result.get("description") or plain_result.get("error") or plain_result.get("error_code") or msg_result.get("description") or msg_result.get("error") or msg_result.get("error_code") or "unknown Telegram API failure"
+                results.append({"type": "heartbeat", "status": "failed", "error": error})
+                log.error(f"TG heartbeat failed: {error}")
     else:
         results.append({"type": "heartbeat", "status": "silent", "reason": "nothing important to report"})
         log.info(f"TG heartbeat: silent (nothing important)")
@@ -658,6 +664,10 @@ def _push_heartbeat_summary(report: dict, log) -> dict:
 
     return {"status": "completed", "results": results, "chat_id": chat_id}
 
+
+def _strip_telegram_html(text: str) -> str:
+    import re
+    return re.sub(r"<[^>]+>", "", text)
 
 def _should_push_heartbeat(steps: dict) -> bool:
     """判断这次心跳是否值得推送。

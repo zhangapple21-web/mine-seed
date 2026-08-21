@@ -59,9 +59,10 @@ class TGPusher:
         data = {
             "chat_id": self.chat_id,
             "text": text,
-            "parse_mode": parse_mode,
             "disable_web_page_preview": True,
         }
+        if parse_mode:
+            data["parse_mode"] = parse_mode
 
         try:
             req = urllib.request.Request(

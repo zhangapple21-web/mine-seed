@@ -33,7 +33,9 @@ def load_env():
 load_env()
 
 GITHUB_PAT = os.environ.get("GITHUB_PAT", "")
-GITHUB_BASE = "https://models.inference.ai.azure.com"
+GITHUB_KEY = os.environ.get("GH_MODELS_KEY", "") or GITHUB_PAT
+GITHUB_BASE = os.environ.get("GH_MODELS_BASE", "https://models.github.ai/inference")
+GITHUB_MODEL = os.environ.get("GH_MODELS_MODEL", "openai/gpt-4.1")
 ZHIPU_KEY = os.environ.get("ZHIPU_KEY", "")
 ZHIPU_BASE = "https://open.bigmodel.cn/api/paas/v4"
 OPENROUTER_KEY = os.environ.get("OPENROUTER_KEY", "")
@@ -54,7 +56,7 @@ MODEL_FALLBACK_CHAIN = [
     ("ollama", OLLAMA_MODEL),
     ("apiyi", "gpt-4o-mini"),
     ("hf", "openai/gpt-oss-120b"),
-    ("github", "gpt-4o-mini"),
+    ("github", GITHUB_MODEL),
     ("sixfinger", "claude-haiku-4-5"),
     ("zhipu", "glm-4-flash"),
     ("openrouter", "meta-llama/llama-3.3-70b-instruct:free"),
@@ -101,10 +103,12 @@ def check_ollama_available() -> bool:
         return False
 
 
-def call_github_models(prompt, model="gpt-4o-mini", max_tokens=500, temperature=0.7):
-    if not GITHUB_PAT: return {"error": "GITHUB_PAT not set", "source": "github"}
+def call_github_models(prompt, model=None, max_tokens=500, temperature=0.7):
+    if not GITHUB_KEY: return {"error": "GH_MODELS_KEY or GITHUB_PAT not set", "source": "github"}
+    model = model or GITHUB_MODEL
     data = {"model": model, "messages": [{"role": "user", "content": prompt}], "max_tokens": max_tokens, "temperature": temperature}
-    req = urllib.request.Request(f"{GITHUB_BASE}/chat/completions", data=json.dumps(data).encode(), headers={"Authorization": f"Bearer {GITHUB_PAT}", "Content-Type": "application/json"})
+    headers = {"Accept": "application/vnd.github+json", "Authorization": f"Bearer {GITHUB_KEY}", "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"}
+    req = urllib.request.Request(f"{GITHUB_BASE.rstrip('/')}/chat/completions", data=json.dumps(data).encode(), headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=60) as r:
             result = json.loads(r.read().decode())
