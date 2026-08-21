@@ -322,7 +322,9 @@ def call_model(prompt, max_tokens=500, temperature=0.7, prefer=None, capability=
         chain = list(MODEL_FALLBACK_CHAIN)
 
     if prefer and prefer in PROVIDERS:
-        chain = [(prefer, chain[0][1])] + [(p, m) for p, m in chain if p != prefer]
+        prefer_chain = [(p, m) for p, m in chain if p == prefer]
+        other_chain = [(p, m) for p, m in chain if p != prefer]
+        chain = prefer_chain + other_chain
 
     # 按 Health Score 排序（跳过 down 的 provider）
     def _sort_key(item):
