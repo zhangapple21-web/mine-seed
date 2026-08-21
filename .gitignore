@@ -173,3 +173,6 @@ _chip_check.py
 03_DATA/raw_sources/gpt_chat_archive/
 
 /mine_output/
+/06_RUNTIME/windows/ace_env.ps1
+/05_system/zrok_env.json
+/03_DATA/superseded_archive/05_TOOLS/miner/miner_env.sh__SUPERSEDED_20260710_143027.tpl
