@@ -885,6 +885,9 @@ def _push_today_advisor(pusher, log) -> Optional[dict]:
 
     非交易日跳过荐股推送（法定节日 + 周末）。
     """
+    if os.environ.get("ACE_STOCK_ADVISOR_AUTO_PUSH", "").lower() != "true":
+        return {"type": "advisor", "status": "skipped", "reason": "auto push disabled"}
+
     from datetime import datetime, date
     from pathlib import Path
 
@@ -977,6 +980,9 @@ def _auto_trigger_stock_advisor(log) -> dict:
     解决问题：用户9:00才开机，定时任务8:15已错过。
     替代方案：heartbeat每15分钟检查一次，9:20-11:30之间如果今日未运行则自动触发。
     """
+    if os.environ.get("ACE_STOCK_ADVISOR_AUTO_RUN", "").lower() != "true":
+        return {"status": "skipped", "reason": "auto run disabled"}
+
     from pathlib import Path
     import subprocess
 

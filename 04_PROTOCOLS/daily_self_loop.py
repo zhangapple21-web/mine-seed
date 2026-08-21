@@ -299,6 +299,10 @@ def step_stock_advisor(logger: LoopLogger) -> bool:
     Heartbeat-based auto-compensation
     """
     logger.log("[6/8] Stock Advisor Check")
+
+    if os.environ.get("ACE_STOCK_ADVISOR_AUTO_RUN", "").lower() != "true":
+        logger.log("  ✓ Stock advisor auto-run disabled")
+        return True
     
     if not is_market_day():
         logger.log("  ✓ Not a market day, skipping")

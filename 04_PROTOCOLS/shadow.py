@@ -171,7 +171,7 @@ class ShadowEvaluation:
         self.registry._save()
 
         # 持久化
-        shadow_file = SHADOW_DIR / f"shadow_{candidate_id}_final_{datetime.now().strftime('%Y%m%d')}.json"
+        shadow_file = SHADOW_DIR / f"shadow_{candidate.law_id}_final_{datetime.now().strftime('%Y%m%d')}.json"
         shadow_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
         return result

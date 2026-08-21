@@ -222,12 +222,122 @@ class SmelterGate:
     失败结构 → 拆解 → 提取线 → 熔炼 → 新 Seed
     """
 
-    def __init__(self, store_path: str = "02_MEMORY/smelted"):
-        self.store_path = Path(store_path)
+    def __init__(self, store_path: str = "02_MEMORY/smelted", log_dir: Optional[str] = None):
+        self.store_path = Path(log_dir) if log_dir is not None else Path(store_path)
         self.store_path.mkdir(parents=True, exist_ok=True)
+        self.log_file = self.store_path / "smelter_gate_log.json"
         self.disassembler = FailureDisassembler()
         self.thread_extractor = ThreadExtractor()
         self.smelter = Smelter()
+
+    def _read_gate_log(self) -> List[Dict[str, Any]]:
+        if not self.log_file.exists():
+            return []
+        try:
+            with open(self.log_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data if isinstance(data, list) else []
+        except (OSError, json.JSONDecodeError):
+            return []
+
+    def get_gate_log(self) -> List[Dict[str, Any]]:
+        return self._read_gate_log()
+
+    def get_fa_mode_records(self) -> List[Dict[str, Any]]:
+        return [record for record in self._read_gate_log() if record.get("is_fa_mode") is True]
+
+    def _write_gate_log(self, record: Dict[str, Any]) -> None:
+        logs = self._read_gate_log()
+        logs.append(record)
+        with open(self.log_file, "w", encoding="utf-8") as f:
+            json.dump(logs, f, ensure_ascii=False, indent=2)
+
+    def pass_through(
+        self,
+        content: Dict[str, Any],
+        source: str,
+        is_fa_mode: bool,
+        content_type: str = "",
+        source_type: str = "",
+        metadata: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        record_id = f"gate_{int(time.time() * 1000)}_{sha256(f'{time.time_ns()}'.encode()).hexdigest()[:8]}"
+        content = content if isinstance(content, dict) else {"value": content}
+        content_hash = sha256(json.dumps(content, ensure_ascii=False, sort_keys=True, default=str).encode()).hexdigest()[:16]
+        flags: List[str] = []
+        reject_reason = ""
+        score = content.get("score")
+        feedback = content.get("feedback", "")
+
+        if not is_fa_mode:
+            action = "PASSED"
+            passed = True
+        else:
+            content_source = content.get("source", source)
+            trusted_source = isinstance(content_source, str) and bool(content_source.strip()) and content_source.strip().lower() not in {"unknown", "untrusted", "none", "null"}
+            if not trusted_source:
+                passed = False
+                reject_reason = "来源不可信"
+            elif not isinstance(feedback, str) or len(feedback.strip()) < 2:
+                passed = False
+                reject_reason = "反馈过短"
+            else:
+                high_risk_terms = ("内部消息", "必涨", "稳赚", "稳赚不赔", "内幕", "保证盈利", "无风险", "确定上涨", "确定下跌")
+                if any(term in feedback for term in high_risk_terms):
+                    passed = False
+                    reject_reason = "高风险模式"
+                else:
+                    try:
+                        numeric_score = float(score)
+                    except (TypeError, ValueError):
+                        numeric_score = None
+                    if numeric_score is not None and (numeric_score <= 10 or numeric_score >= 90):
+                        flags.append("极端评分")
+                    bullish_terms = ("偏多", "强劲", "买入", "上涨", "看涨", "持有", "关注")
+                    bearish_terms = ("偏空", "疲弱", "卖出", "下跌", "看跌", "规避", "风险较大")
+                    bullish = any(term in feedback for term in bullish_terms)
+                    bearish = any(term in feedback for term in bearish_terms)
+                    if numeric_score is not None and ((numeric_score <= 10 and bullish and not bearish) or (numeric_score >= 90 and bearish and not bullish)):
+                        passed = False
+                        reject_reason = "评分与反馈方向矛盾"
+                    else:
+                        overall_score = content.get("overall_score")
+                        try:
+                            deviation = abs(float(score) - float(overall_score))
+                        except (TypeError, ValueError):
+                            deviation = 0
+                        if overall_score is not None and deviation > 40:
+                            passed = False
+                            reject_reason = "score 与 overall_score 偏差过大"
+                        else:
+                            passed = True
+            action = "INTERCEPTED_AND_RECORDED" if passed else "REJECTED"
+
+        log_record = {
+            "record_id": record_id,
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "content_hash": content_hash,
+            "source": source,
+            "source_type": source_type,
+            "is_fa_mode": is_fa_mode,
+            "content_type": content_type,
+            "action": action,
+            "passed": passed,
+            "flags": flags,
+            "reject_reason": reject_reason,
+            "metadata": metadata or {},
+            "content": content,
+        }
+        self._write_gate_log(log_record)
+        result = {
+            "passed": passed,
+            "gate_action": action,
+            "record_id": record_id,
+            "flags": flags,
+        }
+        if reject_reason:
+            result["reject_reason"] = reject_reason
+        return result
 
     def process(self, failure: Dict, mengpo_filtered: bool = False) -> SmeltRecord:
         """
