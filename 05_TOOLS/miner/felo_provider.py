@@ -13,9 +13,29 @@ import os
 import requests
 import json
 from datetime import datetime, timezone
+from pathlib import Path
+
+
+def _load_repo_env():
+    env_file = Path(__file__).resolve().parents[2] / ".env"
+    try:
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key:
+                os.environ.setdefault(key, value)
+    except OSError:
+        pass
+
+
+_load_repo_env()
 
 FELO_API_KEY = os.getenv("FELO_API_KEY")
-FELO_BASE_URL = os.getenv("FELO_BASE_URL", "https://api.felo.ai/v1")
+FELO_BASE_URL = os.getenv("FELO_BASE_URL", "https://openapi.felo.ai")
 
 # Quota tracking
 _DAILY_BUDGET = 200
@@ -23,6 +43,28 @@ _SEARCH_COST = 15
 _CHAT_COST = 30
 _quota_file = os.path.join(os.path.dirname(__file__), "data", "felo_quota.json")
 
+
+def _format_api_error(resp):
+    code = ""
+    message = ""
+    try:
+        error = resp.json()
+        if isinstance(error, dict):
+            detail = error.get("error", error)
+            if isinstance(detail, dict):
+                code = str(detail.get("code", error.get("code", "")))[:80]
+                message = str(detail.get("message", error.get("message", "")))[:200]
+            else:
+                code = str(error.get("code", ""))[:80]
+                message = str(error.get("message", detail))[:200]
+    except (ValueError, TypeError):
+        pass
+    details = [f"status={resp.status_code}"]
+    if code:
+        details.append(f"code={code}")
+    if message:
+        details.append(f"message={message}")
+    return "Felo API returned " + ", ".join(details)
 
 def _load_quota():
     """Load today's quota usage"""
@@ -108,15 +150,11 @@ def felo_search(query, source_langs=None):
         "Authorization": f"Bearer {FELO_API_KEY}",
         "Content-Type": "application/json",
     }
-    payload = {
-        "query": query,
-        "language": "zh",
-        "source_languages": source_langs,
-    }
+    payload = {"query": query}
 
     try:
         resp = requests.post(
-            f"{FELO_BASE_URL}/search",
+            f"{FELO_BASE_URL.rstrip('/')}/v2/chat",
             json=payload,
             headers=headers,
             timeout=30,
@@ -126,15 +164,15 @@ def felo_search(query, source_langs=None):
             data = resp.json()
             return {
                 "source": "[Felo-Search]",
-                "core_conclusion": data.get("answer", data.get("summary", "")),
-                "citations": data.get("sources", data.get("references", [])),
+                "core_conclusion": data.get("data", {}).get("answer", data.get("answer", data.get("summary", ""))),
+                "citations": data.get("data", {}).get("resources", data.get("sources", data.get("references", []))),
                 "adoption_suggestion": "External Observation - requires Evidence->Candidate->Admission before adoption",
                 "quota": get_quota_status(),
                 "raw": data,
             }
         else:
             return {
-                "error": f"Felo API returned {resp.status_code}: {resp.text[:200]}",
+                "error": _format_api_error(resp),
                 "source": "[Felo-Search]",
             }
     except Exception as e:
@@ -169,15 +207,11 @@ def felo_chat(prompt, model="felo-chat"):
         "Authorization": f"Bearer {FELO_API_KEY}",
         "Content-Type": "application/json",
     }
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 2000,
-    }
+    payload = {"query": prompt}
 
     try:
         resp = requests.post(
-            f"{FELO_BASE_URL}/chat/completions",
+            f"{FELO_BASE_URL.rstrip('/')}/v2/chat",
             json=payload,
             headers=headers,
             timeout=30,
@@ -185,9 +219,12 @@ def felo_chat(prompt, model="felo-chat"):
         if resp.status_code == 200:
             _deduct(_CHAT_COST, "chat")
             data = resp.json()
-            content = ""
-            if "choices" in data:
-                content = data["choices"][0]["message"]["content"]
+            nested = data.get("data", {})
+            if not isinstance(nested, dict):
+                nested = {}
+            content = nested.get(
+                "answer", data.get("answer", data.get("summary", ""))
+            )
             return {
                 "source": "[Felo-Chat]",
                 "core_conclusion": content,
@@ -197,7 +234,7 @@ def felo_chat(prompt, model="felo-chat"):
             }
         else:
             return {
-                "error": f"Felo API returned {resp.status_code}: {resp.text[:200]}",
+                "error": _format_api_error(resp),
                 "source": "[Felo-Chat]",
             }
     except Exception as e:
@@ -217,7 +254,7 @@ class FeloAdapter:
     PROVIDER_CONFIG = {
         "name": "felo",
         "type": "search_and_evidence",
-        "base_url": "https://api.felo.ai/v1",
+        "base_url": "https://openapi.felo.ai",
         "models": ["felo-search", "felo-chat", "gpt-4o", "claude-3.5-sonnet"],
         "daily_budget": 200,
         "search_cost": 15,

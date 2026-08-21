@@ -55,6 +55,7 @@ lexicon_snapshot_v*.json
 # Logs
 *.log
 *.log.gz
+05_TOOLS/miner/data/felo_quota.json
 
 # Temporary
 tmp/

@@ -3,14 +3,14 @@
 24小时矿场 v7 — 并行版
 
 v6 → v7 改进：
-- 4 个子任务并行执行（ThreadPoolExecutor, max_workers=4）
+- 5 个子任务并行执行（ThreadPoolExecutor, max_workers=5）
 - log() 改用 logging 模块（线程安全，消除竞态）
 - observation_log.json 保持最后统一串行写入
 - 耗时从 ~4 分钟降到 ~60 秒
 
 用法：
   python3 miner_24h_free_v7.py [task_name]
-  # task_name: market_sentiment | tech_analysis | sector_rotation | risk_assessment | all
+  # task_name: market_sentiment | tech_analysis | sector_rotation | risk_assessment | felo_research | all
 """
 
 import os
@@ -25,6 +25,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # 加载 free_llm
 sys.path.insert(0, str(Path(__file__).parent))
 from free_llm import call
+from felo_provider import felo_search
 
 # 配置
 OUTPUT_DIR = Path(os.environ.get("OUTPUT_DIR", "/tmp/mine_output"))
@@ -32,6 +33,7 @@ CLOUD_DIR = Path(os.environ.get("CLOUD_DIR", "/workspace/fengzi-repos/mine-seed/
 LOG_FILE = OUTPUT_DIR / "miner_free_v7.log"
 
 # 线程安全的 logging 配置
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 logger = logging.getLogger("miner_v7")
 logger.setLevel(logging.INFO)
 if not logger.handlers:
@@ -85,7 +87,15 @@ TASKS = {
         "prefer": "shenwen",
         "max_tokens": 400,
     },
+    "felo_research": {
+        "prefer": "felo",
+    },
 }
+
+FELO_SOURCE_LANGS = ["zh", "en", "ja"]
+FELO_RESEARCH_QUERIES = [
+    ("zh-en-ja", "检索中国A股最新公司研报、重大公告、业绩预告与监管风险，覆盖中文、英文、日文来源，并列出可核验出处"),
+]
 
 
 def run_task(task_name: str) -> dict:
@@ -99,6 +109,66 @@ def run_task(task_name: str) -> dict:
 
     t0 = time.time()
     try:
+        if task_name == "felo_research":
+            research_results = []
+            for language, query in FELO_RESEARCH_QUERIES:
+                try:
+                    result = felo_search(query, source_langs=FELO_SOURCE_LANGS)
+                except Exception as e:
+                    result = {"error": f"Felo task exception: {e}", "source": "[Felo-Search]"}
+
+                error = result.get("error")
+                research_results.append({
+                    "language": language,
+                    "query": query,
+                    "success": not bool(error),
+                    "source": result.get("source", "[Felo-Search]"),
+                    "quota": result.get("quota", {}),
+                    "conclusion": result.get("core_conclusion", ""),
+                    "citations": result.get("citations", []),
+                    "error": error,
+                })
+                if error and ("FELO_API_KEY not set" in error or "Daily quota exceeded" in error):
+                    break
+
+            elapsed = time.time() - t0
+            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            content = f"# {task_name}\n\n时间: {datetime.now().isoformat()}\n\n"
+            for item in research_results:
+                content += (
+                    f"## {item['language']}\n\n"
+                    f"查询: {item['query']}\n\n"
+                    f"来源: {item['source']}\n\n"
+                    f"状态: {'success' if item['success'] else 'failed'}\n\n"
+                    f"结论: {item['conclusion'] or item['error']}\n\n"
+                    f"引用: {json.dumps(item['citations'], ensure_ascii=False, indent=2)}\n\n"
+                    f"quota: {json.dumps(item['quota'], ensure_ascii=False, indent=2)}\n\n"
+                )
+
+            outfile = OUTPUT_DIR / f"{task_name}_{ts}.md"
+            with open(outfile, 'w', encoding='utf-8') as f:
+                f.write(content)
+            CLOUD_DIR.mkdir(parents=True, exist_ok=True)
+            cloud_file = CLOUD_DIR / f"{task_name}_{ts}.md"
+            with open(cloud_file, 'w', encoding='utf-8') as f:
+                f.write(content)
+
+            success = all(item["success"] for item in research_results)
+            quota = research_results[-1]["quota"] if research_results else {}
+            error = next((item["error"] for item in research_results if item["error"]), None)
+            if success:
+                logger.info(f"[OK] {task_name}: felo {elapsed:.1f}s")
+            else:
+                logger.error(f"[FAIL] {task_name}: {error}")
+            return {
+                "task": task_name,
+                "success": success,
+                "source": "[Felo-Search]",
+                "quota": quota,
+                "elapsed": elapsed,
+                "file": str(cloud_file),
+                "error": error,
+            }
         result = call(
             task["prompt"],
             system=task["system"],
@@ -138,6 +208,28 @@ def run_task(task_name: str) -> dict:
         return {"success": False, "task": task_name, "error": str(e), "elapsed": elapsed}
 
 
+def write_observation_log(results, total_elapsed):
+    obs_file = OUTPUT_DIR / "observation_log.json"
+    observations = []
+    for r in results:
+        observations.append({
+            "timestamp": datetime.now().isoformat(),
+            "task": r.get("task", "unknown"),
+            "worker_id": r.get("channel", "free_llm"),
+            "model": r.get("model", "unknown"),
+            "corps": "FREE",
+            "success": r.get("success", False),
+            "elapsed": r.get("elapsed", 0),
+            "source": r.get("source", r.get("channel", "free_llm")),
+            "quota": r.get("quota", {}),
+        })
+
+    try:
+        with open(obs_file, 'w', encoding='utf-8') as f:
+            json.dump({"observations": observations, "total_elapsed": total_elapsed}, f, ensure_ascii=False, indent=2)
+        logger.info(f"[OBS] observation_log 已保存: {obs_file}")
+    except Exception as e:
+        logger.error(f"[WARN] observation_log 保存失败: {e}")
 def run_all_parallel():
     """并行运行所有任务"""
     logger.info("=" * 50)
@@ -147,8 +239,8 @@ def run_all_parallel():
     t_start = time.time()
     results = []
 
-    # 4 个子任务并行执行
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    # 5 个子任务并行执行
+    with ThreadPoolExecutor(max_workers=5) as executor:
         # 提交所有任务
         future_to_task = {
             executor.submit(run_task, task_name): task_name
@@ -169,26 +261,7 @@ def run_all_parallel():
     success = sum(1 for r in results if r.get("success"))
     logger.info(f"矿场完成: {success}/{len(results)} 任务成功, 总耗时: {total_elapsed:.1f}s")
 
-    # observation_log.json 最后统一串行写入（避免并行写入冲突）
-    obs_file = OUTPUT_DIR / "observation_log.json"
-    observations = []
-    for r in results:
-        observations.append({
-            "timestamp": datetime.now().isoformat(),
-            "task": r.get("task", "unknown"),
-            "worker_id": r.get("channel", "free_llm"),
-            "model": r.get("model", "unknown"),
-            "corps": "FREE",
-            "success": r.get("success", False),
-            "elapsed": r.get("elapsed", 0),
-        })
-
-    try:
-        with open(obs_file, 'w', encoding='utf-8') as f:
-            json.dump({"observations": observations, "total_elapsed": total_elapsed}, f, ensure_ascii=False, indent=2)
-        logger.info(f"[OBS] observation_log 已保存: {obs_file}")
-    except Exception as e:
-        logger.error(f"[WARN] observation_log 保存失败: {e}")
+    write_observation_log(results, total_elapsed)
 
     return results, total_elapsed
 
@@ -250,6 +323,7 @@ def main():
             run_all_parallel()
     else:
         result = run_task(args.task)
+        write_observation_log([result], result.get("elapsed", 0))
         print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

@@ -13,17 +13,28 @@ import os, sys, json, argparse, urllib.request, urllib.error
 from datetime import datetime
 from pathlib import Path
 
-# Load keys from miner_env.sh
 def load_env():
-    env_path = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
+    env_path = Path(__file__).resolve().parents[2] / ".env"
     if env_path.exists():
         with open(env_path, encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                k = k.strip()
+                if k:
+                    os.environ.setdefault(k, v.strip().strip('"').strip("'"))
+
+    miner_env_path = Path(__file__).with_name("miner_env.sh")
+    if miner_env_path.exists():
+        with open(miner_env_path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
                 if line.startswith("export ") and "=" in line:
                     k, v = line[7:].split("=", 1)
-                    v = v.strip().strip('"').strip("'")
-                    os.environ.setdefault(k, v)
+                    os.environ.setdefault(k, v.strip().strip('"').strip("'"))
+
 
 load_env()
 

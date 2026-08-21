@@ -229,7 +229,7 @@ class DataSourceManager:
         rs = bs.query_history_k_data_plus(
             bs_code,
             "date,open,high,low,close,volume",
-            start_date=(datetime.now() - datetime.timedelta(days=days+30)).strftime('%Y-%m-%d'),
+            start_date=(datetime.now() - timedelta(days=days+30)).strftime('%Y-%m-%d'),
             end_date=datetime.now().strftime('%Y-%m-%d'),
             frequency="d",
             adjustflag="2"
@@ -255,7 +255,7 @@ class DataSourceManager:
         """akshare 历史K线"""
         import akshare as ak
         
-        start_date = (datetime.now() - datetime.timedelta(days=days+30)).strftime('%Y%m%d')
+        start_date = (datetime.now() - timedelta(days=days+30)).strftime('%Y%m%d')
         end_date = datetime.now().strftime('%Y%m%d')
         
         df = ak.stock_zh_a_hist(symbol=code, period="daily",
