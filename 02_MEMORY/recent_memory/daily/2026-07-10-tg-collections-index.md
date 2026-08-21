@@ -58,7 +58,7 @@
 |------|------|------|------|
 | TG_BOT_TOKEN_1 | Bot API | ❌ 失效 | 只能收消息 |
 | TG_BOT_TOKEN_2 (@Sck01Bot) | Bot API | ✅ 有效 | 可发消息、收消息 |
-| **api_id** | **MTProto** | **✅ 已配置** | **38398440** |
+| **api_id** | **MTProto** | **✅ 已配置** | **REDACTED_TELEGRAM_API_ID** |
 | **api_hash** | **MTProto** | **✅ 已配置** | **已写入 miner_env.sh** |
 | MTProto服务器 (测试) | MTProto | ✅ | 149.154.167.40:443 DC 2 |
 | MTProto服务器 (生产) | MTProto | ✅ | 149.154.167.50:443 DC 2 |
@@ -66,7 +66,7 @@
 ### Telethon 拉取脚本
 
 - 脚本位置: `05_TOOLS/miner/tg_collections_miner.py`
-- 已配置: api_id=38398440, api_hash, 5个已知收藏夹
+- 已配置: api_id=REDACTED_TELEGRAM_API_ID, api_hash, 5个已知收藏夹
 - 已支持: 验证码输入 + 两步验证密码
 - Session: `tg_collections.session` (首次运行后自动保存)
 

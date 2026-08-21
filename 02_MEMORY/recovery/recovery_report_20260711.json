@@ -290,7 +290,7 @@
       "found_at": "2026-07-11T18:44:44.147316",
       "keywords_found": [
         "SESSION=",
-        "38398440",
+        "REDACTED_TELEGRAM_API_ID",
         "api_id",
         "api_hash"
       ]
@@ -309,8 +309,8 @@
         "TG_SESSION",
         "TELEGRAM_SESSION",
         "SESSION=",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon",
@@ -327,8 +327,8 @@
       "found_at": "2026-07-11T18:44:45.595328",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -342,8 +342,8 @@
       "found_at": "2026-07-11T18:44:45.601981",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -357,8 +357,8 @@
       "found_at": "2026-07-11T18:44:45.601981",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -372,8 +372,8 @@
       "found_at": "2026-07-11T18:44:45.601981",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -387,8 +387,8 @@
       "found_at": "2026-07-11T18:44:45.601981",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -402,8 +402,8 @@
       "found_at": "2026-07-11T18:44:45.601981",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -417,8 +417,8 @@
       "found_at": "2026-07-11T18:44:45.605447",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -432,8 +432,8 @@
       "found_at": "2026-07-11T18:44:45.606974",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -461,8 +461,8 @@
       "found_at": "2026-07-11T18:44:46.167349",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -476,8 +476,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -491,8 +491,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -506,8 +506,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -521,8 +521,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -536,8 +536,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -551,8 +551,8 @@
       "found_at": "2026-07-11T18:44:46.169866",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -566,8 +566,8 @@
       "found_at": "2026-07-11T18:44:46.170889",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -583,8 +583,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -598,8 +598,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -613,8 +613,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -628,8 +628,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -643,8 +643,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -658,8 +658,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -673,8 +673,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -688,8 +688,8 @@
       "found_at": "2026-07-11T18:44:46.172462",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -3659,33 +3659,33 @@
     "[18:44:09]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_Unknown Number + App Hash.session (28672 bytes)",
     "[18:44:09] [L1] Done: 30 session files found",
     "[18:44:09] [L2] Scanning config files for StringSession / credentials...",
-    "[18:44:44]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\03_DATA\\raw_sources\\configs\\eco_layer.json (keywords: SESSION=, 38398440, api_id, api_hash)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\04_PROTOCOLS\\recovery_scanner.py (keywords: StringSession, TelegramClient(, TG_SESSION, TELEGRAM_SESSION, SESSION=, 38398440, 3460f304, api_id, api_hash, telethon, pyrogram)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon)",
+    "[18:44:44]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\03_DATA\\raw_sources\\configs\\eco_layer.json (keywords: SESSION=, REDACTED_TELEGRAM_API_ID, api_id, api_hash)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\04_PROTOCOLS\\recovery_scanner.py (keywords: StringSession, TelegramClient(, TG_SESSION, TELEGRAM_SESSION, SESSION=, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon, pyrogram)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon)",
     "[18:44:45]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\06_RUNTIME\\core\\ace_logger.py (keywords: telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, 38398440, 3460f304, telethon)",
-    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\check_session.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_bot_login.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_code_type_check.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_collections_miner.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_file.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_interactive.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_login_test.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon)",
+    "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\05_TOOLS\\miner\\tg_test_codesettings.py (keywords: TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon)",
     "[18:44:46] [L2] Done: 27 config files with credentials found",
     "[18:44:46] [L3] Scanning archives for session files...",
     "[18:44:46]   FOUND: C:\\Users\\User\\ace_workspace\\mine-seed\\03_DATA\\raw_sources\\zips\\r1_core_backup.zip!/Users/apple/Documents/trae_projects/R1_core/AI_Chat_Bot/bots/telegram_bot/",

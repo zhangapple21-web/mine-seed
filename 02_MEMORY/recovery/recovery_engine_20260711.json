@@ -300,8 +300,8 @@
         "TG_SESSION",
         "TELEGRAM_SESSION",
         "SESSION=",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon",
@@ -318,7 +318,7 @@
       "found_at": "2026-07-11T18:52:45.175148",
       "keywords_found": [
         "SESSION=",
-        "38398440",
+        "REDACTED_TELEGRAM_API_ID",
         "api_id",
         "api_hash"
       ]
@@ -334,8 +334,8 @@
       "keywords_found": [
         "StringSession",
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -355,8 +355,8 @@
         "TG_SESSION",
         "TELEGRAM_SESSION",
         "SESSION=",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon",
@@ -373,8 +373,8 @@
       "found_at": "2026-07-11T18:52:46.871349",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -388,8 +388,8 @@
       "found_at": "2026-07-11T18:52:46.877208",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -405,8 +405,8 @@
       "found_at": "2026-07-11T18:52:46.880741",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -420,8 +420,8 @@
       "found_at": "2026-07-11T18:52:46.881748",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -435,8 +435,8 @@
       "found_at": "2026-07-11T18:52:46.881748",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -450,8 +450,8 @@
       "found_at": "2026-07-11T18:52:46.882746",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -465,8 +465,8 @@
       "found_at": "2026-07-11T18:52:46.882746",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -480,8 +480,8 @@
       "found_at": "2026-07-11T18:52:46.885658",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -495,8 +495,8 @@
       "found_at": "2026-07-11T18:52:46.886670",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -524,8 +524,8 @@
       "found_at": "2026-07-11T18:52:47.498487",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -539,8 +539,8 @@
       "found_at": "2026-07-11T18:52:47.499487",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -556,8 +556,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -571,8 +571,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -586,8 +586,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -601,8 +601,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -616,8 +616,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -631,8 +631,8 @@
       "found_at": "2026-07-11T18:52:47.499990",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -646,8 +646,8 @@
       "found_at": "2026-07-11T18:52:47.500993",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -663,8 +663,8 @@
       "found_at": "2026-07-11T18:52:47.503011",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -678,8 +678,8 @@
       "found_at": "2026-07-11T18:52:47.505016",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -695,8 +695,8 @@
       "found_at": "2026-07-11T18:52:47.506071",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -710,8 +710,8 @@
       "found_at": "2026-07-11T18:52:47.506071",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -725,8 +725,8 @@
       "found_at": "2026-07-11T18:52:47.507067",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -740,8 +740,8 @@
       "found_at": "2026-07-11T18:52:47.507067",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -755,8 +755,8 @@
       "found_at": "2026-07-11T18:52:47.507067",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -770,8 +770,8 @@
       "found_at": "2026-07-11T18:52:47.508543",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "telethon"
       ]
     },
@@ -785,8 +785,8 @@
       "found_at": "2026-07-11T18:52:47.508543",
       "keywords_found": [
         "TelegramClient(",
-        "38398440",
-        "3460f304",
+        "REDACTED_TELEGRAM_API_ID",
+        "REDACTED_TELEGRAM_API_HASH",
         "api_id",
         "api_hash",
         "telethon"
@@ -3735,7 +3735,7 @@
       "need_login": false,
       "can_push": true,
       "user": {
-        "id": 8446702999,
+        "id": "REDACTED_TELEGRAM_ACCOUNT_ID",
         "username": "Sck01Bot",
         "phone": null,
         "first_name": "景宁",

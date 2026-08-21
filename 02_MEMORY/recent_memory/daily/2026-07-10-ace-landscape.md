@@ -65,7 +65,7 @@
 8. lab_01 观测脚本（observe_lab01.py）
 9. TG 考古：5收藏夹 769条消息结构已完整理解
 10. R1 快照解压（v1 + v2 + skeleton + v11）
-11. TG MTProto API 配置（api_id=38398440, api_hash 已写入 miner_env.sh）
+11. TG MTProto API 配置（api_id=REDACTED_TELEGRAM_API_ID, api_hash 已写入 miner_env.sh）
 12. Telethon 收藏夹拉取脚本（tg_collections_miner.py，支持验证码+两步验证密码）
 13. Windows 路径适配器（win_run.py，将 /home/coze/ 映射到工作区）
 14. 所有5个运行脚本更新使用 win_run.py 适配器

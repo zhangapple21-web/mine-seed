@@ -321,33 +321,33 @@ Restore C:\Users\User\ace_workspace\mine-seed\05_TOOLS\miner\tg_bot_Bot1_Invalid
 
 | File | Source | Keywords | Modified | Recovery |
 |------|--------|----------|----------|----------|
-| .\03_DATA\raw_sources\configs\eco_layer.json | Workspace | SESSION=, 38398440, api_id, api_hash | 2026-07-10 | *** |
-| .\04_PROTOCOLS\recovery_scanner.py | Workspace | StringSession, TelegramClient(, TG_SESSION, TELEGRAM_SESSION, SESSION=, 38398440, 3460f304, api_id, api_hash, telethon, pyrogram | 2026-07-11 | **** |
-| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-10 | *** |
-| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon | 2026-07-11 | *** |
+| .\03_DATA\raw_sources\configs\eco_layer.json | Workspace | SESSION=, REDACTED_TELEGRAM_API_ID, api_id, api_hash | 2026-07-10 | *** |
+| .\04_PROTOCOLS\recovery_scanner.py | Workspace | StringSession, TelegramClient(, TG_SESSION, TELEGRAM_SESSION, SESSION=, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon, pyrogram | 2026-07-11 | **** |
+| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-10 | *** |
+| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon | 2026-07-11 | *** |
 | .\06_RUNTIME\core\ace_logger.py | Workspace | telethon | 2026-07-10 | *** |
-| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-10 | *** |
-| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-10 | *** |
-| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, 38398440, 3460f304, telethon | 2026-07-11 | *** |
-| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, 38398440, 3460f304, api_id, api_hash, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-10 | *** |
+| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\check_session.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_bot_login.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_code_type_check.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_collections_miner.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-10 | *** |
+| .\05_TOOLS\miner\tg_login_file.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_interactive.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_login_test.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, telethon | 2026-07-11 | *** |
+| .\05_TOOLS\miner\tg_test_codesettings.py | Workspace | TelegramClient(, REDACTED_TELEGRAM_API_ID, REDACTED_TELEGRAM_API_HASH, api_id, api_hash, telethon | 2026-07-11 | *** |
 
 ## Recovery Result
 
