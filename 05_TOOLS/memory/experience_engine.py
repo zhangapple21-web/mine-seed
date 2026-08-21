@@ -624,7 +624,7 @@ class ExperienceEngine:
                             "historical_sr": hist_sr,
                             "recent_samples": w.get("recent_samples", 0),
                             "ts": datetime.now().isoformat(),
-                            "note": f"({w["worker"]})在({task})上表现发生{'+' if delta > 0 else ''}{delta:.0%}变化，需要关注"
+                            "note": f"({w['worker']})在({task})上表现发生{'+' if delta > 0 else ''}{delta:.0%}变化，需要关注"
                         })
         
         if innovations:

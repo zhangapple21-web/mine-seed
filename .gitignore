@@ -26,7 +26,10 @@ Thumbs.db
 *.session
 *.session-journal
 .env
-*.env
+.env.*
+!.env.tpl
+SECRET.md
+**/SECRET.md
 miner_env.sh
 miner_env.sh.local
 
@@ -164,3 +167,5 @@ _chip_check.py
 
 # === Raw chat archive (contains sensitive data, should be distilled) ===
 03_DATA/raw_sources/gpt_chat_archive/
+
+/mine_output/

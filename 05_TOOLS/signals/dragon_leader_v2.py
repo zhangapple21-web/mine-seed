@@ -232,7 +232,7 @@ def load_industry_map(pkl_path: str = "/home/coze/stock_industry_map.pkl") -> Di
             df: pd.DataFrame = pickle.load(f)
         df["short_code"] = df["code"].str.split(".").str[-1]
         industry_map = dict(zip(df["short_code"], df["industry"]))
-        logger.info(f"行业映射[pkl]: {len(industry_map)}只, 数据日期{df["updateDate"].iloc[0]}")
+        logger.info(f"行业映射[pkl]: {len(industry_map)}只, 数据日期{df['updateDate'].iloc[0]}")
         INDUSTRY_MAP_CACHE = industry_map
         INDUSTRY_MAP_SOURCE = "pkl"
         return industry_map
