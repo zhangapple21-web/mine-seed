@@ -170,6 +170,12 @@ class LocalMinerAdapter(ProviderAdapter):
                 "available": True,
             }
         
+        if any(os.environ.get(f"NIM_KEY_{i}") for i in range(1, 17)):
+            self._providers["nim"] = {
+                "call": self._call_nim,
+                "models": {os.environ.get("NIM_MODEL", "meta/llama-3.1-8b-instruct"): {"capabilities": ["reasoning", "technical_analysis", "fast"]}},
+                "available": True,
+            }
         # Ollama
         if self._check_ollama():
             self._providers["ollama"] = {
@@ -187,6 +193,28 @@ class LocalMinerAdapter(ProviderAdapter):
         except Exception:
             return False
     
+    def _call_nim(self, model, messages, max_tokens=500, temperature=0.7):
+        key = next((os.environ.get(f"NIM_KEY_{i}", "") for i in range(1, 17) if os.environ.get(f"NIM_KEY_{i}")), "")
+        base = os.environ.get("NIM_BASE", "https://integrate.api.nvidia.com/v1")
+        data = {"model": model, "messages": messages, "max_tokens": max_tokens, "temperature": temperature}
+        req = urllib.request.Request(
+            f"{base.rstrip('/')}/chat/completions",
+            data=json.dumps(data).encode(),
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                result = json.loads(r.read().decode())
+                if "choices" in result:
+                    return {
+                        "content": result["choices"][0]["message"]["content"],
+                        "model": model,
+                        "provider": "nim",
+                        "success": True,
+                    }
+            return {"error": "No choices", "success": False}
+        except Exception as e:
+            return {"error": f"NIM error: {e}", "success": False}
     def _call_github(self, model, messages, max_tokens=500, temperature=0.7):
         pat = os.environ.get("GITHUB_PAT", "")
         base = os.environ.get("GITHUB_BASE", "https://models.inference.ai.azure.com")
@@ -299,7 +327,7 @@ class LocalMinerAdapter(ProviderAdapter):
             provider_name, model_name = model.split("/", 1)
         else:
             # 默认按优先级尝试
-            for provider_name in ["zhipu", "github", "ollama", "openrouter"]:
+            for provider_name in ["zhipu", "nim", "github", "ollama", "openrouter"]:
                 if provider_name in self._providers:
                     info = self._providers[provider_name]
                     model_name = list(info["models"].keys())[0]
