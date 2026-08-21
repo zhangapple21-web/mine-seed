@@ -616,15 +616,8 @@ def _push_heartbeat_summary(report: dict, log) -> dict:
     from datetime import datetime
 
     # Load credentials
-    env_file = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
-    token = None
-    chat_id = None
-    if env_file.exists():
-        for line in env_file.read_text(encoding="utf-8").splitlines():
-            if "export TG_BOT_TOKEN_2=" in line:
-                token = line.split("=", 1)[1].strip().strip('"').strip("'")
-            elif "export TG_CHAT_ID=" in line:
-                chat_id = line.split("=", 1)[1].strip().strip('"').strip("'")
+    token = os.environ.get("TG_BOT_TOKEN_2")
+    chat_id = os.environ.get("TG_CHAT_ID")
     if not token:
         return {"status": "skipped", "reason": "no TG_BOT_TOKEN_2"}
 
@@ -943,15 +936,8 @@ def _run_advisor_review(log) -> dict:
             win_rate_summary = _build_win_rate_summary(report)
             if win_rate_summary:
                 # 加载 TG pusher
-                env_file = Path(__file__).parent.parent / "05_TOOLS" / "miner" / "miner_env.sh"
-                token = None
-                chat_id = None
-                if env_file.exists():
-                    for line in env_file.read_text(encoding="utf-8").splitlines():
-                        if "export TG_BOT_TOKEN_2=" in line:
-                            token = line.split("=", 1)[1].strip().strip('"').strip("'")
-                        elif "export TG_CHAT_ID=" in line:
-                            chat_id = line.split("=", 1)[1].strip().strip('"').strip("'")
+                token = os.environ.get("TG_BOT_TOKEN_2")
+                chat_id = os.environ.get("TG_CHAT_ID")
                 if token and not chat_id:
                     chat_id = _get_chat_id(token)
                 if token and chat_id:
