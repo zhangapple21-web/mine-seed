@@ -32,6 +32,10 @@ SECRET.md
 **/SECRET.md
 miner_env.sh
 miner_env.sh.local
+miner_env.sh.tpl
+/01_credentials/
+/02_miner_config/
+/06_RUNTIME/free_zone/start_free_zone.vbs
 
 # Recovery staging (auto-cleaned, 11GB+)
 99_*/
