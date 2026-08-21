@@ -1,5 +1,5 @@
 # ACE Miner v5 - Windows Runtime Script
-$ErrorActionPreference = "Continue"
+$ErrorActionPreference = "Stop"
 
 $Workspace = "C:\Users\User\ace_workspace\mine-seed"
 $ScriptDir = "$Workspace\06_RUNTIME\windows"
@@ -9,19 +9,8 @@ $LogFile = "$LogDir\cron.log"
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
-# Set environment variables (simulate source miner_env.sh)
-$env:MINER_API_BASE = "http://localhost:3000/v1/chat/completions"
 $env:OUTPUT_DIR = $LogDir
+$env:CLOUD_DIR = "$Workspace\cloud\miner"
 
-# Load user custom environment variables (if exists)
-$EnvFile = "$Workspace\05_TOOLS\miner\miner_env.sh"
-if (Test-Path $EnvFile) {
-    Get-Content $EnvFile | ForEach-Object {
-        if ($_ -match '^export\s+(\w+)="?(.+?)"?$') {
-            [Environment]::SetEnvironmentVariable($matches[1], $matches[2], "Process")
-        }
-    }
-}
-
-# Run miner via Windows adapter
-& $Python "$ScriptDir\win_run.py" "$Workspace\05_TOOLS\miner\miner_24h.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+& $Python "$Workspace\05_TOOLS\miner\miner_24h_free_v7.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+exit $LASTEXITCODE

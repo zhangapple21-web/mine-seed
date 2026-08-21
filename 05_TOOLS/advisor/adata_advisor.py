@@ -333,7 +333,7 @@ class AdataAdvisor:
 输出格式：Markdown。"""
         
         try:
-            result = call(prompt, system="你是专业的A股投资顾问，分析严谨，风险提示到位。", max_tokens=1500, prefer="glm")
+            result = call(prompt, system="你是专业的A股投资顾问，分析严谨，风险提示到位。", max_tokens=1500, prefer="shenwen")
             
             report = f"""# A股每日荐股 — {today}
 

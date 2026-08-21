@@ -82,7 +82,7 @@ TASKS = {
     "risk_assessment": {
         "prompt": "评估当前A股市场风险等级（低/中/高），给出理由。",
         "system": "你是专业的A股市场风险评估师。",
-        "prefer": "github",
+        "prefer": "shenwen",
         "max_tokens": 400,
     },
 }

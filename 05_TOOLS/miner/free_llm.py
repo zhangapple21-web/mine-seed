@@ -20,8 +20,7 @@ from typing import Optional
 
 log = logging.getLogger("ACE.FreeLLM")
 
-# 渠道优先级：GLM(无限) > NIM(16key) > GitHub(限流) > Ollama(本地)
-CHANNELS = ["glm", "nim", "github", "ollama"]
+CHANNELS = ["shenwen", "glm", "nim", "ollama", "github"]
 
 # NIM key 轮询状态（线程安全）
 _nim_key_index = 0
@@ -142,22 +141,57 @@ def _call_nim(messages: list, max_tokens: int, temperature: float) -> Optional[d
         return None
 
 
-def _call_github(messages: list, max_tokens: int, temperature: float) -> Optional[dict]:
-    """调用 GitHub Models"""
-    url = os.environ.get("GH_MODELS_BASE", "https://models.inference.ai.azure.com/chat/completions")
-    key = os.environ.get("GH_MODELS_KEY", "")
-    model = os.environ.get("GH_MODELS_MODEL", "gpt-4o-mini")
-    
+def _call_shenwen(messages: list, max_tokens: int, temperature: float) -> Optional[dict]:
+    """调用神稳AI OpenAI 兼容接口"""
+    key = os.environ.get("SHENWEN_API_KEY", "")
+    base = os.environ.get("SHENWEN_BASE", "https://api.shenwenai.com/v1").rstrip("/")
+    model = os.environ.get("SHENWEN_MODEL", "gpt-5.6-terra")
+
     if not key:
         return None
-    
+
     data = {
         "model": model,
         "messages": messages,
         "max_tokens": max_tokens,
         "temperature": temperature,
     }
-    
+
+    try:
+        req = urllib.request.Request(
+            f"{base}/chat/completions",
+            data=json.dumps(data).encode("utf-8"),
+            headers={
+                "Authorization": f"Bearer {key}",
+                "Content-Type": "application/json",
+            },
+            method="POST"
+        )
+        with _urlopen(req, timeout=90) as resp:
+            result = json.loads(resp.read())
+            content = result["choices"][0]["message"]["content"]
+            return {"content": content, "model": model, "channel": "Shenwen", "raw": result}
+    except Exception as e:
+        log.warning(f"[Shenwen] Error: {e}")
+        return None
+
+def _call_github(messages: list, max_tokens: int, temperature: float):
+    """调用 GitHub Models"""
+    key = os.environ.get("GH_MODELS_KEY") or os.environ.get("GITHUB_PAT", "")
+    base = os.environ.get("GH_MODELS_BASE", "https://models.github.ai/inference").rstrip("/")
+    url = f"{base}/chat/completions"
+    model = os.environ.get("GH_MODELS_MODEL", "openai/gpt-4.1")
+
+    if not key:
+        return None
+
+    data = {
+        "model": model,
+        "messages": messages,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+    }
+
     try:
         req = urllib.request.Request(
             url,
@@ -210,12 +244,12 @@ def _call_ollama(messages: list, max_tokens: int, temperature: float) -> Optiona
 
 # 渠道调用映射
 _CHANNEL_FUNCS = {
+    "shenwen": _call_shenwen,
     "glm": _call_glm,
     "nim": _call_nim,
-    "github": _call_github,
     "ollama": _call_ollama,
+    "github": _call_github,
 }
-
 
 def call(prompt: str, system: str = "", max_tokens: int = 2000, temperature: float = 0.3,
          prefer: str = None) -> dict:

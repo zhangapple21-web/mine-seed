@@ -10,7 +10,8 @@ import os, sys, json, argparse, urllib.request
 from datetime import datetime
 
 WORKER_REGISTRY = {
-    "github_models": {"type": "external", "base": "https://models.inference.ai.azure.com/chat/completions", "models": ["gpt-4o-mini"], "best_for": ["code_review", "quick_inference"], "env_key": "GITHUB_PAT"},
+    "shenwen_ai": {"type": "external", "base": "https://api.shenwenai.com/v1/chat/completions", "models": ["gpt-5.6-terra", "gpt-5.4-mini"], "best_for": ["reasoning", "architecture", "risk_assessment", "stock_analysis", "structured_extraction", "subtask_execution"], "env_key": "SHENWEN_API_KEY"},
+    "github_models": {"type": "external", "base": "https://models.github.ai/inference/chat/completions", "models": ["openai/gpt-4.1"], "best_for": ["code_review", "quick_inference"], "env_key": "GH_MODELS_KEY"},
     "zhipu_glm": {"type": "external", "base": "https://open.bigmodel.cn/api/paas/v4/chat/completions", "models": ["glm-4-flash"], "best_for": ["report_generation", "chinese_content"], "env_key": "ZHIPU_KEY"},
     "nvidia_nim": {"type": "external", "base": "https://integrate.api.nvidia.com/v1/chat/completions", "models": ["meta/llama-3.3-70b-instruct"], "best_for": ["embedding", "long_context"], "env_key": "NIM_KEY_1"},
     "openrouter": {"type": "external", "base": "https://openrouter.ai/api/v1/chat/completions", "models": ["meta-llama/llama-3.1-8b-instruct:free"], "best_for": ["experimentation"], "env_key": "OPENROUTER_KEY"},
@@ -40,8 +41,7 @@ def smart_assign(task_desc):
         info = WORKER_REGISTRY[name]
         avail = "AVAILABLE" if _is_available(name) else "NO_KEY"
         print(f"  [{score:2d}] {name:20s} {avail}")
-    best = sorted_w[0]
-    if best[1] == 0: best = ("github_models", 1)
+    best = sorted_w[0] if sorted_w and sorted_w[0][1] > 0 else (None, 0)
     print(f"\n[ASSIGNED] {best[0]}")
     return {"task": task_desc, "assigned": best[0], "scores": dict(sorted_w)}
 
