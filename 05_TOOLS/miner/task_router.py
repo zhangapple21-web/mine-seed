@@ -29,7 +29,7 @@ OBSERVATION_FILE = os.environ.get("OBSERVATION_FILE", str(_BASE_DIR / "observati
 JUDGE_FILE = os.environ.get("JUDGE_FILE", str(_BASE_DIR / "judge_history.json"))
 
 API_BASE = os.environ.get("MINER_API_BASE", "http://localhost:3000/v1/chat/completions")
-API_KEY = os.environ.get("MINER_API_KEY", "{{ONE_API_KEY}}")
+API_KEY = os.environ.get("MINER_API_KEY", "")
 
 
 # ==================== ProviderAdapter 抽象层 ====================
@@ -65,6 +65,8 @@ class OneAPIAdapter(ProviderAdapter):
         super().__init__("oneapi")
     
     def is_available(self) -> bool:
+        if not API_KEY:
+            return False
         try:
             resp = requests.get(f"{API_BASE.rstrip('/')}/v1/models", 
                                headers={"Authorization": f"Bearer {API_KEY}"},
@@ -74,6 +76,8 @@ class OneAPIAdapter(ProviderAdapter):
             return False
     
     def probe(self) -> list:
+        if not API_KEY:
+            return []
         try:
             resp = requests.get(f"{API_BASE.rstrip('/')}/v1/models", 
                                headers={"Authorization": f"Bearer {API_KEY}"},
@@ -87,6 +91,8 @@ class OneAPIAdapter(ProviderAdapter):
     
     def call(self, model: str, messages: list, max_tokens: int = 500,
              temperature: float = 0.7) -> dict:
+        if not API_KEY:
+            return {"error": "MINER_API_KEY not configured", "success": False}
         try:
             resp = requests.post(
                 API_BASE,
