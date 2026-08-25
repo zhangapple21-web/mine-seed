@@ -3,13 +3,18 @@
 # 用法: bridge-check.sh [quick|full]
 
 MODE=${1:-quick}
-BRIDGE_KEY="e8a43023a7873cb5a67db8d6e92b483c"
-DEFAULT_TOKEN="yV17PtngX3rkWRsv44Cf4cB288054cDc8442737a05AbEc0d"
+BRIDGE_KEY="${R1_BRIDGE_KEY:-}"
+DEFAULT_TOKEN="${ONEAPI_TOKEN:-}"
 PUB_URL="https://api.zhangningjing.com"
 ZROK_URL="https://r1-oneapi.shares.zrok.io"
 LOCAL_URL="http://127.0.0.1:3000"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'; NC='\033[0m'
+
+if [ -z "$BRIDGE_KEY" ] || [ -z "$DEFAULT_TOKEN" ]; then
+  echo "R1_BRIDGE_KEY and ONEAPI_TOKEN must be set" >&2
+  exit 2
+fi
 
 echo "=== 公网桥全链路验证 ==="
 echo ""

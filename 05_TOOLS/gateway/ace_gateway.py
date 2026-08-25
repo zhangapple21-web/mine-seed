@@ -47,10 +47,10 @@ load_env()
 
 # API Token（与疯子原配置对齐）
 VALID_TOKENS = {
-    "jHhtKnCuHVriXUaHC992D9B645D44e8a9c901625A17fCd41",  # miner-v2
-    "GfvnDi2dJuixs7jUDb3543D894E14eA483AeA4Da73290217",  # miner-token
+    token.strip() for token in os.environ.get("ACE_VALID_TOKENS", "").split(",")
+    if token.strip()
 }
-ADMIN_TOKEN = os.environ.get("ONEAPI_ADMIN_TOKEN", "3ba2c187fe7f430cb56bdc5b396b8fb2")
+ADMIN_TOKEN = os.environ.get("ONEAPI_ADMIN_TOKEN", "")
 
 # ============================================================
 # 渠道定义：对齐 SECRET.md 中的活跃渠道
@@ -178,7 +178,9 @@ async def verify_token(request: Request):
     else:
         token = auth
 
-    if token in VALID_TOKENS or token == ADMIN_TOKEN:
+    # Empty configuration must fail closed; ``"" == ADMIN_TOKEN`` otherwise
+    # accidentally authorizes requests with no Authorization header.
+    if token and (token in VALID_TOKENS or token == ADMIN_TOKEN):
         return token
     raise HTTPException(status_code=401, detail="Invalid API key")
 

@@ -31,8 +31,16 @@ ACE 的目标不是让一个 AI 记住东西，而是建立一个 **Civilization
 - 观察邻近文明（Git Remotes）
 - 扫描知识增量（最近 Commits）
 - 生成候选资产（Candidate）
-- 更新本地文明（Repository Update）
-- 公开演化成果（Commit + Push）
+- 评估证据、价值、预算与生命周期
+- 合格资产经 Admission 后更新本地文明（Repository Update）
+- 无合格资产时记录 `NO_VALUABLE_WORK`，进入 Idle / Watch
+- 远程公开仍须通过 Publication Gate 与明确授权；Discovery 本身不授予 Commit / Push 权限
+
+### Work Conservation
+
+> 工作经发现、评估和接受而形成，不为满足活跃度指标而制造。执行资源服务于有价值的工作负载，而工作负载不定义 ACE 的身份。ACE 根据证据与价值决定执行、学习、观察或等待。
+
+Finance、Archaeology、Research、Self-Evaluation 是 Workloads；模型、工具、本地计算、API 和 Human 是 Execution Resources。它们都不能反向定义 ACE Core，也不能因为空闲而制造任务。ACE 可以主动提出证据仍在形成的 Candidate，但只有 Accepted Work 才进入 TaskPool。观察持续不等于任务持续，`Idle / Watch` 是文明的合法运行状态。
 
 ---
 

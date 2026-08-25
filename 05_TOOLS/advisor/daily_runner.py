@@ -165,7 +165,34 @@ def run_stock_advisor(logger: RunnerLogger, max_retries: int = 2) -> tuple[bool,
     return False, recommendations
 
 
-def push_to_telegram(logger: RunnerLogger, max_retries: int = 2) -> bool:
+def _enabled(name: str) -> bool:
+    return os.environ.get(name, "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def telegram_delivery_readiness(gate_result: dict) -> dict:
+    reasons = []
+    if not (gate_result.get("allow_publication") or gate_result.get("allow_internal_push")):
+        reasons.append("publication_gate_denied")
+    for variable, reason in (
+        ("ACE_STOCK_ADVISOR_AUTO_PUSH", "auto_push_disabled"),
+        ("ACE_TG_ENABLED", "telegram_disabled"),
+        ("ACE_ADVISOR_DATA_READY", "data_not_ready"),
+        ("ACE_ADVISOR_RISK_READY", "risk_not_ready"),
+    ):
+        if not _enabled(variable):
+            reasons.append(reason)
+    owner_chat_id = os.environ.get("ACE_OWNER_TG_CHAT_ID", "").strip()
+    if not owner_chat_id:
+        reasons.append("owner_chat_id_missing")
+    return {
+        "allowed": not reasons,
+        "decision": "OWNER_TG_CONTROLLED_SEND" if not reasons else "NO_SEND",
+        "reasons": reasons,
+        "owner_chat_id": owner_chat_id,
+    }
+
+
+def push_to_telegram(logger: RunnerLogger, owner_chat_id: str, max_retries: int = 2) -> bool:
     """推送报告到 Telegram"""
     logger.log("[3/5] 推送 Telegram...")
     
@@ -173,7 +200,7 @@ def push_to_telegram(logger: RunnerLogger, max_retries: int = 2) -> bool:
         try:
             result = subprocess.run(
                 [sys.executable, str(WORKSPACE / "05_TOOLS" / "worker_stock_advisor.py"),
-                 "--tg", "--force"],
+                 "--tg", "--force", "--chat-id", owner_chat_id],
                 capture_output=True, text=True, timeout=60
             )
             if result.returncode == 0:
@@ -432,15 +459,16 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
         logger.log(f"  allow_publication: {gate_result.get('allow_publication', False)}")
         logger.log(f"  allow_internal_push: {gate_result.get('allow_internal_push', False)}")
         
-        if gate_result.get("allow_publication", False):
-            step3_ok = push_to_telegram(logger)
-            logger.log("  ✓ Publication Gate 通过，已推送客户")
-        elif gate_result.get("allow_internal_push", False):
-            step3_ok = push_to_telegram(logger)
-            logger.log("  ✓ 内部推送允许，已推送至TG（内部验证）")
+        delivery = telegram_delivery_readiness(gate_result)
+        if delivery["allowed"]:
+            step3_ok = push_to_telegram(logger, delivery["owner_chat_id"])
+            logger.log("  ✓ Owner TG 受控门通过，已执行主人专属推送")
         else:
             step3_ok = False
-            logger.log(f"  ⚠ Publication Gate 拦截：{gate_result['description']}")
+            logger.log(
+                "  ⚠ NO_SEND：" + ", ".join(delivery["reasons"]),
+                "WARNING",
+            )
             if gate_result["allow_learning"]:
                 logger.log("  ✓ 推荐结果进入 Learning 流程")
             else:
@@ -453,6 +481,8 @@ def run_all(logger: RunnerLogger, status_manager: RunnerStatus):
                 "success": step3_ok, 
                 "gate_level": gate_result["route_level"],
                 "allow_publication": gate_result["allow_publication"],
+                "delivery_decision": delivery["decision"],
+                "delivery_reasons": delivery["reasons"],
                 "allow_learning": gate_result["allow_learning"]
             })
         

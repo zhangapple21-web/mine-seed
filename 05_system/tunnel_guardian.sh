@@ -3,14 +3,19 @@
 # Tunnel Guardian v3 - Reserved Share 模式
 # 职责：保证share活着，而不是生成新的share
 # ============================================================
-ZROK_TOKEN="bfaHO4DlN87Z"
+ZROK_TOKEN="${ZROK_TOKEN:-}"
 RESERVED_NAME="r1-oneapi"
-BRIDGE_KEY="e8a43023a7873cb5a67db8d6e92b483c"
+BRIDGE_KEY="${R1_BRIDGE_KEY:-}"
 API_DOMAIN="https://api.zhangningjing.com"
 LOG_FILE="/tmp/tunnel_guardian.log"
 FAIL_CACHE="/tmp/tunnel_guardian_fail"
 MAX_RETRIES=2
 ZROK_BIN="/usr/local/bin/zrok2"
+
+if [ -z "$ZROK_TOKEN" ]; then
+    echo "ZROK_TOKEN must be set" >&2
+    exit 2
+fi
 
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"

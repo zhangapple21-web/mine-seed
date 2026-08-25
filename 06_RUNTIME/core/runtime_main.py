@@ -65,30 +65,55 @@ def save_pushed_files(pushed):
 
 
 def git_pull():
+    """Pull origin/main while preserving pre-existing or newly stashed work.
+
+    The old implementation always popped ``stash@{0}``, which could restore an
+    unrelated user stash when the working tree was clean.  Only pop a stash
+    created by this call, and leave it intact if pull/rebase fails.
+    """
+    stash_created = False
+    pull_succeeded = False
     try:
-        # Stash any local changes before pulling
-        subprocess.run(
-            ["git", "stash"],
-            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10
+        status = subprocess.run(
+            ["git", "status", "--porcelain"],
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10,
+            check=False,
         )
+        if status.returncode != 0:
+            log.warning("Git status failed: %s", status.stderr.strip())
+            return False
+        if status.stdout.strip():
+            stash = subprocess.run(
+                ["git", "stash", "push", "--include-untracked", "-m", "ace-runtime-pull"],
+                cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10,
+                check=False,
+            )
+            stash_created = stash.returncode == 0 and "No local changes" not in stash.stdout
+            if not stash_created:
+                log.warning("Could not stash local changes: %s", stash.stderr.strip())
+                return False
         result = subprocess.run(
             ["git", "pull", "--rebase", "origin", "main"],
-            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=30
-        )
-        # Restore stashed changes
-        subprocess.run(
-            ["git", "stash", "pop"],
-            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=10
+            cwd=str(WORKSPACE), capture_output=True, text=True, timeout=30,
+            check=False,
         )
         if result.returncode == 0:
             log.info("Git pull successful")
-            return True
+            pull_succeeded = True
         else:
-            log.warning(f"Git pull failed: {result.stderr.strip()}")
-            return False
+            log.warning("Git pull failed: %s", result.stderr.strip())
+        return result.returncode == 0
     except Exception as e:
         log.error(f"Git pull error: {e}")
         return False
+    finally:
+        if stash_created and pull_succeeded:
+            restored = subprocess.run(
+                ["git", "stash", "pop"], cwd=str(WORKSPACE), capture_output=True,
+                text=True, timeout=10, check=False,
+            )
+            if restored.returncode != 0:
+                log.error("Could not restore runtime stash; it remains saved: %s", restored.stderr.strip())
 
 
 def detect_new_reports(pushed):
@@ -98,7 +123,8 @@ def detect_new_reports(pushed):
         if not worker_dir.exists():
             continue
         for f in worker_dir.iterdir():
-            if f.name not in pushed:
+            key = str(f.relative_to(CLOUD_DIR)).replace(os.sep, "/")
+            if key not in pushed and f.name not in pushed:  # accept legacy basename entries
                 new_files.append(f)
     return sorted(new_files)
 
@@ -146,7 +172,7 @@ def run_cycle(chat_id=None, dry_run=False):
                 try:
                     result = pusher.send_report(str(f))
                     if result.get("ok"):
-                        pushed.add(f.name)
+                        pushed.add(str(f.relative_to(CLOUD_DIR)).replace(os.sep, "/"))
                         archive_report(f)
                         log.info(f"Pushed: {f.name} (msg={result.get('message_sent')}, doc={result.get('document_sent')})")
                     else:

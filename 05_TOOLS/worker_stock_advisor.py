@@ -80,7 +80,7 @@ def notify_ntfy(message):
         pass
 
 
-def notify_tg(report_file: Path):
+def notify_tg(report_file: Path, chat_id: str = ""):
     """推送荐股报告到 Telegram"""
     try:
         tg_push_path = WORKSPACE / "05_TOOLS" / "miner" / "tg_push.py"
@@ -102,7 +102,7 @@ def notify_tg(report_file: Path):
             summary += "\n\n... (报告过长，完整内容请查看文件)"
 
         # 发送消息
-        chat_id = tg_mod.DEFAULT_CHAT_ID
+        chat_id = chat_id or tg_mod.DEFAULT_CHAT_ID
         if not chat_id:
             # 尝试从 updates 获取
             chat_id = tg_mod.get_updates()
@@ -127,6 +127,7 @@ def main():
     parser.add_argument("--push", action="store_true", help="Push to Git")
     parser.add_argument("--notify", action="store_true", help="ntfy.sh notification")
     parser.add_argument("--tg", action="store_true", help="Telegram push")
+    parser.add_argument("--chat-id", default="", help="Explicit controlled Telegram recipient")
     parser.add_argument("--force", action="store_true", help="Overwrite existing report")
     args = parser.parse_args()
 
@@ -152,7 +153,7 @@ def main():
         # 优先使用 cloud 目录的报告，否则使用 mine_output
         if not output_file.exists():
             output_file = WORKSPACE / "mine_output" / "advisor" / f"advisor_{date_str}.md"
-        notify_tg(output_file)
+            notify_tg(output_file, chat_id=args.chat_id)
 
 
 if __name__ == "__main__":

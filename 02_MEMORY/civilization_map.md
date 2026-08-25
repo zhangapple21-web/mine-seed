@@ -1,6 +1,6 @@
 # Civilization Map — 文明地图
 
-> **版本**: v4 (2026-07-15)
+> **版本**: v5 (2026-08-25)
 > **创建者**: ACE（自主文明引擎）
 > **来源**: zhangapple21-web 旗下 10 个 GitHub 仓库（文明矿山）
 > **定位**: ACE Civilization OS = ACE Runtime + ACE Civilization
@@ -44,6 +44,82 @@ graph TB
 | **可迁移性** | 完全可迁移（纯文本/MD/JSON） | 部分可迁移（依赖 Python） |
 | **丢失后果** | 失去身份和文明 | 失去执行能力（可重建） |
 | **修改权限** | Admission + Governor | Mission + DFP-001 |
+
+---
+
+## 认知底座与 Work 边界（v5）
+
+```mermaid
+flowchart TD
+    REALITY[Reality] --> OBS[Observation]
+    OBS --> DISC[Work Discovery]
+    DISC --> ASSESS[Work Assessment]
+    ASSESS -->|Valuable Work| ALLOC[Work Allocation]
+    ASSESS -->|No Valuable Work| IDLE[Idle / Watch]
+    IDLE --> NEXT[Next Observation Window]
+    ALLOC --> POOL[Existing TaskPool]
+    POOL --> EXEC[Execution Fabric]
+    EXEC --> VAL[Validation]
+    VAL --> DISTILL[Distillation]
+    DISTILL --> REPO[Repository Truth]
+    REPO --> NEXT
+```
+
+### 类型边界
+
+| 类型 | 定义 | 例子 |
+|------|------|------|
+| ACE Capability | 稳定、跨领域、可复用的认知能力 | Observation、Research、Validation、Governance、Distillation |
+| Workload / Application | 向 ACE 提出需求的领域 | Finance、Archaeology、Research、Self-Evaluation |
+| Work | 有 source、reason、evidence、value、budget、status 的具体需求 | 研究问题、验证需要、运行缺口 |
+| Execution Fabric | 执行 Work 的可替换资源 | Local、Tool、ModelPool、API、Human |
+
+Work 的完整逻辑契约包括 `work_id`、`source`、`type`、`reason`、`evidence`、`value`、`priority`、`budget`、`status`、`created_at`、`last_observed`。Candidate 可在 evidence/value/budget 尚未完备时被观察；Accepted Work 必须补齐执行契约并通过 Admission。字段可由现有 Observation / Admission / Task 共同承载，不要求新建 Work 实体。
+
+Application 只能沿以下边界工作：
+
+```text
+Request Work → Receive Capability → Produce Result → Feed Evidence
+```
+
+它不能改变 ACE Core。模型、矿工、Worker、API 或预算的存在也不能制造 Work。
+
+### 唯一生命周期映射
+
+```text
+Observed → Candidate → Scored / Admission
+         → Accepted (existing TaskPool pending)
+         → Executing (active)
+         → Validated (review / approved)
+         → Distilled (Archivist / Knowledge)
+         → Closed (archived)
+
+Candidate → Rejected / Deferred / NO_VALUABLE_WORK
+```
+
+这张地图不引入第二套 Scheduler、TaskPool、Router 或 Worker。Scheduler 可以触发 Observation / Discovery，但时间到达本身不是 Valuable Work 的证据。Repository 是 source of truth；Git 只提供版本化传输、diff、lineage 与同步，远程发布仍受 Publication Gate 和明确授权约束。
+
+### Git 文明区划
+
+| Repository | 角色 | 同步边界 |
+|------------|------|----------|
+| `mine-seed` | 广义文明工作区、考古与 R2 HQ | 发现、治理和蒸馏候选资产 |
+| `ace_core` | 精选生产 Runtime Core | 接收经验证且适合生产运行的核心结构 |
+
+两者互补而不互相覆盖；同步必须保留 provenance、Admission 和 diff，Discovery 不自动授予 Commit / Push 权限。
+
+### 认知供给健康
+
+Idle / Watch 是合法短期状态，但不能长期替代诊断。连续三个独立 Discovery Window 没有 Candidate 时，日报进入 `INVESTIGATE_DISCOVERY_CHAIN`，并区分：
+
+```text
+OBSERVATION_PIPELINE_SILENT
+NO_CANDIDATE_DISCOVERED
+CANDIDATE_FOUND_BUT_REJECTED
+ELIGIBLE_WORK_NOT_SERVICED
+```
+
+这些状态只解释“为什么没有模型劳动”，不要求每天创建 Task 或调用模型。
 
 ---
 
