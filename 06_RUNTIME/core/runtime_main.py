@@ -60,8 +60,17 @@ def load_pushed_files():
 
 
 def save_pushed_files(pushed):
-    with open(PUSHED_FILES, "w", encoding="utf-8") as f:
-        json.dump(list(pushed), f)
+    PUSHED_FILES.parent.mkdir(parents=True, exist_ok=True)
+    temporary = PUSHED_FILES.with_suffix(f"{PUSHED_FILES.suffix}.tmp")
+    try:
+        with open(temporary, "w", encoding="utf-8") as f:
+            json.dump(sorted(pushed), f)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temporary, PUSHED_FILES)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
 
 
 def git_pull():
@@ -108,12 +117,17 @@ def git_pull():
         return False
     finally:
         if stash_created and pull_succeeded:
-            restored = subprocess.run(
-                ["git", "stash", "pop"], cwd=str(WORKSPACE), capture_output=True,
-                text=True, timeout=10, check=False,
-            )
-            if restored.returncode != 0:
-                log.error("Could not restore runtime stash; it remains saved: %s", restored.stderr.strip())
+            try:
+                restored = subprocess.run(
+                    ["git", "stash", "pop"], cwd=str(WORKSPACE), capture_output=True,
+                    text=True, timeout=10, check=False,
+                )
+                if restored.returncode != 0:
+                    log.error("Could not restore runtime stash; it remains saved: %s", restored.stderr.strip())
+            except Exception as exc:
+                # The pull itself succeeded, but local work remains safely in
+                # the stash for manual recovery.
+                log.error("Could not restore runtime stash; it remains saved: %s", exc)
 
 
 def detect_new_reports(pushed):
