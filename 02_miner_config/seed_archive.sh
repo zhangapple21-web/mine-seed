@@ -17,14 +17,21 @@ fi
 
 cd "$REPO"
 git remote set-url origin "https://github.com/${GITHUB_USER}/${GITHUB_REPO}.git"
-git fetch origin main --prune
+
+# Inject authentication only for the individual Git operation. The token is
+# never written to the remote URL, repository config, a file, or log output.
+git_auth() {
+  git -c "http.extraheader=AUTHORIZATION: bearer ${GITHUB_TOKEN}" "$@"
+}
+
+git_auth fetch origin main --prune
 # Refuse to overwrite local work; archive should run from a clean checkout.
 if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
   echo "ERROR: working tree is not clean before sync" >&2
   exit 3
 fi
 git checkout main
-git pull --ff-only origin main
+git_auth pull --ff-only origin main
 
 copy_if_present() {
   local source="$1" target="$2"
@@ -69,7 +76,6 @@ git add -A
 git -c user.name="$GITHUB_USER" -c user.email="${GITHUB_USER}@users.noreply.github.com" \
   commit -m "seed: sync live runtime data $DATE_TAG"
 
-AUTH=$(printf '%s:%s' "$GITHUB_USER" "$GITHUB_TOKEN" | base64 | tr -d '\n')
-git -c http.extraheader="AUTHORIZATION: basic $AUTH" push origin main
+git_auth push origin main
 
 echo "→ 种子归档完成: $DATE_TAG"
